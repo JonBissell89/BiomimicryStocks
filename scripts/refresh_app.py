@@ -453,6 +453,8 @@ ul.rl{padding-left:20px;max-width:82ch}ul.rl li{margin-bottom:7px;font-size:14px
 .lbrow .who{flex:1;color:var(--ink)}
 .lbrow.me{border-color:var(--accent)}
 .lbrow.bot{border-style:dashed}
+.lbx{background:none;border:0;color:var(--muted);font-size:16px;line-height:1;padding:0 0 0 10px;cursor:pointer;min-height:0}
+.lbx:hover{color:var(--bad);background:none}
 .botpill{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;background:var(--chipbg);color:var(--muted);padding:1px 6px;border-radius:3px;margin-left:6px}
 footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:var(--muted);font-size:12px;max-width:84ch}
 </style>
@@ -489,7 +491,7 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
     <div class="ck"><span class="t">Decades</span><span class="m">Infrastructure replacement cycles, demographic shifts, resource depletion becoming expensive rather than merely visible. <b>Longer than most holding periods.</b></span></div>
     <div class="ck"><span class="t">Centuries and beyond</span><span class="m">Soil, aquifers, oceans, climate. Real, measurable, and almost never the reason a stock moves in your lifetime. <b>Not an investment clock.</b></span></div>
   </div>
-  <p>This is why the scorecard does not stop at whether a company points the right way. A whole measure exists purely to ask about the clock: how fast this particular correction moves, and whether it is visibly moving <i>now</i>, in real orders and approvals and adoption inside the last four quarters. A company aligned with a centuries-long correction and no near-term momentum scores near zero there, by design. Being right about the imbalance and wrong about the clock is indistinguishable from being wrong.</p>
+  <p>This is why the scorecard does not stop at whether a company points the right way. A whole measure exists purely to ask about the clock: how fast this particular correction moves, and whether it is visibly moving <i>now</i>, in real orders and approvals and adoption inside the last four quarters. A company aligned with a centuries-long correction and no near-term momentum scores near zero there, by design.</p>
   <p>The same caution runs the other way, and it is the honest limit of this whole approach: a business earning from an imbalance on a slow clock can pay you well for decades. Nothing in this framework claims otherwise. What it claims is narrower, and worth stating plainly: <b>when a correction does arrive, it lands on the businesses that were holding the system out of balance, and the ones helping it settle absorb the demand that gets released.</b> Which clock you are betting on is a decision you make, not one the algorithm makes for you.</p>
 </section>
 
@@ -572,7 +574,7 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
 </section>
 
 <section id="list">
-  <p class="step">Step 3 · Results</p>
+  <p class="step">Step 3 · The list, and testing it</p>
   <h2>Results summary</h2>
   <p>Everything in the universe was scored. This is what came through all six rounds. Most companies were cut early for breaking a hard rule, being too small or inactive to grade, or not serving a need that lasts.</p>
 
@@ -584,18 +586,14 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
   </div>
 
   <p><b>You do not have to take any of it on faith, and you should not.</b> If you are sceptical about a ranking built on somebody else's rules, that is the correct instinct. So there is $5,000 of pretend money here to test it with. Buy what you actually believe in, add companies that never made this list at all, then leave it alone and come back. The prices are real and update every week, so over time you find out whether the ranking was right, whether your own picks beat it, and whether either beat simply buying the whole market.</p>
-  <div class="panel" id="fundpanel">
-    <p style="font-size:13px;margin:0 0 9px">Everyone who opens this page gets the same one-time $5,000, kept privately in your own browser. Nobody else sees it and you cannot add more. Selling turns shares back into cash, which is the only way to free up more to spend.</p>
-    <button class="big" id="fundbtn">Start with $5,000</button>
-    <div class="msg" id="fundmsg"></div>
-  </div>
-  <div class="panel" id="moneybar">
-    <div id="moneybartext" class="money-line"></div>
-    <div style="margin-top:8px" id="moneybarbtn"><button class="big" id="fundbtn2">Start with $5,000</button></div>
-  </div>
 
   <h2 style="margin-top:30px">Results</h2>
-  <p style="font-size:13.5px">Each row says what the company does in plain words, what it scored out of 100, and which need it serves. Tap or hover any row for the reasoning behind it. Type a dollar amount in a row and press <b>Buy</b>.</p>
+  <p style="font-size:13.5px">Each row says what the company does in plain words, what it scored out of 100, and which need it serves. Tap or hover any row for the reasoning behind it.</p>
+  <div class="panel" id="moneybar">
+    <div id="moneybartext" class="money-line"></div>
+    <div style="margin-top:8px" id="moneybarbtn"><button class="big" id="fundbtn">Start with $5,000</button></div>
+    <div class="msg" id="fundmsg"></div>
+  </div>
   <div class="controls">
     <label><input type="checkbox" id="holdonly"> Only what I own</label>
     <label for="mktsel">Where it trades:</label><select id="mktsel">
@@ -667,7 +665,7 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
   <div class="panel">
     <button id="copycard">Share my profile</button>
     <span class="money-line" id="cardmsg"></span>
-    <div style="margin-top:10px"><input type="text" id="friendcode" placeholder="paste a profile someone shared with you" style="width:min(420px,100%)"> <button class="ghost" id="addfriend">Add</button> <button class="ghost" id="clearfriends">Clear</button></div>
+    <div style="margin-top:10px"><input type="text" id="friendcode" placeholder="paste a profile someone shared with you" style="width:min(420px,100%)"> <button class="ghost" id="addfriend">Add</button> <button class="ghost" id="clearfriends">Remove everyone</button></div>
     <div class="lb" id="leaderboard"></div>
     <p class="legend" style="margin-top:10px">The list's book as of @@HOUSESTAMP@@: @@HOUSENOTE@@</p>
   </div>
@@ -679,7 +677,7 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
   @@RULES@@
 </section>
 
-<footer>Balanced Systems Console · @@RANKED@@ graded companies from a @@UNIV@@-company US-investable screen (counts as of the run stamped above) (US exchanges + SEC filers + OTC/ADR lines; not all ~60,000 companies listed worldwide) · real companies at real market prices, invested with pretend money · prices refresh monthly · your simulation is stored in your own browser and never sent anywhere · the house ledger is the author's own tracked experiment · research output, not investment advice, and no one here is a licensed financial advisor.</footer>
+<footer>Balanced Systems Console · @@RANKED@@ graded companies from a @@UNIV@@-company US-investable screen (counts as of the run stamped above) (US exchanges + SEC filers + OTC/ADR lines; not all ~60,000 companies listed worldwide) · real companies at real market prices, invested with pretend money · prices refresh every week · your simulation is stored in your own browser and never sent anywhere · the list's own $5,000 is a tracked experiment held to the same rules · research output, not investment advice, and no one here is a licensed financial advisor.</footer>
 </div>
 <script>
 const STATE=%%STATE%%;
@@ -777,11 +775,10 @@ function render(){
   const funded=L().cash!==null&&L().cash!==undefined;
   const tot=funded?totalValue(L()):0;
   $('navmoney').innerHTML=funded?('<b>'+fmt(tot)+'</b> · cash '+fmt(L().cash)):'<b>$5,000</b> waiting for you';
-  $('fundpanel').style.display=funded?'none':'block';
   $('moneybarbtn').style.display=funded?'none':'block';
   $('moneybartext').innerHTML=funded
     ? ('You have <b>'+fmt(L().cash)+'</b> in cash to spend. Type a dollar amount in any row below and press <b>Buy</b>. It shows you the arithmetic before anything happens. Selling puts cash back.')
-    : ('You get <b>$5,000</b> of pretend money to invest in these companies. Start it here, then type a dollar amount in any row and press <b>Buy</b>.');
+    : ('Everyone who opens this page gets the same one-time <b>$5,000</b> of pretend money, kept privately in your own browser. Nobody else sees it and you cannot add more. Start it here, then type a dollar amount in any row below and press <b>Buy</b>.');
   const ROWS=allRows();
   let rows=ROWS.map(n=>{const tk=n[0],sh=heldOf(tk),mv=sh*(n[F.px]||0),pl=mv-costOf(tk);
     return{n:n,tk:tk,sh:sh,mv:mv,pl:pl,
@@ -871,7 +868,6 @@ async function startFund(msgId){
   snapshotMine();render();   // lay the baseline row now, not a week from now
 }
 $('fundbtn').onclick=()=>startFund('fundmsg');
-$('fundbtn2').onclick=()=>startFund('fundmsg');
 async function commit(s,msgId){
   if(!isHouse()){MINE=s;saveMine(MINE);$(msgId).textContent='Saved.';render();return;}
   if(!art){$(msgId).textContent='The house ledger is read-only for visitors. Switch to "My simulation" to trade your own $5,000.';return;}
@@ -938,11 +934,20 @@ function lookup(){
     if(heldOf(tk)>0.0001){alert('Sell your '+tk+' shares first, then it can be removed.');return;}
     saveAdded(mineAdded().filter(x=>x!==tk));render();lookup();});
 }
+// A stable id for this browser so a profile shared from here is recognisable
+// when it comes back, and cannot be added as if it were somebody else.
+function myId(){
+  try{
+    let i=localStorage.getItem('bsId');
+    if(!i){i=Math.random().toString(36).slice(2,10);localStorage.setItem('bsId',i);}
+    return i;
+  }catch(e){return 'local';}
+}
 function myCard(){
   const s=L();const tot=totalValue(s);const start=s.start?s.start.cash:0;
   const top=Object.keys(s.positions||{}).filter(tk=>s.positions[tk].shares>0.0001)
     .map(tk=>[tk,s.positions[tk].shares*((rec(tk)||[])[F.px]||0)]).sort((a,b)=>b[1]-a[1]).slice(0,3).map(x=>x[0]);
-  return btoa(JSON.stringify({n:(whoNow()||'Anonymous').slice(0,20),v:+tot.toFixed(2),s:start,d:TODAY,t:top}));
+  return btoa(JSON.stringify({i:myId(),n:(whoNow()||'Anonymous').slice(0,20),v:+tot.toFixed(2),s:start,d:TODAY,t:top}));
 }
 function friends(){try{return JSON.parse(localStorage.getItem('bsFriends')||'[]');}catch(e){return [];}}
 function saveFriends(a){try{localStorage.setItem('bsFriends',JSON.stringify(a));}catch(e){}}
@@ -966,9 +971,15 @@ function renderBoard(){
   $('leaderboard').innerHTML=all.map(function(p,i){
     const gain=p.v-p.s;const pct=p.s?100*gain/p.s:0;
     const tag=p.me?' (you)':(p.bot?'<span class="botpill">the algorithm</span>':'');
-    return '<div class="lbrow'+(p.me?' me':'')+(p.bot?' bot':'')+'"><span class="rank">'+(i+1)+'</span><span class="who">'+p.n+tag+
+    const key=p.i||p.n;
+    const drop=(p.me||p.bot)?'':'<button class="lbx" data-unfriend="'+esc(String(key))+'" title="Remove '+esc(p.n)+' from the board">&times;</button>';
+    return '<div class="lbrow'+(p.me?' me':'')+(p.bot?' bot':'')+'"><span class="rank">'+(i+1)+'</span><span class="who">'+esc(p.n)+tag+
       (p.t&&p.t.length?' <span style="color:var(--muted)">· '+p.t.join(' ')+'</span>':'')+'</span>'+
-      '<span>'+fmt(p.v)+'</span><span class="'+(gain>=0?'pos':'neg')+'">'+(gain>=0?'+':'')+pct.toFixed(2)+'%</span></div>';}).join('');
+      '<span>'+fmt(p.v)+'</span><span class="'+(gain>=0?'pos':'neg')+'">'+(gain>=0?'+':'')+pct.toFixed(2)+'%</span>'+drop+'</div>';}).join('');
+  document.querySelectorAll('button[data-unfriend]').forEach(b=>b.onclick=()=>{
+    const k=b.dataset.unfriend;
+    saveFriends(friends().filter(x=>String(x.i||x.n)!==k));renderBoard();
+    $('cardmsg').textContent='Removed.';});
 }
 $('qbtn').onclick=lookup;
 $('q').addEventListener('keydown',function(e){if(e.key==='Enter')lookup();});
@@ -977,7 +988,11 @@ $('copycard').onclick=async()=>{const c=myCard();
   catch(e){$('friendcode').value=c;$('cardmsg').textContent='Copy the code from the box below.';}};
 $('addfriend').onclick=()=>{const raw=($('friendcode').value||'').trim();if(!raw)return;
   try{const p=JSON.parse(atob(raw));if(!p.n||typeof p.v!=='number')throw 0;
-    const a=friends().filter(x=>x.n!==p.n);a.push(p);saveFriends(a);$('friendcode').value='';$('cardmsg').textContent='Added '+p.n+'.';renderBoard();}
+    if(p.i&&p.i===myId()){
+      $('cardmsg').textContent='That is your own profile. You are already on the board.';
+      $('friendcode').value='';return;}
+    const a=friends().filter(x=>(p.i?x.i!==p.i:x.n!==p.n));a.push(p);saveFriends(a);
+    $('friendcode').value='';$('cardmsg').textContent='Added '+p.n+'.';renderBoard();}
   catch(e){$('cardmsg').textContent='That code did not look right.';}};
 $('clearfriends').onclick=()=>{saveFriends([]);renderBoard();$('cardmsg').textContent='Cleared.';};
 $('ledgersel').addEventListener('change',()=>{try{localStorage.setItem('bsLedger',$('ledgersel').value)}catch(e){}render();});

@@ -109,6 +109,18 @@ two session-limit outages). Target for the next full run: **2–4 hours**.
   to one Claude session's scratchpad under `%TEMP%`, which meant every scheduled run had to
   hand-edit the script and would have written into a directory that no longer existed. Ten
   scripts carried that path. Never reintroduce a session id into a script path.
+- **Two publish targets, and they are independent:**
+  - **GitHub Pages** at https://jonbissell89.github.io/BiomimicryStocks/ , served from
+    `main` `/docs` (`build_type: legacy`, not Actions). `publish_pages.py` wraps the rendered
+    page in the head skeleton that the artifact host otherwise supplies for free, writes
+    `docs/index.html` plus `docs/.nojekyll`, and then a plain `git push` publishes it.
+    **This deliberately avoids GitHub Actions.** Pushing a file under `.github/workflows/`
+    requires a token with the `workflow` scope, and that scope repeatedly failed to attach
+    to the JonBissell89 token. Branch-served Pages needs only `repo`, which works today.
+    `.github/workflows/weekly.yml` exists on disk and is intentionally untracked.
+  - **The Claude artifact** at its usual URL, which needs a Claude session and cannot be
+    published from CI at all.
+  Both render from the same `paper_state.json`, so they never disagree about the house book.
 
 ## Standing owner rulings (see engine `_rulings` for full text)
 Values overlay (pushback/embedded, evidence-audited) · jurisdiction penalties (vie −6,

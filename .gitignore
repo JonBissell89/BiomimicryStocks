@@ -1,5 +1,11 @@
-# Rendered output. The workflow builds it; committing it would mean merge
-# conflicts on a 2MB file every single week.
+# Intentionally untracked. Pushing anything under .github/workflows/ requires a
+# token with the `workflow` scope, which would not attach to this account. Pages
+# is served from docs/ on the branch instead, which needs only `repo`. Keeping
+# this ignored stops `git add -A` from silently re-adding it and getting the
+# whole push rejected. If the scope is ever granted, drop this line.
+.github/workflows/
+
+# Intermediate render. docs/index.html is the published copy.
 build/
 
 # 11MB Yahoo profile cache. Regenerable, and it is the single biggest file here.
