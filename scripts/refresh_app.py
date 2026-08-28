@@ -255,9 +255,6 @@ RULES_HTML = """
 <li><b>Price is a view, not a merit test.</b> With fractional shares, a $400 stock and a $4 stock are equally buyable.</li>
 <li><b>A closed loop is not enough on its own.</b> If the loop's inputs are the waste stream of a system that has to stay out of balance for those inputs to keep arriving, the coupling measure scores it low however elegant the loop is. This is what moved Darling Ingredients down, and the evidence is not hypothetical: management reported the US cattle herd at a 75-year low.</li>
 <li><b>Depth:</b> every company on the list is now scored on all six measures with the same evidence standard. The older split between deep and light audits is gone.</li></ul>
-<h3>What changed when the engine was rebuilt</h3>
-<p class="rl" style="max-width:82ch">The scorecard above replaced an earlier eight-dimension version that scored a company's qualities rather than its effect on a stock. All 53 companies were re-scored from scratch against filings and public evidence. The correlation between the old score and the new one is <b>0.07</b>, which is another way of saying these are two different measurements rather than one ranking shifted down. An old score and a new score should never be compared to each other.</p>
-<p class="rl" style="max-width:82ch">Two checks were run on the result. Comparable businesses graded independently by different researchers landed within 5 to 10 points of each other, so the rubric is being read consistently. And the philosophy's own two claims hold in the numbers: companies whose revenue survives a rebalance average 76.5 against 68.1 for those whose revenue shrinks, and self-damping businesses average 77.9 against 62.8 for self-amplifying ones.</p>
 <p class="rl" style="color:var(--muted)">Research output, not investment advice. The author is not a licensed financial advisor. All trading here is simulated with pretend money.</p>
 """
 
