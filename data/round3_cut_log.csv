@@ -1,0 +1,16 @@
+ticker,company,price,marketCap,need,verdict,r3_cut
+CALM,Cal-Maine Foods Inc. Common Stock,84.14,3929842176.0,food,B,contractionary: revenue -50%
+LWAY,Lifeway Foods Inc. Common Stock,26.16,395192512.0,food,B,runway <0.6y small-cap - forced dilution/financing dependence
+VITL,Vital Farms Inc. Common Stock,11.11,476969184.0,food,B,runway <0.6y small-cap - forced dilution/financing dependence
+ALVO,Alvotech Ordinary Shares,5.05,1801926016.0,health,A,contractionary: revenue -39%
+AURX,"Nuo Therapeutics, Inc.",1.05,50855464.0,health,B,runway <0.6y small-cap - forced dilution/financing dependence
+AIXXF,AIXTRON SE,43.7,4928741888.0,infrastructure,B,contractionary: revenue -16%
+DNIYY,Danieli & C. Officine Meccaniche S.p.A.,50.08,4923152896.0,infrastructure,B,contractionary: revenue -16%
+ENPH,Enphase Energy Inc. Common Stock,37.35,4935602176.0,infrastructure,B,contractionary: revenue -20%
+LSRCY,Lasertec Corporation,43.74,19602227200.0,infrastructure,B,contractionary: revenue -26%
+PNR,Pentair plc. Ordinary Share,62.46,9968615424.0,infrastructure,B,contractionary: revenue -17%
+ERII,Energy Recovery Inc. Common Stock,7.85,400702272.0,infrastructure,A,contractionary: revenue -57%
+TAYD,Taylor Devices Inc. Common Stock,59.66,192404400.0,infrastructure,B,contractionary: revenue -42%
+PYRGF,PyroGenesis Canada Inc.,0.1511,34203496.0,infrastructure,B,runway <0.6y small-cap - forced dilution/financing dependence
+ABDDF,AB Dynamics plc,16.18,370362464.0,transport,B,contractionary: revenue -16%
+ENVHF,Envipco Holding N.V.,5.2,343669952.0,water,B,runway <0.6y small-cap - forced dilution/financing dependence

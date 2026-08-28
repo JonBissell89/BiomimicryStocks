@@ -1,0 +1,20 @@
+# Rendered output. The workflow builds it; committing it would mean merge
+# conflicts on a 2MB file every single week.
+build/
+
+# 11MB Yahoo profile cache. Regenerable, and it is the single biggest file here.
+data/profiles.jsonl
+
+# Research scratch from the tournament rounds
+data/v2_batches/
+data/*_batches/
+
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# Never commit anything holding Jonathan's real positions or balances.
+# HOLDING_FRAMEWORK.md lives one level up, outside this repo, for that reason.
+holdings*.md
+*_private.*

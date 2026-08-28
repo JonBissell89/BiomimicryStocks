@@ -1,0 +1,9 @@
+ticker,price,marketCap,need,permanent_need,system_balance,cost_compression,moat,proven_functions,scale_velocity,expansion_signal,survivability,total,verdict,reason
+GH,~$170.73,~$22B,cancer blood screening/monitoring,14,13,12,12,8,9,9,7,84,ADVANCE,FDA-approved blood CRC screen scaling fast; COGS falling toward $200; breakeven 2027
+NTRA,~$332,~$47B,prenatal + cancer recurrence cfDNA testing,14,13,13,13,9,9,9,9,89,ADVANCE,MRD leader; 38% growth at $2.9B run-rate; cash-positive; spares 82% needless chemo
+VCYT,~$41.25,~$2.6B,cancer treatment-decision genomic tests,13,13,12,11,9,7,8,9,82,ADVANCE,Profitable; avoids needless thyroid surgery and prostate overtreatment; new MRD launches
+HTFL,~$48.94,~$4.3B,AI coronary CT analysis replacing invasive caths,13,13,13,11,7,9,9,7,82,ADVANCE,Noninvasive FFRCT avoids diagnostic caths; 48% growth; 83% margin; cash-positive by 2028
+BLLN,~$97.25,~$4.6B,single-gene NIPT + oncology liquid biopsy,13,12,12,11,8,9,7,8,80,ADVANCE,Profitable at 64% growth; unique QCT single-gene NIPT; one draw replaces carrier workflow
+CDNA,~$47.50,~$2.5B,transplant rejection surveillance testing,12,12,12,8,8,8,7,8,75,CUT,Thin moat; losing head-to-head to Natera Prospera in its only lane
+CAI,~$26.82,~$7.6B,AI whole-exome/transcriptome cancer profiling,13,12,12,12,8,9,8,7,81,ADVANCE,One WES/WTS test replaces sequential panels; FCF positive; $1B run-rate at 45% growth
+SSII,~$3.58,~$734M,low-cost surgical robots for emerging markets,12,11,12,7,5,6,6,4,63,CUT,Real installs but subscale; thin moat; negative net cash; FDA slipped to 2027

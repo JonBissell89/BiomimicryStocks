@@ -1,0 +1,230 @@
+ticker,verdict,reason
+AEHR,A,"wafer-level burn-in test for EV/power semis, proprietary systems"
+AES,B,"global renewables+utilities, real assets but heavy debt model"
+ABZPF,C,captive-territory regulated utility
+AAVVF,C,commodity oil and gas E&P
+UNEGF,C,commodity upstream oil
+AGRO,B,"ag production real ops, commodity exposure"
+TXG,B,"single-cell analysis platform, contracting revenue"
+MMM,B,"diversified industrial, durable-need products but slow growth"
+A,A,lab analytical/diagnostics instruments - health research infrastructure
+ACHC,B,"behavioral health facilities, flat growth"
+ACHV,C,single-asset NDA-stage smoking cessation
+SI,C,no data on any venue
+ABT,A,diagnostics devices nutrition - global health systems at scale
+ABBV,C,"premium branded pharma, no cost-compression mechanism"
+ABCL,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+ABVX,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+ACAD,B,commercial niche CNS/rare pharma
+ADPT,A,"commercial immunosequencing diagnostics platform, proprietary"
+ADUS,A,home care displaces institutionalization - cost per outcome down
+ADMA,A,"commercial plasma biologics for immune deficiency, US supply"
+FDMT,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+FDMDF,B,"novel lung imaging, weak commercialization"
+ACRS,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+AHCO,B,"home medical equipment roll-up, thin moat"
+ANL,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+AARD,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+ABEO,C,"single gene therapy, micro-scale"
+ACIU,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+ABOS,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+ADAG,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+ADCT,C,approved product but stagnant micro-scale
+AGEN,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+AIRS,C,cosmetic body contouring - not durable need
+AKBA,C,approved but contracting revenue
+ALEC,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+ALXO,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+AMRN,C,"single product, revenue collapsing"
+ANTX,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+AVXL,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+ANIX,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+ARCT,C,revenue collapsing post-COVID
+ARMP,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+AVIR,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+RNA,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+AUNA,B,"LatAm hospitals/clinics, real growth"
+BNTC,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+BGM,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+BCYC,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+BIOA,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+BMEA,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+BDTX,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+CAMP,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+CGC,C,cannabis - addiction rule
+CNTN,C,blockchain treasury plus clinical bio mix
+CAPR,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+CRDL,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+CRBU,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+RNAC,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+CLLS,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+IPSC,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+CHRS,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+CMPX,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+CGEN,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+CNTB,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+CRBP,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+COYA,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+CUE,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+CPIX,C,small specialty pharma contracting
+CYPH,C,crypto treasury - artificial scarcity
+DMAC,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+ELDN,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+EBS,B,"public-health preparedness products, volatile government demand"
+ENTA,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+ENGN,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+TRDA,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+EQ,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+EPRX,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+FATE,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+FENC,B,"commercial PEDMARK prevents chemo hearing loss, single product"
+FHTX,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+FULC,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+GALT,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+GNLX,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+DNA,C,platform contracting sharply
+GLSI,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+HUMA,B,"bioengineered vessels approved, heavy burn"
+IMRX,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+IMUX,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+INDP,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+IFRX,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+IKT,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+IPHA,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+INO,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+IVVD,C,"single-virus antibody, uncertain durability"
+DERM,B,commercial dermatology portfolio growing
+MENS,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+KMDA,A,"commercial plasma-derived therapeutics, proven products growing"
+KZIA,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+KROS,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+KRRO,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+LRMR,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+LENZ,B,"approved presbyopia drops, early commercial"
+LXEO,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+LFCR,B,integrated CDMO for sterile injectables - health manufacturing
+LFMD,C,"lifestyle telehealth, declining"
+LCTX,C,clinical-stage cell therapy
+LYEL,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+MGNX,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+MDWD,C,commercial but revenue contracting sharply
+MIST,B,approved PSVT nasal spray converts ER visits to self-care
+NERV,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+MOLN,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+NAKA,C,bitcoin treasury - artificial scarcity
+NATR,C,supplement MLM distribution
+NTHI,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+NGEN,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+NMRA,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+NAGE,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+NKTX,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+NBP,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+NRXP,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+NUS,C,beauty MLM
+OCGN,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+ONCY,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+OKUR,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+IRD,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+ORMP,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+OBIO,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+OGI,C,cannabis - addiction rule
+ORGO,C,wound care contracting sharply
+OTLK,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+PALI,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+PTHS,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+PEPG,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+CATX,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+DTIL,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+PMN,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+PRQR,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+PLX,B,"plant-cell recombinant proteins, commercial, cheaper production"
+TARA,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+PRTA,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+PBYI,C,"branded oncology stagnant, no efficiency mechanism"
+PYXS,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+QTTB,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+QUCY,C,quantum/cyber acquisition vehicle
+RFL,C,holding company mix
+RANI,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+RLMD,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+RZLT,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+RCKT,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+SABS,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+MSLE,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+SBC,C,cosmetic clinic management - not durable need
+SIGA,C,"single biodefense product, contracting, stockpile dependent"
+SION,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+SNDL,C,cannabis/liquor - addiction rule
+SLGL,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+SPRB,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+SRZN,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+STRO,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+TNYA,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+TLSA,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+TNXP,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+HURA,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+TTRX,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+UNCY,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+UPB,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+USNA,C,supplement MLM
+VNDA,C,stagnant branded CNS portfolio
+VRXA,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+VOGX,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+VYGR,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+VTVT,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+WHWK,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+XFOR,B,"rare-disease drug newly commercial, hypergrowth off small base"
+YARW,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+ZNTL,C,clinical/preclinical-stage or single-asset binary science - unproven breakthrough rule
+ZSTK,C,pharma distribution plus digital-assets mix
+CKLSF,C,"diversified holding, low growth"
+AMD,B,"compute infrastructure enabler, not physical-need system core"
+AAON,A,"high-efficiency HVAC and data-center cooling, energy compression"
+ACMR,B,"semi cleaning equipment, real growth, China concentration"
+AEIS,A,precision power conversion improves industrial energy efficiency
+AGCO,B,"ag equipment durable food need, flat cycle"
+TBB,C,bond/preferred listing
+ADTN,B,"fiber access networking, modest growth"
+UZE,C,bond/preferred listing
+UZD,C,bond/preferred listing
+ELSLF,C,"drone connectivity, defense-centric"
+ALMU,C,"pre-scale semis, contracting"
+MASS,B,"handheld mass-spec for safety/health, defense mix"
+AZ,C,smart shopping carts - retail gadget
+ACU,C,scissors/first-aid commodity products
+AMPG,C,"niche amplifiers, contracting"
+ATNI,C,small-market telecom incumbent
+AUDC,C,"unified-comms hardware/software, flat"
+CLFD,B,fiber management hardware for broadband buildout
+CXDO,C,generic UCaaS
+GOGO,C,"in-flight connectivity, flat"
+KVHI,C,"niche connectivity, no durable moat"
+OCC,C,commodity cabling
+AIOT,B,fleet AIoT telematics improves transport efficiency
+RELL,B,"power-grid tubes/components niche, growing"
+SIDU,C,"smallsat defense-mix, contracting"
+SPOK,C,"legacy healthcare paging, stagnant"
+OPTX,C,optics with heavy defense mix
+TTGT,C,tech adtech/intent data
+TBCH,C,gaming accessories - discretionary
+AYI,B,"lighting controls/building management efficiency, slow growth"
+HOVNP,C,preferred listing
+ADNT,C,"commodity seating, thin margins"
+AEBI,B,"municipal/ag specialty vehicles, merger-driven growth"
+AEVA,B,"FMCW lidar safety sensing, pre-profit"
+ZHHJY,C,no business information available
+CAAS,B,"steering systems incl EPS for Chinese OEMs, growing"
+CVGI,C,commodity vehicle components
+CPS,C,"commodity sealing, leveraged"
+DCX,C,crypto derivatives platform
+HLLY,C,enthusiast performance parts - discretionary
+INVZ,B,"automotive lidar design wins, heavy burn"
+LVWR,C,"electric motorcycles, deep losses niche"
+MPAA,C,"aftermarket parts, contracting"
+NIU,B,"electric urban scooters, real volumes"
+RLGT,C,commodity freight forwarding
+AIIO,C,story-stage EV venture
+SRI,B,"commercial-vehicle electronics: e-mirrors, driver monitoring"
+STRT,C,legacy lock/key components
+AHWSF,C,no data on any venue
+THNOF,B,"gov/education ERP SaaS, sticky but generic category"

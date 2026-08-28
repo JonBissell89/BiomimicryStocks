@@ -1,0 +1,603 @@
+{
+  "_comment": "Canonical engine output: tier membership from the Aug 25-27 2026 final verification. The calculator and matrix render FROM this file. Edit only via re-verification.",
+  "_values_overlay": "Health names carry values: 'pushback' = adoption reduces total system spend or threatens incumbent revenue (prevention, democratized access, forced price compression); 'embedded' = economics depend on premium reimbursement inside the existing payment machine. Owner-defined overlay (Jonathan, Aug 2026).",
+  "tiers": [
+    {
+      "id": "t1",
+      "label": "Tier 1 · Core compounders",
+      "names": [
+        {
+          "tk": "NTRA",
+          "nm": "Natera",
+          "score": 89,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "values": "embedded",
+          "values_note": "provisional (light verification) — auditable on challenge",
+          "need": "Health · Diagnostics"
+        },
+        {
+          "tk": "TSM",
+          "nm": "TSMC",
+          "score": 87,
+          "depth": "light",
+          "note": "light-verified — deep pass pending · jx -2 taiwan-linked",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "score_base": 89,
+          "jx": "taiwan-linked",
+          "jx_penalty": -2,
+          "need": "Tech · Semis"
+        },
+        {
+          "tk": "WRTBY",
+          "nm": "Wärtsilä",
+          "score": 86,
+          "note": "",
+          "sofi": true,
+          "sofi_note": "empirically confirmed - owner executed a SoFi fill Aug 27 2026",
+          "need": "Energy · Grid"
+        },
+        {
+          "tk": "WAB",
+          "nm": "Wabtec",
+          "score": 86,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "need": "Transport · Rail"
+        },
+        {
+          "tk": "TSNLF",
+          "nm": "Tristel",
+          "score": 85,
+          "note": "†thin — LSE:TSTL",
+          "values": "pushback",
+          "sofi": false,
+          "need": "Health · Disinfection"
+        },
+        {
+          "tk": "TMRAY",
+          "nm": "Tomra",
+          "score": 85,
+          "note": "ADR - SoFi unconfirmed · elevated leverage · DRS rollout timing",
+          "sofi": false,
+          "sofi_note": "Y-ADR, likely - pending owner in-app check",
+          "need": "Circular · Recycling"
+        },
+        {
+          "tk": "UNP",
+          "nm": "Union Pacific",
+          "score": 85,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "need": "Transport · Rail"
+        },
+        {
+          "tk": "LGRDY",
+          "nm": "Legrand",
+          "score": 85,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": false,
+          "sofi_note": "Y-ADR, likely — pending owner in-app check",
+          "need": "Energy · Electrical"
+        },
+        {
+          "tk": "AHICF",
+          "nm": "Asahi Intecc",
+          "score": 85,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": false,
+          "values": "pushback",
+          "values_note": "provisional (light verification) — auditable on challenge",
+          "need": "Health · Devices"
+        },
+        {
+          "tk": "CLPBY",
+          "nm": "Coloplast",
+          "score": 84,
+          "note": "",
+          "values": "embedded",
+          "sofi": true,
+          "sofi_note": "empirically confirmed - owner in-app check Aug 27 2026",
+          "need": "Health · Consumables"
+        },
+        {
+          "tk": "WST",
+          "nm": "West Pharm",
+          "score": 84,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "values": "embedded",
+          "values_note": "provisional (light verification) — auditable on challenge",
+          "need": "Health · Drug packaging"
+        },
+        {
+          "tk": "GH",
+          "nm": "Guardant",
+          "score": 84,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "values": "pushback",
+          "values_note": "provisional (light verification) — auditable on challenge",
+          "need": "Health · Diagnostics"
+        },
+        {
+          "tk": "BSY",
+          "nm": "Bentley",
+          "score": 84,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "need": "Tech · Infra software"
+        },
+        {
+          "tk": "TOELY",
+          "nm": "Tokyo Electron",
+          "score": 84,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": false,
+          "sofi_note": "Y-ADR, likely — pending owner in-app check",
+          "need": "Tech · Semi equip"
+        },
+        {
+          "tk": "BOEUF",
+          "nm": "Bonesupport",
+          "score": 83,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": false,
+          "values": "pushback",
+          "values_note": "provisional (light verification) — auditable on challenge",
+          "need": "Health · Ortho"
+        },
+        {
+          "tk": "CP",
+          "nm": "CPKC",
+          "score": 83,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "need": "Transport · Rail"
+        },
+        {
+          "tk": "GKOS",
+          "nm": "Glaukos",
+          "score": 83,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "values": "embedded",
+          "values_note": "provisional (light verification) — auditable on challenge",
+          "need": "Health · Ophthalmic"
+        },
+        {
+          "tk": "IOT",
+          "nm": "Samsara",
+          "score": 83,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "need": "Tech · Fleet IoT"
+        },
+        {
+          "tk": "TDVXF",
+          "nm": "Tobii Dynavox",
+          "score": 82,
+          "note": "†thin — STO:TDVOX",
+          "values": "embedded",
+          "sofi": false,
+          "need": "Health · Assistive"
+        },
+        {
+          "tk": "HTFL",
+          "nm": "Heartflow",
+          "score": 82,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "values": "pushback",
+          "values_note": "provisional (light verification) — auditable on challenge",
+          "need": "Health · Diagnostics"
+        },
+        {
+          "tk": "VCYT",
+          "nm": "Veracyte",
+          "score": 82,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "values": "pushback",
+          "values_note": "provisional (light verification) — auditable on challenge",
+          "need": "Health · Diagnostics"
+        },
+        {
+          "tk": "SBDHF",
+          "nm": "SHO-BOND",
+          "score": 81,
+          "note": "†thin — TYO:1414",
+          "sofi": false,
+          "need": "Infra · Repair"
+        },
+        {
+          "tk": "SSMXY",
+          "nm": "Sysmex",
+          "score": 81,
+          "note": "ADR - SoFi unconfirmed · 52-wk low \\.01",
+          "values": "embedded",
+          "values_note": "provisional per Cerus precedent: reagent razor-blade annuity in reimbursed diagnostics - auditable on challenge",
+          "sofi": false,
+          "sofi_note": "Y-ADR, likely - pending owner in-app check",
+          "need": "Health · Diagnostics"
+        },
+        {
+          "tk": "PLPC",
+          "nm": "Preformed Line",
+          "score": 81,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "need": "Energy · Grid hardware"
+        },
+        {
+          "tk": "CAI",
+          "nm": "Caris",
+          "score": 81,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "values": "pushback",
+          "values_note": "provisional (light verification) — auditable on challenge",
+          "need": "Health · Diagnostics"
+        },
+        {
+          "tk": "DXCM",
+          "nm": "DexCom",
+          "score": 81,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "values": "embedded",
+          "values_note": "provisional (light verification) — auditable on challenge",
+          "need": "Health · Devices"
+        },
+        {
+          "tk": "CNI",
+          "nm": "CN Rail",
+          "score": 81,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "need": "Transport · Rail"
+        },
+        {
+          "tk": "TMDX",
+          "nm": "TransMedics",
+          "score": 80,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "values": "pushback",
+          "values_note": "provisional (light verification) — auditable on challenge",
+          "need": "Health · Organ transplant"
+        },
+        {
+          "tk": "BLLN",
+          "nm": "BillionToOne",
+          "score": 80,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "values": "embedded",
+          "values_note": "provisional (light verification) — auditable on challenge",
+          "need": "Health · Diagnostics"
+        }
+      ]
+    },
+    {
+      "id": "t2",
+      "label": "Tier 2 · Proven growers",
+      "names": [
+        {
+          "tk": "CBLL",
+          "nm": "CeriBell",
+          "score": 79,
+          "depth": "light",
+          "note": "light-verified — deep pass pending · score adjusted 80->79 in light verification",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "values": "embedded",
+          "values_note": "provisional (light verification) — auditable on challenge",
+          "need": "Health · Devices"
+        },
+        {
+          "tk": "IRTC",
+          "nm": "iRhythm",
+          "score": 79,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "values": "pushback",
+          "values_note": "provisional (light verification) — auditable on challenge",
+          "need": "Health · Monitoring"
+        },
+        {
+          "tk": "RMD",
+          "nm": "ResMed",
+          "score": 79,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "values": "embedded",
+          "values_note": "provisional (light verification) — auditable on challenge",
+          "need": "Health · Respiratory"
+        },
+        {
+          "tk": "KMDA",
+          "nm": "Kamada",
+          "score": 78,
+          "note": "",
+          "values": "embedded",
+          "sofi": true,
+          "need": "Health · Plasma"
+        },
+        {
+          "tk": "BB",
+          "nm": "BlackBerry",
+          "score": 78,
+          "note": "",
+          "sofi": true,
+          "need": "Tech · Vehicle OS"
+        },
+        {
+          "tk": "DLEGF",
+          "nm": "Delta Thailand",
+          "score": 78,
+          "note": "†thin — SET:DELTA · ~100× P/E flag · moved T1->T2 on jurisdiction penalty",
+          "score_base": 80,
+          "jx": "taiwan-linked",
+          "jx_penalty": -2,
+          "sofi": false,
+          "need": "Energy · Power"
+        },
+        {
+          "tk": "MBRFF",
+          "nm": "Mo-BRUK",
+          "score": 78,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": false,
+          "need": "Circular · Waste"
+        },
+        {
+          "tk": "ENGCF",
+          "nm": "engcon",
+          "score": 77,
+          "note": "†thin — STO:ENGCON-B",
+          "sofi": false,
+          "need": "Construction · Equip"
+        },
+        {
+          "tk": "CRMD",
+          "nm": "CorMedix",
+          "score": 77,
+          "note": "2027 cliff tripwire",
+          "values": "pushback",
+          "sofi": true,
+          "need": "Health · Prevention"
+        },
+        {
+          "tk": "DAR",
+          "nm": "Darling",
+          "score": 76,
+          "depth": "light",
+          "note": "light-verified — deep pass pending · regenerative food benchmark",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "need": "Food · Circular"
+        },
+        {
+          "tk": "BMBRF",
+          "nm": "BIM",
+          "score": 74,
+          "note": "†thin — IST:BIMAS · sb re-score -5",
+          "score_base": 79,
+          "sb_rescore": "system_balance 11->6: hyper-efficient distributor of industrial food; regenerates nothing (owner ruling Aug 27 2026)",
+          "sofi": false,
+          "need": "Food · Retail"
+        },
+        {
+          "tk": "CODYY",
+          "nm": "Saint-Gobain",
+          "score": 74,
+          "note": "",
+          "sofi": true,
+          "sofi_note": "empirically confirmed - owner in-app check Aug 27 2026",
+          "need": "Shelter · Materials"
+        },
+        {
+          "tk": "YMM",
+          "nm": "Full Truck Alliance",
+          "score": 74,
+          "note": "moved T1->T2 on jurisdiction penalty",
+          "score_base": 80,
+          "jx": "china-vie",
+          "jx_penalty": -6,
+          "sofi": true,
+          "need": "Transport · Logistics"
+        },
+        {
+          "tk": "MHGVY",
+          "nm": "Mowi",
+          "score": 74,
+          "depth": "light",
+          "note": "light-verified — deep pass pending · regeneration-standard review pending (aquaculture producer)",
+          "sofi": false,
+          "sofi_note": "Y-ADR, likely — pending owner in-app check",
+          "need": "Food · Aquaculture"
+        },
+        {
+          "tk": "ATRC",
+          "nm": "AtriCure",
+          "score": 74,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "values": "embedded",
+          "values_note": "provisional (light verification) — auditable on challenge",
+          "need": "Health · Surgical"
+        },
+        {
+          "tk": "LEGH",
+          "nm": "Legacy Housing",
+          "score": 74,
+          "depth": "light",
+          "note": "light-verified — deep pass pending",
+          "sofi": true,
+          "sofi_note": "NYSE/NASDAQ listing (availability by listing fact)",
+          "need": "Shelter · Housing"
+        }
+      ]
+    },
+    {
+      "id": "t3",
+      "label": "Tier 3 · Asymmetric catalysts",
+      "names": [
+        {
+          "tk": "CERS",
+          "nm": "Cerus",
+          "score": 75,
+          "note": "",
+          "values": "embedded",
+          "values_note": "re-tagged pushback->embedded Aug 27 2026: hospital budget-impact evidence shows +30% (~\\) per platelet unit net of offsets; sole-source FDA-mandated consumable monopoly - fails the reduces-total-system-spend test",
+          "sofi": true,
+          "need": "Health · Blood safety"
+        },
+        {
+          "tk": "SHLS",
+          "nm": "Shoals",
+          "score": 72,
+          "note": "",
+          "sofi": true,
+          "need": "Energy · Solar"
+        },
+        {
+          "tk": "DMTRF",
+          "nm": "3-D Matrix",
+          "score": 72,
+          "note": "†thin — TYO:7777",
+          "values": "embedded",
+          "sofi": false,
+          "need": "Health · Surgical"
+        },
+        {
+          "tk": "ADMA",
+          "nm": "ADMA Biologics",
+          "score": 72,
+          "note": "",
+          "values": "embedded",
+          "sofi": true,
+          "need": "Health · Plasma"
+        },
+        {
+          "tk": "BIRMF",
+          "nm": "BioRem",
+          "score": 71,
+          "note": "†thin — TSXV:BRM · microcap",
+          "sofi": false,
+          "need": "Water · Treatment"
+        },
+        {
+          "tk": "WSIOF",
+          "nm": "Wasion",
+          "score": 65,
+          "note": "†thin — HKG:3393 · AT EXIT-REVIEW FLOOR (65)",
+          "score_base": 69,
+          "jx": "china-direct",
+          "jx_penalty": -4,
+          "sofi": false,
+          "need": "Energy · Metering"
+        }
+      ]
+    },
+    {
+      "id": "t4",
+      "label": "Sandbox · gate-failed names held by explicit choice (0% default)",
+      "names": [
+        {
+          "tk": "BFLY",
+          "nm": "Butterfly Network",
+          "score": 72,
+          "note": "Watch-bench — promotion test pending",
+          "values": "pushback",
+          "sofi": true,
+          "need": "Health · Imaging"
+        },
+        {
+          "tk": "SRTA",
+          "nm": "Strata Critical",
+          "score": 72,
+          "note": "Watch-bench — promotion test pending",
+          "values": "pushback",
+          "sofi": true,
+          "need": "Health · Organ transplant"
+        }
+      ]
+    }
+  ],
+  "gate": 20.0,
+  "watch_alerts": [],
+  "_jurisdiction": "Jurisdiction penalties baked into scores (owner-directed, Aug 2026): china-vie -6 (contractual claim, not ownership), china-direct -4 (regime risk), taiwan-linked -2 (tail scenario). score = score_base + jx_penalty. Re-tiered by adjusted score: T1>=80, T2 74-79, T3 69-73; <65 = exit-review floor.",
+  "_rulings": " BIM demoted 79->74 (system-balance re-score): pure distribution of industrial food is optimization, not regeneration; accessibility alone caps sb at 6. Applies to any pure food distributor. Regenerative/circular standard: Darling Ingredients (watch bench). INTERSECTION RULE: any name carrying both a jurisdiction penalty and a values-sensitive health tag is removed from the tiers (correlated failure modes). First applied: PEJMF removed Aug 27 2026. Sub-10 field now 20 names. OWNERSHIP RULE: majority control by an operator of an excluded system removes the name - the controller sets strategy and the trajectory follows the excluded system. First applied: SCTTF removed Aug 27 2026. Sub-10 field now 19 names. PRICE GATE RAISED 10->20 (owner ruling Aug 27 2026): fractional-share trading dissolved the per-share access rationale; gate retained at \\ to preserve the small/asymmetric tilt. Admits TMRAY 85 and SSMXY 81 to Tier 1 (both pass T1 gates). Ranked field now 21. New gate-watch alerts: AHICF \\.41, MHGVY \\.83.",
+  "removed": [
+    {
+      "tk": "PEJMF",
+      "nm": "Peijia Medical",
+      "score": 74,
+      "note": "†thin — HKG:9996",
+      "values": "pushback",
+      "score_base": 78,
+      "jx": "china-direct",
+      "jx_penalty": -4,
+      "removed": "Owner ruling Aug 27 2026 (intersection rule): trips both owner concern axes (china-direct jurisdiction penalty AND values-sensitive health) with correlated failure modes; US line effectively untradeable (real market HKG:9996). Removed from tiers."
+    },
+    {
+      "tk": "SCTTF",
+      "nm": "Scott Technology",
+      "score": 75,
+      "note": "†thin — NZX:SCT",
+      "removed": "Owner ruling Aug 27 2026 (ownership rule): 53.7% controlled by JBS, an operator of the excluded factory-farm system; JBS related-party revenue ~16% of group and nearly doubled YoY (1H26 NZ\\.6M); largest-ever contract is warehouse automation at JBS Brooks industrial beef plant (Canada) with pipeline aimed at JBS US feedlot-beef sites (Greeley/Cactus); pasture-linked Protein segment only ~22% of revenue and shrinking. Growth trajectory points into the excluded system, steered by the controlling shareholder. Source: Forsyth Barr 1H26 note 16-Apr-2026."
+    }
+  ],
+  "_access": "SoFi availability overlay (owner brokerage, Aug 27 2026): NYSE/NASDAQ listings plus curated OTC ADRs (Y-suffix); F-shares unavailable. Empirically confirmed on SoFi: WRTBY (fill), CLPBY, CODYY (in-app checks), plus all US-listed names. Flags are set empirically (fill or in-app check), never by assumption.",
+  "_unified": "Unified graded table (owner ruling, Aug 27 2026): all 54 tournament finalists (minus removals/buyouts) are tiered by score band (T1>=80, T2 74-79, T3 69-73) regardless of price. Price is a VIEW filter only; the gate value is the default price view. Each name carries depth: 'deep' (final-round full verification + owner rules applied) or 'light' (score-confirmed only; dilution/runway not deep-audited; values tags provisional). Deep passes upgrade names on request.",
+  "_premise": "PREMISE (owner correction, Aug 28 2026): there is no philosophically good or bad company. Natural systems have no morality; they are either in balance or accumulating an imbalance that is eventually corrected — by regulation, substitution, exhaustion or collapse. The engine scores one mechanical question: does this business move its system toward equilibrium (closing loops, lowering energy and cost per useful outcome, distributing rather than concentrating, repairing rather than depleting) or does it earn by holding the system out of balance, which is a liability with a delay on it. The hard-rejection list is not a morality list — each entry names a model whose revenue REQUIRES sustained imbalance. Alignment with balance indicates the direction a system will push over decades; it does not by itself indicate the company will survive to capture it, which is why survivability, moat and expansion are scored separately.",
+  "_clock": "CLOCK PRINCIPLE (owner correction, Aug 28 2026): time is relative to the correcting system, not the observer. An imbalance corrects on the clock of whatever mechanism does the correcting: substitution and reimbursement in months to a few years; regulation, litigation and technology displacement in years to a decade; infrastructure and demographic cycles over decades; soil, aquifers, oceans and climate over centuries. A system can therefore sit out of balance for an entire human investing life while barely registering on the clock of the thing that will correct it. Consequences for scoring: (1) direction without timing is not investable, so expansion_signal and survivability are the framework's clock instruments and must not be treated as secondary; (2) a name aligned with a centuries-scale correction and no near-term momentum should score low on expansion_signal, not be rewarded for being 'right'; (3) the framework's claim is only that WHEN a correction lands it lands on the businesses holding the system out of balance, while those helping it settle absorb the released demand. It makes no claim about when. Which clock is being bet on is the owner's decision, not the algorithm's."
+}

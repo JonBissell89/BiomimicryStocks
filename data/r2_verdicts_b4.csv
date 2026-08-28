@@ -1,0 +1,275 @@
+ticker,verdict,reason
+ARCAY,B,water/mobility/resilience consultancy; plausible fit without product edge
+AGX,B,power-plant EPC growing fast; energy buildout without moat evidence
+ARLO,C,consumer security cameras; not a durable-need system
+SNCAF,B,nuclear/transport/water engineering; defence mix dilutes fit
+BCKIY,C,defense systems maker; weapons hard rejection
+BW,B,emissions control and steam tech; mixed legacy business
+BAFBF,C,undifferentiated general contractor
+BZH,C,undifferentiated homebuilder with shrinking revenue
+BFLBF,C,commodity industrial services; scaffolding and insulation
+BOUYY,C,conglomerate spanning telecom and media; unfocused
+BXBL,C,story-stage modular homes; negligible revenue vs cap
+BRVDF,B,building installations with energy optimization; contractor economics
+BBUC,C,private equity vehicle; financial intermediation
+BDMXF,C,generic construction contractor
+BZZUF,C,commodity cement producer
+CXMSF,C,commodity cement producer
+CX,C,commodity cement producer (duplicate listing)
+CCS,C,undifferentiated homebuilder with mortgage attach
+FIX,A,mechanical/electrical systems lower building energy cost
+CMSYF,C,undifferentiated telecom construction contractor
+CMZOF,C,commodity cement producer
+CRH,B,infrastructure materials solutions at scale; still commodity-adjacent
+NWSZF,C,toll-road/insurance conglomerate; rent collection mix
+DEMGF,B,offshore wind installation specialist; cyclical contracting
+DFH,C,undifferentiated homebuilder; shrinking revenue
+EXP,C,commodity cement and wallboard
+EFGSF,C,diversified contractor-concession conglomerate; no efficiency edge
+ELNRF,B,grid transmission construction; plausible but undifferentiated
+ETRZF,C,diversified electromechanical contractor
+EME,A,electrical/mechanical infrastructure services cut building and grid costs
+EKIVY,C,construction conglomerate with real estate and trading
+EVOH,C,HVAC startup with no revenue; story
+KYWAF,C,undifferentiated telecom construction contractor
+EXPO,C,forensic consulting monetizes failures; not system efficiency
+FBOHY,C,flooring and belts; stagnant undifferentiated
+GCWOF,C,commodity cement producer
+GKTRF,C,diversified Greek construction conglomerate
+HSHPF,A,infrastructure products and galvanizing extend asset life
+HOCFF,C,generic global mega-contractor
+HCMLY,B,building systems beyond cement; still commodity-heavy
+HOVVB,C,undifferentiated homebuilder; shrinking revenue
+HOV,C,undifferentiated homebuilder; shrinking (duplicate listing)
+IESC,B,electrical/data-center infrastructure; strong growth but contractor
+INRHF,C,generic construction and paving holding
+IRS,C,malls and hotels rent extraction; not durable need
+JMHSF,C,stagnant commercial flooring; undifferentiated
+JHX,A,durable fiber-cement lowers lifetime shelter cost
+JBI,C,self-storage buildings; not a durable need
+JGCCF,C,oil and LNG plant EPC; fossil commodity
+KAJMF,C,generic mega-contractor
+KTITF,A,renovates vacant homes for resale; circular affordable shelter
+KLRGF,B,geotechnical specialist; solid but service commodity risk
+KBAGF,C,generic construction contractor
+KYDKF,C,stagnant regional power-line contractor
+LTOUF,B,infrastructure EPC with water and grid; defense mix dilutes
+LEGH,A,factory-built homes lower cost per dwelling
+LGN,A,building MEP and efficiency retrofits reduce energy use
+LGIH,B,entry-level homebuilder; affordability without clear system edge
+LYTS,B,LED lighting efficiency mixed with retail displays
+MLLUY,C,metallurgical construction; shrinking state contractor
+NCCBF,C,generic Nordic contractor
+NRTZF,B,efficient water heaters and heat recovery; slow growth
+OBYCF,C,generic mega-contractor
+OPMXF,B,shared telecom towers lower coverage cost; slow growth
+PWR,A,grid transmission and smart-grid buildout at scale
+SYRVF,B,water and transport concessions; multi-country operating model
+SCWTF,C,composites with mixed end-markets; contracting revenue
+SKBNF,C,diversified developer-contractor; shrinking
+SHMUY,C,generic mega-contractor
+SKBSY,C,generic contractor with defense exposure
+SPIWF,B,energy services and smart-grid installs; thin-margin contractor
+STBBF,C,generic construction conglomerate
+TNISY,C,oil and gas plant EPC
+TISCF,C,generic mega-contractor
+TTCIF,C,commodity cement producer
+SDCVF,C,commodity cement producer
+VCISF,C,contractor-concession conglomerate; toll rent with low growth
+BVHMF,C,undifferentiated homebuilder; shrinking
+WBRBY,B,building envelope plus water management pipes
+WGO,C,recreational vehicles; leisure not durable need
+WSPOF,B,infrastructure consultancy with strong growth; services only
+XYIGF,C,commodity glass producer
+AFXXF,C,stagnant engineering consultancy
+AMRC,A,energy-savings contracts cut customer energy cost
+ASYTF,B,nuclear engineering services; energy resilience niche
+BBMPY,C,commodity building materials; shrinking
+BWMN,B,civil infrastructure consulting; growing but undifferentiated
+BRDNF,C,commodity aggregates and cement
+CPAC,C,commodity cement producer
+CHYCY,C,LNG plant EPC; shrinking
+DNERF,C,facilities and road maintenance contractor; shrinking
+ELLKY,C,collapsed revenue; no operating evidence
+FDVWF,A,energy transmission and hydrogen-ready pipelines; strong economics
+GNSPF,A,power grid construction and renewable integration; fast growth
+HAZAF,C,generic contractor
+IBJHF,C,commodity bricks; shrinking
+KIERF,C,generic contractor with prisons and defence
+KMGGF,C,generic contractor; shrinking
+LOMA,C,commodity cement producer
+LYOPF,C,mining EPC serves commodity extraction
+MRHLF,C,undifferentiated telecom construction contractor
+OBSJF,C,generic contractor plus luxury hotels
+PSGTF,C,commodity cement producer
+RZNXF,C,oil and petrochemical plant maintenance
+RTOBF,C,private equity vehicle; financial intermediation
+RNWHF,B,critical infrastructure asset renewal; maintenance service niche
+SBDHF,A,bridge and tunnel repair extends infrastructure life
+SLCVF,C,towers without growth economics
+SRGGF,C,mining-heavy maintenance contracting
+RMIX,C,commodity ready-mix distribution; tech claim unverified
+TODCF,C,generic contractor
+TPC,C,undifferentiated civil contractor
+YITYY,C,generic residential contractor
+YGWAF,B,steel bridges and retrofit; transport infrastructure niche
+YRCCF,C,regional facility contractor; stagnant
+AXR,C,land development; no operating efficiency layer
+CNRFF,B,social-interest affordable housing Mexico; thin evidence
+ECELF,B,building products with PVC recycling loop
+GRPRF,A,decentralized water storage and rainwater harvesting
+GWAXY,B,water fixtures and management; stagnant growth
+HOVNP,C,no verifiable description (preferred share)
+LPIX,C,surveillance and defense cameras; not durable need
+OESX,A,LED retrofits cut energy per lumen; growing
+SKYX,C,smart plug gadget platform; story
+SDHC,B,entry-level affordable homebuilder; conventional model
+VNJA,C,no revenue; shell-like builder
+AASLF,B,geospatial surveying for disaster resilience
+BRAGF,B,geotechnical foundations specialist; stagnant revenue
+CSTE,C,countertops; cosmetic surfaces with shrinking sales
+CHYMF,C,cement conglomerate with oiltools mix
+BBCP,C,commodity concrete pumping service
+CTNGY,C,generic infrastructure contractor
+DBMG,C,commodity steel fabrication
+DURCF,B,infrastructure remediation extends asset life; defence mix
+ELWSF,C,unproven wireless road charging breakthrough
+ENGS,C,tiny shrinking retrofit outfit
+FLWLF,C,mixed modular and RV parts; shrinking
+FTTRF,C,commodity bricks; shrinking
+LMB,A,building MEP services cut energy and downtime
+MAGH,C,tiny local M&E contractor
+MTRX,C,fossil storage tank EPC; thin margins
+OYOCF,C,shrinking geological survey services
+PHCI,C,no revenue; shell
+PHOE,C,tiny local substructure works; cap disconnect
+SMID,C,precast niche with contracting revenue
+SPAEF,C,retail facility fit-out; not durable need
+ALMP,C,tiny local plumbing contractor
+PCLA,C,niche mesh Wi-Fi; collapsing revenue
+CPSH,C,no verifiable description
+SPHL,C,no verifiable description
+JFB,C,no verifiable description
+MIMI,C,tiny fit-out contractor; shrinking
+KAZR,C,no verifiable description
+CVLT,C,generic enterprise data-protection SaaS
+IPEU,C,VoIP adtech; cap wildly exceeds revenue
+LDOS,C,defense and government IT; weapons-adjacent
+NYAX,C,payments fintech
+OOMA,C,generic VoIP services
+TUYA,C,generic smart-device cloud platform
+CSYJY,B,industrial automation and SCADA for physical infrastructure
+GDYN,C,generic digital consulting
+GBDMF,C,mixed industrial services; shrinking
+SLUNF,B,smart meter and EV charger deployment services
+LUCN,C,no revenue; renamed shell story
+ATHR,C,retail trading analytics; speculation tooling
+CNTM,C,micro roll-up; electrification claim without evidence
+OWLS,C,blockchain payments mix; negligible revenue
+OTPMF,C,generic IoT device management
+ZENA,C,scattershot promotional drone-software story
+AISP,C,law-enforcement surveillance platform
+ACIW,C,payments fintech
+ADYEY,C,payments fintech
+AGYS,C,hospitality software; not durable need
+APPN,C,generic process automation SaaS
+ASAN,C,generic work management SaaS
+ASOZF,C,diversified IT incl banking and defense
+BJGPY,A,warehouse robotics cut logistics cost per order
+BSP,C,app roll-up conglomerate
+CCC,C,insurance claims software; financial ecosystem
+DASTY,B,simulation software compresses physical development cost; mixed markets
+FIVN,C,contact-center SaaS
+FLYW,C,payments fintech
+KC,C,generic cloud infrastructure
+LIFX,C,consumer location app; not durable need
+LIF,C,consumer location app (duplicate listing)
+RAMP,C,adtech data platform
+MSFT,C,generic software platform; not physical-need system
+NEMKY,A,BIM software cuts construction cost and waste
+ORCL,C,generic enterprise software; health minor
+PAGS,C,payments fintech
+PCTY,C,payroll SaaS
+PAY,C,bill-payment fintech
+PCOR,A,construction management software reduces rework and waste
+RBRK,C,generic data security
+SAIL,C,identity security SaaS
+IOT,A,telematics cuts fuel and accidents in transport fleets
+SNTMF,C,surveillance AI platform
+NOW,C,generic workflow SaaS
+SNOW,C,generic data platform
+SOUN,C,generic voice AI
+SSNC,C,financial services software
+TDC,C,generic analytics; no growth
+TOITF,B,vertical software incl health and public sector; mixed
+TTVSY,C,generic ERP software
+TYL,B,public-sector operations software; not physical-need core
+PATH,C,generic RPA software
+VRNS,C,data security SaaS
+VIA,A,transit software makes public transport demand-responsive
+WEX,C,fleet payments fintech
+WDAY,C,HR and finance SaaS
+ZM,C,generic communications software
+ALIT,C,benefits administration; monetizes admin complexity
+CCSI,C,legacy healthcare fax; stagnant
+EVCM,C,generic SMB service SaaS
+FNCHF,C,insurance claims software
+LSPD,C,retail POS software
+NCCGF,C,cybersecurity services; shrinking
+PD,C,incident management SaaS; stagnant
+PAYS,C,prepaid card fintech
+PXPHF,C,video conferencing software
+PKSHF,C,mixed algorithm vendor; no physical-need core
+QTGPF,C,generic developer tools
+RDWR,C,cybersecurity vendor
+RDVT,C,identity data broker
+SPT,C,social media management SaaS
+TMVWF,C,remote access software; stagnant
+TKCCF,C,generic IT services
+UPBD,C,lease-to-own monetizes costly credit
+VTEX,C,e-commerce platform
+WWLNF,C,payments fintech; shrinking
+YEXT,C,listings management SaaS; stagnant
+YUBCF,C,security hardware keys; not physical-need system
+GTM,C,sales-intelligence data; stagnant
+LOQPF,C,theme-park ticketing software
+BNAI,C,micro conversational AI; negligible revenue
+CVOSF,C,enterprise search SaaS
+DMRC,C,watermarking with stagnant commercialization
+DOMO,C,generic BI platform; flat
+EGAN,C,customer-service AI SaaS
+DAVA,C,IT outsourcing; shrinking
+EXSPF,C,generic NLP software
+GRRR,C,promotional video-surveillance IoT
+JAPPF,B,IT services with medical claims-verification niche
+MTLS,B,medical 3D planning and printing software; flat growth
+RKICF,C,accounting software for tax firms
+PSFE,C,payments fintech
+PERF,C,AR beauty try-on; cosmetic
+NPACY,C,mail and lockers; declining
+QNC,C,pre-revenue quantum moonshot
+RMNI,C,third-party ERP support; generic IT
+TCYSF,A,hospital supply-chain software cuts care logistics cost
+TYPMF,C,payments fintech; flat
+SCOR,C,ad measurement; shrinking
+EXLGF,C,analytics database; shrinking
+IRCDF,C,credential management niche; stagnant
+RSSS,C,research access SaaS; shrinking
+SYZLF,C,public-sector ERP; shrinking
+XTRAF,C,threat-detection screening; monetizes fear not need
+AWRE,C,biometrics; shrinking
+DFORF,C,data platform; collapsing revenue
+LPSN,C,declining conversation SaaS
+XBP,C,document and payment BPO
+ESTC,C,generic search and observability
+MNDY,C,generic work management SaaS
+NTNX,C,generic IT infrastructure software
+PAYC,C,payroll SaaS
+AMPL,C,product analytics SaaS
+ARGPF,C,CAD reseller services; flat
+HQ,C,pre-revenue quantum moonshot
+MSHHF,B,CAD and BIM software for construction; reseller mix
+FKCIF,B,construction CAD software Japan; modest growth
+SVMB,C,parking app plus wine sales; shrinking micro
+PCRDF,C,accounting software
+PLDIF,C,CX analytics SaaS

@@ -1,0 +1,331 @@
+ticker,verdict,reason
+ROK,A,industrial automation lowers manufacturing cost per output
+ROP,C,mixed generic vertical SaaS heavy on payments and financial software
+ST,B,mission-critical sensors for vehicles/electrification; differentiation unclear
+SSD,A,structural connectors make housing stronger and more resilient
+SNA,B,pro repair tools/diagnostics support transport upkeep; financing-heavy
+SPB,C,branded consumer/pet/home products not a durable-need fix
+SPXC,B,engineered HVAC cooling plausible shelter/energy efficiency; mixed segments
+SXI,C,diversified industrial conglomerate with defense mix; unclear need fit
+SWK,C,stagnant branded tools; no system-efficiency mechanism
+RUN,B,decentralized home solar plus storage; lease-finance-heavy model
+SYM,A,warehouse automation cuts supply-chain cost per case
+TDY,B,imaging/sensor instruments serve health/industry; defense mix
+TMO,A,lab tools and diagnostics lower cost of health research
+TRMB,A,construction/geospatial software compresses build cost and waste
+VECO,C,semi deposition equipment; indirect durable-need link
+VRT,A,data-center power/cooling efficiency for critical infrastructure
+VICR,A,high-density power conversion cuts electricity loss
+VNT,C,fueling/retail POS mix shrinking; weak efficiency case
+WSO,B,HVAC distribution scale; thin-margin distributor without product edge
+WWD,B,engine controls improve fuel efficiency; defense mix
+ZBRA,A,asset visibility cuts waste in logistics and health systems
+ZWS,A,water safety filtration and control products for buildings
+AACAF,C,consumer smartphone acoustics; not durable need
+AOSL,C,commodity power discretes for consumer electronics
+APELY,C,consumer/auto components; flat and undifferentiated
+AMANF,C,parking and time-attendance systems; not durable need
+AMBQ,A,ultra-low-power chips slash energy per computation
+AD,B,shared towers colocation model growing; asset-owner economics
+ARRY,B,solar trackers raise yield but revenue shrinking
+ARW,C,commodity electronics distribution; thin margins
+AIP,C,generic semiconductor IP licensing; no durable-need link
+ASTS,B,satellite-to-phone coverage extension; heavy execution risk
+ASAAF,C,commodity PCB/substrate manufacturing; low margins
+T,C,slow incumbent telecom utility; no efficiency edge
+TBB,C,debt security; no verifiable operating description
+MAQAF,C,toll-road rent collection; no scalable product layer
+AUOTY,C,commodity LCD panels; thin margins
+AVT,C,commodity electronics distribution
+BCE,C,slow incumbent telecom utility
+BELFA,C,commodity circuit components with defense mix
+BDC,C,cable/connectivity hardware; commodity with unclear differentiation
+BYDIY,C,consumer electronics assembly; 6% gross margin commodity
+CALX,A,software lets small broadband providers compete; decentralizing access
+CAMT,B,chip inspection aids yield; niche flat growth
+CSIQ,C,commodity solar modules; shrinking revenue
+CAZGF,C,sports performance analytics; not a durable need
+CEVA,C,generic DSP IP licensing
+IMOS,C,commodity chip assembly and test services
+CHT,C,slow incumbent telecom utility
+CIEN,A,optical networking cuts cost per bit of essential connectivity
+COHR,B,photonics lower network cost; mixed consumer/industrial ends
+GLW,B,fiber aids infrastructure; large display/consumer glass mix
+CWLLF,C,smartphone camera modules; consumer commodity
+DURYY,C,auto paint-shop engineering; flat and cyclical
+DAIPF,C,welding/transformer mix; undifferentiated industrial electricals
+DQ,C,commodity polysilicon with negative margins
+DEUZF,C,legacy diesel engine maker; weak differentiation; defense segment
+DEXCF,C,display/electronics materials for consumer devices
+ECHO,C,declining pay-TV distribution; not durable need
+ECTXF,B,professional food-service equipment; sales dipping
+ESE,C,defense-heavy engineered components and ordnance devices
+P,C,enterprise data storage; generic IT not durable need
+FN,C,contract optics manufacturing; thin-margin outsourcing
+FITGF,C,consumer connectors and cables commodity
+FUJXF,C,niche polishing consumables; indirect durable-need link
+GSAT,C,declining satellite services; weak differentiation
+GLYYY,C,cash-handling machines; fading non-essential niche
+HPHTF,A,photonic sensors enable medical and scientific imaging
+HBGRF,C,printing presses; structurally declining market
+HNHPF,C,commodity electronics assembly; 6% gross margin
+HSSKF,C,connectivity components; low growth commodity
+IBIDY,B,chip substrates plus diesel particulate filters; mixed
+IHS,A,shared African towers spread connectivity cost; replicable model
+INZRF,C,commodity chip assembly/test services; shrinking
+INDI,B,ADAS chips aid vehicle safety; deeply unprofitable
+IRRHF,A,conveyor modules cut warehouse and logistics cost
+IQEPY,C,commodity epiwafers; no profitability or growth
+IRDM,B,safety-critical remote connectivity; slow growth
+JNPKF,B,photonics for metrology health and traffic; mixed slow
+JEXYY,C,toll-road rent collection; no product layer
+JKS,C,commodity solar modules; 4% margin shrinking
+KGBLY,C,commodity laminates plus property and copper trading
+KLAC,A,yield control cuts waste and cost per chip
+KOPN,C,microdisplays mainly for weapon sights; defense economics
+KT,C,slow incumbent telecom utility
+KYIV,C,telecom utility; conglomerate digital mix
+LMHDF,A,precision current sensing enables grid and EV efficiency
+LNTCY,C,smartphone cover glass; consumer commodity
+LPTH,C,optics tilted to defense and surveillance
+LUMN,C,shrinking legacy telecom
+LITE,A,optical components cut network cost per bit at scale
+MAWAF,C,ceramic substrates niche; indirect need link
+MDA,C,space robotics and satellites; flat project-based contractor
+MDMXF,B,precision drug-delivery devices; sales shrinking
+MKOEF,C,commodity printed circuit boards
+TIGO,C,telecom utility plus mobile fintech
+MNBEF,B,precision bearings cut machine friction; sprawling conglomerate
+MHTCF,C,tooling and lead frames; unclear need link
+NHOXF,A,industrial air filtration protects worker health
+NEO,A,cancer diagnostics network serves durable health need
+NTAP,C,enterprise storage software; generic IT
+NTTAF,C,commodity belts and hoses plus real estate
+NOKBF,B,network equipment sustains connectivity; competitive slow-growth
+NVMI,A,metrology lifts chip yield lowering cost per unit
+NVEC,B,spintronic sensors incl medical; tiny niche
+OKUMF,B,CNC machine tools with automation; competitive field
+OMRNY,A,factory automation plus health monitoring devices
+PKCOF,C,parking-lot operator; rent collection not efficiency
+PFFVF,B,vacuum pumps enable chips and science; indirect
+PLAB,C,merchant photomasks; flat commodity
+NLLRF,B,fluoropolymer fluid control for fabs and medical; niche
+PHI,C,slow incumbent telecom utility
+POET,C,pre-revenue photonics story
+TLK,C,slow incumbent telecom utility
+TPLKF,B,equipment enabling energy-hardware and chip production; small
+RSTCF,B,wafer reclamation adds circularity to chip supply
+SNDK,C,commodity NAND memory cycle
+SISXF,A,accessibility lifts serve aging mobility and care needs
+STX,C,commodity hard-drive cycle
+LAES,C,tiny security-chip niche; unproven scale
+SHZNY,C,toll-road rent collection
+SZIHF,C,toll roads and logistics parks; asset owner
+SHLS,A,solar wiring systems cut install cost per watt
+SEXHF,C,toll-road rent collection
+SKM,C,slow incumbent telecom utility
+SEDG,A,panel-level optimization raises solar energy harvest
+SOTGY,C,smartphone lenses; consumer-heavy commodity
+SESMF,C,semi equipment; revenue contracting
+TMUS,C,telecom utility; no durable efficiency edge
+TE,C,commodity solar modules; 6% margin
+TYOYF,C,commodity passive components
+TTDKY,C,diversified consumer-electronics components
+TEL,A,connectors and sensors enable electrified efficient transport
+TEO,C,slow telecom utility
+ERIXF,C,telecom equipment vendor with shrinking revenue
+VIV,C,slow incumbent telecom utility
+TDS,C,small telecom utility; capital-heavy
+TU,C,telecom utility conglomerate; shrinking
+THYKF,C,electrolysis projects shrinking; hydrogen story risk
+TNJIF,C,geographically-trapped sewage utility
+TIMB,C,slow incumbent telecom utility
+TOKCF,C,chip photoresist materials; indirect need link
+TOWCF,C,niche chip packaging equipment; indirect need
+TRAUF,C,toll-road rent collection
+TSKMF,B,power transmission and conveyance leader; commodity-ish
+TKC,C,telecom utility with conglomerate sprawl
+ULS,A,safety testing/certification underpins trustworthy infrastructure
+UMSSF,C,contract machining for equipment OEMs
+VEMLF,C,contract electronics manufacturing
+VEON,C,emerging-market telecom utility
+VZ,C,slow incumbent telecom utility
+VSAT,C,satellite broadband with heavy defense mix; flat
+VOD,C,slow telecom utility
+WHTAF,C,car-wash equipment; not a durable need
+WBTNF,C,pre-commercial memory technology
+WCC,B,electrical/utility supply distribution; thin margins
+WDC,C,commodity hard-drive cycle
+WOLF,C,silicon carbide but shrinking and financially broken
+XFABF,C,specialty foundry; shrinking revenue
+YAGOY,C,commodity passive components at scale
+YMZNF,C,machinery trading house; near-zero margin
+YZOFF,B,fiber preform/cable scale leader; commodity pressure
+ZHEXF,C,toll roads plus securities brokerage
+ZTCOF,B,network equipment growing; consumer mix
+ALG,B,infrastructure-maintenance equipment niche; steady
+AMPX,B,silicon-anode batteries commercializing; drone/defense tilt
+ATS,B,custom automation builder; revenue dipping
+AZTA,B,biosample management supports health research
+BLDP,C,fuel-cell perennial; no profitable commercialization
+CYD,C,commodity engines plus hospitality mix
+CRCT,C,hobby craft machines; not durable need
+KODK,C,declining legacy print and chemicals
+ENR,C,disposable consumer batteries; no efficiency mechanism
+NRGV,B,grid storage deployments growing; economics unsettled
+EPAC,B,high-force tools for infrastructure maintenance; niche
+ENVX,C,battery scale-up story; minimal commercialization
+EOSE,C,deeply negative-margin storage maker; dilution risk
+FAC,C,pre-revenue solid-state battery moonshot
+FCEL,C,shrinking unprofitable fuel-cell serial diluter
+GIC,B,MRO distribution keeps facilities running; no differentiation
+GHM,C,defense and petrochemical systems tilt
+HLMN,C,commodity fasteners and hardware distribution
+KRNT,A,digital textile printing cuts water and overproduction waste
+LNN,A,center-pivot irrigation raises water efficiency in food
+LYNX,C,defense battlespace connectivity; weapons economics
+MLAB,A,sterilization assurance safeguards health systems
+PSIX,C,engine maker; revenue contracting
+SLDP,C,pre-commercial solid-state battery moonshot
+TNC,B,cleaning equipment with autonomous sustainable angle
+VREX,A,X-ray components supply essential medical imaging
+ADTN,C,no verifiable description
+ATEX,C,spectrum licensing asset play; minimal revenue
+UZE,C,debt security; no verifiable description
+UZD,C,debt security; no verifiable description
+BCNAY,C,display/projection mix; shrinking
+CCOI,C,declining internet/colocation utility
+ELSLF,C,defense drone connectivity; no verifiable revenue
+ENPSF,C,sockets gears optics niche; unclear need
+EVTZF,C,broadcast media infrastructure; not durable need
+FLTCF,C,niche RF modules; defense/space mix
+FRUYF,C,precious-metal processing niche; indirect need
+HNMUF,C,commodity electronics assembly services
+HTROF,C,commodity fiber installation components
+IDT,C,retail POS remittance fintech mix
+ITRN,B,fleet telematics improves vehicle utilization; insurance mix
+JPAVF,C,commodity connectors
+JPDYY,C,shrinking loss-making LCD maker
+KACPF,C,commodity resistors
+NSSC,B,building security systems; shelter safety niche
+NTGR,C,consumer networking gear; commoditized
+PBTDF,C,niche router vendor; generic IT
+PTJSY,C,toll-road rent collection
+QMCO,C,perennially struggling storage vendor
+RPBPF,B,low-cost computing platform; education/industrial spread
+SHEN,B,rural fiber expansion; capital-heavy regional utility
+SPIR,C,subscale satellite data; shrinking
+TGLS,A,low-E windows improve building energy efficiency
+VTKLF,C,electronic toys and phones; consumer
+ZD,C,digital media and adtech
+ALMU,C,no verifiable description
+ATOM,C,pre-revenue semiconductor licensing story
+AUUMF,C,e-mobility machinery; revenue collapsing
+BYSTF,C,sheet-metal machinery; flat competitive
+CHHGF,C,commodity injection molding machines; shrinking
+CHSTF,C,wind gearboxes but revenue contracting
+DDMGF,C,commodity marine engines
+DLGCF,C,flat barcode hardware; competitive
+DRTTF,B,prefab interiors cut construction waste; small fragile
+SZDEF,C,waste services shrinking; geographically bound
+MRAM,C,niche memory chips; no durable-need link
+GCTS,C,subscale chipsets; shrinking revenue
+GSIT,C,flat niche memory; subscale
+KDCLF,C,commodity marine engines; shrinking
+JSCIF,C,instrument roll-up; indirect need link
+JUKIY,C,commodity sewing machines
+KMAAF,C,wire-harness machinery; flat cyclical
+KMRCF,C,printing presses; declining market
+LKTEF,C,die-casting machines; revenue collapsing
+LPKFF,C,laser systems; revenue collapsing
+MX,C,commodity display-driver chips; shrinking
+MCRNF,C,semi tooling consumables; indirect niche
+NLLSY,C,hydrogen electrolyser story; shrinking orders
+QUIK,C,subscale FPGA IP licensing
+SKUYF,C,amusement rides and stage equipment
+SSNEF,C,electronics trading house; thin margins
+SDIIF,C,small instruments roll-up; unclear need
+SEIGY,C,commodity rubber and polymer products
+SILDF,C,foundry equipment; flat cyclical
+SDCKF,C,EDM machine tools; competitive niche
+SRTMF,B,vessel tracking aids fisheries and maritime safety
+SIUAF,C,commodity gas springs and dampers
+TZMOF,C,semi coating equipment; revenue collapsing
+TSMCF,B,trenchers/stringing equipment for grid buildout; strained
+TITMF,C,subscale additive manufacturing; loss-making
+VCHYF,C,display manufacturing equipment; niche cyclical
+VLN,C,AV connectivity chips; slow niche
+NPNVF,C,industrial seals niche; indirect need
+VLNSF,C,valve maker; revenue contracting
+MASS,C,no verifiable description
+AZ,C,no verifiable description
+ACU,C,no verifiable description
+AIRJ,C,pre-commercial water-from-air technology
+ALTG,C,equipment dealership; no product layer
+ASYS,C,small semi packaging equipment
+CEPL,C,microturbine niche; shrinking weak economics
+CHPT,C,EV charging losses and dilution; weak economics
+CODA,C,sonar with defense engineering mix
+CIX,C,cabinet locks and marine components
+EML,C,shrinking mixed industrial; modest circular angle
+ELVA,C,subscale forklift batteries; slow growth
+ERII,A,pressure exchangers slash desalination energy cost
+ESP,C,military power electronics
+GPRO,C,declining consumer action cameras
+EAF,C,commodity graphite electrodes; negative margins
+HURC,C,commodity machine tools
+LCUT,C,consumer housewares; not durable need
+CUB,C,blank-check shell; no operations
+MPTI,C,frequency components; defense-tilted niche
+MVST,C,EV battery maker shrinking; weak economics
+NEOV,C,subscale home storage; stagnant
+NPWR,C,pre-revenue power-cycle breakthrough bet
+NNBR,C,commodity precision components
+OWLT,B,infant vitals monitoring; growing consumer-medical crossover
+QSI,C,pre-commercial protein sequencing moonshot
+RR,C,service-robot story; negligible revenue
+SHMD,C,electronics/PV equipment; revenue collapsing
+SERV,C,delivery-robot story; minimal revenue
+SES,C,battery moonshot; subscale revenue
+TAYD,B,seismic dampers boost building resilience; lumpy sales
+TRT,C,small semi test services
+TWIN,C,marine transmissions; commodity-ish cyclical
+ULBI,C,batteries mostly for military use
+VELO,C,metal-AM printers; weak economics defense/space tilt
+AMPG,C,no verifiable description
+ATNI,C,no verifiable description
+AUDGF,C,pro-AV networking; not durable need
+AUDC,C,no verifiable description
+VARXF,C,commodity automotive displays
+CLFD,C,no verifiable description
+CXDO,C,no verifiable description
+ENAFF,C,subscale optical components; negative margins
+EVSBY,C,broadcast sports video; not durable need
+GOGO,C,no verifiable description
+IACYF,C,niche inspection illuminators; shrinking
+KVHI,C,no verifiable description
+NNFTF,C,coating services; consumer electronics tilt
+NPTSF,C,network accelerator cards; generic IT niche
+NCHNF,C,commodity capacitors and power components
+NPPRF,C,commodity ceramic sensors
+OCC,C,no verifiable description
+PAOTF,C,defense and security drones
+AIOT,C,no verifiable description
+RELL,C,no verifiable description
+SIDU,C,no verifiable description
+SIIXF,C,electronics trading and assembly; thin margins
+SMOPF,B,open optical systems cut network cost; small
+SPOK,C,no verifiable description
+SDAEF,C,commodity inductors and coils
+OPTX,C,no verifiable description
+TTGT,C,no verifiable description
+TTGPF,C,electronics with defense mix; shrinking
+TBCH,C,no verifiable description
+AFGVF,C,legacy imaging conglomerate; declining
+ARBE,C,pre-commercial radar chipset story
+BZAI,C,no verifiable description
+IPWR,C,no verifiable description
+ICG,C,crypto-mining chips; artificial-scarcity economics
+KRMKF,B,CZT detectors for medical imaging; CBRN mix
+LSRBF,B,wear-life extension services; circular angle tiny
+MTMV,C,negligible revenue; unproven test instruments

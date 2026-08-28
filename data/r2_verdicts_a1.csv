@@ -1,0 +1,386 @@
+ticker,verdict,reason
+LNT,C,geographically-trapped regulated utility no scalable product layer
+AEE,C,captive-territory regulated utility no product layer
+AVA,C,regional regulated utility no scalable layer
+CMSA,C,debt security not an operating business
+CMSC,C,debt security not an operating business
+CMSD,C,debt security not an operating business
+CMS,C,single-state regulated utility no product layer
+ED,C,captive-territory regulated utility
+DUKB,C,debt security not an operating business
+DUK,C,regulated utility no scalable product layer
+ENJ,C,mortgage bond not an operating business
+ENO,C,mortgage bond not an operating business
+EVRG,C,captive-territory regulated utility
+EXC,C,regulated distribution utility no product layer
+NI,C,regulated gas utility captive territory
+NWE,C,regional regulated utility
+PCG,C,captive regulated utility wildfire liabilities
+PEG,C,regulated utility no scalable layer
+WEC,C,captive-territory regulated utility
+XEL,C,captive-territory regulated utility
+ABLZF,A,electrification and automation raise grid and industrial efficiency
+AEHR,C,no verifiable description
+APH,B,differentiated interconnects but mixed consumer and military markets
+BHE,C,undifferentiated thin-margin contract electronics manufacturing
+BKWAF,B,multi-country grid and energy infrastructure but utility-heavy mix
+CLS,C,commodity contract manufacturing thin margins
+COHU,C,semiconductor test gear not a durable-need system
+DLEGF,A,power electronics cut energy losses across infrastructure and mobility
+DRXGF,C,imported-pellet biomass burning weak efficiency case
+EXOSF,C,defense electro-optics missile warning weapons exposure
+FLEX,C,commodity contract manufacturing thin margins
+FOJCY,B,low-carbon Nordic generation but commodity power sales
+HUBB,A,grid components and automation strengthen transmission distribution
+ITRI,A,smart meters cut energy and water waste
+JBL,C,commodity contract manufacturing thin margins
+LGRDY,A,building electrical infrastructure lowers energy cost per outcome
+LFUS,A,circuit protection makes electrical systems safer more resilient
+MGHTF,C,geographically-trapped NZ generator no product layer
+MRCY,C,defense electronics weapons rejection
+NXPRF,A,grid and offshore wind cables enable electrification
+NRKBF,A,HV cable backbone for grid and offshore wind
+PLXS,C,commodity contract manufacturing thin margins
+POWL,A,custom switchgear and substations harden power distribution
+PRYMY,A,global power cable leader enables grid buildout
+SANM,C,commodity contract manufacturing thin margins
+STECF,B,emerging-market solar platform but capital-intensive IPP
+PHPPY,B,LED efficiency fits but revenue contracting
+SOCNF,C,SoC design not a durable-need system
+TER,C,semiconductor test equipment not durable-need
+TTMI,C,defense-heavy PCBs commodity boards
+OLED,C,display materials not a durable need
+VLTO,A,water analytics and treatment cut water waste
+OEZVY,B,multi-country hydro generation but commodity power
+VSH,C,commodity passive components no differentiation
+WSIOF,A,smart metering optimizes grid operation and efficiency
+UTL,C,small captive regulated utility
+ABOIF,C,conglomerate with banking and coal power mix
+AES,C,no verifiable description
+AQNB,C,debt security not an operating business
+AQN,C,regulated utility roll-up no product layer
+ALNT,B,precision motion components unclear differentiation
+AEP,C,captive-territory regulated utility
+BKH,C,captive-territory regulated utility
+BEPH,C,debt security not an operating business
+BEPI,C,debt security not an operating business
+BEPJ,C,debt security not an operating business
+BEPC,B,global renewable asset owner yieldco structure
+CNP,C,captive-territory regulated utility
+CEPU,C,single-country commodity power generation
+CPYYF,C,retail energy reseller monetizes supply margin
+CWEN,B,clean generation portfolio but financial yieldco
+CLPHY,B,multi-country electricity operator but coal-heavy
+CIG,C,single-region regulated Brazilian utility
+ELPC,C,single-region regulated Brazilian utility
+CEG,B,carbon-free nuclear baseload but merchant commodity power
+CTS,B,sensors and actuators unclear differentiation
+D,C,captive-territory regulated utility
+DTW,C,debt security not an operating business
+DTB,C,debt security not an operating business
+DTG,C,debt security not an operating business
+DTE,C,captive-territory regulated utility
+EIX,C,captive regulated utility wildfire exposure
+ELIAF,A,multi-country transmission operator balances renewable-heavy grids
+EMA,C,regulated utility holding no product layer
+ELEZF,C,Iberian regulated generation and distribution
+ENEAY,C,coal-heavy single-country utility
+ENIC,C,single-country regulated utility
+ENLT,A,fast-growing renewables plus storage platform across regions
+EAI,C,debt security not an operating business
+ETR,C,captive-territory regulated utility
+ELC,C,debt security not an operating business
+EMP,C,debt security not an operating business
+EQUEY,C,regional regulated utility conglomerate
+ES,C,captive-territory regulated utility
+EXSNY,C,defense electro-optics missile warning weapons exposure
+FRVO,C,pre-revenue geothermal unproven commercialization
+FE,C,captive-territory regulated utility
+FGSGF,C,commodity solar glass contracting revenue
+FTS,C,regulated utility roll-up no product layer
+FEIM,C,defense timing components contracting revenue
+HOIEF,C,commodity consumer electronics components thin margins
+IDA,C,captive-territory regulated utility
+KEN,C,holding company commodity power generation
+KE,C,commodity contract electronics manufacturing
+KEP,C,single-country regulated monopoly thin margins
+LDGYY,A,smart metering and grid management cut energy waste
+CBLNF,B,electrical protection and materials mixed end markets
+MEI,B,EV power distribution parts unclear differentiation
+MGEE,C,captive-territory regulated utility
+NEE,A,scalable renewables development machine lowers energy cost
+NRG,B,retail energy with demand-response layer but commodity generation
+OGE,C,captive-territory regulated utility
+OKLO,C,pre-revenue fission startup unproven breakthrough
+ORA,A,geothermal operator plus equipment maker durable baseload
+OTTR,B,utility plus pipe manufacturing mixed business
+PAM,C,commodity power oil and petrochemical conglomerate
+PNW,C,captive-territory regulated utility
+POR,C,captive-territory regulated utility
+PPL,C,captive-territory regulated utility
+RGPCF,C,gas and coal commodity IPP
+RDEIY,B,transmission operator grid balance but mostly domestic
+RNW,B,Indian renewables platform with equipment manufacturing
+RNRTY,C,cables ICT defense conglomerate stagnant
+SO,C,captive-territory regulated utility
+SOJC,C,debt security not an operating business
+SOJD,C,debt security not an operating business
+SOJE,C,debt security not an operating business
+TLN,C,merchant commodity power mixed fossil fleet
+TNABF,C,single-country regulated utility
+TEZNY,B,Italian grid operator balance role but domestic
+TYOTF,B,specialty carbon materials unclear end-market mix
+TAC,C,commodity merchant generation
+TRNS,B,calibration services support reliable measurement niche
+TXNM,C,captive-territory regulated utility
+VPG,B,precision sensing components unclear differentiation
+VST,C,merchant commodity power retail mix
+VLXGF,B,power and EV cabling assembly limited differentiation
+VLTAF,B,multi-country renewables operator plus services small scale
+WSPCF,C,commodity battery separators negative gross margin
+AEMMY,A,circular waste-to-energy water and heat multi-utility growing
+ABZPF,C,no verifiable description
+ADOOY,C,thermal coal commodity producer
+HCAEF,C,single-country transmission holding company
+AGLXY,C,coal-heavy gentailer contracting
+AXIAY,C,single-country commodity hydro generation
+AXICY,C,duplicate listing single-country hydro generation
+BEP,B,global renewable asset owner yieldco structure
+CPXWF,C,gas-heavy commodity generation
+CGNWF,B,large nuclear fleet low-carbon but single-market SOE
+CQP,C,fossil LNG export midstream
+CCOZF,C,thermal coal commodity producer
+CLPXY,C,single-market wind generation contracting revenue
+CPWIF,C,coal-heavy state power generation
+CRPJY,C,coal-heavy power portfolio commodity
+CUAEF,C,coal commodity producer
+CSGEF,C,gas distribution and wind contracting
+CHUEF,C,single-country utility thin margins
+CGKEF,C,single-country utility thin margins
+CRPAY,C,renewables operator revenue contracting sharply
+CSDXF,C,commodity oil and LNG shipping
+DCCPY,C,fossil fuel distribution monetizes carbon energy
+DNGFF,B,power generation equipment maker mixed thermal exposure
+ENAKF,B,multi-country distribution networks and efficiency solutions
+EDPFY,B,multi-country utility with renewables platform
+EDRVF,B,global renewables developer operator
+ELCPF,B,multi-country utility with renewables platform
+EDRWY,C,thermal-heavy single-country generator
+EDN,C,single-region regulated distribution Argentina
+ENLAY,B,global grids and renewables multi-country platform
+ENREF,B,multi-region renewables and storage operator high margins
+ET,C,fossil midstream pipelines commodity
+ENGIY,B,decentralized low-carbon networks multi-country
+XNGSY,C,single-country gas distribution thin margins
+FELTY,A,power electronics and semiconductors raise energy efficiency
+FUWAY,B,cables optical and energy infrastructure mixed portfolio
+GLPEY,C,integrated oil and gas commodity
+GFUZ,C,pre-revenue fusion unproven breakthrough
+GNE,C,retail energy reseller no differentiation
+GBNXF,C,crude oil midstream commodity
+HNRG,C,coal plant and coal mining
+HMDPF,A,transformers for grid and data centers strong growth
+PMOIF,C,commodity oil and gas E&P
+HE,C,captive island utility wildfire liabilities
+HLPMF,C,oil refining and marketing commodity
+HRASF,A,circular waste water and energy multi-utility growing
+HRSEF,C,consumer electronics connectors not durable-need
+HKCVF,C,captive island regulated utility
+HPIFF,C,coal-fired generation commodity
+HUNGF,C,coal-heavy generation commodity
+HRNNF,C,single-province regulated transmission distribution
+IRDEY,B,multi-utility with water and waste but regional slow
+JELCF,B,motors and motion systems unclear differentiation
+KAEPY,C,single-country utility thin margins
+KELRF,B,efficient rail transport but mixed retail property conglomerate
+KOKSF,C,semiconductor equipment not durable-need system
+KLYCY,C,oil and gas commodity operations
+KYSEY,C,single-country utility conglomerate
+MAEOY,C,captive-franchise distribution monopoly
+MDDNF,C,geographically-trapped NZ renewable gentailer
+MIELF,B,grid rail automation strengths but defense-inclusive conglomerate
+NNE,C,pre-revenue microreactor unproven breakthrough
+NGGTF,B,multi-country transmission networks but slow growth
+GASNY,C,gas-centric distribution commodity fuel
+DKDRF,C,commodity gas E&P
+NPPEY,C,display glass not durable-need
+NPIFF,B,multi-country offshore wind operator flat growth
+ODERF,B,rail transport core but mixed property retail
+OGFGY,C,gentailer with LNG commodity exposure
+PPENF,C,commodity power oil petrochemical conglomerate
+PPOEF,C,coal-heavy single-country utility
+HGKGY,C,investment holding rent collection contracting
+PWCDF,C,financial intermediation insurance asset management
+PEGIY,C,commodity oil and gas E&P
+PUPOF,C,lignite-legacy regional utility slow growth
+RENZY,C,single-country grid no scalable layer
+RWEOY,B,large multi-country renewables but lignite legacy
+SBGSF,A,energy management and automation compress energy cost globally
+SEPLF,C,commodity oil and gas E&P
+SIELY,B,energy equipment maker mixed industrial SOE
+SMTGY,C,commoditized solar inverters contracting revenue
+SEYMF,B,growing multi-country solar operator capital-intensive
+SSEZY,B,networks plus offshore wind but UK-centric flat
+STAEY,B,auto LED lighting parts unclear differentiation
+SMTOF,B,cables batteries and harnesses broad mixed portfolio
+TNEYF,C,commodity oil and gas E&P
+TNPGY,C,coal-heavy single-country utility
+THNPY,C,oil and gas engineering services fossil buildout
+TEPCF,C,single-country utility thin margins
+TKECF,C,single-country utility thin margins
+TPZEF,C,royalty rent extraction no operating layer
+UUGRY,C,geographically-trapped regulated water utility
+VSOGF,C,commodity oil and gas E&P
+VIVO,C,zero-revenue story mix dilution risk
+WEICF,B,engines and powertrains scale but commodity-adjacent
+WOPEF,C,commodity oil and gas E&P
+XNYIF,C,commodity solar glass contracting revenue
+YASKF,B,servo motors and robotics efficiency but industrial-generic
+YOKEF,B,process automation efficiency but fossil-heavy end markets
+YTLCF,C,cement hotels property conglomerate mix
+YTLPF,B,multi-country power water sewerage infrastructure platform
+ZHUZY,A,rail propulsion and control systems improve transit efficiency
+SRIOF,C,cables plus resorts conglomerate
+ABHBY,A,smart grid substations storage EV charging decentralize energy
+COSXF,B,industrial power supplies plausible efficiency niche
+DIALF,C,industrial LED contracting revenue
+SMTLF,C,solar-to-digital pivot contracting revenue
+ERXCF,C,biomass power and retail commodity
+THFWF,C,niche lighting flat growth no differentiation evidence
+INTT,C,semiconductor test tooling not durable-need
+KULR,C,tiny contracting revenue dilution machine
+LGSXY,C,distressed single-region distribution utility
+SVMRF,C,project developer revenue collapsed no operations
+NNDM,C,additive electronics not durable-need serial pivots
+PHNGF,C,unproven metal-air batteries revenue collapsed
+RFIL,C,commodity interconnect components small
+UTKN,C,crypto tokenization platform keyword-matcher
+ZMTBY,C,stagnant lighting business no differentiation
+AAVVF,C,no verifiable description
+BEPTF,C,commodity oil and gas E&P
+BIREF,C,commodity gas E&P
+BVENY,C,commodity oil and gas E&P
+CRLFF,C,commodity oil and gas E&P
+CUPUF,C,captive island diesel utility
+CPWHF,C,pre-commercial fuel cell licensing unproven scale
+DEC,C,declining gas well roll-up commodity
+EYGPF,C,commodity IPP thin margins
+EERGF,C,commodity gas E&P
+FNOEF,B,marine navigation electronics safety efficiency niche
+GEL,C,fossil midstream commodity
+GRYRF,C,thermal coal commodity producer
+HKEPF,C,single-country utility thin margins
+HOKRF,C,single-country utility thin margins
+ISOU,C,pre-revenue uranium exploration
+ITMPF,C,electrolysers negative margins unproven commercialization
+KRNGF,C,commodity oil E&P
+LOECF,C,commodity oil and gas E&P
+ENGDF,C,small regional utility contracting revenue
+OKIEY,C,mixed IT telecom systems not durable-need
+SANJF,C,contracting power semis weak margins
+SBDXF,C,oil drilling services commodity
+SQZZF,C,commodity oil and gas E&P
+SLSR,C,pre-revenue copper exploration
+ATUUF,C,commodity oil and gas E&P
+TIANF,B,mass-market light-EV batteries but commodity chemistry
+TOTZF,C,oil drilling services commodity
+VULNF,C,pre-commercial lithium-geothermal unproven breakthrough
+XPPLF,B,critical power conversion niche slight decline
+EDCFF,C,single-country thermal generation
+FISN,C,pre-revenue underground SMR unproven
+ELLO,C,tiny renewable asset holding no platform
+GPJA,C,debt security not an operating business
+GRMZF,C,PV reseller and electricity retail no differentiation
+HDRN,C,pre-revenue microreactor unproven
+ELTK,C,defense-heavy PCBs contracting
+GCPEF,C,commodity polysilicon thin margins
+GELNF,C,pre-commercial battery R&D minimal revenue
+ONMBF,C,commodity wires and cables small
+STEM,C,contracting revenue post-dilution collapse
+SCPKF,C,no verifiable description
+COPJF,C,no verifiable description
+AERG,C,directed-energy weapons pre-revenue
+FOSYF,C,no verifiable description
+BRLL,C,zero-revenue shell
+EEGUF,C,no verifiable description
+PVLTF,C,no verifiable description
+BKLRF,C,no verifiable description
+BDCO,C,small commodity refinery
+CRNCY,C,no verifiable description
+PTOAF,C,no verifiable description
+CEIEF,C,no verifiable description
+TRSNF,C,no verifiable description
+CNPRF,C,no verifiable description
+ESVIF,C,no verifiable description
+FRHYF,C,no verifiable description
+GEGYF,C,no verifiable description
+GFGY,C,no verifiable description
+AFGYF,C,no verifiable description
+HUKEF,C,no verifiable description
+IESVF,C,no verifiable description
+JDSEF,C,no verifiable description
+FDENF,C,no verifiable description
+MXGFF,C,no verifiable description
+OKEPF,C,no verifiable description
+LNDNF,C,no verifiable description
+PESAF,C,no verifiable description
+SOCLF,C,no verifiable description
+RAMPF,C,no verifiable description
+PCELF,C,no verifiable description
+RUBLF,C,no verifiable description
+SSMFF,C,no verifiable description
+SCEYF,C,no verifiable description
+LUOYF,C,no verifiable description
+OPTT,C,no verifiable description
+DAIO,C,no verifiable description
+KTCC,C,no verifiable description
+PLPKF,C,nano AI battery story mix tiny revenue
+HPMCF,C,no verifiable description
+CANRF,C,no verifiable description
+GUROF,C,no verifiable description
+QSEP,C,pre-revenue single unproven pipeline technology
+QTEYF,C,no verifiable description
+RDFD,C,no verifiable description
+IGESF,C,no verifiable description
+RDRIF,C,no verifiable description
+UNEGF,C,no verifiable description
+WEEEF,C,no verifiable description
+WECFF,C,no verifiable description
+WAVE,C,no verifiable description
+SPRU,C,no verifiable description
+RDFEF,C,no verifiable description
+CECAF,C,no verifiable description
+CVONF,C,no verifiable description
+CGXEF,C,no verifiable description
+ELXPF,C,no verifiable description
+EWCLF,C,no verifiable description
+GRNWF,C,no verifiable description
+GDYMF,C,no verifiable description
+KEGX,C,no verifiable description
+KLNG,C,subsea oil services commodity
+NSFDF,C,minimal-revenue oil survey technology unproven
+ORXGF,C,no verifiable description
+CBVTF,C,no verifiable description
+SEGYY,C,no verifiable description
+STKKF,C,no verifiable description
+ANDE,B,diversified ag distribution thin margins
+CALM,B,scale egg protein staple but commodity cycles
+CTVA,A,seeds and crop protection raise yield per acre
+SEB,C,factory-farm pork and commodity trading conglomerate
+ACOPF,C,premium milk branding not system efficiency
+ARHUF,B,specialty plant oils ingredient maker unclear end mix
+AJINF,B,amino-acid nutrition platform but branded packaged mix
+ADM,B,ag processing scale thin commodity margins
+BG,B,ag processing scale thin commodity margins
+CBCFF,C,snack foods not durable-need efficiency
+CPB,C,stagnant branded packaged food
+CENT,C,pet and garden supplies not durable need
+CFEIY,C,contracting premium infant formula brand
+CAG,C,branded processed food no efficiency mechanism
+CRWKF,B,integrated protein supply real operations welfare-positioned
+DAR,A,renders food waste into ingredients circular recovery
+EMLZF,C,premium branded dairy no system efficiency
+FPAFY,B,staple noodles and infrastructure but holding conglomerate
+FSRCY,C,commodity palm oil plantation
+FRPT,C,pet food not durable human need
+GIS,C,branded processed food no efficiency mechanism

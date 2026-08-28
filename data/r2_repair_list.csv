@@ -1,0 +1,229 @@
+ticker,company,price,marketCap,need,listing
+AEHR,Aehr Test Systems Common Stock,95.59,3118188816.0,energy,exchange
+AES,The AES Corporation Common Stock,14.73,10508951020.0,energy,exchange
+ABZPF,Aboitiz Power Corporation,0.64,4611746816.0,energy,otc
+AAVVF,Advantage Energy Ltd.,7.93,1327765120.0,energy,otc
+UNEGF,United Energy Group Limited,0.0735,1889469440.0,energy,otc
+AGRO,Adecoagro S.A. Common Shares,11.03,1591722380.0,food,exchange
+TXG,10x Genomics Inc. Class A Common Stock,64.72,8432444393.0,health,exchange
+MMM,3M Company Common Stock,179.37,92505129937.0,health,exchange
+A,Agilent Technologies Inc. Common Stock,154.77,43711991973.0,health,exchange
+ACHC,Acadia Healthcare Company Inc. Common Stock,29.87,2780905214.0,health,exchange
+ACHV,Achieve Life Sciences Inc. Common Shares,8.17,840713343.0,health,exchange
+SI,Shoulder Innovations Inc. Common Stock,22.32,464679104.0,health,exchange
+ABT,Abbott Laboratories Common Stock,116.13,200949412164.0,health,exchange
+ABBV,AbbVie Inc. Common Stock,265.79,469682103180.0,health,exchange
+ABCL,AbCellera Biologics Inc. Common Shares,12.5,3683319150.0,health,exchange
+ABVX,Abivax SA American Depositary Shares,117.93,10153128513.0,health,exchange
+ACAD,ACADIA Pharmaceuticals Inc. Common Stock,30.57,5267379685.0,health,exchange
+ADPT,Adaptive Biotechnologies Corporation Common Stock,26.25,4189390853.0,health,exchange
+ADUS,Addus HomeCare Corporation Common Stock,121.09,2261270987.0,health,exchange
+ADMA,ADMA Biologics Inc Common Stock,9.72,2177131090.0,health,exchange
+FDMT,4D Molecular Therapeutics Inc. Common Stock,15.72,868438997.0,health,exchange
+FDMDF,4DMedical Limited,2.95,1769803264.0,health,otc
+ACRS,Aclaris Therapeutics Inc. Common Stock,6.535,961944766.0,health,exchange
+AHCO,AdaptHealth Corp. Common Stock,5.48,747166194.0,health,exchange
+ANL,Adlai Nortye Group Ltd. American Depositary Shares,13.74,884827668.0,health,exchange
+AARD,Aardvark Therapeutics Inc. Common Stock,7.25,158665134.0,health,exchange
+ABEO,Abeona Therapeutics Inc. Common Stock,6.21,355112746.0,health,exchange
+ACIU,AC Immune SA Common Stock,2.92,297178833.0,health,exchange
+ABOS,Acumen Pharmaceuticals Inc. Common Stock,3.1,224183584.0,health,exchange
+ADAG,Adagene Inc. American Depositary Shares,3.82,252317089.0,health,exchange
+ADCT,ADC Therapeutics SA Common Shares,1.04,132774403.0,health,exchange
+AGEN,Agenus Inc. Common Stock,8.36,376370603.0,health,exchange
+AIRS,AirSculpt Technologies Inc. Common Stock,2.67,192494208.0,health,exchange
+AKBA,Akebia Therapeutics Inc. Common Stock,0.9584,265578625.0,health,exchange
+ALEC,Alector Inc. Common Stock,2.36,263510329.0,health,exchange
+ALXO,ALX Oncology Holdings Inc. Common Stock,2.0,276553994.0,health,exchange
+AMRN,Amarin Corporation plc,14.15,298888101.0,health,exchange
+ANTX,AN2 Therapeutics Inc. Common Stock,5.66,213587101.0,health,exchange
+AVXL,Anavex Life Sciences Corp. Common Stock,3.56,329911458.0,health,exchange
+ANIX,Anixa Biosciences Inc. Common Stock,3.66,124524411.0,health,exchange
+ARCT,Arcturus Therapeutics Holdings Inc. Common Stock,15.44,438852185.0,health,exchange
+ARMP,Armata Pharmaceuticals Inc. Common Stock,5.56,206731803.0,health,exchange
+AVIR,Atea Pharmaceuticals Inc. Common Stock,5.43,435511516.0,health,exchange
+RNA,Atrium Therapeutics Inc. Common Stock,14.0,239479002.0,health,exchange
+AUNA,Auna SA Class A Ordinary Shares,5.28,390788455.0,health,exchange
+BNTC,Benitec Biopharma Inc. Common Stock,13.02,447293429.0,health,exchange
+BGM,BGM Group Ltd. Class A Ordinary Shares,0.265,106165190.0,health,exchange
+BCYC,Bicycle Therapeutics plc American Depositary Shares,4.39,307268704.0,health,exchange
+BIOA,BioAge Labs Inc. Common Stock,10.11,464017750.0,health,exchange
+BMEA,Biomea Fusion Inc. Common Stock,1.73,125397064.0,health,exchange
+BDTX,Black Diamond Therapeutics Inc. Common Stock,2.24,128696393.0,health,exchange
+CAMP,CAMP4 Therapeutics Corporation Common Stock,4.45,279251740.0,health,exchange
+CGC,Canopy Growth Corporation Common Shares,1.07,452650312.0,health,exchange
+CNTN,Canton Strategic Holdings Inc. Common Stock,2.31,184063944.0,health,exchange
+CAPR,Capricor Therapeutics Inc. Common Stock,8.29,481972219.0,health,exchange
+CRDL,Cardiol Therapeutics Inc. Class A Common Shares,2.0,233645342.0,health,exchange
+CRBU,Caribou Biosciences Inc. Common Stock,1.76,188685223.0,health,exchange
+RNAC,Cartesian Therapeutics Inc. Common Stock,10.38,314050554.0,health,exchange
+CLLS,Cellectis S.A. American Depositary Shares,3.42,343803284.0,health,exchange
+IPSC,Century Therapeutics Inc. Common Stock,2.17,392933447.0,health,exchange
+CHRS,Coherus Oncology Inc. Common Stock,1.37,211666323.0,health,exchange
+CMPX,Compass Therapeutics Inc. Common Stock,2.53,455622425.0,health,exchange
+CGEN,Compugen Ltd. Ordinary Shares,2.87,271457905.0,health,exchange
+CNTB,Connect Biopharma Holdings Limited Ordinary Shares,2.45,154287057.0,health,exchange
+CRBP,Corbus Pharmaceuticals Holdings Inc. Common Stock,11.31,218750024.0,health,exchange
+COYA,Coya Therapeutics Inc. Common Stock,5.04,118227559.0,health,exchange
+CUE,Cue Biopharma Inc. Common Stock,26.76,194395719.0,health,exchange
+CPIX,Cumberland Pharmaceuticals Inc. Common Stock,8.7,130353031.0,health,exchange
+CYPH,Cypherpunk Technologies Inc. Common Stock,1.64,176733586.0,health,exchange
+DMAC,DiaMedica Therapeutics Inc. Common Stock,6.74,363459198.0,health,exchange
+ELDN,Eledon Pharmaceuticals Inc. Common Stock,3.47,281976197.0,health,exchange
+EBS,Emergent BioSolutions Inc. Common Stock,5.64,289181615.0,health,exchange
+ENTA,Enanta Pharmaceuticals Inc. Common Stock,14.08,410085660.0,health,exchange
+ENGN,enGene Therapeutics Inc. Common Stock,1.87,125270301.0,health,exchange
+TRDA,Entrada Therapeutics Inc. Common Stock,7.62,296697418.0,health,exchange
+EQ,Equillium Inc. Common Stock,2.18,138229619.0,health,exchange
+EPRX,Eupraxia Pharmaceuticals Inc. Common Stock,7.42,489027209.0,health,exchange
+FATE,Fate Therapeutics Inc. Common Stock,2.55,305542311.0,health,exchange
+FENC,Fennec Pharmaceuticals Inc. Common Stock,11.71,410248140.0,health,exchange
+FHTX,Foghorn Therapeutics Inc. Common Stock,6.85,406789408.0,health,exchange
+FULC,Fulcrum Therapeutics Inc. Common Stock,3.86,294507412.0,health,exchange
+GALT,Galectin Therapeutics Inc. Common Stock,3.99,402390080.0,health,exchange
+GNLX,Genelux Corporation Common Stock,2.72,123067311.0,health,exchange
+DNA,Ginkgo Bioworks Holdings Inc. Class A Common Stock,7.54,485125689.0,health,exchange
+GLSI,Greenwich LifeSciences Inc. Common Stock,18.59,272867887.0,health,exchange
+HUMA,Humacyte Inc. Common Stock,0.7012,194792031.0,health,exchange
+IMRX,Immuneering Corporation Class A Common Stock,5.23,338367412.0,health,exchange
+IMUX,Immunic Inc. Common Stock,16.42,224042148.0,health,exchange
+INDP,Indaptus Therapeutics Inc. Common Stock,1.095,145900345.0,health,exchange
+IFRX,InflaRx N.V. Common Stock,2.46,362525824.0,health,exchange
+IKT,Inhibikase Therapeutics Inc. Common Stock,2.5,348839750.0,health,exchange
+IPHA,Innate Pharma S.A. ADS,2.27,212903398.0,health,exchange
+INO,Inovio Pharmaceuticals Inc. Common Stock,1.29,133382798.0,health,exchange
+IVVD,Invivyd Inc. Common Stock,0.9387,276690035.0,health,exchange
+DERM,Journey Medical Corporation Common Stock,7.53,212529694.0,health,exchange
+MENS,Jyong Biotech Ltd. Ordinary Shares,2.23,169541697.0,health,exchange
+KMDA,Kamada Ltd. Ordinary Shares,8.63,497830663.0,health,exchange
+KZIA,Kazia Therapeutics Limited American Depositary Shares,13.79,157576937.0,health,exchange
+KROS,Keros Therapeutics Inc. Common Stock,11.68,231581556.0,health,exchange
+KRRO,Korro Bio Inc. Common Stock,13.73,202183120.0,health,exchange
+LRMR,Larimar Therapeutics Inc. Common Stock,4.16,432153018.0,health,exchange
+LENZ,LENZ Therapeutics Inc. Common Stock,4.67,146733002.0,health,exchange
+LXEO,Lexeo Therapeutics Inc. Common Stock,5.13,420897288.0,health,exchange
+LFCR,Lifecore Biomedical Inc. Common Stock,4.64,175638198.0,health,exchange
+LFMD,LifeMD Inc. Common Stock,3.25,156652720.0,health,exchange
+LCTX,Lineage Cell Therapeutics Inc. Common Stock,1.13,285785434.0,health,exchange
+LYEL,Lyell Immunopharma Inc. Common Stock,15.49,379584634.0,health,exchange
+MGNX,MacroGenics Inc. Common Stock,4.17,265629780.0,health,exchange
+MDWD,MediWound Ltd. Ordinary Shares,12.97,167446306.0,health,exchange
+MIST,Milestone Pharmaceuticals Inc. Common Shares,1.16,144417657.0,health,exchange
+NERV,Minerva Neurosciences Inc Common Stock,5.0,238737795.0,health,exchange
+MOLN,Molecular Partners AG American Depositary Shares,4.38,164298894.0,health,exchange
+NAKA,Nakamoto Inc. Common Stock,7.16,128127792.0,health,exchange
+NATR,Nature's Sunshine Products Inc. Common Stock,14.19,249680429.0,health,exchange
+NTHI,NeOnc Technologies Holdings Inc. Common Stock,4.71,122160279.0,health,exchange
+NGEN,NervGen Pharma Corp. Common stock,2.08,221338277.0,health,exchange
+NMRA,Neumora Therapeutics Inc. Common Stock,1.5,281843868.0,health,exchange
+NAGE,Niagen Bioscience Inc. Common Stock,3.27,258742027.0,health,exchange
+NKTX,Nkarta Inc. Common Stock,2.71,194103184.0,health,exchange
+NBP,NovaBridge Biosciences American Depositary Shares,1.93,222686666.0,health,exchange
+NRXP,NRX Pharmaceuticals Inc. Common Stock,3.67,158895465.0,health,exchange
+NUS,Nu Skin Enterprises Inc. Common Stock,4.85,236081675.0,health,exchange
+OCGN,Ocugen Inc. Common Stock,1.4,474754561.0,health,exchange
+ONCY,Oncolytics Biotech Inc. Common Stock,0.8614,109837549.0,health,exchange
+OKUR,OnKure Therapeutics Inc. Class A Common Stock,3.85,155910790.0,health,exchange
+IRD,Opus Genetics Inc. Common Stock,4.11,341934833.0,health,exchange
+ORMP,Oramed Pharmaceuticals Inc. Common Stock,5.21,216722214.0,health,exchange
+OBIO,Orchestra BioMed Holdings Inc. Ordinary Shares,5.36,322163063.0,health,exchange
+OGI,Organigram Global Inc. Common Shares,1.27,179078251.0,health,exchange
+ORGO,Organogenesis Holdings Inc. Class A Common Stock,1.74,223893714.0,health,exchange
+OTLK,Outlook Therapeutics Inc. Common Stock,0.64,155806435.0,health,exchange
+PALI,Palisade Bio Inc. Common Stock,2.07,360740055.0,health,exchange
+PTHS,Pelthos Therapeutics Inc. Common Stock,27.2,104134357.0,health,exchange
+PEPG,PepGen Inc. Common Stock,3.425,237213846.0,health,exchange
+CATX,Perspective Therapeutics Inc. Common Stock,3.29,375558971.0,health,exchange
+DTIL,Precision BioSciences Inc. Common Stock,8.55,235993287.0,health,exchange
+PMN,ProMIS Neurosciences Inc. Common Shares (ON),15.36,137743764.0,health,exchange
+PRQR,ProQR Therapeutics N.V. Ordinary Shares,2.38,335869113.0,health,exchange
+PLX,Protalix BioTherapeutics Inc. (DE) Common Stock,2.4,193371941.0,health,exchange
+TARA,Protara Therapeutics Inc.  Common Stock,3.97,234609087.0,health,exchange
+PRTA,Prothena Corporation plc Ordinary Shares,9.42,483594295.0,health,exchange
+PBYI,Puma Biotechnology Inc Common Stock,9.32,481099015.0,health,exchange
+PYXS,Pyxis Oncology Inc. Common Stock,3.06,255228633.0,health,exchange
+QTTB,Q32 Bio Inc. Common Stock,16.32,485837685.0,health,exchange
+QUCY,Quantum Cyber N.V. Ordinary Shares,1.36,114332741.0,health,exchange
+RFL,Rafael Holdings Inc. Class B Common Stock,2.24,116479991.0,health,exchange
+RANI,Rani Therapeutics Holdings Inc. Class A Common Stock,0.891,124201229.0,health,exchange
+RLMD,Relmada Therapeutics Inc. Common Stock,4.59,489614593.0,health,exchange
+RZLT,Rezolute Inc. Common Stock (NV),5.01,482424578.0,health,exchange
+RCKT,Rocket Pharmaceuticals Inc. Common Stock,3.78,414947977.0,health,exchange
+SABS,SAB Biotherapeutics Inc. Common Stock,3.81,346658062.0,health,exchange
+MSLE,Satellos Bioscience Inc. Common Stock,9.4,199434527.0,health,exchange
+SBC,SBC Medical Group Holdings Incorporated Common Stock,4.25,437099508.0,health,exchange
+SIGA,SIGA Technologies Inc. Common Stock,3.04,218423137.0,health,exchange
+SION,Sionna Therapeutics Inc. Common Stock,6.25,282577494.0,health,exchange
+SNDL,SNDL Inc. Common Shares,1.37,340667158.0,health,exchange
+SLGL,Sol-Gel Technologies Ltd. Ordinary Shares,81.72,267551198.0,health,exchange
+SPRB,Spruce Biosciences Inc. Common Stock,63.4,182212424.0,health,exchange
+SRZN,Surrozen Inc. Common Stock,23.36,274563115.0,health,exchange
+STRO,Sutro Biopharma Inc. Common Stock,21.44,355500306.0,health,exchange
+TNYA,Tenaya Therapeutics Inc. Common Stock,0.7014,157274930.0,health,exchange
+TLSA,Tiziana Life Sciences Ltd. Common Shares,1.11,141257635.0,health,exchange
+TNXP,Tonix Pharmaceuticals Holding Corp. Common Stock,13.66,234282988.0,health,exchange
+HURA,TuHURA Biosciences Inc. Common Stock,2.04,130002299.0,health,exchange
+TTRX,Turn Therapeutics Inc. Common Stock,9.73,289837629.0,health,exchange
+UNCY,Unicycive Therapeutics Inc. Common Stock,5.47,152368256.0,health,exchange
+UPB,Upstream Bio Inc. Common Stock,7.18,393256074.0,health,exchange
+USNA,USANA Health Sciences Inc. Common Stock,13.78,254606639.0,health,exchange
+VNDA,Vanda Pharmaceuticals Inc. Common Stock,5.44,328917017.0,health,exchange
+VRXA,Veraxa Biotech AG Ordinary Shares,1.73,244635516.0,health,exchange
+VOGX,Vogenx Inc Common Stock,31.53,468380893.0,health,exchange
+VYGR,Voyager Therapeutics Inc. Common Stock,3.48,214430459.0,health,exchange
+VTVT,vTv Therapeutics Inc. Class A Common Stock,33.91,134077698.0,health,exchange
+WHWK,Whitehawk Therapeutics Inc. Common Stock,5.08,289605771.0,health,exchange
+XFOR,X4 Pharmaceuticals Inc. Common Stock,4.16,412450451.0,health,exchange
+YARW,Yarrow Bioscience Inc. Common Stock,39.25,104787531.0,health,exchange
+ZNTL,Zentalis Pharmaceuticals Inc. Common Stock,3.88,367314044.0,health,exchange
+ZSTK,ZeroStack Corp. Common Stock,6.47,139909486.0,health,exchange
+CKLSF,"CK Life Sciences Int'l., (Holdings) Inc.",0.0693,666047360.0,health,otc
+AMD,Advanced Micro Devices Inc. Common Stock,479.18,782249390626.0,infrastructure,exchange
+AAON,AAON Inc. Common Stock,76.19,6282142755.0,infrastructure,exchange
+ACMR,ACM Research Inc. Class A Common Stock,79.77,5555916365.0,infrastructure,exchange
+AEIS,Advanced Energy Industries Inc. Common Stock,275.43,11031093240.0,infrastructure,exchange
+AGCO,AGCO Corporation Common Stock,110.94,7769320015.0,infrastructure,exchange
+TBB,AT&T Inc. 5.350% Global Notes due 2066,19.7,140862593956.0,infrastructure,exchange
+ADTN,ADTRAN Holdings Inc. Common Stock,8.02,653480884.0,infrastructure,exchange
+UZE,Array Digital Infrastructure Inc. 5.500% Senior Notes due 2070,16.975,1459850000.0,infrastructure,exchange
+UZD,Array Digital Infrastructure Inc. 6.250% Senior Notes due 2069,19.02,1635720000.0,infrastructure,exchange
+ELSLF,Elsight Limited,4.7,1045216320.0,infrastructure,otc
+ALMU,Aeluma Inc. Common Stock,14.22,260301864.0,infrastructure,exchange
+MASS,908 Devices Inc. Common Stock,11.0,454670755.0,infrastructure,exchange
+AZ,A2Z Cust2Mate Solutions Corp. Common Shares,6.91,304222887.0,infrastructure,exchange
+ACU,Acme United Corporation. Common Stock,62.02,237773702.0,infrastructure,exchange
+AMPG,Amplitech Group Inc. Common Stock,3.62,108758871.0,infrastructure,exchange
+ATNI,ATN International Inc. Common Stock,30.71,473037093.0,infrastructure,exchange
+AUDC,AudioCodes Ltd. Common Stock,9.81,241236229.0,infrastructure,exchange
+CLFD,Clearfield Inc. Common Stock,29.45,400047475.0,infrastructure,exchange
+CXDO,Crexendo Inc. Common Stock,6.31,209831415.0,infrastructure,exchange
+GOGO,Gogo Inc. Common Stock,2.72,368581385.0,infrastructure,exchange
+KVHI,KVH Industries Inc. Common Stock,7.53,136601444.0,infrastructure,exchange
+OCC,Optical Cable Corporation Common Stock,13.36,117929949.0,infrastructure,exchange
+AIOT,PowerFleet Inc. Common Stock,2.94,394624199.0,infrastructure,exchange
+RELL,Richardson Electronics Ltd. Common Stock,16.87,250759358.0,infrastructure,exchange
+SIDU,Sidus Space Inc. Class A Common Stock,2.27,229781490.0,infrastructure,exchange
+SPOK,Spok Holdings Inc. Common Stock,10.575,221209299.0,infrastructure,exchange
+OPTX,Syntec Optics Holdings Inc. Class A Common Stock,7.84,315794244.0,infrastructure,exchange
+TTGT,TechTarget Inc. Common Stock,3.89,281374047.0,infrastructure,exchange
+TBCH,Turtle Beach Corporation Common Stock,12.85,230139786.0,infrastructure,exchange
+AYI,Acuity Inc. Common Stock,339.95,10176589203.0,shelter,exchange
+HOVNP,Hovnanian Enterprises Inc Dep Shr Srs A Pfd,19.56,146903972.0,shelter,exchange
+ADNT,Adient plc Ordinary Shares ,18.64,1437086812.0,transport,exchange
+AEBI,Aebi Schmidt Holding AG Common Stock ,12.36,959128386.0,transport,exchange
+AEVA,Aeva Technologies Inc. Common Stock,16.16,1126445049.0,transport,exchange
+ZHHJY,Zhejiang Shibao Company Limited,7.81,642475904.0,transport,otc
+CAAS,China Automotive Systems Inc. Ordinary Share,5.34,161111549.0,transport,exchange
+CVGI,Commercial Vehicle Group Inc. Common Stock,3.09,125554987.0,transport,exchange
+CPS,Cooper-Standard Holdings Inc. Common Stock,26.65,473549393.0,transport,exchange
+DCX,Digital Currency X Technology Inc. Class A Ordinary Shares,0.9776,343701855.0,transport,exchange
+HLLY,Holley Inc. Common Stock,2.89,350366673.0,transport,exchange
+INVZ,Innoviz Technologies Ltd. Ordinary shares,0.3396,120455668.0,transport,exchange
+LVWR,LiveWire Group Inc. Common Stock,1.23,252657322.0,transport,exchange
+MPAA,Motorcar Parts  of America Inc. Common Stock,11.73,222086518.0,transport,exchange
+NIU,Niu Technologies American Depositary Shares,1.96,153734732.0,transport,exchange
+RLGT,Radiant Logistics Inc. Common Stock,8.61,403220644.0,transport,exchange
+AIIO,Robo.ai Inc. Class B Ordinary Shares,2.67,451404193.0,transport,exchange
+SRI,Stoneridge Inc. Common Stock,7.2,205364693.0,transport,exchange
+STRT,STRATTEC SECURITY CORPORATION Common Stock,79.07,330417637.0,transport,exchange
+AHWSF,Athens Water Supply and Sewerage Company S.A.,8.1,862650048.0,water,otc
