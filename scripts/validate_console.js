@@ -56,11 +56,12 @@ try {
 const ctx = Object.assign({}, sandbox, sandbox.__X);
 console.log('ranked names:', ctx.NAMES.length, '| search index:', Object.keys(ctx.SIDX).length);
 
-// fund
-ctx.$('fundbtn').onclick();
+// the $5,000 should already be there on arrival, with no click
 setTimeout(() => {
   const mine = JSON.parse(store.bsMine || '{}');
-  console.log('after start -> cash:', mine.cash, '| txns:', (mine.txns || []).length);
+  console.log('auto-funded on load -> cash:', mine.cash, '| txns:', (mine.txns || []).length,
+    '| start recorded:', !!mine.start);
+  console.log('  no start button in the page:', !/id="fundbtn"/.test(html));
 
   // buy $100 of the top-scoring name
   const top = ctx.NAMES.slice().sort((a, b) => b[2] - a[2])[0];

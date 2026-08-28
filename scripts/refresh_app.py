@@ -588,8 +588,6 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
   <p style="font-size:13.5px">Each row says what the company does in plain words, what it scored out of 100, and which need it serves. Tap or hover any row for the reasoning behind it.</p>
   <div class="panel" id="moneybar">
     <div id="moneybartext" class="money-line"></div>
-    <div style="margin-top:8px" id="moneybarbtn"><button class="big" id="fundbtn">Start with $5,000</button></div>
-    <div class="msg" id="fundmsg"></div>
   </div>
   <div class="controls">
     <label><input type="checkbox" id="holdonly"> Only what I own</label>
@@ -772,10 +770,13 @@ function render(){
   const funded=L().cash!==null&&L().cash!==undefined;
   const tot=funded?totalValue(L()):0;
   $('navmoney').innerHTML=funded?('<b>'+fmt(tot)+'</b> · cash '+fmt(L().cash)):'<b>$5,000</b> waiting for you';
-  $('moneybarbtn').style.display=funded?'none':'block';
   $('moneybartext').innerHTML=funded
-    ? ('You have <b>'+fmt(L().cash)+'</b> in cash to spend. Type a dollar amount in any row below and press <b>Buy</b>. It shows you the arithmetic before anything happens. Selling puts cash back.')
-    : ('Everyone who opens this page gets the same one-time <b>$5,000</b> of pretend money, kept privately in your own browser. Nobody else sees it and you cannot add more. Start it here, then type a dollar amount in any row below and press <b>Buy</b>.');
+    ? ('You have <b>'+fmt(L().cash)+'</b> of pretend money in cash, kept privately in your own browser. '
+       +'Type a dollar amount in any row below and press <b>Buy</b>. It shows you the arithmetic before '
+       +'anything happens, and selling puts cash back. There is no more where it came from, so selling is '
+       +'the only way to free up more to spend.')
+    : ('This is the list\'s own book, rebalanced weekly by the engine. It is read-only here. '
+       +'Switch the view above to your own simulation to trade.');
   const ROWS=allRows();
   let rows=ROWS.map(n=>{const tk=n[0],sh=heldOf(tk),mv=sh*(n[F.px]||0),pl=mv-costOf(tk);
     return{n:n,tk:tk,sh:sh,mv:mv,pl:pl,
@@ -824,7 +825,7 @@ function render(){
     const pc=function(v){return v===null?'<td class="r">-</td>'
       :'<td class="r '+(v>=0?'pos':'neg')+'">'+v.toFixed(2)+'%</td>';};
     hh+='<tr><td>'+r.date+'</td><td class="r">'+fmt(r.value)+'</td><td class="r '+(d>=0?'pos':'neg')+'">'+(d>=0?'+':'−')+fmt(Math.abs(d)).slice(1)+'</td>'+pc(p2)+pc(li)+pc(sp)+'</tr>';});
-  $('histbody').innerHTML=hh||'<tr><td colspan="6" style="color:var(--muted)">Your first snapshot lands at the next weekly update after you start.</td></tr>';
+  $('histbody').innerHTML=hh||'<tr><td colspan="6" style="color:var(--muted)">Your first snapshot is taken now, and another lands at each weekly update from here.</td></tr>';
   let th='';(L().txns||[]).slice(-30).reverse().forEach(t=>{
     th+='<tr><td>'+t.d+'</td><td>'+(t.by||'You')+'</td><td>'+t.a+'</td><td class="tk">'+(t.tk||'-')+'</td><td class="r">'+(t.sh?t.sh.toFixed(4):'-')+'</td><td class="r">'+(t.px?fmt(t.px):'-')+'</td><td class="r">'+fmt(t.amt)+'</td></tr>';});
   $('txnbody').innerHTML=th||'<tr><td colspan="7" style="color:var(--muted)">Nothing yet.</td></tr>';
@@ -856,15 +857,15 @@ async function trade(tk,act){
   }
   await commit(s,'buymsg');
 }
-async function startFund(msgId){
-  const $m=msgId||'fundmsg';
-  if(L().start){$($m).textContent='You already started. The $5,000 is one-time, so sell shares to free up cash.';return;}
-  const s=JSON.parse(JSON.stringify(L()));
-  s.cash=5000;s.start={date:TODAY,cash:5000};s.txns.push({d:TODAY,a:'START',amt:5000,by:whoNow()||'You'});
-  await commit(s,$m);
-  snapshotMine();render();   // lay the baseline row now, not a week from now
+// Everyone gets the same $5,000, so hand it over on arrival rather than making
+// them click for it. Visitor ledger only; the house book is the weekly job's.
+function autoFund(){
+  if(MINE.start)return;
+  MINE.cash=5000;
+  MINE.start={date:TODAY,cash:5000};
+  (MINE.txns||(MINE.txns=[])).push({d:TODAY,a:'START',amt:5000,by:whoNow()||'You'});
+  saveMine(MINE);
 }
-$('fundbtn').onclick=()=>startFund('fundmsg');
 async function commit(s,msgId){
   if(!isHouse()){MINE=s;saveMine(MINE);$(msgId).textContent='Saved.';render();return;}
   if(!art){$(msgId).textContent='The house ledger is read-only for visitors. Switch to "My simulation" to trade your own $5,000.';return;}
@@ -963,7 +964,7 @@ function renderBoard(){
   const me={n:(whoNow()||'You'),v:funded?totalValue(s):0,s:s.start?s.start.cash:0,t:[],me:true};
   const bot=isHouse()?null:listPlayer();
   const all=(funded?[me]:[]).concat(friends()).concat(bot?[bot]:[]);
-  if(!all.length){$('leaderboard').innerHTML='<div class="money-line">Start your $5,000 and you will appear here, next to the list.</div>';return;}
+  if(!all.length){$('leaderboard').innerHTML='<div class="money-line">Buy something and you will appear here, next to the list.</div>';return;}
   all.sort((a,b)=>((b.v-b.s)/(b.s||1))-((a.v-a.s)/(a.s||1)));
   $('leaderboard').innerHTML=all.map(function(p,i){
     const gain=p.v-p.s;const pct=p.s?100*gain/p.s:0;
@@ -1002,7 +1003,7 @@ $('sortsel').addEventListener('change',()=>{ui.sort=$('sortsel').value;render();
 function pushUI(){$('mktsel').value=ui.mkt||'all';
   $('holdonly').checked=!!ui.holdOnly;$('capsel').value=String(ui.cap);$('scorepol').value=String(ui.minScore);
   $('sortsel').value=ui.sort;}
-ui=uiLoad();snapshotMine();pushUI();render();
+ui=uiLoad();autoFund();snapshotMine();pushUI();render();
 </script>
 """
 
