@@ -355,29 +355,57 @@ tr.ownrow .tierpill{font-weight:600}
 #mktnote{margin:2px 0 8px;font-size:12px}
 
 /* Mobile: the market table becomes one card per company.
+   The earlier version stacked all twelve cells as labelled rows, which made every
+   card about 650px tall, three of those rows being placeholder dashes for holdings
+   you do not have. Fifty-three of those is an unusable scroll. This packs the same
+   information into a five-row grid and drops the empty holdings entirely.
    Scoped to .mktwrap so the history and transaction tables keep scrolling. */
 @media(max-width:760px){
   .tablewrap.mktwrap{overflow-x:visible}
   table.mkt{min-width:0;display:block}
   table.mkt tbody{display:block}
   table.mkt thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-  table.mkt tr{display:grid;grid-template-columns:auto 1fr;gap:0 10px;
-    border:1px solid var(--line);border-radius:7px;padding:9px 11px;margin:0 0 9px;background:var(--card)}
-  table.mkt td{display:flex;align-items:baseline;gap:8px;border:0;padding:2px 0;font-size:13px}
-  table.mkt td::before{content:attr(data-l);font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;
-    text-transform:uppercase;color:var(--muted);min-width:52px;flex:0 0 52px}
-  table.mkt td[data-l=""]{padding-top:6px}
-  table.mkt td[data-l=""]::before{content:none;min-width:0;flex:0}
-  table.mkt td.tierpill{grid-column:1;justify-content:flex-start}
-  table.mkt td.tierpill::before{content:none;min-width:0;flex:0}
-  table.mkt td.tk{grid-column:2;font-size:15px;font-weight:600}
-  table.mkt td.tk::before{content:none;min-width:0;flex:0}
-  table.mkt td.co{grid-column:1/-1;flex-direction:column;align-items:stretch;margin:3px 0 6px}
-  table.mkt td.co::before{content:none;min-width:0;flex:0}
-  table.mkt td.co .cn{white-space:normal}
-  table.mkt td:not(.co):not(.tk):not(.tierpill){grid-column:1/-1}
-  table.mkt td button{width:100%}
-  table.mkt td input.amt{width:100%;font-size:15px;padding:6px 8px}
+  table.mkt tr{
+    display:grid;
+    grid-template-columns:auto 1fr auto auto;
+    grid-template-areas:
+      "tier tk    sc   px"
+      "co   co    co   co"
+      "ind  ind   ind  ind"
+      "held value pl   pl"
+      "amt  amt   buy  sell";
+    gap:3px 9px;align-items:center;
+    border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:0 0 8px;
+    background:var(--card)}
+  /* labels are for the wide table; the phone card is legible without them */
+  table.mkt td::before{content:none}
+  table.mkt td{display:flex;align-items:baseline;gap:6px;border:0;padding:0;font-size:13px;min-width:0}
+  table.mkt td.tierpill{grid-area:tier;font-size:10px}
+  table.mkt td.tk{grid-area:tk;font-size:15px;font-weight:600}
+  table.mkt td[data-l="Score"]{grid-area:sc;font-family:var(--mono);font-size:15px;font-weight:600}
+  table.mkt td[data-l="Score"]::after{content:"/100";font-size:9.5px;color:var(--muted);font-weight:400}
+  table.mkt td[data-l="Price"]{grid-area:px;font-family:var(--mono);font-size:14px}
+  table.mkt td.co{grid-area:co;flex-direction:column;align-items:stretch;margin:2px 0 1px}
+  table.mkt td.co .cn{white-space:normal;font-size:13.5px}
+  table.mkt td.co .blurb{font-size:12px}
+  table.mkt td.nm{grid-area:ind;font-size:11px;white-space:normal;margin-bottom:3px}
+  /* holdings only appear once you own some */
+  table.mkt td[data-l="Held"]{grid-area:held}
+  table.mkt td[data-l="Value"]{grid-area:value}
+  table.mkt td[data-l="P/L"]{grid-area:pl;justify-content:flex-end}
+  table.mkt td[data-l="Held"]::before,table.mkt td[data-l="Value"]::before{
+    content:attr(data-l) " ";font-family:var(--mono);font-size:9px;letter-spacing:.05em;
+    text-transform:uppercase;color:var(--muted)}
+  table.mkt td.flat{display:none}
+  table.mkt td.cAmt{grid-area:amt}
+  table.mkt td.cBuy{grid-area:buy}
+  table.mkt td.cSell{grid-area:sell}
+  table.mkt td.cAmt input.amt{width:100%;font-size:16px;padding:9px 10px}
+  /* 44px is the smallest comfortable touch target; min-width also forces the two
+     auto columns wide enough that Buy and Sell are not thumb-sized slivers. */
+  table.mkt td.cBuy button,table.mkt td.cSell button{
+    width:100%;min-width:76px;min-height:44px;padding:9px 12px;font-size:13.5px}
+  table.mkt tr.ownrow td{background:none}
   .controls{gap:9px 12px}
   .controls select,.controls input[type=text]{max-width:100%}
 }
@@ -803,12 +831,14 @@ function render(){
       '<td class="co" data-l="Company"><span class="cn">'+n[F.nm]+vchip+'</span><div class="blurb">'+(n[F.kid]||n[F.need]||'')+(own?'<br><i>'+esc(String(n[F.note]||'You added this.'))+'</i>':'')+'</div></td>'+
       '<td class="r" style="font-weight:600" data-l="Score">'+scLbl+'</td><td class="nm" data-l="Industry">'+(n[F.need]||'')+'</td>'+
       '<td class="r" data-l="Price">'+(n[F.px]?fmt(n[F.px]):'n/a')+'</td>'+
-      '<td class="r" data-l="Held">'+(r.sh>0.0001?r.sh.toFixed(4):'-')+'</td>'+
-      '<td class="r" data-l="Value">'+(r.sh>0.0001?fmt(r.mv):'-')+'</td>'+
-      '<td class="r '+(r.pl>=0?'pos':'neg')+'" data-l="P/L">'+(r.sh>0.0001?(r.pl>=0?'+':'−')+fmt(Math.abs(r.pl)).slice(1):'-')+'</td>'+
-      '<td data-l="$ amt"><input type="number" class="amt" min="1" step="10" id="amt_'+tk+'" aria-label="amount '+tk+'"></td>'+
-      '<td data-l=""><button data-buy="'+tk+'" '+(n[F.px]?'':'disabled')+'>Buy</button></td>'+
-      '<td data-l="">'+(own
+      // Holdings cells carry .flat when you own none, so the phone layout can drop
+      // three rows of placeholder dashes instead of stacking them per company.
+      '<td class="r'+(r.sh>0.0001?'':' flat')+'" data-l="Held">'+(r.sh>0.0001?r.sh.toFixed(4):'-')+'</td>'+
+      '<td class="r'+(r.sh>0.0001?'':' flat')+'" data-l="Value">'+(r.sh>0.0001?fmt(r.mv):'-')+'</td>'+
+      '<td class="r '+(r.pl>=0?'pos':'neg')+(r.sh>0.0001?'':' flat')+'" data-l="P/L">'+(r.sh>0.0001?(r.pl>=0?'+':'−')+fmt(Math.abs(r.pl)).slice(1):'-')+'</td>'+
+      '<td class="cAmt" data-l="$ amt"><input type="number" class="amt" min="1" step="10" id="amt_'+tk+'" aria-label="dollars of '+tk+' to trade" placeholder="$"></td>'+
+      '<td class="cBuy" data-l=""><button data-buy="'+tk+'" '+(n[F.px]?'':'disabled')+'>Buy</button></td>'+
+      '<td class="cSell" data-l="">'+(own
         ? '<button class="rm" data-drop="'+tk+'" title="Take this row out of your table">Remove</button>'
         : '<button class="sell" data-sell="'+tk+'" '+(r.sh>0.0001?'':'disabled')+'>Sell</button>')+'</td></tr>';});
   $('mktbody').innerHTML=h;$('emptymsg').style.display=vis?'none':'block';
