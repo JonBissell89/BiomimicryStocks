@@ -45,7 +45,7 @@ sandbox.window.localStorage = localStorage;
 vm.createContext(sandbox);
 
 try {
-  const EXPORT = ';globalThis.__X={NAMES:typeof NAMES!=="undefined"?NAMES:null,SIDX:typeof SIDX!=="undefined"?SIDX:null,ui:typeof ui!=="undefined"?ui:null,trade:typeof trade!=="undefined"?trade:null,lookup:typeof lookup!=="undefined"?lookup:null,render:typeof render!=="undefined"?render:null,myCard:typeof myCard!=="undefined"?myCard:null,snapshotMine:typeof snapshotMine!=="undefined"?snapshotMine:null,MARK:typeof MARK!=="undefined"?MARK:null,PX:typeof PX!=="undefined"?PX:null,allRows:typeof allRows!=="undefined"?allRows:null,rec:typeof rec!=="undefined"?rec:null,F:typeof F!=="undefined"?F:null,marketOf:typeof marketOf!=="undefined"?marketOf:null,mineAdded:typeof mineAdded!=="undefined"?mineAdded:null,buyAllocation:typeof buyAllocation!=="undefined"?buyAllocation:null,renderBoard:typeof renderBoard!=="undefined"?renderBoard:null,"$":typeof $!=="undefined"?$:null};';
+  const EXPORT = ';globalThis.__X={NAMES:typeof NAMES!=="undefined"?NAMES:null,SIDX:typeof SIDX!=="undefined"?SIDX:null,ui:typeof ui!=="undefined"?ui:null,trade:typeof trade!=="undefined"?trade:null,lookup:typeof lookup!=="undefined"?lookup:null,render:typeof render!=="undefined"?render:null,myCard:typeof myCard!=="undefined"?myCard:null,quickPick:typeof quickPick!=="undefined"?quickPick:null,pickedList:typeof pickedList!=="undefined"?pickedList:null,basketPlan:typeof basketPlan!=="undefined"?basketPlan:null,buyBasket:typeof buyBasket!=="undefined"?buyBasket:null,gateOf:typeof gateOf!=="undefined"?gateOf:null,snapshotMine:typeof snapshotMine!=="undefined"?snapshotMine:null,MARK:typeof MARK!=="undefined"?MARK:null,PX:typeof PX!=="undefined"?PX:null,allRows:typeof allRows!=="undefined"?allRows:null,rec:typeof rec!=="undefined"?rec:null,F:typeof F!=="undefined"?F:null,marketOf:typeof marketOf!=="undefined"?marketOf:null,mineAdded:typeof mineAdded!=="undefined"?mineAdded:null,buyAllocation:typeof buyAllocation!=="undefined"?buyAllocation:null,renderBoard:typeof renderBoard!=="undefined"?renderBoard:null,"$":typeof $!=="undefined"?$:null};';
   scripts.forEach((sc,i)=>vm.runInContext(i===scripts.length-1? sc+EXPORT : sc, sandbox, { timeout: 20000 }));
   console.log('PARSE+RUN: ok');
 } catch (e) {
@@ -116,6 +116,26 @@ setTimeout(() => {
       ctx.ui.mkt = 'all'; ctx.render();
       const allCount = (ctx.$('mktbody').innerHTML.match(/<tr/g) || []).length;
       console.log('market filter -> ord:', ordCount, 'us:', usCount, 'all:', allCount);
+
+      // the basket: quick picks, even split, and the actual bulk purchase
+      const cashBefore = JSON.parse(store.bsMine).cash;
+      ctx.quickPick('need');
+      const nNeed = ctx.pickedList().length;
+      const needs = new Set(ctx.pickedList().map(n => String(n[ctx.F.need] || '?').split(' · ')[0]));
+      console.log('quick pick "one of each need" ->', nNeed, 'companies,',
+        needs.size, 'distinct needs | one per need:', nNeed === needs.size);
+      ctx.quickPick('top10');
+      console.log('quick pick "top 10" ->', ctx.pickedList().length,
+        '| all gate-passing:', ctx.pickedList().every(n => ctx.gateOf(n) !== 'fail'));
+      ctx.ui.spend = '1000'; ctx.render();
+      const plan = ctx.basketPlan();
+      const each = plan.rows.length ? plan.rows[0][1] : 0;
+      console.log('  split $1000 ->', plan.rows.length, 'rows at', each.toFixed(2),
+        'each | total', plan.total.toFixed(2), '| even:',
+        plan.rows.every(r => Math.abs(r[1] - each) < 0.01));
+      console.log('  summary reads:',
+        ctx.$('bksum').innerHTML.replace(/<[^>]+>/g, '').trim().slice(0, 105));
+      ctx.buyBasket();
 
       // add / remove affordances must be visible without hunting
       const body = ctx.$('mktbody').innerHTML;

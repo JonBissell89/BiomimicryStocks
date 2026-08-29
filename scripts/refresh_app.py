@@ -25,6 +25,13 @@ try:
     pxcache = {k: v for k, v in pxcache.items() if v}
 except Exception:
     pxcache = {}
+# A year of weekly closes per ranked company, normalised to the first close, so a
+# row can show its own shape instead of only today's number.
+try:
+    _sp = json.load(open(os.path.join(DATA, "spark.json"), encoding="utf-8"))
+    spark, spark_asof = _sp.get("s", {}), _sp.get("asof", "")
+except Exception:
+    spark, spark_asof = {}, ""
 
 allnames = [(t["id"], n) for t in eng["tiers"] for n in t["names"]]
 tickers = [n["tk"] for _, n in allnames] + ["^GSPC"]
@@ -332,6 +339,45 @@ tr.ownrow td{background:var(--accent-soft)}
 tr.ownrow .tierpill{font-weight:600}
 .dropx{background:none;border:0;color:var(--muted);font-size:14px;line-height:1;padding:0 0 0 5px;cursor:pointer;min-height:0}
 .dropx:hover{color:var(--bad);background:none}
+/* The three lines over time. Percentage change from each series' own first
+   reading, which is the only honest way to put a $5,000 book and an index on
+   the same axis. */
+.chartwrap{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:12px 14px 8px;margin:14px 0 10px}
+.chartwrap svg{display:block;width:100%;height:auto;color:var(--ink)}
+.chartleg{display:flex;flex-wrap:wrap;gap:16px;margin-top:8px;padding-top:9px;
+ border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--muted)}
+.chartleg .lg{display:flex;align-items:center;gap:7px}
+.chartleg .lg i{width:14px;height:3px;border-radius:2px;display:inline-block}
+.chartleg .lg b{font-variant-numeric:tabular-nums}
+.chartempty{background:var(--card);border:1px dashed var(--line);border-radius:8px;
+ padding:22px 16px;margin:14px 0 10px;color:var(--muted);font-size:13px;text-align:center}
+
+/* The basket. Picking a set and splitting one number across it is one decision
+   you can check before it happens, instead of twenty guesses typed into rows. */
+.basket{border:1px solid var(--accent);border-radius:8px;padding:14px 16px;margin:6px 0 12px;
+ background:var(--accent-soft)}
+.bkhead b{display:block;font-size:15px;color:var(--ink);margin-bottom:3px}
+.bkhead span{display:block;font-size:12.5px;color:var(--muted);line-height:1.45;max-width:80ch}
+.bkhead i{font-style:normal;font-family:var(--mono);color:var(--accent);font-weight:600}
+.picks{display:flex;flex-wrap:wrap;gap:7px;margin:11px 0}
+.qp{font-size:12.5px;padding:7px 12px;min-height:0;background:var(--card);border:1px solid var(--line);color:var(--ink)}
+.qp:hover{border-color:var(--accent);color:var(--accent);background:var(--card)}
+.qp.ghost{color:var(--muted)}
+.bkbuy{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0 8px}
+.bkbuy label{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.bkbuy input{width:130px}
+#bksum{margin:6px 0}
+#bkbreak .planbox{max-height:320px;overflow-y:auto}
+/* the pick control in each row */
+svg.spark{display:block;width:64px;height:20px;margin-top:2px;margin-left:auto;opacity:.85}
+td.cPx{white-space:nowrap}
+.pick{font-family:var(--mono);font-size:15px;font-weight:600;line-height:1;width:30px;height:30px;
+ min-height:0;padding:0;border:1px solid var(--line);background:var(--bg);color:var(--muted)}
+.pick:hover{border-color:var(--accent);color:var(--accent);background:var(--bg)}
+.pick.on{background:var(--accent);border-color:var(--accent);color:var(--ground)}
+.pick:disabled{opacity:.3;cursor:not-allowed}
+tr.picked td{background:var(--accent-soft)}
 /* The add control sits against the table, because "add a row" has to look like
    something the table does, not like a search box parked in the prose. */
 .addbar{border:1px solid var(--accent);border-radius:7px;padding:13px 15px;margin:4px 0 10px;
@@ -367,16 +413,19 @@ tr.ownrow .tierpill{font-weight:600}
   table.mkt thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
   table.mkt tr{
     display:grid;
-    grid-template-columns:auto 1fr auto auto;
+    grid-template-columns:auto auto 1fr auto auto;
     grid-template-areas:
-      "tier tk    sc   px"
-      "co   co    co   co"
-      "ind  ind   ind  ind"
-      "held value pl   pl"
-      "amt  amt   buy  sell";
-    gap:3px 9px;align-items:center;
+      "pick tier tk    sc   px"
+      "co   co   co    co   co"
+      "ind  ind  ind   ind  ind"
+      "held held value pl   pl"
+      "amt  amt  amt   buy  sell";
+    gap:3px 8px;align-items:center;
     border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:0 0 8px;
     background:var(--card)}
+  table.mkt td.cPick{grid-area:pick}
+  /* 30px is fine for a mouse and too small for a thumb */
+  table.mkt .pick{width:40px;height:40px;font-size:18px}
   /* labels are for the wide table; the phone card is legible without them */
   table.mkt td::before{content:none}
   table.mkt td{display:flex;align-items:baseline;gap:6px;border:0;padding:0;font-size:13px;min-width:0}
@@ -384,7 +433,9 @@ tr.ownrow .tierpill{font-weight:600}
   table.mkt td.tk{grid-area:tk;font-size:15px;font-weight:600}
   table.mkt td[data-l="Score"]{grid-area:sc;font-family:var(--mono);font-size:15px;font-weight:600}
   table.mkt td[data-l="Score"]::after{content:"/100";font-size:9.5px;color:var(--muted);font-weight:400}
-  table.mkt td[data-l="Price"]{grid-area:px;font-family:var(--mono);font-size:14px}
+  table.mkt td[data-l="Price"]{grid-area:px;font-family:var(--mono);font-size:14px;
+    flex-direction:column;align-items:flex-end;gap:0}
+  table.mkt svg.spark{width:56px;height:17px}
   table.mkt td.co{grid-area:co;flex-direction:column;align-items:stretch;margin:2px 0 1px}
   table.mkt td.co .cn{white-space:normal;font-size:13.5px}
   table.mkt td.co .blurb{font-size:12px}
@@ -408,6 +459,9 @@ tr.ownrow .tierpill{font-weight:600}
   table.mkt tr.ownrow td{background:none}
   .controls{gap:9px 12px}
   .controls select,.controls input[type=text]{max-width:100%}
+  .qp{min-height:40px;font-size:13px;padding:8px 13px}
+  .bkbuy input{flex:1 1 120px;width:auto}
+  #basketbuy{flex:1 1 100%}
 }
 /* History and transaction tables stay tabular but get compact enough to fit. */
 @media(max-width:760px){
@@ -631,14 +685,36 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
   </div>
   <p class="money-line" id="mktnote">Most mainstream investing apps carry US exchange listings. Some carry ADRs. Foreign ordinary shares usually need a full-service broker. That is about access, not quality, and it never affects a score.</p>
 
+  <div class="basket">
+    <div class="bkhead"><b>Buy a basket</b><span>Tap <i>+</i> on any company below to add it, or start from one of these. Then choose how much to spend and it splits evenly across everything you picked.</span></div>
+    <div class="picks">
+      <button class="qp" data-qp="all">The whole list</button>
+      <button class="qp" data-qp="top10">Top 10 by score</button>
+      <button class="qp" data-qp="need">One of each need</button>
+      <button class="qp" data-qp="cheap">Under $10 a share</button>
+      <button class="qp" data-qp="mirror">Copy the list's own book</button>
+      <button class="qp ghost" data-qp="none">Clear</button>
+    </div>
+    <div class="bkbuy">
+      <label for="spend">Spend</label>
+      <input type="number" id="spend" min="1" step="50" placeholder="dollars">
+      <button class="ghost" id="spendall">All my cash</button>
+      <button class="big" id="basketbuy">Buy the basket</button>
+    </div>
+    <div class="money-line" id="bksum"></div>
+    <div id="bkbreak"></div>
+    <div class="msg" id="bkmsg"></div>
+  </div>
+
   <div class="tablewrap mktwrap"><table class="mkt">
   <thead><tr>
+  <th title="Add this company to your basket">Pick</th>
   <th title="T1 = 80 and above. T2 = 74 to 79. T3 = 69 to 73. T4 = 65 to 68. EXIT = below 65, on the record for review. YOURS = a company you added.">Tier</th>
   <th title="The company's short code on the exchange">Ticker</th>
   <th>Company · what it actually does</th>
   <th style="text-align:right" title="How well it fits the rules, out of 100">Score</th>
   <th title="Which human need it serves">Industry</th>
-  <th style="text-align:right" title="What one share costs">Price</th>
+  <th style="text-align:right" title="What one share costs, and its shape over the past year">Price</th>
   <th style="text-align:right" title="Shares you own in the simulation">Held</th>
   <th style="text-align:right" title="Shares times price">Value</th>
   <th style="text-align:right" title="Worth now minus what you paid">P/L</th>
@@ -671,6 +747,7 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
   <h2>Come back over time</h2>
   <p>Every number here is a real market movement. Prices refresh every week and a snapshot of your total gets added to this table, so the gains and losses you see are exactly what would have happened to real money invested the same way on the same day.</p>
   <p>The table below puts three things side by side over the same stretch: <b>you</b>, <b>the list</b> held in equal amounts, and <b>the S&amp;P 500</b>, which is what buying the whole market and not thinking about it gets you. That is the whole experiment. If the ranking is worth anything it should show up here, and if it is not, that will show up here too. Either answer is useful, and neither one costs you money to find out.</p>
+  <div id="chart"></div>
   <div class="tablewrap"><table>
   <thead><tr><th>Date</th><th style="text-align:right">Your total</th><th style="text-align:right">Change $</th><th style="text-align:right">You, %</th><th style="text-align:right" title="Every ranked company that clears the gate, equal weight, over the same stretch">The list, %</th><th style="text-align:right" title="Buying the whole market and not thinking about it">S&amp;P 500, %</th></tr></thead>
   <tbody id="histbody"></tbody></table></div>
@@ -707,6 +784,27 @@ const STATE=%%STATE%%;
 const NAMES=@@NAMES@@;
 const SIDX=window.__SIDX||{};
 const PX=window.__PX||{};
+const SPARK=window.__SPARK||{};
+// A year of weekly closes as one small path. Green when the year is up, red when
+// it is down, judged on the same series that is drawn, so the colour cannot
+// disagree with the line.
+function sparkline(tk){
+  const d=SPARK[tk];
+  if(!d||d.length<8)return '';
+  const W=64,H=20,P=2;
+  let lo=Math.min.apply(null,d),hi=Math.max.apply(null,d);
+  if(hi-lo<1e-6){hi=lo+1e-6;}
+  const pts=d.map(function(v,i){
+    const x=P+(W-2*P)*(i/(d.length-1));
+    const y=P+(H-2*P)*(1-(v-lo)/(hi-lo));
+    return x.toFixed(1)+','+y.toFixed(1);}).join(' ');
+  const up=d[d.length-1]>=d[0];
+  const pct=Math.round(100*(d[d.length-1]/d[0]-1));
+  return '<svg class="spark" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+
+    tk+' over the past year, '+(pct>=0?'up ':'down ')+Math.abs(pct)+' percent">'+
+    '<polyline points="'+pts+'" fill="none" stroke="'+(up?'var(--good)':'var(--bad)')+
+    '" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/></svg>';
+}
 // Benchmark levels stamped at the last engine run, so a visitor's own ledger can
 // record a snapshot against the same yardsticks the house ledger uses.
 const MARK=@@MARK@@;
@@ -767,6 +865,56 @@ function allRows(){
   const extra=mineAdded().map(addedRow).filter(Boolean);
   return NAMES.concat(extra);}
 function rec(tk){return allRows().find(n=>n[0]===tk);}
+
+// ---- the basket -------------------------------------------------------------
+// Typing a dollar figure into twenty rows is twenty guesses. Picking a set and
+// splitting one number across it is a single decision you can see the result of
+// before it happens, which is the whole difference in how this feels to use.
+function buyable(n){return n[F.px]>0&&gateOf(n)!=='fail';}
+function pickedList(){return allRows().filter(n=>ui.picked[n[F.tk]]&&buyable(n));}
+function setPicks(list){ui.picked={};list.forEach(n=>{ui.picked[n[F.tk]]=true;});}
+function quickPick(which){
+  const inv=allRows().filter(n=>buyable(n)&&n[F.tier]!=='t4'&&n[F.tier]!=='exit');
+  const byScore=inv.slice().sort((a,b)=>b[F.sc]-a[F.sc]);
+  if(which==='none'){ui.picked={};}
+  else if(which==='all'){setPicks(inv);}
+  else if(which==='top10'){setPicks(byScore.slice(0,10));}
+  else if(which==='cheap'){setPicks(inv.filter(n=>n[F.px]<=10));}
+  else if(which==='need'){
+    // the best-scoring company in each need, which also breaks up the fact that
+    // two thirds of the investable list is health
+    const seen={},out=[];
+    byScore.forEach(n=>{const k=String(n[F.need]||'?').split(' · ')[0];
+      if(!seen[k]){seen[k]=1;out.push(n);}});
+    setPicks(out);
+  }
+  else if(which==='mirror'){setPicks(allRows().filter(n=>heldByList(n[F.tk])));}
+  uiSave();render();
+}
+function heldByList(tk){const p=(HOUSE.positions||{})[tk];return p&&p.shares>0.0001;}
+// "Copy the list's own book" is the one weighted option: it matches the engine's
+// tier split rather than spreading evenly, because that is what the list does.
+function basketPlan(){
+  const picks=pickedList();
+  const amt=parseFloat(ui.spend);
+  if(!picks.length||!(amt>0))return {picks:picks,rows:[],total:0};
+  const mirror=picks.length&&picks.every(n=>heldByList(n[F.tk]))&&
+               picks.length===Object.keys(HOUSE.positions||{}).filter(t=>heldByList(t)).length;
+  let rows;
+  if(mirror){
+    const W={t1:0.60,t2:0.28,t3:0.12};
+    const byTier={};picks.forEach(n=>{(byTier[n[F.tier]]=byTier[n[F.tier]]||[]).push(n);});
+    const wsum=Object.keys(byTier).reduce((a,k)=>a+(W[k]||0),0)||1;
+    rows=[];
+    Object.keys(byTier).forEach(k=>{
+      const share=amt*((W[k]||0)/wsum)/byTier[k].length;
+      byTier[k].forEach(n=>rows.push([n,share]));});
+  }else{
+    const each=amt/picks.length;
+    rows=picks.map(n=>[n,each]);
+  }
+  return {picks:picks,rows:rows,total:rows.reduce((a,r)=>a+r[1],0),mirror:mirror};
+}
 function heldOf(tk){const p=(L().positions||{})[tk];return p?p.shares:0;}
 function costOf(tk){const p=(L().positions||{})[tk];return p?p.cost:0;}
 function totalValue(s){let t=s.cash||0;for(const tk in (s.positions||{}))t+=(s.positions[tk].shares||0)*((rec(tk)||[])[F.px]||0);return t;}
@@ -786,13 +934,97 @@ function snapshotMine(){
   saveMine(s);
 }
 let ui=null,art=null;
-function uiDefaults(){return {mkt:"all",cap:99999,minScore:0,holdOnly:false,sort:"score"};}
+function uiDefaults(){return {mkt:"all",cap:99999,minScore:0,holdOnly:false,sort:"score",picked:{},spend:""};}
 function uiLoad(){try{const r=localStorage.getItem('bsUI');if(r)return {...uiDefaults(),...JSON.parse(r)};}catch(e){}return uiDefaults();}
 function uiSave(){try{localStorage.setItem('bsUI',JSON.stringify(ui));}catch(e){}}
 function filtered(n){
   return (ui.mkt&&ui.mkt!=='all'&&marketOf(n[F.tk])!==ui.mkt)
     ||(ui.cap&&n[F.px]>ui.cap)
     ||(ui.minScore&&n[F.sc]<ui.minScore);}
+// The three lines over the same stretch, drawn from the weekly snapshots. Each
+// series is a percentage change from its own first reading, because that is the
+// only way to put a $5,000 book and an index on one axis honestly.
+function renderChart(){
+  const h=(L().history||[]);
+  const el=$('chart');
+  if(h.length<2){
+    el.innerHTML='<div class="chartempty">'+(h.length
+      ? 'One snapshot so far, taken '+h[0].date+'. The lines start drawing at the next weekly update.'
+      : 'The chart starts once you have a snapshot.')+'</div>';
+    return;}
+  const base=h[0];
+  const series=[
+    {k:'you', lab:'You',        c:'var(--accent)', d:h.map(r=>base.value?100*(r.value-base.value)/base.value:0)},
+    {k:'list',lab:'The list',   c:'var(--ink)',    d:h.map(r=>(base.list&&r.list)?100*(r.list-base.list)/base.list:null)},
+    {k:'spx', lab:'S&amp;P 500',c:'var(--muted)',  d:h.map(r=>(base.spx&&r.spx)?100*(r.spx-base.spx)/base.spx:null)}
+  ];
+  const all=series.flatMap(s=>s.d).filter(v=>v!==null&&isFinite(v));
+  let lo=Math.min(0,...all),hi=Math.max(0,...all);
+  if(hi-lo<1){lo-=1;hi+=1;}
+  const pad=(hi-lo)*0.12;lo-=pad;hi+=pad;
+  const W=720,H=230,L0=44,R=12,T=14,B=30;
+  const x=i=>L0+(W-L0-R)*(h.length===1?0.5:i/(h.length-1));
+  const y=v=>T+(H-T-B)*(1-(v-lo)/(hi-lo));
+  const zero=y(0);
+  let g='';
+  // horizontal guides at zero and at the extremes
+  [lo+pad,0,hi-pad].forEach(function(v){
+    const yy=y(v);
+    g+='<line x1="'+L0+'" y1="'+yy.toFixed(1)+'" x2="'+(W-R)+'" y2="'+yy.toFixed(1)+
+       '" stroke="currentColor" stroke-width="1" opacity="'+(Math.abs(v)<0.001?0.35:0.12)+'"'+
+       (Math.abs(v)<0.001?'':' stroke-dasharray="3 4"')+'/>';
+    g+='<text x="'+(L0-7)+'" y="'+(yy+3.5).toFixed(1)+'" text-anchor="end" font-size="10.5" '+
+       'fill="currentColor" opacity="0.6" font-family="ui-monospace,monospace">'+
+       (v>0?'+':'')+v.toFixed(1)+'%</text>';});
+  series.forEach(function(s){
+    const pts=s.d.map((v,i)=>v===null?null:x(i).toFixed(1)+','+y(v).toFixed(1)).filter(Boolean);
+    if(pts.length<2)return;
+    g+='<polyline points="'+pts.join(' ')+'" fill="none" stroke="'+s.c+'" stroke-width="'+
+       (s.k==='you'?2.4:1.6)+'" stroke-linejoin="round" stroke-linecap="round"'+
+       (s.k==='spx'?' stroke-dasharray="5 4"':'')+'/>';
+    const last=s.d.map((v,i)=>[v,i]).filter(p=>p[0]!==null).pop();
+    if(last)g+='<circle cx="'+x(last[1]).toFixed(1)+'" cy="'+y(last[0]).toFixed(1)+
+       '" r="'+(s.k==='you'?3.6:2.6)+'" fill="'+s.c+'"/>';});
+  g+='<text x="'+L0+'" y="'+(H-9)+'" font-size="10.5" fill="currentColor" opacity="0.6" '+
+     'font-family="ui-monospace,monospace">'+h[0].date+'</text>';
+  g+='<text x="'+(W-R)+'" y="'+(H-9)+'" text-anchor="end" font-size="10.5" fill="currentColor" '+
+     'opacity="0.6" font-family="ui-monospace,monospace">'+h[h.length-1].date+'</text>';
+  const leg=series.map(function(s){
+    const last=s.d.filter(v=>v!==null).pop();
+    return '<span class="lg"><i style="background:'+s.c+
+      (s.k==='spx'?';opacity:.7':'')+'"></i>'+s.lab+
+      (last===undefined||last===null?'':' <b class="'+(last>=0?'pos':'neg')+'">'+
+       (last>=0?'+':'')+last.toFixed(2)+'%</b>')+'</span>';}).join('');
+  el.innerHTML='<div class="chartwrap"><svg viewBox="0 0 '+W+' '+H+'" role="img" '+
+    'aria-label="Percentage change over time for your simulation, the list, and the S&amp;P 500, '+
+    'measured from '+h[0].date+'">'+g+'</svg><div class="chartleg">'+leg+'</div></div>';
+}
+// Show the arithmetic before anything happens: how many, how much each, what is
+// left over. Nobody should have to trust a button with their whole balance.
+function renderBasket(){
+  const p=basketPlan();
+  const cash=L().cash||0;
+  const n=p.picks.length;
+  if(!n){
+    $('bksum').innerHTML='Nothing picked yet. Tap <b>+</b> on any company below, or use one of the buttons above.';
+    $('bkbreak').innerHTML='';return;}
+  if(!p.rows.length){
+    $('bksum').innerHTML='<b>'+n+'</b> picked. Enter how much to spend and it splits across them.';
+    $('bkbreak').innerHTML='';return;}
+  const each=p.total/n;
+  const over=p.total>cash+0.001;
+  $('bksum').innerHTML=(p.mirror
+      ? 'Splitting <b>'+fmt(p.total)+'</b> across <b>'+n+'</b> companies the way the list does, 60% Tier 1, 28% Tier 2, 12% Tier 3.'
+      : 'Splitting <b>'+fmt(p.total)+'</b> evenly across <b>'+n+'</b> companies, <b>'+fmt(each)+'</b> each.')
+    +' You have '+fmt(cash)+' in cash'
+    +(over?', which is <b class="neg">'+fmt(p.total-cash)+' short</b>.':', leaving '+fmt(cash-p.total)+'.');
+  const sorted=p.rows.slice().sort((a,b)=>b[1]-a[1]||b[0][F.sc]-a[0][F.sc]);
+  $('bkbreak').innerHTML='<div class="planbox">'+sorted.map(function(r){
+    const nn=r[0],d=r[1],sh=nn[F.px]?d/nn[F.px]:0;
+    return '<div class="planrow"><span><b>'+nn[F.tk]+'</b> <span style="color:var(--muted)">'+esc(nn[F.nm])+'</span></span>'+
+           '<span>'+fmt(d)+' <span style="color:var(--muted)">= '+sh.toFixed(3)+' sh</span></span></div>';})
+    .join('')+'</div>';
+}
 function render(){
   uiSave();
   const funded=L().cash!==null&&L().cash!==undefined;
@@ -805,6 +1037,7 @@ function render(){
        +'the only way to free up more to spend.')
     : ('This is the list\'s own book, rebalanced weekly by the engine. It is read-only here. '
        +'Switch the view above to your own simulation to trade.');
+  renderBasket();
   const ROWS=allRows();
   let rows=ROWS.map(n=>{const tk=n[0],sh=heldOf(tk),mv=sh*(n[F.px]||0),pl=mv-costOf(tk);
     return{n:n,tk:tk,sh:sh,mv:mv,pl:pl,
@@ -825,12 +1058,16 @@ function render(){
       .filter(Boolean).join('\n\n').replace(/"/g,'&quot;');
     const own=n[F.tier]==='own';
     const scLbl=own?(n[F.sc]>0?n[F.sc]:(n[AF.rawsc]>0?n[AF.rawsc]+'<span style="color:var(--muted);font-size:10px">/50</span>':'-')):n[F.sc];
-    h+='<tr title="'+tip+'"'+(own?' class="ownrow"':'')+'>'+
+    const isPicked=!!ui.picked[tk];
+    h+='<tr title="'+tip+'" class="'+(own?'ownrow ':'')+(isPicked?'picked':'')+'">'+
+      '<td class="cPick" data-l=""><button class="pick'+(isPicked?' on':'')+'" data-pick="'+tk+'" '+
+        (n[F.px]?'':'disabled')+' aria-pressed="'+isPicked+'" title="'+(isPicked?'Remove from the basket':'Add to the basket')+'">'+
+        (isPicked?'&#10003;':'+')+'</button></td>'+
       '<td class="tierpill" data-l="Tier">'+(own?'YOURS':n[F.tier].toUpperCase())+(gf?'<span class="gdot" title="Did not clear the survivability gate, so it is excluded from any plan">!</span>':'')+'</td>'+
       '<td class="tk" data-l="Ticker">'+tk+'</td>'+
       '<td class="co" data-l="Company"><span class="cn">'+n[F.nm]+vchip+'</span><div class="blurb">'+(n[F.kid]||n[F.need]||'')+(own?'<br><i>'+esc(String(n[F.note]||'You added this.'))+'</i>':'')+'</div></td>'+
       '<td class="r" style="font-weight:600" data-l="Score">'+scLbl+'</td><td class="nm" data-l="Industry">'+(n[F.need]||'')+'</td>'+
-      '<td class="r" data-l="Price">'+(n[F.px]?fmt(n[F.px]):'n/a')+'</td>'+
+      '<td class="r cPx" data-l="Price">'+(n[F.px]?fmt(n[F.px]):'n/a')+sparkline(tk)+'</td>'+
       // Holdings cells carry .flat when you own none, so the phone layout can drop
       // three rows of placeholder dashes instead of stacking them per company.
       '<td class="r'+(r.sh>0.0001?'':' flat')+'" data-l="Held">'+(r.sh>0.0001?r.sh.toFixed(4):'-')+'</td>'+
@@ -848,6 +1085,10 @@ function render(){
     saveAdded(mineAdded().filter(x=>x!==tk));render();lookup();});
   document.querySelectorAll('button[data-buy]').forEach(b=>b.onclick=()=>trade(b.dataset.buy,'BUY'));
   document.querySelectorAll('button[data-sell]').forEach(b=>b.onclick=()=>trade(b.dataset.sell,'SELL'));
+  document.querySelectorAll('button[data-pick]').forEach(b=>b.onclick=()=>{
+    const tk=b.dataset.pick;
+    if(ui.picked[tk])delete ui.picked[tk];else ui.picked[tk]=true;
+    uiSave();render();});
   let hh='';(L().history||[]).forEach(r=>{const d=r.value-(L().start?L().start.cash:r.value);
     const p2=L().start?100*d/L().start.cash:0;const h0=L().history[0]||{};
     const sp=(h0.spx&&r.spx)?(100*(r.spx-h0.spx)/h0.spx):null;
@@ -856,6 +1097,7 @@ function render(){
       :'<td class="r '+(v>=0?'pos':'neg')+'">'+v.toFixed(2)+'%</td>';};
     hh+='<tr><td>'+r.date+'</td><td class="r">'+fmt(r.value)+'</td><td class="r '+(d>=0?'pos':'neg')+'">'+(d>=0?'+':'−')+fmt(Math.abs(d)).slice(1)+'</td>'+pc(p2)+pc(li)+pc(sp)+'</tr>';});
   $('histbody').innerHTML=hh||'<tr><td colspan="6" style="color:var(--muted)">Your first snapshot is taken now, and another lands at each weekly update from here.</td></tr>';
+  renderChart();
   let th='';(L().txns||[]).slice(-30).reverse().forEach(t=>{
     th+='<tr><td>'+t.d+'</td><td>'+(t.by||'You')+'</td><td>'+t.a+'</td><td class="tk">'+(t.tk||'-')+'</td><td class="r">'+(t.sh?t.sh.toFixed(4):'-')+'</td><td class="r">'+(t.px?fmt(t.px):'-')+'</td><td class="r">'+fmt(t.amt)+'</td></tr>';});
   $('txnbody').innerHTML=th||'<tr><td colspan="7" style="color:var(--muted)">Nothing yet.</td></tr>';
@@ -886,6 +1128,30 @@ async function trade(tk,act){
     s.cash+=proceeds;s.txns.push({d:TODAY,a:'SELL',tk:tk,sh:sh,px:p,amt:proceeds,by:who});
   }
   await commit(s,'buymsg');
+}
+async function buyBasket(){
+  const p=basketPlan();
+  if(!p.picks.length){$('bkmsg').textContent='Pick at least one company first.';return;}
+  if(!p.rows.length){$('bkmsg').textContent='Enter how much you want to spend.';return;}
+  const s=JSON.parse(JSON.stringify(L()));
+  if(s.cash===null||s.cash===undefined){$('bkmsg').textContent='This book is read-only. Switch the view to your own simulation.';return;}
+  if(p.total>s.cash+0.001){
+    $('bkmsg').textContent='That is '+fmt(p.total-s.cash)+' more than your '+fmt(s.cash)+' in cash. Lower the amount or sell something.';return;}
+  const who=whoNow()||'You';
+  if(!confirm(who+' is buying '+p.picks.length+' companies\n\n'+fmt(p.total)+' total\n'
+    +'Cash left after: '+fmt(s.cash-p.total)+'\n\nOK?'))return;
+  let spent=0,bought=0;
+  p.rows.forEach(function(r){
+    const n=r[0],amt=r[1],px=n[F.px];
+    if(!px||amt<0.01)return;
+    const sh=amt/px;
+    const q=s.positions[n[F.tk]]||(s.positions[n[F.tk]]={shares:0,cost:0});
+    q.shares+=sh;q.cost+=amt;spent+=amt;bought++;
+    s.txns.push({d:TODAY,a:'BUY',tk:n[F.tk],sh:sh,px:px,amt:amt,by:who});});
+  s.cash-=spent;
+  ui.picked={};ui.spend="";uiSave();
+  await commit(s,'bkmsg');
+  $('bkmsg').textContent='Bought '+bought+' companies for '+fmt(spent)+'.';
 }
 // Everyone gets the same $5,000, so hand it over on arrival rather than making
 // them click for it. Visitor ledger only; the house book is the weekly job's.
@@ -1009,6 +1275,10 @@ function renderBoard(){
     saveFriends(friends().filter(x=>String(x.i||x.n)!==k));renderBoard();
     $('cardmsg').textContent='Removed.';});
 }
+document.querySelectorAll('button[data-qp]').forEach(b=>b.onclick=()=>quickPick(b.dataset.qp));
+$('spend').addEventListener('input',()=>{ui.spend=$('spend').value;uiSave();renderBasket();});
+$('spendall').onclick=()=>{ui.spend=String(Math.floor((L().cash||0)*100)/100);$('spend').value=ui.spend;uiSave();renderBasket();};
+$('basketbuy').onclick=buyBasket;
 $('qbtn').onclick=lookup;
 $('q').addEventListener('keydown',function(e){if(e.key==='Enter')lookup();});
 $('copycard').onclick=async()=>{const c=myCard();
@@ -1030,7 +1300,7 @@ $('holdonly').addEventListener('change',()=>{ui.holdOnly=$('holdonly').checked;r
 $('capsel').addEventListener('change',()=>{ui.cap=+$('capsel').value;render();});
 $('scorepol').addEventListener('change',()=>{ui.minScore=+$('scorepol').value;render();});
 $('sortsel').addEventListener('change',()=>{ui.sort=$('sortsel').value;render();});
-function pushUI(){$('mktsel').value=ui.mkt||'all';
+function pushUI(){$('mktsel').value=ui.mkt||'all';$('spend').value=ui.spend||'';
   $('holdonly').checked=!!ui.holdOnly;$('capsel').value=String(ui.cap);$('scorepol').value=String(ui.minScore);
   $('sortsel').value=ui.sort;}
 ui=uiLoad();autoFund();snapshotMine();pushUI();render();
@@ -1053,7 +1323,8 @@ tpl_enc = urllib.parse.quote(tpl, safe="")
 # Search index and price map ride outside the quine template so the self-save
 # payload stays small; the page reads them from window.
 idx_script = ("<script>window.__SIDX=" + json.dumps(sidx, separators=(",", ":")) +
-              ";window.__PX=" + json.dumps(pxcache, separators=(",", ":")) + ";</script>\n")
+              ";window.__PX=" + json.dumps(pxcache, separators=(",", ":")) +
+              ";window.__SPARK=" + json.dumps(spark, separators=(",", ":")) + ";</script>\n")
 page = idx_script + tpl.replace("%%STATE%%", json.dumps(state)).replace("@@TPLENC@@", tpl_enc)
 open(OUT, "w", encoding="utf-8").write(page)
 print(f"console rendered: {len(names_js)} ranked, {len(sidx)} searchable, "
