@@ -8,14 +8,19 @@ const scripts = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m => m[1
 const store = {};
 const els = {};
 const mk = id => ({ id, value:'', textContent:'', innerHTML:'', checked:false, style:{}, title:'',
-  dataset:{}, onclick:null, disabled:false, addEventListener(){}, querySelector(){return null;},
-  querySelectorAll(){return [];}, appendChild(){}, select(){} });
+  dataset:{}, onclick:null, onkeydown:null, disabled:false, hidden:false,
+  classList:{toggle(){},add(){},remove(){}},
+  addEventListener(){}, querySelector(){return null;},
+  querySelectorAll(){return [];}, appendChild(){}, select(){}, focus(){}, closest(){return null;} });
 const sandbox = {
   document:{ getElementById:id=>(els[id]=els[id]||mk(id)), querySelectorAll:()=>[],
-             querySelector:()=>null, createElement:mk, addEventListener(){} },
+             querySelector:()=>null, createElement:mk, addEventListener(){},
+             body:{style:{}} },
   localStorage:{ getItem:k=>(k in store?store[k]:null), setItem:(k,v)=>{store[k]=String(v);},
                  removeItem:k=>{delete store[k];}, clear(){} },
-  console, window:{claude:undefined}, navigator:{clipboard:{writeText:async()=>{}}},
+  console, window:{claude:undefined,addEventListener(){},scrollTo(){}},
+  navigator:{clipboard:{writeText:async()=>{}}},
+  location:{hash:''}, history:{pushState(){}}, scrollTo(){},
   confirm:()=>true, alert:()=>{}, btoa:s=>Buffer.from(s,'binary').toString('base64'),
   atob:s=>Buffer.from(s,'base64').toString('binary'),
   setTimeout, JSON, Math, Object, Array, String, Number, Boolean, Date, RegExp, Error,

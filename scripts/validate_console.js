@@ -14,10 +14,13 @@ function mkEl(id) {
     dataset: {}, onclick: null, disabled: false,
     addEventListener() {}, querySelector() { return null; },
     querySelectorAll() { return []; }, appendChild() {}, select() {},
+    focus() {}, closest() { return null; }, hidden: false,
+    classList: { toggle() {}, add() {}, remove() {} },
   };
 }
 const els = {};
 const document = {
+  body: { style: {} },
   getElementById(id) { return (els[id] = els[id] || mkEl(id)); },
   querySelectorAll() { return []; },
   querySelector() { return null; },
@@ -32,13 +35,14 @@ const localStorage = {
 };
 const sandbox = {
   document, localStorage, console,
-  window: { claude: undefined },
+  window: { claude: undefined, addEventListener() {}, scrollTo() {} },
   navigator: { clipboard: { writeText: async () => {} } },
   confirm: () => true,
   alert: () => {},
   btoa: s => Buffer.from(s, 'binary').toString('base64'),
   atob: s => Buffer.from(s, 'base64').toString('binary'),
-  setTimeout, JSON, Math, Object, Array, String, Number, Boolean, Date, RegExp, Error, parseFloat, parseInt, isNaN,
+  location: { hash: '' }, history: { pushState() {} }, scrollTo() {},
+  setTimeout, JSON, Math, Object, Array, String, Number, Boolean, Date, RegExp, Error, parseFloat, parseInt, isNaN, isFinite,
 };
 sandbox.globalThis = sandbox;
 sandbox.window.localStorage = localStorage;

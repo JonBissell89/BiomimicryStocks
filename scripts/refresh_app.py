@@ -339,6 +339,50 @@ tr.ownrow td{background:var(--accent-soft)}
 tr.ownrow .tierpill{font-weight:600}
 .dropx{background:none;border:0;color:var(--muted);font-size:14px;line-height:1;padding:0 0 0 5px;cursor:pointer;min-height:0}
 .dropx:hover{color:var(--bad);background:none}
+/* Three views, one file. The nav swaps which is shown; the hash drives it so the
+   back button and shared links behave. No server, no extra page loads. */
+.view{display:none}
+nav a.tab{border:1px solid transparent}
+nav a.tab.on{color:var(--accent);border-color:var(--line);background:var(--chipbg)}
+.plusref{font-style:normal;font-family:var(--mono);color:var(--accent);font-weight:600}
+
+/* Rows open a detail panel, because a title attribute does not exist on a phone
+   and all the reasoning behind a score was unreachable there. */
+tr.rowclick{cursor:pointer}
+tr.rowclick:hover td{background:var(--chipbg)}
+tr.rowclick:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.modal{position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;padding:18px}
+.modal[hidden]{display:none}
+.modalbg{position:absolute;inset:0;background:rgba(0,0,0,.55)}
+.modalcard{position:relative;background:var(--ground);border:1px solid var(--line);border-radius:10px;
+ max-width:640px;width:100%;max-height:88vh;overflow-y:auto;padding:20px 22px 22px}
+.modalx{position:absolute;top:8px;right:10px;background:none;border:0;color:var(--muted);
+ font-size:24px;line-height:1;padding:4px 8px;min-height:0;cursor:pointer}
+.modalx:hover{color:var(--ink);background:none}
+.dhead{display:flex;align-items:baseline;gap:9px;margin:0 30px 4px 0;flex-wrap:wrap}
+.dtier{font-family:var(--mono);font-size:10.5px;color:var(--accent);letter-spacing:.06em}
+.dhead h3{margin:0;font-size:19px}
+.dtk{font-family:var(--mono);font-size:13px;color:var(--muted);font-weight:400}
+.dblurb{font-size:13.5px;color:var(--muted);margin:4px 0 12px;line-height:1.5}
+.dstats{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.dstat{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:7px 11px;min-width:82px}
+.dstat span{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;
+ text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.dstat b{font-family:var(--mono);font-size:15px;font-variant-numeric:tabular-nums}
+.dstat b i{font-style:normal;font-size:10px;color:var(--muted)}
+.dact{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:16px;
+ padding-top:14px;border-top:1px solid var(--line)}
+.dact input{width:120px}
+
+/* A running count of what you have picked, where you are picking it. */
+.pickbar{display:none;background:var(--accent-soft);border:1px solid var(--accent);border-radius:7px;
+ padding:10px 13px;margin:8px 0 10px;font-size:13.5px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.pickbar .pbnames{font-family:var(--mono);font-size:11.5px;color:var(--muted);flex:1 1 auto}
+.pickbar .pbgo{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.05em;
+ color:var(--accent);text-decoration:none;border:1px solid var(--accent);border-radius:5px;padding:6px 11px}
+.pickbar .pbgo:hover{background:var(--accent);color:var(--ground)}
+.pickbar .pbclear{font-size:12px;padding:6px 10px;min-height:0}
+
 /* The three lines over time. Percentage change from each series' own first
    reading, which is the only honest way to put a $5,000 book and an index on
    the same axis. */
@@ -539,11 +583,13 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
 </style>
 <div class="wrap">
 <nav>
-  <a href="#what">What this is</a><a href="#why">The idea</a><a href="#how">How it was judged</a>
-  <a href="#list">Results &amp; your $5,000</a><a href="#track">How you're doing</a><a href="#rules">Full rules</a>
+  <a href="#list" class="tab" data-view="list">The list</a>
+  <a href="#trade" class="tab" data-view="trade">Buy &amp; sell</a>
+  <a href="#me" class="tab" data-view="me">My portfolio</a>
   <span class="money" id="navmoney"></span>
 </nav>
 
+<div class="view" id="v-list">
 <section class="hero" id="what">
   <p class="step">What this is</p>
   <h1>An algorithm that asks of every public company one question: is it moving its system toward balance, or away from it?</h1>
@@ -685,26 +731,7 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
   </div>
   <p class="money-line" id="mktnote">Most mainstream investing apps carry US exchange listings. Some carry ADRs. Foreign ordinary shares usually need a full-service broker. That is about access, not quality, and it never affects a score.</p>
 
-  <div class="basket">
-    <div class="bkhead"><b>Buy a basket</b><span>Tap <i>+</i> on any company below to add it, or start from one of these. Then choose how much to spend and it splits evenly across everything you picked.</span></div>
-    <div class="picks">
-      <button class="qp" data-qp="all">The whole list</button>
-      <button class="qp" data-qp="top10">Top 10 by score</button>
-      <button class="qp" data-qp="need">One of each need</button>
-      <button class="qp" data-qp="cheap">Under $10 a share</button>
-      <button class="qp" data-qp="mirror">Copy the list's own book</button>
-      <button class="qp ghost" data-qp="none">Clear</button>
-    </div>
-    <div class="bkbuy">
-      <label for="spend">Spend</label>
-      <input type="number" id="spend" min="1" step="50" placeholder="dollars">
-      <button class="ghost" id="spendall">All my cash</button>
-      <button class="big" id="basketbuy">Buy the basket</button>
-    </div>
-    <div class="money-line" id="bksum"></div>
-    <div id="bkbreak"></div>
-    <div class="msg" id="bkmsg"></div>
-  </div>
+  <div class="pickbar" id="pickbar"></div>
 
   <div class="tablewrap mktwrap"><table class="mkt">
   <thead><tr>
@@ -732,7 +759,46 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
   </div>
 
   <p class="legend">Score = fit with the rules out of 100 · P/L = worth now minus what you paid · <span class="pb2">pb</span> makes healthcare cheaper or fairer · <span class="emb2">emb</span> earns through insurance-paid prices. Both tags are already priced into the score; they are shown so you can see why a score landed where it did.</p>
+</section>
 
+<section id="rules">
+  <p class="step">Reference · Full rules</p>
+  <h2>How the grading works, in full</h2>
+  @@RULES@@
+</section>
+</div><!-- /v-list -->
+
+<div class="view" id="v-trade">
+<section>
+  <p class="step">Buy and sell</p>
+  <h2>Build your portfolio</h2>
+  <p>Pick companies on <a href="#list" class="tab" data-view="list">the list</a> with the <i class="plusref">+</i> button, or start from one of these. Then choose one amount and it splits across everything you picked, so you decide once instead of guessing a figure for every company.</p>
+  <div class="panel" id="moneybar2"><div id="moneybartext2" class="money-line"></div></div>
+
+  <div class="basket">
+    <div class="bkhead"><b>Start from</b><span>Any of these replaces what you have picked. You can then add or drop individual companies from the list.</span></div>
+    <div class="picks">
+      <button class="qp" data-qp="all">The whole list</button>
+      <button class="qp" data-qp="top10">Top 10 by score</button>
+      <button class="qp" data-qp="need">One of each need</button>
+      <button class="qp" data-qp="cheap">Under $10 a share</button>
+      <button class="qp" data-qp="mirror">Copy the list's own portfolio</button>
+      <button class="qp ghost" data-qp="none">Clear</button>
+    </div>
+    <div class="bkbuy">
+      <label for="spend">Spend</label>
+      <input type="number" id="spend" min="1" step="50" placeholder="dollars">
+      <button class="ghost" id="spendall">All my cash</button>
+      <button class="big" id="basketbuy">Buy</button>
+    </div>
+    <div class="money-line" id="bksum"></div>
+    <div id="bkbreak"></div>
+    <div class="msg" id="bkmsg"></div>
+  </div>
+
+  <h3 style="margin-top:30px">What you hold</h3>
+  <p style="font-size:13.5px">Selling turns shares back into cash, which is the only way to free up more to spend.</p>
+  <div id="sellbox"></div>
   <div class="msg" id="buymsg"></div>
 
   <div class="controls">
@@ -741,9 +807,11 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
     <span class="money-line" id="tradermsg"></span>
   </div>
 </section>
+</div><!-- /v-trade -->
 
+<div class="view" id="v-me">
 <section id="track">
-  <p class="step">Step 4 · How you're doing</p>
+  <p class="step">My portfolio</p>
   <h2>Come back over time</h2>
   <p>Every number here is a real market movement. Prices refresh every week and a snapshot of your total gets added to this table, so the gains and losses you see are exactly what would have happened to real money invested the same way on the same day.</p>
   <p>The table below puts three things side by side over the same stretch: <b>you</b>, <b>the list</b> held in equal amounts, and <b>the S&amp;P 500</b>, which is what buying the whole market and not thinking about it gets you. That is the whole experiment. If the ranking is worth anything it should show up here, and if it is not, that will show up here too. Either answer is useful, and neither one costs you money to find out.</p>
@@ -767,15 +835,18 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
     <span class="money-line" id="cardmsg"></span>
     <div style="margin-top:10px"><input type="text" id="friendcode" placeholder="paste a profile someone shared with you" style="width:min(420px,100%)"> <button class="ghost" id="addfriend">Add</button> <button class="ghost" id="clearfriends">Remove everyone</button></div>
     <div class="lb" id="leaderboard"></div>
-    <p class="legend" style="margin-top:10px">The list's book as of @@HOUSESTAMP@@: @@HOUSENOTE@@</p>
+    <p class="legend" style="margin-top:10px">The list's portfolio as of @@HOUSESTAMP@@: @@HOUSENOTE@@</p>
   </div>
 </section>
+</div><!-- /v-me -->
 
-<section id="rules">
-  <p class="step">Reference · Full rules</p>
-  <h2>How the grading works, in full</h2>
-  @@RULES@@
-</section>
+<div id="modal" class="modal" hidden>
+  <div class="modalbg" data-close="1"></div>
+  <div class="modalcard" role="dialog" aria-modal="true" aria-labelledby="modaltitle">
+    <button class="modalx" data-close="1" aria-label="Close">&times;</button>
+    <div id="modalbody"></div>
+  </div>
+</div>
 
 <footer>Balanced Systems Console · @@RANKED@@ graded companies from a @@UNIV@@-company US-investable screen (counts as of the run stamped above) (US exchanges + SEC filers + OTC/ADR lines; not all ~60,000 companies listed worldwide) · real companies at real market prices, invested with pretend money · prices refresh every week · your simulation is stored in your own browser and never sent anywhere · the list's own $5,000 is a tracked experiment held to the same rules · research output, not investment advice, and no one here is a licensed financial advisor.</footer>
 </div>
@@ -999,6 +1070,127 @@ function renderChart(){
     'aria-label="Percentage change over time for your simulation, the list, and the S&amp;P 500, '+
     'measured from '+h[0].date+'">'+g+'</svg><div class="chartleg">'+leg+'</div></div>';
 }
+// ---- three views in one file ------------------------------------------------
+// Browsing, trading and reviewing are three different frames of mind, so they get
+// three pages. It stays a single self-contained file: the nav swaps which view is
+// shown and the hash drives it, so links and the back button behave normally and
+// nothing needs a server.
+const VIEWS=['list','trade','me'];
+function currentView(){
+  const h=(location.hash||'').replace('#','');
+  return VIEWS.indexOf(h)>=0?h:'list';
+}
+function showView(v,push){
+  if(VIEWS.indexOf(v)<0)v='list';
+  VIEWS.forEach(function(k){
+    const el=$('v-'+k);if(el)el.style.display=(k===v)?'block':'none';});
+  document.querySelectorAll('nav a.tab').forEach(function(a){
+    a.classList.toggle('on',a.dataset.view===v);});
+  if(push&&location.hash!=='#'+v){history.pushState(null,'','#'+v);}
+  window.scrollTo(0,0);
+  render();
+}
+
+// ---- the row detail ---------------------------------------------------------
+// The reasoning behind a score used to live only in a title attribute, which does
+// not exist on a touch screen. On a phone it was simply unreachable. Tapping a row
+// opens it instead, which is also where buying one company at a time now lives.
+function openDetail(tk){
+  const n=rec(tk);if(!n)return;
+  const m=n[F.meta]||[],own=n[F.tier]==='own',gf=gateOf(n)==='fail';
+  const sh=heldOf(tk),mv=sh*(n[F.px]||0),pl=mv-costOf(tk);
+  const d=SPARK[tk];
+  let yearLine='';
+  if(d&&d.length>7){
+    const pct=100*(d[d.length-1]/d[0]-1);
+    yearLine='<div class="dstat"><span>Past year</span><b class="'+(pct>=0?'pos':'neg')+'">'+
+      (pct>=0?'+':'')+pct.toFixed(1)+'%</b></div>';}
+  const lab=function(t,v){return v?'<div class="mlab"><b>'+t+'</b> '+esc(String(v))+'</div>':'';};
+  $('modalbody').innerHTML=
+    '<div class="dhead"><span class="dtier">'+(own?'YOURS':n[F.tier].toUpperCase())+'</span>'+
+      '<h3 id="modaltitle">'+esc(n[F.nm])+' <span class="dtk">'+tk+'</span></h3></div>'+
+    '<p class="dblurb">'+esc(String(n[F.kid]||n[F.need]||''))+'</p>'+
+    '<div class="dstats">'+
+      '<div class="dstat"><span>Score</span><b>'+(n[F.sc]||'-')+'<i>/100</i></b></div>'+
+      '<div class="dstat"><span>Price</span><b>'+(n[F.px]?fmt(n[F.px]):'n/a')+'</b></div>'+
+      yearLine+
+      (sh>0.0001?'<div class="dstat"><span>You hold</span><b>'+sh.toFixed(4)+' sh</b></div>'+
+        '<div class="dstat"><span>Worth</span><b>'+fmt(mv)+'</b></div>'+
+        '<div class="dstat"><span>P/L</span><b class="'+(pl>=0?'pos':'neg')+'">'+
+          (pl>=0?'+':'-')+fmt(Math.abs(pl)).slice(1)+'</b></div>':'')+
+    '</div>'+
+    (gf?'<div class="note" style="margin:12px 0">Set aside by the survivability gate, whatever it scored. '+
+        'That is a reading of its balance sheet, not of its business, and it stays out of any portfolio here.</div>':'')+
+    (own?'<p class="dblurb"><i>'+esc(String(n[F.note]||'You added this.'))+'</i></p>':scorecard(n))+
+    lab('Stock it touches:',m[0])+lab('Loop:',m[1])+
+    lab('If the system rebalances, its revenue:',m[2])+lab('Clock:',m[5])+
+    lab('Evidence behind the flow score:',m[4])+
+    '<div class="dact">'+
+      '<input type="number" id="damt" min="1" step="10" placeholder="dollars">'+
+      '<button data-dbuy="'+tk+'" '+(n[F.px]?'':'disabled')+'>Buy</button>'+
+      '<button class="sell" data-dsell="'+tk+'" '+(sh>0.0001?'':'disabled')+'>Sell</button>'+
+      '<button class="ghost" data-dpick="'+tk+'" '+(n[F.px]?'':'disabled')+'>'+
+        (ui.picked[tk]?'Remove from portfolio':'Add to portfolio')+'</button>'+
+    '</div><div class="msg" id="dmsg"></div>';
+  $('modal').hidden=false;
+  document.body.style.overflow='hidden';
+  const wire=function(sel,fn){const b=document.querySelector(sel);if(b)b.onclick=fn;};
+  wire('button[data-dbuy]',function(){
+    const v=$('damt').value;if(!v){$('dmsg').textContent='Enter a dollar amount first.';return;}
+    $('amt_'+tk)&&($('amt_'+tk).value=v);trade(tk,'BUY',v);});
+  wire('button[data-dsell]',function(){
+    const v=$('damt').value;if(!v){$('dmsg').textContent='Enter a dollar amount to sell.';return;}
+    $('amt_'+tk)&&($('amt_'+tk).value=v);trade(tk,'SELL',v);});
+  wire('button[data-dpick]',function(){
+    if(ui.picked[tk])delete ui.picked[tk];else ui.picked[tk]=true;
+    uiSave();render();openDetail(tk);});
+}
+function closeDetail(){$('modal').hidden=true;document.body.style.overflow='';}
+
+// The picked set, summarised where you are browsing, with a way through to buy.
+function renderPickBar(){
+  const el=$('pickbar');if(!el)return;
+  const p=pickedList();
+  if(!p.length){el.innerHTML='';el.style.display='none';return;}
+  el.style.display='block';
+  el.innerHTML='<b>'+p.length+'</b> picked for your portfolio '+
+    '<span class="pbnames">'+p.slice(0,6).map(n=>esc(n[F.tk])).join(' ')+
+    (p.length>6?' +'+(p.length-6)+' more':'')+'</span>'+
+    '<a class="tab pbgo" href="#trade" data-view="trade">Choose an amount</a>'+
+    '<button class="ghost pbclear" data-qp="none">Clear</button>';
+  el.querySelectorAll('[data-qp]').forEach(b=>b.onclick=()=>quickPick(b.dataset.qp));
+  el.querySelectorAll('a.tab').forEach(a=>a.onclick=e=>{e.preventDefault();showView('trade',true);});
+}
+
+// What you own, on the trading page, so selling does not mean hunting the big table.
+function renderSell(){
+  const el=$('sellbox');if(!el)return;
+  const pos=L().positions||{};
+  const rows=Object.keys(pos).filter(tk=>pos[tk].shares>0.0001)
+    .map(function(tk){const n=rec(tk);const px=(n||[])[F.px]||0;
+      return {tk:tk,n:n,sh:pos[tk].shares,mv:pos[tk].shares*px,pl:pos[tk].shares*px-pos[tk].cost};})
+    .sort((a,b)=>b.mv-a.mv);
+  if(!rows.length){
+    el.innerHTML='<div class="chartempty">You do not own anything yet. Pick companies above and buy, '+
+      'or open any row on the list and buy just that one.</div>';return;}
+  el.innerHTML='<div class="tablewrap"><table><thead><tr><th>Ticker</th><th>Company</th>'+
+    '<th style="text-align:right">Shares</th><th style="text-align:right">Worth</th>'+
+    '<th style="text-align:right">P/L</th><th>$ to sell</th><th></th></tr></thead><tbody>'+
+    rows.map(function(r){
+      return '<tr><td class="tk">'+r.tk+'</td><td>'+esc((r.n||[])[F.nm]||r.tk)+'</td>'+
+        '<td class="r">'+r.sh.toFixed(4)+'</td><td class="r">'+fmt(r.mv)+'</td>'+
+        '<td class="r '+(r.pl>=0?'pos':'neg')+'">'+(r.pl>=0?'+':'-')+fmt(Math.abs(r.pl)).slice(1)+'</td>'+
+        '<td><input type="number" class="amt" min="1" step="10" id="samt_'+r.tk+'" '+
+          'aria-label="dollars of '+r.tk+' to sell"></td>'+
+        '<td><button class="sell" data-ssell="'+r.tk+'">Sell</button></td></tr>';}).join('')+
+    '</tbody></table></div>'+
+    '<div class="money-line" style="margin-top:8px">Total holdings '+
+      fmt(rows.reduce((a,r)=>a+r.mv,0))+' plus '+fmt(L().cash||0)+' cash.</div>';
+  el.querySelectorAll('button[data-ssell]').forEach(b=>b.onclick=()=>{
+    const tk=b.dataset.ssell;const v=$('samt_'+tk).value;
+    if(!v){$('buymsg').textContent='Enter how many dollars of '+tk+' to sell.';return;}
+    trade(tk,'SELL',v);});
+}
 // Show the arithmetic before anything happens: how many, how much each, what is
 // left over. Nobody should have to trust a button with their whole balance.
 function renderBasket(){
@@ -1037,7 +1229,8 @@ function render(){
        +'the only way to free up more to spend.')
     : ('This is the list\'s own book, rebalanced weekly by the engine. It is read-only here. '
        +'Switch the view above to your own simulation to trade.');
-  renderBasket();
+  const mb2=$('moneybartext2');if(mb2)mb2.innerHTML=$('moneybartext').innerHTML;
+  renderBasket();renderPickBar();renderSell();
   const ROWS=allRows();
   let rows=ROWS.map(n=>{const tk=n[0],sh=heldOf(tk),mv=sh*(n[F.px]||0),pl=mv-costOf(tk);
     return{n:n,tk:tk,sh:sh,mv:mv,pl:pl,
@@ -1059,7 +1252,8 @@ function render(){
     const own=n[F.tier]==='own';
     const scLbl=own?(n[F.sc]>0?n[F.sc]:(n[AF.rawsc]>0?n[AF.rawsc]+'<span style="color:var(--muted);font-size:10px">/50</span>':'-')):n[F.sc];
     const isPicked=!!ui.picked[tk];
-    h+='<tr title="'+tip+'" class="'+(own?'ownrow ':'')+(isPicked?'picked':'')+'">'+
+    h+='<tr title="'+tip+'" data-tk="'+tk+'" tabindex="0" role="button" '+
+      'aria-label="Open details for '+esc(n[F.nm])+'" class="rowclick '+(own?'ownrow ':'')+(isPicked?'picked':'')+'">'+
       '<td class="cPick" data-l=""><button class="pick'+(isPicked?' on':'')+'" data-pick="'+tk+'" '+
         (n[F.px]?'':'disabled')+' aria-pressed="'+isPicked+'" title="'+(isPicked?'Remove from the basket':'Add to the basket')+'">'+
         (isPicked?'&#10003;':'+')+'</button></td>'+
@@ -1085,10 +1279,19 @@ function render(){
     saveAdded(mineAdded().filter(x=>x!==tk));render();lookup();});
   document.querySelectorAll('button[data-buy]').forEach(b=>b.onclick=()=>trade(b.dataset.buy,'BUY'));
   document.querySelectorAll('button[data-sell]').forEach(b=>b.onclick=()=>trade(b.dataset.sell,'SELL'));
-  document.querySelectorAll('button[data-pick]').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('button[data-pick]').forEach(b=>b.onclick=e=>{
+    e.stopPropagation();
     const tk=b.dataset.pick;
     if(ui.picked[tk])delete ui.picked[tk];else ui.picked[tk]=true;
     uiSave();render();});
+  // Tapping anywhere else on a row opens its detail. Buttons and inputs inside the
+  // row stop the event, so the two do not fight.
+  document.querySelectorAll('#mktbody tr[data-tk]').forEach(function(tr){
+    tr.onclick=function(e){
+      if(e.target.closest('button,input,select,a'))return;
+      openDetail(tr.dataset.tk);};
+    tr.onkeydown=function(e){
+      if(e.key==='Enter'||e.key===' '){e.preventDefault();openDetail(tr.dataset.tk);}};});
   let hh='';(L().history||[]).forEach(r=>{const d=r.value-(L().start?L().start.cash:r.value);
     const p2=L().start?100*d/L().start.cash:0;const h0=L().history[0]||{};
     const sp=(h0.spx&&r.spx)?(100*(r.spx-h0.spx)/h0.spx):null;
@@ -1107,10 +1310,14 @@ function render(){
   renderBoard();
 }
 if(window.claude&&claude.use){claude.use('artifact').then(a=>{art=a;render();}).catch(()=>{render();});}
-async function trade(tk,act){
-  const inp=$('amt_'+tk);const amt=parseFloat(inp&&inp.value);const n=rec(tk);const p=n?n[F.px]:null;
-  if(!(amt>0)||!p){$('buymsg').textContent='Type a dollar amount in the row for '+tk+' first.';return;}
-  if(L().cash===null||L().cash===undefined){$('buymsg').textContent='Press "Start with $5,000" first.';return;}
+// amtOverride lets the detail popup and the sell list drive the same code path as
+// the table row, so there is one place where a trade actually happens.
+async function trade(tk,act,amtOverride){
+  const inp=$('amt_'+tk);
+  const amt=parseFloat(amtOverride!==undefined?amtOverride:(inp&&inp.value));
+  const n=rec(tk);const p=n?n[F.px]:null;
+  if(!(amt>0)||!p){$('buymsg').textContent='Enter a dollar amount for '+tk+' first.';return;}
+  if(L().cash===null||L().cash===undefined){$('buymsg').textContent='This book is read-only. Switch the view to your own simulation.';return;}
   const who=whoNow()||'You';
   const s=JSON.parse(JSON.stringify(L()));s.positions=s.positions||{};
   if(act==='BUY'){
@@ -1303,7 +1510,15 @@ $('sortsel').addEventListener('change',()=>{ui.sort=$('sortsel').value;render();
 function pushUI(){$('mktsel').value=ui.mkt||'all';$('spend').value=ui.spend||'';
   $('holdonly').checked=!!ui.holdOnly;$('capsel').value=String(ui.cap);$('scorepol').value=String(ui.minScore);
   $('sortsel').value=ui.sort;}
-ui=uiLoad();autoFund();snapshotMine();pushUI();render();
+// nav, hash routing and the modal
+document.querySelectorAll('nav a.tab').forEach(function(a){
+  a.onclick=function(e){e.preventDefault();showView(a.dataset.view,true);};});
+window.addEventListener('popstate',function(){showView(currentView(),false);});
+document.querySelectorAll('#modal [data-close]').forEach(function(el){el.onclick=closeDetail;});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'&&!$('modal').hidden)closeDetail();});
+
+ui=uiLoad();autoFund();snapshotMine();pushUI();showView(currentView(),false);
 </script>
 """
 
