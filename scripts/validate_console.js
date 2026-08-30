@@ -68,17 +68,17 @@ setTimeout(() => {
   console.log('  no start button in the page:', !/id="fundbtn"/.test(html));
 
   // buy $100 of the top-scoring name
+  // The list page no longer carries per-row amount boxes, so drive trade()
+  // with an explicit amount the way the trading page and the quick picks do.
   const top = ctx.NAMES.slice().sort((a, b) => b[2] - a[2])[0];
-  ctx.$('amt_' + top[0]).value = '100';
-  ctx.trade(top[0], 'BUY');
+  ctx.trade(top[0], 'BUY', 100);
   setTimeout(() => {
     const m2 = JSON.parse(store.bsMine || '{}');
     const pos = m2.positions[top[0]];
     console.log('after buy', top[0], '-> shares:', pos && pos.shares.toFixed(4), '| cash:', m2.cash.toFixed(2));
 
     // sell half
-    ctx.$('amt_' + top[0]).value = '50';
-    ctx.trade(top[0], 'SELL');
+    ctx.trade(top[0], 'SELL', 50);
     setTimeout(() => {
       const m3 = JSON.parse(store.bsMine || '{}');
       console.log('after sell -> shares:', m3.positions[top[0]].shares.toFixed(4), '| cash:', m3.cash.toFixed(2));
@@ -109,8 +109,7 @@ setTimeout(() => {
         console.log('  NAMES untouched:', ctx.NAMES.length === before);
         console.log('  appears in table:', ctx.$('mktbody').innerHTML.indexOf(offList) >= 0,
           '| marked YOURS:', ctx.$('mktbody').innerHTML.indexOf('YOURS') >= 0);
-        ctx.$('amt_' + offList).value = '75';
-        ctx.trade(offList, 'BUY');
+        ctx.trade(offList, 'BUY', 75);
       }
       // market filter
       ctx.ui.mkt = 'ord'; ctx.render();
@@ -144,7 +143,8 @@ setTimeout(() => {
       // add / remove affordances must be visible without hunting
       const body = ctx.$('mktbody').innerHTML;
       console.log('Remove button on own rows:', body.indexOf('data-drop') >= 0,
-        '| Sell on ranked rows:', body.indexOf('data-sell') >= 0,
+        '| no buying from the list:', body.indexOf('data-buy') < 0
+          && body.indexOf('data-sell') < 0 && body.indexOf('id="amt_') < 0,
         '| no duplicate add row in table:', body.indexOf('jumpadd') < 0);
       console.log('planner gone:', typeof ctx.buyAllocation !== 'function'
         && body.indexOf('data-wt') < 0);

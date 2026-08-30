@@ -70,8 +70,10 @@ setTimeout(() => {
   console.log('  has the six measures:', body.includes('The six measures'));
   console.log('  names the stock it touches:', body.includes('Stock it touches'));
   console.log('  has score and price stats:', body.includes('Score') && body.includes('Price'));
-  console.log('  has buy, sell and pick actions:',
-    body.includes('data-dbuy') && body.includes('data-dsell') && body.includes('data-dpick'));
+  // Committing moved to the Buy & sell page, so the detail picks but never trades.
+  console.log('  has the pick action:', body.includes('data-dpick'));
+  console.log('  cannot buy or sell from the detail:',
+    !body.includes('data-dbuy') && !body.includes('data-dsell') && !body.includes('id="damt"'));
   console.log('  aria-labelled dialog:', /id="modaltitle"/.test(body));
   ctx.closeDetail();
   console.log('  closes:', ctx.$('modal').hidden === true);

@@ -463,7 +463,7 @@ tr.picked td{background:var(--accent-soft)}
       "co   co   co    co   co"
       "ind  ind  ind   ind  ind"
       "held held value pl   pl"
-      "amt  amt  amt   buy  sell";
+      "rm   rm   rm    rm   rm";
     gap:3px 8px;align-items:center;
     border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:0 0 8px;
     background:var(--card)}
@@ -492,14 +492,9 @@ tr.picked td{background:var(--accent-soft)}
     content:attr(data-l) " ";font-family:var(--mono);font-size:9px;letter-spacing:.05em;
     text-transform:uppercase;color:var(--muted)}
   table.mkt td.flat{display:none}
-  table.mkt td.cAmt{grid-area:amt}
-  table.mkt td.cBuy{grid-area:buy}
-  table.mkt td.cSell{grid-area:sell}
-  table.mkt td.cAmt input.amt{width:100%;font-size:16px;padding:9px 10px}
-  /* 44px is the smallest comfortable touch target; min-width also forces the two
-     auto columns wide enough that Buy and Sell are not thumb-sized slivers. */
-  table.mkt td.cBuy button,table.mkt td.cSell button{
-    width:100%;min-width:76px;min-height:44px;padding:9px 12px;font-size:13.5px}
+  table.mkt td.cRow{grid-area:rm}
+  /* 44px is the smallest comfortable touch target. */
+  table.mkt td.cRow button{min-width:76px;min-height:44px;padding:9px 12px;font-size:13.5px}
   table.mkt tr.ownrow td{background:none}
   .controls{gap:9px 12px}
   .controls select,.controls input[type=text]{max-width:100%}
@@ -583,7 +578,7 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
 </style>
 <div class="wrap">
 <nav>
-  <a href="#list" class="tab" data-view="list">The list</a>
+  <a href="#list" class="tab" data-view="list">About</a>
   <a href="#trade" class="tab" data-view="trade">Buy &amp; sell</a>
   <a href="#me" class="tab" data-view="me">My portfolio</a>
   <span class="money" id="navmoney"></span>
@@ -745,7 +740,7 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
   <th style="text-align:right" title="Shares you own in the simulation">Held</th>
   <th style="text-align:right" title="Shares times price">Value</th>
   <th style="text-align:right" title="Worth now minus what you paid">P/L</th>
-  <th title="Dollars to buy or sell">$ amt</th><th></th><th></th></tr></thead>
+  <th></th></tr></thead>
   <tbody id="mktbody"></tbody></table></div>
   <div id="emptymsg" style="display:none;color:var(--muted);font-style:italic;padding:14px">Nothing matches those filters. Loosen one.</div>
 
@@ -1126,21 +1121,12 @@ function openDetail(tk){
     lab('If the system rebalances, its revenue:',m[2])+lab('Clock:',m[5])+
     lab('Evidence behind the flow score:',m[4])+
     '<div class="dact">'+
-      '<input type="number" id="damt" min="1" step="10" placeholder="dollars">'+
-      '<button data-dbuy="'+tk+'" '+(n[F.px]?'':'disabled')+'>Buy</button>'+
-      '<button class="sell" data-dsell="'+tk+'" '+(sh>0.0001?'':'disabled')+'>Sell</button>'+
       '<button class="ghost" data-dpick="'+tk+'" '+(n[F.px]?'':'disabled')+'>'+
         (ui.picked[tk]?'Remove from portfolio':'Add to portfolio')+'</button>'+
     '</div><div class="msg" id="dmsg"></div>';
   $('modal').hidden=false;
   document.body.style.overflow='hidden';
   const wire=function(sel,fn){const b=document.querySelector(sel);if(b)b.onclick=fn;};
-  wire('button[data-dbuy]',function(){
-    const v=$('damt').value;if(!v){$('dmsg').textContent='Enter a dollar amount first.';return;}
-    $('amt_'+tk)&&($('amt_'+tk).value=v);trade(tk,'BUY',v);});
-  wire('button[data-dsell]',function(){
-    const v=$('damt').value;if(!v){$('dmsg').textContent='Enter a dollar amount to sell.';return;}
-    $('amt_'+tk)&&($('amt_'+tk).value=v);trade(tk,'SELL',v);});
   wire('button[data-dpick]',function(){
     if(ui.picked[tk])delete ui.picked[tk];else ui.picked[tk]=true;
     uiSave();render();openDetail(tk);});
@@ -1171,8 +1157,7 @@ function renderSell(){
       return {tk:tk,n:n,sh:pos[tk].shares,mv:pos[tk].shares*px,pl:pos[tk].shares*px-pos[tk].cost};})
     .sort((a,b)=>b.mv-a.mv);
   if(!rows.length){
-    el.innerHTML='<div class="chartempty">You do not own anything yet. Pick companies above and buy, '+
-      'or open any row on the list and buy just that one.</div>';return;}
+    el.innerHTML='<div class="chartempty">You do not own anything yet. Pick companies above and buy.</div>';return;}
   el.innerHTML='<div class="tablewrap"><table><thead><tr><th>Ticker</th><th>Company</th>'+
     '<th style="text-align:right">Shares</th><th style="text-align:right">Worth</th>'+
     '<th style="text-align:right">P/L</th><th>$ to sell</th><th></th></tr></thead><tbody>'+
@@ -1224,7 +1209,7 @@ function render(){
   $('navmoney').innerHTML=funded?('<b>'+fmt(tot)+'</b> · cash '+fmt(L().cash)):'<b>$5,000</b> waiting for you';
   $('moneybartext').innerHTML=funded
     ? ('You have <b>'+fmt(L().cash)+'</b> of pretend money in cash, kept privately in your own browser. '
-       +'Type a dollar amount in any row below and press <b>Buy</b>. It shows you the arithmetic before '
+       +'Buying and selling happen on <b>Buy &amp; sell</b>. It shows you the arithmetic before '
        +'anything happens, and selling puts cash back. There is no more where it came from, so selling is '
        +'the only way to free up more to spend.')
     : ('This is the list\'s own book, rebalanced weekly by the engine. It is read-only here. '
@@ -1267,18 +1252,16 @@ function render(){
       '<td class="r'+(r.sh>0.0001?'':' flat')+'" data-l="Held">'+(r.sh>0.0001?r.sh.toFixed(4):'-')+'</td>'+
       '<td class="r'+(r.sh>0.0001?'':' flat')+'" data-l="Value">'+(r.sh>0.0001?fmt(r.mv):'-')+'</td>'+
       '<td class="r '+(r.pl>=0?'pos':'neg')+(r.sh>0.0001?'':' flat')+'" data-l="P/L">'+(r.sh>0.0001?(r.pl>=0?'+':'−')+fmt(Math.abs(r.pl)).slice(1):'-')+'</td>'+
-      '<td class="cAmt" data-l="$ amt"><input type="number" class="amt" min="1" step="10" id="amt_'+tk+'" aria-label="dollars of '+tk+' to trade" placeholder="$"></td>'+
-      '<td class="cBuy" data-l=""><button data-buy="'+tk+'" '+(n[F.px]?'':'disabled')+'>Buy</button></td>'+
-      '<td class="cSell" data-l="">'+(own
+      // Committing happens on Buy & sell. Browsing only picks, so the row
+      // carries no amount box and no Buy or Sell. Rows you added keep Remove.
+      '<td class="cRow'+(own?'':' flat')+'" data-l="">'+(own
         ? '<button class="rm" data-drop="'+tk+'" title="Take this row out of your table">Remove</button>'
-        : '<button class="sell" data-sell="'+tk+'" '+(r.sh>0.0001?'':'disabled')+'>Sell</button>')+'</td></tr>';});
+        : '')+'</td></tr>';});
   $('mktbody').innerHTML=h;$('emptymsg').style.display=vis?'none':'block';
   document.querySelectorAll('button[data-drop]').forEach(b=>b.onclick=()=>{
     const tk=b.dataset.drop;
     if(heldOf(tk)>0.0001){alert('Sell your '+tk+' shares first, then it can be removed.');return;}
     saveAdded(mineAdded().filter(x=>x!==tk));render();lookup();});
-  document.querySelectorAll('button[data-buy]').forEach(b=>b.onclick=()=>trade(b.dataset.buy,'BUY'));
-  document.querySelectorAll('button[data-sell]').forEach(b=>b.onclick=()=>trade(b.dataset.sell,'SELL'));
   document.querySelectorAll('button[data-pick]').forEach(b=>b.onclick=e=>{
     e.stopPropagation();
     const tk=b.dataset.pick;
