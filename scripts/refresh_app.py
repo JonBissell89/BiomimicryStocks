@@ -1142,7 +1142,7 @@ function renderPickBar(){
   el.innerHTML='<b>'+p.length+'</b> picked for your portfolio '+
     '<span class="pbnames">'+p.slice(0,6).map(n=>esc(n[F.tk])).join(' ')+
     (p.length>6?' +'+(p.length-6)+' more':'')+'</span>'+
-    '<a class="tab pbgo" href="#trade" data-view="trade">Choose an amount</a>'+
+    '<a class="tab pbgo" href="#trade" data-view="trade">Go to Buy &amp; sell</a>'+
     '<button class="ghost pbclear" data-qp="none">Clear</button>';
   el.querySelectorAll('[data-qp]').forEach(b=>b.onclick=()=>quickPick(b.dataset.qp));
   el.querySelectorAll('a.tab').forEach(a=>a.onclick=e=>{e.preventDefault();showView('trade',true);});
@@ -1207,14 +1207,20 @@ function render(){
   const funded=L().cash!==null&&L().cash!==undefined;
   const tot=funded?totalValue(L()):0;
   $('navmoney').innerHTML=funded?('<b>'+fmt(tot)+'</b> · cash '+fmt(L().cash)):'<b>$5,000</b> waiting for you';
+  const cashNow=funded?fmt(L().cash):'';
+  // About says what the money is and stops there. How it moves is explained on
+  // the trading page, where it can actually be moved.
   $('moneybartext').innerHTML=funded
-    ? ('You have <b>'+fmt(L().cash)+'</b> of pretend money in cash, kept privately in your own browser. '
-       +'Buying and selling happen on <b>Buy &amp; sell</b>. It shows you the arithmetic before '
-       +'anything happens, and selling puts cash back. There is no more where it came from, so selling is '
-       +'the only way to free up more to spend.')
+    ? ('You have <b>'+cashNow+'</b> of pretend money, kept privately in your own browser '
+       +'and sent nowhere.')
+    : ('This is the list\'s own book, rebalanced weekly by the engine. It is read-only here.');
+  const mb2=$('moneybartext2');if(mb2)mb2.innerHTML=funded
+    ? ('You have <b>'+cashNow+'</b> of pretend money in cash, kept privately in your own browser. '
+       +'Buying and selling happen here, and every trade shows you the arithmetic before anything '
+       +'happens. Selling puts cash back. There is no more where it came from, so selling is the '
+       +'only way to free up more to spend.')
     : ('This is the list\'s own book, rebalanced weekly by the engine. It is read-only here. '
        +'Switch the view above to your own simulation to trade.');
-  const mb2=$('moneybartext2');if(mb2)mb2.innerHTML=$('moneybartext').innerHTML;
   renderBasket();renderPickBar();renderSell();
   const ROWS=allRows();
   let rows=ROWS.map(n=>{const tk=n[0],sh=heldOf(tk),mv=sh*(n[F.px]||0),pl=mv-costOf(tk);
