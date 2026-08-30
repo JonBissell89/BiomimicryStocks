@@ -705,7 +705,7 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
     <p class="runnote">Two companies are set aside by the survivability gate whatever they scored, because a company that runs out of money did not score badly, it produced no result. Research output, not investment advice.</p>
   </div>
 
-  <p><b>You do not have to take any of it on faith, and you should not.</b> If you are sceptical about a ranking built on somebody else's rules, that is the correct instinct. So there is $5,000 of pretend money here to test it with. Buy what you actually believe in, add companies that never made this list at all, then leave it alone and come back. The prices are real and update every week, so over time you find out whether the ranking was right, whether your own picks beat it, and whether either beat simply buying the whole market.</p>
+  <p><b>You do not have to take any of it on faith, and you should not.</b> If you are sceptical about a ranking built on somebody else's rules, that is the correct instinct. So there is $5,000 of pretend money here to test it with. Pick what you actually believe in, add companies that never made this list at all, then leave it alone and come back. The prices are real and update every week, so over time you find out whether the ranking was right, whether your own picks beat it, and whether either beat simply owning the whole market.</p>
 
   <h2 style="margin-top:30px">Results</h2>
   <p style="font-size:13.5px">Each row says what the company does in plain words, what it scored out of 100, and which need it serves. Tap or hover any row for the reasoning behind it.</p>
