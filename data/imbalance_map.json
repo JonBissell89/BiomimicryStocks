@@ -23,11 +23,11 @@
   "anchors": {
    "distance": "0 inside the safe range, 1 at the edge, 2 outside, 3 far outside (order of magnitude or several multiples)",
    "load": "1 to 3: how load-bearing the stock is for the biosphere or for civilization",
-   "rate": "0.5 healing, 1 stable, 2 worsening, 3 worsening fast; healing halves severity rather than zeroing it",
+   "rate": "0.5 returning toward the safe range, 1 holding its distance, 2 diverging, 3 diverging fast; a return halves severity rather than zeroing it, because distance still exists while the stock travels back",
    "exposure": "1 regional, 2 multi-regional, 3 global",
    "irreversibility": "1 reversible in years, 2 decades, 3 centuries or effectively permanent"
   },
-  "note": "the exact calculation is expected to evolve as evidence improves; what is fixed is the separation of STATE, DIRECTION, FLOW, CORRECTION, CLOCK and COMPANIES, in that order"
+  "note": "the exact calculation is expected to evolve as evidence accumulates; what is fixed is the separation of STATE, MOVEMENT, FLOW, CORRECTION, CLOCK and COMPANIES, in that order, and that movement is stated as position relative to the safe range, never as better or worse"
  },
  "_hypothesis": {
   "name": "the convergence hypothesis",
@@ -62,7 +62,7 @@
     "current": 425
    },
    "distance_note": "75 ppm past the boundary and moving away from it; the fastest sustained rise in the ice-core record",
-   "direction": "worsening",
+   "direction": "diverging",
    "severity": {
     "distance": 3,
     "load": 3,
@@ -89,7 +89,8 @@
     "CNI",
     "CP",
     "UNP"
-   ]
+   ],
+   "envelope": "CO2 breathed between 180 and 300 ppm through every glacial cycle of the last 800,000 years of ice cores; the current excursion is outside that envelope in level and roughly 100x outside it in speed"
   },
   {
    "id": "biosphere",
@@ -106,7 +107,7 @@
     "current": 100
    },
    "distance_note": "an order of magnitude past the boundary; each loss is permanent on any human timescale",
-   "direction": "worsening",
+   "direction": "diverging",
    "severity": {
     "distance": 3,
     "load": 3,
@@ -121,7 +122,8 @@
    "clock": "decades to begin, centuries to recover; extinction itself never reverses",
    "tickers": [
     "MHGVY"
-   ]
+   ],
+   "envelope": "background extinction runs near 0.1 to 1 E/MSY, punctuated by rare pulses; the die-off arm of the rhythm is real, but the current rate is a sustained pulse, not a beat"
   },
   {
    "id": "hanpp",
@@ -138,7 +140,7 @@
     "current": 30
    },
    "distance_note": "about three times the boundary; what one species takes, every other food web loses",
-   "direction": "worsening",
+   "direction": "diverging",
    "severity": {
     "distance": 3,
     "load": 3,
@@ -154,7 +156,8 @@
    "tickers": [
     "DAR",
     "MHGVY"
-   ]
+   ],
+   "envelope": "no single species in the record has held a third of land plant growth; there is no known oscillation that returns this appropriation on its own"
   },
   {
    "id": "forests",
@@ -171,7 +174,7 @@
     "current": 60
    },
    "distance_note": "15 points below the boundary, with tropical loss still running ahead of regrowth",
-   "direction": "worsening",
+   "direction": "diverging",
    "severity": {
     "distance": 2,
     "load": 3,
@@ -184,7 +187,8 @@
    "cause": "clearing for agriculture and settlement, logging, fire regimes shifted by climate",
    "correction": "agricultural intensity that frees land, materials that substitute for virgin timber, and regrowth protected long enough to become forest again",
    "clock": "decades to stop the loss, a century or more to regrow what was primary",
-   "tickers": []
+   "tickers": [],
+   "envelope": "forests burn, die and regrow on decades to centuries, and cover stayed inside that envelope until net conversion began outrunning regrowth"
   },
   {
    "id": "freshwater",
@@ -195,7 +199,7 @@
    "safe_range": "streamflow and soil-moisture deviations on no more land than the pre-industrial baseline; aquifers drawn no faster than recharge",
    "state": "both surface and soil water crossed their boundary in the 2023 assessment; a majority of the largest aquifers are being drawn down faster than they refill",
    "distance_note": "the land area seeing major water-cycle deviation runs about double its baseline",
-   "direction": "worsening",
+   "direction": "diverging",
    "severity": {
     "distance": 2,
     "load": 3,
@@ -211,7 +215,8 @@
    "tickers": [
     "WSIOF",
     "BIRMF"
-   ]
+   ],
+   "envelope": "rivers and soil moisture swing with seasons and decades; deep aquifers refill on centuries to millennia, so drawdown there sits outside any usable rhythm"
   },
   {
    "id": "soil",
@@ -222,7 +227,7 @@
    "safe_range": "erosion at or below soil formation, which runs on the order of a centimetre per century",
    "state": "roughly a third of agricultural land is degraded; erosion on tilled land commonly runs 10 to 100 times formation",
    "distance_note": "losing in decades what forms in centuries",
-   "direction": "worsening",
+   "direction": "diverging",
    "severity": {
     "distance": 2,
     "load": 3,
@@ -237,7 +242,8 @@
    "clock": "decades to stabilize, centuries to rebuild depth",
    "tickers": [
     "DAR"
-   ]
+   ],
+   "envelope": "under cover, formation and erosion trade places within a narrow band; the current loss rate has no return arm on a human timescale"
   },
   {
    "id": "nutrients",
@@ -254,7 +260,7 @@
     "current": 190
    },
    "distance_note": "dead zones downstream of farmland are the visible edge of the overload",
-   "direction": "worsening",
+   "direction": "diverging",
    "severity": {
     "distance": 3,
     "load": 2,
@@ -270,7 +276,8 @@
    "tickers": [
     "DAR",
     "BIRMF"
-   ]
+   ],
+   "envelope": "biological nitrogen fixation held a stable ceiling for the whole Holocene; industry now fixes roughly twice what all natural processes combined do"
   },
   {
    "id": "ocean",
@@ -281,7 +288,7 @@
    "safe_range": "aragonite saturation at or above 80 percent of its pre-industrial level",
    "state": "surface ocean about 30 percent more acidic than pre-industrial; the 2025 assessment marks this boundary crossed, the seventh of nine",
    "distance_note": "just past the edge and tracking CO2 upward",
-   "direction": "worsening",
+   "direction": "diverging",
    "severity": {
     "distance": 2,
     "load": 3,
@@ -294,7 +301,8 @@
    "cause": "the ocean absorbing roughly a quarter of fossil CO2 emissions",
    "correction": "the same correction as the atmosphere: cut the CO2 flow; the ocean has no separate lever",
    "clock": "centuries; deep-ocean chemistry mixes on a millennial clock",
-   "tickers": []
+   "tickers": [],
+   "envelope": "surface pH swung this far before, over millennia on glacial cycles; the current swing of similar size took 150 years"
   },
   {
    "id": "novel",
@@ -305,7 +313,7 @@
    "safe_range": "release no faster than assessment and breakdown; formally, a boundary crossed when production outruns evaluation",
    "state": "hundreds of thousands of registered synthetics and about 460 Mt of plastic per year, produced far faster than safety is assessed",
    "distance_note": "marked outside its boundary since 2022; the magnitude itself is unquantified, which is part of the problem",
-   "direction": "worsening",
+   "direction": "diverging",
    "severity": {
     "distance": 2,
     "load": 2,
@@ -321,7 +329,8 @@
    "tickers": [
     "MBRFF",
     "BIRMF"
-   ]
+   ],
+   "envelope": "no natural envelope exists; these compounds have no evolutionary history at all"
   },
   {
    "id": "materials",
@@ -338,7 +347,7 @@
     "current": 7
    },
    "distance_note": "the boundary here is a working target (the Circularity Gap baseline), not a planetary constant",
-   "direction": "worsening",
+   "direction": "diverging",
    "severity": {
     "distance": 2,
     "load": 2,
@@ -355,7 +364,8 @@
     "TMRAY",
     "MBRFF",
     "DAR"
-   ]
+   ],
+   "envelope": "geology concentrates ores on timescales with no human rhythm; the usable envelope here is the loop civilization builds, not one nature provides"
   },
   {
    "id": "ozone",
@@ -366,7 +376,7 @@
    "safe_range": "less than 5 percent below the 1980 column",
    "state": "back inside its boundary and healing; Antarctic recovery is projected around the 2060s",
    "distance_note": "the recovered control: one global correction that was actually completed",
-   "direction": "improving",
+   "direction": "returning",
    "severity": {
     "distance": 0,
     "load": 3,
@@ -379,7 +389,8 @@
    "cause": "was CFC release; the Montreal Protocol cut the flow and the stock is refilling",
    "correction": "hold the phase-out; nothing new required",
    "clock": "on track; full recovery by roughly 2066",
-   "tickers": []
+   "tickers": [],
+   "envelope": "back inside the envelope it left; the excursion took about fifty years going out and is taking about eighty coming back"
   },
   {
    "id": "food",
@@ -390,7 +401,7 @@
    "safe_range": "essentially no one chronically undernourished; the food system inside the land, water and nutrient boundaries it draws on",
    "state": "about 733 million people undernourished and 2.3 billion food-insecure (2024), while the food system is the largest single driver of the land, water and nutrient overshoots above",
    "distance_note": "the sharpest case of both failures at once: overshoot in inputs, deficit in outcomes",
-   "direction": "worsening",
+   "direction": "diverging",
    "severity": {
     "distance": 2,
     "load": 3,
@@ -417,8 +428,8 @@
    "stock": "people with safely managed drinking water",
    "safe_range": "universal access",
    "state": "about 2.2 billion people without safely managed drinking water (JMP)",
-   "distance_note": "better every year, but a quarter of the species remains outside",
-   "direction": "improving",
+   "distance_note": "the gap closes every year, but a quarter of the species remains outside",
+   "direction": "returning",
    "severity": {
     "distance": 2,
     "load": 3,
@@ -443,9 +454,9 @@
    "form": "deficit",
    "stock": "adequate dwellings reachable at ordinary incomes",
    "safe_range": "essentially no one in unsafe or unaffordable housing",
-   "state": "about 1.1 billion people live in informal settlements, and affordability is worsening inside wealthy countries too",
+   "state": "about 1.1 billion people live in informal settlements, and the cost of an adequate dwelling is diverging from ordinary incomes inside wealthy countries too",
    "distance_note": "a deficit produced mostly by cost per unit, not by absent technology",
-   "direction": "worsening",
+   "direction": "diverging",
    "severity": {
     "distance": 2,
     "load": 2,
@@ -473,7 +484,7 @@
    "safe_range": "universal access",
    "state": "about 685 million people without electricity and 2.1 billion without clean cooking (2024 tracking)",
    "distance_note": "progress stalled in the places furthest behind",
-   "direction": "stable",
+   "direction": "holding",
    "severity": {
     "distance": 2,
     "load": 3,
@@ -504,7 +515,7 @@
    "safe_range": "essential services reaching everyone without financial ruin",
    "state": "about 4.5 billion people not fully covered by essential health services, and 2 billion facing catastrophic or impoverishing health spending (WHO)",
    "distance_note": "the deficit is capacity per clinician-hour and cost per outcome, not medical knowledge",
-   "direction": "stable",
+   "direction": "holding",
    "severity": {
     "distance": 2,
     "load": 3,
@@ -555,8 +566,8 @@
    "stock": "people with safely managed sanitation, and waste turned back into safe flows",
    "safe_range": "universal access, with waste streams treated rather than discharged",
    "state": "about 3.5 billion people without safely managed sanitation (JMP)",
-   "distance_note": "improving, and every gap feeds directly into the water and nutrient imbalances above",
-   "direction": "improving",
+   "distance_note": "returning toward universal coverage, and every remaining gap feeds directly into the water and nutrient imbalances above",
+   "direction": "returning",
    "severity": {
     "distance": 2,
     "load": 3,
@@ -582,7 +593,7 @@
    "safe_range": "all-weather access for everyone, at energy and material cost the other boundaries can carry",
    "state": "about 1 billion rural people lack all-weather road access, while freight runs with roughly a third of trucks moving empty",
    "distance_note": "a deficit of access and an overshoot of empty movement at the same time",
-   "direction": "stable",
+   "direction": "holding",
    "severity": {
     "distance": 1,
     "load": 2,
@@ -614,7 +625,7 @@
    "safe_range": "no agreed global control variable exists; the working measure is capability per worker and its cost curve",
    "state": "tool capability per worker is rising and its cost is falling on every curve that can be measured, but access remains deeply uneven",
    "distance_note": "the softest measurement on this map, and marked as such",
-   "direction": "improving",
+   "direction": "returning",
    "severity": {
     "distance": 1,
     "load": 2,
@@ -642,7 +653,7 @@
    "safe_range": "universal meaningful connectivity",
    "state": "about 2.2 billion people remain offline (2024), and the number falls every year",
    "distance_note": "the provisioning stock closest to closing",
-   "direction": "improving",
+   "direction": "returning",
    "severity": {
     "distance": 1,
     "load": 2,
@@ -669,7 +680,7 @@
    "safe_range": "maintenance and hardening keeping pace with load and climate exposure",
    "state": "weather losses run on the order of 300 billion dollars a year and rising, while deferred maintenance accumulates on bridges, mains and grids built for a milder century",
    "distance_note": "the buffer is being spent from both ends: rising load, deferred upkeep",
-   "direction": "worsening",
+   "direction": "diverging",
    "severity": {
     "distance": 2,
     "load": 3,
@@ -690,5 +701,6 @@
     "ENGCF"
    ]
   }
- ]
+ ],
+ "_rhythm": "Nothing in nature holds still, and the map does not treat movement as failure. Wolves multiply until they outrun the deer; the crash feeds the deer's recovery, which feeds the wolves' recovery. Tree stocks grow, burn, die and regrow. That ebb and flow is what balance looks like, so a safe range here means the envelope a stock's own oscillations have stayed inside for as long as the record runs. A stock inside its envelope is in rhythm however fast it is moving. Imbalance is narrower and checkable: the stock has left its envelope, or is leaving it at a speed the envelope never contained. When that happens the correction still arrives, the way it arrives for the wolves; the only question the engine asks is whether it arrives as a managed return or as the die-off arm of the loop."
 }

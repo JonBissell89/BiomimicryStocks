@@ -27,7 +27,11 @@ soil, nitrogen and phosphorus, ocean chemistry, persistent synthetics, recoverab
 ozone) can be in **ecological overshoot**: human throughput exceeding regenerative or assimilative capacity.
 Provisioning stocks (food, water, shelter, energy, healthcare, sanitation, transport, tools, information,
 resilient infrastructure) can be in **provisioning deficit**: an essential need undersupplied despite
-substantial resource consumption. Less is not always better; balance is a safe range, and a stock can sit
+substantial resource consumption. Less is not always better, and movement is never scored as better or worse. Nothing in nature holds
+still: wolves outrun their deer, crash, and recover as the deer recover; tree stocks grow, burn and regrow.
+A safe range therefore means the oscillation envelope a stock's own record has stayed inside, and imbalance
+means the stock has left that envelope or is leaving it at a speed the envelope never contained. Balance is
+a safe range, and a stock can sit
 outside it from overconsumption, overproduction, under-regeneration, or under-supply of a need. The future
 lies where both forms shrink at once: more human need satisfied with less energy, material extraction,
 waste, scarcity and ecological disruption. That is the bridge between biomimicry and a resource-based
@@ -37,7 +41,7 @@ Each system carries an **imbalance severity**: distance from the safe range x lo
 of divergence x scale of exposure x irreversibility, normalized to 100. The anchors are in the map file and
 the arithmetic is audited; the exact calculation is expected to evolve as evidence improves. What is fixed
 is the separation the audit enforces on every system, in order: **STATE** (how far from equilibrium),
-**DIRECTION** (worsening or healing), **FLOW** (the physical flows causing it), **CORRECTION** (what moves
+**MOVEMENT** (diverging from the safe range, holding its distance, or returning), **FLOW** (the physical flows causing it), **CORRECTION** (what moves
 it toward its safe range), **CLOCK** (the realistic timescale), **COMPANIES** (the mechanisms accelerating
 the correction). Quantitative control variables are used wherever science provides them: seven of nine
 planetary-boundary processes sit outside their safe range in the 2025 assessment; extinctions run above 100

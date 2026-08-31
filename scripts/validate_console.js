@@ -161,6 +161,10 @@ setTimeout(() => {
         '| all real tickers:', chips.every(t => known.has(t)),
         '| every company traced to an imbalance:', [...known].every(t => mapped.has(t)),
         '| gaps stated:', (im.match(/clears the screen on this correction yet/g) || []).length);
+      console.log('  labels are the framework vocabulary:',
+        im.indexOf('frm-overshoot') >= 0 && im.indexOf('frm-deficit') >= 0
+          && im.indexOf('dir-worsening') < 0 && im.indexOf('improving') < 0,
+        '| envelopes shown:', (im.match(/Natural rhythm and envelope/g) || []).length);
       // The About table is the ranking and nothing else: no picking, no holdings,
       // no filter on what you own. This kept creeping back, so it is asserted.
       console.log('  no portfolio state on About:',

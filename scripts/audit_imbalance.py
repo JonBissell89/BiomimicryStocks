@@ -15,7 +15,7 @@ from paths import DATA
 
 FIELDS = ["id","name","cls","form","stock","safe_range","state","distance_note",
           "direction","severity","cause","correction","clock","tickers"]
-DIRECTION_RATE = {"improving":{0.5}, "stable":{1}, "worsening":{2,3}}
+DIRECTION_RATE = {"returning":{0.5}, "holding":{1}, "diverging":{2,3}}
 
 m = json.load(open(os.path.join(DATA,"imbalance_map.json"), encoding="utf-8"))
 eng = json.load(open(os.path.join(DATA,"engine_tiers.json"), encoding="utf-8"))
@@ -65,6 +65,8 @@ mapped={tk for s in sy for tk in s["tickers"]}
 orphans=sorted(set(engine_tk)-mapped)
 if orphans: errs.append("companies with NO imbalance behind them: "+", ".join(orphans))
 ghost_gaps=[s["id"] for s in sy if not s["tickers"]]
+for s in sy:
+    if s["cls"]=="earth" and not s.get("envelope"): warns.append(s["id"]+": earth-system row without a rhythm/envelope note")
 
 # ---- report ----------------------------------------------------------------
 print("LAYER 0  civilization imbalance map  (as of %s)" % m.get("asof","?"))
@@ -85,7 +87,8 @@ print()
 fw=next(s for s in sy if s["id"]=="freshwater")
 print("TRAVERSAL (freshwater):")
 print("  STATE      "+fw["state"])
-print("  DIRECTION  "+fw["direction"])
+print("  MOVEMENT   "+fw["direction"]+" (relative to the safe range)")
+if "envelope" in fw: print("  ENVELOPE   "+fw["envelope"])
 print("  FLOW       "+fw["cause"])
 print("  CORRECTION "+fw["correction"])
 print("  CLOCK      "+fw["clock"])

@@ -507,8 +507,12 @@ tr.picked td{background:var(--accent-soft)}
 .imbrow .sevbar{height:4px;background:var(--chipbg);border-radius:2px;flex:0 0 56px;overflow:hidden}
 .imbrow .sevbar i{display:block;height:100%;background:var(--warn)}
 .imbrow .nm2{font-weight:600;flex:1 1 auto;min-width:0}
-.imbrow .dir{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.05em}
-.dir-worsening{color:var(--bad)}.dir-stable{color:var(--muted)}.dir-improving{color:var(--good)}
+.imbrow .frm{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.05em;
+  padding:3px 7px;border-radius:4px;white-space:nowrap}
+.frm-overshoot{background:var(--warn-soft);color:var(--warn)}
+.frm-deficit{background:var(--accent-soft);color:var(--accent)}
+.frm-both{background:var(--chipbg);color:var(--muted)}
+.imbrow .mv{font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
 .imbrow .nco{font-family:var(--mono);font-size:10.5px;color:var(--muted)}
 .imbx{border:1px solid var(--line);border-top:0;border-radius:0 0 7px 7px;margin:-7px 0 8px;padding:6px 14px 12px;background:var(--card);font-size:13px}
 .imbx dl{margin:0}
@@ -598,7 +602,8 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
   <p>A scientist walks into a rainforest and finds a species never described before. The scientist does not know its currencies, its political parties, its stock markets or its industries, and does not ask about them. They measure what ecology measures for any organism: population, energy use, resource flows, waste streams, habitat modification, cooperation, competition, and the feedback loops created by its tools. Then they ask the question ecology always asks: <b>is this species moving toward a relationship with its environment that can persist?</b></p>
   <p>Seen from outside, Homo sapiens consumes energy and matter, occupies habitat, moves resources, produces waste, modifies its niche, reproduces, cooperates, competes, builds networks, stores information, and grows external organs in the form of tools and technology. Civilization is a metabolism. Money is not the underlying system; it is an information layer the species built to coordinate access to energy, matter, labour, land and time. Technology has let the species push many natural feedbacks further away in time. That does not eliminate the feedback. It accumulates it.</p>
   <p>So the first question this engine asks has nothing to do with companies: <b>where is the metabolism of Homo sapiens furthest from a stable regenerative state?</b></p>
-  <p>Balance is a safe range, not a minimum, and less is not automatically better. A system can sit outside its range because the species takes too much of something, produces too much of something, regenerates too little of it, or because an essential need stays undersupplied while plenty is consumed getting it wrong. That gives two failure forms, and the map below tracks both:</p>
+  <p>Balance is not a fixed point, because nothing in nature holds still. Wolves multiply until they outrun the deer; the crash feeds the deer's recovery, and the deer's recovery feeds the wolves'. Tree stocks grow, burn, die and regrow. Every living system breathes like this, and the ebb and flow is not imbalance; it is what balance actually looks like. So this map never scores movement as getting better or worse. A <b>safe range</b> here means the envelope a stock's own oscillations have stayed inside for as long as the record runs. A stock inside its envelope is in rhythm, however fast it is moving. Imbalance is something narrower and checkable: <b>the stock has left its envelope, or is leaving it at a speed the envelope never contained.</b> Atmospheric CO2 breathed between 180 and 300 parts per million through every glacial cycle of the last 800,000 years; it now stands near 425 and is moving roughly a hundred times faster than any swing in that record. That is not the planet's rhythm. That is a wolf population still climbing, and the correction arrives either as a managed return or as the die-off arm of the loop.</p>
+  <p>A stock can leave its envelope because the species takes too much of something, produces too much of something, regenerates too little of it, or because an essential need stays undersupplied while plenty is consumed getting it wrong. That gives the only two labels the map uses, and every row carries one:</p>
   <div class="dims">
     <div class="dim"><span class="w">&#8599;</span><span class="d"><b>Ecological overshoot.</b> Human throughput exceeds the regenerative or assimilative capacity of the surrounding system.</span></div>
     <div class="dim"><span class="w">&#8601;</span><span class="d"><b>Provisioning deficit.</b> The system fails to provide an essential human need adequately despite consuming substantial resources.</span></div>
@@ -607,9 +612,9 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
   <p>Wherever science provides a quantitative control variable, the map uses it instead of opinion. Seven of nine planetary-boundary processes currently sit outside their safe operating space. Extinctions run above 100 per million species-years against a boundary below 10. Human appropriation of net primary production is roughly 30 percent against a boundary near 10. Those are exactly the numbers an ecologist observing Homo sapiens from outside the species would write down.</p>
 
   <h3>Where civilization is furthest from balance</h3>
-  <p>Each row is a civilization-scale stock. Severity is its distance from equilibrium: distance from the safe range x load-bearing importance x rate of divergence x scale of exposure x irreversibility, on a 0 to 100 scale. Open any row for the full chain: state, direction, the physical flows causing it, the required correction, the clock that correction runs on, and the public companies in this universe attached to it. The imbalance is established first and exists whether or not any company serves it; a correction with no company yet is listed as exactly that.</p>
+  <p>Each row is a civilization-scale stock. Severity is its distance from equilibrium: distance from the safe range x load-bearing importance x rate of divergence x scale of exposure x irreversibility, on a 0 to 100 scale. Open any row for the full chain: state, movement relative to the safe range, the natural rhythm where a record exists, the physical flows causing the excursion, the required correction, the clock that correction runs on, and the public companies in this universe attached to it. The imbalance is established first and exists whether or not any company serves it; a correction with no company yet is listed as exactly that.</p>
   <div id="imbmap"></div>
-  <p class="legend">Severity reads distance from equilibrium, not moral urgency and not a prediction. Stratospheric ozone stays on the map at zero as the one completed global correction, proof that direction is not one-way. Definitions, anchors and sources live in the engine repository, and the map is re-researched, not assumed.</p>
+  <p class="legend">Severity reads distance from equilibrium, not moral urgency and not a prediction. Stratospheric ozone stays on the map at zero as the one completed return: a stock that left its envelope and was brought back inside it. Definitions, anchors and sources live in the engine repository, and the map is re-researched, not assumed.</p>
 
   <p style="margin-top:18px">The whole engine runs on one ordering, and the ordering is the discipline: nothing to the right is examined until everything to its left is established. This is what keeps it from discovering an attractive company first and rationalizing why it matters afterward. The imbalance must exist independently of the company.</p>
   <pre class="hier">PLANET / CIVILIZATION
@@ -1512,14 +1517,16 @@ function renderImbalance(){
         '<span class="sev">'+s.severity.score+'</span>'+
         '<span class="sevbar"><i style="width:'+Math.max(2,s.severity.score)+'%"></i></span>'+
         '<span class="nm2">'+s.name+'</span>'+
-        '<span class="dir dir-'+s.direction+'">'+s.direction+'</span>'+
+        '<span class="frm frm-'+s.form+'">'+(s.form==='both'?'overshoot + deficit':s.form)+'</span>'+
+        '<span class="mv">'+s.direction+'</span>'+
         '<span class="nco">'+(s.tickers.length?s.tickers.length+' co':'gap')+'</span></button>'+
         '<div class="imbx" id="imbx_'+s.id+'" hidden><dl>'+
         '<dt>Stock</dt><dd>'+s.stock+'</dd>'+
         '<dt>Safe range</dt><dd>'+s.safe_range+'</dd>'+
         '<dt>State</dt><dd>'+s.state+'</dd>'+
         '<dt>Distance from equilibrium</dt><dd>'+s.distance_note+'</dd>'+
-        '<dt>Direction</dt><dd>'+s.direction+' &middot; '+(s.form==='both'?'overshoot and deficit at once':s.form)+'</dd>'+
+        '<dt>Movement</dt><dd>'+({diverging:'diverging from the safe range',holding:'holding its distance from the safe range',returning:'returning toward the safe range'})[s.direction]+'</dd>'+
+        (s.envelope?'<dt>Natural rhythm and envelope</dt><dd>'+s.envelope+'</dd>':'')+
         '<dt>Physical flows causing it</dt><dd>'+s.cause+'</dd>'+
         '<dt>Required correction</dt><dd>'+s.correction+'</dd>'+
         '<dt>Correction clock</dt><dd>'+s.clock+'</dd>'+
