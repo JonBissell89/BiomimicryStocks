@@ -450,19 +450,15 @@ tr.picked td{background:var(--accent-soft)}
   table.mkt thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
   table.mkt tr{
     display:grid;
-    grid-template-columns:auto auto 1fr auto auto;
+    grid-template-columns:auto 1fr auto auto;
     grid-template-areas:
-      "pick tier tk    sc   px"
-      "co   co   co    co   co"
-      "ind  ind  ind   ind  ind"
-      "held held value pl   pl"
-      "rm   rm   rm    rm   rm";
+      "tier tk  sc  px"
+      "co   co  co  co"
+      "ind  ind ind ind"
+      "rm   rm  rm  rm";
     gap:3px 8px;align-items:center;
     border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:0 0 8px;
     background:var(--card)}
-  table.mkt td.cPick{grid-area:pick}
-  /* 30px is fine for a mouse and too small for a thumb */
-  table.mkt .pick{width:40px;height:40px;font-size:18px}
   /* labels are for the wide table; the phone card is legible without them */
   table.mkt td::before{content:none}
   table.mkt td{display:flex;align-items:baseline;gap:6px;border:0;padding:0;font-size:13px;min-width:0}
@@ -477,13 +473,6 @@ tr.picked td{background:var(--accent-soft)}
   table.mkt td.co .cn{white-space:normal;font-size:13.5px}
   table.mkt td.co .blurb{font-size:12px}
   table.mkt td.nm{grid-area:ind;font-size:11px;white-space:normal;margin-bottom:3px}
-  /* holdings only appear once you own some */
-  table.mkt td[data-l="Held"]{grid-area:held}
-  table.mkt td[data-l="Value"]{grid-area:value}
-  table.mkt td[data-l="P/L"]{grid-area:pl;justify-content:flex-end}
-  table.mkt td[data-l="Held"]::before,table.mkt td[data-l="Value"]::before{
-    content:attr(data-l) " ";font-family:var(--mono);font-size:9px;letter-spacing:.05em;
-    text-transform:uppercase;color:var(--muted)}
   table.mkt td.flat{display:none}
   table.mkt td.cRow{grid-area:rm}
   /* 44px is the smallest comfortable touch target. */
@@ -703,7 +692,6 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
   <h2 style="margin-top:30px">Results</h2>
   <p style="font-size:13.5px">Each row says what the company does in plain words, what it scored out of 100, and which need it serves. Tap or hover any row for the reasoning behind it.</p>
   <div class="controls">
-    <label><input type="checkbox" id="holdonly"> Only what I own</label>
     <label for="mktsel">Where it trades:</label><select id="mktsel">
       <option value="all" selected>anywhere</option>
       <option value="us">US exchanges (NYSE, NASDAQ)</option>
@@ -712,22 +700,18 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
     </select>
     <label for="capsel">Price under:</label><select id="capsel"><option value="10">$10</option><option value="20">$20</option><option value="30">$30</option><option value="50">$50</option><option value="99999" selected>any price</option></select>
     <label for="scorepol">Score at least:</label><select id="scorepol"><option value="0" selected>any</option><option value="70">70</option><option value="75">75</option><option value="80">80</option><option value="85">85</option></select>
-    <label for="sortsel">Sort by:</label><select id="sortsel"><option value="score" selected>rank (score)</option><option value="tier">tier</option><option value="pl">profit/loss</option><option value="value">what I own</option><option value="price">price, low to high</option><option value="industry">industry</option></select>
+    <label for="sortsel">Sort by:</label><select id="sortsel"><option value="score" selected>rank (score)</option><option value="tier">tier</option><option value="price">price, low to high</option><option value="industry">industry</option></select>
   </div>
   <p class="money-line" id="mktnote">Most mainstream investing apps carry US exchange listings. Some carry ADRs. Foreign ordinary shares usually need a full-service broker. That is about access, not quality, and it never affects a score.</p>
 
   <div class="tablewrap mktwrap"><table class="mkt">
   <thead><tr>
-  <th title="Add this company to your basket">Pick</th>
   <th title="T1 = 80 and above. T2 = 74 to 79. T3 = 69 to 73. T4 = 65 to 68. EXIT = below 65, on the record for review. YOURS = a company you added.">Tier</th>
   <th title="The company's short code on the exchange">Ticker</th>
   <th>Company · what it actually does</th>
   <th style="text-align:right" title="How well it fits the rules, out of 100">Score</th>
   <th title="Which human need it serves">Industry</th>
   <th style="text-align:right" title="What one share costs, and its shape over the past year">Price</th>
-  <th style="text-align:right" title="Shares you own in the simulation">Held</th>
-  <th style="text-align:right" title="Shares times price">Value</th>
-  <th style="text-align:right" title="Worth now minus what you paid">P/L</th>
   <th></th></tr></thead>
   <tbody id="mktbody"></tbody></table></div>
   <div id="emptymsg" style="display:none;color:var(--muted);font-style:italic;padding:14px">Nothing matches those filters. Loosen one.</div>
@@ -741,7 +725,7 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
     <div id="qres"></div>
   </div>
 
-  <p class="legend">Score = fit with the rules out of 100 · P/L = worth now minus what you paid · <span class="pb2">pb</span> makes healthcare cheaper or fairer · <span class="emb2">emb</span> earns through insurance-paid prices. Both tags are already priced into the score; they are shown so you can see why a score landed where it did.</p>
+  <p class="legend">Score = fit with the rules out of 100 · <span class="pb2">pb</span> makes healthcare cheaper or fairer · <span class="emb2">emb</span> earns through insurance-paid prices. Both tags are already priced into the score; they are shown so you can see why a score landed where it did.</p>
 </section>
 
 <section id="rules">
@@ -988,7 +972,7 @@ function snapshotMine(){
   saveMine(s);
 }
 let ui=null,art=null;
-function uiDefaults(){return {mkt:"all",cap:99999,minScore:0,holdOnly:false,sort:"score",picked:{},spend:""};}
+function uiDefaults(){return {mkt:"all",cap:99999,minScore:0,sort:"score",picked:{},spend:""};}
 function uiLoad(){try{const r=localStorage.getItem('bsUI');if(r)return {...uiDefaults(),...JSON.parse(r)};}catch(e){}return uiDefaults();}
 function uiSave(){try{localStorage.setItem('bsUI',JSON.stringify(ui));}catch(e){}}
 function filtered(n){
@@ -1111,15 +1095,10 @@ function openDetail(tk){
     lab('If the system rebalances, its revenue:',m[2])+lab('Clock:',m[5])+
     lab('Evidence behind the flow score:',m[4])+
     '<div class="dact">'+
-      '<button class="ghost" data-dpick="'+tk+'" '+(n[F.px]?'':'disabled')+'>'+
-        (ui.picked[tk]?'Remove from portfolio':'Add to portfolio')+'</button>'+
     '</div><div class="msg" id="dmsg"></div>';
   $('modal').hidden=false;
   document.body.style.overflow='hidden';
   const wire=function(sel,fn){const b=document.querySelector(sel);if(b)b.onclick=fn;};
-  wire('button[data-dpick]',function(){
-    if(ui.picked[tk])delete ui.picked[tk];else ui.picked[tk]=true;
-    uiSave();render();openDetail(tk);});
 }
 function closeDetail(){$('modal').hidden=true;document.body.style.overflow='';}
 
@@ -1158,7 +1137,7 @@ function renderBasket(){
   const cash=L().cash||0;
   const n=p.picks.length;
   if(!n){
-    $('bksum').innerHTML='Nothing picked yet. Tap <b>+</b> on any company below, or use one of the buttons above.';
+    $('bksum').innerHTML='Nothing picked yet. Use one of the buttons above to choose a starting set.';
     $('bkbreak').innerHTML='';return;}
   if(!p.rows.length){
     $('bksum').innerHTML='<b>'+n+'</b> picked. Enter how much to spend and it splits across them.';
@@ -1196,11 +1175,10 @@ function render(){
   const ROWS=allRows();
   let rows=ROWS.map(n=>{const tk=n[0],sh=heldOf(tk),mv=sh*(n[F.px]||0),pl=mv-costOf(tk);
     return{n:n,tk:tk,sh:sh,mv:mv,pl:pl,
-      visible:!((filtered(n)&&!(sh>0.0001))||(ui.holdOnly&&!(sh>0.0001)))};});
+      visible:!filtered(n)};});
   const k=ui.sort;
   rows.sort((a,b)=>{
     if(k==="tier"){const t=a.n[F.tier].localeCompare(b.n[F.tier]);return t!==0?t:b.n[F.sc]-a.n[F.sc];}
-    if(k==="pl")return b.pl-a.pl; if(k==="value")return b.mv-a.mv;
     if(k==="price")return a.n[F.px]-b.n[F.px];
     if(k==="industry"){const t=(a.n[F.need]||"").localeCompare(b.n[F.need]||"");return t!==0?t:b.n[F.sc]-a.n[F.sc];}
     return b.n[F.sc]-a.n[F.sc];});
@@ -1213,22 +1191,13 @@ function render(){
       .filter(Boolean).join('\n\n').replace(/"/g,'&quot;');
     const own=n[F.tier]==='own';
     const scLbl=own?(n[F.sc]>0?n[F.sc]:(n[AF.rawsc]>0?n[AF.rawsc]+'<span style="color:var(--muted);font-size:10px">/50</span>':'-')):n[F.sc];
-    const isPicked=!!ui.picked[tk];
     h+='<tr title="'+tip+'" data-tk="'+tk+'" tabindex="0" role="button" '+
-      'aria-label="Open details for '+esc(n[F.nm])+'" class="rowclick '+(own?'ownrow ':'')+(isPicked?'picked':'')+'">'+
-      '<td class="cPick" data-l=""><button class="pick'+(isPicked?' on':'')+'" data-pick="'+tk+'" '+
-        (n[F.px]?'':'disabled')+' aria-pressed="'+isPicked+'" title="'+(isPicked?'Remove from the basket':'Add to the basket')+'">'+
-        (isPicked?'&#10003;':'+')+'</button></td>'+
+      'aria-label="Open details for '+esc(n[F.nm])+'" class="rowclick '+(own?'ownrow':'')+'">'+
       '<td class="tierpill" data-l="Tier">'+(own?'YOURS':n[F.tier].toUpperCase())+(gf?'<span class="gdot" title="Did not clear the survivability gate, so it is excluded from any plan">!</span>':'')+'</td>'+
       '<td class="tk" data-l="Ticker">'+tk+'</td>'+
       '<td class="co" data-l="Company"><span class="cn">'+n[F.nm]+vchip+'</span><div class="blurb">'+(n[F.kid]||n[F.need]||'')+(own?'<br><i>'+esc(String(n[F.note]||'You added this.'))+'</i>':'')+'</div></td>'+
       '<td class="r" style="font-weight:600" data-l="Score">'+scLbl+'</td><td class="nm" data-l="Industry">'+(n[F.need]||'')+'</td>'+
       '<td class="r cPx" data-l="Price">'+(n[F.px]?fmt(n[F.px]):'n/a')+sparkline(tk)+'</td>'+
-      // Holdings cells carry .flat when you own none, so the phone layout can drop
-      // three rows of placeholder dashes instead of stacking them per company.
-      '<td class="r'+(r.sh>0.0001?'':' flat')+'" data-l="Held">'+(r.sh>0.0001?r.sh.toFixed(4):'-')+'</td>'+
-      '<td class="r'+(r.sh>0.0001?'':' flat')+'" data-l="Value">'+(r.sh>0.0001?fmt(r.mv):'-')+'</td>'+
-      '<td class="r '+(r.pl>=0?'pos':'neg')+(r.sh>0.0001?'':' flat')+'" data-l="P/L">'+(r.sh>0.0001?(r.pl>=0?'+':'−')+fmt(Math.abs(r.pl)).slice(1):'-')+'</td>'+
       // Committing happens on Buy & sell. Browsing only picks, so the row
       // carries no amount box and no Buy or Sell. Rows you added keep Remove.
       '<td class="cRow'+(own?'':' flat')+'" data-l="">'+(own
@@ -1239,11 +1208,6 @@ function render(){
     const tk=b.dataset.drop;
     if(heldOf(tk)>0.0001){alert('Sell your '+tk+' shares first, then it can be removed.');return;}
     saveAdded(mineAdded().filter(x=>x!==tk));render();lookup();});
-  document.querySelectorAll('button[data-pick]').forEach(b=>b.onclick=e=>{
-    e.stopPropagation();
-    const tk=b.dataset.pick;
-    if(ui.picked[tk])delete ui.picked[tk];else ui.picked[tk]=true;
-    uiSave();render();});
   // Tapping anywhere else on a row opens its detail. Buttons and inputs inside the
   // row stop the event, so the two do not fight.
   document.querySelectorAll('#mktbody tr[data-tk]').forEach(function(tr){
@@ -1463,12 +1427,11 @@ $('clearfriends').onclick=()=>{saveFriends([]);renderBoard();$('cardmsg').textCo
 $('ledgersel').addEventListener('change',()=>{try{localStorage.setItem('bsLedger',$('ledgersel').value)}catch(e){}render();});
 $('whoname').addEventListener('input',()=>{try{localStorage.setItem('bsWho',$('whoname').value.trim().slice(0,24))}catch(e){}renderBoard();});
 $('mktsel').addEventListener('change',()=>{ui.mkt=$('mktsel').value;render();});
-$('holdonly').addEventListener('change',()=>{ui.holdOnly=$('holdonly').checked;render();});
 $('capsel').addEventListener('change',()=>{ui.cap=+$('capsel').value;render();});
 $('scorepol').addEventListener('change',()=>{ui.minScore=+$('scorepol').value;render();});
 $('sortsel').addEventListener('change',()=>{ui.sort=$('sortsel').value;render();});
 function pushUI(){$('mktsel').value=ui.mkt||'all';$('spend').value=ui.spend||'';
-  $('holdonly').checked=!!ui.holdOnly;$('capsel').value=String(ui.cap);$('scorepol').value=String(ui.minScore);
+  $('capsel').value=String(ui.cap);$('scorepol').value=String(ui.minScore);
   $('sortsel').value=ui.sort;}
 // nav, hash routing and the modal
 document.querySelectorAll('nav a.tab').forEach(function(a){

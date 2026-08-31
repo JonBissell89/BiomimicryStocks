@@ -146,6 +146,12 @@ setTimeout(() => {
         '| no buying from the list:', body.indexOf('data-buy') < 0
           && body.indexOf('data-sell') < 0 && body.indexOf('id="amt_') < 0,
         '| no duplicate add row in table:', body.indexOf('jumpadd') < 0);
+      // The About table is the ranking and nothing else: no picking, no holdings,
+      // no filter on what you own. This kept creeping back, so it is asserted.
+      console.log('  no portfolio state on About:',
+        body.indexOf('data-pick') < 0 && body.indexOf('data-l="Held"') < 0
+          && body.indexOf('data-l="Value"') < 0 && body.indexOf('data-l="P/L"') < 0,
+        '| no Only-what-I-own filter:', !/id="holdonly"/.test(html));
       console.log('planner gone:', typeof ctx.buyAllocation !== 'function'
         && body.indexOf('data-wt') < 0);
       // removing a row the visitor added, after selling out of it
