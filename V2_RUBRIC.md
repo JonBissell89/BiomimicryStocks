@@ -1,5 +1,12 @@
 # The Stock and Flow Scorecard (engine v2)
 
+**This is the company-level layer.** It runs underneath Layer 0, the civilization imbalance map
+(`data/imbalance_map.json`), which establishes the imbalance, its direction, its causal flows, its required
+correction and its clock before any company is examined. The six measures below are unchanged by that
+layer; what changes is the order of operations: a company is only ever scored as a mechanism on a
+correction that Layer 0 already established. `audit_imbalance.py` fails the build if a company attaches to
+no established imbalance.
+
 Balance is a property of **stocks**, not of companies. A company is a mechanism attached to a **flow**.
 Score the mechanism by what it does to the stock, whether the loop back from the stock damps or amplifies
 it, whether it can grow the way cells grow, and whether the correction arrives on a human clock.

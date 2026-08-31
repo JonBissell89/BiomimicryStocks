@@ -8,6 +8,84 @@ therefore scores one mechanical question: **does this business move its system t
 earn by holding the system out of balance?** The second is not wickedness; it is a liability with a delay
 on it.
 
+**Layer 0: the civilization imbalance map (added Aug 31, 2026).** The engine is not looking for good
+companies; there is no such measurement. It is attempting to identify where the human species has driven a
+system furthest from regenerative equilibrium, determine the direction in which that system must eventually
+correct, and find the mechanisms accelerating that correction. The method is an ecologist's, applied to our
+own species: do not begin with economics, industries, ideology, ESG categories, or what humans say they
+want. Begin with the organism. Homo sapiens consumes energy and matter, occupies habitat, moves resources,
+produces waste, modifies its niche, reproduces, cooperates, competes, builds networks, stores information,
+and grows external organs in the form of tools. Civilization is a metabolism. Money is not the underlying
+system; it is an information layer the species built to coordinate access to energy, matter, labour, land
+and time. The first question is therefore: **where is the metabolism of Homo sapiens furthest from a stable
+regenerative state?**
+
+That question is answered in `data/imbalance_map.json` and checked by `scripts/audit_imbalance.py`, before
+any company is scored. The map holds twenty-one civilization-scale stocks in two classes. Earth-system
+stocks (greenhouse gases, biological diversity, appropriated biological productivity, forests, freshwater,
+soil, nitrogen and phosphorus, ocean chemistry, persistent synthetics, recoverable materials, stratospheric
+ozone) can be in **ecological overshoot**: human throughput exceeding regenerative or assimilative capacity.
+Provisioning stocks (food, water, shelter, energy, healthcare, sanitation, transport, tools, information,
+resilient infrastructure) can be in **provisioning deficit**: an essential need undersupplied despite
+substantial resource consumption. Less is not always better; balance is a safe range, and a stock can sit
+outside it from overconsumption, overproduction, under-regeneration, or under-supply of a need. The future
+lies where both forms shrink at once: more human need satisfied with less energy, material extraction,
+waste, scarcity and ecological disruption. That is the bridge between biomimicry and a resource-based
+economy.
+
+Each system carries an **imbalance severity**: distance from the safe range x load-bearing importance x rate
+of divergence x scale of exposure x irreversibility, normalized to 100. The anchors are in the map file and
+the arithmetic is audited; the exact calculation is expected to evolve as evidence improves. What is fixed
+is the separation the audit enforces on every system, in order: **STATE** (how far from equilibrium),
+**DIRECTION** (worsening or healing), **FLOW** (the physical flows causing it), **CORRECTION** (what moves
+it toward its safe range), **CLOCK** (the realistic timescale), **COMPANIES** (the mechanisms accelerating
+the correction). Quantitative control variables are used wherever science provides them: seven of nine
+planetary-boundary processes sit outside their safe range in the 2025 assessment; extinctions run above 100
+per million species-years against a boundary below 10; human appropriation of net primary production is
+roughly 30 percent against a boundary near 10.
+
+The hierarchy the whole engine now runs on:
+
+```
+PLANET / CIVILIZATION
+  -> IMBALANCE
+    -> STOCK
+      -> PHYSICAL FLOW CAUSING THE IMBALANCE
+        -> REQUIRED CORRECTION
+          -> COMPANY / TECHNOLOGY
+            -> MEASURED CORRECTION PER DOLLAR OF REVENUE
+              -> SELF-DAMPING OR SELF-AMPLIFYING LOOP
+                -> SURVIVABILITY
+                  -> INVESTMENT
+```
+
+The point of the ordering is discipline: the imbalance must exist independently of the company. The audit
+fails if any company in the engine attaches to no established imbalance, which is the mechanical guard
+against discovering an attractive business first and rationalizing why it matters afterward. The reverse is
+allowed and reported as a finding: corrections with no investable company yet (currently forests, ocean
+chemistry, and the completed ozone recovery, which is kept on the map as proof that a global correction can
+finish).
+
+**The convergence hypothesis (stated to be falsifiable, not believed).** Human civilization may be moving
+toward a state where increasingly capable technology satisfies essential needs with progressively less
+marginal labour, energy, extraction and waste: AI lowers the cost of intelligence and coordination,
+automation the labour per unit, renewables the resource cost of energy, precision agriculture the inputs
+per unit of nutrition, closed-loop manufacturing the virgin material demand, distributed production the
+transport and coordination requirement, preventive medicine the resources needed to maintain health. If
+those converge, economic organization can shift from maximizing resource throughput toward maximizing
+useful human outcomes per unit of physical resource. Nothing here states that a resource-based economy is
+guaranteed. The testable form: as technological capability increases, does civilization systematically move
+toward greater abundance of essential outcomes while requiring less scarce material, energy and human
+labour per outcome? The tracked portfolio is one running test. If the hypothesis is right, companies making
+essential outcomes cheaper, more abundant, regenerative, distributed and resource-efficient should capture
+progressively larger physical and economic flows. If it is wrong, the portfolio should eventually
+demonstrate that too.
+
+**The governing rule, everywhere on the site.** Do not predict the future by extrapolating markets. Measure
+the imbalance. Determine the direction the physical system must move to resolve it. Measure the clock. Then
+find the mechanisms carrying civilization in that direction. The crystal ball is not a prediction. The
+crystal ball is the distance from equilibrium.
+
 **Engine v2, stock-and-flow (rebuilt Aug 28, 2026).** Balance is a property of a **stock**, not of a
 company. A stock is anything that accumulates and can drain or pile up: aquifer volume, housing units,
 sterile-procedure capacity, safe units in a blood supply, soil carbon, grid balancing capacity, material in

@@ -14,6 +14,32 @@ The money in the simulation is pretend.**
 
 ---
 
+## Layer 0: where is the species out of balance?
+
+The engine does not start with companies. It starts with the question an ecologist would ask of any
+species: **where is the metabolism of Homo sapiens furthest from a stable regenerative state?** Money is
+treated as what it is, an information layer coordinating access to energy, matter, labour, land and time,
+not as the underlying system.
+
+[`data/imbalance_map.json`](data/imbalance_map.json) holds twenty-one civilization-scale stocks, eleven
+Earth-system and ten provisioning, each with its safe range, measured state, direction, causal flows,
+required correction, clock, and severity (distance x load x divergence rate x exposure x irreversibility).
+Two failure forms are tracked: **ecological overshoot** (throughput past regenerative capacity) and
+**provisioning deficit** (an essential need undersupplied despite heavy resource use). The bridge between
+them is the target: more need met with less energy, extraction, waste and disruption.
+
+```
+PLANET -> IMBALANCE -> STOCK -> FLOW -> CORRECTION -> COMPANY
+       -> CORRECTION PER DOLLAR -> LOOP -> SURVIVABILITY -> INVESTMENT
+```
+
+`audit_imbalance.py` enforces the ordering: every company in the engine must attach to an imbalance that
+exists without it, and corrections with no investable company yet are reported as findings (currently
+forests, ocean chemistry, and the completed ozone recovery, kept as proof a global correction can finish).
+The rule that governs all of it: measure the imbalance, the direction the physical system must move, and
+the clock, then find the mechanisms carrying civilization that way. The crystal ball is not a prediction;
+it is the distance from equilibrium.
+
 ## The scorecard
 
 Balance is a property of a **stock**, meaning something that accumulates and can drain
@@ -63,7 +89,8 @@ It does, monotonically, which is the real test of whether the rubric measures wh
 ## Layout
 
 ```
-data/     engine_tiers.json is the graded table and the source of truth.
+data/     imbalance_map.json is Layer 0, the civilization imbalance map.
+          engine_tiers.json is the graded table and the source of truth.
           search_index.json holds every company that entered, with why it was cut.
           price_cache.json, paper_state.json, and the tournament audit trail.
 scripts/  the pipeline. paths.py resolves everything relative to the repo.
@@ -79,7 +106,7 @@ build/    the rendered page (gitignored, built by the workflow)
   tier changes on verified facts. The only thing allowed to change a score.
 
 Verification chain, all of which must pass before anything publishes:
-`audit_engine_v2.py` then `refresh_app.py` then `check_page.py`, `check_structure.py`,
+`audit_imbalance.py` then `audit_engine_v2.py` then `refresh_app.py` then `check_page.py`, `check_structure.py`,
 and `validate_console.js`.
 
 ## The page

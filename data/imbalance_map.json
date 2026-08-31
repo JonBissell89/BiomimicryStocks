@@ -1,0 +1,694 @@
+{
+ "_comment": "Layer 0: the civilization imbalance map. Maintained and audited BEFORE any company is scored. The imbalance must exist independently of any company; a company can only attach to a correction that is already established here.",
+ "_premise": "Treat Homo sapiens the way an ecologist studying any species would: measure population, energy use, resource flows, waste streams, habitat modification, cooperation, competition and the feedback loops of its tools. Civilization is a metabolism. Money is not the underlying system; it is an information layer coordinating access to energy, matter, labor, land and time. The engine's first question is therefore not about companies at all: where is the metabolism of Homo sapiens furthest from a stable regenerative state?",
+ "_forms": {
+  "overshoot": "human throughput exceeds the regenerative or assimilative capacity of the surrounding system",
+  "deficit": "the system fails to provide an essential human need adequately despite consuming substantial resources",
+  "bridge": "the future lies where both fall at once: more human need satisfied with less energy, material extraction, waste, scarcity and ecological disruption"
+ },
+ "_hierarchy": [
+  "PLANET / CIVILIZATION",
+  "IMBALANCE",
+  "STOCK",
+  "PHYSICAL FLOW CAUSING THE IMBALANCE",
+  "REQUIRED CORRECTION",
+  "COMPANY / TECHNOLOGY",
+  "MEASURED CORRECTION PER DOLLAR OF REVENUE",
+  "SELF-DAMPING OR SELF-AMPLIFYING LOOP",
+  "SURVIVABILITY",
+  "INVESTMENT"
+ ],
+ "_severity": {
+  "formula": "severity = distance x load x rate x exposure x irreversibility, normalized to 0-100 against the maximum of 243",
+  "anchors": {
+   "distance": "0 inside the safe range, 1 at the edge, 2 outside, 3 far outside (order of magnitude or several multiples)",
+   "load": "1 to 3: how load-bearing the stock is for the biosphere or for civilization",
+   "rate": "0.5 healing, 1 stable, 2 worsening, 3 worsening fast; healing halves severity rather than zeroing it",
+   "exposure": "1 regional, 2 multi-regional, 3 global",
+   "irreversibility": "1 reversible in years, 2 decades, 3 centuries or effectively permanent"
+  },
+  "note": "the exact calculation is expected to evolve as evidence improves; what is fixed is the separation of STATE, DIRECTION, FLOW, CORRECTION, CLOCK and COMPANIES, in that order"
+ },
+ "_hypothesis": {
+  "name": "the convergence hypothesis",
+  "statement": "as technological capability increases, does civilization systematically move toward greater abundance of essential outcomes while requiring less scarce material, energy and human labor per outcome?",
+  "mechanisms": [
+   "AI lowers the cost of intelligence and coordination",
+   "automation lowers the labor required per unit of production",
+   "renewable and advanced energy systems lower the resource cost of usable energy",
+   "precision agriculture and biological systems lower inputs per unit of nutrition",
+   "closed-loop manufacturing lowers virgin material demand",
+   "distributed production lowers transportation and coordination requirements",
+   "preventive and regenerative medicine lowers the resources required to maintain health"
+  ],
+  "status": "a falsifiable hypothesis, not a promise; the tracked portfolio is one running test of it, and it is allowed to fail"
+ },
+ "_rule": "Do not predict the future by extrapolating markets. Measure the imbalance, determine the direction the physical system must move to resolve it, measure the clock, then find the mechanisms carrying civilization in that direction. The crystal ball is not a prediction. The crystal ball is the distance from equilibrium.",
+ "_sources": "Planetary boundaries: Richardson et al. 2023 and the 2025 Planetary Health Check (seven of nine processes outside the safe range). Provisioning: WHO/UNICEF JMP, FAO SOFI 2024, Tracking SDG7 2024, WHO UHC 2023, ITU 2024, UN-Habitat, Circularity Gap Report. Figures are order-of-scale and dated in each entry; they are inputs to be re-researched, not constants.",
+ "asof": "2026-08",
+ "systems": [
+  {
+   "id": "ghg",
+   "name": "Atmospheric greenhouse gases",
+   "cls": "earth",
+   "form": "overshoot",
+   "stock": "carbon dioxide and other heat-trapping gases accumulated in the atmosphere",
+   "safe_range": "350 ppm CO2 or below (planetary boundary; pre-industrial was 280)",
+   "state": "about 425 ppm CO2 (2024-2025 annual mean), rising 2 to 3 ppm per year",
+   "control": {
+    "variable": "atmospheric CO2 concentration",
+    "unit": "ppm",
+    "boundary": 350,
+    "current": 425
+   },
+   "distance_note": "75 ppm past the boundary and moving away from it; the fastest sustained rise in the ice-core record",
+   "direction": "worsening",
+   "severity": {
+    "distance": 3,
+    "load": 3,
+    "rate": 3,
+    "exposure": 3,
+    "irreversibility": 3,
+    "raw": 243,
+    "score": 100
+   },
+   "cause": "fossil fuel combustion for energy and transport, plus land clearing that turns standing carbon into emitted carbon",
+   "correction": "substitute non-fossil energy for fossil flows, electrify end uses, cut energy lost per useful outcome, stop land-carbon loss and rebuild sinks",
+   "clock": "decades; the energy capital stock turns over on a 20 to 40 year cycle and the gas itself persists for centuries",
+   "tickers": [
+    "WRTBY",
+    "PLPC",
+    "LGRDY",
+    "WSIOF",
+    "DLEGF",
+    "SHLS",
+    "CODYY",
+    "YMM",
+    "IOT",
+    "WAB",
+    "CNI",
+    "CP",
+    "UNP"
+   ]
+  },
+  {
+   "id": "biosphere",
+   "name": "Biological diversity",
+   "cls": "earth",
+   "form": "overshoot",
+   "stock": "living species and the genetic library they carry",
+   "safe_range": "under 10 extinctions per million species-years (the background rate is roughly 1)",
+   "state": "above 100 extinctions per million species-years, at least ten times the boundary",
+   "control": {
+    "variable": "extinction rate",
+    "unit": "E/MSY",
+    "boundary": 10,
+    "current": 100
+   },
+   "distance_note": "an order of magnitude past the boundary; each loss is permanent on any human timescale",
+   "direction": "worsening",
+   "severity": {
+    "distance": 3,
+    "load": 3,
+    "rate": 3,
+    "exposure": 3,
+    "irreversibility": 3,
+    "raw": 243,
+    "score": 100
+   },
+   "cause": "habitat conversion for food and settlement, overharvesting, chemical and nutrient load, climate shift",
+   "correction": "shrink the land, sea and chemical footprint per unit of human need met, so habitat and populations can be returned faster than they are taken",
+   "clock": "decades to begin, centuries to recover; extinction itself never reverses",
+   "tickers": [
+    "MHGVY"
+   ]
+  },
+  {
+   "id": "hanpp",
+   "name": "Available biological productivity",
+   "cls": "earth",
+   "form": "overshoot",
+   "stock": "net primary production, the yearly plant growth every other species also lives on",
+   "safe_range": "human appropriation below about 10 percent of net primary production",
+   "state": "human appropriation of net primary production is roughly 30 percent",
+   "control": {
+    "variable": "human appropriation of net primary production",
+    "unit": "percent",
+    "boundary": 10,
+    "current": 30
+   },
+   "distance_note": "about three times the boundary; what one species takes, every other food web loses",
+   "direction": "worsening",
+   "severity": {
+    "distance": 3,
+    "load": 3,
+    "rate": 2,
+    "exposure": 3,
+    "irreversibility": 2,
+    "raw": 108,
+    "score": 44
+   },
+   "cause": "cropland and pasture expansion, biomass harvest, and the losses between harvest and actual human nutrition",
+   "correction": "more nutrition per hectare and per tonne of biomass: higher-efficiency protein, waste-stream recovery, precision inputs, land returned to wild productivity",
+   "clock": "decades; land use changes at the speed of food systems",
+   "tickers": [
+    "DAR",
+    "MHGVY"
+   ]
+  },
+  {
+   "id": "forests",
+   "name": "Forests and habitat",
+   "cls": "earth",
+   "form": "overshoot",
+   "stock": "standing forest and connected wild habitat",
+   "safe_range": "at least 75 percent of original forest cover standing",
+   "state": "about 60 percent of original forest cover remains",
+   "control": {
+    "variable": "forest cover remaining",
+    "unit": "percent of original",
+    "boundary": 75,
+    "current": 60
+   },
+   "distance_note": "15 points below the boundary, with tropical loss still running ahead of regrowth",
+   "direction": "worsening",
+   "severity": {
+    "distance": 2,
+    "load": 3,
+    "rate": 2,
+    "exposure": 3,
+    "irreversibility": 3,
+    "raw": 108,
+    "score": 44
+   },
+   "cause": "clearing for agriculture and settlement, logging, fire regimes shifted by climate",
+   "correction": "agricultural intensity that frees land, materials that substitute for virgin timber, and regrowth protected long enough to become forest again",
+   "clock": "decades to stop the loss, a century or more to regrow what was primary",
+   "tickers": []
+  },
+  {
+   "id": "freshwater",
+   "name": "Freshwater and groundwater",
+   "cls": "earth",
+   "form": "overshoot",
+   "stock": "rivers, soil moisture and aquifers in their historical envelopes",
+   "safe_range": "streamflow and soil-moisture deviations on no more land than the pre-industrial baseline; aquifers drawn no faster than recharge",
+   "state": "both surface and soil water crossed their boundary in the 2023 assessment; a majority of the largest aquifers are being drawn down faster than they refill",
+   "distance_note": "the land area seeing major water-cycle deviation runs about double its baseline",
+   "direction": "worsening",
+   "severity": {
+    "distance": 2,
+    "load": 3,
+    "rate": 2,
+    "exposure": 2,
+    "irreversibility": 2,
+    "raw": 48,
+    "score": 20
+   },
+   "cause": "irrigation drawing more than recharge, watershed disruption, contamination, and a warming atmosphere moving water differently",
+   "correction": "reuse, leakage reduction, treatment, desalination where appropriate, efficient irrigation, watershed regeneration",
+   "clock": "years for efficiency and reuse; decades to centuries for a depleted aquifer",
+   "tickers": [
+    "WSIOF",
+    "BIRMF"
+   ]
+  },
+  {
+   "id": "soil",
+   "name": "Fertile soil",
+   "cls": "earth",
+   "form": "overshoot",
+   "stock": "topsoil depth, soil carbon and soil biology",
+   "safe_range": "erosion at or below soil formation, which runs on the order of a centimetre per century",
+   "state": "roughly a third of agricultural land is degraded; erosion on tilled land commonly runs 10 to 100 times formation",
+   "distance_note": "losing in decades what forms in centuries",
+   "direction": "worsening",
+   "severity": {
+    "distance": 2,
+    "load": 3,
+    "rate": 2,
+    "exposure": 3,
+    "irreversibility": 3,
+    "raw": 108,
+    "score": 44
+   },
+   "cause": "tillage, bare ground, compaction, salinization, and nutrient mining without return flows",
+   "correction": "farming that keeps soil covered and living, nutrient return instead of nutrient mining, and yield gains that retire fragile land",
+   "clock": "decades to stabilize, centuries to rebuild depth",
+   "tickers": [
+    "DAR"
+   ]
+  },
+  {
+   "id": "nutrients",
+   "name": "Nitrogen and phosphorus loads",
+   "cls": "earth",
+   "form": "overshoot",
+   "stock": "reactive nitrogen and phosphorus moving through soils and waters",
+   "safe_range": "about 62 Tg of newly fixed nitrogen and 11 Tg of phosphorus flow per year",
+   "state": "roughly 190 Tg of nitrogen fixed and about 22 Tg of phosphorus flowing per year, two to three times the boundaries",
+   "control": {
+    "variable": "industrial and intentional N fixation",
+    "unit": "Tg N per year",
+    "boundary": 62,
+    "current": 190
+   },
+   "distance_note": "dead zones downstream of farmland are the visible edge of the overload",
+   "direction": "worsening",
+   "severity": {
+    "distance": 3,
+    "load": 2,
+    "rate": 2,
+    "exposure": 3,
+    "irreversibility": 2,
+    "raw": 72,
+    "score": 30
+   },
+   "cause": "fertilizer applied beyond crop uptake, concentrated animal waste, and sewage returned to water instead of land",
+   "correction": "precision application, recovery of nutrients from waste streams back into the food loop, and treatment before discharge",
+   "clock": "years to a decade; nutrient practice changes as fast as farm economics allow",
+   "tickers": [
+    "DAR",
+    "BIRMF"
+   ]
+  },
+  {
+   "id": "ocean",
+   "name": "Ocean chemistry",
+   "cls": "earth",
+   "form": "overshoot",
+   "stock": "the carbonate chemistry that shell-forming ocean life is built on",
+   "safe_range": "aragonite saturation at or above 80 percent of its pre-industrial level",
+   "state": "surface ocean about 30 percent more acidic than pre-industrial; the 2025 assessment marks this boundary crossed, the seventh of nine",
+   "distance_note": "just past the edge and tracking CO2 upward",
+   "direction": "worsening",
+   "severity": {
+    "distance": 2,
+    "load": 3,
+    "rate": 2,
+    "exposure": 3,
+    "irreversibility": 3,
+    "raw": 108,
+    "score": 44
+   },
+   "cause": "the ocean absorbing roughly a quarter of fossil CO2 emissions",
+   "correction": "the same correction as the atmosphere: cut the CO2 flow; the ocean has no separate lever",
+   "clock": "centuries; deep-ocean chemistry mixes on a millennial clock",
+   "tickers": []
+  },
+  {
+   "id": "novel",
+   "name": "Persistent chemicals and synthetic materials",
+   "cls": "earth",
+   "form": "overshoot",
+   "stock": "synthetic compounds and plastics accumulating in living tissue, soil and water",
+   "safe_range": "release no faster than assessment and breakdown; formally, a boundary crossed when production outruns evaluation",
+   "state": "hundreds of thousands of registered synthetics and about 460 Mt of plastic per year, produced far faster than safety is assessed",
+   "distance_note": "marked outside its boundary since 2022; the magnitude itself is unquantified, which is part of the problem",
+   "direction": "worsening",
+   "severity": {
+    "distance": 2,
+    "load": 2,
+    "rate": 3,
+    "exposure": 3,
+    "irreversibility": 3,
+    "raw": 108,
+    "score": 44
+   },
+   "cause": "single-pass material design: produced, used briefly, dispersed",
+   "correction": "closed loops for what exists, destruction and containment of the worst of it, and material design that can re-enter either biology or industry",
+   "clock": "decades; persistence is the defining property",
+   "tickers": [
+    "MBRFF",
+    "BIRMF"
+   ]
+  },
+  {
+   "id": "materials",
+   "name": "Recoverable material stocks",
+   "cls": "earth",
+   "form": "overshoot",
+   "stock": "metals, minerals and biomass held in forms that can actually be recovered and reused",
+   "safe_range": "extraction paced so that secondary supply can meet most demand",
+   "state": "global extraction is around 100 Gt per year and the share cycled back is about 7 percent and falling",
+   "control": {
+    "variable": "share of material input cycled back",
+    "unit": "percent",
+    "boundary": 17,
+    "current": 7
+   },
+   "distance_note": "the boundary here is a working target (the Circularity Gap baseline), not a planetary constant",
+   "direction": "worsening",
+   "severity": {
+    "distance": 2,
+    "load": 2,
+    "rate": 2,
+    "exposure": 3,
+    "irreversibility": 1,
+    "raw": 24,
+    "score": 10
+   },
+   "cause": "virgin extraction priced below recovery, products designed against disassembly, collection loops missing",
+   "correction": "deposit and return systems, recovery infrastructure, design for disassembly, and secondary material made cheaper than virgin",
+   "clock": "years to decades; loops are built at industrial speed once the economics flip",
+   "tickers": [
+    "TMRAY",
+    "MBRFF",
+    "DAR"
+   ]
+  },
+  {
+   "id": "ozone",
+   "name": "Stratospheric ozone",
+   "cls": "earth",
+   "form": "overshoot",
+   "stock": "the ozone layer screening surface life from UV-B",
+   "safe_range": "less than 5 percent below the 1980 column",
+   "state": "back inside its boundary and healing; Antarctic recovery is projected around the 2060s",
+   "distance_note": "the recovered control: one global correction that was actually completed",
+   "direction": "improving",
+   "severity": {
+    "distance": 0,
+    "load": 3,
+    "rate": 0.5,
+    "exposure": 3,
+    "irreversibility": 2,
+    "raw": 0.0,
+    "score": 0
+   },
+   "cause": "was CFC release; the Montreal Protocol cut the flow and the stock is refilling",
+   "correction": "hold the phase-out; nothing new required",
+   "clock": "on track; full recovery by roughly 2066",
+   "tickers": []
+  },
+  {
+   "id": "food",
+   "name": "Nutritious food",
+   "cls": "provisioning",
+   "form": "both",
+   "stock": "people adequately nourished, and the reserve between harvests and need",
+   "safe_range": "essentially no one chronically undernourished; the food system inside the land, water and nutrient boundaries it draws on",
+   "state": "about 733 million people undernourished and 2.3 billion food-insecure (2024), while the food system is the largest single driver of the land, water and nutrient overshoots above",
+   "distance_note": "the sharpest case of both failures at once: overshoot in inputs, deficit in outcomes",
+   "direction": "worsening",
+   "severity": {
+    "distance": 2,
+    "load": 3,
+    "rate": 2,
+    "exposure": 3,
+    "irreversibility": 2,
+    "raw": 72,
+    "score": 30
+   },
+   "cause": "calories and nutrients lost between field and person, purchasing power gaps, conflict, and yield systems leaning on depleting inputs",
+   "correction": "more nutrition delivered per unit of land, water, nitrogen and money: efficient protein, waste-stream recovery, resilient low-cost distribution",
+   "clock": "years; food flows respond fast when cost per nutritious calorie falls",
+   "tickers": [
+    "MHGVY",
+    "BMBRF",
+    "DAR"
+   ]
+  },
+  {
+   "id": "water_access",
+   "name": "Potable water",
+   "cls": "provisioning",
+   "form": "deficit",
+   "stock": "people with safely managed drinking water",
+   "safe_range": "universal access",
+   "state": "about 2.2 billion people without safely managed drinking water (JMP)",
+   "distance_note": "better every year, but a quarter of the species remains outside",
+   "direction": "improving",
+   "severity": {
+    "distance": 2,
+    "load": 3,
+    "rate": 0.5,
+    "exposure": 3,
+    "irreversibility": 2,
+    "raw": 18.0,
+    "score": 7
+   },
+   "cause": "missing treatment and distribution, contamination, and source depletion pricing water out of reach",
+   "correction": "treatment, leakage reduction, reuse, and metering that makes the losses visible",
+   "clock": "years to a decade at current build rates",
+   "tickers": [
+    "WSIOF",
+    "BIRMF"
+   ]
+  },
+  {
+   "id": "shelter",
+   "name": "Shelter",
+   "cls": "provisioning",
+   "form": "deficit",
+   "stock": "adequate dwellings reachable at ordinary incomes",
+   "safe_range": "essentially no one in unsafe or unaffordable housing",
+   "state": "about 1.1 billion people live in informal settlements, and affordability is worsening inside wealthy countries too",
+   "distance_note": "a deficit produced mostly by cost per unit, not by absent technology",
+   "direction": "worsening",
+   "severity": {
+    "distance": 2,
+    "load": 2,
+    "rate": 2,
+    "exposure": 3,
+    "irreversibility": 1,
+    "raw": 24,
+    "score": 10
+   },
+   "cause": "construction cost and productivity stagnant for decades, land constraints, and building stock that leaks energy",
+   "correction": "lower cost per adequate dwelling: industrialized construction, higher build productivity, envelopes that cut lifetime energy",
+   "clock": "years to decades; housing moves at construction speed",
+   "tickers": [
+    "LEGH",
+    "CODYY",
+    "ENGCF"
+   ]
+  },
+  {
+   "id": "energy_access",
+   "name": "Usable energy",
+   "cls": "provisioning",
+   "form": "deficit",
+   "stock": "people with reliable electricity and clean cooking energy",
+   "safe_range": "universal access",
+   "state": "about 685 million people without electricity and 2.1 billion without clean cooking (2024 tracking)",
+   "distance_note": "progress stalled in the places furthest behind",
+   "direction": "stable",
+   "severity": {
+    "distance": 2,
+    "load": 3,
+    "rate": 1,
+    "exposure": 2,
+    "irreversibility": 1,
+    "raw": 12,
+    "score": 5
+   },
+   "cause": "grid build-out cost, conversion losses, and energy poverty where incomes meet fuel prices",
+   "correction": "cheaper delivered kilowatt-hours: generation where the demand is, less energy lost in conversion and distribution, metered visibility of the losses",
+   "clock": "years to a decade; solar plus storage is the fastest provisioning build-out in history",
+   "tickers": [
+    "PLPC",
+    "WRTBY",
+    "LGRDY",
+    "WSIOF",
+    "DLEGF",
+    "SHLS"
+   ]
+  },
+  {
+   "id": "healthcare",
+   "name": "Healthcare capacity",
+   "cls": "provisioning",
+   "form": "deficit",
+   "stock": "the capacity to prevent, diagnose and treat, per person who needs it",
+   "safe_range": "essential services reaching everyone without financial ruin",
+   "state": "about 4.5 billion people not fully covered by essential health services, and 2 billion facing catastrophic or impoverishing health spending (WHO)",
+   "distance_note": "the deficit is capacity per clinician-hour and cost per outcome, not medical knowledge",
+   "direction": "stable",
+   "severity": {
+    "distance": 2,
+    "load": 3,
+    "rate": 1,
+    "exposure": 3,
+    "irreversibility": 2,
+    "raw": 36,
+    "score": 15
+   },
+   "cause": "care models that spend scarce clinician time and facility capacity late, on complications that earlier and cheaper intervention would have prevented",
+   "correction": "more health per clinician-hour and per dollar: earlier diagnosis, prevention over rescue, care moved from theatre to bedside to home",
+   "clock": "years to decades, paced by reimbursement and adoption",
+   "tickers": [
+    "BOEUF",
+    "ATRC",
+    "HTFL",
+    "WST",
+    "TSNLF",
+    "BFLY",
+    "TDVXF",
+    "CERS",
+    "TMDX",
+    "GKOS",
+    "VCYT",
+    "AHICF",
+    "CBLL",
+    "SRTA",
+    "SSMXY",
+    "CLPBY",
+    "CRMD",
+    "DXCM",
+    "KMDA",
+    "NTRA",
+    "BLLN",
+    "CAI",
+    "ADMA",
+    "GH",
+    "DMTRF",
+    "IRTC",
+    "RMD"
+   ]
+  },
+  {
+   "id": "sanitation",
+   "name": "Sanitation",
+   "cls": "provisioning",
+   "form": "deficit",
+   "stock": "people with safely managed sanitation, and waste turned back into safe flows",
+   "safe_range": "universal access, with waste streams treated rather than discharged",
+   "state": "about 3.5 billion people without safely managed sanitation (JMP)",
+   "distance_note": "improving, and every gap feeds directly into the water and nutrient imbalances above",
+   "direction": "improving",
+   "severity": {
+    "distance": 2,
+    "load": 3,
+    "rate": 0.5,
+    "exposure": 3,
+    "irreversibility": 2,
+    "raw": 18.0,
+    "score": 7
+   },
+   "cause": "treatment infrastructure missing or overloaded; waste discharged to the same waters people drink",
+   "correction": "treatment build-out, and recovery of the water, energy and nutrients the waste stream contains",
+   "clock": "years to a decade at current build rates",
+   "tickers": [
+    "BIRMF"
+   ]
+  },
+  {
+   "id": "transport",
+   "name": "Transportation and access",
+   "cls": "provisioning",
+   "form": "deficit",
+   "stock": "the ability of people and goods to reach what they need",
+   "safe_range": "all-weather access for everyone, at energy and material cost the other boundaries can carry",
+   "state": "about 1 billion rural people lack all-weather road access, while freight runs with roughly a third of trucks moving empty",
+   "distance_note": "a deficit of access and an overshoot of empty movement at the same time",
+   "direction": "stable",
+   "severity": {
+    "distance": 1,
+    "load": 2,
+    "rate": 1,
+    "exposure": 2,
+    "irreversibility": 1,
+    "raw": 4,
+    "score": 2
+   },
+   "cause": "fragmented logistics, modal choices set by habit rather than energy cost, infrastructure gaps",
+   "correction": "fewer empty miles, freight shifted to the lowest-energy mode that works, assets kept alive longer",
+   "clock": "decades; transport stock turns over slowly",
+   "tickers": [
+    "YMM",
+    "IOT",
+    "WAB",
+    "BB",
+    "CNI",
+    "CP",
+    "UNP"
+   ]
+  },
+  {
+   "id": "tools",
+   "name": "Productive tools",
+   "cls": "provisioning",
+   "form": "deficit",
+   "stock": "the machinery and compute that multiply what one person-hour produces",
+   "safe_range": "no agreed global control variable exists; the working measure is capability per worker and its cost curve",
+   "state": "tool capability per worker is rising and its cost is falling on every curve that can be measured, but access remains deeply uneven",
+   "distance_note": "the softest measurement on this map, and marked as such",
+   "direction": "improving",
+   "severity": {
+    "distance": 1,
+    "load": 2,
+    "rate": 0.5,
+    "exposure": 2,
+    "irreversibility": 1,
+    "raw": 2.0,
+    "score": 1
+   },
+   "cause": "capital cost and skills gaps between the tool frontier and most of the species",
+   "correction": "cheaper capability per unit: compute, automation, and machines that let one operator do the work of several",
+   "clock": "years; tool cost curves are the fastest-moving on the map",
+   "tickers": [
+    "ENGCF",
+    "TSM",
+    "TOELY"
+   ]
+  },
+  {
+   "id": "information",
+   "name": "Information and knowledge",
+   "cls": "provisioning",
+   "form": "deficit",
+   "stock": "people connected to the species' shared information layer",
+   "safe_range": "universal meaningful connectivity",
+   "state": "about 2.2 billion people remain offline (2024), and the number falls every year",
+   "distance_note": "the provisioning stock closest to closing",
+   "direction": "improving",
+   "severity": {
+    "distance": 1,
+    "load": 2,
+    "rate": 0.5,
+    "exposure": 2,
+    "irreversibility": 1,
+    "raw": 2.0,
+    "score": 1
+   },
+   "cause": "infrastructure and affordability gaps at the edge of the network",
+   "correction": "cheaper connectivity and cheaper intelligence per person; the substrate is compute",
+   "clock": "years",
+   "tickers": [
+    "TSM",
+    "TOELY"
+   ]
+  },
+  {
+   "id": "infrastructure",
+   "name": "Resilient infrastructure",
+   "cls": "provisioning",
+   "form": "deficit",
+   "stock": "the margin between what built systems can absorb and what now hits them",
+   "safe_range": "maintenance and hardening keeping pace with load and climate exposure",
+   "state": "weather losses run on the order of 300 billion dollars a year and rising, while deferred maintenance accumulates on bridges, mains and grids built for a milder century",
+   "distance_note": "the buffer is being spent from both ends: rising load, deferred upkeep",
+   "direction": "worsening",
+   "severity": {
+    "distance": 2,
+    "load": 3,
+    "rate": 2,
+    "exposure": 3,
+    "irreversibility": 2,
+    "raw": 72,
+    "score": 30
+   },
+   "cause": "maintenance deferred because it is invisible until failure; exposure rising faster than hardening",
+   "correction": "repair over replacement, engineering capacity multiplied by software, observability that finds the weak points before they fail",
+   "clock": "decades; infrastructure moves at the speed of budgets and concrete",
+   "tickers": [
+    "BSY",
+    "SBDHF",
+    "PLPC",
+    "WSIOF",
+    "ENGCF"
+   ]
+  }
+ ]
+}
