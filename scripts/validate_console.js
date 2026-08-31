@@ -181,6 +181,9 @@ setTimeout(() => {
         '| access shown:', (im.match(/Access to the alternative/g) || []).length,
         '| springs on rows:', (im.match(/>spring /g) || []).length,
         '| turn = distance x pressure x access x coupling:', okTurn);
+      const okAdhere = imb.systems.every(s => s.measured && s.measured.movement === s.direction);
+      console.log('  measurements shown:', (im.match(/Measured, from the record/g) || []).length,
+        '| every label matches its measurement:', okAdhere);
       // The About table is the ranking and nothing else: no picking, no holdings,
       // no filter on what you own. This kept creeping back, so it is asserted.
       console.log('  no portfolio state on About:',
