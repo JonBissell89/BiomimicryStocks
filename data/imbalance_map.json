@@ -103,6 +103,16 @@
    "turn": {
     "value": 36,
     "ceiling": 108
+   },
+   "measured": {
+    "movement": "diverging",
+    "rate": 2.6696,
+    "window": [
+     "2015",
+     "2025"
+    ],
+    "distance": 2,
+    "summary": "+2.67 per year in the chart's unit, measured 2015 to 2025; movement is derived from this record, not assigned. Distance is derived from the control variable"
    }
   },
   {
@@ -148,6 +158,16 @@
    "turn": {
     "value": 4,
     "ceiling": 108
+   },
+   "measured": {
+    "movement": "diverging",
+    "rate": -0.013,
+    "window": [
+     "2010",
+     "2020"
+    ],
+    "distance": 4,
+    "summary": "-0.013 per year in the chart's unit, measured 2010 to 2020; movement is derived from this record, not assigned. Distance is derived from the control variable"
    }
   },
   {
@@ -194,6 +214,16 @@
    "turn": {
     "value": 24,
     "ceiling": 108
+   },
+   "measured": {
+    "movement": "diverging",
+    "rate": 0.3334,
+    "window": [
+     "2005",
+     "2020"
+    ],
+    "distance": 3,
+    "summary": "+0.333 per year in the chart's unit, measured 2005 to 2020; movement is derived from this record, not assigned. Distance is derived from the control variable"
    }
   },
   {
@@ -237,6 +267,16 @@
    "turn": {
     "value": 4,
     "ceiling": 108
+   },
+   "measured": {
+    "movement": "diverging",
+    "rate": -0.1539,
+    "window": [
+     "2010",
+     "2023"
+    ],
+    "distance": 2,
+    "summary": "-0.154 per year in the chart's unit, measured 2010 to 2023; movement is derived from this record, not assigned. Distance is derived from the control variable"
    }
   },
   {
@@ -250,13 +290,13 @@
    "distance_note": "the land area seeing major water-cycle deviation runs about double its baseline",
    "direction": "diverging",
    "severity": {
-    "distance": 3,
+    "distance": 2,
     "load": 3,
     "rate": 2,
     "exposure": 2,
     "irreversibility": 2,
-    "raw": 72,
-    "index": 72
+    "raw": 48,
+    "index": 48
    },
    "cause": "irrigation drawing more than recharge, watershed disruption, contamination, and a warming atmosphere moving water differently",
    "correction": "reuse, leakage reduction, treatment, desalination where appropriate, efficient irrigation, watershed regeneration",
@@ -275,8 +315,24 @@
     "evidence": "every metre of drawdown raises the energy cost per litre, which is the aquifer's own hunger signal"
    },
    "turn": {
-    "value": 24,
+    "value": 16,
     "ceiling": 108
+   },
+   "control": {
+    "variable": "land area with major streamflow deviation",
+    "unit": "percent",
+    "boundary": 10,
+    "current": 18
+   },
+   "measured": {
+    "movement": "diverging",
+    "rate": 0.087,
+    "window": [
+     "2000",
+     "2023"
+    ],
+    "distance": 2,
+    "summary": "+0.087 per year in the chart's unit, measured 2000 to 2023; movement is derived from this record, not assigned. Distance is derived from the control variable"
    }
   },
   {
@@ -316,6 +372,16 @@
    "turn": {
     "value": 16,
     "ceiling": 108
+   },
+   "measured": {
+    "movement": "diverging",
+    "rate": 0.1666,
+    "window": [
+     "2015",
+     "2021"
+    ],
+    "distance": null,
+    "summary": "+0.167 per year in the chart's unit, measured 2015 to 2021; movement is derived from this record, not assigned"
    }
   },
   {
@@ -362,6 +428,16 @@
    "turn": {
     "value": 24,
     "ceiling": 108
+   },
+   "measured": {
+    "movement": "diverging",
+    "rate": 4.0005,
+    "window": [
+     "2010",
+     "2020"
+    ],
+    "distance": 3,
+    "summary": "+4 per year in the chart's unit, measured 2010 to 2020; movement is derived from this record, not assigned. Distance is derived from the control variable"
    }
   },
   {
@@ -375,13 +451,13 @@
    "distance_note": "just past the edge and tracking CO2 upward",
    "direction": "diverging",
    "severity": {
-    "distance": 2,
+    "distance": 1,
     "load": 3,
     "rate": 2,
     "exposure": 3,
     "irreversibility": 3,
-    "raw": 108,
-    "index": 108
+    "raw": 54,
+    "index": 54
    },
    "cause": "the ocean absorbing roughly a quarter of fossil CO2 emissions",
    "correction": "the same correction as the atmosphere: cut the CO2 flow; the ocean has no separate lever",
@@ -397,8 +473,24 @@
     "evidence": "inherits whatever the CO2 counterforce achieves; deep-ocean chemistry then follows on a millennial lag"
    },
    "turn": {
-    "value": 2,
+    "value": 1,
     "ceiling": 108
+   },
+   "control": {
+    "variable": "aragonite saturation, share of pre-industrial",
+    "unit": "ratio",
+    "boundary": 0.8,
+    "current": 0.8
+   },
+   "measured": {
+    "movement": "diverging",
+    "rate": -0.0048,
+    "window": [
+     "2000",
+     "2025"
+    ],
+    "distance": 1,
+    "summary": "-0.0048 per year in the chart's unit, measured 2000 to 2025; movement is derived from this record, not assigned. Distance is derived from the control variable"
    }
   },
   {
@@ -439,6 +531,16 @@
    "turn": {
     "value": 8,
     "ceiling": 108
+   },
+   "measured": {
+    "movement": "diverging",
+    "rate": 8.3314,
+    "window": [
+     "2020",
+     "2023"
+    ],
+    "distance": null,
+    "summary": "+8.33 per year in the chart's unit, measured 2020 to 2023; movement is derived from this record, not assigned"
    }
   },
   {
@@ -486,6 +588,16 @@
    "turn": {
     "value": 24,
     "ceiling": 108
+   },
+   "measured": {
+    "movement": "diverging",
+    "rate": -0.3143,
+    "window": [
+     "2018",
+     "2025"
+    ],
+    "distance": 3,
+    "summary": "-0.314 per year in the chart's unit, measured 2018 to 2025; movement is derived from this record, not assigned. Distance is derived from the control variable"
    }
   },
   {
@@ -523,6 +635,16 @@
    "turn": {
     "value": 0,
     "ceiling": 108
+   },
+   "measured": {
+    "movement": "returning",
+    "rate": 0.1111,
+    "window": [
+     "2015",
+     "2024"
+    ],
+    "distance": null,
+    "summary": "+0.111 per year in the chart's unit, measured 2015 to 2024; movement is derived from this record, not assigned"
    }
   },
   {
@@ -563,6 +685,16 @@
    "turn": {
     "value": 12,
     "ceiling": 108
+   },
+   "measured": {
+    "movement": "diverging",
+    "rate": 18.0,
+    "window": [
+     "2015",
+     "2023"
+    ],
+    "distance": null,
+    "summary": "+18 per year in the chart's unit, measured 2015 to 2023; movement is derived from this record, not assigned"
    }
   },
   {
@@ -602,6 +734,16 @@
    "turn": {
     "value": 12,
     "ceiling": 108
+   },
+   "measured": {
+    "movement": "returning",
+    "rate": -0.0286,
+    "window": [
+     "2015",
+     "2022"
+    ],
+    "distance": null,
+    "summary": "-0.0286 per year in the chart's unit, measured 2015 to 2022; movement is derived from this record, not assigned"
    }
   },
   {
@@ -642,6 +784,16 @@
    "turn": {
     "value": 4,
     "ceiling": 108
+   },
+   "measured": {
+    "movement": "diverging",
+    "rate": 0.0275,
+    "window": [
+     "2014",
+     "2022"
+    ],
+    "distance": null,
+    "summary": "+0.0275 per year in the chart's unit, measured 2014 to 2022; movement is derived from this record, not assigned"
    }
   },
   {
@@ -653,15 +805,15 @@
    "safe_range": "universal access",
    "state": "about 685 million people without electricity and 2.1 billion without clean cooking (2024 tracking)",
    "distance_note": "progress stalled in the places furthest behind",
-   "direction": "holding",
+   "direction": "returning",
    "severity": {
     "distance": 3,
     "load": 3,
-    "rate": 1,
+    "rate": 0.5,
     "exposure": 2,
     "irreversibility": 1,
-    "raw": 18,
-    "index": 18
+    "raw": 9.0,
+    "index": 9
    },
    "cause": "grid build-out cost, conversion losses, and energy poverty where incomes meet fuel prices",
    "correction": "cheaper delivered kilowatt-hours: generation where the demand is, less energy lost in conversion and distribution, metered visibility of the losses",
@@ -685,6 +837,16 @@
    "turn": {
     "value": 36,
     "ceiling": 108
+   },
+   "measured": {
+    "movement": "returning",
+    "rate": -38.9962,
+    "window": [
+     "2015",
+     "2022"
+    ],
+    "distance": null,
+    "summary": "-39 per year in the chart's unit, measured 2015 to 2022; movement is derived from this record, not assigned"
    }
   },
   {
@@ -696,15 +858,15 @@
    "safe_range": "essential services reaching everyone without financial ruin",
    "state": "about 4.5 billion people not fully covered by essential health services, and 2 billion facing catastrophic or impoverishing health spending (WHO)",
    "distance_note": "the deficit is capacity per clinician-hour and cost per outcome, not medical knowledge",
-   "direction": "holding",
+   "direction": "returning",
    "severity": {
     "distance": 3,
     "load": 3,
-    "rate": 1,
+    "rate": 0.5,
     "exposure": 3,
     "irreversibility": 2,
-    "raw": 54,
-    "index": 54
+    "raw": 27.0,
+    "index": 27
    },
    "cause": "care models that spend scarce clinician time and facility capacity late, on complications that earlier and cheaper intervention would have prevented",
    "correction": "more health per clinician-hour and per dollar: earlier diagnosis, prevention over rescue, care moved from theatre to bedside to home",
@@ -749,6 +911,16 @@
    "turn": {
     "value": 12,
     "ceiling": 108
+   },
+   "measured": {
+    "movement": "returning",
+    "rate": 0.4999,
+    "window": [
+     "2015",
+     "2021"
+    ],
+    "distance": null,
+    "summary": "+0.5 per year in the chart's unit, measured 2015 to 2021; movement is derived from this record, not assigned"
    }
   },
   {
@@ -787,6 +959,16 @@
    "turn": {
     "value": 12,
     "ceiling": 108
+   },
+   "measured": {
+    "movement": "returning",
+    "rate": -0.0286,
+    "window": [
+     "2015",
+     "2022"
+    ],
+    "distance": null,
+    "summary": "-0.0286 per year in the chart's unit, measured 2015 to 2022; movement is derived from this record, not assigned"
    }
   },
   {
@@ -831,6 +1013,16 @@
    "turn": {
     "value": 8,
     "ceiling": 108
+   },
+   "measured": {
+    "movement": "holding",
+    "rate": 0.0,
+    "window": [
+     "2006",
+     "2016"
+    ],
+    "distance": null,
+    "summary": "+0 per year in the chart's unit, measured 2006 to 2016; movement is derived from this record, not assigned"
    }
   },
   {
@@ -871,6 +1063,16 @@
    "turn": {
     "value": 24,
     "ceiling": 108
+   },
+   "measured": {
+    "movement": "returning",
+    "rate": 0.33,
+    "window": [
+     "2014",
+     "2024"
+    ],
+    "distance": null,
+    "summary": "+0.33 per year in the chart's unit, measured 2014 to 2024; movement is derived from this record, not assigned"
    }
   },
   {
@@ -910,6 +1112,16 @@
    "turn": {
     "value": 36,
     "ceiling": 108
+   },
+   "measured": {
+    "movement": "returning",
+    "rate": -0.2111,
+    "window": [
+     "2015",
+     "2024"
+    ],
+    "distance": null,
+    "summary": "-0.211 per year in the chart's unit, measured 2015 to 2024; movement is derived from this record, not assigned"
    }
   },
   {
@@ -952,6 +1164,16 @@
    "turn": {
     "value": 16,
     "ceiling": 108
+   },
+   "measured": {
+    "movement": "diverging",
+    "rate": 14.4455,
+    "window": [
+     "2015",
+     "2024"
+    ],
+    "distance": null,
+    "summary": "+14.4 per year in the chart's unit, measured 2015 to 2024; movement is derived from this record, not assigned"
    }
   }
  ],
@@ -966,5 +1188,6 @@
    "coupling": "grows (x2): the counterforce strengthens as the excursion deepens; flat (x1): it exists but does not scale with displacement; weakens (x0.5): the excursion erodes its own counterforce",
    "reading": "high distance with high turn pressure is a compressed spring: the flip is near, predictable, and headed for a managed return. High distance with low turn pressure is the dangerous reading: the excursion runs further, and if access is the missing factor, what eventually turns it is the die-off arm"
   }
- }
+ },
+ "_adherence": "Prose is not authority in this engine. Movement is derived from each stock's own series (carried weekly samples are marked and excluded from measurement; a genuine equal reading a year or more later counts as holding). Distance is derived from the control variable wherever one exists. derive_imbalance.py performs the derivation and overwrites any written label that disagrees, and audit_imbalance.py re-derives everything and fails the build on any mismatch, so a hand-edited adjective cannot survive contact with the record. The judged residue is stated plainly: the rate band's magnitude (2 versus 3), the load, exposure and irreversibility anchors, the counterforce scores, and distance where no control variable exists yet. Everything else obeys the measurements."
 }

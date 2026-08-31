@@ -18,10 +18,10 @@ today = datetime.date.today().isoformat()
 appended = 0
 for sid, e in doc["series"].items():
     pts = e["points"]
-    last_d, last_v = pts[-1]
+    last_d, last_v = pts[-1][0], pts[-1][1]
     days = (datetime.date.fromisoformat(today) - datetime.date.fromisoformat(last_d)).days
     if days >= 6:
-        pts.append([today, last_v])
+        pts.append([today, last_v, "carried"])
         appended += 1
 doc["asof"] = today[:7]
 json.dump(doc, open(P, "w", encoding="utf-8"), indent=1)

@@ -87,6 +87,19 @@ pressure 2, access 1, the deficit that persists because the alternative barely e
 feels it. This is the company engine's measure C, the loop, applied one level up; the clock in every entry
 is a reading of the counterforce, not a date pulled from air.
 
+**The words are enforced, not just written (added Aug 31, 2026).** Movement is derived from each stock's
+own time series and distance from its control variable by `derive_imbalance.py`, which overwrites any
+written label that disagrees with the measurement; `audit_imbalance.py` re-derives everything and fails the
+build on any mismatch, so a hand-edited adjective cannot survive contact with the record. Carried weekly
+samples are marked as carries and excluded from measurement, while a genuine equal reading a year or more
+apart counts as evidence of holding. On its first run the machine corrected four hand-written labels:
+freshwater's distance (the control variable reads under 2x its boundary), ocean chemistry's distance (the
+global mean sits at its boundary), and the movement of usable energy and healthcare (both series run toward
+their targets over the measured window, whatever the prose said about stalling). The judged residue is
+stated plainly in the map: the rate band's magnitude, the load, exposure and irreversibility anchors, the
+counterforce scores, and distance where no control variable exists yet. Everything else obeys the
+measurements, and the correction clock is read from the counterforce rather than asserted.
+
 The hierarchy the whole engine now runs on:
 
 ```

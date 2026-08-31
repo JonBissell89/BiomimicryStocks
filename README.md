@@ -36,8 +36,10 @@ PLANET -> IMBALANCE -> STOCK -> FLOW -> CORRECTION -> COMPANY
        -> CORRECTION PER DOLLAR -> LOOP -> SURVIVABILITY -> INVESTMENT
 ```
 
-`audit_imbalance.py` enforces the ordering: every company in the engine must attach to an imbalance that
-exists without it, and corrections with no investable company yet are reported as findings (currently
+The written labels are not authority: `derive_imbalance.py` derives movement from each stock's series and
+distance from its control variable, overwriting any label that disagrees, and `audit_imbalance.py` fails
+the build on any mismatch. `audit_imbalance.py` also enforces the ordering: every company in the engine
+must attach to an imbalance that exists without it, and corrections with no investable company yet are reported as findings (currently
 forests, ocean chemistry, and the completed ozone recovery, kept as proof a global correction can finish).
 The rule that governs all of it: measure the imbalance, the direction the physical system must move, and
 the clock, then find the mechanisms carrying civilization that way. The crystal ball is not a prediction;
@@ -110,7 +112,7 @@ build/    the rendered page (gitignored, built by the workflow)
   tier changes on verified facts. The only thing allowed to change a score.
 
 Verification chain, all of which must pass before anything publishes:
-`audit_imbalance.py` then `audit_engine_v2.py` then `refresh_app.py` then `check_page.py`, `check_structure.py`,
+`collect_imbalance.py` then `derive_imbalance.py` then `audit_imbalance.py` then `audit_engine_v2.py` then `refresh_app.py` then `check_page.py`, `check_structure.py`,
 and `validate_console.js`.
 
 ## The page

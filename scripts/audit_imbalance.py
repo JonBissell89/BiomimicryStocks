@@ -12,6 +12,7 @@ Run order: audit_imbalance.py, then audit_engine_v2.py, then the build.
 """
 import json, os, sys
 from paths import DATA
+from derive_imbalance import measure, derive_distance
 
 FIELDS = ["id","name","cls","form","stock","safe_range","state","distance_note",
           "direction","severity","counterforce","turn","cause","correction","clock","tickers"]
@@ -73,6 +74,21 @@ for t in every_string(m):
     if "—" in t: errs.append("em dash in: "+t[:60])
     if any(ord(c)>127 for c in t): errs.append("non-ascii in: "+t[:60])
 
+# ---- adherence: every written label must match its measurement --------------
+for s2 in sy:
+    e=ser.get(s2["id"]); mm=measure(e) if e else None
+    if mm is None: errs.append(s2["id"]+": no measurable series, so movement cannot adhere"); continue
+    if s2["direction"]!=mm["movement"]:
+        errs.append("%s: written movement '%s' disagrees with the measured '%s'; run derive_imbalance.py"
+                    % (s2["id"],s2["direction"],mm["movement"]))
+    dd=derive_distance(s2)
+    if dd is not None and s2["severity"]["distance"]!=dd:
+        errs.append("%s: written distance %d disagrees with the control variable's %d; run derive_imbalance.py"
+                    % (s2["id"],s2["severity"]["distance"],dd))
+    st=s2.get("measured")
+    if not st or st.get("movement")!=mm["movement"] or abs(st.get("rate",1e9)-mm["rate"])>1e-6:
+        errs.append(s2["id"]+": stored measurement is stale; run derive_imbalance.py")
+
 # ---- coverage: every company traces to a pre-existing imbalance ------------
 # ---- the time series: one per stock, dated, ascending, numeric --------------
 for s2 in sy:
@@ -83,8 +99,10 @@ for s2 in sy:
     if len(pts)<2 and s2["id"]!="transport": warns.append(s2["id"]+": fewer than 2 points")
     dates=[p[0] for p in pts]
     if dates!=sorted(dates): errs.append(s2["id"]+": series dates not ascending")
-    for d,v in pts:
+    for pt in pts:
+        d,v=pt[0],pt[1]
         if not isinstance(v,(int,float)): errs.append(s2["id"]+": non-numeric value at "+str(d))
+        if len(pt)>2 and pt[2]!="carried": errs.append(s2["id"]+": unknown point flag "+str(pt[2]))
 for sid in ser:
     if sid not in {s2["id"] for s2 in sy}: errs.append("series for unknown system: "+sid)
 

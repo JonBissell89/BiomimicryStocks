@@ -59,7 +59,8 @@
     ],
     [
      "2026-08-31",
-     427.5
+     427.5,
+     "carried"
     ]
    ],
    "note": "shaded band is the 800,000-year ice-core envelope; 2025 provisional",
@@ -67,7 +68,8 @@
    "band": [
     180,
     300
-   ]
+   ],
+   "away": 1
   },
   "biosphere": {
    "unit": "wild vertebrate abundance, share of 1970 (Living Planet Index)",
@@ -98,10 +100,12 @@
     ],
     [
      "2026-08-31",
-     0.27
+     0.27,
+     "carried"
     ]
    ],
-   "note": "the map's control variable (extinctions per million species-years) has no annual series; this index is the closest continuously measured signal"
+   "note": "the map's control variable (extinctions per million species-years) has no annual series; this index is the closest continuously measured signal",
+   "away": -1
   },
   "hanpp": {
    "unit": "human appropriation of net primary production, percent",
@@ -128,11 +132,13 @@
     ],
     [
      "2026-08-31",
-     30
+     30,
+     "carried"
     ]
    ],
    "note": "reconstructed decadally; assessed, not measured yearly",
-   "boundary": 10
+   "boundary": 10,
+   "away": 1
   },
   "forests": {
    "unit": "original forest cover remaining, percent",
@@ -163,11 +169,13 @@
     ],
     [
      "2026-08-31",
-     60
+     60,
+     "carried"
     ]
    ],
    "note": "reconstructed; recent decades from satellite assessments",
-   "boundary": 75
+   "boundary": 75,
+   "away": -1
   },
   "freshwater": {
    "unit": "land area with major streamflow deviation, percent",
@@ -190,11 +198,13 @@
     ],
     [
      "2026-08-31",
-     18
+     18,
+     "carried"
     ]
    ],
    "note": "sparse record; boundary is the pre-industrial share",
-   "boundary": 10
+   "boundary": 10,
+   "away": 1
   },
   "soil": {
    "unit": "agricultural land degraded, percent",
@@ -213,10 +223,12 @@
     ],
     [
      "2026-08-31",
-     34
+     34,
+     "carried"
     ]
    ],
-   "note": "assessed roughly once a decade (FAO)"
+   "note": "assessed roughly once a decade (FAO)",
+   "away": 1
   },
   "nutrients": {
    "unit": "industrial and intentional nitrogen fixation, Tg N per year",
@@ -243,11 +255,13 @@
     ],
     [
      "2026-08-31",
-     190
+     190,
+     "carried"
     ]
    ],
    "note": "fertilizer production plus crop biological fixation",
-   "boundary": 62
+   "boundary": 62,
+   "away": 1
   },
   "ocean": {
    "unit": "aragonite saturation, share of pre-industrial",
@@ -270,11 +284,13 @@
     ],
     [
      "2026-08-31",
-     0.8
+     0.8,
+     "carried"
     ]
    ],
    "note": "global mean at the boundary; polar seas already below it",
-   "boundary": 0.8
+   "boundary": 0.8,
+   "away": -1
   },
   "novel": {
    "unit": "plastic production, Mt per year (proxy: the boundary itself is unquantified)",
@@ -305,10 +321,12 @@
     ],
     [
      "2026-08-31",
-     460
+     460,
+     "carried"
     ]
    ],
-   "note": "one visible strand of a boundary that has no global control variable"
+   "note": "one visible strand of a boundary that has no global control variable",
+   "away": 1
   },
   "materials": {
    "unit": "material input cycled back, percent (Circularity Gap)",
@@ -331,11 +349,13 @@
     ],
     [
      "2026-08-31",
-     6.9
+     6.9,
+     "carried"
     ]
    ],
    "note": "boundary is the report's working target, not a planetary constant",
-   "boundary": 17
+   "boundary": 17,
+   "away": -1
   },
   "ozone": {
    "unit": "global mean ozone column, percent below 1980",
@@ -362,11 +382,13 @@
     ],
     [
      "2026-08-31",
-     -2
+     -2,
+     "carried"
     ]
    ],
    "note": "the return arm: the one completed global correction",
-   "boundary": -5
+   "boundary": -5,
+   "away": -1
   },
   "food": {
    "unit": "people undernourished, millions (FAO SOFI)",
@@ -397,10 +419,12 @@
     ],
     [
      "2026-08-31",
-     733
+     733,
+     "carried"
     ]
    ],
-   "note": "the fall to 2015 and the turn after 2019 are both real"
+   "note": "the fall to 2015 and the turn after 2019 are both real",
+   "away": 1
   },
   "water_access": {
    "unit": "people without safely managed drinking water, billions (JMP)",
@@ -423,10 +447,12 @@
     ],
     [
      "2026-08-31",
-     2.2
+     2.2,
+     "carried"
     ]
    ],
-   "note": "adequacy target is zero"
+   "note": "adequacy target is zero",
+   "away": 1
   },
   "shelter": {
    "unit": "people in informal settlements, billions (UN-Habitat)",
@@ -449,10 +475,12 @@
     ],
     [
      "2026-08-31",
-     1.1
+     1.1,
+     "carried"
     ]
    ],
-   "note": "adequacy target is zero"
+   "note": "adequacy target is zero",
+   "away": 1
   },
   "energy_access": {
    "unit": "people without electricity, millions (Tracking SDG7)",
@@ -479,10 +507,12 @@
     ],
     [
      "2026-08-31",
-     685
+     685,
+     "carried"
     ]
    ],
-   "note": "clean cooking lags further, near 2.1 billion"
+   "note": "clean cooking lags further, near 2.1 billion",
+   "away": 1
   },
   "healthcare": {
    "unit": "WHO universal health coverage service index, 0 to 100",
@@ -509,11 +539,13 @@
     ],
     [
      "2026-08-31",
-     68
+     68,
+     "carried"
     ]
    ],
-   "note": "the plateau after 2019 is the holding pattern the map records",
-   "boundary": 80
+   "note": "rose across the decade, then flattened; the window trend and the recent segment disagree, and the derived movement follows the window",
+   "boundary": 80,
+   "away": -1
   },
   "sanitation": {
    "unit": "people without safely managed sanitation, billions (JMP)",
@@ -536,10 +568,12 @@
     ],
     [
      "2026-08-31",
-     3.5
+     3.5,
+     "carried"
     ]
    ],
-   "note": "adequacy target is zero"
+   "note": "adequacy target is zero",
+   "away": 1
   },
   "transport": {
    "unit": "rural people without all-weather road access, billions (World Bank RAI)",
@@ -554,10 +588,12 @@
     ],
     [
      "2026-08-31",
-     1.0
+     1.0,
+     "carried"
     ]
    ],
-   "note": "the thinnest record on the map; measured roughly once a decade"
+   "note": "the thinnest record on the map; measured roughly once a decade",
+   "away": 1
   },
   "tools": {
    "unit": "people with a smartphone, billions",
@@ -584,10 +620,12 @@
     ],
     [
      "2026-08-31",
-     4.9
+     4.9,
+     "carried"
     ]
    ],
-   "note": "a proxy for tool capability reaching individual hands"
+   "note": "a proxy for tool capability reaching individual hands",
+   "away": -1
   },
   "information": {
    "unit": "people offline, billions (ITU)",
@@ -618,10 +656,12 @@
     ],
     [
      "2026-08-31",
-     2.2
+     2.2,
+     "carried"
     ]
    ],
-   "note": "adequacy target is zero"
+   "note": "adequacy target is zero",
+   "away": 1
   },
   "infrastructure": {
    "unit": "global weather-related losses, USD billions per year",
@@ -652,10 +692,12 @@
     ],
     [
      "2026-08-31",
-     310
+     310,
+     "carried"
     ]
    ],
-   "note": "noisy year to year; the trend is the signal"
+   "note": "noisy year to year; the trend is the signal",
+   "away": 1
   }
  }
 }
