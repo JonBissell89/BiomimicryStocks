@@ -100,6 +100,20 @@ stated plainly in the map: the rate band's magnitude, the load, exposure and irr
 counterforce scores, and distance where no control variable exists yet. Everything else obeys the
 measurements, and the correction clock is read from the counterforce rather than asserted.
 
+**The rigor layer (added Aug 31, 2026).** The score's quality is itself measured. A hash-locked vintage of
+the 2026-08-28 scores and prices is the thing the forward test grades, regardless of later judgment runs; a
+pre-registered protocol fixes the endpoints (12-month tier spread and information coefficient, the basket
+against the S&P stated either way, and the convergence hypothesis in local, checkable form) so the test
+cannot be moved once data arrives. Current readings: weight perturbation moves the ranking almost nowhere
+(rank stability 0.995 over 1,000 draws), so the measurement rather than the weights produces the order;
+Cronbach's alpha of 0.47 confirms the six measures are six distinct properties rather than one restated;
+the frozen scores correlate at -0.24 with trailing-year returns, so the rubric is not momentum in costume;
+and the 52-name list carries 14.3 effective independent bets at an average pairwise correlation of 0.08,
+more independent than its 62 percent health share implies. The screen's most likely false negatives are
+named (water utilities cut on growth and finances lead the near-miss frontier) and a seeded blind re-score
+sample stands as an open obligation until the false-negative rate is a number. audit_rigor.py enforces the
+vintage hash, the protocol linkage and the stability floor on every run.
+
 The hierarchy the whole engine now runs on:
 
 ```

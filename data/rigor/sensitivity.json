@@ -1,0 +1,77 @@
+{
+ "draws": 1000,
+ "perturbation": "each weight x U(0.8,1.2), renormalized to 100",
+ "rank_stability_spearman": {
+  "mean": 0.9945,
+  "p05": 0.9878,
+  "min": 0.9773
+ },
+ "tier_retention": {
+  "mean": 0.8609,
+  "p05": 0.6981
+ },
+ "top10_overlap": {
+  "mean": 0.887,
+  "p05": 0.8
+ },
+ "cronbach_alpha": 0.474,
+ "measures": [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F"
+ ],
+ "inter_measure_spearman": [
+  [
+   1.0,
+   0.42,
+   0.37,
+   0.15,
+   0.02,
+   0.18
+  ],
+  [
+   0.42,
+   1.0,
+   0.27,
+   0.07,
+   -0.1,
+   0.34
+  ],
+  [
+   0.37,
+   0.27,
+   1.0,
+   0.11,
+   0.09,
+   0.08
+  ],
+  [
+   0.15,
+   0.07,
+   0.11,
+   1.0,
+   0.34,
+   0.16
+  ],
+  [
+   0.02,
+   -0.1,
+   0.09,
+   0.34,
+   1.0,
+   0.1
+  ],
+  [
+   0.18,
+   0.34,
+   0.08,
+   0.16,
+   0.1,
+   1.0
+  ]
+ ],
+ "reading": "stability near 1 means the measurement, not the weights, produces the ranking; alpha far below 0.7 means the six measures are not one construct, which the framework accepts as long as it is stated"
+}

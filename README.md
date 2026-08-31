@@ -108,11 +108,37 @@ build/    the rendered page (gitignored, built by the workflow)
   the imbalance series, refresh
   prices, rebalance the simulated book, rebuild, verify, deploy to Pages. Never changes
   a score, because filings do not change weekly.
+## The rigor layer
+
+The score's own quality is measured, not asserted, in [`data/rigor/`](data/rigor/):
+
+- **A frozen vintage.** Scores and prices as of 2026-08-28, hash-locked; the forward test grades this
+  vintage forever, whatever the monthly judgment run later changes. Git history is the point-in-time record.
+- **A pre-registered protocol.** Endpoints, horizons and success thresholds were written down before the
+  data could arrive (tier spread and information coefficient at 12 months, the basket vs the S&P stated
+  either way, and the convergence hypothesis in local form: median counterforce access rising by 2028).
+  Nothing about the test can be moved afterward.
+- **A report card** that accrues weekly and reports honestly ("accruing") until the window is real, always
+  beside a momentum-contamination check: the frozen scores correlate at -0.24 with the trailing year's
+  returns, so the rubric is not last year's winners in a lab coat.
+- **Sensitivity**: 1,000 weight perturbations move the ranking almost nowhere (rank stability 0.995), so the
+  measurement, not the weights, produces the order. Cronbach's alpha of 0.47 says the six measures are six
+  things, not one, which the framework accepts and states.
+- **A risk profile** from a year of weekly closes: 14.3 effective independent bets across 52 names, average
+  pairwise correlation 0.08, first principal component 16 percent, so the health-heavy list is more
+  independent wagers than its sector share implies.
+- **Coverage**: the near-miss frontier (topped by water utilities cut on growth and finances) and a seeded
+  blind re-score sample that stands as an open obligation until the false-negative rate is measured.
+
+`audit_rigor.py` enforces all of it: the vintage hash, the protocol linkage, track ordering, freshness, and
+a floor under rank stability.
+
 - **Monthly**: the judgment run. Gates re-checked against filings, tripwires, score and
   tier changes on verified facts. The only thing allowed to change a score.
 
 Verification chain, all of which must pass before anything publishes:
-`collect_imbalance.py` then `derive_imbalance.py` then `audit_imbalance.py` then `audit_engine_v2.py` then `refresh_app.py` then `check_page.py`, `check_structure.py`,
+`collect_imbalance.py` then `derive_imbalance.py` then `audit_imbalance.py` then
+`track_prices.py` then `report_card.py` then `audit_rigor.py` then `audit_engine_v2.py` then `refresh_app.py` then `check_page.py`, `check_structure.py`,
 and `validate_console.js`.
 
 ## The page

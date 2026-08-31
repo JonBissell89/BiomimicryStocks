@@ -1,0 +1,63 @@
+{
+ "registered": "2026-08-31",
+ "purpose": "pre-registration of the evaluation, so the forward test cannot be moved after the data arrives",
+ "vintage": {
+  "file": "freeze_2026-08-28.json",
+  "sha256_scores": "0feef03617a594b3d2a9cbc4742140f451aa9ead946c5e74b9fc4d93a4bcc1b0",
+  "rule": "the monthly judgment run may change live scores; every endpoint below grades the frozen vintage"
+ },
+ "endpoints": {
+  "primary": {
+   "metric": "tier spread, t1 mean forward return minus exit mean forward return, from the frozen vintage",
+   "horizon": "2027-08-28",
+   "success": "spread greater than zero",
+   "strong": "spread greater than 5 percentage points"
+  },
+  "secondary": [
+   {
+    "metric": "Spearman information coefficient, frozen score vs forward return",
+    "horizon": "2027-08-28",
+    "success": "greater than 0.05"
+   },
+   {
+    "metric": "equal-weight investable basket vs S&P 500 total return",
+    "horizon": "2027-08-28",
+    "success": "stated either way; the experiment is allowed to fail"
+   },
+   {
+    "metric": "convergence hypothesis, local form: median counterforce access across the imbalance map",
+    "baseline": {
+     "ghg": 3,
+     "biosphere": 1,
+     "hanpp": 2,
+     "forests": 2,
+     "freshwater": 2,
+     "soil": 2,
+     "nutrients": 2,
+     "ocean": 1,
+     "novel": 1,
+     "materials": 2,
+     "ozone": 3,
+     "food": 2,
+     "water_access": 2,
+     "shelter": 1,
+     "energy_access": 3,
+     "healthcare": 2,
+     "sanitation": 2,
+     "transport": 2,
+     "tools": 3,
+     "information": 3,
+     "infrastructure": 2
+    },
+    "horizon": "2028-08-28",
+    "success": "median access rises while pressure components are held to re-researched evidence"
+   }
+  ]
+ },
+ "discipline": [
+  "no endpoint, horizon, or success threshold changes after registration; corrections require a new registration that supersedes and preserves this one",
+  "weights and tier bands stay frozen for the evaluation window; the derivation layer may keep correcting labels, since labels obey measurements",
+  "one look per week when the price track updates; no intraweek peeking",
+  "the momentum contamination check is reported alongside every forward reading"
+ ]
+}

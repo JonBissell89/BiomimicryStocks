@@ -1,0 +1,159 @@
+{
+ "funnel": {
+  "0": {
+   "count": 6410,
+   "meaning": "cut on the first screen"
+  },
+  "1": {
+   "count": 6332,
+   "meaning": "too small, shell, or sub-5c"
+  },
+  "2": {
+   "count": 2120,
+   "meaning": "screened, did not advance"
+  },
+  "3": {
+   "count": 831,
+   "meaning": "passed review, cut on growth and finances"
+  },
+  "4": {
+   "count": 49,
+   "meaning": "late-round cut"
+  },
+  "R": {
+   "count": 53,
+   "meaning": "made the list"
+  },
+  "X": {
+   "count": 2,
+   "meaning": "removed"
+  }
+ },
+ "near_miss_frontier": [
+  {
+   "tk": "AWR",
+   "name": "American States Water Company",
+   "first_screen_score": 48
+  },
+  {
+   "tk": "AWK",
+   "name": "American Water Works Company Inc.",
+   "first_screen_score": 48
+  },
+  {
+   "tk": "SBS",
+   "name": "Companhia de saneamento Basico Do Estado De ",
+   "first_screen_score": 48
+  },
+  {
+   "tk": "HTO",
+   "name": "H2O America",
+   "first_screen_score": 48
+  },
+  {
+   "tk": "ANDE",
+   "name": "Andersons Inc.",
+   "first_screen_score": 47
+  },
+  {
+   "tk": "CALM",
+   "name": "Cal-Maine Foods Inc.",
+   "first_screen_score": 47
+  },
+  {
+   "tk": "CECO",
+   "name": "CECO Environmental Corp.",
+   "first_screen_score": 47
+  },
+  {
+   "tk": "CDGLY",
+   "name": "ComfortDelGro Corporation Limited",
+   "first_screen_score": 47
+  },
+  {
+   "tk": "CTVA",
+   "name": "Corteva Inc.",
+   "first_screen_score": 47
+  },
+  {
+   "tk": "CRCCY",
+   "name": "CRRC Corporation Limited",
+   "first_screen_score": 47
+  },
+  {
+   "tk": "DCI",
+   "name": "Donaldson Company Inc.",
+   "first_screen_score": 47
+  },
+  {
+   "tk": "GRPTF",
+   "name": "Getlink SE",
+   "first_screen_score": 47
+  },
+  {
+   "tk": "MAIR",
+   "name": "Madison Air Solutions Corporation Class A",
+   "first_screen_score": 47
+  },
+  {
+   "tk": "MTRJF",
+   "name": "MTR Corporation Limited",
+   "first_screen_score": 47
+  },
+  {
+   "tk": "MMNNF",
+   "name": "Munters Group AB (publ)",
+   "first_screen_score": 47
+  },
+  {
+   "tk": "ORGJF",
+   "name": "Organo Corporation",
+   "first_screen_score": 47
+  },
+  {
+   "tk": "RUMOF",
+   "name": "Rumo S.A.",
+   "first_screen_score": 47
+  },
+  {
+   "tk": "TXG",
+   "name": "10x Genomics Inc. Class A",
+   "first_screen_score": 46
+  },
+  {
+   "tk": "MMM",
+   "name": "3M Company",
+   "first_screen_score": 46
+  },
+  {
+   "tk": "ARHUF",
+   "name": "AAK AB (publ.)",
+   "first_screen_score": 46
+  }
+ ],
+ "blind_rescore_sample": {
+  "seed": 42,
+  "status": "awaiting research; the false-negative rate is unmeasured until these are deeply scored",
+  "picks": {
+   "0": [
+    "AKOBF",
+    "BWCCF",
+    "SOLLF",
+    "VMD"
+   ],
+   "2": [
+    "DRXGF",
+    "HUNGF",
+    "IRS",
+    "LEGN"
+   ],
+   "3": [
+    "RCEL",
+    "SONVY",
+    "TRATF",
+    "TSKMF"
+   ]
+  }
+ },
+ "reading": "the frontier names are the screen's most likely false negatives; the seeded sample is the audit that would measure the rate"
+}

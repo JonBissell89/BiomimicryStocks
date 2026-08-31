@@ -1,0 +1,39 @@
+{
+ "window_weeks": 31,
+ "names_with_series": 52,
+ "avg_pairwise_correlation": 0.077,
+ "effective_independent_bets": 14.3,
+ "pc1_variance_share": 0.156,
+ "equal_weight_portfolio_vol_annual": 0.162,
+ "median_name_vol_annual": 0.504,
+ "concentration_all_ranked": {
+  "shares": {
+   "Health": 0.509,
+   "Energy": 0.113,
+   "Tech": 0.094,
+   "Transport": 0.094,
+   "Food": 0.057,
+   "Circular": 0.038,
+   "Shelter": 0.038,
+   "Construction": 0.019,
+   "Infra": 0.019,
+   "Water": 0.019
+  },
+  "hhi": 0.297
+ },
+ "concentration_investable": {
+  "shares": {
+   "Health": 0.625,
+   "Energy": 0.1,
+   "Circular": 0.05,
+   "Tech": 0.05,
+   "Shelter": 0.05,
+   "Transport": 0.05,
+   "Construction": 0.025,
+   "Infra": 0.025,
+   "Water": 0.025
+  },
+  "hhi": 0.412
+ },
+ "reading": "effective bets far below the name count, or a dominant first component, means the list is fewer wagers than it looks; the need concentration says which wager"
+}
