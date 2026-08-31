@@ -173,6 +173,14 @@ setTimeout(() => {
         '| every system charted:', (im.match(/class="imbchart"/g) || []).length === imb.systems.length,
         '| series ids match:', Object.keys(ctx.IMBSERIES || {}).every(k => ids.has(k)),
         '| index on the 486 instrument:', okIdx);
+      const CO2F = { grows: 2, flat: 1, weakens: 0.5 };
+      const okTurn = imb.systems.every(s => s.turn.value <= 108 && s.turn.value ===
+        Math.round(s.severity.distance * s.counterforce.pressure
+          * s.counterforce.access * CO2F[s.counterforce.coupling]));
+      console.log('  counterforce shown:', (im.match(/Counterforce building against it/g) || []).length,
+        '| access shown:', (im.match(/Access to the alternative/g) || []).length,
+        '| springs on rows:', (im.match(/>spring /g) || []).length,
+        '| turn = distance x pressure x access x coupling:', okTurn);
       // The About table is the ranking and nothing else: no picking, no holdings,
       // no filter on what you own. This kept creeping back, so it is asserted.
       console.log('  no portfolio state on About:',
