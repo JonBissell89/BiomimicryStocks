@@ -375,13 +375,6 @@ tr.rowclick:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
 .dact input{width:120px}
 
 /* A running count of what you have picked, where you are picking it. */
-.pickbar{display:none;background:var(--accent-soft);border:1px solid var(--accent);border-radius:7px;
- padding:10px 13px;margin:8px 0 10px;font-size:13.5px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.pickbar .pbnames{font-family:var(--mono);font-size:11.5px;color:var(--muted);flex:1 1 auto}
-.pickbar .pbgo{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.05em;
- color:var(--accent);text-decoration:none;border:1px solid var(--accent);border-radius:5px;padding:6px 11px}
-.pickbar .pbgo:hover{background:var(--accent);color:var(--ground)}
-.pickbar .pbclear{font-size:12px;padding:6px 10px;min-height:0}
 
 /* The three lines over time. Percentage change from each series' own first
    reading, which is the only honest way to put a $5,000 book and an index on
@@ -705,13 +698,10 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
     <p class="runnote">Two companies are set aside by the survivability gate whatever they scored, because a company that runs out of money did not score badly, it produced no result. Research output, not investment advice.</p>
   </div>
 
-  <p><b>You do not have to take any of it on faith, and you should not.</b> If you are sceptical about a ranking built on somebody else's rules, that is the correct instinct. So there is $5,000 of pretend money here to test it with. Pick what you actually believe in, add companies that never made this list at all, then leave it alone and come back. The prices are real and update every week, so over time you find out whether the ranking was right, whether your own picks beat it, and whether either beat simply owning the whole market.</p>
+  <p><b>You do not have to take any of it on faith, and you should not.</b> If you are sceptical about a ranking built on somebody else's rules, that is the correct instinct. The prices here are real and update every week, so over time you can find out whether the ranking was right, whether your own picks beat it, and whether either beat simply owning the whole market.</p>
 
   <h2 style="margin-top:30px">Results</h2>
   <p style="font-size:13.5px">Each row says what the company does in plain words, what it scored out of 100, and which need it serves. Tap or hover any row for the reasoning behind it.</p>
-  <div class="panel" id="moneybar">
-    <div id="moneybartext" class="money-line"></div>
-  </div>
   <div class="controls">
     <label><input type="checkbox" id="holdonly"> Only what I own</label>
     <label for="mktsel">Where it trades:</label><select id="mktsel">
@@ -725,8 +715,6 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
     <label for="sortsel">Sort by:</label><select id="sortsel"><option value="score" selected>rank (score)</option><option value="tier">tier</option><option value="pl">profit/loss</option><option value="value">what I own</option><option value="price">price, low to high</option><option value="industry">industry</option></select>
   </div>
   <p class="money-line" id="mktnote">Most mainstream investing apps carry US exchange listings. Some carry ADRs. Foreign ordinary shares usually need a full-service broker. That is about access, not quality, and it never affects a score.</p>
-
-  <div class="pickbar" id="pickbar"></div>
 
   <div class="tablewrap mktwrap"><table class="mkt">
   <thead><tr>
@@ -1081,6 +1069,8 @@ function showView(v,push){
     const el=$('v-'+k);if(el)el.style.display=(k===v)?'block':'none';});
   document.querySelectorAll('nav a.tab').forEach(function(a){
     a.classList.toggle('on',a.dataset.view===v);});
+  // One nav serves every view, so the money readout is hidden rather than removed.
+  const nmoney=$('navmoney');if(nmoney)nmoney.style.display=(v==='list')?'none':'';
   if(push&&location.hash!=='#'+v){history.pushState(null,'','#'+v);}
   window.scrollTo(0,0);
   render();
@@ -1089,7 +1079,7 @@ function showView(v,push){
 // ---- the row detail ---------------------------------------------------------
 // The reasoning behind a score used to live only in a title attribute, which does
 // not exist on a touch screen. On a phone it was simply unreachable. Tapping a row
-// opens it instead, which is also where buying one company at a time now lives.
+// opens it instead, so the reasoning behind a score is reachable on any device.
 function openDetail(tk){
   const n=rec(tk);if(!n)return;
   const m=n[F.meta]||[],own=n[F.tier]==='own',gf=gateOf(n)==='fail';
@@ -1132,21 +1122,6 @@ function openDetail(tk){
     uiSave();render();openDetail(tk);});
 }
 function closeDetail(){$('modal').hidden=true;document.body.style.overflow='';}
-
-// The picked set, summarised where you are browsing, with a way through to buy.
-function renderPickBar(){
-  const el=$('pickbar');if(!el)return;
-  const p=pickedList();
-  if(!p.length){el.innerHTML='';el.style.display='none';return;}
-  el.style.display='block';
-  el.innerHTML='<b>'+p.length+'</b> picked for your portfolio '+
-    '<span class="pbnames">'+p.slice(0,6).map(n=>esc(n[F.tk])).join(' ')+
-    (p.length>6?' +'+(p.length-6)+' more':'')+'</span>'+
-    '<a class="tab pbgo" href="#trade" data-view="trade">Go to Buy &amp; sell</a>'+
-    '<button class="ghost pbclear" data-qp="none">Clear</button>';
-  el.querySelectorAll('[data-qp]').forEach(b=>b.onclick=()=>quickPick(b.dataset.qp));
-  el.querySelectorAll('a.tab').forEach(a=>a.onclick=e=>{e.preventDefault();showView('trade',true);});
-}
 
 // What you own, on the trading page, so selling does not mean hunting the big table.
 function renderSell(){
@@ -1208,12 +1183,8 @@ function render(){
   const tot=funded?totalValue(L()):0;
   $('navmoney').innerHTML=funded?('<b>'+fmt(tot)+'</b> · cash '+fmt(L().cash)):'<b>$5,000</b> waiting for you';
   const cashNow=funded?fmt(L().cash):'';
-  // About says what the money is and stops there. How it moves is explained on
-  // the trading page, where it can actually be moved.
-  $('moneybartext').innerHTML=funded
-    ? ('You have <b>'+cashNow+'</b> of pretend money, kept privately in your own browser '
-       +'and sent nowhere.')
-    : ('This is the list\'s own book, rebalanced weekly by the engine. It is read-only here.');
+  // The About page carries no money line at all. Everything about the money lives
+  // on the trading page, where it can actually be moved.
   const mb2=$('moneybartext2');if(mb2)mb2.innerHTML=funded
     ? ('You have <b>'+cashNow+'</b> of pretend money in cash, kept privately in your own browser. '
        +'Buying and selling happen here, and every trade shows you the arithmetic before anything '
@@ -1221,7 +1192,7 @@ function render(){
        +'only way to free up more to spend.')
     : ('This is the list\'s own book, rebalanced weekly by the engine. It is read-only here. '
        +'Switch the view above to your own simulation to trade.');
-  renderBasket();renderPickBar();renderSell();
+  renderBasket();renderSell();
   const ROWS=allRows();
   let rows=ROWS.map(n=>{const tk=n[0],sh=heldOf(tk),mv=sh*(n[F.px]||0),pl=mv-costOf(tk);
     return{n:n,tk:tk,sh:sh,mv:mv,pl:pl,

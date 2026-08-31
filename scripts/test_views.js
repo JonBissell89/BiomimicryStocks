@@ -78,11 +78,13 @@ setTimeout(() => {
   ctx.closeDetail();
   console.log('  closes:', ctx.$('modal').hidden === true);
 
-  // pick bar and sell list
+  // Picking still works; it just has no bar on the browsing page any more.
   ctx.quickPick('top10');
-  ctx.renderPickBar();
-  const pb = ctx.$('pickbar').innerHTML.replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
-  console.log('\npick bar:', pb.slice(0, 88));
+  // Assert against the page source: the $ stub fabricates an element for any id,
+  // so asking it whether one exists always says yes.
+  console.log('\npicked via quick pick:', ctx.pickedList().length,
+    '| no pick bar on About:', !/id="pickbar"/.test(html),
+    '| no money line on About:', !/id="moneybartext"/.test(html));
   ctx.renderSell();
   console.log('sell list, nothing held:',
     ctx.$('sellbox').innerHTML.replace(/<[^>]+>/g,'').trim().slice(0, 60));
