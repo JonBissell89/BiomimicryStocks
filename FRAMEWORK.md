@@ -30,7 +30,12 @@ resilient infrastructure) can be in **provisioning deficit**: an essential need 
 substantial resource consumption. Less is not always better, and movement is never scored as better or worse. Nothing in nature holds
 still: wolves outrun their deer, crash, and recover as the deer recover; tree stocks grow, burn and regrow.
 A safe range therefore means the oscillation envelope a stock's own record has stayed inside, and imbalance
-means the stock has left that envelope or is leaving it at a speed the envelope never contained. Balance is
+means the stock is outside that envelope, or moving at a rate the record does not show. Rate is a
+measurement, not a verdict, and it is symmetric with its driver: a swing runs at the speed of whatever
+drives it, in both directions, so an excursion driven by the species' capability can return on that same
+capability's clock, the way ozone went out in about fifty years and is returning on the same order. The
+flow turns at the driver's speed; how fast the stock itself comes home also depends on its drain rate,
+which the irreversibility term prices. Balance is
 a safe range, and a stock can sit
 outside it from overconsumption, overproduction, under-regeneration, or under-supply of a need. The future
 lies where both forms shrink at once: more human need satisfied with less energy, material extraction,
