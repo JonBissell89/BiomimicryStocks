@@ -19,15 +19,16 @@
   "INVESTMENT"
  ],
  "_severity": {
-  "formula": "severity = distance x load x rate x exposure x irreversibility, normalized to 0-100 against the maximum of 243",
+  "formula": "severity index = distance x load x rate x exposure x irreversibility, on an open instrument with a ceiling of 486. The ceiling is deliberately lethal: it would mean a load-bearing global stock past a hard limit for the species, effectively permanent, and still diverging fast. Nothing on the map is near it, which is the point; the top of the scale is reserved for readings that would actually mean the species cannot live there.",
   "anchors": {
-   "distance": "0 inside the safe range, 1 at the edge, 2 outside, 3 far outside (order of magnitude or several multiples)",
+   "distance": "for an overshoot, the ratio of the control variable to its boundary: 0 inside the safe range, 1 at the edge, 2 outside but under 2x, 3 between 2x and 10x, 4 between 10x and 100x, 5 beyond 100x, 6 past a known hard limit for the species. For a deficit, the share of the species without the essential: 0 none, 1 under 5 percent, 2 up to a quarter, 3 up to three quarters, 4 above three quarters, 5 essentially universal deprivation, 6 the need cannot be met at all",
    "load": "1 to 3: how load-bearing the stock is for the biosphere or for civilization",
    "rate": "0.5 returning toward the safe range, 1 holding its distance, 2 diverging, 3 diverging fast; a return halves severity rather than zeroing it, because distance still exists while the stock travels back",
    "exposure": "1 regional, 2 multi-regional, 3 global",
    "irreversibility": "1 reversible in years, 2 decades, 3 centuries or effectively permanent"
   },
-  "note": "the exact calculation is expected to evolve as evidence accumulates; what is fixed is the separation of STATE, MOVEMENT, FLOW, CORRECTION, CLOCK and COMPANIES, in that order, and that movement is stated as position relative to the safe range, never as better or worse"
+  "note": "the exact calculation is expected to evolve as evidence accumulates; what is fixed is the separation of STATE, MOVEMENT, FLOW, CORRECTION, CLOCK and COMPANIES, in that order, and that movement is stated as position relative to the safe range, never as better or worse",
+  "ceiling": 486
  },
  "_hypothesis": {
   "name": "the convergence hypothesis",
@@ -64,13 +65,13 @@
    "distance_note": "75 ppm past the boundary and moving away from it; the fastest sustained rise in the ice-core record",
    "direction": "diverging",
    "severity": {
-    "distance": 3,
+    "distance": 2,
     "load": 3,
     "rate": 3,
     "exposure": 3,
     "irreversibility": 3,
-    "raw": 243,
-    "score": 100
+    "raw": 162,
+    "index": 162
    },
    "cause": "fossil fuel combustion for energy and transport, plus land clearing that turns standing carbon into emitted carbon",
    "correction": "substitute non-fossil energy for fossil flows, electrify end uses, cut energy lost per useful outcome, stop land-carbon loss and rebuild sinks",
@@ -109,13 +110,13 @@
    "distance_note": "an order of magnitude past the boundary; each loss is permanent on any human timescale",
    "direction": "diverging",
    "severity": {
-    "distance": 3,
+    "distance": 4,
     "load": 3,
     "rate": 3,
     "exposure": 3,
     "irreversibility": 3,
-    "raw": 243,
-    "score": 100
+    "raw": 324,
+    "index": 324
    },
    "cause": "habitat conversion for food and settlement, overharvesting, chemical and nutrient load, climate shift",
    "correction": "shrink the land, sea and chemical footprint per unit of human need met, so habitat and populations can be returned faster than they are taken",
@@ -148,7 +149,7 @@
     "exposure": 3,
     "irreversibility": 2,
     "raw": 108,
-    "score": 44
+    "index": 108
    },
    "cause": "cropland and pasture expansion, biomass harvest, and the losses between harvest and actual human nutrition",
    "correction": "more nutrition per hectare and per tonne of biomass: higher-efficiency protein, waste-stream recovery, precision inputs, land returned to wild productivity",
@@ -182,7 +183,7 @@
     "exposure": 3,
     "irreversibility": 3,
     "raw": 108,
-    "score": 44
+    "index": 108
    },
    "cause": "clearing for agriculture and settlement, logging, fire regimes shifted by climate",
    "correction": "agricultural intensity that frees land, materials that substitute for virgin timber, and regrowth protected long enough to become forest again",
@@ -201,13 +202,13 @@
    "distance_note": "the land area seeing major water-cycle deviation runs about double its baseline",
    "direction": "diverging",
    "severity": {
-    "distance": 2,
+    "distance": 3,
     "load": 3,
     "rate": 2,
     "exposure": 2,
     "irreversibility": 2,
-    "raw": 48,
-    "score": 20
+    "raw": 72,
+    "index": 72
    },
    "cause": "irrigation drawing more than recharge, watershed disruption, contamination, and a warming atmosphere moving water differently",
    "correction": "reuse, leakage reduction, treatment, desalination where appropriate, efficient irrigation, watershed regeneration",
@@ -235,7 +236,7 @@
     "exposure": 3,
     "irreversibility": 3,
     "raw": 108,
-    "score": 44
+    "index": 108
    },
    "cause": "tillage, bare ground, compaction, salinization, and nutrient mining without return flows",
    "correction": "farming that keeps soil covered and living, nutrient return instead of nutrient mining, and yield gains that retire fragile land",
@@ -268,7 +269,7 @@
     "exposure": 3,
     "irreversibility": 2,
     "raw": 72,
-    "score": 30
+    "index": 72
    },
    "cause": "fertilizer applied beyond crop uptake, concentrated animal waste, and sewage returned to water instead of land",
    "correction": "precision application, recovery of nutrients from waste streams back into the food loop, and treatment before discharge",
@@ -296,7 +297,7 @@
     "exposure": 3,
     "irreversibility": 3,
     "raw": 108,
-    "score": 44
+    "index": 108
    },
    "cause": "the ocean absorbing roughly a quarter of fossil CO2 emissions",
    "correction": "the same correction as the atmosphere: cut the CO2 flow; the ocean has no separate lever",
@@ -321,7 +322,7 @@
     "exposure": 3,
     "irreversibility": 3,
     "raw": 108,
-    "score": 44
+    "index": 108
    },
    "cause": "single-pass material design: produced, used briefly, dispersed",
    "correction": "closed loops for what exists, destruction and containment of the worst of it, and material design that can re-enter either biology or industry",
@@ -349,13 +350,13 @@
    "distance_note": "the boundary here is a working target (the Circularity Gap baseline), not a planetary constant",
    "direction": "diverging",
    "severity": {
-    "distance": 2,
+    "distance": 3,
     "load": 2,
     "rate": 2,
     "exposure": 3,
     "irreversibility": 1,
-    "raw": 24,
-    "score": 10
+    "raw": 36,
+    "index": 36
    },
    "cause": "virgin extraction priced below recovery, products designed against disassembly, collection loops missing",
    "correction": "deposit and return systems, recovery infrastructure, design for disassembly, and secondary material made cheaper than virgin",
@@ -384,7 +385,7 @@
     "exposure": 3,
     "irreversibility": 2,
     "raw": 0.0,
-    "score": 0
+    "index": 0
    },
    "cause": "was CFC release; the Montreal Protocol cut the flow and the stock is refilling",
    "correction": "hold the phase-out; nothing new required",
@@ -403,13 +404,13 @@
    "distance_note": "the sharpest case of both failures at once: overshoot in inputs, deficit in outcomes",
    "direction": "diverging",
    "severity": {
-    "distance": 2,
+    "distance": 3,
     "load": 3,
     "rate": 2,
     "exposure": 3,
     "irreversibility": 2,
-    "raw": 72,
-    "score": 30
+    "raw": 108,
+    "index": 108
    },
    "cause": "calories and nutrients lost between field and person, purchasing power gaps, conflict, and yield systems leaning on depleting inputs",
    "correction": "more nutrition delivered per unit of land, water, nitrogen and money: efficient protein, waste-stream recovery, resilient low-cost distribution",
@@ -431,13 +432,13 @@
    "distance_note": "the gap closes every year, but a quarter of the species remains outside",
    "direction": "returning",
    "severity": {
-    "distance": 2,
+    "distance": 3,
     "load": 3,
     "rate": 0.5,
     "exposure": 3,
     "irreversibility": 2,
-    "raw": 18.0,
-    "score": 7
+    "raw": 27.0,
+    "index": 27
    },
    "cause": "missing treatment and distribution, contamination, and source depletion pricing water out of reach",
    "correction": "treatment, leakage reduction, reuse, and metering that makes the losses visible",
@@ -464,7 +465,7 @@
     "exposure": 3,
     "irreversibility": 1,
     "raw": 24,
-    "score": 10
+    "index": 24
    },
    "cause": "construction cost and productivity stagnant for decades, land constraints, and building stock that leaks energy",
    "correction": "lower cost per adequate dwelling: industrialized construction, higher build productivity, envelopes that cut lifetime energy",
@@ -486,13 +487,13 @@
    "distance_note": "progress stalled in the places furthest behind",
    "direction": "holding",
    "severity": {
-    "distance": 2,
+    "distance": 3,
     "load": 3,
     "rate": 1,
     "exposure": 2,
     "irreversibility": 1,
-    "raw": 12,
-    "score": 5
+    "raw": 18,
+    "index": 18
    },
    "cause": "grid build-out cost, conversion losses, and energy poverty where incomes meet fuel prices",
    "correction": "cheaper delivered kilowatt-hours: generation where the demand is, less energy lost in conversion and distribution, metered visibility of the losses",
@@ -517,13 +518,13 @@
    "distance_note": "the deficit is capacity per clinician-hour and cost per outcome, not medical knowledge",
    "direction": "holding",
    "severity": {
-    "distance": 2,
+    "distance": 3,
     "load": 3,
     "rate": 1,
     "exposure": 3,
     "irreversibility": 2,
-    "raw": 36,
-    "score": 15
+    "raw": 54,
+    "index": 54
    },
    "cause": "care models that spend scarce clinician time and facility capacity late, on complications that earlier and cheaper intervention would have prevented",
    "correction": "more health per clinician-hour and per dollar: earlier diagnosis, prevention over rescue, care moved from theatre to bedside to home",
@@ -569,13 +570,13 @@
    "distance_note": "returning toward universal coverage, and every remaining gap feeds directly into the water and nutrient imbalances above",
    "direction": "returning",
    "severity": {
-    "distance": 2,
+    "distance": 3,
     "load": 3,
     "rate": 0.5,
     "exposure": 3,
     "irreversibility": 2,
-    "raw": 18.0,
-    "score": 7
+    "raw": 27.0,
+    "index": 27
    },
    "cause": "treatment infrastructure missing or overloaded; waste discharged to the same waters people drink",
    "correction": "treatment build-out, and recovery of the water, energy and nutrients the waste stream contains",
@@ -595,13 +596,13 @@
    "distance_note": "a deficit of access and an overshoot of empty movement at the same time",
    "direction": "holding",
    "severity": {
-    "distance": 1,
+    "distance": 2,
     "load": 2,
     "rate": 1,
     "exposure": 2,
     "irreversibility": 1,
-    "raw": 4,
-    "score": 2
+    "raw": 8,
+    "index": 8
    },
    "cause": "fragmented logistics, modal choices set by habit rather than energy cost, infrastructure gaps",
    "correction": "fewer empty miles, freight shifted to the lowest-energy mode that works, assets kept alive longer",
@@ -627,13 +628,13 @@
    "distance_note": "the softest measurement on this map, and marked as such",
    "direction": "returning",
    "severity": {
-    "distance": 1,
+    "distance": 2,
     "load": 2,
     "rate": 0.5,
     "exposure": 2,
     "irreversibility": 1,
-    "raw": 2.0,
-    "score": 1
+    "raw": 4.0,
+    "index": 4
    },
    "cause": "capital cost and skills gaps between the tool frontier and most of the species",
    "correction": "cheaper capability per unit: compute, automation, and machines that let one operator do the work of several",
@@ -655,13 +656,13 @@
    "distance_note": "the provisioning stock closest to closing",
    "direction": "returning",
    "severity": {
-    "distance": 1,
+    "distance": 3,
     "load": 2,
     "rate": 0.5,
     "exposure": 2,
     "irreversibility": 1,
-    "raw": 2.0,
-    "score": 1
+    "raw": 6.0,
+    "index": 6
    },
    "cause": "infrastructure and affordability gaps at the edge of the network",
    "correction": "cheaper connectivity and cheaper intelligence per person; the substrate is compute",
@@ -688,7 +689,7 @@
     "exposure": 3,
     "irreversibility": 2,
     "raw": 72,
-    "score": 30
+    "index": 72
    },
    "cause": "maintenance deferred because it is invisible until failure; exposure rising faster than hardening",
    "correction": "repair over replacement, engineering capacity multiplied by software, observability that finds the weak points before they fail",
@@ -702,5 +703,6 @@
    ]
   }
  ],
- "_rhythm": "Nothing in nature holds still, and the map does not treat movement as failure. Wolves multiply until they outrun the deer; the crash feeds the deer's recovery, which feeds the wolves' recovery. Tree stocks grow, burn, die and regrow. That ebb and flow is what balance looks like, so a safe range here means the envelope a stock's own oscillations have stayed inside for as long as the record runs. A stock inside its envelope is in rhythm however fast it is moving. Imbalance is narrower and checkable: the stock has left its envelope, or is leaving it at a speed the envelope never contained. When that happens the correction still arrives, the way it arrives for the wolves; the only question the engine asks is whether it arrives as a managed return or as the die-off arm of the loop."
+ "_rhythm": "Nothing in nature holds still, and the map does not treat movement as failure. Wolves multiply until they outrun the deer; the crash feeds the deer's recovery, which feeds the wolves' recovery. Tree stocks grow, burn, die and regrow. That ebb and flow is what balance looks like, so a safe range here means the envelope a stock's own oscillations have stayed inside for as long as the record runs. A stock inside its envelope is in rhythm however fast it is moving. Imbalance is narrower and checkable: the stock has left its envelope, or is leaving it at a speed the envelope never contained. When that happens the correction still arrives, the way it arrives for the wolves; the only question the engine asks is whether it arrives as a managed return or as the die-off arm of the loop.",
+ "_scale_note": "None of this is a danger to the planet itself. Planets have no preferred state, and Earth has run far hotter and far colder than anything on this map. The envelope belongs to the species: it is the range that every system Homo sapiens depends on was built inside. Distance is measured from that envelope, and the top of the scale is reserved for readings that would mean the species cannot live there."
 }

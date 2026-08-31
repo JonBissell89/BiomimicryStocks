@@ -18,6 +18,7 @@ FIELDS = ["id","name","cls","form","stock","safe_range","state","distance_note",
 DIRECTION_RATE = {"returning":{0.5}, "holding":{1}, "diverging":{2,3}}
 
 m = json.load(open(os.path.join(DATA,"imbalance_map.json"), encoding="utf-8"))
+ser = json.load(open(os.path.join(DATA,"imbalance_series.json"), encoding="utf-8"))["series"]
 eng = json.load(open(os.path.join(DATA,"engine_tiers.json"), encoding="utf-8"))
 engine_tk = {n["tk"]: n for t in eng["tiers"] for n in t["names"]}
 
@@ -36,14 +37,15 @@ for s in sy:
     if s.get("form") not in ("overshoot","deficit","both"): errs.append(f"{sid}: bad form")
     sv=s.get("severity",{})
     D,L,R,X,I=(sv.get(k) for k in ("distance","load","rate","exposure","irreversibility"))
-    if D not in (0,1,2,3): errs.append(f"{sid}: distance {D}")
+    if D not in (0,1,2,3,4,5,6): errs.append(f"{sid}: distance {D}")
     if L not in (1,2,3): errs.append(f"{sid}: load {L}")
     if R not in (0.5,1,2,3): errs.append(f"{sid}: rate {R}")
     if X not in (1,2,3): errs.append(f"{sid}: exposure {X}")
     if I not in (1,2,3): errs.append(f"{sid}: irreversibility {I}")
     raw=D*L*R*X*I
     if abs(raw-sv.get("raw",-1))>0.05: errs.append(f"{sid}: raw {sv.get('raw')} != {raw}")
-    if sv.get("score")!=round(raw/243*100): errs.append(f"{sid}: score {sv.get('score')} != {round(raw/243*100)}")
+    if sv.get("index")!=round(raw): errs.append(f"{sid}: index {sv.get('index')} != {round(raw)}")
+    if raw>m["_severity"]["ceiling"]: errs.append(f"{sid}: index above the instrument ceiling")
     d=s.get("direction")
     if d not in DIRECTION_RATE: errs.append(f"{sid}: direction {d}")
     elif R not in DIRECTION_RATE[d]: errs.append(f"{sid}: direction {d} inconsistent with rate {R}")
@@ -61,6 +63,20 @@ for t in every_string(m):
     if any(ord(c)>127 for c in t): errs.append("non-ascii in: "+t[:60])
 
 # ---- coverage: every company traces to a pre-existing imbalance ------------
+# ---- the time series: one per stock, dated, ascending, numeric --------------
+for s2 in sy:
+    e=ser.get(s2["id"])
+    if not e: errs.append(s2["id"]+": no time series"); continue
+    if not e.get("unit"): errs.append(s2["id"]+": series without a unit")
+    pts=e.get("points",[])
+    if len(pts)<2 and s2["id"]!="transport": warns.append(s2["id"]+": fewer than 2 points")
+    dates=[p[0] for p in pts]
+    if dates!=sorted(dates): errs.append(s2["id"]+": series dates not ascending")
+    for d,v in pts:
+        if not isinstance(v,(int,float)): errs.append(s2["id"]+": non-numeric value at "+str(d))
+for sid in ser:
+    if sid not in {s2["id"] for s2 in sy}: errs.append("series for unknown system: "+sid)
+
 mapped={tk for s in sy for tk in s["tickers"]}
 orphans=sorted(set(engine_tk)-mapped)
 if orphans: errs.append("companies with NO imbalance behind them: "+", ".join(orphans))
@@ -74,9 +90,9 @@ print("systems: %d  (%d earth-system, %d provisioning)" % (
     len(sy), sum(1 for s in sy if s["cls"]=="earth"), sum(1 for s in sy if s["cls"]=="provisioning")))
 print("companies mapped: %d of %d in the engine" % (len(mapped & set(engine_tk)), len(engine_tk)))
 print()
-print("%-4s %-13s %-44s %-10s %s" % ("sev","class","system","direction","companies"))
-for s in sorted(sy,key=lambda x:-x["severity"]["score"]):
-    print("%4d %-13s %-44s %-10s %d" % (s["severity"]["score"],s["cls"],s["name"],s["direction"],len(s["tickers"])))
+print("%-8s %-13s %-44s %-10s %s" % ("index","class","system","movement","companies"))
+for s in sorted(sy,key=lambda x:-x["severity"]["index"]):
+    print("%4d/%-3d %-13s %-44s %-10s %d" % (s["severity"]["index"],m["_severity"]["ceiling"],s["cls"],s["name"],s["direction"],len(s["tickers"])))
 print()
 if ghost_gaps:
     print("corrections with NO company in the current universe (a finding, not an error):")

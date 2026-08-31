@@ -1,0 +1,661 @@
+{
+ "_comment": "Layer 0 time series. One series per civilization stock. Sampled weekly by scripts/collect_imbalance.py; most underlying assessments update yearly or slower, so a flat stretch means the science has not re-measured yet, not that the stock stood still. Values are order-of-scale seeds from the public record, dated, and meant to be re-researched.",
+ "asof": "2026-08",
+ "series": {
+  "ghg": {
+   "unit": "atmospheric CO2, ppm (annual mean, Mauna Loa/NOAA)",
+   "points": [
+    [
+     "1960-01-01",
+     316.9
+    ],
+    [
+     "1970-01-01",
+     325.7
+    ],
+    [
+     "1980-01-01",
+     338.8
+    ],
+    [
+     "1990-01-01",
+     354.4
+    ],
+    [
+     "2000-01-01",
+     369.6
+    ],
+    [
+     "2010-01-01",
+     389.9
+    ],
+    [
+     "2015-01-01",
+     400.8
+    ],
+    [
+     "2018-01-01",
+     408.5
+    ],
+    [
+     "2020-01-01",
+     414.2
+    ],
+    [
+     "2022-01-01",
+     418.6
+    ],
+    [
+     "2023-01-01",
+     421.1
+    ],
+    [
+     "2024-01-01",
+     424.6
+    ],
+    [
+     "2025-01-01",
+     427.5
+    ],
+    [
+     "2026-08-31",
+     427.5
+    ]
+   ],
+   "note": "shaded band is the 800,000-year ice-core envelope; 2025 provisional",
+   "boundary": 350,
+   "band": [
+    180,
+    300
+   ]
+  },
+  "biosphere": {
+   "unit": "wild vertebrate abundance, share of 1970 (Living Planet Index)",
+   "points": [
+    [
+     "1970-01-01",
+     1.0
+    ],
+    [
+     "1980-01-01",
+     0.85
+    ],
+    [
+     "1990-01-01",
+     0.68
+    ],
+    [
+     "2000-01-01",
+     0.52
+    ],
+    [
+     "2010-01-01",
+     0.4
+    ],
+    [
+     "2020-01-01",
+     0.27
+    ],
+    [
+     "2026-08-31",
+     0.27
+    ]
+   ],
+   "note": "the map's control variable (extinctions per million species-years) has no annual series; this index is the closest continuously measured signal"
+  },
+  "hanpp": {
+   "unit": "human appropriation of net primary production, percent",
+   "points": [
+    [
+     "1910-01-01",
+     13
+    ],
+    [
+     "1950-01-01",
+     17
+    ],
+    [
+     "1980-01-01",
+     22
+    ],
+    [
+     "2005-01-01",
+     25
+    ],
+    [
+     "2020-01-01",
+     30
+    ],
+    [
+     "2026-08-31",
+     30
+    ]
+   ],
+   "note": "reconstructed decadally; assessed, not measured yearly",
+   "boundary": 10
+  },
+  "forests": {
+   "unit": "original forest cover remaining, percent",
+   "points": [
+    [
+     "1700-01-01",
+     90
+    ],
+    [
+     "1900-01-01",
+     78
+    ],
+    [
+     "1950-01-01",
+     70
+    ],
+    [
+     "1990-01-01",
+     65
+    ],
+    [
+     "2010-01-01",
+     62
+    ],
+    [
+     "2023-01-01",
+     60
+    ],
+    [
+     "2026-08-31",
+     60
+    ]
+   ],
+   "note": "reconstructed; recent decades from satellite assessments",
+   "boundary": 75
+  },
+  "freshwater": {
+   "unit": "land area with major streamflow deviation, percent",
+   "points": [
+    [
+     "1900-01-01",
+     10
+    ],
+    [
+     "1960-01-01",
+     12
+    ],
+    [
+     "2000-01-01",
+     16
+    ],
+    [
+     "2023-01-01",
+     18
+    ],
+    [
+     "2026-08-31",
+     18
+    ]
+   ],
+   "note": "sparse record; boundary is the pre-industrial share",
+   "boundary": 10
+  },
+  "soil": {
+   "unit": "agricultural land degraded, percent",
+   "points": [
+    [
+     "1990-01-01",
+     20
+    ],
+    [
+     "2015-01-01",
+     33
+    ],
+    [
+     "2021-01-01",
+     34
+    ],
+    [
+     "2026-08-31",
+     34
+    ]
+   ],
+   "note": "assessed roughly once a decade (FAO)"
+  },
+  "nutrients": {
+   "unit": "industrial and intentional nitrogen fixation, Tg N per year",
+   "points": [
+    [
+     "1960-01-01",
+     30
+    ],
+    [
+     "1980-01-01",
+     80
+    ],
+    [
+     "2000-01-01",
+     120
+    ],
+    [
+     "2010-01-01",
+     150
+    ],
+    [
+     "2020-01-01",
+     190
+    ],
+    [
+     "2026-08-31",
+     190
+    ]
+   ],
+   "note": "fertilizer production plus crop biological fixation",
+   "boundary": 62
+  },
+  "ocean": {
+   "unit": "aragonite saturation, share of pre-industrial",
+   "points": [
+    [
+     "1850-01-01",
+     1.0
+    ],
+    [
+     "1950-01-01",
+     0.97
+    ],
+    [
+     "2000-01-01",
+     0.92
+    ],
+    [
+     "2025-01-01",
+     0.8
+    ],
+    [
+     "2026-08-31",
+     0.8
+    ]
+   ],
+   "note": "global mean at the boundary; polar seas already below it",
+   "boundary": 0.8
+  },
+  "novel": {
+   "unit": "plastic production, Mt per year (proxy: the boundary itself is unquantified)",
+   "points": [
+    [
+     "1950-01-01",
+     2
+    ],
+    [
+     "1980-01-01",
+     70
+    ],
+    [
+     "2000-01-01",
+     234
+    ],
+    [
+     "2010-01-01",
+     313
+    ],
+    [
+     "2020-01-01",
+     435
+    ],
+    [
+     "2023-01-01",
+     460
+    ],
+    [
+     "2026-08-31",
+     460
+    ]
+   ],
+   "note": "one visible strand of a boundary that has no global control variable"
+  },
+  "materials": {
+   "unit": "material input cycled back, percent (Circularity Gap)",
+   "points": [
+    [
+     "2018-01-01",
+     9.1
+    ],
+    [
+     "2020-01-01",
+     8.6
+    ],
+    [
+     "2023-01-01",
+     7.2
+    ],
+    [
+     "2025-01-01",
+     6.9
+    ],
+    [
+     "2026-08-31",
+     6.9
+    ]
+   ],
+   "note": "boundary is the report's working target, not a planetary constant",
+   "boundary": 17
+  },
+  "ozone": {
+   "unit": "global mean ozone column, percent below 1980",
+   "points": [
+    [
+     "1980-01-01",
+     0
+    ],
+    [
+     "1994-01-01",
+     -5
+    ],
+    [
+     "2005-01-01",
+     -3.5
+    ],
+    [
+     "2015-01-01",
+     -3
+    ],
+    [
+     "2024-01-01",
+     -2
+    ],
+    [
+     "2026-08-31",
+     -2
+    ]
+   ],
+   "note": "the return arm: the one completed global correction",
+   "boundary": -5
+  },
+  "food": {
+   "unit": "people undernourished, millions (FAO SOFI)",
+   "points": [
+    [
+     "2001-01-01",
+     800
+    ],
+    [
+     "2010-01-01",
+     636
+    ],
+    [
+     "2015-01-01",
+     589
+    ],
+    [
+     "2019-01-01",
+     618
+    ],
+    [
+     "2021-01-01",
+     738
+    ],
+    [
+     "2023-01-01",
+     733
+    ],
+    [
+     "2026-08-31",
+     733
+    ]
+   ],
+   "note": "the fall to 2015 and the turn after 2019 are both real"
+  },
+  "water_access": {
+   "unit": "people without safely managed drinking water, billions (JMP)",
+   "points": [
+    [
+     "2000-01-01",
+     3.2
+    ],
+    [
+     "2010-01-01",
+     2.6
+    ],
+    [
+     "2015-01-01",
+     2.4
+    ],
+    [
+     "2022-01-01",
+     2.2
+    ],
+    [
+     "2026-08-31",
+     2.2
+    ]
+   ],
+   "note": "adequacy target is zero"
+  },
+  "shelter": {
+   "unit": "people in informal settlements, billions (UN-Habitat)",
+   "points": [
+    [
+     "2000-01-01",
+     0.79
+    ],
+    [
+     "2014-01-01",
+     0.88
+    ],
+    [
+     "2020-01-01",
+     1.05
+    ],
+    [
+     "2022-01-01",
+     1.1
+    ],
+    [
+     "2026-08-31",
+     1.1
+    ]
+   ],
+   "note": "adequacy target is zero"
+  },
+  "energy_access": {
+   "unit": "people without electricity, millions (Tracking SDG7)",
+   "points": [
+    [
+     "2000-01-01",
+     1450
+    ],
+    [
+     "2010-01-01",
+     1140
+    ],
+    [
+     "2015-01-01",
+     958
+    ],
+    [
+     "2019-01-01",
+     760
+    ],
+    [
+     "2022-01-01",
+     685
+    ],
+    [
+     "2026-08-31",
+     685
+    ]
+   ],
+   "note": "clean cooking lags further, near 2.1 billion"
+  },
+  "healthcare": {
+   "unit": "WHO universal health coverage service index, 0 to 100",
+   "points": [
+    [
+     "2000-01-01",
+     45
+    ],
+    [
+     "2010-01-01",
+     58
+    ],
+    [
+     "2015-01-01",
+     65
+    ],
+    [
+     "2019-01-01",
+     68
+    ],
+    [
+     "2021-01-01",
+     68
+    ],
+    [
+     "2026-08-31",
+     68
+    ]
+   ],
+   "note": "the plateau after 2019 is the holding pattern the map records",
+   "boundary": 80
+  },
+  "sanitation": {
+   "unit": "people without safely managed sanitation, billions (JMP)",
+   "points": [
+    [
+     "2000-01-01",
+     4.2
+    ],
+    [
+     "2010-01-01",
+     3.9
+    ],
+    [
+     "2015-01-01",
+     3.7
+    ],
+    [
+     "2022-01-01",
+     3.5
+    ],
+    [
+     "2026-08-31",
+     3.5
+    ]
+   ],
+   "note": "adequacy target is zero"
+  },
+  "transport": {
+   "unit": "rural people without all-weather road access, billions (World Bank RAI)",
+   "points": [
+    [
+     "2006-01-01",
+     1.0
+    ],
+    [
+     "2016-01-01",
+     1.0
+    ],
+    [
+     "2026-08-31",
+     1.0
+    ]
+   ],
+   "note": "the thinnest record on the map; measured roughly once a decade"
+  },
+  "tools": {
+   "unit": "people with a smartphone, billions",
+   "points": [
+    [
+     "2010-01-01",
+     0.3
+    ],
+    [
+     "2014-01-01",
+     1.6
+    ],
+    [
+     "2018-01-01",
+     2.9
+    ],
+    [
+     "2021-01-01",
+     3.8
+    ],
+    [
+     "2024-01-01",
+     4.9
+    ],
+    [
+     "2026-08-31",
+     4.9
+    ]
+   ],
+   "note": "a proxy for tool capability reaching individual hands"
+  },
+  "information": {
+   "unit": "people offline, billions (ITU)",
+   "points": [
+    [
+     "2005-01-01",
+     5.5
+    ],
+    [
+     "2010-01-01",
+     5.0
+    ],
+    [
+     "2015-01-01",
+     4.1
+    ],
+    [
+     "2019-01-01",
+     3.6
+    ],
+    [
+     "2021-01-01",
+     2.9
+    ],
+    [
+     "2024-01-01",
+     2.2
+    ],
+    [
+     "2026-08-31",
+     2.2
+    ]
+   ],
+   "note": "adequacy target is zero"
+  },
+  "infrastructure": {
+   "unit": "global weather-related losses, USD billions per year",
+   "points": [
+    [
+     "1990-01-01",
+     50
+    ],
+    [
+     "2000-01-01",
+     80
+    ],
+    [
+     "2010-01-01",
+     150
+    ],
+    [
+     "2015-01-01",
+     180
+    ],
+    [
+     "2020-01-01",
+     210
+    ],
+    [
+     "2024-01-01",
+     310
+    ],
+    [
+     "2026-08-31",
+     310
+    ]
+   ],
+   "note": "noisy year to year; the trend is the signal"
+  }
+ }
+}

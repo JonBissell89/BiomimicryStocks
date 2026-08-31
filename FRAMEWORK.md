@@ -37,8 +37,17 @@ lies where both forms shrink at once: more human need satisfied with less energy
 waste, scarcity and ecological disruption. That is the bridge between biomimicry and a resource-based
 economy.
 
-Each system carries an **imbalance severity**: distance from the safe range x load-bearing importance x rate
-of divergence x scale of exposure x irreversibility, normalized to 100. The anchors are in the map file and
+Each system carries an **imbalance severity index**: distance from the safe range x load-bearing
+importance x rate of divergence x scale of exposure x irreversibility, on an open instrument with a ceiling
+of 486. The ceiling is deliberately lethal: it would mean a load-bearing global stock past a hard limit for
+the species, effectively permanent, and still diverging fast. Nothing on the map is near it, which is the
+point; the top of the scale is reserved for readings that would actually mean the species cannot live
+there. On this instrument biological diversity reads 324 and CO2 reads 162, one third of the ceiling. For a
+deficit, distance means the share of the species without the essential, with 6 meaning the need cannot be
+met at all. None of this is a danger to the planet itself; planets have no preferred state, and Earth has
+run far hotter and far colder. The envelope belongs to the species. Each stock also carries a time series
+in `data/imbalance_series.json`, sampled weekly by `scripts/collect_imbalance.py`; most underlying
+assessments update yearly or slower, so a flat stretch means the science has not re-measured yet. The anchors are in the map file and
 the arithmetic is audited; the exact calculation is expected to evolve as evidence improves. What is fixed
 is the separation the audit enforces on every system, in order: **STATE** (how far from equilibrium),
 **MOVEMENT** (diverging from the safe range, holding its distance, or returning), **FLOW** (the physical flows causing it), **CORRECTION** (what moves

@@ -22,8 +22,11 @@ treated as what it is, an information layer coordinating access to energy, matte
 not as the underlying system.
 
 [`data/imbalance_map.json`](data/imbalance_map.json) holds twenty-one civilization-scale stocks, eleven
-Earth-system and ten provisioning, each with its safe range, measured state, direction, causal flows,
-required correction, clock, and severity (distance x load x divergence rate x exposure x irreversibility).
+Earth-system and ten provisioning, each with its safe range, measured state, movement, causal flows,
+required correction, clock, and a severity index (distance x load x divergence rate x exposure x
+irreversibility) on an open instrument whose ceiling, 486, is reserved for readings that would mean the
+species cannot live there. [`data/imbalance_series.json`](data/imbalance_series.json) carries each stock's
+time series, sampled weekly by `collect_imbalance.py`.
 Two failure forms are tracked: **ecological overshoot** (throughput past regenerative capacity) and
 **provisioning deficit** (an essential need undersupplied despite heavy resource use). The bridge between
 them is the target: more need met with less energy, extraction, waste and disruption.
@@ -99,7 +102,8 @@ build/    the rendered page (gitignored, built by the workflow)
 
 ## How it runs
 
-- **Weekly** ([`.github/workflows/weekly.yml`](.github/workflows/weekly.yml)): refresh
+- **Weekly** ([`.github/workflows/weekly.yml`](.github/workflows/weekly.yml)): sample
+  the imbalance series, refresh
   prices, rebalance the simulated book, rebuild, verify, deploy to Pages. Never changes
   a score, because filings do not change weekly.
 - **Monthly**: the judgment run. Gates re-checked against filings, tripwires, score and
