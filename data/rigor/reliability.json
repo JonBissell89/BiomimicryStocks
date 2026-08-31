@@ -1,0 +1,105 @@
+{
+ "method": "blind machine second scorer over a seeded 8-name sample: read only the public rubric and framework, forbidden from repository data files, independent web research; honor-system blinding, stated as the method's limit",
+ "date": "2026-08-31",
+ "n": 8,
+ "score_agreement": {
+  "mean_absolute_deviation_of_100": 6.25,
+  "spearman": 0.049
+ },
+ "gate_agreement": "8 of 8, including the blind scorer independently failing BFLY on 3-year dilution",
+ "tier_agreement": {
+  "linear_weighted_kappa": 0.0,
+  "exact_band_matches": 2
+ },
+ "per_measure_mean_abs_deviation": {
+  "A": 1.9,
+  "B": 2.1,
+  "C": 1.2,
+  "D": 1.2,
+  "E": 1.1,
+  "F": 0.6
+ },
+ "rows": [
+  {
+   "tk": "SBDHF",
+   "recorded": 78,
+   "blind": 78,
+   "delta": 0,
+   "recorded_tier": "t2",
+   "blind_tier": "t2",
+   "recorded_gate": "pass",
+   "blind_gate": "pass"
+  },
+  {
+   "tk": "BFLY",
+   "recorded": 80,
+   "blind": 76,
+   "delta": -4,
+   "recorded_tier": "t1",
+   "blind_tier": "exit",
+   "recorded_gate": "fail",
+   "blind_gate": "fail"
+  },
+  {
+   "tk": "IOT",
+   "recorded": 75,
+   "blind": 78,
+   "delta": 3,
+   "recorded_tier": "t2",
+   "blind_tier": "t2",
+   "recorded_gate": "pass",
+   "blind_gate": "pass"
+  },
+  {
+   "tk": "RMD",
+   "recorded": 65,
+   "blind": 77,
+   "delta": 12,
+   "recorded_tier": "t4",
+   "blind_tier": "t2",
+   "recorded_gate": "pass",
+   "blind_gate": "pass"
+  },
+  {
+   "tk": "HTFL",
+   "recorded": 81,
+   "blind": 78,
+   "delta": -3,
+   "recorded_tier": "t1",
+   "blind_tier": "t2",
+   "recorded_gate": "pass",
+   "blind_gate": "pass"
+  },
+  {
+   "tk": "MBRFF",
+   "recorded": 81,
+   "blind": 72,
+   "delta": -9,
+   "recorded_tier": "t1",
+   "blind_tier": "t3",
+   "recorded_gate": "pass",
+   "blind_gate": "pass"
+  },
+  {
+   "tk": "ADMA",
+   "recorded": 70,
+   "blind": 65,
+   "delta": -5,
+   "recorded_tier": "t3",
+   "blind_tier": "t4",
+   "recorded_gate": "pass",
+   "blind_gate": "pass"
+  },
+  {
+   "tk": "BSY",
+   "recorded": 80,
+   "blind": 66,
+   "delta": -14,
+   "recorded_tier": "t1",
+   "blind_tier": "t4",
+   "recorded_gate": "pass",
+   "blind_gate": "pass"
+  }
+ ],
+ "reading": "The gate is the rubric's most reliable instrument: 8 of 8, including an independent BFLY fail on dilution. Totals agree to about six points of one hundred and every measure lands within one to two points of its scale. The humbling number is the ordering: within this sample's narrow 65-to-81 band, rank correlation is 0.05, so distinctions finer than roughly six points sit inside the scorer noise floor, and five-point tier bands inherit that noise. The rubric measures level reliably and fine rank unreliably; t1-versus-t2 confidence should be read accordingly, while investable-versus-exit and the gate are strong. Eight names is a small sample and the correlation estimate is itself noisy; widening the sample is the standing way to tighten it. The largest splits (BSY minus 14 on how much an indirect software touch earns, RMD plus 12 on how hard C2 bites when GLP-1s shrink the upstream imbalance) are judgment calls the rubric leaves open, now named."
+}

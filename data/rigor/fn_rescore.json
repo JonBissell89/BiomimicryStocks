@@ -1,0 +1,148 @@
+{
+ "method": "three independent blind scorers (machine, honor-system blinding: forbidden from repository data files, web research only), scoring the pre-registered seeded sample of 12 against the first-screen rubric",
+ "date": "2026-08-31",
+ "advance_bar_assumed": 35,
+ "agreement": {
+  "mean_absolute_deviation_of_50": 4.67,
+  "spearman": 0.66
+ },
+ "rows": [
+  {
+   "tk": "IRS",
+   "stage": "2",
+   "recorded": 42,
+   "blind": 24,
+   "delta": -18,
+   "blind_need": 8,
+   "blind_viability": 16,
+   "one_line": "Argentine malls, offices, hotels; rent extraction, not a durable-need provider"
+  },
+  {
+   "tk": "TSKMF",
+   "stage": "3",
+   "recorded": 40,
+   "blind": 34,
+   "delta": -6,
+   "blind_need": 18,
+   "blind_viability": 16,
+   "one_line": "Industrial chains and motion control; components enabler, ~$1.7B"
+  },
+  {
+   "tk": "TRATF",
+   "stage": "3",
+   "recorded": 43,
+   "blind": 38,
+   "delta": -5,
+   "blind_need": 19,
+   "blind_viability": 19,
+   "one_line": "MAN/Scania/International trucks; freight transport enabler, ~$22B"
+  },
+  {
+   "tk": "RCEL",
+   "stage": "3",
+   "recorded": 41,
+   "blind": 37,
+   "delta": -4,
+   "blind_need": 26,
+   "blind_viability": 11,
+   "one_line": "RECELL burn/wound skin regeneration device; direct acute health need, small-cap"
+  },
+  {
+   "tk": "DRXGF",
+   "stage": "2",
+   "recorded": 44,
+   "blind": 41,
+   "delta": -3,
+   "blind_need": 24,
+   "blind_viability": 17,
+   "one_line": "UK biomass/hydro generator; direct energy, biomass sourcing criticized, ~$4B"
+  },
+  {
+   "tk": "BWCCF",
+   "stage": "0",
+   "recorded": 14,
+   "blind": 12,
+   "delta": -2,
+   "blind_need": 10,
+   "blind_viability": 2,
+   "one_line": "Australian coking coal miner; fossil commodity price-taker, near-worthless cap, distress"
+  },
+  {
+   "tk": "SOLLF",
+   "stage": "0",
+   "recorded": 22,
+   "blind": 21,
+   "delta": -1,
+   "blind_need": 11,
+   "blind_viability": 10,
+   "one_line": "Shanghai property developer; rent-extraction model in a distressed sector"
+  },
+  {
+   "tk": "SONVY",
+   "stage": "3",
+   "recorded": 46,
+   "blind": 45,
+   "delta": -1,
+   "blind_need": 26,
+   "blind_viability": 19,
+   "one_line": "Phonak hearing aids and cochlear implants; direct hearing need, $17B liquid"
+  },
+  {
+   "tk": "HUNGF",
+   "stage": "2",
+   "recorded": 40,
+   "blind": 41,
+   "delta": 1,
+   "blind_need": 22,
+   "blind_viability": 19,
+   "one_line": "China's largest listed generator, coal-heavy; essential but carbon-intensive, ~$16B"
+  },
+  {
+   "tk": "LEGN",
+   "stage": "2",
+   "recorded": 40,
+   "blind": 44,
+   "delta": 4,
+   "blind_need": 28,
+   "blind_viability": 16,
+   "one_line": "CARVYKTI CAR-T for myeloma; direct life-saving therapy, ~$4.1B"
+  },
+  {
+   "tk": "AKOBF",
+   "stage": "0",
+   "recorded": 12,
+   "blind": 17,
+   "delta": 5,
+   "blind_need": 10,
+   "blind_viability": 7,
+   "one_line": "Small-scale gold mining/exploration in Ethiopia; commodity extraction, micro-cap thinly traded"
+  },
+  {
+   "tk": "VMD",
+   "stage": "0",
+   "recorded": 33,
+   "blind": 39,
+   "delta": 6,
+   "blind_need": 26,
+   "blind_viability": 13,
+   "one_line": "US home respiratory equipment and chronic care; direct health need, ~$340M, 24-28% growth"
+  }
+ ],
+ "potential_false_negatives": {
+  "names": [
+   "VMD"
+  ],
+  "note": "recorded as cut on the first screen, but the blind scorer puts them at or above the advance bar. VMD, home respiratory care growing about 25 percent a year, is the screen's clearest candidate miss in this sample."
+ },
+ "reverse_disagreements": {
+  "names": [
+   "IRS",
+   "TSKMF"
+  ],
+  "note": "recorded at or above the bar, blind scorer well below. IRS at recorded 42 contradicts the engine's own industry table, which prices real-estate rent extraction at need 8; the anomaly looks like an error in the recorded score, not in the blind one."
+ },
+ "estimated_fn_rate": {
+  "value": 0.125,
+  "basis": "1 of the 8 sampled hard cuts (stages 0 and 2); a 12-name sample bounds this loosely, and widening the sample is the standing way to tighten it"
+ }
+}

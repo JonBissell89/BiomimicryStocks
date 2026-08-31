@@ -19,6 +19,10 @@ rep = need("report_card.json")
 sen = need("sensitivity.json")
 rsk = need("risk_profile.json")
 cov = need("coverage.json")
+ufz = need("universe_freeze_2026-08-28.json")
+utk = need("universe_track.json")
+fnr = need("fn_rescore.json")
+fac = need("factor_internal.json")
 if errs: [print("  !", e) for e in errs]; sys.exit(1)
 
 # the vintage is what it says it is, and the protocol points at it
@@ -31,6 +35,19 @@ if pro["vintage"]["sha256_scores"] != frz["sha256_scores"]:
     errs.append("protocol points at a different vintage than the freeze file")
 if len(frz["scores"]) != len(load_names()):
     warns.append("live engine name count differs from the vintage (allowed; the vintage still governs)")
+
+# the universe vintage is intact and the protocol chain is unbroken
+canon_u = json.dumps(sorted([[tk, v[0], v[1]] for tk, v in ufz["scores"].items()]), separators=(",", ":"))
+if hashlib.sha256(canon_u.encode()).hexdigest() != ufz["sha256"]:
+    errs.append("universe vintage does not match its own hash")
+if "supersedes" in pro:
+    old_p = need(pro["supersedes"]["file"])
+    if old_p and hashlib.sha256(json.dumps(old_p, sort_keys=True, separators=(",", ":")).encode()).hexdigest() != pro["supersedes"]["sha256"]:
+        errs.append("superseded protocol was edited after the fact")
+if utk["snapshots"][0]["date"] != ufz["asof"]:
+    errs.append("universe track does not start at the universe freeze")
+if "pending_external" not in pro["endpoints"]:
+    errs.append("the pending external factor test fell out of the protocol")
 
 # the track starts at the freeze and stays ordered
 if trk["snapshots"][0]["date"] != frz["asof"]:
@@ -47,8 +64,8 @@ elif sen["rank_stability_spearman"]["mean"] < 0.9:
 for k in ("effective_independent_bets", "avg_pairwise_correlation", "pc1_variance_share"):
     if k not in rsk: errs.append("risk profile missing " + k)
 if "momentum_contamination" not in rep: errs.append("report card missing the contamination check")
-if cov["blind_rescore_sample"]["status"].startswith("awaiting"):
-    warns.append("false-negative rate is unmeasured: the blind re-score sample awaits research")
+if len(fnr["rows"]) != 12: errs.append("fn_rescore does not cover the registered 12-name sample")
+if "estimated_fn_rate" not in fnr: errs.append("fn_rescore missing the rate estimate")
 
 print("RIGOR")
 print("  vintage 2026-08-28 locked, hash %s..., protocol registered %s" % (frz["sha256_scores"][:12], pro["registered"]))
@@ -59,8 +76,12 @@ print("  weights vs measurement: rank stability %.3f | tier retention %.3f | alp
 print("  risk: effective bets %.1f | avg corr %.2f | PC1 %.0f%% | investable HHI %.2f" %
       (rsk["effective_independent_bets"], rsk["avg_pairwise_correlation"],
        rsk["pc1_variance_share"] * 100, rsk["concentration_investable"]["hhi"]))
-print("  coverage: %d near-miss names on the frontier, blind sample of %d registered" %
-      (len(cov["near_miss_frontier"]), sum(len(v) for v in cov["blind_rescore_sample"]["picks"].values())))
+print("  universe: vintage of %d locked | %d priced tracked | forward %s" %
+      (ufz["n"], len(utk["snapshots"][-1]["px"]), rep.get("universe", {}).get("status", "?")))
+print("  blind re-score: MAD %.1f/50, rho %.2f | potential FN %s | attribution: idiosyncratic %.0f%% (internal)" %
+      (fnr["agreement"]["mean_absolute_deviation_of_50"], fnr["agreement"]["spearman"],
+       ",".join(fnr["potential_false_negatives"]["names"]) or "none", fac["idiosyncratic_share"] * 100))
+print("  coverage: %d near-miss names on the frontier" % len(cov["near_miss_frontier"]))
 for w in warns: print("  ~", w)
 if errs:
     [print("  !", e) for e in errs]; sys.exit(1)

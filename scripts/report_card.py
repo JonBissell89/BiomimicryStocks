@@ -46,6 +46,26 @@ else:
                       "tier_mean_returns": tm,
                       "t1_minus_exit": round(tm.get("t1", 0) - tm.get("exit", 0), 4)}
 
+# ---- the whole universe faces the test too ---------------------------------
+uf = json.load(open(os.path.join(R, "universe_freeze_2026-08-28.json"), encoding="utf-8"))
+ut = json.load(open(os.path.join(R, "universe_track.json"), encoding="utf-8"))
+udays = (np.datetime64(ut["snapshots"][-1]["date"]) - np.datetime64(uf["asof"])).astype(int)
+if udays < 28 or len(ut["snapshots"]) < 2:
+    doc["universe"] = {"status": "accruing", "names_in_vintage": uf["n"],
+                       "priced": len(ut["snapshots"][-1]["px"]),
+                       "note": "universe IC and advanced-minus-cut spread report once two monthly snapshots exist; endpoints pre-registered"}
+else:
+    p0 = ut["snapshots"][0]["px"]; p1 = ut["snapshots"][-1]["px"]
+    ufwd, usc, grp = [], [], {"adv": [], "cut": []}
+    for tk, (stage, sc) in uf["scores"].items():
+        if p0.get(tk) and p1.get(tk):
+            r = p1[tk] / p0[tk] - 1
+            ufwd.append(r); usc.append(sc)
+            (grp["adv"] if stage in ("R", "3", "4") else grp["cut"]).append(r)
+    doc["universe"] = {"status": "reporting", "days_elapsed": int(udays), "n": len(ufwd),
+                       "information_coefficient": round(spearman(usc, ufwd), 3),
+                       "advanced_minus_cut": round(float(np.mean(grp["adv"]) - np.mean(grp["cut"])), 4)}
+
 # ---- contamination check (computable on day one) ---------------------------
 sp = json.load(open(os.path.join(DATA, "spark.json"), encoding="utf-8"))["s"]
 trail = {tk: v[-1] / v[0] - 1 for tk, v in sp.items() if v and v[0]}

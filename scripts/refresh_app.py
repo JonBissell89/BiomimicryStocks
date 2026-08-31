@@ -20,6 +20,7 @@ state = json.load(open(os.path.join(DATA, "paper_state.json"), encoding="utf-8")
 sidx = json.load(open(os.path.join(DATA, "search_index.json"), encoding="utf-8"))
 imb_map = json.load(open(os.path.join(DATA, "imbalance_map.json"), encoding="utf-8"))
 imb_series = json.load(open(os.path.join(DATA, "imbalance_series.json"), encoding="utf-8"))
+rigor_sum = json.load(open(os.path.join(DATA, "rigor", "summary.json"), encoding="utf-8"))
 # Prices for the whole searchable universe, so a visitor can buy companies that
 # never made the list. Names without a price are addable but not buyable.
 try:
@@ -517,6 +518,11 @@ tr.picked td{background:var(--accent-soft)}
 .imbrow .nco{font-family:var(--mono);font-size:10.5px;color:var(--muted)}
 .imbx{border:1px solid var(--line);border-top:0;border-radius:0 0 7px 7px;margin:-7px 0 8px;padding:6px 14px 12px;background:var(--card);font-size:13px}
 .imbx dl{margin:0}
+dl.rg{margin:0}
+dl.rg dt{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+dl.rg dt:first-child{margin-top:0}
+dl.rg dd{margin:2px 0 0;font-size:13px}
+dl.rg .rgnote{font-family:var(--mono);font-size:10.5px;color:var(--muted);margin-top:12px}
 .imbx dt{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:9px}
 .imbx dd{margin:2px 0 0}
 .imbchart{width:100%;height:auto;display:block;margin:6px 0 2px}
@@ -859,6 +865,12 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
   <tbody id="txnbody"></tbody></table></div>
 </section>
 
+<section id="rigorsec">
+  <h3 style="font-size:20px;margin-top:26px">The engine grades itself first</h3>
+  <p>Before this experiment grades anyone's judgment, its own instrument is on trial, and the trial is pre-registered: the endpoints, horizons and success thresholds were locked before any result could arrive, the scores and prices of 2026-08-28 are frozen and hash-checked (all 15,797 screened companies, not just the ranked 53), and every reading below is derived and audited on each build rather than claimed. If the ranking is noise, these lines are where it will show first.</p>
+  <div class="panel"><dl id="rigorbox" class="rg"></dl></div>
+</section>
+
 <section id="compare" style="border-bottom:none;padding-top:0">
   <h3 style="font-size:20px;margin-top:26px">Leaderboard</h3>
   <p><b>The list</b> is in here as a player, holding its own $5,000 in exactly what the engine says: gate-passing companies only, 60 percent across Tier 1, 28 across Tier 2, 12 across Tier 3, nothing in Tier 4 or exit review, rebalanced every week when prices refresh. Beating it means your judgment beat the algorithm's. Switch the view selector above to <b>The list's own $5,000</b> to see every trade it has made.</p>
@@ -891,6 +903,7 @@ const PX=window.__PX||{};
 const SPARK=window.__SPARK||{};
 const IMB=@@IMBALANCE@@;
 const IMBSERIES=@@IMBSERIES@@;
+const RIGOR=@@RIGOR@@;
 // A year of weekly closes as one small path. Green when the year is up, red when
 // it is down, judged on the same series that is drawn, so the colour cannot
 // disagree with the line.
@@ -1501,6 +1514,14 @@ $('sortsel').addEventListener('change',()=>{ui.sort=$('sortsel').value;render();
 function pushUI(){$('mktsel').value=ui.mkt||'all';$('spend').value=ui.spend||'';
   $('capsel').value=String(ui.cap);$('scorepol').value=String(ui.minScore);
   $('sortsel').value=ui.sort;}
+// ---- the report card: instrument readings from data/rigor, via the build ---
+function renderRigor(){
+  const el=$('rigorbox');if(!el||typeof RIGOR==='undefined')return;
+  el.innerHTML=RIGOR.items.map(function(r){
+    return '<dt>'+r[0]+'</dt><dd>'+r[1]+'</dd>';}).join('')+
+    '<dd class="rgnote">'+RIGOR.note+' Reading date: '+RIGOR.asof+'.</dd>';
+}
+
 // ---- layer 0: the civilization imbalance map -------------------------------
 // Rendered from IMB, which the build injects from data/imbalance_map.json.
 // The diagnosis comes first; companies appear only at the end of each chain,
@@ -1599,7 +1620,7 @@ document.querySelectorAll('#modal [data-close]').forEach(function(el){el.onclick
 document.addEventListener('keydown',function(e){
   if(e.key==='Escape'&&!$('modal').hidden)closeDetail();});
 
-ui=uiLoad();autoFund();snapshotMine();pushUI();renderImbalance();showView(currentView(),false);
+ui=uiLoad();autoFund();snapshotMine();pushUI();renderImbalance();renderRigor();showView(currentView(),false);
 </script>
 """
 
@@ -1607,6 +1628,7 @@ tpl = (TEMPLATE
        .replace("@@NAMES@@", json.dumps(names_js))
        .replace("@@IMBALANCE@@", json.dumps(imb_map, separators=(",", ":")))
        .replace("@@IMBSERIES@@", json.dumps(imb_series["series"], separators=(",", ":")))
+       .replace("@@RIGOR@@", json.dumps(rigor_sum, separators=(",", ":")))
        .replace("@@RULES@@", RULES_HTML)
        .replace("@@UNIV@@", f"{len(sidx):,}")
        .replace("@@RANKED@@", str(len(names_js)))

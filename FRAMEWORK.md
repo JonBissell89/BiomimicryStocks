@@ -112,7 +112,14 @@ and the 52-name list carries 14.3 effective independent bets at an average pairw
 more independent than its 62 percent health share implies. The screen's most likely false negatives are
 named (water utilities cut on growth and finances lead the near-miss frontier) and a seeded blind re-score
 sample stands as an open obligation until the false-negative rate is a number. audit_rigor.py enforces the
-vintage hash, the protocol linkage and the stability floor on every run.
+vintage hashes, the protocol supersession chain and the stability floor on every run. The layer has since
+executed its own obligations: the full 15,797-name universe vintage is frozen and tracked against
+registered universe endpoints; blind scorers re-judged the registered sample (one likely false negative,
+VMD, and one contradicted recorded score, IRS); and a blind second scoring of 8 ranked names found the gate
+perfectly reliable (8 of 8, including an independent BFLY dilution fail), totals reliable to about 6 points,
+and fine ordering within a band to be scorer noise, so tier-edge distinctions carry less confidence than
+the gate and this framework says so out loud. The page's My-portfolio view renders the current instrument
+readings from data/rigor/summary.json through the build.
 
 The hierarchy the whole engine now runs on:
 

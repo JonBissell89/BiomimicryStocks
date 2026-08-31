@@ -7,6 +7,12 @@
   "days_elapsed": 0,
   "note": "the forward test begins reporting once the track holds three weekly snapshots spanning two weeks or more; endpoints are pre-registered in evaluation_protocol.json"
  },
+ "universe": {
+  "status": "accruing",
+  "names_in_vintage": 15797,
+  "priced": 9982,
+  "note": "universe IC and advanced-minus-cut spread report once two monthly snapshots exist; endpoints pre-registered"
+ },
  "momentum_contamination": {
   "spearman_score_vs_trailing_year_return": -0.244,
   "names": 52,

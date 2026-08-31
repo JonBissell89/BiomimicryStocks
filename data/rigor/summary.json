@@ -1,0 +1,42 @@
+{
+ "asof": "2026-08-28",
+ "items": [
+  [
+   "Pre-registered test",
+   "endpoints locked 2026-08-31; 12-month tier spread and information coefficient on the frozen 2026-08-28 vintage, the whole 15,797-name universe included, the basket against the S&P stated either way"
+  ],
+  [
+   "Forward test, 53 ranked",
+   "accruing, day 0 of 365; one look per week"
+  ],
+  [
+   "Forward test, full universe",
+   "accruing; every one of the 15,797 first-screen judgments faces the same clock"
+  ],
+  [
+   "Momentum contamination",
+   "score vs trailing-year return, Spearman -0.24 over 52 names: the rubric is not last year's winners in a lab coat"
+  ],
+  [
+   "Weights vs measurement",
+   "1,000 weight perturbations, rank stability 0.995: the measurement, not the weights, produces the order. Cronbach alpha 0.47: six measures, six properties"
+  ],
+  [
+   "Independent bets",
+   "14.3 effective bets across 52 names, average pairwise correlation 0.08: more independent wagers than the health share implies"
+  ],
+  [
+   "Blind second scorer",
+   "gate verdicts 8 of 8; totals within 6.2 of 100; fine ordering inside the noise floor, so tier edges deserve less confidence than the gate"
+  ],
+  [
+   "Screen error bar",
+   "12 registered cuts blind re-scored: agreement rho 0.66, one likely false negative found (VMD) and one recorded score contradicted (IRS)"
+  ],
+  [
+   "Attribution",
+   "internal only: 94% of basket variance is the market plus the health tilt; the external factor test is registered and pending, so it cannot be quietly dropped"
+  ]
+ ],
+ "note": "every line is a current instrument reading from data/rigor/, derived and audited; none is a claim"
+}

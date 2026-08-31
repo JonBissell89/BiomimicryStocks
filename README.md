@@ -130,15 +130,33 @@ The score's own quality is measured, not asserted, in [`data/rigor/`](data/rigor
 - **Coverage**: the near-miss frontier (topped by water utilities cut on growth and finances) and a seeded
   blind re-score sample that stands as an open obligation until the false-negative rate is measured.
 
-`audit_rigor.py` enforces all of it: the vintage hash, the protocol linkage, track ordering, freshness, and
-a floor under rank stability.
+Executed since registration:
+
+- **The whole universe faces the clock.** All 15,797 first-screen judgments are frozen and hash-locked, a
+  monthly universe price track runs beside the weekly ranked one, and the protocol (v2, superseding v1 with
+  v1 preserved and hashed) registers universe endpoints: an information coefficient across every priced
+  name, and the advanced-minus-cut spread, published either way.
+- **The blind re-score happened.** Three independent blind scorers re-judged the registered 12-name sample
+  from web research alone: agreement rho 0.66, one likely false negative found (VMD, home respiratory care
+  growing about 25 percent a year, cut at the first screen) and one recorded score contradicted (IRS, a
+  mall operator recorded at 42 against the engine's own rent-extraction pricing).
+- **A blind second scorer re-scored 8 ranked names on the six measures.** Gate verdicts agreed 8 of 8,
+  including an independent BFLY fail on dilution; totals agreed within about 6 points of 100; and the fine
+  ordering inside a 16-point band proved to be scorer noise, so tier edges deserve less confidence than the
+  gate, and the framework now says so.
+- **Attribution, internal:** 94 percent of basket variance is the internal market plus the health tilt; the
+  external factor test could not be run from the build environment and is registered as pending so it
+  cannot be quietly dropped.
+
+`audit_rigor.py` enforces all of it: both vintage hashes, the protocol supersession chain, track ordering,
+freshness, the registered sample sizes, and a floor under rank stability.
 
 - **Monthly**: the judgment run. Gates re-checked against filings, tripwires, score and
   tier changes on verified facts. The only thing allowed to change a score.
 
 Verification chain, all of which must pass before anything publishes:
 `collect_imbalance.py` then `derive_imbalance.py` then `audit_imbalance.py` then
-`track_prices.py` then `report_card.py` then `audit_rigor.py` then `audit_engine_v2.py` then `refresh_app.py` then `check_page.py`, `check_structure.py`,
+`track_prices.py` then `universe_vintage.py` then `report_card.py` then `rigor_summary.py` then `audit_rigor.py` then `audit_engine_v2.py` then `refresh_app.py` then `check_page.py`, `check_structure.py`,
 and `validate_console.js`.
 
 ## The page

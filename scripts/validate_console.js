@@ -182,6 +182,10 @@ setTimeout(() => {
         '| springs on rows:', (im.match(/>spring /g) || []).length,
         '| turn = distance x pressure x access x coupling:', okTurn);
       const okAdhere = imb.systems.every(s => s.measured && s.measured.movement === s.direction);
+      const rg = ctx.$('rigorbox').innerHTML;
+      console.log('  report card on the page:', (rg.match(/<dt>/g) || []).length,
+        'readings | pre-registered test named:', rg.indexOf('Pre-registered test') >= 0,
+        '| universe faces the clock:', rg.indexOf('15,797') >= 0);
       console.log('  measurements shown:', (im.match(/Measured, from the record/g) || []).length,
         '| every label matches its measurement:', okAdhere);
       // The About table is the ranking and nothing else: no picking, no holdings,

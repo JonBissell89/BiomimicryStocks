@@ -52,35 +52,12 @@
     "horizon": "2028-08-28",
     "success": "median access rises while pressure components are held to re-researched evidence"
    }
-  ],
-  "universe": [
-   {
-    "metric": "Spearman information coefficient, frozen first-screen score vs forward return, across every priced name in the universe vintage (about 9,982 of 15,797)",
-    "vintage_sha256": "5e5793dcbd35503dc51477f03956ab00b78059734551f90e07cec8e2dfc67c31",
-    "horizon": "2027-08-28",
-    "success": "greater than 0.03; the screen's judgment of the whole universe must carry information, not only its top 53"
-   },
-   {
-    "metric": "advanced-minus-cut spread: mean forward return of stages R, 3 and 4 minus stages 0 and 2, size-unweighted",
-    "horizon": "2027-08-28",
-    "success": "stated either way; a negative spread is evidence against the screen and will be published as such"
-   }
-  ],
-  "pending_external": {
-   "metric": "attribution of basket returns to size, value, quality and momentum factors (French library or ETF proxies)",
-   "status": "data source unreachable from the build environment; registered so it cannot be quietly dropped",
-   "success": "the thesis survives only if alpha remains after factor loadings"
-  }
+  ]
  },
  "discipline": [
   "no endpoint, horizon, or success threshold changes after registration; corrections require a new registration that supersedes and preserves this one",
   "weights and tier bands stay frozen for the evaluation window; the derivation layer may keep correcting labels, since labels obey measurements",
   "one look per week when the price track updates; no intraweek peeking",
   "the momentum contamination check is reported alongside every forward reading"
- ],
- "supersedes": {
-  "file": "evaluation_protocol_v1.json",
-  "sha256": "fedb355f1bf792389d6350cdb9da1a498966cbf6b785410c41422ab8e2082c53",
-  "reason": "adds universe-level endpoints and registers the pending external factor test; every v1 endpoint is preserved unchanged"
- }
+ ]
 }
