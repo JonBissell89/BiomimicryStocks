@@ -59,18 +59,28 @@ roughly 30 percent against a boundary near 10.
 
 **The counterforce, and why the clock is not a guess (added Aug 31, 2026).** Whenever a system moves in
 one direction, the counterforce against that movement gathers as it goes: the wolves' hunger grows with
-every deer eaten, and the hunger is what flips the momentum. Distance alone cannot say when a flip comes,
-so every stock carries a counterforce reading: the named restoring mechanisms, their strength (0 to 3, from
-none-on-a-human-clock to a compounding learning curve or automatic price signal), and their coupling
-(whether the counterforce grows with the excursion, stays flat, or is eroded by it). From these a **turn
-pressure** is derived: distance x strength x coupling, ceiling 36. High distance with high turn pressure is
-a compressed spring, a flip near and predictable; high distance with low turn pressure is the dangerous
-reading, an excursion that can run much further before anything turns it. On the current map biological
-diversity is the second kind (324 of 486 out, turn pressure 4 of 36: extinction has no price signal, so its
-spring must be built), while usable energy access is the first (turn pressure 18: solar and storage on a
-learning curve pulled by the deficit itself). This is the company engine's measure C, the loop, applied one
-level up: the same physics at both altitudes. The clock in every entry is a reading of the counterforce,
-not a date pulled from air.
+every deer eaten, and the hunger is what flips the momentum. But pressure alone does not decide the flip;
+access to the alternative does, so the counterforce is two measured things. **Pressure** (0 to 3) is the
+signal pushing back: a scarcity price, a damage bill, a liability, hunger itself. **Access** (0 to 3) is
+the reachability of the path the system could take instead: 0 means no alternative exists, 3 means the
+alternative sits at or below parity and is scaling. Access decides which arm the correction takes. With an
+accessible alternative the flip is a managed return; without one it is the die-off arm. The wolves have no
+second prey, so their correction is a crash. The makers of CFCs had substitutes at comparable cost, so
+ozone's correction was a treaty. Access is also where technology enters the equation: as general capability
+rises, AI and automation raise access across many systems at once, which is the convergence hypothesis
+acting inside the counterforce, and it makes that hypothesis locally testable: if it is true, turn
+pressures across the map should rise over the coming years even where pressure holds still.
+
+From these a **turn pressure** is derived: distance x pressure x access x coupling (whether the
+counterforce grows with the excursion, stays flat, or is eroded by it), ceiling 108. High distance with
+high turn pressure is a compressed spring: a flip near, predictable, and headed for a managed return; the
+top of the current map is greenhouse gases at 36, whose substitutes are at parity and compounding. High
+distance with low turn pressure is the dangerous reading: biological diversity sits 324 of 486 out with a
+turn pressure of 4, because extinction has no price signal and no substitute exists for a species, so its
+spring must be built rather than waited for. Shelter's split is diagnostic in the other direction:
+pressure 2, access 1, the deficit that persists because the alternative barely exists, not because nobody
+feels it. This is the company engine's measure C, the loop, applied one level up; the clock in every entry
+is a reading of the counterforce, not a date pulled from air.
 
 The hierarchy the whole engine now runs on:
 
