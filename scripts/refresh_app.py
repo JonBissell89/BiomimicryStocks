@@ -18,6 +18,7 @@ OUT = (os.path.join(BUILD, "bs_console.html"))
 eng = json.load(open(os.path.join(DATA, "engine_tiers.json"), encoding="utf-8"))
 state = json.load(open(os.path.join(DATA, "paper_state.json"), encoding="utf-8"))
 sidx = json.load(open(os.path.join(DATA, "search_index.json"), encoding="utf-8"))
+imb_map = json.load(open(os.path.join(DATA, "imbalance_map.json"), encoding="utf-8"))
 # Prices for the whole searchable universe, so a visitor can buy companies that
 # never made the list. Names without a price are addable but not buyable.
 try:
@@ -499,6 +500,24 @@ tr.picked td{background:var(--accent-soft)}
   input,select,button{font-size:16px}
 }
 .msg{font-family:var(--mono);font-size:12.5px;color:var(--warn);min-height:17px;margin:5px 0}
+.imbhead{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:16px 0 6px}
+.imbrow{display:flex;width:100%;text-align:left;align-items:center;gap:10px;padding:10px 12px;min-height:44px;
+  border:1px solid var(--line);border-radius:7px;background:var(--card);margin:0 0 6px;cursor:pointer;font-size:13.5px;color:var(--ink)}
+.imbrow .sev{font-family:var(--mono);font-weight:600;min-width:30px;text-align:right}
+.imbrow .sevbar{height:4px;background:var(--chipbg);border-radius:2px;flex:0 0 56px;overflow:hidden}
+.imbrow .sevbar i{display:block;height:100%;background:var(--warn)}
+.imbrow .nm2{font-weight:600;flex:1 1 auto;min-width:0}
+.imbrow .dir{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.05em}
+.dir-worsening{color:var(--bad)}.dir-stable{color:var(--muted)}.dir-improving{color:var(--good)}
+.imbrow .nco{font-family:var(--mono);font-size:10.5px;color:var(--muted)}
+.imbx{border:1px solid var(--line);border-top:0;border-radius:0 0 7px 7px;margin:-7px 0 8px;padding:6px 14px 12px;background:var(--card);font-size:13px}
+.imbx dl{margin:0}
+.imbx dt{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:9px}
+.imbx dd{margin:2px 0 0}
+.imbco{display:inline-block;margin:5px 6px 0 0;padding:7px 10px;min-height:34px;border:1px solid var(--line);
+  border-radius:6px;background:var(--chipbg);font-family:var(--mono);font-size:12px;cursor:pointer;color:var(--ink)}
+pre.hier{font-family:var(--mono);font-size:12px;line-height:1.75;overflow-x:auto;border:1px solid var(--line);
+  border-radius:7px;padding:12px 16px;background:var(--card);margin:10px 0 16px}
 .note{background:var(--warn-soft);border-left:3px solid var(--warn);padding:10px 14px;border-radius:0 5px 5px 0;margin:14px 0;max-width:84ch;font-size:12.5px;color:var(--ink)}
 .pos{color:var(--good)} .neg{color:var(--bad)}
 .money-line{font-family:var(--mono);font-size:12.5px;color:var(--muted);margin:6px 0;max-width:none}
@@ -569,8 +588,46 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
 <div class="view" id="v-list">
 <section class="hero" id="what">
   <p class="step">What this is</p>
-  <h1>An algorithm that asks of every public company one question: is it moving its system toward balance, or away from it?</h1>
-  <p class="lede">Most stock screens measure momentum: what is going up, what is growing fastest, what the crowd already likes. This one measures something different, and the difference comes from how natural systems actually behave.</p>
+  <h1>An engine that measures where civilization is furthest from balance, which way each system must move to correct, and which public companies accelerate that correction.</h1>
+  <p class="lede">It is not looking for good companies; there is no such measurement. It starts one level above companies, with the species itself, and only reaches the ranked table at the end of a chain that begins with the planet.</p>
+</section>
+
+<section id="observer">
+  <p class="step">Step 0 &middot; The diagnosis</p>
+  <h2>Imagine a scientist discovering Homo sapiens for the first time</h2>
+  <p>A scientist walks into a rainforest and finds a species never described before. The scientist does not know its currencies, its political parties, its stock markets or its industries, and does not ask about them. They measure what ecology measures for any organism: population, energy use, resource flows, waste streams, habitat modification, cooperation, competition, and the feedback loops created by its tools. Then they ask the question ecology always asks: <b>is this species moving toward a relationship with its environment that can persist?</b></p>
+  <p>Seen from outside, Homo sapiens consumes energy and matter, occupies habitat, moves resources, produces waste, modifies its niche, reproduces, cooperates, competes, builds networks, stores information, and grows external organs in the form of tools and technology. Civilization is a metabolism. Money is not the underlying system; it is an information layer the species built to coordinate access to energy, matter, labour, land and time. Technology has let the species push many natural feedbacks further away in time. That does not eliminate the feedback. It accumulates it.</p>
+  <p>So the first question this engine asks has nothing to do with companies: <b>where is the metabolism of Homo sapiens furthest from a stable regenerative state?</b></p>
+  <p>Balance is a safe range, not a minimum, and less is not automatically better. A system can sit outside its range because the species takes too much of something, produces too much of something, regenerates too little of it, or because an essential need stays undersupplied while plenty is consumed getting it wrong. That gives two failure forms, and the map below tracks both:</p>
+  <div class="dims">
+    <div class="dim"><span class="w">&#8599;</span><span class="d"><b>Ecological overshoot.</b> Human throughput exceeds the regenerative or assimilative capacity of the surrounding system.</span></div>
+    <div class="dim"><span class="w">&#8601;</span><span class="d"><b>Provisioning deficit.</b> The system fails to provide an essential human need adequately despite consuming substantial resources.</span></div>
+  </div>
+  <p>The future lies where both shrink at once: <b>more human need satisfied with less energy, material extraction, waste, scarcity and ecological disruption.</b> That is the bridge between biomimicry and a resource-based economy, and nothing on this page treats it as guaranteed.</p>
+  <p>Wherever science provides a quantitative control variable, the map uses it instead of opinion. Seven of nine planetary-boundary processes currently sit outside their safe operating space. Extinctions run above 100 per million species-years against a boundary below 10. Human appropriation of net primary production is roughly 30 percent against a boundary near 10. Those are exactly the numbers an ecologist observing Homo sapiens from outside the species would write down.</p>
+
+  <h3>Where civilization is furthest from balance</h3>
+  <p>Each row is a civilization-scale stock. Severity is its distance from equilibrium: distance from the safe range x load-bearing importance x rate of divergence x scale of exposure x irreversibility, on a 0 to 100 scale. Open any row for the full chain: state, direction, the physical flows causing it, the required correction, the clock that correction runs on, and the public companies in this universe attached to it. The imbalance is established first and exists whether or not any company serves it; a correction with no company yet is listed as exactly that.</p>
+  <div id="imbmap"></div>
+  <p class="legend">Severity reads distance from equilibrium, not moral urgency and not a prediction. Stratospheric ozone stays on the map at zero as the one completed global correction, proof that direction is not one-way. Definitions, anchors and sources live in the engine repository, and the map is re-researched, not assumed.</p>
+
+  <p style="margin-top:18px">The whole engine runs on one ordering, and the ordering is the discipline: nothing to the right is examined until everything to its left is established. This is what keeps it from discovering an attractive company first and rationalizing why it matters afterward. The imbalance must exist independently of the company.</p>
+  <pre class="hier">PLANET / CIVILIZATION
+  &rarr; IMBALANCE
+    &rarr; STOCK
+      &rarr; PHYSICAL FLOW CAUSING THE IMBALANCE
+        &rarr; REQUIRED CORRECTION
+          &rarr; COMPANY / TECHNOLOGY
+            &rarr; MEASURED CORRECTION PER DOLLAR OF REVENUE
+              &rarr; SELF-DAMPING OR SELF-AMPLIFYING LOOP
+                &rarr; SURVIVABILITY
+                  &rarr; INVESTMENT</pre>
+
+  <h3>The convergence hypothesis, stated so it can fail</h3>
+  <p>Underneath the map sits one falsifiable question, and this site is an instrument for testing it: <b>as technological capability increases, does civilization systematically move toward greater abundance of essential outcomes while requiring less scarce material, energy and human labour per outcome?</b></p>
+  <p>The mechanisms that would drive it are each measurable on their own curve. AI lowers the cost of intelligence and coordination. Automation lowers the labour required per unit of production. Renewable and advanced energy systems lower the resource cost of usable energy. Precision agriculture and biological systems lower inputs per unit of nutrition. Closed-loop manufacturing lowers virgin material demand. Distributed production lowers transportation and coordination requirements. Preventive and regenerative medicine lowers the resources required to maintain health. If these converge, economic organization can shift from maximizing resource throughput toward maximizing useful human outcomes per unit of physical resource consumed.</p>
+  <p>If the hypothesis is right, companies that make essential outcomes cheaper, more abundant, regenerative, distributed and resource-efficient should progressively capture larger physical and economic flows, and the tracked record on this site should show it. If it is wrong, the same record should eventually demonstrate that too. Either answer is the experiment working.</p>
+  <div class="note"><b>The governing rule for everything here:</b> do not predict the future by extrapolating markets. Measure the imbalance. Determine the direction the physical system must move to resolve it. Measure the clock. Then find the mechanisms carrying civilization in that direction. The crystal ball is not a prediction. The crystal ball is the distance from equilibrium.</div>
 </section>
 
 <section id="why">
@@ -823,6 +880,7 @@ const NAMES=@@NAMES@@;
 const SIDX=window.__SIDX||{};
 const PX=window.__PX||{};
 const SPARK=window.__SPARK||{};
+const IMB=@@IMBALANCE@@;
 // A year of weekly closes as one small path. Green when the year is up, red when
 // it is down, judged on the same series that is drawn, so the colour cannot
 // disagree with the line.
@@ -1433,6 +1491,49 @@ $('sortsel').addEventListener('change',()=>{ui.sort=$('sortsel').value;render();
 function pushUI(){$('mktsel').value=ui.mkt||'all';$('spend').value=ui.spend||'';
   $('capsel').value=String(ui.cap);$('scorepol').value=String(ui.minScore);
   $('sortsel').value=ui.sort;}
+// ---- layer 0: the civilization imbalance map -------------------------------
+// Rendered from IMB, which the build injects from data/imbalance_map.json.
+// The diagnosis comes first; companies appear only at the end of each chain,
+// which is the ordering the whole engine runs on.
+function imbChip(tk){
+  const n=rec(tk);if(!n)return '';
+  return '<button class="imbco" data-imbco="'+tk+'" title="Open the company detail">'+
+    tk+' &middot; '+n[F.sc]+' &middot; '+String(n[F.tier]).toUpperCase()+'</button>';
+}
+function renderImbalance(){
+  const el=$('imbmap');if(!el||typeof IMB==='undefined')return;
+  const grp=[['earth','Earth-system stocks'],['provisioning','Human provisioning stocks']];
+  el.innerHTML=grp.map(function(g){
+    const rows=IMB.systems.filter(s=>s.cls===g[0]).sort((a,b)=>b.severity.score-a.severity.score);
+    return '<div class="imbhead">'+g[1]+'</div>'+rows.map(function(s){
+      const co=s.tickers.map(imbChip).join('')||
+        '<i>No public company in this universe clears the screen on this correction yet. The imbalance is recorded anyway; it exists without one.</i>';
+      return '<button class="imbrow" data-imb="'+s.id+'" aria-expanded="false" aria-controls="imbx_'+s.id+'">'+
+        '<span class="sev">'+s.severity.score+'</span>'+
+        '<span class="sevbar"><i style="width:'+Math.max(2,s.severity.score)+'%"></i></span>'+
+        '<span class="nm2">'+s.name+'</span>'+
+        '<span class="dir dir-'+s.direction+'">'+s.direction+'</span>'+
+        '<span class="nco">'+(s.tickers.length?s.tickers.length+' co':'gap')+'</span></button>'+
+        '<div class="imbx" id="imbx_'+s.id+'" hidden><dl>'+
+        '<dt>Stock</dt><dd>'+s.stock+'</dd>'+
+        '<dt>Safe range</dt><dd>'+s.safe_range+'</dd>'+
+        '<dt>State</dt><dd>'+s.state+'</dd>'+
+        '<dt>Distance from equilibrium</dt><dd>'+s.distance_note+'</dd>'+
+        '<dt>Direction</dt><dd>'+s.direction+' &middot; '+(s.form==='both'?'overshoot and deficit at once':s.form)+'</dd>'+
+        '<dt>Physical flows causing it</dt><dd>'+s.cause+'</dd>'+
+        '<dt>Required correction</dt><dd>'+s.correction+'</dd>'+
+        '<dt>Correction clock</dt><dd>'+s.clock+'</dd>'+
+        '<dt>Companies on this correction</dt><dd>'+co+'</dd>'+
+        '</dl></div>';
+    }).join('');
+  }).join('');
+  el.querySelectorAll('button[data-imb]').forEach(function(b){
+    b.onclick=function(){const x=$('imbx_'+b.dataset.imb);if(!x)return;
+      x.hidden=!x.hidden;b.setAttribute('aria-expanded',String(!x.hidden));};});
+  el.querySelectorAll('button[data-imbco]').forEach(function(b){
+    b.onclick=function(e){e.stopPropagation();openDetail(b.dataset.imbco);};});
+}
+
 // nav, hash routing and the modal
 document.querySelectorAll('nav a.tab').forEach(function(a){
   a.onclick=function(e){e.preventDefault();showView(a.dataset.view,true);};});
@@ -1441,12 +1542,13 @@ document.querySelectorAll('#modal [data-close]').forEach(function(el){el.onclick
 document.addEventListener('keydown',function(e){
   if(e.key==='Escape'&&!$('modal').hidden)closeDetail();});
 
-ui=uiLoad();autoFund();snapshotMine();pushUI();showView(currentView(),false);
+ui=uiLoad();autoFund();snapshotMine();pushUI();renderImbalance();showView(currentView(),false);
 </script>
 """
 
 tpl = (TEMPLATE
        .replace("@@NAMES@@", json.dumps(names_js))
+       .replace("@@IMBALANCE@@", json.dumps(imb_map, separators=(",", ":")))
        .replace("@@RULES@@", RULES_HTML)
        .replace("@@UNIV@@", f"{len(sidx):,}")
        .replace("@@RANKED@@", str(len(names_js)))

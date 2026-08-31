@@ -49,7 +49,7 @@ sandbox.window.localStorage = localStorage;
 vm.createContext(sandbox);
 
 try {
-  const EXPORT = ';globalThis.__X={NAMES:typeof NAMES!=="undefined"?NAMES:null,SIDX:typeof SIDX!=="undefined"?SIDX:null,ui:typeof ui!=="undefined"?ui:null,trade:typeof trade!=="undefined"?trade:null,lookup:typeof lookup!=="undefined"?lookup:null,render:typeof render!=="undefined"?render:null,myCard:typeof myCard!=="undefined"?myCard:null,quickPick:typeof quickPick!=="undefined"?quickPick:null,pickedList:typeof pickedList!=="undefined"?pickedList:null,basketPlan:typeof basketPlan!=="undefined"?basketPlan:null,buyBasket:typeof buyBasket!=="undefined"?buyBasket:null,gateOf:typeof gateOf!=="undefined"?gateOf:null,snapshotMine:typeof snapshotMine!=="undefined"?snapshotMine:null,MARK:typeof MARK!=="undefined"?MARK:null,PX:typeof PX!=="undefined"?PX:null,allRows:typeof allRows!=="undefined"?allRows:null,rec:typeof rec!=="undefined"?rec:null,F:typeof F!=="undefined"?F:null,marketOf:typeof marketOf!=="undefined"?marketOf:null,mineAdded:typeof mineAdded!=="undefined"?mineAdded:null,buyAllocation:typeof buyAllocation!=="undefined"?buyAllocation:null,renderBoard:typeof renderBoard!=="undefined"?renderBoard:null,"$":typeof $!=="undefined"?$:null};';
+  const EXPORT = ';globalThis.__X={NAMES:typeof NAMES!=="undefined"?NAMES:null,SIDX:typeof SIDX!=="undefined"?SIDX:null,ui:typeof ui!=="undefined"?ui:null,trade:typeof trade!=="undefined"?trade:null,lookup:typeof lookup!=="undefined"?lookup:null,render:typeof render!=="undefined"?render:null,myCard:typeof myCard!=="undefined"?myCard:null,quickPick:typeof quickPick!=="undefined"?quickPick:null,pickedList:typeof pickedList!=="undefined"?pickedList:null,basketPlan:typeof basketPlan!=="undefined"?basketPlan:null,buyBasket:typeof buyBasket!=="undefined"?buyBasket:null,gateOf:typeof gateOf!=="undefined"?gateOf:null,snapshotMine:typeof snapshotMine!=="undefined"?snapshotMine:null,MARK:typeof MARK!=="undefined"?MARK:null,PX:typeof PX!=="undefined"?PX:null,allRows:typeof allRows!=="undefined"?allRows:null,rec:typeof rec!=="undefined"?rec:null,F:typeof F!=="undefined"?F:null,marketOf:typeof marketOf!=="undefined"?marketOf:null,mineAdded:typeof mineAdded!=="undefined"?mineAdded:null,buyAllocation:typeof buyAllocation!=="undefined"?buyAllocation:null,renderBoard:typeof renderBoard!=="undefined"?renderBoard:null,"$":typeof $!=="undefined"?$:null,IMB:typeof IMB!=="undefined"?IMB:null,renderImbalance:typeof renderImbalance!=="undefined"?renderImbalance:null};';
   scripts.forEach((sc,i)=>vm.runInContext(i===scripts.length-1? sc+EXPORT : sc, sandbox, { timeout: 20000 }));
   console.log('PARSE+RUN: ok');
 } catch (e) {
@@ -146,6 +146,21 @@ setTimeout(() => {
         '| no buying from the list:', body.indexOf('data-buy') < 0
           && body.indexOf('data-sell') < 0 && body.indexOf('id="amt_') < 0,
         '| no duplicate add row in table:', body.indexOf('jumpadd') < 0);
+      // Layer 0 must be present, rendered, and correlated: 21 systems, the
+      // required-correction chain visible, every company chip a real ticker,
+      // and the no-company gaps stated rather than hidden.
+      const imb = ctx.IMB, im = ctx.$('imbmap').innerHTML;
+      const rows = (im.match(/data-imb="/g) || []).length;
+      const chips = [...im.matchAll(/data-imbco="([A-Z0-9]+)"/g)].map(m => m[1]);
+      const known = new Set(ctx.NAMES.map(n => n[0]));
+      const mapped = new Set(imb ? imb.systems.flatMap(s => s.tickers) : []);
+      console.log('layer 0 -> systems in data:', imb && imb.systems.length,
+        '| rows rendered:', rows,
+        '| chain shown:', im.indexOf('Required correction') >= 0 && im.indexOf('Correction clock') >= 0);
+      console.log('  company chips:', chips.length,
+        '| all real tickers:', chips.every(t => known.has(t)),
+        '| every company traced to an imbalance:', [...known].every(t => mapped.has(t)),
+        '| gaps stated:', (im.match(/clears the screen on this correction yet/g) || []).length);
       // The About table is the ranking and nothing else: no picking, no holdings,
       // no filter on what you own. This kept creeping back, so it is asserted.
       console.log('  no portfolio state on About:',
