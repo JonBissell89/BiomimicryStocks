@@ -49,7 +49,7 @@ sandbox.window.localStorage = localStorage;
 vm.createContext(sandbox);
 
 try {
-  const EXPORT = ';globalThis.__X={NAMES:typeof NAMES!=="undefined"?NAMES:null,SIDX:typeof SIDX!=="undefined"?SIDX:null,ui:typeof ui!=="undefined"?ui:null,trade:typeof trade!=="undefined"?trade:null,lookup:typeof lookup!=="undefined"?lookup:null,render:typeof render!=="undefined"?render:null,myCard:typeof myCard!=="undefined"?myCard:null,quickPick:typeof quickPick!=="undefined"?quickPick:null,pickedList:typeof pickedList!=="undefined"?pickedList:null,basketPlan:typeof basketPlan!=="undefined"?basketPlan:null,buyBasket:typeof buyBasket!=="undefined"?buyBasket:null,gateOf:typeof gateOf!=="undefined"?gateOf:null,snapshotMine:typeof snapshotMine!=="undefined"?snapshotMine:null,MARK:typeof MARK!=="undefined"?MARK:null,PX:typeof PX!=="undefined"?PX:null,allRows:typeof allRows!=="undefined"?allRows:null,rec:typeof rec!=="undefined"?rec:null,F:typeof F!=="undefined"?F:null,marketOf:typeof marketOf!=="undefined"?marketOf:null,mineAdded:typeof mineAdded!=="undefined"?mineAdded:null,buyAllocation:typeof buyAllocation!=="undefined"?buyAllocation:null,renderBoard:typeof renderBoard!=="undefined"?renderBoard:null,"$":typeof $!=="undefined"?$:null,IMB:typeof IMB!=="undefined"?IMB:null,renderImbalance:typeof renderImbalance!=="undefined"?renderImbalance:null};';
+  const EXPORT = ';globalThis.__X={NAMES:typeof NAMES!=="undefined"?NAMES:null,SIDX:typeof SIDX!=="undefined"?SIDX:null,ui:typeof ui!=="undefined"?ui:null,trade:typeof trade!=="undefined"?trade:null,lookup:typeof lookup!=="undefined"?lookup:null,render:typeof render!=="undefined"?render:null,myCard:typeof myCard!=="undefined"?myCard:null,quickPick:typeof quickPick!=="undefined"?quickPick:null,pickedList:typeof pickedList!=="undefined"?pickedList:null,basketPlan:typeof basketPlan!=="undefined"?basketPlan:null,buyBasket:typeof buyBasket!=="undefined"?buyBasket:null,gateOf:typeof gateOf!=="undefined"?gateOf:null,snapshotMine:typeof snapshotMine!=="undefined"?snapshotMine:null,MARK:typeof MARK!=="undefined"?MARK:null,PX:typeof PX!=="undefined"?PX:null,allRows:typeof allRows!=="undefined"?allRows:null,rec:typeof rec!=="undefined"?rec:null,F:typeof F!=="undefined"?F:null,marketOf:typeof marketOf!=="undefined"?marketOf:null,mineAdded:typeof mineAdded!=="undefined"?mineAdded:null,buyAllocation:typeof buyAllocation!=="undefined"?buyAllocation:null,renderBoard:typeof renderBoard!=="undefined"?renderBoard:null,"$":typeof $!=="undefined"?$:null,IMB:typeof IMB!=="undefined"?IMB:null,IMBSERIES:typeof IMBSERIES!=="undefined"?IMBSERIES:null,renderImbalance:typeof renderImbalance!=="undefined"?renderImbalance:null};';
   scripts.forEach((sc,i)=>vm.runInContext(i===scripts.length-1? sc+EXPORT : sc, sandbox, { timeout: 20000 }));
   console.log('PARSE+RUN: ok');
 } catch (e) {
@@ -165,6 +165,14 @@ setTimeout(() => {
         im.indexOf('frm-overshoot') >= 0 && im.indexOf('frm-deficit') >= 0
           && im.indexOf('dir-worsening') < 0 && im.indexOf('improving') < 0,
         '| envelopes shown:', (im.match(/Natural rhythm and envelope/g) || []).length);
+      const ids = new Set(imb.systems.map(s => s.id));
+      const okIdx = imb.systems.every(s => s.severity.index >= 0 && s.severity.index <= 486
+        && s.severity.index === Math.round(s.severity.distance * s.severity.load
+           * s.severity.rate * s.severity.exposure * s.severity.irreversibility));
+      console.log('  records over time:', Object.keys(ctx.IMBSERIES || {}).length,
+        '| every system charted:', (im.match(/class="imbchart"/g) || []).length === imb.systems.length,
+        '| series ids match:', Object.keys(ctx.IMBSERIES || {}).every(k => ids.has(k)),
+        '| index on the 486 instrument:', okIdx);
       // The About table is the ranking and nothing else: no picking, no holdings,
       // no filter on what you own. This kept creeping back, so it is asserted.
       console.log('  no portfolio state on About:',

@@ -19,6 +19,7 @@ eng = json.load(open(os.path.join(DATA, "engine_tiers.json"), encoding="utf-8"))
 state = json.load(open(os.path.join(DATA, "paper_state.json"), encoding="utf-8"))
 sidx = json.load(open(os.path.join(DATA, "search_index.json"), encoding="utf-8"))
 imb_map = json.load(open(os.path.join(DATA, "imbalance_map.json"), encoding="utf-8"))
+imb_series = json.load(open(os.path.join(DATA, "imbalance_series.json"), encoding="utf-8"))
 # Prices for the whole searchable universe, so a visitor can buy companies that
 # never made the list. Names without a price are addable but not buyable.
 try:
@@ -518,6 +519,8 @@ tr.picked td{background:var(--accent-soft)}
 .imbx dl{margin:0}
 .imbx dt{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:9px}
 .imbx dd{margin:2px 0 0}
+.imbchart{width:100%;height:auto;display:block;margin:6px 0 2px}
+.imbunit{font-family:var(--mono);font-size:10px;color:var(--muted);margin:0 0 4px}
 .imbco{display:inline-block;margin:5px 6px 0 0;padding:7px 10px;min-height:34px;border:1px solid var(--line);
   border-radius:6px;background:var(--chipbg);font-family:var(--mono);font-size:12px;cursor:pointer;color:var(--ink)}
 pre.hier{font-family:var(--mono);font-size:12px;line-height:1.75;overflow-x:auto;border:1px solid var(--line);
@@ -612,9 +615,9 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
   <p>Wherever science provides a quantitative control variable, the map uses it instead of opinion. Seven of nine planetary-boundary processes currently sit outside their safe operating space. Extinctions run above 100 per million species-years against a boundary below 10. Human appropriation of net primary production is roughly 30 percent against a boundary near 10. Those are exactly the numbers an ecologist observing Homo sapiens from outside the species would write down.</p>
 
   <h3>Where civilization is furthest from balance</h3>
-  <p>Each row is a civilization-scale stock. Severity is its distance from equilibrium: distance from the safe range x load-bearing importance x rate of divergence x scale of exposure x irreversibility, on a 0 to 100 scale. Open any row for the full chain: state, movement relative to the safe range, the natural rhythm where a record exists, the physical flows causing the excursion, the required correction, the clock that correction runs on, and the public companies in this universe attached to it. The imbalance is established first and exists whether or not any company serves it; a correction with no company yet is listed as exactly that.</p>
+  <p>Each row is a civilization-scale stock. Severity is its distance from equilibrium: distance from the safe range x load-bearing importance x rate of divergence x scale of exposure x irreversibility, on an open instrument whose ceiling of 486 is deliberately lethal. That reading would mean a load-bearing global stock past a hard limit for the species, effectively permanent, and still diverging fast; nothing on the map is anywhere near it, and the top of the scale is reserved for readings that would actually mean the species cannot live there. Open any row for the full chain: the stock's own record over time, its state, movement relative to the safe range, the natural rhythm where a record exists, the physical flows causing the excursion, the required correction, the clock that correction runs on, and the public companies in this universe attached to it. The imbalance is established first and exists whether or not any company serves it; a correction with no company yet is listed as exactly that.</p>
   <div id="imbmap"></div>
-  <p class="legend">Severity reads distance from equilibrium, not moral urgency and not a prediction. Stratospheric ozone stays on the map at zero as the one completed return: a stock that left its envelope and was brought back inside it. Definitions, anchors and sources live in the engine repository, and the map is re-researched, not assumed.</p>
+  <p class="legend">Severity reads distance from equilibrium, not moral urgency and not a prediction. None of it is a danger to the planet itself: planets have no preferred state, and Earth has run far hotter and far colder than anything here. The envelope belongs to the species, the range every system Homo sapiens depends on was built inside. Stratospheric ozone stays on the map at zero as the one completed return: a stock that left its envelope and was brought back inside it. Each chart is sampled weekly; most of the underlying science re-measures yearly or slower, so a flat stretch means the record has not updated, not that the stock stood still. Definitions, anchors and sources live in the engine repository, and the map is re-researched, not assumed.</p>
 
   <p style="margin-top:18px">The whole engine runs on one ordering, and the ordering is the discipline: nothing to the right is examined until everything to its left is established. This is what keeps it from discovering an attractive company first and rationalizing why it matters afterward. The imbalance must exist independently of the company.</p>
   <pre class="hier">PLANET / CIVILIZATION
@@ -886,6 +889,7 @@ const SIDX=window.__SIDX||{};
 const PX=window.__PX||{};
 const SPARK=window.__SPARK||{};
 const IMB=@@IMBALANCE@@;
+const IMBSERIES=@@IMBSERIES@@;
 // A year of weekly closes as one small path. Green when the year is up, red when
 // it is down, judged on the same series that is drawn, so the colour cannot
 // disagree with the line.
@@ -1505,22 +1509,62 @@ function imbChip(tk){
   return '<button class="imbco" data-imbco="'+tk+'" title="Open the company detail">'+
     tk+' &middot; '+n[F.sc]+' &middot; '+String(n[F.tier]).toUpperCase()+'</button>';
 }
+function imbFmt(v){var a=Math.abs(v);return a>=100?String(Math.round(v)):a>=10?String(Math.round(v*10)/10):String(Math.round(v*100)/100);}
+// One series per stock, drawn against its boundary and, where a record exists,
+// the envelope band its own oscillations stayed inside. Sampled weekly by the
+// engine; most assessments re-measure yearly or slower, so flat means the
+// science has not updated, not that the stock stood still.
+function imbChart(s){
+  var e=(typeof IMBSERIES!=='undefined')?IMBSERIES[s.id]:null;
+  if(!e||!e.points||!e.points.length)return '';
+  var pts=e.points.map(function(p){return [Date.parse(p[0]),p[1]];});
+  var ys=pts.map(function(p){return p[1];});
+  var lo=Math.min.apply(null,ys),hi=Math.max.apply(null,ys);
+  if(typeof e.boundary==='number'){lo=Math.min(lo,e.boundary);hi=Math.max(hi,e.boundary);}
+  if(e.band){lo=Math.min(lo,e.band[0]);hi=Math.max(hi,e.band[1]);}
+  if(hi===lo){hi+=1;lo-=1;}
+  var pd=(hi-lo)*0.08;lo-=pd;hi+=pd;
+  var x0=pts[0][0],x1=pts[pts.length-1][0];if(x1===x0)x1=x0+1;
+  var L=10,RM=66,T=10,B=20,W=340,H=112;
+  var X=function(t){return L+(t-x0)/(x1-x0)*(W-L-RM);};
+  var Y=function(v){return T+(hi-v)/(hi-lo)*(H-T-B);};
+  var svg='<svg class="imbchart" viewBox="0 0 340 112" role="img" aria-label="'+esc(e.unit)+' over time">';
+  if(e.band){svg+='<rect x="'+L+'" y="'+Y(e.band[1]).toFixed(1)+'" width="'+(W-L-RM)+
+    '" height="'+(Y(e.band[0])-Y(e.band[1])).toFixed(1)+'" fill="var(--accent-soft)" opacity="0.6"/>';}
+  var ly=Y(pts[pts.length-1][1]);
+  if(typeof e.boundary==='number'){var by=Y(e.boundary);
+    svg+='<line x1="'+L+'" y1="'+by.toFixed(1)+'" x2="'+(W-RM)+'" y2="'+by.toFixed(1)+
+      '" stroke="var(--warn)" stroke-width="1" stroke-dasharray="4 3"/>';
+    if(Math.abs(by-ly)>=11){svg+='<text x="'+(W-RM+4)+'" y="'+by.toFixed(1)+
+      '" font-size="9" fill="var(--muted)" dominant-baseline="middle" font-family="var(--mono)">edge '+imbFmt(e.boundary)+'</text>';}}
+  svg+='<path d="'+pts.map(function(p,i){return (i?'L':'M')+X(p[0]).toFixed(1)+','+Y(p[1]).toFixed(1);}).join('')+
+    '" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>';
+  var lp=pts[pts.length-1];
+  svg+='<circle cx="'+X(lp[0]).toFixed(1)+'" cy="'+ly.toFixed(1)+'" r="3" fill="var(--accent)"/>'+
+    '<text x="'+(W-RM+4)+'" y="'+ly.toFixed(1)+'" font-size="10" font-weight="600" fill="var(--ink)" dominant-baseline="middle" font-family="var(--mono)">'+imbFmt(lp[1])+'</text>'+
+    '<text x="'+L+'" y="'+(H-6)+'" font-size="9" fill="var(--muted)" font-family="var(--mono)">'+String(e.points[0][0]).slice(0,4)+'</text>'+
+    '<text x="'+(W-RM)+'" y="'+(H-6)+'" font-size="9" fill="var(--muted)" text-anchor="end" font-family="var(--mono)">'+String(e.points[e.points.length-1][0]).slice(0,4)+'</text>';
+  pts.forEach(function(p,i){svg+='<circle cx="'+X(p[0]).toFixed(1)+'" cy="'+Y(p[1]).toFixed(1)+
+    '" r="7" fill="transparent"><title>'+String(e.points[i][0]).slice(0,10)+': '+imbFmt(p[1])+'</title></circle>';});
+  svg+='</svg><div class="imbunit">'+esc(e.unit)+(e.note?' &middot; '+esc(e.note):'')+'</div>';
+  return svg;
+}
 function renderImbalance(){
   const el=$('imbmap');if(!el||typeof IMB==='undefined')return;
   const grp=[['earth','Earth-system stocks'],['provisioning','Human provisioning stocks']];
   el.innerHTML=grp.map(function(g){
-    const rows=IMB.systems.filter(s=>s.cls===g[0]).sort((a,b)=>b.severity.score-a.severity.score);
+    const rows=IMB.systems.filter(s=>s.cls===g[0]).sort((a,b)=>b.severity.index-a.severity.index);
     return '<div class="imbhead">'+g[1]+'</div>'+rows.map(function(s){
       const co=s.tickers.map(imbChip).join('')||
         '<i>No public company in this universe clears the screen on this correction yet. The imbalance is recorded anyway; it exists without one.</i>';
       return '<button class="imbrow" data-imb="'+s.id+'" aria-expanded="false" aria-controls="imbx_'+s.id+'">'+
-        '<span class="sev">'+s.severity.score+'</span>'+
-        '<span class="sevbar"><i style="width:'+Math.max(2,s.severity.score)+'%"></i></span>'+
+        '<span class="sev">'+s.severity.index+'</span>'+
+        '<span class="sevbar"><i style="width:'+Math.max(1.5,s.severity.index/486*100).toFixed(1)+'%"></i></span>'+
         '<span class="nm2">'+s.name+'</span>'+
         '<span class="frm frm-'+s.form+'">'+(s.form==='both'?'overshoot + deficit':s.form)+'</span>'+
         '<span class="mv">'+s.direction+'</span>'+
         '<span class="nco">'+(s.tickers.length?s.tickers.length+' co':'gap')+'</span></button>'+
-        '<div class="imbx" id="imbx_'+s.id+'" hidden><dl>'+
+        '<div class="imbx" id="imbx_'+s.id+'" hidden>'+imbChart(s)+'<dl>'+
         '<dt>Stock</dt><dd>'+s.stock+'</dd>'+
         '<dt>Safe range</dt><dd>'+s.safe_range+'</dd>'+
         '<dt>State</dt><dd>'+s.state+'</dd>'+
@@ -1556,6 +1600,7 @@ ui=uiLoad();autoFund();snapshotMine();pushUI();renderImbalance();showView(curren
 tpl = (TEMPLATE
        .replace("@@NAMES@@", json.dumps(names_js))
        .replace("@@IMBALANCE@@", json.dumps(imb_map, separators=(",", ":")))
+       .replace("@@IMBSERIES@@", json.dumps(imb_series["series"], separators=(",", ":")))
        .replace("@@RULES@@", RULES_HTML)
        .replace("@@UNIV@@", f"{len(sidx):,}")
        .replace("@@RANKED@@", str(len(names_js)))
