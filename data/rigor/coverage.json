@@ -155,5 +155,45 @@
    ]
   }
  },
- "reading": "the frontier names are the screen's most likely false negatives; the seeded sample is the audit that would measure the rate"
+ "reading": "the frontier names are the screen's most likely false negatives; the seeded sample is the audit that would measure the rate",
+ "blind_rescore_sample_batch2": {
+  "seed": 43,
+  "registered": "2026-08-31",
+  "status": "registered before any result; scored by independent blind scorers",
+  "picks": {
+   "0": [
+    "ACRG",
+    "FRZCF",
+    "TFSL",
+    "WLFC"
+   ],
+   "2": [
+    "CLPXY",
+    "ECX",
+    "PSTNY",
+    "TNJIF"
+   ],
+   "3": [
+    "LYPHF",
+    "MTRJF",
+    "RDNT",
+    "RNW"
+   ]
+  }
+ },
+ "reliability_sample_batch2": {
+  "seed": 8,
+  "registered": "2026-08-31",
+  "status": "registered before any result",
+  "picks": [
+   "AHICF",
+   "BIRMF",
+   "NTRA",
+   "TMDX",
+   "GKOS",
+   "ENGCF",
+   "TSNLF",
+   "TOELY"
+  ]
+ }
 }
