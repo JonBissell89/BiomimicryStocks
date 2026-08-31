@@ -27,7 +27,7 @@
    "exposure": "1 regional, 2 multi-regional, 3 global",
    "irreversibility": "1 reversible in years, 2 decades, 3 centuries or effectively permanent"
   },
-  "note": "the exact calculation is expected to evolve as evidence accumulates; what is fixed is the separation of STATE, MOVEMENT, FLOW, CORRECTION, CLOCK and COMPANIES, in that order, and that movement is stated as position relative to the safe range, never as better or worse",
+  "note": "the exact calculation is expected to evolve as evidence accumulates; what is fixed is the separation of STATE, MOVEMENT, FLOW, COUNTERFORCE, CORRECTION, CLOCK and COMPANIES, in that order, and that movement is stated as position relative to the safe range, never as better or worse",
   "ceiling": 486
  },
  "_hypothesis": {
@@ -91,7 +91,17 @@
     "CP",
     "UNP"
    ],
-   "envelope": "CO2 breathed between 180 and 300 ppm through every glacial cycle of the last 800,000 years of ice cores; the current excursion is outside that envelope in level and roughly 100x outside it in speed"
+   "envelope": "CO2 breathed between 180 and 300 ppm through every glacial cycle of the last 800,000 years of ice cores; the current excursion is outside that envelope in level and roughly 100x outside it in speed",
+   "counterforce": {
+    "strength": 3,
+    "coupling": "grows",
+    "mechanisms": "substitution economics (solar, wind and storage on compounding learning curves), damage-cost feedback through insurance and disaster losses, policy and legal pressure; the natural sinks absorb roughly half the flow but weaken as they warm",
+    "evidence": "solar and battery costs fell about 90 percent in a decade, making new clean electricity the cheapest in history; every further ppm strengthens the damage signal that funds the substitution"
+   },
+   "turn": {
+    "value": 12,
+    "ceiling": 36
+   }
   },
   {
    "id": "biosphere",
@@ -124,7 +134,17 @@
    "tickers": [
     "MHGVY"
    ],
-   "envelope": "background extinction runs near 0.1 to 1 E/MSY, punctuated by rare pulses; the die-off arm of the rhythm is real, but the current rate is a sustained pulse, not a beat"
+   "envelope": "background extinction runs near 0.1 to 1 E/MSY, punctuated by rare pulses; the die-off arm of the rhythm is real, but the current rate is a sustained pulse, not a beat",
+   "counterforce": {
+    "strength": 1,
+    "coupling": "flat",
+    "mechanisms": "protected-area commitments, restoration economics, biodiversity liability; none of it automatic",
+    "evidence": "extinction carries no price signal, so the counterforce must be built by policy rather than emerging from the excursion itself; this is the map's furthest-out stock with its weakest spring"
+   },
+   "turn": {
+    "value": 4,
+    "ceiling": 36
+   }
   },
   {
    "id": "hanpp",
@@ -158,7 +178,17 @@
     "DAR",
     "MHGVY"
    ],
-   "envelope": "no single species in the record has held a third of land plant growth; there is no known oscillation that returns this appropriation on its own"
+   "envelope": "no single species in the record has held a third of land plant growth; there is no known oscillation that returns this appropriation on its own",
+   "counterforce": {
+    "strength": 2,
+    "coupling": "grows",
+    "mechanisms": "yield per hectare, protein conversion efficiency, waste-stream recovery; land scarcity raises the return on every one of them",
+    "evidence": "the dearer land becomes, the more intensification and sparing pay; precision agriculture adoption tracks input prices"
+   },
+   "turn": {
+    "value": 12,
+    "ceiling": 36
+   }
   },
   {
    "id": "forests",
@@ -189,7 +219,17 @@
    "correction": "agricultural intensity that frees land, materials that substitute for virgin timber, and regrowth protected long enough to become forest again",
    "clock": "decades to stop the loss, a century or more to regrow what was primary",
    "tickers": [],
-   "envelope": "forests burn, die and regrow on decades to centuries, and cover stayed inside that envelope until net conversion began outrunning regrowth"
+   "envelope": "forests burn, die and regrow on decades to centuries, and cover stayed inside that envelope until net conversion began outrunning regrowth",
+   "counterforce": {
+    "strength": 2,
+    "coupling": "flat",
+    "mechanisms": "secondary regrowth (real and automatic where land is released), material substitution, payments for standing forest",
+    "evidence": "regrowth works wherever pressure lifts, but the payments that would couple the counterforce to the loss remain small"
+   },
+   "turn": {
+    "value": 4,
+    "ceiling": 36
+   }
   },
   {
    "id": "freshwater",
@@ -217,7 +257,17 @@
     "WSIOF",
     "BIRMF"
    ],
-   "envelope": "rivers and soil moisture swing with seasons and decades; deep aquifers refill on centuries to millennia, so drawdown there sits outside any usable rhythm"
+   "envelope": "rivers and soil moisture swing with seasons and decades; deep aquifers refill on centuries to millennia, so drawdown there sits outside any usable rhythm",
+   "counterforce": {
+    "strength": 2,
+    "coupling": "grows",
+    "mechanisms": "pumping cost rises as the table falls (automatic), scarcity pricing, reuse and desalination economics",
+    "evidence": "every metre of drawdown raises the energy cost per litre, which is the aquifer's own hunger signal"
+   },
+   "turn": {
+    "value": 12,
+    "ceiling": 36
+   }
   },
   {
    "id": "soil",
@@ -244,7 +294,17 @@
    "tickers": [
     "DAR"
    ],
-   "envelope": "under cover, formation and erosion trade places within a narrow band; the current loss rate has no return arm on a human timescale"
+   "envelope": "under cover, formation and erosion trade places within a narrow band; the current loss rate has no return arm on a human timescale",
+   "counterforce": {
+    "strength": 2,
+    "coupling": "grows",
+    "mechanisms": "yield decline on degraded ground feeding back into farm economics; cover cropping and no-till spread where erosion has already cost yield",
+    "evidence": "degradation is self-advertising to the person who farms it, on a lag of years rather than centuries"
+   },
+   "turn": {
+    "value": 8,
+    "ceiling": 36
+   }
   },
   {
    "id": "nutrients",
@@ -278,7 +338,17 @@
     "DAR",
     "BIRMF"
    ],
-   "envelope": "biological nitrogen fixation held a stable ceiling for the whole Holocene; industry now fixes roughly twice what all natural processes combined do"
+   "envelope": "biological nitrogen fixation held a stable ceiling for the whole Holocene; industry now fixes roughly twice what all natural processes combined do",
+   "counterforce": {
+    "strength": 2,
+    "coupling": "grows",
+    "mechanisms": "fertilizer prices, diminishing yield returns to over-application, dead-zone liability and regulation",
+    "evidence": "past crop uptake, every extra kilogram is nearly pure cost; precision application pays for itself faster the higher prices go"
+   },
+   "turn": {
+    "value": 12,
+    "ceiling": 36
+   }
   },
   {
    "id": "ocean",
@@ -303,7 +373,17 @@
    "correction": "the same correction as the atmosphere: cut the CO2 flow; the ocean has no separate lever",
    "clock": "centuries; deep-ocean chemistry mixes on a millennial clock",
    "tickers": [],
-   "envelope": "surface pH swung this far before, over millennia on glacial cycles; the current swing of similar size took 150 years"
+   "envelope": "surface pH swung this far before, over millennia on glacial cycles; the current swing of similar size took 150 years",
+   "counterforce": {
+    "strength": 1,
+    "coupling": "flat",
+    "mechanisms": "none of its own on a human clock; the ocean's spring is the atmosphere's spring",
+    "evidence": "inherits whatever the CO2 counterforce achieves; deep-ocean chemistry then follows on a millennial lag"
+   },
+   "turn": {
+    "value": 2,
+    "ceiling": 36
+   }
   },
   {
    "id": "novel",
@@ -331,7 +411,17 @@
     "MBRFF",
     "BIRMF"
    ],
-   "envelope": "no natural envelope exists; these compounds have no evolutionary history at all"
+   "envelope": "no natural envelope exists; these compounds have no evolutionary history at all",
+   "counterforce": {
+    "strength": 2,
+    "coupling": "grows",
+    "mechanisms": "liability and litigation that scale with discovered harm, class bans (PFAS), destruction and containment technology",
+    "evidence": "the longer a persistent compound accumulates, the larger the liability attached to it; the counterforce arrives late but compounds"
+   },
+   "turn": {
+    "value": 8,
+    "ceiling": 36
+   }
   },
   {
    "id": "materials",
@@ -366,7 +456,17 @@
     "MBRFF",
     "DAR"
    ],
-   "envelope": "geology concentrates ores on timescales with no human rhythm; the usable envelope here is the loop civilization builds, not one nature provides"
+   "envelope": "geology concentrates ores on timescales with no human rhythm; the usable envelope here is the loop civilization builds, not one nature provides",
+   "counterforce": {
+    "strength": 2,
+    "coupling": "grows",
+    "mechanisms": "ore grades decline so virgin extraction costs rise (automatic geological counterforce), secondary supply economics, deposit-return systems",
+    "evidence": "every tonne of easy ore mined makes the recycled tonne relatively cheaper"
+   },
+   "turn": {
+    "value": 12,
+    "ceiling": 36
+   }
   },
   {
    "id": "ozone",
@@ -391,7 +491,17 @@
    "correction": "hold the phase-out; nothing new required",
    "clock": "on track; full recovery by roughly 2066",
    "tickers": [],
-   "envelope": "back inside the envelope it left; the excursion took about fifty years going out and is taking about eighty coming back"
+   "envelope": "back inside the envelope it left; the excursion took about fifty years going out and is taking about eighty coming back",
+   "counterforce": {
+    "strength": 3,
+    "coupling": "flat",
+    "mechanisms": "the Montreal Protocol phase-out, held in place",
+    "evidence": "the spring has already released; this row is what a completed flip looks like"
+   },
+   "turn": {
+    "value": 0,
+    "ceiling": 36
+   }
   },
   {
    "id": "food",
@@ -419,7 +529,17 @@
     "MHGVY",
     "BMBRF",
     "DAR"
-   ]
+   ],
+   "counterforce": {
+    "strength": 2,
+    "coupling": "flat",
+    "mechanisms": "yield and protein-efficiency curves, falling distribution cost, waste-stream recovery",
+    "evidence": "the counterforce is strong where purchasing power exists and weakly coupled where it does not; the hungriest exert the least market pull, which is why this deficit persists beside abundance"
+   },
+   "turn": {
+    "value": 6,
+    "ceiling": 36
+   }
   },
   {
    "id": "water_access",
@@ -446,7 +566,17 @@
    "tickers": [
     "WSIOF",
     "BIRMF"
-   ]
+   ],
+   "counterforce": {
+    "strength": 2,
+    "coupling": "flat",
+    "mechanisms": "treatment and desalination cost curves, metering that makes losses visible",
+    "evidence": "desalinated water now clears at well under a dollar a cubic metre where energy is cheap"
+   },
+   "turn": {
+    "value": 6,
+    "ceiling": 36
+   }
   },
   {
    "id": "shelter",
@@ -474,7 +604,17 @@
     "LEGH",
     "CODYY",
     "ENGCF"
-   ]
+   ],
+   "counterforce": {
+    "strength": 1,
+    "coupling": "flat",
+    "mechanisms": "industrialized construction and higher build productivity, so far barely realized",
+    "evidence": "construction productivity has been roughly flat for decades, which is why this deficit persists inside wealthy countries; the weakest provisioning spring on the map"
+   },
+   "turn": {
+    "value": 2,
+    "ceiling": 36
+   }
   },
   {
    "id": "energy_access",
@@ -505,7 +645,17 @@
     "WSIOF",
     "DLEGF",
     "SHLS"
-   ]
+   ],
+   "counterforce": {
+    "strength": 3,
+    "coupling": "grows",
+    "mechanisms": "solar plus storage on the steepest learning curve on the map, distributed generation that skips the grid entirely",
+    "evidence": "cost falls with every doubling of deployment, and deployment is pulled by the deficit itself; the most compressed spring on the map"
+   },
+   "turn": {
+    "value": 18,
+    "ceiling": 36
+   }
   },
   {
    "id": "healthcare",
@@ -557,7 +707,17 @@
     "DMTRF",
     "IRTC",
     "RMD"
-   ]
+   ],
+   "counterforce": {
+    "strength": 2,
+    "coupling": "flat",
+    "mechanisms": "diagnostic and prevention cost curves, care shifted from theatre to bedside to home",
+    "evidence": "sequencing and diagnostic costs collapsed while delivery models moved slowly; the technology spring is loaded, the institutional one is not"
+   },
+   "turn": {
+    "value": 6,
+    "ceiling": 36
+   }
   },
   {
    "id": "sanitation",
@@ -583,7 +743,17 @@
    "clock": "years to a decade at current build rates",
    "tickers": [
     "BIRMF"
-   ]
+   ],
+   "counterforce": {
+    "strength": 2,
+    "coupling": "flat",
+    "mechanisms": "the same build-out economics as water, plus resource recovery making waste streams worth collecting",
+    "evidence": "where the recovered water, energy and nutrients are priced, collection funds itself"
+   },
+   "turn": {
+    "value": 6,
+    "ceiling": 36
+   }
   },
   {
    "id": "transport",
@@ -615,7 +785,17 @@
     "CNI",
     "CP",
     "UNP"
-   ]
+   ],
+   "counterforce": {
+    "strength": 2,
+    "coupling": "flat",
+    "mechanisms": "logistics software cutting empty miles, electric drivetrains on battery learning curves",
+    "evidence": "the empty-mile share is pure cost, and software that removes it pays immediately"
+   },
+   "turn": {
+    "value": 4,
+    "ceiling": 36
+   }
   },
   {
    "id": "tools",
@@ -643,7 +823,17 @@
     "ENGCF",
     "TSM",
     "TOELY"
-   ]
+   ],
+   "counterforce": {
+    "strength": 3,
+    "coupling": "grows",
+    "mechanisms": "compute cost collapse, the canonical learning curve, and machines that multiply one operator's output",
+    "evidence": "capability per dollar has compounded for fifty years without pause"
+   },
+   "turn": {
+    "value": 12,
+    "ceiling": 36
+   }
   },
   {
    "id": "information",
@@ -670,7 +860,17 @@
    "tickers": [
     "TSM",
     "TOELY"
-   ]
+   ],
+   "counterforce": {
+    "strength": 3,
+    "coupling": "grows",
+    "mechanisms": "connectivity cost falling on terrestrial and satellite curves at once",
+    "evidence": "each doubling of coverage lowers the cost of the next; the offline count falls every year it is measured"
+   },
+   "turn": {
+    "value": 18,
+    "ceiling": 36
+   }
   },
   {
    "id": "infrastructure",
@@ -700,9 +900,28 @@
     "PLPC",
     "WSIOF",
     "ENGCF"
-   ]
+   ],
+   "counterforce": {
+    "strength": 2,
+    "coupling": "grows",
+    "mechanisms": "insurance repricing that scales with losses (automatic), engineering capacity multiplied by software, observability finding weak points before failure",
+    "evidence": "premiums are the damage signal arriving as a bill; they rise with every loss year and fund the hardening"
+   },
+   "turn": {
+    "value": 8,
+    "ceiling": 36
+   }
   }
  ],
  "_rhythm": "Nothing in nature holds still, and the map does not treat movement as failure. Wolves multiply until they outrun the deer; the crash feeds the deer's recovery, which feeds the wolves' recovery. Tree stocks grow, burn, die and regrow. That ebb and flow is what balance looks like, so a safe range here means the envelope a stock's own oscillations have stayed inside for as long as the record runs. A stock inside its envelope is in rhythm however fast it is moving. Imbalance is narrower and checkable: the stock has left its envelope, or is leaving it at a speed the envelope never contained. When that happens the correction still arrives, the way it arrives for the wolves; the only question the engine asks is whether it arrives as a managed return or as the die-off arm of the loop.",
- "_scale_note": "None of this is a danger to the planet itself. Planets have no preferred state, and Earth has run far hotter and far colder than anything on this map. The envelope belongs to the species: it is the range that every system Homo sapiens depends on was built inside. Distance is measured from that envelope, and the top of the scale is reserved for readings that would mean the species cannot live there."
+ "_scale_note": "None of this is a danger to the planet itself. Planets have no preferred state, and Earth has run far hotter and far colder than anything on this map. The envelope belongs to the species: it is the range that every system Homo sapiens depends on was built inside. Distance is measured from that envelope, and the top of the scale is reserved for readings that would mean the species cannot live there.",
+ "_counterforce": {
+  "doctrine": "Whenever a system moves in one direction, the counterforce against that movement is gathering as it goes: the wolves' hunger grows with every deer eaten, and the hunger is what flips the momentum. Distance alone cannot say when a flip comes. So every stock carries a counterforce reading: the named restoring mechanisms, their strength, and their coupling, meaning whether the counterforce grows as the excursion deepens, stays flat, or is eroded by it. The clock is not a guess about dates; it is a reading of the counterforce. This is the company engine's measure C, the loop, applied one level up.",
+  "formula": "turn pressure = distance x counterforce strength x coupling, on an instrument with a ceiling of 36",
+  "anchors": {
+   "strength": "0 none identified on a human clock; 1 latent or weakly organized; 2 building and measurable; 3 strong and compounding: a learning curve or an automatic price signal already bending the flows",
+   "coupling": "grows (x2): the counterforce strengthens as the excursion deepens, through a scarcity price, a damage bill, or a deployment learning curve pulled by the gap itself; flat (x1): it exists but does not scale with displacement; weakens (x0.5): the excursion erodes its own counterforce",
+   "reading": "high distance with high turn pressure is a compressed spring: the flip is near and predictable, and the corrective flow is where the momentum will go. High distance with low turn pressure is the dangerous reading: the excursion can run much further before anything turns it"
+  }
+ }
 }

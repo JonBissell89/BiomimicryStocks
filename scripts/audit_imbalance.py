@@ -14,7 +14,8 @@ import json, os, sys
 from paths import DATA
 
 FIELDS = ["id","name","cls","form","stock","safe_range","state","distance_note",
-          "direction","severity","cause","correction","clock","tickers"]
+          "direction","severity","counterforce","turn","cause","correction","clock","tickers"]
+COUPLING = {"grows":2, "flat":1, "weakens":0.5}
 DIRECTION_RATE = {"returning":{0.5}, "holding":{1}, "diverging":{2,3}}
 
 m = json.load(open(os.path.join(DATA,"imbalance_map.json"), encoding="utf-8"))
@@ -46,6 +47,14 @@ for s in sy:
     if abs(raw-sv.get("raw",-1))>0.05: errs.append(f"{sid}: raw {sv.get('raw')} != {raw}")
     if sv.get("index")!=round(raw): errs.append(f"{sid}: index {sv.get('index')} != {round(raw)}")
     if raw>m["_severity"]["ceiling"]: errs.append(f"{sid}: index above the instrument ceiling")
+    c=s.get("counterforce",{})
+    if c.get("strength") not in (0,1,2,3): errs.append(f"{sid}: counterforce strength {c.get('strength')}")
+    if c.get("coupling") not in COUPLING: errs.append(f"{sid}: counterforce coupling {c.get('coupling')}")
+    if not c.get("mechanisms") or not c.get("evidence"): errs.append(f"{sid}: counterforce needs mechanisms and evidence")
+    t=s.get("turn",{})
+    want=round(D*c.get("strength",0)*COUPLING.get(c.get("coupling"),0))
+    if t.get("value")!=want: errs.append(f"{sid}: turn {t.get('value')} != {want}")
+    if t.get("ceiling")!=36: errs.append(f"{sid}: turn ceiling")
     d=s.get("direction")
     if d not in DIRECTION_RATE: errs.append(f"{sid}: direction {d}")
     elif R not in DIRECTION_RATE[d]: errs.append(f"{sid}: direction {d} inconsistent with rate {R}")
@@ -90,9 +99,9 @@ print("systems: %d  (%d earth-system, %d provisioning)" % (
     len(sy), sum(1 for s in sy if s["cls"]=="earth"), sum(1 for s in sy if s["cls"]=="provisioning")))
 print("companies mapped: %d of %d in the engine" % (len(mapped & set(engine_tk)), len(engine_tk)))
 print()
-print("%-8s %-13s %-44s %-10s %s" % ("index","class","system","movement","companies"))
+print("%-8s %-7s %-13s %-44s %-10s %s" % ("index","turn","class","system","movement","companies"))
 for s in sorted(sy,key=lambda x:-x["severity"]["index"]):
-    print("%4d/%-3d %-13s %-44s %-10s %d" % (s["severity"]["index"],m["_severity"]["ceiling"],s["cls"],s["name"],s["direction"],len(s["tickers"])))
+    print("%4d/%-3d %3d/36  %-13s %-44s %-10s %d" % (s["severity"]["index"],m["_severity"]["ceiling"],s["turn"]["value"],s["cls"],s["name"],s["direction"],len(s["tickers"])))
 print()
 if ghost_gaps:
     print("corrections with NO company in the current universe (a finding, not an error):")
@@ -106,6 +115,8 @@ print("  STATE      "+fw["state"])
 print("  MOVEMENT   "+fw["direction"]+" (relative to the safe range)")
 if "envelope" in fw: print("  ENVELOPE   "+fw["envelope"])
 print("  FLOW       "+fw["cause"])
+print("  COUNTER    "+fw["counterforce"]["mechanisms"])
+print("  TURN       %d/36 (strength %d, coupling %s)" % (fw["turn"]["value"],fw["counterforce"]["strength"],fw["counterforce"]["coupling"]))
 print("  CORRECTION "+fw["correction"])
 print("  CLOCK      "+fw["clock"])
 print("  COMPANIES  "+", ".join("%s (%d %s)"%(tk,engine_tk[tk]["score"],
