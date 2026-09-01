@@ -231,6 +231,31 @@ house_note = (
        if biggest and htot else "")
     + " Simulated money on the same terms as yours, not advice.")
 
+# Implied shares outstanding (market cap over price, both from the ingest
+# snapshot), so the page can show what the whole business is worth at the
+# current share price. Price alone says nothing about size.
+import csv as _csv
+_caps = {}
+def _load_caps(fn, tkcol, capcol, pxcol):
+    p = os.path.join(DATA, fn)
+    if not os.path.exists(p):
+        return
+    with open(p, encoding="utf-8", errors="replace") as f:
+        for r in _csv.DictReader(f):
+            tk = (r.get(tkcol) or "").strip().upper()
+            if not tk or tk in _caps:
+                continue
+            try:
+                cap = float((r.get(capcol) or "").replace("$", "").replace(",", "") or 0)
+                px0 = float((r.get(pxcol) or "").replace("$", "").replace(",", "") or 0)
+            except ValueError:
+                continue
+            if cap > 0 and px0 > 0:
+                _caps[tk] = round(cap / px0)   # implied shares
+_load_caps("raw_nasdaq.csv", "symbol", "marketCap", "lastsale")
+_load_caps("raw_otc_yahoo.csv", "ticker", "marketCap", "price")
+_load_caps("round1_final_scores.csv", "ticker", "marketCap", "price")
+
 names_js = []
 for tid, n in allnames:
     d = n.get("dims", {})
@@ -241,7 +266,10 @@ for tid, n in allnames:
                      [d.get(k, 0) for k in ("A", "B", "C1", "C2", "D_rep",
                                             "D_inhib", "D_exit", "E", "F_clock", "F_now")],
                      [n.get("stock", ""), n.get("loop", ""), n.get("coupling", ""),
-                      n.get("gate", "pass"), n.get("evidence", ""), n.get("clock", "")]])
+                      n.get("gate", "pass"), n.get("evidence", ""), n.get("clock", ""),
+                      _caps.get(n["tk"], 0)]])
+_capped = sum(1 for _, n in allnames if _caps.get(n["tk"]))
+print(f"market caps: {_capped}/{len(allnames)} ranked names carry implied shares")
 
 RULES_HTML = """
 <h3>The gate, checked before any scoring</h3>
@@ -780,8 +808,9 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
       <option value="ord">foreign ordinary shares, over the counter</option>
     </select>
     <label for="capsel">Price under:</label><select id="capsel"><option value="10">$10</option><option value="20">$20</option><option value="30">$30</option><option value="50">$50</option><option value="99999" selected>any price</option></select>
+    <label for="mcapsel" title="The value of the whole business, not of one share">Company size:</label><select id="mcapsel"><option value="all" selected>any size</option><option value="mega">mega, $200B and up</option><option value="large">large, $10B to $200B</option><option value="mid">mid, $2B to $10B</option><option value="small">small, $300M to $2B</option><option value="micro">micro, under $300M</option></select>
     <label for="scorepol">Score at least:</label><select id="scorepol"><option value="0" selected>any</option><option value="70">70</option><option value="75">75</option><option value="80">80</option><option value="85">85</option></select>
-    <label for="sortsel">Sort by:</label><select id="sortsel"><option value="score" selected>rank (score)</option><option value="tier">tier</option><option value="price">price, low to high</option><option value="industry">industry</option></select>
+    <label for="sortsel">Sort by:</label><select id="sortsel"><option value="score" selected>rank (score)</option><option value="tier">tier</option><option value="price">price, low to high</option><option value="mcap">company value, big to small</option><option value="industry">industry</option></select>
   </div>
   <p class="money-line" id="mktnote">Most mainstream investing apps carry US exchange listings. Some carry ADRs. Foreign ordinary shares usually need a full-service broker. That is about access, not quality, and it never affects a score.</p>
 
@@ -792,6 +821,7 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
   <th>Company · what it actually does</th>
   <th style="text-align:right" title="How well it fits the rules, out of 100">Score</th>
   <th title="Which human need it serves">Industry</th>
+  <th style="text-align:right" title="What the whole business is worth at today's share price: price times shares outstanding. A cheap share can still be a giant company, and an expensive share a small one.">Company value</th>
   <th style="text-align:right" title="What one share costs, and its shape over the past year">Price</th>
   <th></th></tr></thead>
   <tbody id="mktbody"></tbody></table></div>
@@ -944,6 +974,14 @@ const TODAY='@@TODAY@@';
 const $=id=>document.getElementById(id);
 const fmt=n=>'$'+n.toLocaleString(undefined,{maximumFractionDigits:2,minimumFractionDigits:2});
 const F={tk:0,nm:1,sc:2,need:3,px:4,note:5,vt:6,sofi:7,tier:8,kid:9,dims:10,meta:11};
+// Company value = implied shares (meta slot 6, from the ingest snapshot) times
+// the current share price. Price alone says nothing about size: a cheap share
+// can be a giant company and an expensive share a small one.
+function mcapOf(n){const m=n[F.meta]||[];return (m[6]||0)*(n[F.px]||0);}
+function fmtCap(v){if(!v)return '';
+  return '$'+(v>=1e12?(v/1e12).toFixed(1)+'T':v>=1e9?(v/1e9).toFixed(1)+'B':(v/1e6).toFixed(0)+'M');}
+const MCAP_BANDS={mega:[2e11,Infinity],large:[1e10,2e11],mid:[2e9,1e10],small:[3e8,2e9],micro:[1,3e8]};
+function sizeWord(v){return v>=2e11?'mega':v>=1e10?'large':v>=2e9?'mid':v>=3e8?'small':v>0?'micro':'';}
 const MEA=[["The stock",20],["The flow",25],["Loop sign",12],["Coupling",8],
  ["Replication",6],["Contact inhibition",5],["Clean exit",4],["Buffer",10],
  ["Clock speed",6],["Moving now",4]];
@@ -1065,12 +1103,14 @@ function snapshotMine(){
   saveMine(s);
 }
 let ui=null;
-function uiDefaults(){return {mkt:"all",cap:99999,minScore:0,sort:"score",picked:{},spend:""};}
+function uiDefaults(){return {mkt:"all",cap:99999,mcap:"all",minScore:0,sort:"score",picked:{},spend:""};}
 function uiLoad(){try{const r=localStorage.getItem('bsUI');if(r)return {...uiDefaults(),...JSON.parse(r)};}catch(e){}return uiDefaults();}
 function uiSave(){try{localStorage.setItem('bsUI',JSON.stringify(ui));}catch(e){}}
 function filtered(n){
+  const mb=MCAP_BANDS[ui.mcap];
   return (ui.mkt&&ui.mkt!=='all'&&marketOf(n[F.tk])!==ui.mkt)
     ||(ui.cap&&n[F.px]>ui.cap)
+    ||(mb&&!(mcapOf(n)>=mb[0]&&mcapOf(n)<mb[1]))
     ||(ui.minScore&&n[F.sc]<ui.minScore);}
 // The three lines over the same stretch, drawn from the weekly snapshots. Each
 // series is a percentage change from its own first reading, because that is the
@@ -1157,16 +1197,54 @@ function showView(v,push){
 // The reasoning behind a score used to live only in a title attribute, which does
 // not exist on a touch screen. On a phone it was simply unreachable. Tapping a row
 // opens it instead, so the reasoning behind a score is reachable on any device.
+// The row detail gets a real chart, not just the sparkline: a year of weekly
+// closes rescaled to the current share price, drawn in the same idiom as the
+// imbalance charts. Weekly closes, honestly labelled: intraday swings and
+// anything older than a year sit outside this record.
+function detailChart(tk){
+  const n=rec(tk);if(!n)return '';
+  const d=SPARK[tk],px=n[F.px]||0;
+  if(!d||d.length<8||!px||!d[d.length-1])return '';
+  const s=d.map(function(v){return v*px/d[d.length-1];});
+  let lo=Math.min.apply(null,s),hi=Math.max.apply(null,s);
+  if(hi===lo){hi+=1;}
+  const pd=(hi-lo)*0.08;lo-=pd;hi+=pd;
+  const L=10,RM=66,T=10,B=8,W=340,H=112;
+  const X=function(i){return L+i/(s.length-1)*(W-L-RM);};
+  const Y=function(v){return T+(hi-v)/(hi-lo)*(H-T-B);};
+  const up=s[s.length-1]>=s[0],col=up?'var(--good)':'var(--bad)';
+  let svg='<svg class="imbchart" viewBox="0 0 340 112" role="img" aria-label="'+tk+' weekly closes over the past year">';
+  svg+='<line x1="'+L+'" y1="'+Y(s[0]).toFixed(1)+'" x2="'+(W-RM)+'" y2="'+Y(s[0]).toFixed(1)+
+    '" stroke="var(--muted)" stroke-width="1" stroke-dasharray="4 3" opacity="0.5"/>';
+  svg+='<path d="'+s.map(function(v,i){return (i?'L':'M')+X(i).toFixed(1)+','+Y(v).toFixed(1);}).join('')+
+    '" fill="none" stroke="'+col+'" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>';
+  svg+='<circle cx="'+X(s.length-1).toFixed(1)+'" cy="'+Y(s[s.length-1]).toFixed(1)+'" r="3" fill="'+col+'"/>';
+  svg+='<text x="'+(W-RM+4)+'" y="'+Y(s[s.length-1]).toFixed(1)+'" font-size="10" fill="'+col+
+    '" dominant-baseline="middle" font-family="var(--mono)">'+fmt(px)+'</text>';
+  const ylo=Math.min.apply(null,s.slice()),yhi=Math.max.apply(null,s.slice());
+  if(Math.abs(Y(yhi)-Y(s[s.length-1]))>=11)
+    svg+='<text x="'+(W-RM+4)+'" y="'+Y(yhi).toFixed(1)+'" font-size="9" fill="var(--muted)" dominant-baseline="middle" font-family="var(--mono)">high '+fmt(yhi)+'</text>';
+  if(Math.abs(Y(ylo)-Y(s[s.length-1]))>=11&&Math.abs(Y(ylo)-Y(yhi))>=11)
+    svg+='<text x="'+(W-RM+4)+'" y="'+Y(ylo).toFixed(1)+'" font-size="9" fill="var(--muted)" dominant-baseline="middle" font-family="var(--mono)">low '+fmt(ylo)+'</text>';
+  svg+='</svg>';
+  return svg+'<p class="legend" style="margin:2px 0 10px">A year of weekly closes, scaled to the current price. '+
+    'The dashed line is where the year began. Weekly samples to @@SPARKASOF@@, so intraday highs and lows sit outside this record.</p>';
+}
 function openDetail(tk){
   const n=rec(tk);if(!n)return;
   const m=n[F.meta]||[],own=n[F.tier]==='own',gf=gateOf(n)==='fail';
   const sh=heldOf(tk),mv=sh*(n[F.px]||0),pl=mv-costOf(tk);
   const d=SPARK[tk];
-  let yearLine='';
+  let yearLine='',rangeLine='';
   if(d&&d.length>7){
     const pct=100*(d[d.length-1]/d[0]-1);
     yearLine='<div class="dstat"><span>Past year</span><b class="'+(pct>=0?'pos':'neg')+'">'+
-      (pct>=0?'+':'')+pct.toFixed(1)+'%</b></div>';}
+      (pct>=0?'+':'')+pct.toFixed(1)+'%</b></div>';
+    const px=n[F.px]||0;
+    if(px&&d[d.length-1]){
+      const s=d.map(function(v){return v*px/d[d.length-1];});
+      rangeLine='<div class="dstat"><span>Year low</span><b>'+fmt(Math.min.apply(null,s))+'</b></div>'+
+        '<div class="dstat"><span>Year high</span><b>'+fmt(Math.max.apply(null,s))+'</b></div>';}}
   const lab=function(t,v){return v?'<div class="mlab"><b>'+t+'</b> '+esc(String(v))+'</div>':'';};
   $('modalbody').innerHTML=
     '<div class="dhead"><span class="dtier">'+(own?'YOURS':n[F.tier].toUpperCase())+'</span>'+
@@ -1175,12 +1253,14 @@ function openDetail(tk){
     '<div class="dstats">'+
       '<div class="dstat"><span>Score</span><b>'+(n[F.sc]||'-')+'<i>/100</i></b></div>'+
       '<div class="dstat"><span>Price</span><b>'+(n[F.px]?fmt(n[F.px]):'n/a')+'</b></div>'+
-      yearLine+
+      (mcapOf(n)?'<div class="dstat"><span>Company value</span><b>'+fmtCap(mcapOf(n))+'<i> '+sizeWord(mcapOf(n))+'</i></b></div>':'')+
+      yearLine+rangeLine+
       (sh>0.0001?'<div class="dstat"><span>You hold</span><b>'+sh.toFixed(4)+' sh</b></div>'+
         '<div class="dstat"><span>Worth</span><b>'+fmt(mv)+'</b></div>'+
         '<div class="dstat"><span>P/L</span><b class="'+(pl>=0?'pos':'neg')+'">'+
           (pl>=0?'+':'-')+fmt(Math.abs(pl)).slice(1)+'</b></div>':'')+
     '</div>'+
+    detailChart(tk)+
     (gf?'<div class="note" style="margin:12px 0">Set aside by the survivability gate, whatever it scored. '+
         'That is a reading of its balance sheet, not of its business, and it stays out of any portfolio here.</div>':'')+
     (own?'<p class="dblurb"><i>'+esc(String(n[F.note]||'You added this.'))+'</i></p>':scorecard(n))+
@@ -1273,6 +1353,7 @@ function render(){
   rows.sort((a,b)=>{
     if(k==="tier"){const t=a.n[F.tier].localeCompare(b.n[F.tier]);return t!==0?t:b.n[F.sc]-a.n[F.sc];}
     if(k==="price")return a.n[F.px]-b.n[F.px];
+    if(k==="mcap")return mcapOf(b.n)-mcapOf(a.n);
     if(k==="industry"){const t=(a.n[F.need]||"").localeCompare(b.n[F.need]||"");return t!==0?t:b.n[F.sc]-a.n[F.sc];}
     return b.n[F.sc]-a.n[F.sc];});
   let h='',vis=0;
@@ -1290,6 +1371,7 @@ function render(){
       '<td class="tk" data-l="Ticker">'+tk+'</td>'+
       '<td class="co" data-l="Company"><span class="cn">'+n[F.nm]+vchip+'</span><div class="blurb">'+(n[F.kid]||n[F.need]||'')+(own?'<br><i>'+esc(String(n[F.note]||'You added this.'))+'</i>':'')+'</div></td>'+
       '<td class="r" style="font-weight:600" data-l="Score">'+scLbl+'</td><td class="nm" data-l="Industry">'+(n[F.need]||'')+'</td>'+
+      '<td class="r" data-l="Company value" title="The whole business at the current share price">'+(mcapOf(n)?fmtCap(mcapOf(n))+'<div class="blurb">'+sizeWord(mcapOf(n))+'</div>':'n/a')+'</td>'+
       '<td class="r cPx" data-l="Price">'+(n[F.px]?fmt(n[F.px]):'n/a')+sparkline(tk)+'</td>'+
       // Committing happens on Buy & sell. Browsing only picks, so the row
       // carries no amount box and no Buy or Sell. Rows you added keep Remove.
@@ -1513,10 +1595,11 @@ $('ledgersel').addEventListener('change',()=>{try{localStorage.setItem('bsLedger
 $('whoname').addEventListener('input',()=>{try{localStorage.setItem('bsWho',$('whoname').value.trim().slice(0,24))}catch(e){}renderBoard();});
 $('mktsel').addEventListener('change',()=>{ui.mkt=$('mktsel').value;render();});
 $('capsel').addEventListener('change',()=>{ui.cap=+$('capsel').value;render();});
+$('mcapsel').addEventListener('change',()=>{ui.mcap=$('mcapsel').value;render();});
 $('scorepol').addEventListener('change',()=>{ui.minScore=+$('scorepol').value;render();});
 $('sortsel').addEventListener('change',()=>{ui.sort=$('sortsel').value;render();});
 function pushUI(){$('mktsel').value=ui.mkt||'all';$('spend').value=ui.spend||'';
-  $('capsel').value=String(ui.cap);$('scorepol').value=String(ui.minScore);
+  $('capsel').value=String(ui.cap);$('mcapsel').value=ui.mcap||'all';$('scorepol').value=String(ui.minScore);
   $('sortsel').value=ui.sort;}
 // ---- the report card: instrument readings from data/rigor, via the build ---
 function renderRigor(){
@@ -1652,6 +1735,7 @@ tpl = (TEMPLATE
        .replace("@@HOUSENOTE@@", house_note)
        .replace("@@HOUSESTAMP@@", state.get("last_rebalance") or today)
        .replace("@@TODAY@@", today)
+       .replace("@@SPARKASOF@@", spark_asof or asof)
        .replace("@@ASOF@@", asof)
        .replace("@@STAMP@@", stamp))
 # The searchable universe, its prices and the sparklines are served as separate

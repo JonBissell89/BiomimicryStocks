@@ -59,7 +59,7 @@ sandbox.window.localStorage = localStorage;
 vm.createContext(sandbox);
 
 try {
-  const EXPORT = ';globalThis.__X={NAMES:typeof NAMES!=="undefined"?NAMES:null,SIDX:typeof SIDX!=="undefined"?SIDX:null,ui:typeof ui!=="undefined"?ui:null,trade:typeof trade!=="undefined"?trade:null,lookup:typeof lookup!=="undefined"?lookup:null,render:typeof render!=="undefined"?render:null,myCard:typeof myCard!=="undefined"?myCard:null,quickPick:typeof quickPick!=="undefined"?quickPick:null,pickedList:typeof pickedList!=="undefined"?pickedList:null,basketPlan:typeof basketPlan!=="undefined"?basketPlan:null,buyBasket:typeof buyBasket!=="undefined"?buyBasket:null,gateOf:typeof gateOf!=="undefined"?gateOf:null,snapshotMine:typeof snapshotMine!=="undefined"?snapshotMine:null,MARK:typeof MARK!=="undefined"?MARK:null,PX:typeof PX!=="undefined"?PX:null,allRows:typeof allRows!=="undefined"?allRows:null,rec:typeof rec!=="undefined"?rec:null,F:typeof F!=="undefined"?F:null,marketOf:typeof marketOf!=="undefined"?marketOf:null,mineAdded:typeof mineAdded!=="undefined"?mineAdded:null,buyAllocation:typeof buyAllocation!=="undefined"?buyAllocation:null,renderBoard:typeof renderBoard!=="undefined"?renderBoard:null,"$":typeof $!=="undefined"?$:null,IMB:typeof IMB!=="undefined"?IMB:null,IMBSERIES:typeof IMBSERIES!=="undefined"?IMBSERIES:null,renderImbalance:typeof renderImbalance!=="undefined"?renderImbalance:null};';
+  const EXPORT = ';globalThis.__X={NAMES:typeof NAMES!=="undefined"?NAMES:null,SIDX:typeof SIDX!=="undefined"?SIDX:null,ui:typeof ui!=="undefined"?ui:null,trade:typeof trade!=="undefined"?trade:null,lookup:typeof lookup!=="undefined"?lookup:null,render:typeof render!=="undefined"?render:null,myCard:typeof myCard!=="undefined"?myCard:null,quickPick:typeof quickPick!=="undefined"?quickPick:null,pickedList:typeof pickedList!=="undefined"?pickedList:null,basketPlan:typeof basketPlan!=="undefined"?basketPlan:null,buyBasket:typeof buyBasket!=="undefined"?buyBasket:null,gateOf:typeof gateOf!=="undefined"?gateOf:null,snapshotMine:typeof snapshotMine!=="undefined"?snapshotMine:null,MARK:typeof MARK!=="undefined"?MARK:null,PX:typeof PX!=="undefined"?PX:null,allRows:typeof allRows!=="undefined"?allRows:null,rec:typeof rec!=="undefined"?rec:null,F:typeof F!=="undefined"?F:null,marketOf:typeof marketOf!=="undefined"?marketOf:null,mineAdded:typeof mineAdded!=="undefined"?mineAdded:null,buyAllocation:typeof buyAllocation!=="undefined"?buyAllocation:null,renderBoard:typeof renderBoard!=="undefined"?renderBoard:null,"$":typeof $!=="undefined"?$:null,IMB:typeof IMB!=="undefined"?IMB:null,IMBSERIES:typeof IMBSERIES!=="undefined"?IMBSERIES:null,renderImbalance:typeof renderImbalance!=="undefined"?renderImbalance:null,mcapOf:typeof mcapOf!=="undefined"?mcapOf:null,fmtCap:typeof fmtCap!=="undefined"?fmtCap:null,detailChart:typeof detailChart!=="undefined"?detailChart:null};';
   scripts.forEach((sc,i)=>vm.runInContext(i===scripts.length-1? sc+EXPORT : sc, sandbox, { timeout: 20000 }));
   console.log('PARSE+RUN: ok');
 } catch (e) {
@@ -234,7 +234,23 @@ setTimeout(() => {
       const card = ctx.myCard();
       console.log('scorecard length:', card.length, '| decodes:', JSON.parse(ctx.atob(card)).n !== undefined);
       console.log('leaderboard ->', ctx.$('leaderboard').innerHTML.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 120));
-      console.log('ALL CHECKS DONE');
+      
+// Company value and the detail chart: every ranked row must carry a computable
+// market cap, and the row popup must draw a dollar-scaled year chart.
+{
+  const capped = ctx.NAMES.filter(n => ctx.mcapOf(n) > 0).length;
+  const dc = ctx.detailChart('BOEUF');
+  console.log('company value: rows with cap:', capped, 'of', ctx.NAMES.length,
+    '| column present:', html.indexOf('data-l="Company value"') > 0,
+    '| size filter present:', html.indexOf('id="mcapsel"') > 0,
+    '| BOEUF cap:', ctx.fmtCap(ctx.mcapOf(ctx.rec('BOEUF'))));
+  console.log('detail chart: svg renders:', dc.indexOf('<svg') === 0,
+    '| dollar labels:', dc.indexOf('high $') > 0 || dc.indexOf('low $') > 0,
+    '| honest caption:', dc.indexOf('weekly closes') > 0);
+  if (capped < ctx.NAMES.length - 2) throw new Error('market caps missing on ranked rows');
+  if (dc.indexOf('<svg') !== 0) throw new Error('detail chart failed to render');
+}
+console.log('ALL CHECKS DONE');
     }, 30);
   }, 30);
 }, 30);
