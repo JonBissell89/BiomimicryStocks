@@ -1,5 +1,8 @@
 # Biomimicry Stocks
 
+[![checks](https://github.com/JonBissell89/BiomimicryStocks/workflows/checks/badge.svg)](https://github.com/JonBissell89/BiomimicryStocks/actions/workflows/checks.yml)
+[![weekly](https://github.com/JonBissell89/BiomimicryStocks/workflows/weekly/badge.svg)](https://github.com/JonBissell89/BiomimicryStocks/actions/workflows/weekly.yml)
+
 A stock screen that asks one mechanical question of every public company an American
 investor can buy: **does this business move its system toward balance, or does it earn
 by holding the system out of balance?**
