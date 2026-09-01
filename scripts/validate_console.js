@@ -250,6 +250,15 @@ setTimeout(() => {
   if (capped < ctx.NAMES.length - 2) throw new Error('market caps missing on ranked rows');
   if (dc.indexOf('<svg') !== 0) throw new Error('detail chart failed to render');
 }
+// The trading page carries the full ranked list with working controls, while
+// the About table stays a pure ranking (asserted above).
+{
+  const tb = ctx.$('tradebody').innerHTML;
+  const buys = (tb.match(/data-tb=/g) || []).length;
+  console.log('trade table: rows:', (tb.match(/<tr /g) || []).length,
+    '| buy buttons:', buys, '| pick toggles:', (tb.match(/data-tp=/g) || []).length);
+  if (buys < 40) throw new Error('trade table missing buy controls');
+}
 console.log('ALL CHECKS DONE');
     }, 30);
   }, 30);
