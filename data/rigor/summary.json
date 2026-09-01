@@ -36,6 +36,10 @@
   [
    "Attribution",
    "internal only: 94% of basket variance is the market plus the health tilt; the external factor test is registered and pending, so it cannot be quietly dropped"
+  ],
+  [
+   "Universe freshness",
+   "first quarterly listing pull pending; judged under logic v2.0, whose documents are hash-checked on every build, and any logic change forces a full re-screen"
   ]
  ],
  "note": "every line is a current instrument reading from data/rigor/, derived and audited; none is a claim"

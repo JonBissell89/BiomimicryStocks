@@ -1,0 +1,16 @@
+{
+ "version": "v2.0",
+ "registered": "2026-09-01",
+ "files": {
+  "V2_RUBRIC.md": "bd007c70a8d3481e4b8af21c0f98a3b883c349ea1edb422d10dafe3d80b44ede",
+  "FRAMEWORK.md": "f38142002fdadf16b6cbd869e62c3c04cbb0fad8bd91705df7fd817b70f6ffee"
+ },
+ "note": "hashes of the documents that define the judgment; audit_rigor fails when they drift unregistered",
+ "history": [
+  {
+   "date": "2026-09-01",
+   "version": "v2.0",
+   "kind": "initial"
+  }
+ ]
+}

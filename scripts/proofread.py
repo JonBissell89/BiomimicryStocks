@@ -36,7 +36,8 @@ flag("DUPLICATED SENTENCES", dupes)
 
 # 2. doubled words
 flag("DOUBLED WORDS", {f'"{m.group(0)}"' for m in
-     re.finditer(r"\b(\w+)\s+\1\b", text, re.I) if m.group(1).lower() not in ("that", "had")})
+     re.finditer(r"\b(\w+)\s+\1\b", text, re.I)
+     if m.group(1).lower() not in ("that", "had") and not m.group(1).isdigit()})
 
 # 3. buttons and inputs with no JS handler
 ids = re.findall(r'<(?:button|input|select)[^>]*\bid="([^"]+)"', h)

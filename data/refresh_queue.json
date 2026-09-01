@@ -1,0 +1,9 @@
+{
+ "cadence_days": 92,
+ "note": "what the market changed and the engine has not yet judged. pending_first_screen names owe a first-screen judgment by the research pipeline; delisted_check names await confirmation before removal; obligations are stamped by register_logic.py when the judging logic itself changes.",
+ "last_refresh": null,
+ "obligations": {},
+ "pending_first_screen": [],
+ "delisted_check": [],
+ "log": []
+}

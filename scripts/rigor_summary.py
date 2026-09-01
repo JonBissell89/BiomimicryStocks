@@ -23,6 +23,22 @@ items = [
  ["Screen error bar", "%d registered cuts blind re-scored in two batches: agreement rho %.2f, one confirmed false negative (%s, blind six-measure grade t2), one recorded score corrected (%s), zero new misses in batch two" % (len(fnr["rows"]), fnr["agreement"]["spearman"], ",".join(fnr["potential_false_negatives"]["names"]), ",".join(fnr["reverse_disagreements"]["names"][:1]))],
  ["Attribution", "internal only: %.0f%% of basket variance is the market plus the health tilt; the external factor test is registered and pending, so it cannot be quietly dropped" % ((1 - fac["idiosyncratic_share"]) * 100)],
 ]
+# the market changes and the logic changes; both leave a visible reading
+rq = json.load(open(os.path.join(DATA, "refresh_queue.json"), encoding="utf-8"))
+lv = json.load(open(os.path.join(R, "logic_version.json"), encoding="utf-8"))
+if rq.get("obligations"):
+    fresh = ("OPEN OBLIGATION: judging logic moved to %s, so every name is owed a fresh look; "
+             "a full universe re-screen and ranked re-score are queued and this line stays until they run"
+             % rq["obligations"].get("logic_version"))
+elif rq.get("last_refresh"):
+    fresh = ("listings re-pulled %s: %d new entrants queued for a first-screen judgment, %d names "
+             "flagged for delisting review; judged under logic %s, whose documents are hash-checked on every build"
+             % (rq["last_refresh"], len(rq.get("pending_first_screen", [])),
+                len(rq.get("delisted_check", [])), lv["version"]))
+else:
+    fresh = ("first quarterly listing pull pending; judged under logic %s, whose documents are "
+             "hash-checked on every build, and any logic change forces a full re-screen" % lv["version"])
+items.append(["Universe freshness", fresh])
 doc = {"asof": rep["latest"], "items": items,
        "note": "every line is a current instrument reading from data/rigor/, derived and audited; none is a claim"}
 json.dump(doc, open(os.path.join(R, "summary.json"), "w", encoding="utf-8"), indent=1)

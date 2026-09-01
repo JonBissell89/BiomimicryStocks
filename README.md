@@ -166,6 +166,16 @@ freshness, the registered sample sizes, and a floor under rank stability.
 
 - **Monthly**: the judgment run. Gates re-checked against filings, tripwires, score and
   tier changes on verified facts. The only thing allowed to change a score.
+- **Quarterly** (`scripts/universe_refresh.py`, self-guarded inside the weekly workflow): the market
+  changes, so the judged set must too. Current exchange directories and the SEC filer list are diffed
+  against the universe; new entrants queue in `data/refresh_queue.json` for a first-screen judgment by
+  the research pipeline, and names that left the exchanges are flagged for delisting review before
+  anything is removed. The frozen vintages are never touched; they grade the original judgment.
+- **On any logic change** (`scripts/register_logic.py`): the judging documents are hashed and the rigor
+  audit fails any build where they drift unregistered. A registered logic change bumps the version and
+  stamps the refresh queue with what a new instrument owes: a full universe re-screen and a ranked
+  re-score, forced on the next refresh run regardless of cadence and shown on the page's report card
+  until fulfilled. A score is only comparable to another score made the same way.
 
 Verification chain, all of which must pass before anything publishes:
 `collect_imbalance.py` then `derive_imbalance.py` then `audit_imbalance.py` then

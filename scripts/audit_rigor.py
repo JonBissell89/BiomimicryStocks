@@ -74,6 +74,34 @@ rel_registered = sum(b["n"] for b in rel.get("batches", [{"n": 8}]))
 if len(rel["rows"]) != rel_registered or rel["n"] != rel_registered:
     errs.append("reliability rows do not cover the registered %d-name samples" % rel_registered)
 
+# the judging logic matches its registered version, and market drift is queued
+import register_logic
+logic = register_logic.load()
+if logic is None:
+    errs.append("no registered logic version; run register_logic.py")
+else:
+    drifted = register_logic.drift(logic)
+    if drifted:
+        errs.append("judgment documents drifted unregistered (%s): run register_logic.py "
+                    "--prose or --logic with a reason" % ", ".join(drifted))
+rq_path = os.path.join(DATA, "refresh_queue.json")
+if not os.path.exists(rq_path):
+    errs.append("missing data/refresh_queue.json; run universe_refresh.py")
+else:
+    rq = json.load(open(rq_path, encoding="utf-8"))
+    if rq.get("obligations"):
+        warns.append("OPEN OBLIGATION from logic change %s: full universe re-screen and ranked re-score owed"
+                     % rq["obligations"].get("logic_version"))
+    if rq.get("pending_first_screen"):
+        warns.append("%d new market entrants await a first-screen judgment" % len(rq["pending_first_screen"]))
+    if rq.get("delisted_check"):
+        warns.append("%d names flagged delisted_check await confirmation" % len(rq["delisted_check"]))
+    if rq.get("last_refresh"):
+        import datetime as _dt
+        age = (_dt.date.today() - _dt.date.fromisoformat(rq["last_refresh"])).days
+        if age > rq.get("cadence_days", 92) + 14:
+            warns.append("universe refresh overdue: last ran %s" % rq["last_refresh"])
+
 print("RIGOR")
 print("  vintage 2026-08-28 locked, hash %s..., protocol registered %s" % (frz["sha256_scores"][:12], pro["registered"]))
 print("  forward test: %s (%d snapshots) | contamination rho %.3f" %

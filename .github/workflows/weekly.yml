@@ -49,6 +49,9 @@ jobs:
           python scripts/track_prices.py
           python scripts/universe_vintage.py
 
+      - name: Quarterly universe refresh (self-guarded)
+        run: python scripts/universe_refresh.py
+
       - name: Re-read the rigor instruments
         run: |
           python scripts/report_card.py
