@@ -114,11 +114,13 @@ named (water utilities cut on growth and finances lead the near-miss frontier) a
 sample stands as an open obligation until the false-negative rate is a number. audit_rigor.py enforces the
 vintage hashes, the protocol supersession chain and the stability floor on every run. The layer has since
 executed its own obligations: the full 15,797-name universe vintage is frozen and tracked against
-registered universe endpoints; blind scorers re-judged the registered sample (one likely false negative,
-VMD, and one contradicted recorded score, IRS); and a blind second scoring of 8 ranked names found the gate
-perfectly reliable (8 of 8, including an independent BFLY dilution fail), totals reliable to about 6 points,
-and fine ordering within a band to be scorer noise, so tier-edge distinctions carry less confidence than
-the gate and this framework says so out loud. The page's My-portfolio view renders the current instrument
+registered universe endpoints; blind scorers re-judged two registered 12-name samples (one false negative,
+VMD, confirmed at t2 grade by a full blind six-measure scoring and queued for the judgment run; one
+recorded score corrected, IRS; zero new misses in batch two); and a blind second scoring of 16 ranked
+names in two batches found the gate perfectly reliable (16 of 16, including an independent BFLY dilution
+fail), totals reliable to about 6 points, ordering reliable where levels genuinely differ (rho 0.85 across
+a wide band) and unreliable inside a tier band (rho 0.05 in a narrow one), so tier-edge distinctions carry
+less confidence than the gate and this framework says so out loud. The page's My-portfolio view renders the current instrument
 readings from data/rigor/summary.json through the build.
 
 The hierarchy the whole engine now runs on:

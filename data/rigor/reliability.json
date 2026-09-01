@@ -1,27 +1,33 @@
 {
- "method": "blind machine second scorer over a seeded 8-name sample: read only the public rubric and framework, forbidden from repository data files, independent web research; honor-system blinding, stated as the method's limit",
+ "method": "blind machine second scorer over two pre-registered seeded samples, 8 names each: read only the public rubric and framework, forbidden from repository data files, independent web research; honor-system blinding, stated as the method's limit",
  "date": "2026-08-31",
- "n": 8,
+ "n": 16,
+ "batches": [
+  {"id": 1, "seed": 42, "n": 8, "date": "2026-08-31", "mad": 6.25, "spearman": 0.049},
+  {"id": 2, "seed": 8, "n": 8, "date": "2026-09-01", "mad": 5.63, "spearman": 0.848}
+ ],
  "score_agreement": {
-  "mean_absolute_deviation_of_100": 6.25,
-  "spearman": 0.049
+  "mean_absolute_deviation_of_100": 5.94,
+  "spearman": 0.334,
+  "mean_signed_delta": -3.2
  },
- "gate_agreement": "8 of 8, including the blind scorer independently failing BFLY on 3-year dilution",
+ "gate_agreement": "16 of 16, including the blind scorer independently failing BFLY on 3-year dilution",
  "tier_agreement": {
-  "linear_weighted_kappa": 0.0,
-  "exact_band_matches": 2
+  "linear_weighted_kappa": 0.156,
+  "exact_band_matches": 5
  },
  "per_measure_mean_abs_deviation": {
-  "A": 1.9,
-  "B": 2.1,
-  "C": 1.2,
-  "D": 1.2,
+  "A": 2.0,
+  "B": 2.2,
+  "C": 1.3,
+  "D": 0.9,
   "E": 1.1,
-  "F": 0.6
+  "F": 0.3
  },
  "rows": [
   {
    "tk": "SBDHF",
+   "batch": 1,
    "recorded": 78,
    "blind": 78,
    "delta": 0,
@@ -32,6 +38,7 @@
   },
   {
    "tk": "BFLY",
+   "batch": 1,
    "recorded": 80,
    "blind": 76,
    "delta": -4,
@@ -42,6 +49,7 @@
   },
   {
    "tk": "IOT",
+   "batch": 1,
    "recorded": 75,
    "blind": 78,
    "delta": 3,
@@ -52,6 +60,7 @@
   },
   {
    "tk": "RMD",
+   "batch": 1,
    "recorded": 65,
    "blind": 77,
    "delta": 12,
@@ -62,6 +71,7 @@
   },
   {
    "tk": "HTFL",
+   "batch": 1,
    "recorded": 81,
    "blind": 78,
    "delta": -3,
@@ -72,6 +82,7 @@
   },
   {
    "tk": "MBRFF",
+   "batch": 1,
    "recorded": 81,
    "blind": 72,
    "delta": -9,
@@ -82,6 +93,7 @@
   },
   {
    "tk": "ADMA",
+   "batch": 1,
    "recorded": 70,
    "blind": 65,
    "delta": -5,
@@ -92,6 +104,7 @@
   },
   {
    "tk": "BSY",
+   "batch": 1,
    "recorded": 80,
    "blind": 66,
    "delta": -14,
@@ -99,7 +112,95 @@
    "blind_tier": "t4",
    "recorded_gate": "pass",
    "blind_gate": "pass"
+  },
+  {
+   "tk": "AHICF",
+   "batch": 2,
+   "recorded": 78,
+   "blind": 72,
+   "delta": -6,
+   "recorded_tier": "t2",
+   "blind_tier": "t3",
+   "recorded_gate": "pass",
+   "blind_gate": "pass"
+  },
+  {
+   "tk": "BIRMF",
+   "batch": 2,
+   "recorded": 74,
+   "blind": 74,
+   "delta": 0,
+   "recorded_tier": "t2",
+   "blind_tier": "t2",
+   "recorded_gate": "pass",
+   "blind_gate": "pass"
+  },
+  {
+   "tk": "NTRA",
+   "batch": 2,
+   "recorded": 74,
+   "blind": 66,
+   "delta": -8,
+   "recorded_tier": "t2",
+   "blind_tier": "t4",
+   "recorded_gate": "pass",
+   "blind_gate": "pass"
+  },
+  {
+   "tk": "TMDX",
+   "batch": 2,
+   "recorded": 79,
+   "blind": 74,
+   "delta": -5,
+   "recorded_tier": "t2",
+   "blind_tier": "t2",
+   "recorded_gate": "pass",
+   "blind_gate": "pass"
+  },
+  {
+   "tk": "GKOS",
+   "batch": 2,
+   "recorded": 78,
+   "blind": 69,
+   "delta": -9,
+   "recorded_tier": "t2",
+   "blind_tier": "t3",
+   "recorded_gate": "pass",
+   "blind_gate": "pass"
+  },
+  {
+   "tk": "ENGCF",
+   "batch": 2,
+   "recorded": 82,
+   "blind": 76,
+   "delta": -6,
+   "recorded_tier": "t1",
+   "blind_tier": "t2",
+   "recorded_gate": "pass",
+   "blind_gate": "pass"
+  },
+  {
+   "tk": "TSNLF",
+   "batch": 2,
+   "recorded": 80,
+   "blind": 76,
+   "delta": -4,
+   "recorded_tier": "t1",
+   "blind_tier": "t2",
+   "recorded_gate": "pass",
+   "blind_gate": "pass"
+  },
+  {
+   "tk": "TOELY",
+   "batch": 2,
+   "recorded": 57,
+   "blind": 64,
+   "delta": 7,
+   "recorded_tier": "exit",
+   "blind_tier": "exit",
+   "recorded_gate": "pass",
+   "blind_gate": "pass"
   }
  ],
- "reading": "The gate is the rubric's most reliable instrument: 8 of 8, including an independent BFLY fail on dilution. Totals agree to about six points of one hundred and every measure lands within one to two points of its scale. The humbling number is the ordering: within this sample's narrow 65-to-81 band, rank correlation is 0.05, so distinctions finer than roughly six points sit inside the scorer noise floor, and five-point tier bands inherit that noise. The rubric measures level reliably and fine rank unreliably; t1-versus-t2 confidence should be read accordingly, while investable-versus-exit and the gate are strong. Eight names is a small sample and the correlation estimate is itself noisy; widening the sample is the standing way to tighten it. The largest splits (BSY minus 14 on how much an indirect software touch earns, RMD plus 12 on how hard C2 bites when GLP-1s shrink the upstream imbalance) are judgment calls the rubric leaves open, now named."
+ "reading": "Across both pre-registered batches, 16 names: the gate stays perfect at 16 of 16, totals agree to about six points of one hundred, and every measure lands within about two points of its scale. The two batches answer different questions. Batch 1 sampled a narrow 65-to-81 band and found rank correlation of 0.05 there: distinctions finer than the six-point noise floor are scorer noise. Batch 2 sampled a wider 57-to-82 band and rank correlation jumped to 0.85: when real level differences exist, both scorers order them the same way. Read together, the instrument measures level and coarse ordering reliably and fine ordering inside a tier band unreliably. One systematic pattern emerged with the larger sample: the recorded scores run hot by about three points on average (13 of 16 deltas at or below zero), most visibly where the first scorer credited evidence the blind scorer graded one band lower, so t1-versus-t2 boundaries deserve more skepticism than exit boundaries. The largest splits remain judgment calls the rubric leaves open, now named: BSY minus 14 on what an indirect software touch earns, RMD plus 12 on how hard C2 bites when GLP-1s shrink the upstream imbalance, GKOS minus 9 on premium-reimbursement coupling."
 }

@@ -27,11 +27,11 @@
   ],
   [
    "Blind second scorer",
-   "gate verdicts 8 of 8; totals within 6.2 of 100; fine ordering inside the noise floor, so tier edges deserve less confidence than the gate"
+   "gate verdicts 16 of 16 over two seeded batches; totals within 5.9 of 100; ordering holds where levels genuinely differ (rho 0.85 in the wide batch) and dissolves inside a tier band (0.05 in the narrow one), so tier edges deserve less confidence than the gate"
   ],
   [
    "Screen error bar",
-   "12 registered cuts blind re-scored: agreement rho 0.66, one likely false negative found (VMD) and one recorded score contradicted (IRS)"
+   "24 registered cuts blind re-scored in two batches: agreement rho 0.76, one confirmed false negative (VMD, blind six-measure grade t2), one recorded score corrected (IRS), zero new misses in batch two"
   ],
   [
    "Attribution",

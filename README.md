@@ -136,14 +136,21 @@ Executed since registration:
   monthly universe price track runs beside the weekly ranked one, and the protocol (v2, superseding v1 with
   v1 preserved and hashed) registers universe endpoints: an information coefficient across every priced
   name, and the advanced-minus-cut spread, published either way.
-- **The blind re-score happened.** Three independent blind scorers re-judged the registered 12-name sample
-  from web research alone: agreement rho 0.66, one likely false negative found (VMD, home respiratory care
-  growing about 25 percent a year, cut at the first screen) and one recorded score contradicted (IRS, a
-  mall operator recorded at 42 against the engine's own rent-extraction pricing).
-- **A blind second scorer re-scored 8 ranked names on the six measures.** Gate verdicts agreed 8 of 8,
-  including an independent BFLY fail on dilution; totals agreed within about 6 points of 100; and the fine
-  ordering inside a 16-point band proved to be scorer noise, so tier edges deserve less confidence than the
-  gate, and the framework now says so.
+- **The blind re-score happened, twice.** Six independent blind scorers re-judged two pre-registered
+  12-name samples from web research alone: pooled agreement rho 0.76 across 24 names, one false negative
+  found and then confirmed (VMD, home respiratory care growing about 25 percent a year, cut at the first
+  screen at 33 but graded t2 at 76 by a full blind six-measure scoring; it sits in the judgment queue while
+  the frozen vintages keep the cut so the forward test prices the miss), one recorded score corrected (IRS,
+  a mall operator recorded at 42 against the engine's own rent-extraction pricing, corrected to 24), and
+  zero new misses in the second batch, which agreed to 2.6 points of 50. The estimated false-negative rate
+  on hard cuts fell from 1-in-8 to 1-in-16 as the sample widened.
+- **A blind second scorer re-scored 16 ranked names on the six measures, in two batches.** Gate verdicts
+  agreed 16 of 16, including an independent BFLY fail on dilution; totals agreed within about 6 points of
+  100. The two batches answered different questions: inside batch one's narrow 65-to-81 band the ordering
+  was scorer noise (rho 0.05), while across batch two's wider 57-to-82 band both scorers ordered the names
+  the same way (rho 0.85). The instrument measures level and coarse ordering reliably and fine ordering
+  inside a tier band unreliably; the recorded scores also run about 3 points hot against the blind ones,
+  so tier edges deserve less confidence than the gate, and the framework now says so.
 - **Attribution, internal:** 94 percent of basket variance is the internal market plus the health tilt; the
   external factor test could not be run from the build environment and is registered as pending so it
   cannot be quietly dropped.

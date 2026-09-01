@@ -1,10 +1,14 @@
 {
- "method": "three independent blind scorers (machine, honor-system blinding: forbidden from repository data files, web research only), scoring the pre-registered seeded sample of 12 against the first-screen rubric",
+ "method": "six independent blind scorers (machine, honor-system blinding: forbidden from repository data files, web research only), scoring two pre-registered seeded samples of 12 against the first-screen rubric",
  "date": "2026-08-31",
  "advance_bar_assumed": 35,
+ "batches": [
+  {"id": 1, "seed": 42, "n": 12, "date": "2026-08-31", "mad": 4.67, "spearman": 0.66},
+  {"id": 2, "seed": 43, "n": 12, "date": "2026-09-01", "mad": 2.58, "spearman": 0.898}
+ ],
  "agreement": {
-  "mean_absolute_deviation_of_50": 4.67,
-  "spearman": 0.66
+  "mean_absolute_deviation_of_50": 3.62,
+  "spearman": 0.76
  },
  "rows": [
   {
@@ -126,13 +130,145 @@
    "blind_need": 26,
    "blind_viability": 13,
    "one_line": "US home respiratory equipment and chronic care; direct health need, ~$340M, 24-28% growth"
+  },
+  {
+   "tk": "ECX",
+   "batch": 2,
+   "stage": "2",
+   "recorded": 35,
+   "blind": 29,
+   "delta": -6,
+   "blind_need": 18,
+   "blind_viability": 11,
+   "one_line": "Automotive cockpit/compute software and SoC hardware; transport enabler, not a direct need provider, ~$431M"
+  },
+  {
+   "tk": "PSTNY",
+   "batch": 2,
+   "stage": "2",
+   "recorded": 38,
+   "blind": 33,
+   "delta": -5,
+   "blind_need": 22,
+   "blind_viability": 11,
+   "one_line": "Dutch national postal/parcel operator; direct logistics access but long-declining, thin OTC ADR"
+  },
+  {
+   "tk": "ACRG",
+   "batch": 2,
+   "stage": "0",
+   "recorded": 18,
+   "blind": 14,
+   "delta": -4,
+   "blind_need": 8,
+   "blind_viability": 6,
+   "one_line": "OTC exploration-stage mining and toll milling in Nevada; commodity extraction, no production revenue"
+  },
+  {
+   "tk": "RNW",
+   "batch": 2,
+   "stage": "3",
+   "recorded": 42,
+   "blind": 38,
+   "delta": -4,
+   "blind_need": 25,
+   "blind_viability": 13,
+   "one_line": "Indian wind/solar/hydro developer-operator; direct energy provider, accounting disclosures and pending take-private discount"
+  },
+  {
+   "tk": "MTRJF",
+   "batch": 2,
+   "stage": "3",
+   "recorded": 47,
+   "blind": 45,
+   "delta": -2,
+   "blind_need": 28,
+   "blind_viability": 17,
+   "one_line": "Hong Kong rail network operator; essential transport access, huge cap but thin US ADR line"
+  },
+  {
+   "tk": "RDNT",
+   "batch": 2,
+   "stage": "3",
+   "recorded": 45,
+   "blind": 43,
+   "delta": -2,
+   "blind_need": 25,
+   "blind_viability": 18,
+   "one_line": "US outpatient diagnostic imaging plus AI informatics; direct healthcare service, ~$5-6B liquid"
+  },
+  {
+   "tk": "FRZCF",
+   "batch": 2,
+   "stage": "0",
+   "recorded": 28,
+   "blind": 28,
+   "delta": 0,
+   "blind_need": 10,
+   "blind_viability": 18,
+   "one_line": "Singapore suburban mall REIT; discretionary retail rent extraction, large and liquid"
+  },
+  {
+   "tk": "TNJIF",
+   "batch": 2,
+   "stage": "2",
+   "recorded": 40,
+   "blind": 40,
+   "delta": 0,
+   "blind_need": 26,
+   "blind_viability": 14,
+   "one_line": "Tianjin state wastewater and water utility; direct sanitation provider, thin pink-sheet ADR"
+  },
+  {
+   "tk": "WLFC",
+   "batch": 2,
+   "stage": "0",
+   "recorded": 34,
+   "blind": 34,
+   "delta": 0,
+   "blind_need": 18,
+   "blind_viability": 16,
+   "one_line": "Commercial aircraft engine leasing and aftermarket; transport-infrastructure enabler, ~$1.2B"
+  },
+  {
+   "tk": "LYPHF",
+   "batch": 2,
+   "stage": "3",
+   "recorded": 38,
+   "blind": 39,
+   "delta": 1,
+   "blind_need": 24,
+   "blind_viability": 15,
+   "one_line": "China oncology/cardiovascular/CNS drug maker; direct health need, thin US ADR of HKEX primary"
+  },
+  {
+   "tk": "CLPXY",
+   "batch": 2,
+   "stage": "2",
+   "recorded": 40,
+   "blind": 42,
+   "delta": 2,
+   "blind_need": 25,
+   "blind_viability": 17,
+   "one_line": "China's largest wind power operator, ~32GW; direct energy provider, OTC ADR only"
+  },
+  {
+   "tk": "TFSL",
+   "batch": 2,
+   "stage": "0",
+   "recorded": 25,
+   "blind": 30,
+   "delta": 5,
+   "blind_need": 12,
+   "blind_viability": 18,
+   "one_line": "Ohio thrift/mortgage bank; finance rent extraction with some housing-access enabling, ~$4-5B"
   }
  ],
  "potential_false_negatives": {
   "names": [
    "VMD"
   ],
-  "note": "recorded as cut on the first screen, but the blind scorer puts them at or above the advance bar. VMD, home respiratory care growing about 25 percent a year, is the screen's clearest candidate miss in this sample."
+  "note": "recorded as cut on the first screen, but the blind scorer puts them at or above the advance bar. VMD was then deep-scored blind on the full six measures: 76, tier-2 grade, gate pass, which CONFIRMS the false negative. It sits in data/rigor/judgment_queue.json for the monthly run; the frozen vintages keep the cut so the forward test prices the miss."
  },
  "reverse_disagreements": {
   "names": [
@@ -142,7 +278,8 @@
   "note": "recorded at or above the bar, blind scorer well below. IRS at recorded 42 contradicts the engine's own industry table, which prices real-estate rent extraction at need 8; the anomaly looks like an error in the recorded score, not in the blind one."
  },
  "estimated_fn_rate": {
-  "value": 0.125,
-  "basis": "1 of the 8 sampled hard cuts (stages 0 and 2); a 12-name sample bounds this loosely, and widening the sample is the standing way to tighten it"
+  "value": 0.0625,
+  "basis": "1 of the 16 sampled hard cuts (stages 0 and 2) across two pre-registered batches; batch 2 surfaced zero new false negatives and agreed with the recorded scores to 2.6 points of 50",
+  "note": "the one flagged name was subsequently confirmed at t2 grade by a full blind six-measure scoring"
  }
 }

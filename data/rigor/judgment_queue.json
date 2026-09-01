@@ -1,0 +1,38 @@
+{
+ "queued": "2026-08-31",
+ "for": "the monthly judgment run, which alone may add a name to the ranking",
+ "entries": [
+  {
+   "tk": "VMD",
+   "nm": "Viemed Healthcare",
+   "proposed_score": 76,
+   "proposed_tier": "t2",
+   "gate": "pass",
+   "gate_note": "cash $10.7M plus $46M undrawn credit vs $6.4M LT debt; H1'26 FCF +$11.2M; shares outstanding FELL 2023 to 2026 via buybacks, 3-yr dilution negative; no buyout, no going-concern",
+   "dims": {
+    "A": 15,
+    "B": 21,
+    "C1": 7,
+    "C2": 6,
+    "D_rep": 5,
+    "D_inhib": 4,
+    "D_exit": 3,
+    "E": 6,
+    "F_clock": 5,
+    "F_now": 4
+   },
+   "stock": "avoidable acute-care burden: hospital respiratory beds and clinician-hours consumed by COPD exacerbations that staffed home NIV can absorb (~1.25M qualifying Medicare beneficiaries, ~5% served)",
+   "evidence": "peer-reviewed CMS-data NIVH study (2022): Medicare spend -11.6% ($5,484) per patient in the year after home NIV started within 7 days of diagnosis; earlier CMS 4-yr analysis ~$15,067 avg savings and 42% relative mortality reduction vs untreated",
+   "judgment_notes": "a rare C2-positive healthcare name: revenue grows as care rebalances toward the home. Held from the top band by reimbursement-rate dependence (competitive bidding suspended only through 2028), a neutral loop on COPD prevalence, margin compression 22.7 to 17.6 percent, and lower-evidence side segments",
+   "provenance": "cut at the first screen with 33; flagged by the registered blind audit (blind read 39); deep-scored blind against the public rubric with web research only. If admitted, VMD enters the LIVE ranking; the frozen vintages keep the cut, and the forward test will price the miss",
+   "need": "Health \u00b7 Respiratory",
+   "imbalance": "healthcare",
+   "sources": [
+    "https://www.accessnewswire.com/newsroom/en/healthcare-and-pharmaceutical/viemed-healthcare-announces-second-quarter-2026-financial-results-1200721",
+    "https://www.sec.gov/Archives/edgar/data/0001729149/000172914926000042/vmd-20260630.htm",
+    "https://www.globenewswire.com/news-release/2022/07/05/2474404/0/en/Viemed-Announces-Publication-of-Peer-Reviewed-NIVH-Study-Finding-Treatment-Reduces-Healthcare-Costs-and-Saves-Lives.html",
+    "https://pubmed.ncbi.nlm.nih.gov/28292482/"
+   ]
+  }
+ ]
+}

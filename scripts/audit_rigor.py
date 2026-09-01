@@ -22,6 +22,7 @@ cov = need("coverage.json")
 ufz = need("universe_freeze_2026-08-28.json")
 utk = need("universe_track.json")
 fnr = need("fn_rescore.json")
+rel = need("reliability.json")
 fac = need("factor_internal.json")
 if errs: [print("  !", e) for e in errs]; sys.exit(1)
 
@@ -64,8 +65,13 @@ elif sen["rank_stability_spearman"]["mean"] < 0.9:
 for k in ("effective_independent_bets", "avg_pairwise_correlation", "pc1_variance_share"):
     if k not in rsk: errs.append("risk profile missing " + k)
 if "momentum_contamination" not in rep: errs.append("report card missing the contamination check")
-if len(fnr["rows"]) != 12: errs.append("fn_rescore does not cover the registered 12-name sample")
+fn_registered = sum(b["n"] for b in fnr.get("batches", [{"n": 12}]))
+if len(fnr["rows"]) != fn_registered:
+    errs.append("fn_rescore rows do not cover the registered %d-name samples" % fn_registered)
 if "estimated_fn_rate" not in fnr: errs.append("fn_rescore missing the rate estimate")
+rel_registered = sum(b["n"] for b in rel.get("batches", [{"n": 8}]))
+if len(rel["rows"]) != rel_registered or rel["n"] != rel_registered:
+    errs.append("reliability rows do not cover the registered %d-name samples" % rel_registered)
 
 print("RIGOR")
 print("  vintage 2026-08-28 locked, hash %s..., protocol registered %s" % (frz["sha256_scores"][:12], pro["registered"]))
