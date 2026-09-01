@@ -1,0 +1,85 @@
+name: weekly
+# The engine runs itself: sample the imbalance series, refresh prices, append
+# the forward-test snapshots, re-read every instrument, rebuild the page,
+# verify it, publish it, and commit the new state. Saturday morning UTC, after
+# the Friday US close. Never changes a score; filings do not change weekly.
+on:
+  schedule:
+    - cron: "30 6 * * 6"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: pip install --quiet pandas numpy yfinance
+
+      - name: Sample and derive Layer 0
+        run: |
+          python scripts/collect_imbalance.py
+          python scripts/derive_imbalance.py
+          python scripts/audit_imbalance.py
+
+      - name: Refresh prices
+        run: |
+          python scripts/refresh_ranked_cache.py
+          python scripts/build_sparklines.py
+
+      - name: Append forward-test snapshots
+        run: |
+          python scripts/track_prices.py
+          python scripts/universe_vintage.py
+
+      - name: Re-read the rigor instruments
+        run: |
+          python scripts/report_card.py
+          python scripts/risk_profile.py
+          python scripts/factor_attribution.py
+          python scripts/rigor_summary.py
+          python scripts/audit_rigor.py
+
+      - name: Rebuild the console
+        run: python scripts/refresh_app.py
+
+      - name: Verify the page
+        run: |
+          node scripts/validate_console.js build/bs_console.html
+          node scripts/test_views.js build/bs_console.html
+          node scripts/test_chart.js build/bs_console.html
+          python scripts/check_page.py
+          python scripts/check_structure.py
+          python scripts/proofread.py
+
+      - name: Publish to docs/
+        run: python scripts/publish_pages.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "nothing changed this week"
+            exit 0
+          fi
+          git commit -m "Weekly run: imbalance sample, prices, snapshots, page rebuild"
+          git push origin HEAD:main
