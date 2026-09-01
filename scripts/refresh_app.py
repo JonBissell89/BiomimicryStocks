@@ -351,6 +351,11 @@ button{font-family:var(--mono);font-size:12.5px;padding:8px 14px;border:1px soli
 button:hover{background:var(--accent);color:var(--card)}
 button:disabled{opacity:.45;cursor:not-allowed}
 button.sell{border-color:var(--warn);background:var(--warn-soft);color:var(--warn)}
+button.buy{border-color:var(--good);color:var(--good)}
+button.pk{width:26px;height:26px;padding:0;border-radius:50%;font-weight:700;line-height:1;margin-right:4px}
+button.pk.on{background:var(--accent);border-color:var(--accent);color:#fff}
+#tradebody .cRow{white-space:nowrap}
+#tradebody .cRow button{margin:1px 2px}
 button.sell:hover{background:var(--warn);color:var(--card)}
 button.ghost{border-color:var(--line);background:none;color:var(--muted)}
 button.big{font-size:15px;padding:12px 22px}
@@ -850,7 +855,7 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
 <section>
   <p class="step">Buy and sell</p>
   <h2>Build your portfolio</h2>
-  <p>Pick companies on <a href="#list" class="tab" data-view="list">the list</a> with the <i class="plusref">+</i> button, or start from one of these. Then choose one amount and it splits across everything you picked, so you decide once instead of guessing a figure for every company.</p>
+  <p>Pick companies in the table below with the <i class="plusref">+</i> button, or start from one of these. Then choose one amount and it splits across everything you picked, so you decide once instead of guessing a figure for every company. Each row in the table also buys and sells on its own.</p>
   <div class="panel" id="moneybar2"><div id="moneybartext2" class="money-line"></div></div>
 
   <div class="basket">
@@ -873,6 +878,18 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
     <div id="bkbreak"></div>
     <div class="msg" id="bkmsg"></div>
   </div>
+
+  <h3 style="margin-top:30px">The list, ready to trade</h3>
+  <p style="font-size:13.5px">The same ranked companies as the About page, with the money controls here where the money lives. The <i class="plusref">+</i> adds a company to the basket above; the dollar box trades just that company. Tap a row anywhere else to read why it scored what it did.</p>
+  <div class="tablewrap mktwrap"><table class="mkt">
+  <thead><tr>
+  <th>Tier</th><th>Ticker</th><th>Company</th>
+  <th style="text-align:right">Score</th>
+  <th style="text-align:right" title="What the whole business is worth at the current share price">Company value</th>
+  <th style="text-align:right">Price</th>
+  <th style="text-align:right">You hold</th>
+  <th>Trade</th></tr></thead>
+  <tbody id="tradebody"></tbody></table></div>
 
   <h3 style="margin-top:30px">What you hold</h3>
   <p style="font-size:13.5px">Selling turns shares back into cash, which is the only way to free up more to spend.</p>
@@ -1303,6 +1320,42 @@ function renderSell(){
     if(!v){$('buymsg').textContent='Enter how many dollars of '+tk+' to sell.';return;}
     trade(tk,'SELL',v);});
 }
+// The full ranked list on the trading page, each row carrying its own controls:
+// pick into the basket, or buy and sell directly. The About table stays a pure
+// ranking; this table is where money moves.
+function renderTrade(){
+  const el=$('tradebody');if(!el)return;
+  const rows=allRows().slice().sort(function(a,b){return b[F.sc]-a[F.sc];});
+  let h='';
+  rows.forEach(function(n){
+    const tk=n[F.tk],own=n[F.tier]==='own',gf=gateOf(n)==='fail';
+    const sh=heldOf(tk),mv=sh*(n[F.px]||0),canBuy=buyable(n),picked=!!ui.picked[tk];
+    h+='<tr data-tk="'+tk+'" tabindex="0" class="rowclick '+(own?'ownrow':'')+'">'+
+      '<td class="tierpill" data-l="Tier">'+(own?'YOURS':n[F.tier].toUpperCase())+
+        (gf?'<span class="gdot" title="Did not clear the survivability gate, so it cannot be bought here">!</span>':'')+'</td>'+
+      '<td class="tk" data-l="Ticker">'+tk+'</td>'+
+      '<td class="co" data-l="Company"><span class="cn">'+n[F.nm]+'</span><div class="blurb">'+(n[F.kid]||n[F.need]||'')+'</div></td>'+
+      '<td class="r" style="font-weight:600" data-l="Score">'+(n[F.sc]||'-')+'</td>'+
+      '<td class="r" data-l="Company value">'+(mcapOf(n)?fmtCap(mcapOf(n)):'n/a')+'</td>'+
+      '<td class="r cPx" data-l="Price">'+(n[F.px]?fmt(n[F.px]):'n/a')+'</td>'+
+      '<td class="r" data-l="You hold">'+(sh>0.0001?sh.toFixed(4)+' sh<div class="blurb">'+fmt(mv)+'</div>':'-')+'</td>'+
+      '<td class="cRow" data-l="Trade">'+(canBuy
+        ? '<button class="pk'+(picked?' on':'')+'" data-tp="'+tk+'" aria-pressed="'+picked+'" title="'+(picked?'In the basket above; click to drop it':'Add to the basket above')+'">'+(picked?'&#10003;':'+')+'</button>'+
+          '<input type="number" class="amt" min="1" step="10" id="amt_'+tk+'" aria-label="dollars of '+tk+'" placeholder="$">'+
+          '<button class="buy" data-tb="'+tk+'">Buy</button>'+
+          (sh>0.0001?'<button class="sell" data-ts="'+tk+'">Sell</button>':'')
+        : (sh>0.0001?'<button class="sell" data-ts="'+tk+'">Sell</button>'
+           :'<span class="blurb">'+(gf?'gate fail':'no price')+'</span>'))+'</td></tr>';});
+  el.innerHTML=h;
+  el.querySelectorAll('button[data-tp]').forEach(function(b){b.onclick=function(){
+    const t=b.dataset.tp;if(ui.picked[t]){delete ui.picked[t];}else{ui.picked[t]=true;}render();};});
+  el.querySelectorAll('button[data-tb]').forEach(function(b){b.onclick=function(){trade(b.dataset.tb,'BUY');};});
+  el.querySelectorAll('button[data-ts]').forEach(function(b){b.onclick=function(){trade(b.dataset.ts,'SELL');};});
+  el.querySelectorAll('tr[data-tk]').forEach(function(tr){
+    tr.onclick=function(e){if(e.target.closest('button,input,select,a'))return;openDetail(tr.dataset.tk);};
+    tr.onkeydown=function(e){if(e.key==='Enter'||e.key===' '){
+      if(e.target.closest('button,input'))return;e.preventDefault();openDetail(tr.dataset.tk);}};});
+}
 // Show the arithmetic before anything happens: how many, how much each, what is
 // left over. Nobody should have to trust a button with their whole balance.
 function renderBasket(){
@@ -1344,7 +1397,7 @@ function render(){
        +'only way to free up more to spend.')
     : ('This is the list\'s own book, rebalanced weekly by the engine. It is read-only here. '
        +'Switch the view above to your own simulation to trade.');
-  renderBasket();renderSell();
+  renderBasket();renderSell();renderTrade();
   const ROWS=allRows();
   let rows=ROWS.map(n=>{const tk=n[0],sh=heldOf(tk),mv=sh*(n[F.px]||0),pl=mv-costOf(tk);
     return{n:n,tk:tk,sh:sh,mv:mv,pl:pl,
