@@ -1,6 +1,6 @@
 {
  "_comment": "Layer 0 time series. One series per civilization stock. Sampled weekly by scripts/collect_imbalance.py; most underlying assessments update yearly or slower, so a flat stretch means the science has not re-measured yet, not that the stock stood still. Values are order-of-scale seeds from the public record, dated, and meant to be re-researched.",
- "asof": "2026-08",
+ "asof": "2026-09",
  "series": {
   "ghg": {
    "unit": "atmospheric CO2, ppm (annual mean, Mauna Loa/NOAA)",

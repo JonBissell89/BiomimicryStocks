@@ -48,6 +48,21 @@ doc = (
 out = os.path.join(DOCS, "index.html")
 open(out, "w", encoding="utf-8").write(doc)
 
+# The page fetches its heavy payloads (search index, prices, sparklines) from
+# data/ beside it; publish them with the page or search and sparklines come up
+# empty on the served copy.
+BDATA = os.path.join(BUILD, "data")
+DDATA = os.path.join(DOCS, "data")
+os.makedirs(DDATA, exist_ok=True)
+published = []
+for fn in sorted(os.listdir(BDATA)) if os.path.isdir(BDATA) else []:
+    if fn.endswith(".json"):
+        shutil.copy2(os.path.join(BDATA, fn), os.path.join(DDATA, fn))
+        published.append(fn)
+if not published:
+    raise SystemExit("no data payloads in build/data; run refresh_app.py first")
+print("wrote docs/data/: " + ", ".join(published))
+
 # Without this, Jekyll runs over the folder and can drop files, and it slows the
 # build for no benefit on a page that is already a finished artifact.
 open(os.path.join(DOCS, ".nojekyll"), "w").close()

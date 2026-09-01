@@ -14,7 +14,8 @@ P = os.path.join(DATA, "rigor", "freeze_2026-08-28.json")
 if os.path.exists(P):
     print("freeze exists; refusing to rewrite a vintage"); sys.exit(0)
 names = load_names()
-px = json.load(open(os.path.join(DATA, "price_cache.json"), encoding="utf-8"))
+import marketdb
+px = marketdb.load_price_cache()
 doc = {"asof": "2026-08-28",
        "note": "scores and prices as committed on the freeze date; the forward test grades this vintage regardless of later score changes",
        "scores": {n["tk"]: {"score": n["score"], "tier": n["tier"], "gate": n["gate"]} for n in names},

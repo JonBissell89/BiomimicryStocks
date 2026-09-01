@@ -4,6 +4,16 @@
 // the last value of each series.
 const fs = require('fs'), vm = require('vm');
 const html = fs.readFileSync(process.argv[2], 'utf8');
+// The page now fetches its heavy payloads; the harness preloads them on window
+// the way the test hook expects, from the data files beside the rendered page.
+const path = require('path');
+const dataDir = path.join(path.dirname(process.argv[2]), 'data');
+const payload = {};
+for (const k of ['sidx', 'px', 'spark']) {
+  try { payload[k] = JSON.parse(fs.readFileSync(path.join(dataDir, k + '.json'), 'utf8')); }
+  catch (e) { payload[k] = {}; }
+}
+
 const scripts = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m => m[1]);
 const store = {};
 const els = {};
@@ -18,7 +28,7 @@ const sandbox = {
              body:{style:{}} },
   localStorage:{ getItem:k=>(k in store?store[k]:null), setItem:(k,v)=>{store[k]=String(v);},
                  removeItem:k=>{delete store[k];}, clear(){} },
-  console, window:{claude:undefined,addEventListener(){},scrollTo(){}},
+  console, window:{claude:undefined,addEventListener(){},scrollTo(){},__SIDX:payload.sidx,__PX:payload.px,__SPARK:payload.spark},
   navigator:{clipboard:{writeText:async()=>{}}},
   location:{hash:''}, history:{pushState(){}}, scrollTo(){},
   confirm:()=>true, alert:()=>{}, btoa:s=>Buffer.from(s,'binary').toString('base64'),

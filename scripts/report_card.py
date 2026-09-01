@@ -18,7 +18,8 @@ from rigor_lib import load_names, spearman
 
 R = os.path.join(DATA, "rigor")
 frz = json.load(open(os.path.join(R, "freeze_2026-08-28.json"), encoding="utf-8"))
-trk = json.load(open(os.path.join(R, "price_track.json"), encoding="utf-8"))
+import marketdb
+trk = marketdb.load_price_track()
 names = load_names()
 
 doc = {"vintage": frz["asof"], "snapshots": len(trk["snapshots"]),
@@ -48,7 +49,7 @@ else:
 
 # ---- the whole universe faces the test too ---------------------------------
 uf = json.load(open(os.path.join(R, "universe_freeze_2026-08-28.json"), encoding="utf-8"))
-ut = json.load(open(os.path.join(R, "universe_track.json"), encoding="utf-8"))
+ut = marketdb.load_universe_track()
 udays = (np.datetime64(ut["snapshots"][-1]["date"]) - np.datetime64(uf["asof"])).astype(int)
 if udays < 28 or len(ut["snapshots"]) < 2:
     doc["universe"] = {"status": "accruing", "names_in_vintage": uf["n"],
@@ -67,7 +68,7 @@ else:
                        "advanced_minus_cut": round(float(np.mean(grp["adv"]) - np.mean(grp["cut"])), 4)}
 
 # ---- contamination check (computable on day one) ---------------------------
-sp = json.load(open(os.path.join(DATA, "spark.json"), encoding="utf-8"))["s"]
+sp = marketdb.load_spark()["s"]
 trail = {tk: v[-1] / v[0] - 1 for tk, v in sp.items() if v and v[0]}
 sc2 = {n["tk"]: n["score"] for n in names if n["tk"] in trail}
 common = sorted(sc2)

@@ -86,3 +86,5 @@ for m in re.finditer(r"<(h[12345])[^>]*>([\s\S]*?)</\1>", prose_html):
 
 print(f"\n{'=' * 60}")
 print(f"issues found: {issues}")
+if issues:
+    raise SystemExit(1)

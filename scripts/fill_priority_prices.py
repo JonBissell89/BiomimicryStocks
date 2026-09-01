@@ -13,11 +13,12 @@ import json, os, sys, time, warnings
 warnings.filterwarnings("ignore")
 import pandas as pd, yfinance as yf
 
+import marketdb
+
 D = DATA
-OUT = os.path.join(D, "price_cache.json")
 N = int(sys.argv[1]) if len(sys.argv) > 1 else 3000
 
-cache = json.load(open(OUT, encoding="utf-8"))["px"]
+cache = marketdb.load_price_cache()["px"]
 sidx = json.load(open(os.path.join(D, "search_index.json"), encoding="utf-8"))
 r1 = pd.read_csv(os.path.join(D, "round1_final_scores.csv"))
 r1 = r1[r1.ticker.isin(sidx.keys())].copy()
@@ -43,8 +44,7 @@ for i in range(0, len(want), CH):
                 cache[t] = round(float(v), 4); filled += 1
     except Exception as e:
         print(f"  chunk {i}: {type(e).__name__}", flush=True)
-    json.dump({"asof": time.strftime("%Y-%m-%d"), "px": cache},
-              open(OUT, "w", encoding="utf-8"), separators=(",", ":"))
+    marketdb.save_price_cache({"asof": time.strftime("%Y-%m-%d"), "px": cache})
     got = sum(1 for t in part if cache.get(t))
     print(f"  {min(i+CH,len(want))}/{len(want)}  filled {filled}  (this chunk {got}/{len(part)})",
           flush=True)

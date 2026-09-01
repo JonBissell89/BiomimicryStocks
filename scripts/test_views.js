@@ -3,6 +3,16 @@
 // features use querySelector and closest().
 const fs = require('fs'), vm = require('vm');
 const html = fs.readFileSync(process.argv[2], 'utf8');
+// The page now fetches its heavy payloads; the harness preloads them on window
+// the way the test hook expects, from the data files beside the rendered page.
+const path = require('path');
+const dataDir = path.join(path.dirname(process.argv[2]), 'data');
+const payload = {};
+for (const k of ['sidx', 'px', 'spark']) {
+  try { payload[k] = JSON.parse(fs.readFileSync(path.join(dataDir, k + '.json'), 'utf8')); }
+  catch (e) { payload[k] = {}; }
+}
+
 const scripts = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m => m[1]);
 const store = {}, els = {};
 const mk = id => ({ id, value:'', textContent:'', innerHTML:'', checked:false, hidden:false,
@@ -18,7 +28,7 @@ const sandbox = {
     removeItem:k=>{delete store[k];}, clear(){} },
   console, navigator:{clipboard:{writeText:async()=>{}}},
   location:{ hash:'' }, history:{ pushState(){} },
-  window:{ claude:undefined, addEventListener(){}, scrollTo(){} },
+  window:{ claude:undefined, addEventListener(){}, scrollTo(){}, __SIDX: payload.sidx, __PX: payload.px, __SPARK: payload.spark },
   confirm:()=>true, alert:()=>{},
   btoa:s=>Buffer.from(s,'binary').toString('base64'),
   atob:s=>Buffer.from(s,'base64').toString('binary'),

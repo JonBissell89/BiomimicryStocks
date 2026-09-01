@@ -6,7 +6,8 @@ import os
 from paths import DATA
 import json
 D = DATA
-px = json.load(open(os.path.join(D, "price_cache.json"), encoding="utf-8"))["px"]
+import marketdb
+px = marketdb.load_price_cache()["px"]
 sidx = json.load(open(os.path.join(D, "search_index.json"), encoding="utf-8"))
 
 def cls(t):

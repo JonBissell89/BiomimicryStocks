@@ -10,12 +10,12 @@ universe vintage once (hash-locked, refuses rewrite) and appends a universe
 price snapshot every 28 days (roughly 200KB per snapshot, 13 per year)."""
 import json, os, sys, hashlib, datetime
 from paths import DATA
+import marketdb
 
 R = os.path.join(DATA, "rigor")
 FRZ = os.path.join(R, "universe_freeze_2026-08-28.json")
-TRK = os.path.join(R, "universe_track.json")
 si = json.load(open(os.path.join(DATA, "search_index.json"), encoding="utf-8"))
-pc = json.load(open(os.path.join(DATA, "price_cache.json"), encoding="utf-8"))
+pc = marketdb.load_price_cache()
 
 if not os.path.exists(FRZ):
     scores = {tk: [v[1], v[2]] for tk, v in si.items()}   # [stage, first-screen score]
@@ -29,14 +29,13 @@ if not os.path.exists(FRZ):
 else:
     print("universe vintage exists; refusing to rewrite")
 
-doc = json.load(open(TRK, encoding="utf-8")) if os.path.exists(TRK) else {"cadence_days": 28, "snapshots": []}
+doc = marketdb.load_universe_track()
 last = doc["snapshots"][-1]["date"] if doc["snapshots"] else None
 if last and (datetime.date.fromisoformat(pc["asof"]) - datetime.date.fromisoformat(last)).days < 28:
     print("universe track: last snapshot %s; 28-day cadence holds" % last); sys.exit(0)
 if last == pc["asof"]:
     sys.exit(0)
-snap = {"date": pc["asof"], "px": {tk: round(p, 4) for tk, p in pc["px"].items() if p}}
-doc["snapshots"].append(snap)
-json.dump(doc, open(TRK, "w", encoding="utf-8"), separators=(",", ":"))
+px = {tk: round(p, 4) for tk, p in pc["px"].items() if p and tk in si}
+marketdb.append_universe_snapshot(pc["asof"], px)
 print("universe track: snapshot %s appended (%d priced, %d total snapshots)"
-      % (pc["asof"], len(snap["px"]), len(doc["snapshots"])))
+      % (pc["asof"], len(px), len(doc["snapshots"]) + 1))

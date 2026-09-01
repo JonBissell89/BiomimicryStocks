@@ -43,10 +43,14 @@ for i in range(0, len(tickers), CH):
         time.sleep(6)
     print(f"  {min(i+CH,len(tickers))}/{len(tickers)}  have {got}", flush=True)
 
-path = os.path.join(DATA, "spark.json")
-json.dump({"asof": time.strftime("%Y-%m-%d"), "n": got, "s": out},
-          open(path, "w", encoding="utf-8"), separators=(",", ":"))
-print(f"\n{got}/{len(tickers)} with history | {os.path.getsize(path)/1024:.0f} KB", flush=True)
+import marketdb
+# GUARD: a run that came back badly short is a network failure, not a market
+# reading. Keeping last week's shapes beats overwriting them with nothing.
+if got < int(0.6 * len(tickers)):
+    print(f"\nonly {got}/{len(tickers)} fetched; keeping the existing sparklines", flush=True)
+    raise SystemExit(0)
+marketdb.save_spark({"asof": time.strftime("%Y-%m-%d"), "n": got, "s": out})
+print(f"\n{got}/{len(tickers)} with history -> market.db", flush=True)
 if got:
     lens = [len(v) for v in out.values()]
     print(f"points per name: {min(lens)} to {max(lens)}", flush=True)

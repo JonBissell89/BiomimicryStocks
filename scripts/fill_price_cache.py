@@ -14,23 +14,21 @@ import json, os, sys, time, warnings
 warnings.filterwarnings("ignore")
 import pandas as pd, yfinance as yf
 
+import marketdb
+
 D = DATA
-OUT = os.path.join(D, "price_cache.json")
 sidx = json.load(open(os.path.join(D, "search_index.json"), encoding="utf-8"))
 universe = sorted(sidx.keys())
 
-cache = {}
-if os.path.exists(OUT):
-    try:
-        cache = json.load(open(OUT, encoding="utf-8"))["px"]
-    except Exception:
-        cache = {}
+try:
+    cache = marketdb.load_price_cache()["px"]
+except Exception:
+    cache = {}
 for t in universe:
     cache.setdefault(t, None)
 
 def save():
-    json.dump({"asof": time.strftime("%Y-%m-%d"), "px": cache},
-              open(OUT, "w", encoding="utf-8"), separators=(",", ":"))
+    marketdb.save_price_cache({"asof": time.strftime("%Y-%m-%d"), "px": cache})
 
 def priced():
     return sum(1 for v in cache.values() if v)

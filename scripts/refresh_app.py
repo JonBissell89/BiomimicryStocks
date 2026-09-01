@@ -2,11 +2,12 @@
 Flow: What is this -> The idea -> How it was judged -> Results and your $5,000
 (one section: fund, browse and add any ticker, spread a lump sum) ->
 Track over time -> Compare -> Full rules.
-Self-saving artifact (house ledger); every visitor gets their own browser ledger.
-Sync paper_state.json from the published artifact BEFORE regenerating."""
+The house ledger lives in data/paper_state.json and is written only by this
+weekly run; every visitor gets their own browser ledger. The page fetches its
+heavy payloads (search index, prices, sparklines) from build/data/."""
 import os
 from paths import BUILD, DATA
-import json, time, urllib.parse, warnings
+import json, time, warnings
 from datetime import datetime, timezone
 warnings.filterwarnings("ignore")
 import pandas as pd
@@ -23,15 +24,16 @@ imb_series = json.load(open(os.path.join(DATA, "imbalance_series.json"), encodin
 rigor_sum = json.load(open(os.path.join(DATA, "rigor", "summary.json"), encoding="utf-8"))
 # Prices for the whole searchable universe, so a visitor can buy companies that
 # never made the list. Names without a price are addable but not buyable.
+import marketdb
 try:
-    pxcache = json.load(open(os.path.join(DATA, "price_cache.json"), encoding="utf-8")).get("px", {})
+    pxcache = marketdb.load_price_cache().get("px", {})
     pxcache = {k: v for k, v in pxcache.items() if v}
 except Exception:
     pxcache = {}
 # A year of weekly closes per ranked company, normalised to the first close, so a
 # row can show its own shape instead of only today's number.
 try:
-    _sp = json.load(open(os.path.join(DATA, "spark.json"), encoding="utf-8"))
+    _sp = marketdb.load_spark()
     spark, spark_asof = _sp.get("s", {}), _sp.get("asof", "")
 except Exception:
     spark, spark_asof = {}, ""
@@ -65,6 +67,7 @@ for attempt in range(5):
     if attempt:
         print(f"  price attempt {attempt+1}: {len(tickers)-len([t for t in tickers if prices.get(t)])} still missing")
 
+live_priced = len([t for t in tickers if prices.get(t)])
 stale = [t for t in tickers if not prices.get(t)]
 for t in stale:                      # last resort: the universe cache from the previous run
     if pxcache.get(t):
@@ -106,12 +109,18 @@ else:
 # its upkeep to the house portfolio would freeze it at 100 whenever that is unfunded.
 # Chain-linking on each run also means a name entering or leaving the list never
 # creates a phantom jump: only names present on both sides of a step are compared.
+# GUARD: a run with zero live prices is an offline render, not a market reading.
+# It may rebuild the page from cached prices, but it must not rewrite the
+# benchmark reference or append history, or a network outage silently re-bases
+# the yardstick with whatever subset the cache happened to hold.
 state_dirty = False
-if not bref or bref.get("date") != today:
+if live_priced == 0:
+    print("OFFLINE RENDER: no live prices; paper_state left untouched")
+elif not bref or bref.get("date") != today:
     state["basket_ref"] = {"date": today, "px": bpx, "scale": basket_level}
     state_dirty = True
 
-if state.get("cash") is not None:
+if state.get("cash") is not None and live_priced > 0:
     total = state["cash"] + sum(p["shares"] * (prices.get(tk) or 0)
                                 for tk, p in state.get("positions", {}).items())
     hist = state.setdefault("history", [])
@@ -898,9 +907,13 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
 <script>
 const STATE=%%STATE%%;
 const NAMES=@@NAMES@@;
-const SIDX=window.__SIDX||{};
-const PX=window.__PX||{};
-const SPARK=window.__SPARK||{};
+// The searchable universe, its prices and the ranked sparklines are served as
+// separate files the page fetches, so the document itself stays small. A test
+// harness may pre-load them on window instead; the page works from an empty
+// set until either source arrives.
+let SIDX=window.__SIDX||{};
+let PX=window.__PX||{};
+let SPARK=window.__SPARK||{};
 const IMB=@@IMBALANCE@@;
 const IMBSERIES=@@IMBSERIES@@;
 const RIGOR=@@RIGOR@@;
@@ -928,7 +941,6 @@ function sparkline(tk){
 // record a snapshot against the same yardsticks the house ledger uses.
 const MARK=@@MARK@@;
 const TODAY='@@TODAY@@';
-const TPL_ENC='@@TPLENC@@';
 const $=id=>document.getElementById(id);
 const fmt=n=>'$'+n.toLocaleString(undefined,{maximumFractionDigits:2,minimumFractionDigits:2});
 const F={tk:0,nm:1,sc:2,need:3,px:4,note:5,vt:6,sofi:7,tier:8,kid:9,dims:10,meta:11};
@@ -1052,7 +1064,7 @@ function snapshotMine(){
   h.push({date:MARK.d,value:+totalValue(s).toFixed(2),spx:MARK.spx,list:MARK.list});
   saveMine(s);
 }
-let ui=null,art=null;
+let ui=null;
 function uiDefaults(){return {mkt:"all",cap:99999,minScore:0,sort:"score",picked:{},spend:""};}
 function uiLoad(){try{const r=localStorage.getItem('bsUI');if(r)return {...uiDefaults(),...JSON.parse(r)};}catch(e){}return uiDefaults();}
 function uiSave(){try{localStorage.setItem('bsUI',JSON.stringify(ui));}catch(e){}}
@@ -1311,10 +1323,9 @@ function render(){
   $('txnbody').innerHTML=th||'<tr><td colspan="7" style="color:var(--muted)">Nothing yet.</td></tr>';
   $('ledgersel').value=whichLedger();
   if($('whoname').value!==whoNow())$('whoname').value=whoNow();
-  $('tradermsg').textContent=isHouse()?(art?'House ledger: your trades save into the page.':'The house ledger is read-only for you. Switch to My simulation to trade.'):'Your own $5,000, saved privately in this browser.';
+  $('tradermsg').textContent=isHouse()?'The house ledger is read-only here; the weekly engine run writes it. Switch to My simulation to trade.':'Your own $5,000, saved privately in this browser.';
   renderBoard();
 }
-if(window.claude&&claude.use){claude.use('artifact').then(a=>{art=a;render();}).catch(()=>{render();});}
 // amtOverride lets the detail popup and the sell list drive the same code path as
 // the table row, so there is one place where a trade actually happens.
 async function trade(tk,act,amtOverride){
@@ -1376,14 +1387,7 @@ function autoFund(){
 }
 async function commit(s,msgId){
   if(!isHouse()){MINE=s;saveMine(MINE);$(msgId).textContent='Saved.';render();return;}
-  if(!art){$(msgId).textContent='The house ledger is read-only for visitors. Switch to "My simulation" to trade your own $5,000.';return;}
-  $(msgId).textContent='Saving…';
-  const body=decodeURIComponent(TPL_ENC).replace('%%'+'STATE'+'%%',JSON.stringify(s)).replace('@@'+'TPLENC'+'@@',TPL_ENC);
-  const idx='<scr'+'ipt>window.__SIDX='+JSON.stringify(SIDX)+';</scr'+'ipt>';
-  const doc='<!doctype html>\n<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body>'+idx+body+'</body></html>';
-  try{await art.publish(doc);$(msgId).textContent='Saved.';}
-  catch(e){const c=(e&&e.code)||'';
-    $(msgId).textContent=c==='conflict'?'A newer version exists. Reload the page.':(c==='not_writer'||c==='not_granted')?'Read-only: only the owner can trade in the house ledger.':'Save failed. Try again.';}
+  $(msgId).textContent='The house ledger is written by the weekly engine run, not from the page. Switch to "My simulation" to trade your own $5,000.';
 }
 const STAGE={
  R:['Made the list','v-in','It passed every round and every rule.'],
@@ -1621,6 +1625,17 @@ document.addEventListener('keydown',function(e){
   if(e.key==='Escape'&&!$('modal').hidden)closeDetail();});
 
 ui=uiLoad();autoFund();snapshotMine();pushUI();renderImbalance();renderRigor();showView(currentView(),false);
+// The heavy payloads arrive after first paint: the searchable universe, its
+// price map, and the ranked sparklines. Each lands independently and re-renders
+// what it feeds; a failed fetch leaves that feature empty rather than broken.
+if(typeof fetch==='function'&&!window.__SIDX){
+  fetch('data/sidx.json').then(function(r){return r.ok?r.json():{};})
+    .then(function(v){SIDX=v;if(($('q')||{}).value)lookup();}).catch(function(){});
+  fetch('data/px.json').then(function(r){return r.ok?r.json():{};})
+    .then(function(v){PX=v;render();}).catch(function(){});
+  fetch('data/spark.json').then(function(r){return r.ok?r.json():{};})
+    .then(function(v){SPARK=v;render();}).catch(function(){});
+}
 </script>
 """
 
@@ -1639,13 +1654,16 @@ tpl = (TEMPLATE
        .replace("@@TODAY@@", today)
        .replace("@@ASOF@@", asof)
        .replace("@@STAMP@@", stamp))
-tpl_enc = urllib.parse.quote(tpl, safe="")
-# Search index and price map ride outside the quine template so the self-save
-# payload stays small; the page reads them from window.
-idx_script = ("<script>window.__SIDX=" + json.dumps(sidx, separators=(",", ":")) +
-              ";window.__PX=" + json.dumps(pxcache, separators=(",", ":")) +
-              ";window.__SPARK=" + json.dumps(spark, separators=(",", ":")) + ";</script>\n")
-page = idx_script + tpl.replace("%%STATE%%", json.dumps(state)).replace("@@TPLENC@@", tpl_enc)
+# The searchable universe, its prices and the sparklines are served as separate
+# files the page fetches after first paint, so the document carries only what a
+# first render needs. (The page used to embed a percent-encoded copy of itself
+# for artifact self-saving; that quine doubled every byte and is retired.)
+DDIR = os.path.join(BUILD, "data")
+os.makedirs(DDIR, exist_ok=True)
+for fn, payload in (("sidx.json", sidx), ("px.json", pxcache), ("spark.json", spark)):
+    json.dump(payload, open(os.path.join(DDIR, fn), "w", encoding="utf-8"),
+              separators=(",", ":"))
+page = tpl.replace("%%STATE%%", json.dumps(state))
 open(OUT, "w", encoding="utf-8").write(page)
 print(f"console rendered: {len(names_js)} ranked, {len(sidx)} searchable, "
-      f"{len(pxcache)} priced | {len(page)//1024} KB")
+      f"{len(pxcache)} priced | page {len(page)//1024} KB + 3 data files")

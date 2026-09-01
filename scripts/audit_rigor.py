@@ -12,15 +12,16 @@ def need(fn):
     if not os.path.exists(p): errs.append("missing " + fn); return None
     return json.load(open(p, encoding="utf-8"))
 
+import marketdb
 frz = need("freeze_2026-08-28.json")
 pro = need("evaluation_protocol.json")
-trk = need("price_track.json")
+trk = marketdb.load_price_track()
 rep = need("report_card.json")
 sen = need("sensitivity.json")
 rsk = need("risk_profile.json")
 cov = need("coverage.json")
 ufz = need("universe_freeze_2026-08-28.json")
-utk = need("universe_track.json")
+utk = marketdb.load_universe_track()
 fnr = need("fn_rescore.json")
 rel = need("reliability.json")
 fac = need("factor_internal.json")

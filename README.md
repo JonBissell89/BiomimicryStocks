@@ -97,9 +97,12 @@ It does, monotonically, which is the real test of whether the rubric measures wh
 data/     imbalance_map.json is Layer 0, the civilization imbalance map.
           engine_tiers.json is the graded table and the source of truth.
           search_index.json holds every company that entered, with why it was cut.
-          price_cache.json, paper_state.json, and the tournament audit trail.
+          market.db holds every growing price series (cache, sparklines, the
+          weekly and monthly snapshot tracks) in one SQLite file; the judgment
+          layer stays as JSON. paper_state.json and the tournament audit trail.
 scripts/  the pipeline. paths.py resolves everything relative to the repo.
-build/    the rendered page (gitignored, built by the workflow)
+          marketdb.py is the one owner of market.db.
+build/    the rendered page and its fetched data payloads (gitignored)
 ```
 
 ## How it runs

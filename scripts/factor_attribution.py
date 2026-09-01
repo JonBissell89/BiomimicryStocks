@@ -14,7 +14,8 @@ import numpy as np
 from paths import DATA
 from rigor_lib import load_names
 
-sp = json.load(open(os.path.join(DATA, "spark.json"), encoding="utf-8"))["s"]
+import marketdb
+sp = marketdb.load_spark()["s"]
 names = load_names()
 need = {n["tk"]: n["need"].split("·")[0].strip() for n in names}
 inv = [n["tk"] for n in names if n["gate"] == "pass" and n["tier"] != "exit" and n["tk"] in sp]
