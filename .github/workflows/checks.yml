@@ -1,0 +1,32 @@
+name: checks
+# Every push re-proves the invariants: the vintages match their hashes, the
+# protocol chain is unbroken, the imbalance labels match their measurements,
+# and every company attaches to an established imbalance. Read-only; commits
+# nothing; needs no network.
+on:
+  push:
+    branches: ["**"]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  audits:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install --quiet numpy
+
+      - name: Layer 0 audit
+        run: python scripts/audit_imbalance.py
+
+      - name: Rigor audit
+        run: python scripts/audit_rigor.py
