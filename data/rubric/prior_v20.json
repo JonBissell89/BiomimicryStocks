@@ -1,0 +1,1555 @@
+{
+ "version": "v2.0",
+ "note": "the first-screen prior exactly as scripts/round1_score.py applied it on 2026-08-28; need prior 0-30 by exchange industry code, name patterns for names with no code, hard rejects; yahoo_industry is the enrichment table from scripts/round1_merge_enriched.py applied to names with no exchange code or an enrich flag; description keywords then produced the software:<need> hybrids",
+ "industry": {
+  "Packaged Foods": {
+   "prior": 26,
+   "class": "food",
+   "flag": ""
+  },
+  "Farming/Seeds/Milling": {
+   "prior": 27,
+   "class": "food",
+   "flag": ""
+  },
+  "Food Distributors": {
+   "prior": 24,
+   "class": "food",
+   "flag": ""
+  },
+  "Food Chains": {
+   "prior": 22,
+   "class": "food",
+   "flag": ""
+  },
+  "Specialty Foods": {
+   "prior": 24,
+   "class": "food",
+   "flag": ""
+  },
+  "Meat/Poultry/Fish": {
+   "prior": 18,
+   "class": "food",
+   "flag": "factory-farming-risk"
+  },
+  "Agricultural Chemicals": {
+   "prior": 18,
+   "class": "food",
+   "flag": "toxicity-risk"
+  },
+  "Beverages (Production/Distribution)": {
+   "prior": 14,
+   "class": "food",
+   "flag": "alcohol-mix"
+  },
+  "Restaurants": {
+   "prior": 8,
+   "class": "food-service",
+   "flag": ""
+  },
+  "Water Supply": {
+   "prior": 28,
+   "class": "water",
+   "flag": "utility-slow-growth"
+  },
+  "Water Sewer Pipeline Comm & Power Line Construction": {
+   "prior": 26,
+   "class": "water",
+   "flag": ""
+  },
+  "Pollution Control Equipment": {
+   "prior": 27,
+   "class": "water",
+   "flag": ""
+  },
+  "Environmental Services": {
+   "prior": 25,
+   "class": "water",
+   "flag": ""
+  },
+  "Fluid Controls": {
+   "prior": 24,
+   "class": "water",
+   "flag": ""
+  },
+  "Homebuilding": {
+   "prior": 24,
+   "class": "shelter",
+   "flag": ""
+  },
+  "Building Products": {
+   "prior": 24,
+   "class": "shelter",
+   "flag": ""
+  },
+  "Building Materials": {
+   "prior": 22,
+   "class": "shelter",
+   "flag": ""
+  },
+  "RETAIL: Building Materials": {
+   "prior": 18,
+   "class": "shelter",
+   "flag": ""
+  },
+  "Engineering & Construction": {
+   "prior": 22,
+   "class": "shelter",
+   "flag": ""
+  },
+  "General Bldg Contractors - Nonresidential Bldgs": {
+   "prior": 20,
+   "class": "shelter",
+   "flag": ""
+  },
+  "Forest Products": {
+   "prior": 16,
+   "class": "shelter",
+   "flag": ""
+  },
+  "Home Furnishings": {
+   "prior": 10,
+   "class": "shelter",
+   "flag": ""
+  },
+  "Building operators": {
+   "prior": 10,
+   "class": "shelter",
+   "flag": ""
+  },
+  "Real Estate": {
+   "prior": 8,
+   "class": "shelter",
+   "flag": "rent-extraction-risk"
+  },
+  "Real Estate Investment Trusts": {
+   "prior": 8,
+   "class": "shelter",
+   "flag": "rent-extraction-risk"
+  },
+  "Electric Utilities: Central": {
+   "prior": 22,
+   "class": "energy",
+   "flag": "utility-slow-growth"
+  },
+  "Power Generation": {
+   "prior": 25,
+   "class": "energy",
+   "flag": ""
+  },
+  "Natural Gas Distribution": {
+   "prior": 18,
+   "class": "energy",
+   "flag": "utility-slow-growth"
+  },
+  "Electrical Products": {
+   "prior": 24,
+   "class": "energy",
+   "flag": ""
+  },
+  "Oil & Gas Production": {
+   "prior": 8,
+   "class": "energy",
+   "flag": "commodity"
+  },
+  "Integrated oil Companies": {
+   "prior": 8,
+   "class": "energy",
+   "flag": "commodity"
+  },
+  "Oilfield Services/Equipment": {
+   "prior": 10,
+   "class": "energy",
+   "flag": "commodity"
+  },
+  "Oil and Gas Field Machinery": {
+   "prior": 12,
+   "class": "energy",
+   "flag": "commodity"
+  },
+  "Oil/Gas Transmission": {
+   "prior": 12,
+   "class": "energy",
+   "flag": ""
+  },
+  "Oil Refining/Marketing": {
+   "prior": 8,
+   "class": "energy",
+   "flag": "commodity"
+  },
+  "Biotechnology: Pharmaceutical Preparations": {
+   "prior": 20,
+   "class": "health",
+   "flag": "binary-science-risk"
+  },
+  "Biotechnology: Biological Products (No Diagnostic Substances)": {
+   "prior": 20,
+   "class": "health",
+   "flag": "binary-science-risk"
+  },
+  "Medical/Dental Instruments": {
+   "prior": 26,
+   "class": "health",
+   "flag": ""
+  },
+  "Medical Specialities": {
+   "prior": 25,
+   "class": "health",
+   "flag": ""
+  },
+  "Biotechnology: In Vitro & In Vivo Diagnostic Substances": {
+   "prior": 26,
+   "class": "health",
+   "flag": ""
+  },
+  "Biotechnology: Electromedical & Electrotherapeutic Apparatus": {
+   "prior": 25,
+   "class": "health",
+   "flag": ""
+  },
+  "Biotechnology: Laboratory Analytical Instruments": {
+   "prior": 26,
+   "class": "health",
+   "flag": ""
+  },
+  "Medical Electronics": {
+   "prior": 25,
+   "class": "health",
+   "flag": ""
+  },
+  "Ophthalmic Goods": {
+   "prior": 23,
+   "class": "health",
+   "flag": ""
+  },
+  "Medical/Nursing Services": {
+   "prior": 20,
+   "class": "health",
+   "flag": ""
+  },
+  "Hospital/Nursing Management": {
+   "prior": 18,
+   "class": "health",
+   "flag": ""
+  },
+  "Other Pharmaceuticals": {
+   "prior": 20,
+   "class": "health",
+   "flag": ""
+  },
+  " Medicinal Chemicals and Botanical Products ": {
+   "prior": 20,
+   "class": "health",
+   "flag": ""
+  },
+  "Misc Health and Biotechnology Services": {
+   "prior": 18,
+   "class": "health",
+   "flag": ""
+  },
+  "Biotechnology: Commercial Physical & Biological Resarch": {
+   "prior": 16,
+   "class": "health",
+   "flag": ""
+  },
+  "Managed Health Care": {
+   "prior": 10,
+   "class": "health",
+   "flag": "cost-monetization-risk"
+  },
+  "Retail-Drug Stores and Proprietary Stores": {
+   "prior": 12,
+   "class": "health",
+   "flag": ""
+  },
+  "Pharmaceuticals and Biotechnology": {
+   "prior": 20,
+   "class": "health",
+   "flag": "binary-science-risk"
+  },
+  "Railroads": {
+   "prior": 27,
+   "class": "transport",
+   "flag": ""
+  },
+  "Marine Transportation": {
+   "prior": 16,
+   "class": "transport",
+   "flag": "commodity"
+  },
+  "Trucking Freight/Courier Services": {
+   "prior": 18,
+   "class": "transport",
+   "flag": ""
+  },
+  "Air Freight/Delivery Services": {
+   "prior": 18,
+   "class": "transport",
+   "flag": ""
+  },
+  "Auto Manufacturing": {
+   "prior": 20,
+   "class": "transport",
+   "flag": ""
+  },
+  "Auto Parts:O.E.M.": {
+   "prior": 20,
+   "class": "transport",
+   "flag": ""
+  },
+  "Motor Vehicles": {
+   "prior": 20,
+   "class": "transport",
+   "flag": ""
+  },
+  "Transportation Services": {
+   "prior": 18,
+   "class": "transport",
+   "flag": ""
+  },
+  "Integrated Freight & Logistics": {
+   "prior": 20,
+   "class": "transport",
+   "flag": ""
+  },
+  "Construction/Ag Equipment/Trucks": {
+   "prior": 23,
+   "class": "transport",
+   "flag": ""
+  },
+  "Automotive Aftermarket": {
+   "prior": 19,
+   "class": "transport",
+   "flag": ""
+  },
+  "Auto & Home Supply Stores": {
+   "prior": 12,
+   "class": "transport",
+   "flag": ""
+  },
+  "Aerospace": {
+   "prior": 15,
+   "class": "transport",
+   "flag": "defense-mix"
+  },
+  "Other Transportation": {
+   "prior": 18,
+   "class": "transport",
+   "flag": ""
+  },
+  "Retail-Auto Dealers and Gas Stations": {
+   "prior": 8,
+   "class": "transport",
+   "flag": ""
+  },
+  "Rental/Leasing Companies": {
+   "prior": 10,
+   "class": "transport",
+   "flag": ""
+  },
+  "Misc Corporate Leasing Services": {
+   "prior": 8,
+   "class": "transport",
+   "flag": ""
+  },
+  "Semiconductors": {
+   "prior": 22,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Telecommunications Equipment": {
+   "prior": 20,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Industrial Machinery/Components": {
+   "prior": 21,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Electronic Components": {
+   "prior": 20,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Precision Instruments": {
+   "prior": 20,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Metal Fabrications": {
+   "prior": 15,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Industrial Specialties": {
+   "prior": 16,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Specialty Chemicals": {
+   "prior": 16,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Major Chemicals": {
+   "prior": 12,
+   "class": "infrastructure",
+   "flag": "commodity"
+  },
+  "Containers/Packaging": {
+   "prior": 14,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Paper": {
+   "prior": 12,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Plastic Products": {
+   "prior": 10,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Paints/Coatings": {
+   "prior": 12,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Computer Communications Equipment": {
+   "prior": 18,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Radio And Television Broadcasting And Communications Equipment": {
+   "prior": 15,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Computer Manufacturing": {
+   "prior": 16,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Computer peripheral equipment": {
+   "prior": 14,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Tools/Hardware": {
+   "prior": 16,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Professional and commerical equipment": {
+   "prior": 14,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Electronics Distribution": {
+   "prior": 14,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Wholesale Distributors": {
+   "prior": 12,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Miscellaneous manufacturing industries": {
+   "prior": 12,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Steel/Iron Ore": {
+   "prior": 10,
+   "class": "materials",
+   "flag": "commodity"
+  },
+  "Aluminum": {
+   "prior": 10,
+   "class": "materials",
+   "flag": "commodity"
+  },
+  "Metal Mining": {
+   "prior": 8,
+   "class": "materials",
+   "flag": "commodity"
+  },
+  "Other Metals and Minerals": {
+   "prior": 8,
+   "class": "materials",
+   "flag": "commodity"
+  },
+  "Mining & Quarrying of Nonmetallic Minerals (No Fuels)": {
+   "prior": 10,
+   "class": "materials",
+   "flag": "commodity"
+  },
+  "Coal Mining": {
+   "prior": 0,
+   "class": "REJECT",
+   "flag": "coal"
+  },
+  "Precious Metals": {
+   "prior": 3,
+   "class": "materials",
+   "flag": "no-durable-need"
+  },
+  "Computer Software: Prepackaged Software": {
+   "prior": 12,
+   "class": "software",
+   "flag": "enrich"
+  },
+  "EDP Services": {
+   "prior": 10,
+   "class": "software",
+   "flag": "enrich"
+  },
+  "Computer Software: Programming Data Processing": {
+   "prior": 10,
+   "class": "software",
+   "flag": "enrich"
+  },
+  "Retail: Computer Software & Peripheral Equipment": {
+   "prior": 8,
+   "class": "software",
+   "flag": ""
+  },
+  "Business Services": {
+   "prior": 8,
+   "class": "services",
+   "flag": "enrich"
+  },
+  "Professional Services": {
+   "prior": 8,
+   "class": "services",
+   "flag": "enrich"
+  },
+  "Diversified Commercial Services": {
+   "prior": 8,
+   "class": "services",
+   "flag": "enrich"
+  },
+  "Other Consumer Services": {
+   "prior": 6,
+   "class": "services",
+   "flag": ""
+  },
+  "Major Banks": {
+   "prior": 5,
+   "class": "finance",
+   "flag": ""
+  },
+  "Commercial Banks": {
+   "prior": 5,
+   "class": "finance",
+   "flag": ""
+  },
+  "Banks": {
+   "prior": 5,
+   "class": "finance",
+   "flag": ""
+  },
+  "Savings Institutions": {
+   "prior": 5,
+   "class": "finance",
+   "flag": ""
+  },
+  "Finance: Consumer Services": {
+   "prior": 4,
+   "class": "finance",
+   "flag": ""
+  },
+  "Investment Managers": {
+   "prior": 2,
+   "class": "finance",
+   "flag": ""
+  },
+  "Finance/Investors Services": {
+   "prior": 3,
+   "class": "finance",
+   "flag": ""
+  },
+  "Finance Companies": {
+   "prior": 4,
+   "class": "finance",
+   "flag": ""
+  },
+  "Investment Bankers/Brokers/Service": {
+   "prior": 3,
+   "class": "finance",
+   "flag": ""
+  },
+  "Property-Casualty Insurers": {
+   "prior": 6,
+   "class": "finance",
+   "flag": ""
+  },
+  "Life Insurance": {
+   "prior": 5,
+   "class": "finance",
+   "flag": ""
+  },
+  "Specialty Insurers": {
+   "prior": 6,
+   "class": "finance",
+   "flag": ""
+  },
+  "Accident &Health Insurance": {
+   "prior": 6,
+   "class": "finance",
+   "flag": ""
+  },
+  "Diversified Financial Services": {
+   "prior": 3,
+   "class": "finance",
+   "flag": ""
+  },
+  "Advertising": {
+   "prior": 2,
+   "class": "media",
+   "flag": ""
+  },
+  "Broadcasting": {
+   "prior": 2,
+   "class": "media",
+   "flag": ""
+  },
+  "Movies/Entertainment": {
+   "prior": 2,
+   "class": "media",
+   "flag": ""
+  },
+  "Publishing": {
+   "prior": 3,
+   "class": "media",
+   "flag": ""
+  },
+  "Newspapers/Magazines": {
+   "prior": 3,
+   "class": "media",
+   "flag": ""
+  },
+  "Books": {
+   "prior": 3,
+   "class": "media",
+   "flag": ""
+  },
+  "Cable & Other Pay Television Services": {
+   "prior": 6,
+   "class": "media",
+   "flag": ""
+  },
+  "Telecommunications Equipment ": {
+   "prior": 20,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Hotels/Resorts": {
+   "prior": 4,
+   "class": "discretionary",
+   "flag": ""
+  },
+  "Services-Misc. Amusement & Recreation": {
+   "prior": 3,
+   "class": "discretionary",
+   "flag": "gambling-risk"
+  },
+  "Recreational Games/Products/Toys": {
+   "prior": 3,
+   "class": "discretionary",
+   "flag": ""
+  },
+  "Apparel": {
+   "prior": 7,
+   "class": "clothing",
+   "flag": ""
+  },
+  "Clothing/Shoe/Accessory Stores": {
+   "prior": 5,
+   "class": "clothing",
+   "flag": ""
+  },
+  "Shoe Manufacturing": {
+   "prior": 7,
+   "class": "clothing",
+   "flag": ""
+  },
+  "Garments and Clothing": {
+   "prior": 7,
+   "class": "clothing",
+   "flag": ""
+  },
+  "Textiles": {
+   "prior": 8,
+   "class": "clothing",
+   "flag": ""
+  },
+  "Package Goods/Cosmetics": {
+   "prior": 10,
+   "class": "health-adjacent",
+   "flag": ""
+  },
+  "Consumer Electronics/Appliances": {
+   "prior": 8,
+   "class": "discretionary",
+   "flag": ""
+  },
+  "Consumer Electronics/Video Chains": {
+   "prior": 4,
+   "class": "discretionary",
+   "flag": ""
+  },
+  "Department/Specialty Retail Stores": {
+   "prior": 4,
+   "class": "retail",
+   "flag": ""
+  },
+  "Other Specialty Stores": {
+   "prior": 4,
+   "class": "retail",
+   "flag": ""
+  },
+  "Catalog/Specialty Distribution": {
+   "prior": 5,
+   "class": "retail",
+   "flag": ""
+  },
+  "Office Equipment/Supplies/Services": {
+   "prior": 5,
+   "class": "services",
+   "flag": ""
+  },
+  "Consumer Specialties": {
+   "prior": 6,
+   "class": "discretionary",
+   "flag": ""
+  },
+  "Durable Goods": {
+   "prior": 10,
+   "class": "discretionary",
+   "flag": ""
+  },
+  "Multi-Sector Companies": {
+   "prior": 10,
+   "class": "conglomerate",
+   "flag": "enrich"
+  },
+  "Miscellaneous": {
+   "prior": 6,
+   "class": "unknown",
+   "flag": ""
+  },
+  "Blank Checks": {
+   "prior": 0,
+   "class": "REJECT",
+   "flag": "spac"
+  },
+  "Trusts Except Educational Religious and Charitable": {
+   "prior": 0,
+   "class": "REJECT",
+   "flag": "fund"
+  },
+  "Military/Government/Technical": {
+   "prior": 0,
+   "class": "REJECT",
+   "flag": "weapons"
+  },
+  "Ordnance And Accessories": {
+   "prior": 0,
+   "class": "REJECT",
+   "flag": "weapons"
+  },
+  "Tobacco": {
+   "prior": 0,
+   "class": "REJECT",
+   "flag": "addiction"
+  }
+ },
+ "hard_reasons": {
+  "spac": "blank-check SPAC - no operating business",
+  "fund": "closed-end fund/royalty trust - not an operating company",
+  "weapons": "economics depend on war/weapons (hard rejection rule)",
+  "addiction": "economics depend on addiction (hard rejection rule)",
+  "coal": "maintains broken system that should disappear (coal)"
+ },
+ "name_reject": [
+  {
+   "regex": "\\bACQUISITION (CORP|CO|COMPANY|HOLDINGS)|\\bSPAC\\b|BLANK CHECK",
+   "why": "spac"
+  },
+  {
+   "regex": "\\bCASINO|\\bGAMING CORP|\\bSLOT|\\bLOTTERY|\\bBETT?ING|SPORTSBOOK|DRAFTKINGS",
+   "why": "addiction"
+  },
+  {
+   "regex": "\\bTOBACCO|\\bCIGAR|\\bVAPE|\\bVAPOR BRANDS",
+   "why": "addiction"
+  },
+  {
+   "regex": "\\bCANNABIS|\\bCANNABI|\\bMARIJUANA|\\bHEMP CO|PSYCHEDELIC",
+   "why": "addiction"
+  },
+  {
+   "regex": "\\bBITCOIN|\\bBLOCKCHAIN|\\bCRYPTO(CURRENCY)?\\b|DIGITAL ASSET",
+   "why": "artificial scarcity (crypto)"
+  },
+  {
+   "regex": "\\bDEFENSE (CORP|TECH|SYSTEMS)|\\bMISSILE|\\bMUNITION|\\bARMAMENT|\\bORDNANCE",
+   "why": "weapons"
+  },
+  {
+   "regex": "\\bETF\\b|\\bINDEX FUND|\\bMUTUAL FUND|\\bCLOSED.END FUND",
+   "why": "fund"
+  },
+  {
+   "regex": "\\bROYALTY TRUST|\\bINCOME TRUST\\b|\\bMINERAL TRUST",
+   "why": "fund"
+  }
+ ],
+ "name_need": [
+  {
+   "regex": "WATER|AQUA|HYDRAUL|IRRIGAT|DESALIN|WASTEWATER",
+   "prior": 24,
+   "class": "water"
+  },
+  {
+   "regex": "\\bFOOD|FARM|AGRI|AGRO|DAIRY|GRAIN|SEED|CROP|NUTRI|BAKER|MEAT\\b|FISHER",
+   "prior": 22,
+   "class": "food"
+  },
+  {
+   "regex": "\\bSOLAR|RENEWABLE|GEOTHERM|HYDRO(?!GEN)|WIND ENERG|ENERG|POWER|ELECTRIC|GRID|BATTER|UTILIT",
+   "prior": 20,
+   "class": "energy"
+  },
+  {
+   "regex": "PHARMA|THERAPEUT|BIOSCI|MEDIC|HEALTH|DIAGNOST|SURG|DENTAL|CLINIC|HOSPITAL|VACCIN|BIOTECH|LIFE SCIENCE",
+   "prior": 20,
+   "class": "health"
+  },
+  {
+   "regex": "\\bRAIL|TRANSIT|TRANSPORT|LOGISTIC|SHIPPING|MARITIME|AIRLINE|MOTOR|\\bAUTO\\b|VEHICLE|MOBILITY",
+   "prior": 18,
+   "class": "transport"
+  },
+  {
+   "regex": "CONSTRUCT|BUILD|HOME|HOUS|CEMENT|CONCRETE|LUMBER|TIMBER|STEEL|INFRASTRUCT",
+   "prior": 18,
+   "class": "shelter"
+  },
+  {
+   "regex": "RECYCL|CIRCULAR|WASTE|ENVIRONMENT|SUSTAINAB",
+   "prior": 22,
+   "class": "infrastructure"
+  },
+  {
+   "regex": "SEMICONDUCT|TELECOM|NETWORK|COMMUNICAT|MATERIAL|CHEMICAL|INDUSTRI|MANUFACTUR|MACHIN|ENGINEER",
+   "prior": 15,
+   "class": "infrastructure"
+  },
+  {
+   "regex": "\\bBANK|BANC|FINANC|CAPITAL|INSUR|INVEST|ASSET|WEALTH|MORTGAGE|CREDIT|FUND\\b|SECURITIES|REALTY|PROPERTIES|REIT\\b",
+   "prior": 4,
+   "class": "finance"
+  },
+  {
+   "regex": "MEDIA|ENTERTAIN|STUDIO|GAMES|RESORT|RESTAURANT|BRANDS|RETAIL|FASHION|LUXURY",
+   "prior": 4,
+   "class": "discretionary"
+  }
+ ],
+ "advance": {
+  "need_min": 20,
+  "viability_min": 9
+ },
+ "yahoo_industry": {
+  "Utilities - Regulated Water": {
+   "prior": 28,
+   "class": "water",
+   "flag": "utility-slow-growth"
+  },
+  "Pollution & Treatment Controls": {
+   "prior": 27,
+   "class": "water",
+   "flag": ""
+  },
+  "Waste Management": {
+   "prior": 25,
+   "class": "water",
+   "flag": ""
+  },
+  "Farm Products": {
+   "prior": 26,
+   "class": "food",
+   "flag": ""
+  },
+  "Packaged Foods": {
+   "prior": 26,
+   "class": "food",
+   "flag": ""
+  },
+  "Food Distribution": {
+   "prior": 24,
+   "class": "food",
+   "flag": ""
+  },
+  "Grocery Stores": {
+   "prior": 20,
+   "class": "food",
+   "flag": ""
+  },
+  "Agricultural Inputs": {
+   "prior": 20,
+   "class": "food",
+   "flag": "toxicity-risk"
+  },
+  "Farm & Heavy Construction Machinery": {
+   "prior": 23,
+   "class": "food",
+   "flag": ""
+  },
+  "Beverages - Non-Alcoholic": {
+   "prior": 16,
+   "class": "food",
+   "flag": ""
+  },
+  "Beverages - Wineries & Distilleries": {
+   "prior": 0,
+   "class": "REJECT",
+   "flag": "addiction"
+  },
+  "Beverages - Brewers": {
+   "prior": 0,
+   "class": "REJECT",
+   "flag": "addiction"
+  },
+  "Confectioners": {
+   "prior": 12,
+   "class": "food",
+   "flag": ""
+  },
+  "Restaurants": {
+   "prior": 8,
+   "class": "food-service",
+   "flag": ""
+  },
+  "Residential Construction": {
+   "prior": 24,
+   "class": "shelter",
+   "flag": ""
+  },
+  "Building Products & Equipment": {
+   "prior": 24,
+   "class": "shelter",
+   "flag": ""
+  },
+  "Building Materials": {
+   "prior": 22,
+   "class": "shelter",
+   "flag": ""
+  },
+  "Engineering & Construction": {
+   "prior": 22,
+   "class": "shelter",
+   "flag": ""
+  },
+  "Lumber & Wood Production": {
+   "prior": 18,
+   "class": "shelter",
+   "flag": ""
+  },
+  "Furnishings, Fixtures & Appliances": {
+   "prior": 10,
+   "class": "shelter",
+   "flag": ""
+  },
+  "Real Estate Services": {
+   "prior": 8,
+   "class": "shelter",
+   "flag": ""
+  },
+  "Real Estate - Development": {
+   "prior": 10,
+   "class": "shelter",
+   "flag": ""
+  },
+  "Real Estate - Diversified": {
+   "prior": 8,
+   "class": "shelter",
+   "flag": ""
+  },
+  "Utilities - Regulated Electric": {
+   "prior": 22,
+   "class": "energy",
+   "flag": "utility-slow-growth"
+  },
+  "Utilities - Renewable": {
+   "prior": 24,
+   "class": "energy",
+   "flag": ""
+  },
+  "Utilities - Independent Power Producers": {
+   "prior": 22,
+   "class": "energy",
+   "flag": ""
+  },
+  "Utilities - Diversified": {
+   "prior": 20,
+   "class": "energy",
+   "flag": "utility-slow-growth"
+  },
+  "Utilities - Regulated Gas": {
+   "prior": 18,
+   "class": "energy",
+   "flag": "utility-slow-growth"
+  },
+  "Solar": {
+   "prior": 22,
+   "class": "energy",
+   "flag": ""
+  },
+  "Electrical Equipment & Parts": {
+   "prior": 24,
+   "class": "energy",
+   "flag": ""
+  },
+  "Oil & Gas E&P": {
+   "prior": 8,
+   "class": "energy",
+   "flag": "commodity"
+  },
+  "Oil & Gas Integrated": {
+   "prior": 8,
+   "class": "energy",
+   "flag": "commodity"
+  },
+  "Oil & Gas Midstream": {
+   "prior": 12,
+   "class": "energy",
+   "flag": ""
+  },
+  "Oil & Gas Equipment & Services": {
+   "prior": 10,
+   "class": "energy",
+   "flag": "commodity"
+  },
+  "Oil & Gas Refining & Marketing": {
+   "prior": 8,
+   "class": "energy",
+   "flag": "commodity"
+  },
+  "Oil & Gas Drilling": {
+   "prior": 8,
+   "class": "energy",
+   "flag": "commodity"
+  },
+  "Thermal Coal": {
+   "prior": 0,
+   "class": "REJECT",
+   "flag": "coal"
+  },
+  "Coking Coal": {
+   "prior": 5,
+   "class": "materials",
+   "flag": "commodity"
+  },
+  "Uranium": {
+   "prior": 16,
+   "class": "energy",
+   "flag": ""
+  },
+  "Drug Manufacturers - Specialty & Generic": {
+   "prior": 22,
+   "class": "health",
+   "flag": ""
+  },
+  "Drug Manufacturers - General": {
+   "prior": 20,
+   "class": "health",
+   "flag": ""
+  },
+  "Biotechnology": {
+   "prior": 20,
+   "class": "health",
+   "flag": "binary-science-risk"
+  },
+  "Medical Devices": {
+   "prior": 26,
+   "class": "health",
+   "flag": ""
+  },
+  "Medical Instruments & Supplies": {
+   "prior": 26,
+   "class": "health",
+   "flag": ""
+  },
+  "Diagnostics & Research": {
+   "prior": 26,
+   "class": "health",
+   "flag": ""
+  },
+  "Medical Care Facilities": {
+   "prior": 18,
+   "class": "health",
+   "flag": ""
+  },
+  "Medical Distribution": {
+   "prior": 22,
+   "class": "health",
+   "flag": ""
+  },
+  "Health Information Services": {
+   "prior": 22,
+   "class": "health",
+   "flag": ""
+  },
+  "Healthcare Plans": {
+   "prior": 10,
+   "class": "health",
+   "flag": "cost-monetization-risk"
+  },
+  "Pharmaceutical Retailers": {
+   "prior": 12,
+   "class": "health",
+   "flag": ""
+  },
+  "Railroads": {
+   "prior": 27,
+   "class": "transport",
+   "flag": ""
+  },
+  "Marine Shipping": {
+   "prior": 16,
+   "class": "transport",
+   "flag": "commodity"
+  },
+  "Trucking": {
+   "prior": 18,
+   "class": "transport",
+   "flag": ""
+  },
+  "Integrated Freight & Logistics": {
+   "prior": 20,
+   "class": "transport",
+   "flag": ""
+  },
+  "Airlines": {
+   "prior": 14,
+   "class": "transport",
+   "flag": ""
+  },
+  "Airports & Air Services": {
+   "prior": 18,
+   "class": "transport",
+   "flag": ""
+  },
+  "Auto Manufacturers": {
+   "prior": 20,
+   "class": "transport",
+   "flag": ""
+  },
+  "Auto Parts": {
+   "prior": 20,
+   "class": "transport",
+   "flag": ""
+  },
+  "Recreational Vehicles": {
+   "prior": 8,
+   "class": "transport",
+   "flag": ""
+  },
+  "Auto & Truck Dealerships": {
+   "prior": 8,
+   "class": "transport",
+   "flag": ""
+  },
+  "Aerospace & Defense": {
+   "prior": 8,
+   "class": "transport",
+   "flag": "defense-mix"
+  },
+  "Semiconductors": {
+   "prior": 22,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Semiconductor Equipment & Materials": {
+   "prior": 22,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Communication Equipment": {
+   "prior": 20,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Electronic Components": {
+   "prior": 20,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Specialty Industrial Machinery": {
+   "prior": 22,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Industrial Distribution": {
+   "prior": 16,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Scientific & Technical Instruments": {
+   "prior": 22,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Specialty Chemicals": {
+   "prior": 16,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Chemicals": {
+   "prior": 12,
+   "class": "infrastructure",
+   "flag": "commodity"
+  },
+  "Packaging & Containers": {
+   "prior": 14,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Paper & Paper Products": {
+   "prior": 12,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Metal Fabrication": {
+   "prior": 15,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Infrastructure Operations": {
+   "prior": 20,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Telecom Services": {
+   "prior": 14,
+   "class": "infrastructure",
+   "flag": "utility-slow-growth"
+  },
+  "Utilities - Water": {
+   "prior": 28,
+   "class": "water",
+   "flag": "utility-slow-growth"
+  },
+  "Conglomerates": {
+   "prior": 12,
+   "class": "conglomerate",
+   "flag": ""
+  },
+  "Steel": {
+   "prior": 10,
+   "class": "materials",
+   "flag": "commodity"
+  },
+  "Aluminum": {
+   "prior": 10,
+   "class": "materials",
+   "flag": "commodity"
+  },
+  "Copper": {
+   "prior": 12,
+   "class": "materials",
+   "flag": "commodity"
+  },
+  "Other Industrial Metals & Mining": {
+   "prior": 8,
+   "class": "materials",
+   "flag": "commodity"
+  },
+  "Gold": {
+   "prior": 3,
+   "class": "materials",
+   "flag": "no-durable-need"
+  },
+  "Silver": {
+   "prior": 3,
+   "class": "materials",
+   "flag": "no-durable-need"
+  },
+  "Other Precious Metals & Mining": {
+   "prior": 3,
+   "class": "materials",
+   "flag": "no-durable-need"
+  },
+  "Building Products": {
+   "prior": 24,
+   "class": "shelter",
+   "flag": ""
+  },
+  "Software - Application": {
+   "prior": 12,
+   "class": "software",
+   "flag": "desc"
+  },
+  "Software - Infrastructure": {
+   "prior": 12,
+   "class": "software",
+   "flag": "desc"
+  },
+  "Information Technology Services": {
+   "prior": 10,
+   "class": "software",
+   "flag": "desc"
+  },
+  "Computer Hardware": {
+   "prior": 14,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Consumer Electronics": {
+   "prior": 8,
+   "class": "discretionary",
+   "flag": ""
+  },
+  "Electronic Gaming & Multimedia": {
+   "prior": 2,
+   "class": "discretionary",
+   "flag": ""
+  },
+  "Internet Content & Information": {
+   "prior": 4,
+   "class": "media",
+   "flag": ""
+  },
+  "Internet Retail": {
+   "prior": 5,
+   "class": "retail",
+   "flag": ""
+  },
+  "Specialty Business Services": {
+   "prior": 8,
+   "class": "services",
+   "flag": "desc"
+  },
+  "Consulting Services": {
+   "prior": 6,
+   "class": "services",
+   "flag": ""
+  },
+  "Rental & Leasing Services": {
+   "prior": 8,
+   "class": "services",
+   "flag": ""
+  },
+  "Security & Protection Services": {
+   "prior": 10,
+   "class": "services",
+   "flag": ""
+  },
+  "Staffing & Employment Services": {
+   "prior": 5,
+   "class": "services",
+   "flag": ""
+  },
+  "Education & Training Services": {
+   "prior": 10,
+   "class": "services",
+   "flag": ""
+  },
+  "Personal Services": {
+   "prior": 5,
+   "class": "services",
+   "flag": ""
+  },
+  "Advertising Agencies": {
+   "prior": 2,
+   "class": "media",
+   "flag": ""
+  },
+  "Banks - Regional": {
+   "prior": 5,
+   "class": "finance",
+   "flag": ""
+  },
+  "Banks - Diversified": {
+   "prior": 5,
+   "class": "finance",
+   "flag": ""
+  },
+  "Insurance - Life": {
+   "prior": 5,
+   "class": "finance",
+   "flag": ""
+  },
+  "Insurance - Property & Casualty": {
+   "prior": 6,
+   "class": "finance",
+   "flag": ""
+  },
+  "Insurance - Diversified": {
+   "prior": 5,
+   "class": "finance",
+   "flag": ""
+  },
+  "Insurance - Specialty": {
+   "prior": 6,
+   "class": "finance",
+   "flag": ""
+  },
+  "Insurance - Reinsurance": {
+   "prior": 5,
+   "class": "finance",
+   "flag": ""
+  },
+  "Insurance Brokers": {
+   "prior": 5,
+   "class": "finance",
+   "flag": ""
+  },
+  "Asset Management": {
+   "prior": 2,
+   "class": "finance",
+   "flag": ""
+  },
+  "Capital Markets": {
+   "prior": 3,
+   "class": "finance",
+   "flag": ""
+  },
+  "Credit Services": {
+   "prior": 4,
+   "class": "finance",
+   "flag": ""
+  },
+  "Mortgage Finance": {
+   "prior": 4,
+   "class": "finance",
+   "flag": ""
+  },
+  "Financial Data & Stock Exchanges": {
+   "prior": 6,
+   "class": "finance",
+   "flag": ""
+  },
+  "Shell Companies": {
+   "prior": 0,
+   "class": "REJECT",
+   "flag": "spac"
+  },
+  "Financial Conglomerates": {
+   "prior": 4,
+   "class": "finance",
+   "flag": ""
+  },
+  "Tobacco": {
+   "prior": 0,
+   "class": "REJECT",
+   "flag": "addiction"
+  },
+  "Gambling": {
+   "prior": 0,
+   "class": "REJECT",
+   "flag": "addiction"
+  },
+  "Resorts & Casinos": {
+   "prior": 0,
+   "class": "REJECT",
+   "flag": "addiction"
+  },
+  "Cannabis": {
+   "prior": 0,
+   "class": "REJECT",
+   "flag": "addiction"
+  },
+  "Leisure": {
+   "prior": 4,
+   "class": "discretionary",
+   "flag": ""
+  },
+  "Lodging": {
+   "prior": 4,
+   "class": "discretionary",
+   "flag": ""
+  },
+  "Travel Services": {
+   "prior": 4,
+   "class": "discretionary",
+   "flag": ""
+  },
+  "Apparel Manufacturing": {
+   "prior": 7,
+   "class": "clothing",
+   "flag": ""
+  },
+  "Apparel Retail": {
+   "prior": 5,
+   "class": "clothing",
+   "flag": ""
+  },
+  "Footwear & Accessories": {
+   "prior": 7,
+   "class": "clothing",
+   "flag": ""
+  },
+  "Textile Manufacturing": {
+   "prior": 8,
+   "class": "clothing",
+   "flag": ""
+  },
+  "Luxury Goods": {
+   "prior": 2,
+   "class": "discretionary",
+   "flag": ""
+  },
+  "Household & Personal Products": {
+   "prior": 12,
+   "class": "health-adjacent",
+   "flag": ""
+  },
+  "Tools & Accessories": {
+   "prior": 16,
+   "class": "infrastructure",
+   "flag": ""
+  },
+  "Publishing": {
+   "prior": 3,
+   "class": "media",
+   "flag": ""
+  },
+  "Broadcasting": {
+   "prior": 2,
+   "class": "media",
+   "flag": ""
+  },
+  "Entertainment": {
+   "prior": 2,
+   "class": "media",
+   "flag": ""
+  },
+  "Department Stores": {
+   "prior": 3,
+   "class": "retail",
+   "flag": ""
+  },
+  "Specialty Retail": {
+   "prior": 4,
+   "class": "retail",
+   "flag": ""
+  },
+  "Discount Stores": {
+   "prior": 8,
+   "class": "retail",
+   "flag": ""
+  },
+  "Home Improvement Retail": {
+   "prior": 14,
+   "class": "shelter",
+   "flag": ""
+  }
+ }
+}
