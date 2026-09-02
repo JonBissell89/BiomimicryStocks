@@ -17,3 +17,7 @@ Thumbs.db
 # HOLDING_FRAMEWORK.md lives one level up, outside this repo, for that reason.
 holdings*.md
 *_private.*
+
+# Derived first-screen outputs of round1_v21.py (reproducible from the prior files)
+data/round1_v*_scores.csv
+data/round1_v*_newly_advancing.csv
