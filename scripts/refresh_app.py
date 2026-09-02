@@ -1039,12 +1039,19 @@ const MKTLAB={us:'US exchange',adr:'ADR, over the counter',ord:'foreign ordinary
 function mineAdded(){try{return JSON.parse(localStorage.getItem('bsAdded')||'[]');}catch(e){return [];}}
 function saveAdded(a){try{localStorage.setItem('bsAdded',JSON.stringify(a));}catch(e){}}
 // Build a table row for an added ticker out of what the engine actually recorded.
+// Prices a visitor carried in with their own holdings, used only where the
+// weekly universe cache has none, and names that sit outside the screen.
+function pxOverride(){try{return JSON.parse(localStorage.getItem('bsPx')||'{}');}catch(e){return {};}}
 function addedRow(tk){
-  const v=SIDX[tk];if(!v)return null;
+  const v=SIDX[tk],o=pxOverride()[tk];
+  if(!v){
+    if(!o)return null;                       // unknown to the screen and to the visitor
+    return [tk,o.nm||tk,0,'',(o.px||0),'Not one of the 15,797 companies the screen judged.','',true,'own','',[],
+            ['','','', 'pass','', ''],'',0,0];}
   const inList=v[1]==='R';
   if(inList)return null;                     // already in the ranked table
   const sc=(v[3]===100&&v[2]>0)?v[2]:0;
-  return [tk,v[0],sc,v[6]||'',(PX[tk]||0),v[5]||'','',true,'own','',[],
+  return [tk,v[0],sc,v[6]||'',(PX[tk]||(o&&o.px)||0),v[5]||'','',true,'own','',[],
           ['','','', 'pass','', ''],v[1],v[2],v[3]];}
 const AF={stage:12,rawsc:13,scale:14};
 function allRows(){
@@ -1761,6 +1768,31 @@ document.addEventListener('keydown',function(e){
   if(e.key==='Escape'&&!$('modal').hidden)closeDetail();});
 
 ui=uiLoad();autoFund();snapshotMine();pushUI();renderImbalance();renderRigor();showView(currentView(),false);
+// A ledger can arrive inside the link itself (#me?seed=...): the holdings are
+// decoded here, written into this browser's own simulation once, and the seed
+// is dropped from the address so it is never stored or shared onward. There is
+// no page control for this; it only serves a link someone made for themselves.
+(function(){
+  const m=/[?&]seed=([A-Za-z0-9_-]+)/.exec(location.hash||'');if(!m)return;
+  let d=null;
+  try{d=JSON.parse(atob(m[1].replace(/-/g,'+').replace(/_/g,'/')));}catch(e){return;}
+  if(!d||d.v!==1||!d.positions)return;
+  const tks=Object.keys(d.positions),n=tks.length;
+  if(!confirm('Load '+n+' holdings into your own simulation on this browser? This replaces what is there.'))return;
+  let cost=0;tks.forEach(function(t){cost+=d.positions[t].cost||0;});
+  const cash=+(d.cash||0),day=d.date||TODAY,who=d.who||whoNow()||'You';
+  const s={cash:cash,start:{date:day,cash:+(cost+cash).toFixed(2)},positions:{},txns:[],history:[]};
+  tks.forEach(function(t){const q=d.positions[t];
+    s.positions[t]={shares:+q.shares,cost:+(q.cost||0)};
+    s.txns.push({d:day,a:'HOLD',tk:t,sh:+q.shares,px:q.shares?+(q.cost/q.shares).toFixed(4):0,amt:+(q.cost||0),by:who});});
+  MINE=s;saveMine(MINE);
+  try{localStorage.setItem('bsPx',JSON.stringify(d.px||{}));}catch(e){}
+  if(d.who){try{localStorage.setItem('bsWho',d.who);}catch(e){}}
+  const ranked={};NAMES.forEach(function(r){ranked[r[F.tk]]=1;});
+  saveAdded(Array.from(new Set(mineAdded().concat(tks.filter(function(t){return !ranked[t];})))));
+  history.replaceState(null,'','#me');
+  snapshotMine();render();showView('me',false);
+})();
 // The heavy payloads arrive after first paint: the searchable universe, its
 // price map, and the ranked sparklines. Each lands independently and re-renders
 // what it feeds; a failed fetch leaves that feature empty rather than broken.

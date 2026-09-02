@@ -474,7 +474,7 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
   <p>Then that scorecard was run as a tournament: six rounds, each one harder than the last, every elimination written down with its reason. Scores are not opinions held privately; every survivor and every rejection is recorded and searchable in the next two steps.</p>
 
   <div class="runbox">
-    <div class="runhead">Latest run <b>2026-09-01 16:34 UTC</b> <span>(prices at market close 2026-09-01)</span></div>
+    <div class="runhead">Latest run <b>2026-09-02 00:31 UTC</b> <span>(prices at market close 2026-09-02)</span></div>
     <p class="runnote">These counts are the output of that run, not fixed facts. They change every time the engine runs, which is every week.</p>
     <div class="funnel">
       <div class="frow"><span class="fl">Companies entered</span><div class="fbar" style="width:100%"></div><span class="fn">15,797</span></div>
@@ -498,7 +498,7 @@ footer{margin-top:30px;padding-top:14px;border-top:2px solid var(--ink);color:va
   <p>Everything in the universe was scored. This is what came through all six rounds. Most companies were cut early for breaking a hard rule, being too small or inactive to grade, or not serving a need that lasts.</p>
 
   <div class="runbox">
-    <div class="runhead">Last engine run <b>2026-09-01 16:34 UTC</b> <span>(prices at market close 2026-09-01)</span></div>
+    <div class="runhead">Last engine run <b>2026-09-02 00:31 UTC</b> <span>(prices at market close 2026-09-02)</span></div>
     <p class="runnote"><b>53</b> companies came through, out of <b>15,797</b> that entered. Every number here changes when the engine runs again, which is every week.</p>
     <div class="tiersum"><div class="tierchip"><b>9</b><span>Tier 1 · 80 and up (1 set aside)</span></div><div class="tierchip"><b>21</b><span>Tier 2 · 74 to 79</span></div><div class="tierchip"><b>6</b><span>Tier 3 · 69 to 73 (1 set aside)</span></div><div class="tierchip"><b>4</b><span>Tier 4 · 65 to 68</span></div><div class="tierchip"><b>11</b><span>Exit review · under 65</span></div></div>
     <p class="runnote">Two companies are set aside by the survivability gate whatever they scored, because a company that runs out of money did not score badly, it produced no result. Research output, not investment advice.</p>
@@ -721,8 +721,8 @@ function sparkline(tk){
 }
 // Benchmark levels stamped at the last engine run, so a visitor's own ledger can
 // record a snapshot against the same yardsticks the house ledger uses.
-const MARK={"d": "2026-09-01", "spx": 7730.99, "list": 100.0315};
-const TODAY='2026-09-01';
+const MARK={"d": "2026-09-02", "spx": 7730.99, "list": 100.0315};
+const TODAY='2026-09-02';
 const $=id=>document.getElementById(id);
 const fmt=n=>'$'+n.toLocaleString(undefined,{maximumFractionDigits:2,minimumFractionDigits:2});
 const F={tk:0,nm:1,sc:2,need:3,px:4,note:5,vt:6,sofi:7,tier:8,kid:9,dims:10,meta:11};
@@ -774,12 +774,19 @@ const MKTLAB={us:'US exchange',adr:'ADR, over the counter',ord:'foreign ordinary
 function mineAdded(){try{return JSON.parse(localStorage.getItem('bsAdded')||'[]');}catch(e){return [];}}
 function saveAdded(a){try{localStorage.setItem('bsAdded',JSON.stringify(a));}catch(e){}}
 // Build a table row for an added ticker out of what the engine actually recorded.
+// Prices a visitor carried in with their own holdings, used only where the
+// weekly universe cache has none, and names that sit outside the screen.
+function pxOverride(){try{return JSON.parse(localStorage.getItem('bsPx')||'{}');}catch(e){return {};}}
 function addedRow(tk){
-  const v=SIDX[tk];if(!v)return null;
+  const v=SIDX[tk],o=pxOverride()[tk];
+  if(!v){
+    if(!o)return null;                       // unknown to the screen and to the visitor
+    return [tk,o.nm||tk,0,'',(o.px||0),'Not one of the 15,797 companies the screen judged.','',true,'own','',[],
+            ['','','', 'pass','', ''],'',0,0];}
   const inList=v[1]==='R';
   if(inList)return null;                     // already in the ranked table
   const sc=(v[3]===100&&v[2]>0)?v[2]:0;
-  return [tk,v[0],sc,v[6]||'',(PX[tk]||0),v[5]||'','',true,'own','',[],
+  return [tk,v[0],sc,v[6]||'',(PX[tk]||(o&&o.px)||0),v[5]||'','',true,'own','',[],
           ['','','', 'pass','', ''],v[1],v[2],v[3]];}
 const AF={stage:12,rawsc:13,scale:14};
 function allRows(){
@@ -1496,6 +1503,31 @@ document.addEventListener('keydown',function(e){
   if(e.key==='Escape'&&!$('modal').hidden)closeDetail();});
 
 ui=uiLoad();autoFund();snapshotMine();pushUI();renderImbalance();renderRigor();showView(currentView(),false);
+// A ledger can arrive inside the link itself (#me?seed=...): the holdings are
+// decoded here, written into this browser's own simulation once, and the seed
+// is dropped from the address so it is never stored or shared onward. There is
+// no page control for this; it only serves a link someone made for themselves.
+(function(){
+  const m=/[?&]seed=([A-Za-z0-9_-]+)/.exec(location.hash||'');if(!m)return;
+  let d=null;
+  try{d=JSON.parse(atob(m[1].replace(/-/g,'+').replace(/_/g,'/')));}catch(e){return;}
+  if(!d||d.v!==1||!d.positions)return;
+  const tks=Object.keys(d.positions),n=tks.length;
+  if(!confirm('Load '+n+' holdings into your own simulation on this browser? This replaces what is there.'))return;
+  let cost=0;tks.forEach(function(t){cost+=d.positions[t].cost||0;});
+  const cash=+(d.cash||0),day=d.date||TODAY,who=d.who||whoNow()||'You';
+  const s={cash:cash,start:{date:day,cash:+(cost+cash).toFixed(2)},positions:{},txns:[],history:[]};
+  tks.forEach(function(t){const q=d.positions[t];
+    s.positions[t]={shares:+q.shares,cost:+(q.cost||0)};
+    s.txns.push({d:day,a:'HOLD',tk:t,sh:+q.shares,px:q.shares?+(q.cost/q.shares).toFixed(4):0,amt:+(q.cost||0),by:who});});
+  MINE=s;saveMine(MINE);
+  try{localStorage.setItem('bsPx',JSON.stringify(d.px||{}));}catch(e){}
+  if(d.who){try{localStorage.setItem('bsWho',d.who);}catch(e){}}
+  const ranked={};NAMES.forEach(function(r){ranked[r[F.tk]]=1;});
+  saveAdded(Array.from(new Set(mineAdded().concat(tks.filter(function(t){return !ranked[t];})))));
+  history.replaceState(null,'','#me');
+  snapshotMine();render();showView('me',false);
+})();
 // The heavy payloads arrive after first paint: the searchable universe, its
 // price map, and the ranked sparklines. Each lands independently and re-renders
 // what it feeds; a failed fetch leaves that feature empty rather than broken.
