@@ -35,6 +35,14 @@ if hashlib.sha256(canon.encode()).hexdigest() != frz["sha256_scores"]:
     errs.append("freeze file does not match its own hash: the vintage was edited")
 if pro["vintage"]["sha256_scores"] != frz["sha256_scores"]:
     errs.append("protocol points at a different vintage than the freeze file")
+for v in pro.get("vintages", []):
+    vp = os.path.join(R, v["file"])
+    if not os.path.exists(vp):
+        errs.append("registered vintage %s is missing its freeze file" % v["tag"]); continue
+    vf = json.load(open(vp, encoding="utf-8"))
+    vc = json.dumps(sorted([[tk, x["score"], x["tier"], x["gate"]] for tk, x in vf["scores"].items()]), separators=(",", ":"))
+    if hashlib.sha256(vc.encode()).hexdigest() != vf["sha256_scores"] or v.get("sha256_scores") != vf["sha256_scores"]:
+        errs.append("registered vintage %s does not match its hash: the vintage was edited" % v["tag"])
 if len(frz["scores"]) != len(load_names()):
     warns.append("live engine name count differs from the vintage (allowed; the vintage still governs)")
 

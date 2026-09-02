@@ -25,27 +25,36 @@ names = load_names()
 doc = {"vintage": frz["asof"], "snapshots": len(trk["snapshots"]),
        "latest": trk["snapshots"][-1]["date"]}
 
-# ---- forward test ----------------------------------------------------------
-t0 = frz["prices"]; latest = trk["snapshots"][-1]["px"]
-fwd = {tk: latest[tk] / t0[tk] - 1 for tk in t0
-       if t0.get(tk) and latest.get(tk)}
-days = (np.datetime64(doc["latest"]) - np.datetime64(frz["asof"])).astype(int)
-if days < 14 or len(trk["snapshots"]) < 3:
-    doc["forward"] = {"status": "accruing", "days_elapsed": int(days),
-                      "note": "the forward test begins reporting once the track holds three weekly snapshots spanning two weeks or more; endpoints are pre-registered in evaluation_protocol.json"}
-else:
-    sc = {n["tk"]: frz["scores"][n["tk"]]["score"] for n in names if n["tk"] in fwd}
-    common = sorted(sc)
-    ic = spearman([sc[t] for t in common], [fwd[t] for t in common])
-    tiers = {}
-    for n in names:
-        if n["tk"] in fwd:
-            tiers.setdefault(frz["scores"][n["tk"]]["tier"], []).append(fwd[n["tk"]])
-    tm = {t: round(float(np.mean(v)), 4) for t, v in tiers.items()}
-    doc["forward"] = {"status": "reporting", "days_elapsed": int(days),
-                      "information_coefficient": round(ic, 3),
-                      "tier_mean_returns": tm,
-                      "t1_minus_exit": round(tm.get("t1", 0) - tm.get("exit", 0), 4)}
+# ---- forward test, one per registered vintage -------------------------------
+# The protocol may register several vintages (a logic version freezes its own
+# engine); each is graded on its own scores and its own freeze prices, from the
+# same weekly track. doc["forward"] keeps the first (primary) for the page.
+pro = json.load(open(os.path.join(R, "evaluation_protocol.json"), encoding="utf-8"))
+vintages = pro.get("vintages") or [{"tag": "v2.0", "file": pro["vintage"]["file"]}]
+latest = trk["snapshots"][-1]["px"]
+doc["forward_by_vintage"] = {}
+for v in vintages:
+    fz = json.load(open(os.path.join(R, v["file"]), encoding="utf-8"))
+    t0 = fz["prices"]
+    fwd = {tk: latest[tk] / t0[tk] - 1 for tk in t0 if t0.get(tk) and latest.get(tk)}
+    days = (np.datetime64(doc["latest"]) - np.datetime64(fz["asof"])).astype(int)
+    if days < 14 or len(trk["snapshots"]) < 3:
+        rep = {"status": "accruing", "days_elapsed": int(days),
+               "note": "the forward test begins reporting once the track holds three weekly snapshots spanning two weeks or more; endpoints are pre-registered in evaluation_protocol.json"}
+    else:
+        sc = {tk: fz["scores"][tk]["score"] for tk in fz["scores"] if tk in fwd}
+        common = sorted(sc)
+        ic = spearman([sc[t] for t in common], [fwd[t] for t in common])
+        tiers = {}
+        for tk in common:
+            tiers.setdefault(fz["scores"][tk]["tier"], []).append(fwd[tk])
+        tm = {t: round(float(np.mean(x)), 4) for t, x in tiers.items()}
+        rep = {"status": "reporting", "days_elapsed": int(days), "n": len(common),
+               "information_coefficient": round(ic, 3), "tier_mean_returns": tm,
+               "t1_minus_exit": round(tm.get("t1", 0) - tm.get("exit", 0), 4)}
+    rep["vintage_asof"] = fz["asof"]
+    doc["forward_by_vintage"][v["tag"]] = rep
+doc["forward"] = doc["forward_by_vintage"][vintages[0]["tag"]]
 
 # ---- the whole universe faces the test too ---------------------------------
 uf = json.load(open(os.path.join(R, "universe_freeze_2026-08-28.json"), encoding="utf-8"))

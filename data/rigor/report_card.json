@@ -2,10 +2,19 @@
  "vintage": "2026-08-28",
  "snapshots": 1,
  "latest": "2026-08-28",
+ "forward_by_vintage": {
+  "v2.0": {
+   "status": "accruing",
+   "days_elapsed": 0,
+   "note": "the forward test begins reporting once the track holds three weekly snapshots spanning two weeks or more; endpoints are pre-registered in evaluation_protocol.json",
+   "vintage_asof": "2026-08-28"
+  }
+ },
  "forward": {
   "status": "accruing",
   "days_elapsed": 0,
-  "note": "the forward test begins reporting once the track holds three weekly snapshots spanning two weeks or more; endpoints are pre-registered in evaluation_protocol.json"
+  "note": "the forward test begins reporting once the track holds three weekly snapshots spanning two weeks or more; endpoints are pre-registered in evaluation_protocol.json",
+  "vintage_asof": "2026-08-28"
  },
  "universe": {
   "status": "accruing",

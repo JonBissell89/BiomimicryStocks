@@ -9,8 +9,10 @@ GROUPS = {"A": (["A"], 20), "B": (["B"], 25), "C": (["C1", "C2"], 20),
           "F": (["F_clock", "F_now"], 10)}
 BANDS = [(80, "t1"), (74, "t2"), (69, "t3"), (65, "t4")]
 
-def load_names():
-    eng = json.load(open(os.path.join(DATA, "engine_tiers.json"), encoding="utf-8"))
+def load_names(engine_path=None):
+    """Ranked names from an engine file; the live engine by default, or any
+    frozen alternate (a second vintage's engine) when a path is given."""
+    eng = json.load(open(engine_path or os.path.join(DATA, "engine_tiers.json"), encoding="utf-8"))
     out = []
     for t in eng["tiers"]:
         for n in t["names"]:
