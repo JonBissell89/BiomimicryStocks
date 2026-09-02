@@ -1,0 +1,2984 @@
+{
+ "date": "2026-09-02",
+ "method": "web-research classification of the live names the first screen scored by name keyword only (need unknown, market cap at least 25M or alive status); batches of 25 by independent agents; every fourth batch re-classified by a second independent agent",
+ "n_listed": 367,
+ "n_classified": 367,
+ "spot_check": {
+  "agreement": "93 of 100",
+  "disagreements": [
+   {
+    "tk": "ITGMF",
+    "first": "energy/true",
+    "second": "unknown/false"
+   },
+   {
+    "tk": "AQLS",
+    "first": "shell_or_dead/false",
+    "second": "unknown/false"
+   },
+   {
+    "tk": "DVLN",
+    "first": "finance/true",
+    "second": "shelter/true"
+   },
+   {
+    "tk": "DYFWF",
+    "first": "food/true",
+    "second": "discretionary/true"
+   },
+   {
+    "tk": "KLPPY",
+    "first": "finance/true",
+    "second": "shelter/true"
+   },
+   {
+    "tk": "SVTPF",
+    "first": "shell_or_dead/false",
+    "second": "food/true"
+   },
+   {
+    "tk": "SPLTF",
+    "first": "shell_or_dead/false",
+    "second": "coordination/true"
+   }
+  ]
+ },
+ "overrides": {
+  "FUXA": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "shell company",
+   "one_line": "Formerly Sanarco Funds, renamed in 2026, pre-revenue with no significant operations beyond a defunct web fitness platform.",
+   "confidence": 0.8,
+   "source": "https://pitchbook.com/profiles/company/98344-36"
+  },
+  "HKRHF": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "gold and jewellery retail",
+   "one_line": "Hong Kong-listed retailer, wholesaler and franchisor of gold and jewellery products in Hong Kong, Macau and mainland China, formerly Hong Kong Resources Holdings.",
+   "confidence": 0.85,
+   "source": "https://finance.yahoo.com/quote/2882.HK/profile/"
+  },
+  "BLLYF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "mineral and hydrocarbon exploration",
+   "one_line": "AIM-listed explorer (formerly Bluejay Mining) with Greenland critical metals, helium and hydrocarbon projects plus an Italian industrial gas and biofuels venture.",
+   "confidence": 0.85,
+   "source": "https://www.80mile.com/about-us"
+  },
+  "ASNCF": {
+   "operating": true,
+   "class": "transport",
+   "industry_guess": "logistics and aircraft components trading",
+   "one_line": "Singapore-listed group providing freight forwarding, multi-modal transport, warehousing and air cargo handling plus aircraft parts trading, roughly 270M USD revenue.",
+   "confidence": 0.9,
+   "source": "https://www.globaldata.com/company-profile/a-sonic-aerospace-ltd/financials/"
+  },
+  "ACWRF": {
+   "operating": true,
+   "class": "energy",
+   "industry_guess": "electromagnetic heating technology for oil recovery",
+   "one_line": "Calgary company developing RF XL radio-frequency heating and Clean Tech Inverter for decarbonized heavy oil recovery and industrial electrification, pilot stage.",
+   "confidence": 0.85,
+   "source": "https://www.acceleware.com/"
+  },
+  "ACPIF": {
+   "operating": true,
+   "class": "energy",
+   "industry_guess": "renewable power generation",
+   "one_line": "Ayala group's listed renewable energy platform with about 4,800 MW attributable solar, wind and geothermal capacity across the Philippines, Australia, Vietnam, Indonesia and India.",
+   "confidence": 0.95,
+   "source": "https://www.acenrenewables.com/about-us/"
+  },
+  "ADRMF": {
+   "operating": true,
+   "class": "health",
+   "industry_guess": "digital health respiratory devices",
+   "one_line": "ASX-listed respiratory eHealth company selling Hailie inhaler sensors and adherence monitoring platform for asthma and COPD patients.",
+   "confidence": 0.9,
+   "source": "https://www.adherium.com/about"
+  },
+  "AIRTP": {
+   "operating": true,
+   "class": "transport",
+   "industry_guess": "aviation services holding company",
+   "one_line": "Trust preferred securities of Air T, which runs overnight air cargo for FedEx, ground support equipment manufacturing, aircraft parts trading and a regional airline.",
+   "confidence": 0.9,
+   "source": "https://airt.com/segments/"
+  },
+  "ITGMF": {
+   "operating": true,
+   "class": "energy",
+   "industry_guess": "grid-scale energy storage",
+   "one_line": "Israeli company (formerly Augwind) developing AirBattery compressed-air and pumped-hydro hybrid energy storage and AirSmart compressor efficiency systems.",
+   "confidence": 0.85,
+   "source": "https://finance.yahoo.com/quote/ARNG.TA/profile/"
+  },
+  "AILQF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "fleet telematics",
+   "one_line": "Ontario-based provider of IoT GPS fleet tracking, video telematics and ELD solutions for rental and commercial fleets, TSXV listed.",
+   "confidence": 0.9,
+   "source": "https://www.airiq.com/"
+  },
+  "AITLF": {
+   "operating": true,
+   "class": "infrastructure",
+   "industry_guess": "industrial engineering and automation",
+   "one_line": "Spanish-listed engineering group with about 800 staff building intelligent robotics, aerospace and defense components, and infrastructure projects.",
+   "confidence": 0.8,
+   "source": "https://airtificial.com/en/"
+  },
+  "ADLRF": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "private equity income trust",
+   "one_line": "Calgary-based trust providing structured non-control equity to private mid-market businesses in exchange for preferred distributions, TSX listed.",
+   "confidence": 0.95,
+   "source": "https://stockanalysis.com/quote/tsx/AD.UN/company/"
+  },
+  "AXIIF": {
+   "operating": true,
+   "class": "materials",
+   "industry_guess": "specialty performance chemicals",
+   "one_line": "ASX-listed specialty chemicals company selling flame retardant and phase change material textile treatments for bedding, workwear and military uniforms.",
+   "confidence": 0.85,
+   "source": "https://alexiuminternational.com/about"
+  },
+  "AAMMF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "mineral exploration prospect generator",
+   "one_line": "Vancouver prospect generator exploring copper-gold porphyry targets in the western US with a royalty portfolio and company-owned drills, TSXV listed.",
+   "confidence": 0.9,
+   "source": "https://www.almadexminerals.com/about-almadex"
+  },
+  "CHKMF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "copper exploration",
+   "one_line": "ASX-listed explorer (formerly Cohiba Minerals) advancing the Venatica copper porphyry project in Peru plus Australian copper and gypsum prospects.",
+   "confidence": 0.85,
+   "source": "https://altairminerals.com.au/"
+  },
+  "ABTC": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "bitcoin mining and treasury",
+   "one_line": "Nasdaq-listed Hut 8 subsidiary that mines bitcoin with ASIC fleets and accumulates a bitcoin reserve, holding roughly 6,900 BTC.",
+   "confidence": 0.9,
+   "source": "https://www.abtc.com/"
+  },
+  "AEXFF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "natural gas development",
+   "one_line": "UK-listed gas company with a 25% carried interest in Tanzania's Ntorya onshore gas project, pipeline under construction targeting first gas in 2026.",
+   "confidence": 0.9,
+   "source": "https://aminex-plc.com/"
+  },
+  "ANTMF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "gold and copper mine development",
+   "one_line": "ASX-listed explorer in joint venture with Cuban state miner GeoMinera developing La Demajagua and Nueva Sabana gold-copper projects.",
+   "confidence": 0.85,
+   "source": "https://finance.yahoo.com/quote/ANTMF/profile/"
+  },
+  "ANYCF": {
+   "operating": true,
+   "class": "media_entertainment",
+   "industry_guess": "virtual talent agency and digital content",
+   "one_line": "Tokyo-listed operator of the NIJISANJI VTuber agency earning from streaming, merchandise, music and brand tie-ups, highly profitable.",
+   "confidence": 0.95,
+   "source": "https://www.anycolor.co.jp/en/about"
+  },
+  "AQLS": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "chip design software (claimed)",
+   "one_line": "Nevada shell formerly Azzurro Solutions (chandelier distributor) with under 10K revenue; after 2024 change of control claims EDA tools business with no evidence of material operations.",
+   "confidence": 0.7,
+   "source": "https://www.sec.gov/Archives/edgar/data/1828739/000147793225004987/azzurro_10ka.htm"
+  },
+  "ARCUF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "gold exploration",
+   "one_line": "Vancouver junior holding the Touleary and Dawson gold properties in Yukon, early-stage exploration with minimal activity.",
+   "confidence": 0.65,
+   "source": "https://sg.finance.yahoo.com/quote/ARCUF/profile/"
+  },
+  "ARDNF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "silver polymetallic exploration",
+   "one_line": "ASX-listed explorer actively drilling its 100%-owned Kempfield silver-lead-zinc project in New South Wales with a 142.8Moz AgEq resource.",
+   "confidence": 0.9,
+   "source": "https://argentminerals.com.au/"
+  },
+  "ARBK": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "cryptocurrency mining",
+   "one_line": "Dual-listed bitcoin miner with a Quebec facility, restructured in late 2025 by exchanging its senior notes for equity, ADS on Nasdaq.",
+   "confidence": 0.8,
+   "source": "https://www.sec.gov/Archives/edgar/data/1841675/000165495425013902/a4666l.htm"
+  },
+  "ARYMF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "lithium project development",
+   "one_line": "ASX-listed developer of the Rincon lithium brine project in Argentina with a pilot plant producing lithium carbonate and a 12,000 tpa expansion in feasibility.",
+   "confidence": 0.9,
+   "source": "https://www.argosyminerals.com.au/"
+  },
+  "KMGLF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "copper project development",
+   "one_line": "AIM-listed developer of the BKM heap-leach copper cathode project in Central Kalimantan, Indonesia, with a completed feasibility study.",
+   "confidence": 0.9,
+   "source": "https://asiametresources.com/our_project/ksk-copper-project/"
+  },
+  "APTTF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "Cable TV and broadband operator (Taiwan)",
+   "one_line": "Singapore-listed business trust owning Taiwan Broadband Communications, delivering cable TV and broadband to Taiwanese households; FY2025 revenue about S$246M.",
+   "confidence": 0.9,
+   "source": "https://www.minichart.com.sg/2026/02/26/asian-pay-television-trust-2025-financial-results-dividend-guidance-broadband-growth-momentum-0-525-cpu-declared-0-80-cpu-guided-for-2026/"
+  },
+  "APCFF": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Pearl farming and jewelry",
+   "one_line": "ASX-listed producer of white and silver South Sea pearls farmed in Indonesia; FY2025 revenue A$44.3M with fully franked dividends.",
+   "confidence": 0.9,
+   "source": "https://www.listcorp.com/asx/atp/atlas-pearls-ltd/news/appendix-4e-and-2025-annual-report-3235123.html"
+  },
+  "ACB": {
+   "operating": true,
+   "class": "health",
+   "industry_guess": "Cannabis producer (medical and consumer)",
+   "one_line": "Canadian licensed cannabis producer selling medical cannabis internationally and consumer cannabis in Canada, with a plant propagation segment.",
+   "confidence": 0.9,
+   "source": "https://www.auroramj.com/"
+  },
+  "AMSLF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Critical minerals exploration",
+   "one_line": "ASX junior explorer with the Sconi nickel-cobalt-scandium project in Queensland and the Boa Vista gold project in Brazil; pre-revenue, funded by placements.",
+   "confidence": 0.8,
+   "source": "https://announcements.asx.com.au/asxpdf/20250812/pdf/06ms054zjr21mr.pdf"
+  },
+  "AOHLF": {
+   "operating": true,
+   "class": "transport",
+   "industry_guess": "Car rental and vehicle distribution",
+   "one_line": "Greek Hertz franchisee running short and long-term car rental plus auto import and dealership operations; 2025 revenue EUR 1.03B.",
+   "confidence": 0.92,
+   "source": "https://www.autohellas.gr/en/press-release-on-the-2025-financial-results/"
+  },
+  "AXTLF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "Telecom and fiber infrastructure (Mexico)",
+   "one_line": "Mexican telecom operator providing enterprise connectivity, IT services and wholesale fiber infrastructure including new Queretaro to Texas corridor.",
+   "confidence": 0.9,
+   "source": "https://www.gurufocus.com/news/3184660/axtel-sab-de-cv-fra4gk-q3-2025-earnings-call-highlights-robust-revenue-growth-and-strategic-infrastructure-expansion"
+  },
+  "EUUNF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Copper exploration",
+   "one_line": "TSXV junior owning 100% of the Marg copper VMS project in Yukon; filed a 43-101 resource in September 2025, no revenue.",
+   "confidence": 0.8,
+   "source": "https://azargametals.com/"
+  },
+  "BSKZF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "Live video shopping SaaS",
+   "one_line": "Swedish SaaS provider of live and shoppable video commerce tools for retailers such as Zara and L'Oreal; ARR about SEK 92M, loss-making.",
+   "confidence": 0.85,
+   "source": "https://finance.yahoo.com/news/bambuser-q4-2025-improved-retention-072000617.html"
+  },
+  "BRANF": {
+   "operating": true,
+   "class": "infrastructure",
+   "industry_guess": "Engineering and EPC contractor",
+   "one_line": "Israeli engineering group delivering design and turnkey construction for infrastructure, industry and energy projects, including a EUR 100M CHP plant contract in 2025.",
+   "confidence": 0.85,
+   "source": "https://www.investing.com/equities/baran"
+  },
+  "BMMKF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Rare earth and gold exploration",
+   "one_line": "ASX micro-cap explorer (formerly Balkan Mining) with rare earth prospects in California, gold-silver in Nevada and lithium claims in Canada; pre-revenue.",
+   "confidence": 0.75,
+   "source": "https://announcements.asx.com.au/asxpdf/20250826/pdf/06nb126dsstdfc.pdf"
+  },
+  "BJGBF": {
+   "operating": true,
+   "class": "energy",
+   "industry_guess": "Natural gas distribution and LNG",
+   "one_line": "Hong Kong-listed Beijing Gas affiliate operating city gas pipelines, LNG and clean energy projects in China; 2025 revenue RMB 1.92B.",
+   "confidence": 0.88,
+   "source": "https://www.minichart.com.sg/2026/04/28/beijing-gas-blue-sky-holdings-limited-annual-report-2025-natural-gas-clean-energy-transition-financial-performance-and-corporate-governance/"
+  },
+  "BNTRF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Copper-gold exploration",
+   "one_line": "TSXV explorer drilling the high-grade Great Burnt copper-gold project in Newfoundland; no revenue.",
+   "confidence": 0.8,
+   "source": "https://www.bentonresources.ca/"
+  },
+  "BRK/B": {
+   "operating": true,
+   "class": "conglomerate",
+   "industry_guess": "Diversified holding company (insurance, rail, energy, manufacturing)",
+   "one_line": "Warren Buffett's holding company owning GEICO, BNSF, Berkshire Hathaway Energy and dozens of operating businesses plus a large equity portfolio.",
+   "confidence": 0.98,
+   "source": "https://www.berkshirehathaway.com/"
+  },
+  "TACO": {
+   "operating": false,
+   "class": "finance",
+   "industry_guess": "SPAC (blank check)",
+   "one_line": "Harry You-sponsored SPAC that raised $300M in May 2025 and signed a non-binding LOI with OnMed LLC; no operating business yet.",
+   "confidence": 0.9,
+   "source": "https://www.spacresearch.com/symbol/TACOU"
+  },
+  "BGIN": {
+   "operating": true,
+   "class": "infrastructure",
+   "industry_guess": "Crypto mining hardware manufacturer",
+   "one_line": "Designs and sells ICERIVER-brand altcoin mining machines and runs its own mining farms; IPO'd on Nasdaq October 2025.",
+   "confidence": 0.85,
+   "source": "https://www.tipranks.com/news/company-announcements/bgin-blockchain-ltd-completes-30-million-ipo-on-nasdaq"
+  },
+  "BMNDF": {
+   "operating": true,
+   "class": "health",
+   "industry_guess": "Clinical-stage psychedelic biotech",
+   "one_line": "Canadian clinical-stage biotech developing nano-formulations of 5-MeO-DMT and other CNS compounds; cease trade order lifted November 2025, going concern doubt.",
+   "confidence": 0.7,
+   "source": "https://www.nasdaq.com/press-release/biomind-labs-announces-revocation-cease-trade-order-2025-11-25"
+  },
+  "BTGGF": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Crypto exchange and bank",
+   "one_line": "German operator of the Bitcoin.de crypto trading platform and futurum bank AG; 2025 revenue EUR 10M, holds a large bitcoin treasury.",
+   "confidence": 0.9,
+   "source": "https://bitcoingroup.com/en/corporatenews/2026/bitcoin-group-se-publishes-2025-annual-report-strategic-realignment-ensures-future-viability-in-the-dynamic-crypto-market"
+  },
+  "BLCAF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Gold mining",
+   "one_line": "ASX gold producer operating the Paulsens and Kal East mines in Western Australia; poured first gold December 2024, reached 100koz annualised run rate late 2025.",
+   "confidence": 0.9,
+   "source": "https://investorpa.com/announcement/243260/"
+  },
+  "BTZ": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end bond fund",
+   "one_line": "BlackRock closed-end fund investing in investment grade and high yield credit for income; not an operating company.",
+   "confidence": 0.95,
+   "source": "https://www.blackrock.com/us/individual/products/240157/blackrock-credit-allocation-income-trust-fund"
+  },
+  "BLW": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end bond fund",
+   "one_line": "BlackRock closed-end fund holding limited-duration high yield, loans and investment grade bonds for monthly income.",
+   "confidence": 0.95,
+   "source": "https://www.blackrock.com/us/individual/products/240175/blackrock-limited-duration-income-trust-fund"
+  },
+  "BKT": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end mortgage bond fund",
+   "one_line": "BlackRock closed-end fund invested mainly in agency mortgage-backed securities for monthly income.",
+   "confidence": 0.95,
+   "source": "https://www.blackrock.com/us/individual/products/240163/blackrock-income-trust-inc-fund"
+  },
+  "BLSTF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Nickel development",
+   "one_line": "ASX developer of the Ta Khoa nickel project and planned NCM precursor refinery in Vietnam plus Gold Bridge project in Canada; pre-production.",
+   "confidence": 0.82,
+   "source": "https://www.listcorp.com/asx/bsx/blackstone-minerals-limited/news/blackstone-minerals-investor-presentation-july-2025-3209027.html"
+  },
+  "BAGGF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Silver-zinc-lead exploration",
+   "one_line": "TSXV junior exploring the Blende carbonate-hosted Ag-Zn-Pb deposit in Yukon; raised C$1.1M in 2025, no revenue.",
+   "confidence": 0.78,
+   "source": "https://blendesilver.com/"
+  },
+  "BLUW": {
+   "operating": false,
+   "class": "finance",
+   "industry_guess": "SPAC (blank check)",
+   "one_line": "SPAC that raised $253M in May 2025 seeking AI, biotech and healthcare targets and has floated a $10B bid for Citgo parent PDV Holding; no operating business.",
+   "confidence": 0.9,
+   "source": "https://www.spacresearch.com/symbol/BLUW"
+  },
+  "BLUAF": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Delisted SPAC remnant",
+   "one_line": "2021 SPAC whose SST merger was terminated June 2024; nearly all shares redeemed leaving about $1M in trust, delisted from NYSE American, effectively a dead shell.",
+   "confidence": 0.85,
+   "source": "https://www.investing.com/news/company-news/blueriver-acquisition-corp-ends-merger-agreement-with-sst-93CH-3509758"
+  },
+  "BNHUF": {
+   "operating": true,
+   "class": "conglomerate",
+   "industry_guess": "Holding company: offshore wind services, renewable energy, cruise",
+   "one_line": "Fred. Olsen family holding company (Oslo) owning Fred. Olsen Windcarrier offshore wind installation vessels, onshore wind farms, and Fred. Olsen Cruise Lines.",
+   "confidence": 0.8,
+   "source": "unverified (web access blocked after budget): https://www.bonheur.no/"
+  },
+  "BBIXF": {
+   "operating": true,
+   "class": "health",
+   "industry_guess": "Clinical-stage regenerative medicine biotech",
+   "one_line": "Israeli TASE-listed clinical-stage biotech developing BonoFill bone graft and MesenCure cell therapy; Phase 3 planned 2026, no product revenue.",
+   "confidence": 0.85,
+   "source": "https://finance.yahoo.com/quote/BONS.TA/"
+  },
+  "BSHI": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Work gloves, pet supplies, promotional products distribution",
+   "one_line": "Kewanee, Illinois holding company (Boss Manufacturing) that imports and distributes work gloves, boots, pet supplies and promotional products; deregistered from SEC but trades OTC with periodic reports.",
+   "confidence": 0.65,
+   "source": "unverified (web access blocked): https://www.bossgloves.com/"
+  },
+  "BYD": {
+   "operating": true,
+   "class": "media_entertainment",
+   "industry_guess": "Casino gaming and hospitality",
+   "one_line": "Las Vegas-based operator of about 28 casino properties across 10 states plus online gaming; multi-billion revenue NYSE company.",
+   "confidence": 0.95,
+   "source": "unverified (web access blocked): https://www.boydgaming.com/"
+  },
+  "BPKKF": {
+   "operating": true,
+   "class": "materials",
+   "industry_guess": "Lubricants marketing and distribution (Japan)",
+   "one_line": "Tokyo-listed BP subsidiary that markets Castrol automotive and industrial lubricants in Japan.",
+   "confidence": 0.75,
+   "source": "unverified (web access blocked): https://www.bpcastrol.co.jp/"
+  },
+  "BRSL": {
+   "operating": true,
+   "class": "media_entertainment",
+   "industry_guess": "Lottery systems and services",
+   "one_line": "Formerly International Game Technology; after selling its gaming and digital units it is a pure-play lottery technology and operations provider (Italy Lotto, US state lotteries).",
+   "confidence": 0.9,
+   "source": "unverified (web access blocked): https://www.brightstarlottery.com/"
+  },
+  "BTI": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Tobacco and nicotine products",
+   "one_line": "ADR of British American Tobacco, a global cigarette (Dunhill, Lucky Strike, Camel ex-US) and next-generation nicotine (Vuse, Velo, glo) maker.",
+   "confidence": 0.97,
+   "source": "unverified (web access blocked): https://www.bat.com/"
+  },
+  "BATMF": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Tobacco (Malaysia)",
+   "one_line": "Bursa Malaysia-listed BAT subsidiary that imports and sells Dunhill and other cigarettes and vapour products in Malaysia.",
+   "confidence": 0.9,
+   "source": "unverified (web access blocked): https://www.batmalaysia.com/"
+  },
+  "BTAFF": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Tobacco and nicotine products",
+   "one_line": "OTC ordinary-share line of British American Tobacco p.l.c., duplicate of BTI ADR.",
+   "confidence": 0.97,
+   "source": "unverified (web access blocked): https://www.bat.com/"
+  },
+  "BF/B": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Distilled spirits and wine",
+   "one_line": "Brown-Forman, maker of Jack Daniel's, Woodford Reserve, Herradura and other spirits brands; the 0 cap in the feed is a ticker-format artifact, real cap is several billion USD.",
+   "confidence": 0.97,
+   "source": "unverified (web access blocked): https://www.brown-forman.com/"
+  },
+  "CCTSF": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Blank-check SPAC",
+   "one_line": "Israeli-sponsored SPAC (formerly Nasdaq CCTS) that sought a merger with Tembo e-LV; delisted to OTC; no operating business, a trust-account shell.",
+   "confidence": 0.7,
+   "source": "unverified (web access blocked): https://www.sec.gov/cgi-bin/browse-edgar?company=cactus+acquisition"
+  },
+  "CPZ": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end fund",
+   "one_line": "Calamos closed-end fund running a long/short equity and dynamic income strategy; an investment vehicle, not an operating company.",
+   "confidence": 0.95,
+   "source": "unverified (web access blocked): https://www.calamos.com/funds/closed-end/long-short-equity-and-dynamic-income-trust-cpz/"
+  },
+  "CLMHF": {
+   "operating": true,
+   "class": "shelter",
+   "industry_guess": "Residential property development and memorial parks",
+   "one_line": "JSE-listed South African developer of integrated affordable housing projects plus a memorial parks (cemetery) business; ongoing revenue.",
+   "confidence": 0.8,
+   "source": "unverified (web access blocked): https://www.calgrom3.com/"
+  },
+  "CLMPF": {
+   "operating": true,
+   "class": "materials",
+   "industry_guess": "Solar glass manufacturing (development stage)",
+   "one_line": "Calgary-based company repositioned from frac sand to building a patterned solar glass plant in Selkirk, Manitoba; pre-revenue, financing dependent.",
+   "confidence": 0.7,
+   "source": "unverified (web access blocked): https://www.cpsglass.com/"
+  },
+  "CPXLF": {
+   "operating": false,
+   "class": "infrastructure",
+   "industry_guess": "Supercapacitor components",
+   "one_line": "Australian thin prismatic supercapacitor maker; reportedly entered administration and had its AIM shares suspended around 2024-2025, and the 0.005 OTC price is consistent with a wound-down business.",
+   "confidence": 0.5,
+   "source": "unverified (web access blocked): https://www.cap-xx.com/"
+  },
+  "CGDCF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Gold exploration (Nevada)",
+   "one_line": "Vancouver-based junior exploring gold properties on Nevada trends; no revenue, SEC 20-F filer, minimal activity.",
+   "confidence": 0.45,
+   "source": "unverified (web access blocked): https://www.carlingold.com/"
+  },
+  "ROXIF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Oil production (Kazakhstan)",
+   "one_line": "AIM-listed oil producer operating the BNG contract area in Kazakhstan with producing shallow wells and deep exploration; the 15,873M cap in the feed is a share-count error, true cap is tens of millions USD.",
+   "confidence": 0.8,
+   "source": "unverified (web access blocked): https://www.caspiansunrise.com/"
+  },
+  "CBHC": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Community bank holding company",
+   "one_line": "Small Georgia bank holding company trading OTC at about $28 per share; appears to be a going community bank rather than a shell.",
+   "confidence": 0.5,
+   "source": "unverified (web access blocked): https://www.otcmarkets.com/stock/CBHC/overview"
+  },
+  "CELX": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Dormant shell",
+   "one_line": "Pink-sheet ticker trading at $0.0001 with no current filings or evidence of any business; the 45M cap is an artifact of a huge share count.",
+   "confidence": 0.65,
+   "source": "unverified (web access blocked): https://www.otcmarkets.com/stock/CELX/overview"
+  },
+  "CLYYF": {
+   "operating": true,
+   "class": "health",
+   "industry_guess": "Cell therapy intellectual property licensing",
+   "one_line": "Belgian former CAR-T developer that halted clinical programs in 2023, delisted from Nasdaq, and now exists mainly to license its allogeneic CAR-T patents; minimal operations.",
+   "confidence": 0.6,
+   "source": "unverified (web access blocked): https://www.celyad.com/"
+  },
+  "CNLLF": {
+   "operating": true,
+   "class": "shelter",
+   "industry_guess": "Residential property development (Henan, China)",
+   "one_line": "Hong Kong-listed developer focused on Henan province; defaulted on offshore bonds in 2023 and is in restructuring but still selling and delivering homes.",
+   "confidence": 0.7,
+   "source": "unverified (web access blocked): https://www.hkexnews.hk/ (stock code 832)"
+  },
+  "CNPTF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Onshore oil and gas production (Australia)",
+   "one_line": "ASX-listed producer of gas and oil from Mereenie, Palm Valley and Dingo fields in the Northern Territory, supplying east coast and NT gas markets.",
+   "confidence": 0.85,
+   "source": "unverified (web access blocked): https://www.centralpetroleum.com.au/"
+  },
+  "CNTY": {
+   "operating": true,
+   "class": "media_entertainment",
+   "industry_guess": "Casino operations",
+   "one_line": "Colorado-based operator of casinos and racetracks in the US, Canada and Poland; NASDAQ-listed with several hundred million in revenue.",
+   "confidence": 0.92,
+   "source": "unverified (web access blocked): https://www.cnty.com/"
+  },
+  "CEUMF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Iron ore exploration plus small food trading",
+   "one_line": "Formerly Century Iron Mines; holds Quebec and Labrador iron ore projects and runs a small Hong Kong food and seafood trading operation for cash flow.",
+   "confidence": 0.55,
+   "source": "unverified (web access blocked): https://www.centuryglobal.ca/"
+  },
+  "CABHF": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Brewing",
+   "one_line": "Danish brewer of Carlsberg, Tuborg, 1664 and Baltika-successor brands across Europe and Asia.",
+   "confidence": 0.95,
+   "source": "unverified (web access blocked): https://www.carlsberggroup.com/"
+  },
+  "COBA": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Cobalt and copper exploration",
+   "one_line": "SEC-registered exploration-stage company advancing the La Cobaltera cobalt-copper project in northern Chile; no revenue but files 10-Ks.",
+   "confidence": 0.55,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge of SEC 10-K filings"
+  },
+  "HPAGF": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Industrial automation instruments (former HKEX 591)",
+   "one_line": "Former Hong Kong-listed maker of industrial automation instruments; trading suspended for years over audit issues and delisted from HKEX, no recent filings or evidence of operations.",
+   "confidence": 0.5,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "CLSZF": {
+   "operating": true,
+   "class": "energy",
+   "industry_guess": "Natural gas distribution",
+   "one_line": "Hong Kong-listed (603 HK) operator of piped natural gas distribution networks and LNG/CNG stations across Chinese cities, with some upstream oil and gas interests.",
+   "confidence": 0.75,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "CSCNF": {
+   "operating": true,
+   "class": "shelter",
+   "industry_guess": "Residential property development",
+   "one_line": "Hong Kong-listed (1966 HK) Chinese residential property developer based in Xiamen; defaulted on offshore debt in 2023 and is restructuring but continues to sell and deliver homes.",
+   "confidence": 0.7,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "CHNSF": {
+   "operating": true,
+   "class": "food",
+   "industry_guess": "Corn starch and starch derivatives",
+   "one_line": "Hong Kong-listed (3838 HK) corn processor in Shandong producing corn starch, lysine, modified starch and starch-based sweeteners.",
+   "confidence": 0.75,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "CATWF": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Wine production (former HKEX 389)",
+   "one_line": "Former Hong Kong-listed grape wine producer; trading suspended for years over accounting concerns and subsequently delisted, no evidence of current operations.",
+   "confidence": 0.5,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "CIBY": {
+   "operating": false,
+   "class": "finance",
+   "industry_guess": "Cash-rich holding company",
+   "one_line": "Tiny Gabelli-affiliated holding company spun out of LICT that holds cash and minority investments while seeking acquisitions; no meaningful operating business.",
+   "confidence": 0.5,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "CCCHF": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Plus-size women's apparel retail",
+   "one_line": "ASX-listed omnichannel retailer of plus-size women's fashion under the City Chic brand in Australia and New Zealand; sold Avenue and Evans brands after losses.",
+   "confidence": 0.75,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "CEBTF": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Watches and jewellery",
+   "one_line": "Hong Kong-listed (256 HK) maker and distributor of watches under Rossini, Ebohr, Corum and Eterna brands, with a financial services segment.",
+   "confidence": 0.75,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "KRNMF": {
+   "operating": true,
+   "class": "health",
+   "industry_guess": "Nursing homes and post-acute care",
+   "one_line": "Paris-listed operator (formerly Korian) of nursing homes, rehabilitation clinics and home care services across France, Germany, Italy and other European markets.",
+   "confidence": 0.85,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "CLMOF": {
+   "operating": true,
+   "class": "energy",
+   "industry_guess": "Waste heat to power equipment",
+   "one_line": "Swedish Nasdaq First North company selling HeatPower modules that convert low-temperature waste heat from ships and industry into electricity.",
+   "confidence": 0.7,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "CXXMF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Silver exploration",
+   "one_line": "CSE-listed junior holding the past-producing Clayton silver mine property in Idaho; exploration stage, no revenue.",
+   "confidence": 0.5,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "COCCF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Copper and gold exploration",
+   "one_line": "TSXV-listed junior exploring the Empire Mine and Knob Hill properties on Vancouver Island, British Columbia; no revenue.",
+   "confidence": 0.5,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "CMTUF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "IT services and cloud solutions",
+   "one_line": "Tokyo-listed (3844 JP) IT services firm providing cloud integration, ERP and CRM implementation, and system engineering to Japanese enterprises.",
+   "confidence": 0.75,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "CNRIF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Precious and base metals exploration",
+   "one_line": "TSXV-listed prospect generator holding a portfolio of gold, silver and copper exploration projects in Peru, earning option payments and royalties; no mining revenue.",
+   "confidence": 0.55,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "CGDNF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Gold exploration",
+   "one_line": "AIM-listed Irish junior exploring the Clontibret gold deposit and the Longford-Down gold trend in Ireland; no revenue.",
+   "confidence": 0.55,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "CTLDF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "Telecommunications and IT services",
+   "one_line": "Mexican Bolsa-listed telecom operator (Alestra) providing fiber connectivity, managed networks, cloud and IT services to enterprise and government customers.",
+   "confidence": 0.8,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "CSRIF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Copper exploration",
+   "one_line": "TSXV-listed junior exploring porphyry copper-gold targets in British Columbia; exploration stage, no revenue.",
+   "confidence": 0.5,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "CIEZF": {
+   "operating": true,
+   "class": "media_entertainment",
+   "industry_guess": "Live entertainment and events",
+   "one_line": "Mexican Bolsa-listed entertainment group that sold its OCESA concert business to Live Nation and now runs commercial events, trade shows and related services.",
+   "confidence": 0.65,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "CRSXQ": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Metallurgical coal mining (in insolvency)",
+   "one_line": "Former Pennsylvania metallurgical coal producer that entered insolvency proceedings in 2025 and is disposing of assets; Q-suffixed ticker signals bankruptcy, no going concern for equity.",
+   "confidence": 0.5,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "CRD/A": {
+   "operating": true,
+   "class": "services",
+   "industry_guess": "Insurance claims management",
+   "one_line": "NYSE-listed global provider of claims adjusting, third-party administration and managed repair services to insurers and self-insured corporations.",
+   "confidence": 0.85,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "VTMLF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Rare earth exploration and development",
+   "one_line": "ASX-listed company (formerly Vital Metals) developing the Nechalacho rare earths project in Canada's Northwest Territories after halting its Saskatoon processing plant.",
+   "confidence": 0.55,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "CRT": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Oil and gas royalty trust",
+   "one_line": "NYSE-listed trust holding net profits interests in oil and gas properties in Texas, Oklahoma and New Mexico operated by XTO Energy, paying monthly distributions.",
+   "confidence": 0.85,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "SBMSF": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Former potash developer",
+   "one_line": "Former ASX-listed developer of the Colluli potash project in Eritrea that sold its stake in 2023, returned capital to shareholders and delisted; no remaining operating business.",
+   "confidence": 0.5,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "DTRK": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "Clinical trial software (eClinical)",
+   "one_line": "Ohio-based provider of the DATATRAK ONE unified eClinical platform for electronic data capture and clinical trial management; small but revenue-generating.",
+   "confidence": 0.6,
+   "source": "unverified: web search budget exhausted and egress blocked; prior knowledge"
+  },
+  "DTEAF": {
+   "operating": true,
+   "class": "food",
+   "industry_guess": "Specialty tea retail",
+   "one_line": "Montreal-based specialty loose-leaf tea retailer (TSXV: DTEA) selling online, wholesale and through a reduced store base after its 2020 CCAA restructuring.",
+   "confidence": 0.8,
+   "source": "https://www.davidstea.com (prior knowledge; web access blocked this session)"
+  },
+  "DECXF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Junior mineral exploration",
+   "one_line": "TSXV-listed junior explorer (DEC) with gold, silver and copper claims in the Stewart area of British Columbia; no production or revenue.",
+   "confidence": 0.7,
+   "source": "https://www.decaderesources.ca (prior knowledge; web access blocked this session)"
+  },
+  "DEMO": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Dormant former software company",
+   "one_line": "Former Petaluma, CA civic-engagement software developer (WeVote) that stopped SEC reporting years ago; trades at $0.0003 on OTC Pink with no evidence of current operations.",
+   "confidence": 0.7,
+   "source": "https://www.otcmarkets.com/stock/DEMO/profile (prior knowledge; web access blocked this session)"
+  },
+  "DRTFF": {
+   "operating": true,
+   "class": "water",
+   "industry_guess": "Agricultural soil treatment technology",
+   "one_line": "Norwegian company (Oslo: DSRT) selling Liquid Natural Clay soil treatment that cuts irrigation water use in arid agriculture and landscaping, with pilots in the UAE and US.",
+   "confidence": 0.75,
+   "source": "https://www.desertcontrol.com (prior knowledge; web access blocked this session)"
+  },
+  "DRRLF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Silica sand mining development",
+   "one_line": "ASX-listed (DRX) developer of the Galalar / Northern Silica sand projects in Cape York, Queensland, targeting glass and solar-panel grade silica.",
+   "confidence": 0.8,
+   "source": "https://www.diatreme.com.au (prior knowledge; web access blocked this session)"
+  },
+  "DKNG": {
+   "operating": true,
+   "class": "media_entertainment",
+   "industry_guess": "Online sports betting and iGaming",
+   "one_line": "Boston-based digital sports entertainment company running online sportsbook, iGaming and daily fantasy sports across US states.",
+   "confidence": 0.95,
+   "source": "https://www.draftkings.com (prior knowledge; web access blocked this session)"
+  },
+  "DDHRF": {
+   "operating": true,
+   "class": "shelter",
+   "industry_guess": "Impact real estate investment trust",
+   "one_line": "Toronto-listed trust (MPCT.UN) owning and developing mixed-use and affordable residential real estate in the GTA under Dream's impact framework.",
+   "confidence": 0.8,
+   "source": "https://www.dreamimpacttrust.ca (prior knowledge; web access blocked this session)"
+  },
+  "DRMMF": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Toy manufacturing",
+   "one_line": "Hong Kong-listed (1126) manufacturer of plush and ride-on toys for major brands, with factories in China and Vietnam.",
+   "confidence": 0.85,
+   "source": "https://www.dreamintl.com.hk (prior knowledge; web access blocked this session)"
+  },
+  "DUBRF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "Conversation recording and AI software",
+   "one_line": "ASX-listed (DUB) SaaS platform embedded in telecom carrier networks that records calls and applies conversation intelligence for compliance and analytics.",
+   "confidence": 0.8,
+   "source": "https://www.dubber.net (prior knowledge; web access blocked this session)"
+  },
+  "DVLN": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Real estate and residual interest holding company",
+   "one_line": "New York holding company that went dark after a reverse split; owns Kearny NJ real estate and residual interests in securitized receivables with negligible public disclosure.",
+   "confidence": 0.4,
+   "source": "https://www.otcmarkets.com/stock/DVLN/profile (prior knowledge; web access blocked this session)"
+  },
+  "KTF": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end municipal bond fund",
+   "one_line": "NYSE-listed closed-end fund managed by DWS investing in tax-exempt municipal bonds.",
+   "confidence": 0.95,
+   "source": "https://fundsus.dws.com (prior knowledge; web access blocked this session)"
+  },
+  "DYNA": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Dormant shell",
+   "one_line": "OTC Pink shell with no identifiable operating business, revenue or recent filings; trades at $0.015.",
+   "confidence": 0.55,
+   "source": "https://www.otcmarkets.com/stock/DYNA/profile (prior knowledge; web access blocked this session)"
+  },
+  "DYFWF": {
+   "operating": true,
+   "class": "food",
+   "industry_guess": "Wine production",
+   "one_line": "Hong Kong-listed (828) Tianjin-based producer of Dynasty brand wines for the mainland China market.",
+   "confidence": 0.8,
+   "source": "https://www.dynasty-wines.com (prior knowledge; web access blocked this session)"
+  },
+  "EFRMF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Junior gold and copper exploration",
+   "one_line": "TSXV-listed (EAM) explorer holding gold and copper projects in Ethiopia (Adyabo, Harvest) and Tanzania (Handeni); pre-revenue.",
+   "confidence": 0.75,
+   "source": "https://www.eastafricametals.com (prior knowledge; web access blocked this session)"
+  },
+  "CEV": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end municipal bond fund",
+   "one_line": "Eaton Vance closed-end fund investing in California tax-exempt municipal bonds.",
+   "confidence": 0.95,
+   "source": "https://funds.eatonvance.com (prior knowledge; web access blocked this session)"
+  },
+  "EFT": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end floating rate loan fund",
+   "one_line": "Eaton Vance closed-end fund investing in senior secured floating rate bank loans.",
+   "confidence": 0.95,
+   "source": "https://funds.eatonvance.com (prior knowledge; web access blocked this session)"
+  },
+  "EVN": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end municipal bond fund",
+   "one_line": "Eaton Vance closed-end fund investing in national tax-exempt municipal bonds.",
+   "confidence": 0.95,
+   "source": "https://funds.eatonvance.com (prior knowledge; web access blocked this session)"
+  },
+  "EOT": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end municipal bond fund",
+   "one_line": "Eaton Vance National Municipal Opportunities Trust, a closed-end fund holding tax-exempt municipal bonds.",
+   "confidence": 0.95,
+   "source": "https://funds.eatonvance.com (prior knowledge; web access blocked this session)"
+  },
+  "EVF": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end senior loan fund",
+   "one_line": "Eaton Vance closed-end fund investing in senior floating rate corporate loans.",
+   "confidence": 0.95,
+   "source": "https://funds.eatonvance.com (prior knowledge; web access blocked this session)"
+  },
+  "ECLMF": {
+   "operating": true,
+   "class": "materials",
+   "industry_guess": "Tire recycling and recovered carbon black",
+   "one_line": "Quebec company (TSXV: ECM) running thermal decomposition plants that convert scrap tires into recovered carbon black, oil, steel and gas; Hawkesbury facility operating with heavy financing needs.",
+   "confidence": 0.75,
+   "source": "https://www.ecolomondo.com (prior knowledge; web access blocked this session)"
+  },
+  "EDNSF": {
+   "operating": true,
+   "class": "food",
+   "industry_guess": "Biopesticides for agriculture",
+   "one_line": "UK AIM-listed (EDEN) developer of plant-derived biopesticides and Sustaine encapsulation technology sold through partners such as Corteva and Sipcam.",
+   "confidence": 0.8,
+   "source": "https://www.edenresearch.com (prior knowledge; web access blocked this session)"
+  },
+  "ASXSF": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end resource investment company",
+   "one_line": "TSXV-listed (ELC) investment issuer holding a portfolio of mainly resource-sector equities and paying dividends; no operating subsidiary.",
+   "confidence": 0.7,
+   "source": "https://www.elysee.ca (prior knowledge; web access blocked this session)"
+  },
+  "AKO/B": {
+   "operating": true,
+   "class": "food",
+   "industry_guess": "Beverage bottling",
+   "one_line": "Santiago-based Coca-Cola bottler and distributor serving Chile, Argentina, Brazil and Paraguay; NYSE ADR, the 0M cap is a data gap.",
+   "confidence": 0.95,
+   "source": "https://www.koandina.com (prior knowledge; web access blocked this session)"
+  },
+  "EBCRY": {
+   "operating": true,
+   "class": "media_entertainment",
+   "industry_guess": "Video game publishing",
+   "one_line": "Swedish video game and entertainment group (Nasdaq Stockholm: EMBRAC B) owning studios and publishers including THQ Nordic, Coffee Stain and Plaion.",
+   "confidence": 0.95,
+   "source": "https://embracer.com (prior knowledge; web access blocked this session)"
+  },
+  "EMCMF": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "E-commerce brand holding company",
+   "one_line": "Toronto-based TSXV issuer (ECOM) owning direct-to-consumer e-commerce brands such as truLOCAL, WagJag and UnderPar after divesting BattlBox.",
+   "confidence": 0.65,
+   "source": "https://www.emerge-commerce.com (prior knowledge; web access blocked this session)"
+  },
+  "EPRJF": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Luxury watch and jewellery retail",
+   "one_line": "Hong Kong listed (887.HK) retailer of luxury watches and fine jewellery with stores in Hong Kong, Macau and mainland China.",
+   "confidence": 0.7,
+   "source": "UNVERIFIED prior knowledge; web blocked in session. Likely: https://www.emperorwatchjewellery.com/"
+  },
+  "ENMHF": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Fashion retail and investment holding",
+   "one_line": "Hong Kong listed (128.HK) holding company running fashion apparel retail chains plus property and securities investment.",
+   "confidence": 0.55,
+   "source": "UNVERIFIED prior knowledge; web blocked in session. Likely: https://www.enmholdings.com/"
+  },
+  "TYPTF": {
+   "operating": false,
+   "class": "unknown",
+   "industry_guess": "Unknown",
+   "one_line": "Could not determine any operating business for this name; no verifiable information available in session.",
+   "confidence": 0.2,
+   "source": "UNVERIFIED; web search budget exhausted and fetch egress blocked"
+  },
+  "NWVCF": {
+   "operating": true,
+   "class": "infrastructure",
+   "industry_guess": "Food processing machinery (vacuum microwave dehydration)",
+   "one_line": "Vancouver based maker and licensor of Radiant Energy Vacuum dehydration machines sold to food, cannabis and pharma processors (TSXV: ENW).",
+   "confidence": 0.7,
+   "source": "UNVERIFIED prior knowledge; web blocked in session. Likely: https://www.enwave.net/"
+  },
+  "EONXF": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Payments and loyalty rewards platform",
+   "one_line": "Small Australian fintech (ASX: EON) operating a payments and rewards platform for consumers and merchants.",
+   "confidence": 0.45,
+   "source": "UNVERIFIED prior knowledge; web blocked in session. Likely: https://www.eonx.com.au/"
+  },
+  "FNCJF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Mineral exploration and royalties",
+   "one_line": "Renamed Fancamp Exploration (TSXV: FNC); holds Canadian mineral exploration properties, royalties and resource equity interests.",
+   "confidence": 0.5,
+   "source": "UNVERIFIED prior knowledge; web blocked in session. Likely: https://fancamp.ca/"
+  },
+  "EVNIF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Nickel exploration",
+   "one_line": "Junior explorer (TSXV: EVNI) advancing the Shaw Dome nickel project near Timmins, Ontario, targeting low carbon nickel for batteries.",
+   "confidence": 0.8,
+   "source": "UNVERIFIED prior knowledge; web blocked in session. Likely: https://evnickel.com/"
+  },
+  "FSROF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "Consumer cybersecurity software",
+   "one_line": "Helsinki listed consumer security software company selling antivirus, VPN and identity protection largely through telecom operator partners.",
+   "confidence": 0.85,
+   "source": "UNVERIFIED prior knowledge; web blocked in session. Likely: https://www.f-secure.com/"
+  },
+  "FARYF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Oil and gas exploration",
+   "one_line": "ASX listed oil and gas explorer (FAR) with a Gambia offshore block and contingent payments from its sold Senegal interest.",
+   "confidence": 0.65,
+   "source": "UNVERIFIED prior knowledge; web blocked in session. Likely: https://www.far.com.au/"
+  },
+  "FBRKF": {
+   "operating": true,
+   "class": "infrastructure",
+   "industry_guess": "Construction robotics",
+   "one_line": "Perth based developer of the Hadrian X automated block laying robot for residential construction (ASX: FBR).",
+   "confidence": 0.7,
+   "source": "UNVERIFIED prior knowledge; web blocked in session. Likely: https://www.fbr.com.au/"
+  },
+  "FXGDF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Gold exploration",
+   "one_line": "ASX listed gold explorer (FXG) advancing the Treasure Creek and Ester Dome projects in Fairbanks, Alaska.",
+   "confidence": 0.8,
+   "source": "UNVERIFIED prior knowledge; web blocked in session. Likely: https://felixgold.com.au/"
+  },
+  "FINR": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Fintech payment services",
+   "one_line": "Nevada incorporated SEC filer operating a small UK based payment and fintech platform; thin revenue and near shell scale.",
+   "confidence": 0.35,
+   "source": "UNVERIFIED prior knowledge; web blocked in session. Likely: https://www.sec.gov/cgi-bin/browse-edgar?company=fintech+scion"
+  },
+  "FHYDF": {
+   "operating": true,
+   "class": "energy",
+   "industry_guess": "Hydrogen fuel cell vehicles and green hydrogen",
+   "one_line": "Vancouver and London based developer of hydrogen fuel cell light commercial vans and planned green hydrogen production (TSXV: FHYD); pre-revenue.",
+   "confidence": 0.65,
+   "source": "UNVERIFIED prior knowledge; web blocked in session. Likely: https://firsthydrogen.com/"
+  },
+  "FLMCF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Lithium exploration",
+   "one_line": "Junior lithium explorer (CSE: FLM) with pegmatite projects in Ontario and Manitoba; pre-revenue.",
+   "confidence": 0.65,
+   "source": "UNVERIFIED prior knowledge; web blocked in session. Likely: https://firstlithiumminerals.com/"
+  },
+  "FPHOY": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Phosphate mining development",
+   "one_line": "Quebec igneous phosphate developer (CSE: PFT) targeting purified phosphoric acid for LFP battery cathodes; ADR listing.",
+   "confidence": 0.8,
+   "source": "UNVERIFIED prior knowledge; web blocked in session. Likely: https://firstphosphate.com/"
+  },
+  "FTCFF": {
+   "operating": true,
+   "class": "materials",
+   "industry_guess": "Ballistic protection materials",
+   "one_line": "Israeli manufacturer (TASE: FBRT) of aramid and polyethylene based ballistic protection fabrics and composite armor materials.",
+   "confidence": 0.7,
+   "source": "UNVERIFIED prior knowledge; web blocked in session. Likely: https://www.fms-tf.com/"
+  },
+  "FTF": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end bond fund",
+   "one_line": "Franklin Templeton closed-end fund investing in high yield bonds, mortgage backed securities and floating rate loans.",
+   "confidence": 0.95,
+   "source": "Repo data data/universe.csv (nasdaq_screener: Finance/Investors Services); Franklin Templeton fund family"
+  },
+  "PMM": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end municipal bond fund",
+   "one_line": "Franklin Templeton (formerly Putnam) closed-end fund holding tax exempt municipal bonds.",
+   "confidence": 0.95,
+   "source": "Repo data data/universe.csv (nasdaq_screener: Investment Managers); Franklin Templeton fund family"
+  },
+  "PIM": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end bond fund",
+   "one_line": "Franklin Templeton (formerly Putnam) closed-end multi sector fixed income fund.",
+   "confidence": 0.95,
+   "source": "Repo data data/universe.csv (nasdaq_screener: Finance Companies); Franklin Templeton fund family"
+  },
+  "PPT": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end bond fund",
+   "one_line": "Franklin Templeton (formerly Putnam) closed-end multi sector income fund.",
+   "confidence": 0.95,
+   "source": "Repo data data/universe.csv (nasdaq_screener: Finance Companies); Franklin Templeton fund family"
+  },
+  "FIGI": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Shell company",
+   "one_line": "No evidence of an operating business or revenue; long dormant OTC shell name.",
+   "confidence": 0.4,
+   "source": "UNVERIFIED prior knowledge; web blocked in session"
+  },
+  "FRECF": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Shell company",
+   "one_line": "SEC only listing with no identifiable operating business or revenue found.",
+   "confidence": 0.35,
+   "source": "UNVERIFIED prior knowledge; web blocked in session. Repo data/sec_only_traders.csv"
+  },
+  "FUUN": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Shell company",
+   "one_line": "Dormant OTC shell with no evidence of current operations or filings.",
+   "confidence": 0.4,
+   "source": "UNVERIFIED prior knowledge; web blocked in session"
+  },
+  "GDV": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end equity fund",
+   "one_line": "Gabelli managed closed-end fund investing in dividend paying US equities.",
+   "confidence": 0.95,
+   "source": "Repo data data/universe.csv (nasdaq_screener: Investment Managers); Gabelli fund family"
+  },
+  "GALMF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Nickel and PGE exploration",
+   "one_line": "ASX listed explorer (GAL) advancing the Callisto palladium-platinum-nickel discovery at Norseman, Western Australia.",
+   "confidence": 0.8,
+   "source": "UNVERIFIED prior knowledge; web blocked in session. Likely: https://galileomining.com.au/"
+  },
+  "GNT": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end fund (gold and natural resources equities, covered calls)",
+   "one_line": "Gabelli/GAMCO closed-end fund holding gold and natural resource equities and writing call options for income.",
+   "confidence": 0.85,
+   "source": "https://www.gabelli.com/funds/closed-end-funds (unverified: egress blocked)"
+  },
+  "GBMRF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Gold exploration (ASX: GBZ)",
+   "one_line": "Queensland gold explorer advancing Yandan and Mount Coolon-area projects; pre-revenue.",
+   "confidence": 0.65,
+   "source": "https://www.gbmr.com.au/ (unverified: egress blocked)"
+  },
+  "GMDMF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Diamond mining (LSE: GEMD)",
+   "one_line": "Operates the Letseng diamond mine in Lesotho, known for large high-value stones; revenue-producing but under price pressure.",
+   "confidence": 0.8,
+   "source": "https://www.gemdiamonds.com/ (unverified: egress blocked)"
+  },
+  "GSGTF": {
+   "operating": true,
+   "class": "health",
+   "industry_guess": "Gene therapy biotech (Euronext: SIGHT)",
+   "one_line": "French gene therapy developer of LUMEVOQ for Leber hereditary optic neuropathy; cash-constrained, pursuing early access and regulatory paths.",
+   "confidence": 0.65,
+   "source": "https://www.gensight-biologics.com/ (unverified: egress blocked)"
+  },
+  "GPACF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Gold development (ASX: GPR)",
+   "one_line": "Developer of the Woodlark gold project in Papua New Guinea; pre-production.",
+   "confidence": 0.7,
+   "source": "https://www.geopacific.com.au/ (unverified: egress blocked)"
+  },
+  "GOOXF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Oil exploration and small-scale production (TASE)",
+   "one_line": "Israeli limited partnership holding the onshore Meged oil field with minor intermittent production.",
+   "confidence": 0.55,
+   "source": "https://maya.tase.co.il/ (unverified: egress blocked)"
+  },
+  "CATPF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Manganese development (TSXV: EMM)",
+   "one_line": "Developing the K.Hill battery-grade manganese project in Botswana with a demonstration plant; pre-revenue.",
+   "confidence": 0.7,
+   "source": "https://giyanimetals.com/ (unverified: egress blocked)"
+  },
+  "GHYLF": {
+   "operating": true,
+   "class": "energy",
+   "industry_guess": "Natural hydrogen and helium exploration (ASX: GHY)",
+   "one_line": "Explores for naturally occurring hydrogen and helium at the Ramsay project in South Australia; pre-revenue.",
+   "confidence": 0.65,
+   "source": "https://goldhydrogen.com.au/ (unverified: egress blocked)"
+  },
+  "GDRPF": {
+   "operating": true,
+   "class": "food",
+   "industry_guess": "Rice distribution and restaurants (HKEX: 0677)",
+   "one_line": "Hong Kong rice importer and distributor (Golden Elephant brand) that also runs Japanese restaurant and food businesses.",
+   "confidence": 0.75,
+   "source": "https://www.hkexnews.hk/ (unverified: egress blocked)"
+  },
+  "GSTMF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Gold-copper exploration (TSXV: GSTM)",
+   "one_line": "Tudor Gold spin-out exploring the Electrum and Crown properties in British Columbia's Golden Triangle; pre-revenue.",
+   "confidence": 0.65,
+   "source": "https://goldstormmetals.com/ (unverified: egress blocked)"
+  },
+  "XNJJY": {
+   "operating": true,
+   "class": "energy",
+   "industry_guess": "Wind turbine manufacturing (SZSE: 002202, HKEX: 2208)",
+   "one_line": "World's largest wind turbine manufacturer by installations, also owning and servicing wind farms.",
+   "confidence": 0.9,
+   "source": "https://www.goldwind.com/en/ (unverified: egress blocked)"
+  },
+  "GQPIL": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Asset management (ASX: GQG)",
+   "one_line": "Global equity boutique asset manager with well over US$100B in funds under management.",
+   "confidence": 0.9,
+   "source": "https://gqg.com/ (unverified: egress blocked)"
+  },
+  "GRFXF": {
+   "operating": true,
+   "class": "materials",
+   "industry_guess": "Graphite anode materials (HKEX: 6128)",
+   "one_line": "Processes spherical graphite anode material for lithium-ion batteries in China; delisted from NYSE American in 2024 and financially stressed.",
+   "confidence": 0.55,
+   "source": "https://www.graphexgroup.com/ (unverified: egress blocked)"
+  },
+  "GRWWF": {
+   "operating": true,
+   "class": "shelter",
+   "industry_guess": "Property investment (HKEX: 0583)",
+   "one_line": "Hong Kong holding company with property investment and leasing operations.",
+   "confidence": 0.45,
+   "source": "https://www.hkexnews.hk/ (unverified: egress blocked)"
+  },
+  "GCLAF": {
+   "operating": true,
+   "class": "media_entertainment",
+   "industry_guess": "Media conglomerate (BCBA: GCLA)",
+   "one_line": "Argentina's largest media group spanning the Clarin newspaper, broadcast TV, radio, and digital content.",
+   "confidence": 0.85,
+   "source": "https://www.grupoclarin.com/ (unverified: egress blocked)"
+  },
+  "GPSAF": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Hotel operator (BMV: POSADAS)",
+   "one_line": "Mexico's largest hotel operator with Fiesta Americana, Live Aqua, Grand Fiesta Americana, and One brands.",
+   "confidence": 0.85,
+   "source": "https://www.posadas.com/ (unverified: egress blocked)"
+  },
+  "KYBWF": {
+   "operating": true,
+   "class": "shelter",
+   "industry_guess": "Property development (HKEX: 0124)",
+   "one_line": "Guangdong Holdings subsidiary developing and investing in residential and commercial property in Guangdong province.",
+   "confidence": 0.7,
+   "source": "https://www.hkexnews.hk/ (unverified: egress blocked)"
+  },
+  "HMRRF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Copper-gold exploration (ASX: HMX)",
+   "one_line": "Explores copper and gold tenements in the Mount Isa region of Queensland; pre-revenue.",
+   "confidence": 0.7,
+   "source": "https://www.hammermetals.com.au/ (unverified: egress blocked)"
+  },
+  "HDGHF": {
+   "operating": true,
+   "class": "materials",
+   "industry_guess": "Graphene and nanomaterials (AIM: HAYD)",
+   "one_line": "UK maker of functionalised graphene and nanomaterial products, conductive inks, and silicon carbide ceramic tooling; small revenue and recurring funding needs.",
+   "confidence": 0.6,
+   "source": "https://www.haydale.com/ (unverified: egress blocked)"
+  },
+  "HCMA": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "SPAC (blank check company)",
+   "one_line": "Blank check company listed in 2025 seeking a business combination; no operating business.",
+   "confidence": 0.85,
+   "source": "https://www.sec.gov/cgi-bin/browse-edgar?company=HCM+III+Acquisition (unverified: egress blocked)"
+  },
+  "EMOR": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "OTC health-tech and water-tech promoter",
+   "one_line": "Formerly Emerald Organic Products; promotes health data and atmospheric water technology concepts with negligible revenue and no evidence of a substantive operating business.",
+   "confidence": 0.55,
+   "source": "https://www.otcmarkets.com/stock/EMOR/overview (unverified: egress blocked)"
+  },
+  "HLOGF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Helium exploration (AIM: HE1)",
+   "one_line": "Explores for helium at the Rukwa project in Tanzania and in Colorado; pre-revenue.",
+   "confidence": 0.75,
+   "source": "https://www.helium-one.com/ (unverified: egress blocked)"
+  },
+  "HGGCF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Gold exploration (TSXV: HWY)",
+   "one_line": "Junior explorer with gold properties in Nevada; pre-revenue.",
+   "confidence": 0.6,
+   "source": "https://www.highway50gold.com/ (unverified: egress blocked)"
+  },
+  "HLONF": {
+   "operating": true,
+   "class": "infrastructure",
+   "industry_guess": "Oilfield equipment and services (HKEX: 1623)",
+   "one_line": "Chinese maker of drill pipe and OCTG coatings that also provides oilfield services and offshore engineering.",
+   "confidence": 0.7,
+   "source": "https://www.hilonggroup.com/ (unverified: egress blocked)"
+  },
+  "HUAGF": {
+   "operating": true,
+   "class": "unknown",
+   "industry_guess": "Hong Kong small cap, likely construction or design services",
+   "one_line": "Hong Kong-listed small cap whose line of business could not be verified in this session.",
+   "confidence": 0.25,
+   "source": "https://www.hkexnews.hk/ (unverified: egress blocked)"
+  },
+  "COUTF": {
+   "operating": false,
+   "class": "unknown",
+   "industry_guess": "Small Hong Kong listed holding company",
+   "one_line": "Sub-penny OTC line of a Hong Kong holding company; no business evidence could be verified because all web access was blocked in this session.",
+   "confidence": 0.2,
+   "source": "prior knowledge only; web search budget exhausted and egress blocked"
+  },
+  "HHIGF": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Furniture manufacturing (China)",
+   "one_line": "Believed to be the OTC line of Huisen Household International (2127.HK), a Chinese panel furniture maker; not verifiable this session.",
+   "confidence": 0.35,
+   "source": "prior knowledge only; web access blocked"
+  },
+  "FESTF": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Former electric vehicle venture holding (HK 1188)",
+   "one_line": "Hong Kong listed Hybrid Kinetic Group, a onetime EV and hydrogen venture whose shares were suspended and which shows no meaningful ongoing operations.",
+   "confidence": 0.5,
+   "source": "prior knowledge only; web access blocked"
+  },
+  "HYLQF": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Digital asset treasury company",
+   "one_line": "Canadian CSE listed company repositioned in 2025 as a Hyperliquid (HYPE) token treasury strategy vehicle.",
+   "confidence": 0.5,
+   "source": "prior knowledge only; web access blocked"
+  },
+  "HYTNF": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Cannabis beverages and consumer products",
+   "one_line": "British Columbia based maker of cannabis infused beverages and pharma grade cannabis products sold through provincial channels.",
+   "confidence": 0.55,
+   "source": "prior knowledge only; web access blocked"
+  },
+  "ICBT": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Shell company",
+   "one_line": "Nevada shell with an enormous share count trading at a few thousandths of a cent; no operating business or revenue known.",
+   "confidence": 0.7,
+   "source": "prior knowledge plus repo price data (data/raw_otc_yahoo.csv shows $0.00003); web access blocked"
+  },
+  "PRRUF": {
+   "operating": true,
+   "class": "health",
+   "industry_guess": "Biotechnology (immuno-oncology)",
+   "one_line": "Australian clinical stage biotech developing LAG-3 based immunotherapies (eftilagimod alfa) for cancer and autoimmune disease; PRRUF is the OTC line of ASX IMM.",
+   "confidence": 0.85,
+   "source": "prior knowledge only; web access blocked"
+  },
+  "ICRP": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Commercial mortgage REIT (non-traded)",
+   "one_line": "Inland sponsored non-traded REIT that originates and holds first mortgage loans on commercial real estate.",
+   "confidence": 0.85,
+   "source": "prior knowledge only; web access blocked"
+  },
+  "WELNF": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Blank check SPAC",
+   "one_line": "Cayman SPAC seeking a wellness sector target; no operating business, trust value trading near $12.",
+   "confidence": 0.85,
+   "source": "prior knowledge plus repo cut log labeling it a blank check SPAC; web access blocked"
+  },
+  "CPNBQ": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "Telecommunications operator (Peru)",
+   "one_line": "Formerly Telefonica del Peru, Peru's largest fixed and mobile network operator (Movistar brand), sold to Integra Tec in 2025 and operating under INDECOPI insolvency proceedings.",
+   "confidence": 0.75,
+   "source": "prior knowledge only; web access blocked"
+  },
+  "IWVTF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "Financial IT systems and security software (Japan)",
+   "one_line": "Tokyo listed (4847) IT company building credit card network and payment processing systems plus cybersecurity products.",
+   "confidence": 0.8,
+   "source": "prior knowledge only; web access blocked"
+  },
+  "IRCKF": {
+   "operating": true,
+   "class": "food",
+   "industry_guess": "Animal feed additives",
+   "one_line": "Canadian holding whose operating units (Papillon Agricultural, MIN-AD) supply dairy and livestock feed ingredients and dolomitic limestone supplements.",
+   "confidence": 0.7,
+   "source": "prior knowledge only; web access blocked"
+  },
+  "INVRF": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Fintech, open banking and credit data",
+   "one_line": "Canadian company (formerly Marble Financial) providing bank account verification and AI driven credit risk data to lenders.",
+   "confidence": 0.55,
+   "source": "prior knowledge only; web access blocked"
+  },
+  "VKI": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end municipal bond fund",
+   "one_line": "Invesco leveraged closed-end fund holding tax exempt municipal bonds.",
+   "confidence": 0.95,
+   "source": "prior knowledge only; web access blocked"
+  },
+  "VCV": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end municipal bond fund",
+   "one_line": "Invesco closed-end fund holding California tax exempt municipal bonds.",
+   "confidence": 0.95,
+   "source": "prior knowledge only; web access blocked"
+  },
+  "VPV": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end municipal bond fund",
+   "one_line": "Invesco closed-end fund holding Pennsylvania tax exempt municipal bonds.",
+   "confidence": 0.95,
+   "source": "prior knowledge only; web access blocked"
+  },
+  "IQI": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end municipal bond fund",
+   "one_line": "Invesco closed-end fund holding investment grade municipal bonds.",
+   "confidence": 0.95,
+   "source": "prior knowledge only; web access blocked"
+  },
+  "IIM": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end municipal bond fund",
+   "one_line": "Invesco closed-end fund holding a diversified portfolio of municipal bonds.",
+   "confidence": 0.95,
+   "source": "prior knowledge only; web access blocked"
+  },
+  "IMRTF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "Cloud hosting and managed IT services (UK)",
+   "one_line": "Glasgow based AIM listed provider of cloud infrastructure, colocation and managed services; heavily indebted after the Atech acquisition.",
+   "confidence": 0.8,
+   "source": "prior knowledge only; web access blocked"
+  },
+  "IPCEF": {
+   "operating": true,
+   "class": "transport",
+   "industry_guess": "Lunar landers and space transportation",
+   "one_line": "Tokyo listed company building lunar landers and rovers to deliver payloads to the Moon (HAKUTO-R missions).",
+   "confidence": 0.8,
+   "source": "prior knowledge only; web access blocked"
+  },
+  "ISLCF": {
+   "operating": true,
+   "class": "shelter",
+   "industry_guess": "Real estate development (Israel)",
+   "one_line": "Tel Aviv listed developer of residential, office and hotel projects in Israel.",
+   "confidence": 0.8,
+   "source": "prior knowledge only; web access blocked"
+  },
+  "IXAQF": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Blank check SPAC",
+   "one_line": "Cayman SPAC that pursued a merger with AERKOMM; still trades near trust value with no operating business of its own.",
+   "confidence": 0.7,
+   "source": "prior knowledge only; web access blocked"
+  },
+  "JAPAY": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Tobacco",
+   "one_line": "One of the world's largest tobacco companies (Winston, Camel outside US, Mevius) with smaller pharmaceutical and processed food segments.",
+   "confidence": 0.95,
+   "source": "prior knowledge only; web access blocked"
+  },
+  "JASUF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "Telecom and digital asset holding (Thailand)",
+   "one_line": "Thai holding company that sold its 3BB broadband business to AIS in 2023 and now mainly holds Jasmine Technology Solution (bitcoin mining) and residual telecom services.",
+   "confidence": 0.5,
+   "source": "prior knowledge only; web access blocked"
+  },
+  "HYPPF": {
+   "operating": true,
+   "class": "media_entertainment",
+   "industry_guess": "Digital media and fashion e-commerce",
+   "one_line": "Hong Kong based streetwear media group publishing Hypebeast and running the HBX e-commerce store.",
+   "confidence": 0.85,
+   "source": "prior knowledge only; web access blocked"
+  },
+  "JBDI": {
+   "operating": true,
+   "class": "materials",
+   "industry_guess": "Industrial container reconditioning and recycling",
+   "one_line": "Singapore-based reconditioner and recycler of industrial chemical drums and IBC containers, Nasdaq IPO 2024.",
+   "confidence": 0.55,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/universe.csv plus prior knowledge"
+  },
+  "JIUMF": {
+   "operating": true,
+   "class": "food",
+   "industry_guess": "Restaurants",
+   "one_line": "Hong Kong-listed Chinese casual dining chain operator, best known for the Tai Er sauerkraut fish brand.",
+   "confidence": 0.85,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/raw_otc_yahoo.csv plus prior knowledge"
+  },
+  "JSVGF": {
+   "operating": true,
+   "class": "services",
+   "industry_guess": "Textile rental and laundry services",
+   "one_line": "UK workwear rental and hotel and restaurant linen laundry group (Johnsons Workwear, Stalbridge).",
+   "confidence": 0.85,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/raw_otc_yahoo.csv plus prior knowledge"
+  },
+  "JUBPF": {
+   "operating": true,
+   "class": "materials",
+   "industry_guess": "Metals recovery from mine waste and tailings",
+   "one_line": "AIM-listed processor recovering chrome, PGMs and copper from tailings and waste in South Africa and Zambia.",
+   "confidence": 0.8,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/raw_otc_yahoo.csv plus prior knowledge"
+  },
+  "JTKWY": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "Online food delivery marketplace",
+   "one_line": "European online food ordering and delivery platform; acquired by Prosus in 2025 so the ADR is likely delisted.",
+   "confidence": 0.75,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/raw_otc_yahoo.csv plus prior knowledge"
+  },
+  "JZRIF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Gold exploration and small-scale production",
+   "one_line": "Canadian junior with the Pedra Branca gold project in Brazil under a toll-milling arrangement.",
+   "confidence": 0.5,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/raw_otc_yahoo.csv plus prior knowledge"
+  },
+  "KTWO": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "SPAC blank check company",
+   "one_line": "Cayman SPAC that IPOed in 2026 targeting a healthcare or medtech combination; no operating business.",
+   "confidence": 0.85,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/universe.csv (ipoyear 2026, listed as Medical/Dental Instruments) plus prior knowledge"
+  },
+  "ARCNF": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Crypto brokerage and research",
+   "one_line": "Nasdaq First North-listed digital asset brokerage and research firm (formerly Arcane Crypto) that added a bitcoin treasury strategy in 2025.",
+   "confidence": 0.7,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/raw_otc_yahoo.csv plus prior knowledge"
+  },
+  "KGHI": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Former engineering holding company",
+   "one_line": "Successor to ICF Kaiser International; sold its operating units in the 2000s and went dark, quotes at 0.0001 with no recent filings.",
+   "confidence": 0.75,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/raw_otc_yahoo.csv (price 0.0001) plus prior knowledge"
+  },
+  "KRLTF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Potash development stage",
+   "one_line": "TSX-listed development-stage potash company holding the Wynyard project in Saskatchewan, no production.",
+   "confidence": 0.6,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/raw_otc_yahoo.csv plus prior knowledge"
+  },
+  "KVGOF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Gold and base metals exploration",
+   "one_line": "LSE-listed explorer with gold projects in Zimbabwe and copper and nickel targets in Botswana.",
+   "confidence": 0.7,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/raw_otc_yahoo.csv plus prior knowledge"
+  },
+  "KFFLF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Gold and copper development",
+   "one_line": "AIM-listed developer of the Tulu Kapi gold project in Ethiopia and Hawiah copper-gold project in Saudi Arabia.",
+   "confidence": 0.8,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/raw_otc_yahoo.csv plus prior knowledge"
+  },
+  "KCLHF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "Cloud computing services",
+   "one_line": "Chinese public and enterprise cloud infrastructure provider affiliated with Kingsoft and Xiaomi.",
+   "confidence": 0.9,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/raw_otc_yahoo.csv plus prior knowledge"
+  },
+  "KRMMF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Nickel, copper and PGE exploration",
+   "one_line": "ASX-listed explorer focused on battery and platinum group metals projects in Norway and Finland.",
+   "confidence": 0.7,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/raw_otc_yahoo.csv plus prior knowledge"
+  },
+  "KLPPY": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Retail real estate REIT",
+   "one_line": "Paris-listed REIT owning and operating shopping centres across continental Europe.",
+   "confidence": 0.75,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/raw_otc_yahoo.csv plus prior knowledge"
+  },
+  "KBRIF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Gold exploration",
+   "one_line": "TSXV-listed gold explorer advancing the Kossou project in Cote d'Ivoire.",
+   "confidence": 0.7,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/raw_otc_yahoo.csv plus prior knowledge"
+  },
+  "KOREF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Gold exploration",
+   "one_line": "Canadian junior holding the Imperial and Long Valley gold projects in California.",
+   "confidence": 0.65,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/raw_otc_yahoo.csv plus prior knowledge"
+  },
+  "KWGPF": {
+   "operating": true,
+   "class": "shelter",
+   "industry_guess": "Residential property development",
+   "one_line": "Hong Kong-listed Chinese residential developer that defaulted on offshore debt in 2023 and is restructuring while still selling homes.",
+   "confidence": 0.7,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/raw_otc_yahoo.csv plus prior knowledge"
+  },
+  "KYOWF": {
+   "operating": true,
+   "class": "materials",
+   "industry_guess": "Synthetic leather and vinyl fabrics",
+   "one_line": "Japanese maker of synthetic leather and resin-coated fabrics, mainly for automotive interiors.",
+   "confidence": 0.8,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/raw_otc_yahoo.csv plus prior knowledge"
+  },
+  "LANZ": {
+   "operating": true,
+   "class": "health",
+   "industry_guess": "Orthodontic products",
+   "one_line": "Small California orthodontic brackets and wires maker that deregistered from the SEC and now trades dark on OTC; operating status uncertain.",
+   "confidence": 0.4,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/raw_otc_yahoo.csv plus prior knowledge"
+  },
+  "LGNRF": {
+   "operating": true,
+   "class": "conglomerate",
+   "industry_guess": "Diversified holding company",
+   "one_line": "Hong Kong-listed Chinese conglomerate and parent of Lenovo with financial services and other investments.",
+   "confidence": 0.9,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/raw_otc_yahoo.csv plus prior knowledge"
+  },
+  "LECBF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Gold mining",
+   "one_line": "Philippine gold and copper miner operating the Victoria mine in Benguet.",
+   "confidence": 0.8,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/raw_otc_yahoo.csv plus prior knowledge"
+  },
+  "LHUAF": {
+   "operating": true,
+   "class": "food",
+   "industry_guess": "Grocery retail",
+   "one_line": "Hong Kong-listed Shanghai-based supermarket and convenience store chain operator.",
+   "confidence": 0.8,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/raw_otc_yahoo.csv plus prior knowledge"
+  },
+  "HEGLF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Mineral exploration",
+   "one_line": "ASX-listed junior mineral explorer; project details could not be verified.",
+   "confidence": 0.4,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/raw_otc_yahoo.csv plus prior knowledge"
+  },
+  "LTRCF": {
+   "operating": true,
+   "class": "media_entertainment",
+   "industry_guess": "Lotteries and Keno gaming",
+   "one_line": "ASX-listed operator of Australian lotteries and Keno, spun out of Tabcorp in 2022.",
+   "confidence": 0.85,
+   "source": "UNVERIFIED (web egress blocked); local record /home/user/BiomimicryStocks/data/raw_otc_yahoo.csv plus prior knowledge"
+  },
+  "BRIOF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Junior mineral exploration (gold, silver, copper, cobalt)",
+   "one_line": "Toronto-based junior explorer advancing precious and critical metals projects in Atlantic Canada and Argentina; pre-revenue exploration stage.",
+   "confidence": 0.7,
+   "source": "https://finance.yahoo.com/quote/BRIOF/profile/"
+  },
+  "MANOF": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Litigation finance (UK insolvency claims)",
+   "one_line": "AIM-listed funder and purchaser of UK insolvency litigation claims; record revenue of 30.5M GBP in FY25 with 282 new case investments.",
+   "confidence": 0.95,
+   "source": "https://www.lawgazette.co.uk/news/insolvency-litigation-finance-firm-thrilled-by-record-revenues/5123695.article"
+  },
+  "RVBR": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Development-stage technology licensing shell",
+   "one_line": "Development-stage company claiming to sublicense cosmic ray plasma technologies; FY2025 revenue of only 37,858 dollars and no substantive operating business.",
+   "confidence": 0.8,
+   "source": "https://simplywall.st/stocks/us/materials/otc-rvbr/markray"
+  },
+  "MMIRF": {
+   "operating": true,
+   "class": "health",
+   "industry_guess": "Rapid point-of-care diagnostics",
+   "one_line": "Halifax-based maker of rapid vertical flow diagnostic tests for HIV, syphilis and other infections; small revenues but active Health Canada approvals and distribution deals in 2025.",
+   "confidence": 0.85,
+   "source": "https://www.newswire.com/news/medmira-reports-second-quarter-results-3043391"
+  },
+  "MHSDF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "Cable broadband and telecom operator",
+   "one_line": "Mexico's second largest fixed broadband operator providing video, voice and data over a full-fiber network; 2025 revenue of about 35.5B pesos and nearly 6M unique users.",
+   "confidence": 0.95,
+   "source": "https://www.jentel.mx/2026/02/20/megacable-acaricio-en-2025-la-oportunidad-de-convertirse-en-el-segundo-operador-fijo-de-mexico/"
+  },
+  "MGAWF": {
+   "operating": true,
+   "class": "shelter",
+   "industry_guess": "Real estate development and office leasing",
+   "one_line": "Largest office landlord and township developer in the Philippines, building residential, office, mall and hotel projects; part of Alliance Global Group.",
+   "confidence": 0.95,
+   "source": "https://business.inquirer.net/526002/megaworld-eyes-8-new-projects-in-2025"
+  },
+  "HNDI": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Dormant former mineral exploration shell",
+   "one_line": "Formerly Handeni Gold (Tanzania exploration), renamed in November 2025 with no business operations and no revenue.",
+   "confidence": 0.9,
+   "source": "https://simplywall.st/stocks/us/materials/otc-hndi/meitian-pin-ai-tech-group"
+  },
+  "MTAL": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "SPAC targeting metals and mining",
+   "one_line": "Cayman blank-check company that raised 230M USD on NYSE in March 2026 to acquire a metals or mining business; no operations yet.",
+   "confidence": 0.95,
+   "source": "https://www.stocktitan.net/news/MTAL/metals-acquisition-corp-ii-announces-closing-of-230-million-initial-3bcu74igxjf2.html"
+  },
+  "MTGSF": {
+   "operating": true,
+   "class": "energy",
+   "industry_guess": "Natural gas distribution utility",
+   "one_line": "Argentina's largest natural gas distributor serving over 7 million customers in Buenos Aires; controlled by YPF.",
+   "confidence": 0.95,
+   "source": "https://www.bnamericas.com/en/company-profile/metrogas-sa-argentina"
+  },
+  "AGRDF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Gold mine development",
+   "one_line": "TSXV-listed developer working to restart the past-producing PL Gold Mine in Manitoba; pre-production, recently restructured and settled debt.",
+   "confidence": 0.75,
+   "source": "https://www.newsfilecorp.com/release/250155/Minnova-Corp.-Announces-PL-Gold-Mine-Restart-Plans-for-2025-and-Updated-Feasibility-Study-in-2026"
+  },
+  "MTBLY": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "Vertical SaaS (real estate CRM and trucking navigation)",
+   "one_line": "Operates Lofty, a real estate sales and CRM platform, and Trucker Path, a trip planning and freight marketplace app for truckers; H1 2025 revenue 37.3M USD.",
+   "confidence": 0.9,
+   "source": "https://www.sec.gov/Archives/edgar/data/1509223/000141057825001838/mtbl-20250630x10q.htm"
+  },
+  "GRWXF": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Listed venture capital investor",
+   "one_line": "London-listed venture capital firm investing in European technology companies; realised 135M GBP in FY25 and has deployed over 1B GBP since 2016 IPO.",
+   "confidence": 0.95,
+   "source": "https://www.directorstalkinterviews.com/molten-ventures-plc-reports-fy25-results-with-135m-exits/4121201627"
+  },
+  "MCRI": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Casino resorts and hospitality",
+   "one_line": "Owns and operates Atlantis Casino Resort Spa in Reno and Monarch Casino Resort Spa in Black Hawk, Colorado.",
+   "confidence": 0.98,
+   "source": "https://umbrex.com/resources/company-profiles/monarch-casino-resort/"
+  },
+  "MVMDF": {
+   "operating": true,
+   "class": "health",
+   "industry_guess": "Drug delivery formulation technology and agtech licensing",
+   "one_line": "Formerly Mountain Valley MD; develops Quicksome and Quicksol molecule delivery formulations for human and animal use and licenses Agrarius plant signalling technology; rebranded August 2026 with new OTC symbol TMLCF.",
+   "confidence": 0.7,
+   "source": "https://www.businesswire.com/news/home/20260820259472/en/The-More-Life-Company-Corp.-Announces-New-U.S.-Trading-Symbol"
+  },
+  "GNSMF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Junior mineral exploration (copper, gold, lithium)",
+   "one_line": "Quebec-based explorer, formerly Genius Metals, holding copper and gold projects in Morocco and lithium and gold properties in Canada; pre-revenue.",
+   "confidence": 0.7,
+   "source": "https://stockanalysis.com/quote/otc/GNSMF/"
+  },
+  "MTQCF": {
+   "operating": true,
+   "class": "infrastructure",
+   "industry_guess": "Oilfield equipment engineering and services",
+   "one_line": "Singapore-based provider of repair, manufacturing and rental of oilfield equipment such as valves and blow-out preventers, with operations in Bahrain, Australia, UAE and UK.",
+   "confidence": 0.9,
+   "source": "https://www.mtq.com.sg/business.html"
+  },
+  "NMYSF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "Cash logistics and smart safe SaaS",
+   "one_line": "Toronto-based provider of the Cirreon cloud platform for smart safe monitoring, cash-in-transit logistics, vault management and deposit tracking for banks and retailers.",
+   "confidence": 0.9,
+   "source": "https://namsys.com/"
+  },
+  "NSCIF": {
+   "operating": true,
+   "class": "infrastructure",
+   "industry_guess": "Scientific instruments (benchtop NMR spectrometers)",
+   "one_line": "Calgary-based manufacturer of benchtop NMR spectrometers and related scientific instruments; 2025 revenue about 40M CAD, down 12 percent amid capital equipment softness.",
+   "confidence": 0.9,
+   "source": "https://www.newswire.ca/news-releases/nanalysis-announces-fourth-quarter-and-full-year-2025-results-823534379.html"
+  },
+  "NBST": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "SPAC (delisted from Nasdaq)",
+   "one_line": "Blank-check company whose Infinite Reality merger was cancelled; delisted from Nasdaq to OTC in 2024 and still seeking a deal with no operating business.",
+   "confidence": 0.85,
+   "source": "https://www.investing.com/news/company-news/newbury-street-corp-to-be-delisted-from-nasdaq-93CH-3607555"
+  },
+  "NEGXF": {
+   "operating": true,
+   "class": "health",
+   "industry_guess": "Benefits third-party administration and PBM",
+   "one_line": "Toronto-based third-party administrator and pharmacy benefit manager adjudicating drug, dental and health claims for Canadian group benefit plans via its NexSys and NexAdmin platforms.",
+   "confidence": 0.9,
+   "source": "https://nexgenrx.com/about/"
+  },
+  "NPRRF": {
+   "operating": true,
+   "class": "health",
+   "industry_guess": "Medical devices, dialysis and pharma packaging",
+   "one_line": "Osaka-based global manufacturer of dialysis equipment, injection and infusion devices, pharmaceuticals and glass pharma packaging, with 58 subsidiaries worldwide.",
+   "confidence": 0.98,
+   "source": "https://www.nipro.co.jp/en/business/device/"
+  },
+  "NIMUD": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Shell company (former medical device maker)",
+   "one_line": "Florida shell that discontinued its whole body periodic acceleration therapy device business in May 2019 and now files 10-Ks as a shell.",
+   "confidence": 0.95,
+   "source": "https://www.sec.gov/Archives/edgar/data/720762/000149315222029873/form10-k.htm"
+  },
+  "NOURF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Heavy rare earths mine development",
+   "one_line": "ASX-listed developer of the Browns Range dysprosium and terbium project in Western Australia, planning to supply concentrate to Iluka's rare earths refinery; pre-commercial production.",
+   "confidence": 0.9,
+   "source": "https://northernminerals.com.au/browns-range-hre-project/"
+  },
+  "NOUMF": {
+   "operating": true,
+   "class": "food",
+   "industry_guess": "Dairy and plant-based beverages and nutritional powders",
+   "one_line": "Australian producer of plant-based milks, dairy beverages and whey protein nutritionals (formerly Freedom Foods); about 405M AUD revenue with recent impairments and losses.",
+   "confidence": 0.95,
+   "source": "https://finance.yahoo.com/quote/NOU.XA/profile/"
+  },
+  "ADHLF": {
+   "operating": true,
+   "class": "shelter",
+   "industry_guess": "Hong Kong property investment pivoting to robotics",
+   "one_line": "Hong Kong holding company (formerly Applied Development Holdings) with resort and property development and investment in China and Hong Kong, now adding AI robotics-as-a-service and autonomous driving ventures.",
+   "confidence": 0.65,
+   "source": "https://finance.yahoo.com/quote/ADHLF/profile/"
+  },
+  "NOWG": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "AI SaaS / enterprise search and content generation",
+   "one_line": "Charlotte-based OTCQB SaaS firm selling the Pluaris AI knowledge platform and Lille.ai content tool; announced first multi-million dollar order in Dec 2025.",
+   "confidence": 0.75,
+   "source": "https://www.nowigence.com/investors"
+  },
+  "NOWVF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "Data analytics and AI services",
+   "one_line": "TSXV-listed vertical intelligence provider delivering data, analytics and AI applications, roughly $9.7M quarterly revenue in Q4 2025 with LATAM exposure.",
+   "confidence": 0.85,
+   "source": "https://seekingalpha.com/pr/20303494"
+  },
+  "NSUKF": {
+   "operating": true,
+   "class": "transport",
+   "industry_guess": "Dry bulk and tanker shipping",
+   "one_line": "Tokyo-listed shipowner operating about 130 ocean-going and 81 coastal vessels carrying iron ore, coal, steel, crude and gas, affiliated with NYK and Nippon Steel.",
+   "confidence": 0.95,
+   "source": "https://www.nsuship.co.jp/en/index.html"
+  },
+  "DGTLF": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Asset management and securities advisory (Hong Kong)",
+   "one_line": "HKEX 0329 investment holding company offering asset management, securities advisory and trading in Hong Kong and China, plus a small wine trading arm; loss-making with 2025 net loss of HK$15M to 24M.",
+   "confidence": 0.8,
+   "source": "https://www.tipranks.com/news/company-announcements/oci-international-flags-wider-2025-net-loss-on-weaker-disposals-and-interest-income"
+  },
+  "ODTLF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Oilfield services: platform drilling, well services, engineering",
+   "one_line": "Oslo-listed Odfjell Drilling spin-off providing platform drilling operations, casing and tubular running, drilling tool rental and engineering across Norway, UK, Middle East and Asia.",
+   "confidence": 0.9,
+   "source": "https://stockanalysis.com/quote/osl/OTL/company/"
+  },
+  "OPI": {
+   "operating": true,
+   "class": "shelter",
+   "industry_guess": "Office REIT",
+   "one_line": "US office REIT that owned about 125 properties totaling 17.3M sq ft in 2025 and emerged from Chapter 11 after restructuring its debt.",
+   "confidence": 0.9,
+   "source": "https://www.opireit.com/investors/news/news-release-details/2025/Office-Properties-Income-Trust-Announces-Second-Quarter-2025-Results/default.aspx"
+  },
+  "SUFF": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Former MMA apparel company, dormant shell",
+   "one_line": "Las Vegas entity formerly named Suffer that sold MMA apparel; renamed to Ophir Resources in 2013 with no evidence of recent filings, revenue or operations, and the quoted market cap appears to be a stale illiquid quote.",
+   "confidence": 0.7,
+   "source": "https://simplywall.st/stocks/us/consumer-durables/otc-suff/ophir-resources/information"
+  },
+  "OBGRF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Mineral drilling services",
+   "one_line": "TSX-listed Val-d'Or drilling contractor operating about 217 rigs providing surface and underground diamond drilling to gold and copper miners in Canada, Chile and West Africa.",
+   "confidence": 0.9,
+   "source": "https://orbitgarant.com/en/about-us/"
+  },
+  "OBTEF": {
+   "operating": true,
+   "class": "infrastructure",
+   "industry_guess": "UAV propulsion systems and engine components (defence)",
+   "one_line": "ASX-listed Perth and Oregon manufacturer of heavy-fuel engines and propulsion systems for tactical UAVs sold to Insitu and Textron, with roughly A$8M annual revenue.",
+   "confidence": 0.85,
+   "source": "https://www.sharecafe.com.au/2025/08/21/orbital-corporation-focuses-on-uav-propulsion-systems-cites-strong-order-book/"
+  },
+  "PCPDF": {
+   "operating": true,
+   "class": "shelter",
+   "industry_guess": "Premium real estate development and investment",
+   "one_line": "PCCW-controlled Hong Kong developer of high-end residential, office and resort property in Hong Kong, Japan, Thailand and Indonesia, including Pacific Century Place Jakarta and Aquella Phang Nga.",
+   "confidence": 0.9,
+   "source": "https://www.pcpd.com/en/about-us/corporate-profile"
+  },
+  "PEMSF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Copper-gold exploration (junior)",
+   "one_line": "Vancouver junior explorer drilling the Trident and Pinnacle copper-gold porphyry projects in north-central British Columbia; pre-revenue and financing via private placements.",
+   "confidence": 0.85,
+   "source": "https://www.newsfilecorp.com/release/279444/Pacific-Empire-Provides-2025-YearEnd-Corporate-Update-and-Outlines-2026-Strategy-Focused-on-Mineral-SystemsScale-Exploration-at-Trident-and-Pinnacle"
+  },
+  "PCPPF": {
+   "operating": true,
+   "class": "infrastructure",
+   "industry_guess": "Graphics card and PC hardware manufacturing",
+   "one_line": "Singapore-headquartered maker of Nvidia-based graphics cards, mini-PCs and motherboards under ZOTAC, Inno3D and Manli brands plus ODM/OEM work, with plants in Dongguan and Batam.",
+   "confidence": 0.95,
+   "source": "https://en.wikipedia.org/wiki/PC_Partner"
+  },
+  "PEBBF": {
+   "operating": true,
+   "class": "services",
+   "industry_guess": "Promotional products and B2B distributor software",
+   "one_line": "AIM-listed group running Brand Addition (sourcing and distributing branded promotional merchandise for corporates) and Facilisgroup (subscription platform for North American promo distributors).",
+   "confidence": 0.9,
+   "source": "https://www.thepebblegroup.com/about-us/"
+  },
+  "PBT": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Oil and gas royalty trust",
+   "one_line": "NYSE royalty trust holding net overriding royalty interests in Waddell Ranch and Texas Royalty oil and gas properties, paying monthly cash distributions to unitholders.",
+   "confidence": 0.95,
+   "source": "https://pbt-permian.com/"
+  },
+  "DUVNF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Mineral processing (toll milling) and exploration in Peru",
+   "one_line": "TSXV company owning 80% of the Aguila Norte plant in northern Peru, which toll-milled a record 36,616 tonnes of third-party ore in 2025 to produce silver, gold and base metal concentrates.",
+   "confidence": 0.9,
+   "source": "https://www.newsfilecorp.com/release/272050/Peruvian-Metals-on-Track-for-Record-2025-Production-at-the-Aguila-Norte-Processing-Plant-and-Provides-Update-on-the-Sale-of-the-Minas-Maria-Norte-Project"
+  },
+  "PRTDF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Oil exploration and production (Mongolia)",
+   "one_line": "AIM-listed operator of Block XX in Mongolia producing from the Heron-1 and Gazelle-1 wells, selling about 54,000 barrels to PetroChina in 2025 for roughly $2M net revenue.",
+   "confidence": 0.9,
+   "source": "https://www.energy-pedia.com/news/mongolia/petro-matad-announces-final-results-for-year-ended-31-december-2025-204374"
+  },
+  "PCQRF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Gold and lithium exploration (junior)",
+   "one_line": "Tiny TSXV junior exploring gold at Vauquelin and Rayon d'Or and lithium in James Bay, Quebec; drilled in March 2025 funded by a $150K private placement.",
+   "confidence": 0.75,
+   "source": "https://www.globenewswire.com/news-release/2025/03/05/3037854/0/en/Petrolympic-Announces-Closing-of-Private-Placement.html"
+  },
+  "PTLYF": {
+   "operating": true,
+   "class": "infrastructure",
+   "industry_guess": "Computer components distribution and graphics cards",
+   "one_line": "HKEX 1079 company distributing computer components and consumer electronics, selling own-brand graphics cards, and trading plastics, with about US$36M trailing revenue and 31 employees.",
+   "confidence": 0.8,
+   "source": "https://finance.yahoo.com/quote/1079.HK/profile/"
+  },
+  "PNXPF": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Investment issuer (space/aerospace venture holdings and bitcoin)",
+   "one_line": "CSE-listed Vancouver investment issuer holding stakes in space and aerospace startups and accumulating bitcoin on its balance sheet; no operating business of its own.",
+   "confidence": 0.8,
+   "source": "https://www.planetventuresinc.com/"
+  },
+  "PMTYF": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Toy manufacturing and licensing",
+   "one_line": "HKEX 869 toy company selling Teenage Mutant Ninja Turtles and Power Rangers action figures, mostly into the US, with HK$152M 2025 turnover and a small net loss.",
+   "confidence": 0.95,
+   "source": "https://ir.playmatestoys.com/en/press.php"
+  },
+  "PTRRF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "3D geospatial data and digital twin software",
+   "one_line": "ASX-listed Perth company whose Pointerra3D cloud platform manages and analyses lidar, photogrammetry and digital twin data for utilities, surveyors and infrastructure owners.",
+   "confidence": 0.9,
+   "source": "https://www.pointerra.com/product/analytics/"
+  },
+  "BPOPM": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Bank holding company trust preferred securities",
+   "one_line": "6.125% cumulative trust preferred security issued by Popular Capital Trust II, a funding vehicle of Popular Inc, the largest bank in Puerto Rico.",
+   "confidence": 0.9,
+   "source": "https://www.popular.com/en/investor-relations/"
+  },
+  "PXXLF": {
+   "operating": true,
+   "class": "health",
+   "industry_guess": "Biopharma (metabolic disease)",
+   "one_line": "Lyon-based Euronext biotech earning about EUR 5M in 2025 royalties on TWYMEEG (imeglimin) type 2 diabetes drug sold by Sumitomo Pharma in Japan, with less than EUR 1M cash at year end.",
+   "confidence": 0.9,
+   "source": "https://finance.yahoo.com/news/poxel-reports-2025-revenue-provides-180200720.html"
+  },
+  "PLIXF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Lithium brine exploration and direct lithium extraction",
+   "one_line": "ASX-listed company formerly Arizona Lithium developing the Prairie lithium brine project in Saskatchewan with a DLE facility nearing completion, plus the Big Sandy claims in Arizona.",
+   "confidence": 0.85,
+   "source": "https://www.listcorp.com/asx/pl9/prairie-lithium-limited/news/annual-report-30-june-2025-3249849.html"
+  },
+  "PRPRF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Oil and gas exploration and production (Alberta)",
+   "one_line": "Calgary junior producer averaging 2,367 boe/d (59% liquids) in 2025 from Basal Quartz and other Alberta assets, recapitalised via a $26.5M preferred share raise and debt extensions.",
+   "confidence": 0.9,
+   "source": "https://www.globenewswire.com/news-release/2026/03/31/3266214/0/en/Prairie-Provident-Resources-Announces-Fourth-Quarter-and-Year-End-2025-Financial-and-Operating-Results-and-2025-Year-End-Reserves.html"
+  },
+  "PRBCF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "Biometric identity software",
+   "one_line": "Swedish developer of fingerprint algorithm and identity access software, SEK 77.8M 2025 sales, merged with Fingerprint Cards.",
+   "confidence": 0.9,
+   "source": "https://www.precisebiometrics.com/media-and-news/news-and-press-releases/2026/precise-biometrics-annual-report-2025/"
+  },
+  "PAAC": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "SPAC blank check",
+   "one_line": "Cayman blank check company that IPOed Feb 2026 raising $130M with no target selected.",
+   "confidence": 0.95,
+   "source": "https://www.sec.gov/Archives/edgar/data/2087446/000121390026034861/ea0281107-10k_proem1.htm"
+  },
+  "ACEHF": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Home improvement and lifestyle retail",
+   "one_line": "Indonesian home improvement retailer formerly ACE Hardware Indonesia, now operating AZKO, ATARU, Toys Kingdom stores and ruparupa online.",
+   "confidence": 0.9,
+   "source": "https://www.investing.com/equities/ace-hardware-i-company-profile"
+  },
+  "PKBAF": {
+   "operating": true,
+   "class": "conglomerate",
+   "industry_guess": "Diversified industrial conglomerate",
+   "one_line": "Indonesian conglomerate making auto components, steel pipes, building materials and holding infrastructure assets, IDR 3.7T 2025 revenue.",
+   "confidence": 0.85,
+   "source": "https://bakrie-brothers.com/news-and-media/positive-performance-bnbr-revenue-increases-11-64-in-q1-2025/"
+  },
+  "PBLJF": {
+   "operating": true,
+   "class": "transport",
+   "industry_guess": "Chemical and gas tanker shipping",
+   "one_line": "Jakarta-based operator of a small chemical and gas tanker fleet, $49M 2025 revenue.",
+   "confidence": 0.85,
+   "source": "https://stockanalysis.com/quote/idx/BLTA/company/"
+  },
+  "BKLPF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "E-commerce and gaming platform",
+   "one_line": "Indonesian online marketplace pivoting to gaming and retail digital products, profitable in 2025.",
+   "confidence": 0.85,
+   "source": "https://technode.global/2025/05/02/bukalapaks-first-quarter-revenue-up-37-percent-q-o-q-on-growth-in-gaming-and-retail-segments/"
+  },
+  "GTOFF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "Ride hailing, delivery and fintech super app",
+   "one_line": "Indonesia's Gojek and GoTo Financial platform for on demand transport, delivery and payments, IDR 13.3T nine month 2025 revenue.",
+   "confidence": 0.9,
+   "source": "https://www.marketscreener.com/news/pt-goto-gojek-tokopedia-tbk-reports-earnings-results-for-the-nine-months-ended-september-30-2025-ce7d5dd2d08ef523"
+  },
+  "PHJMF": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Tobacco",
+   "one_line": "Philip Morris controlled Indonesian kretek cigarette maker with IDR 48.5T 2025 revenue.",
+   "confidence": 0.95,
+   "source": "https://stockanalysis.com/quote/idx/HMSP/company/"
+  },
+  "NIPAF": {
+   "operating": true,
+   "class": "food",
+   "industry_guess": "Packaged bread manufacturing",
+   "one_line": "Indonesia's largest mass bread producer under the Sari Roti brand with 15 plants.",
+   "confidence": 0.95,
+   "source": "https://www.indonesia-investments.com/business/indonesian-companies/nippon-indosari-corpindo/item320"
+  },
+  "PTPKF": {
+   "operating": true,
+   "class": "shelter",
+   "industry_guess": "Real estate development and malls",
+   "one_line": "Indonesian developer of superblocks, shopping malls, condos and hotels in Surabaya and Jakarta.",
+   "confidence": 0.9,
+   "source": "https://finance.yahoo.com/quote/PWON.JK/profile/"
+  },
+  "PTPLF": {
+   "operating": true,
+   "class": "shelter",
+   "industry_guess": "Industrial estate development",
+   "one_line": "Developer of the 3,200 ha Kota Deltamas industrial, residential and commercial estate near Jakarta, IDR 613B 1H 2025 revenue.",
+   "confidence": 0.9,
+   "source": "https://deltamas.id/en/pt-puradelta-lestari-tbk-booked-revenue-of-idr613-4-billion-in-the-first-half-of-2025/"
+  },
+  "SMNUF": {
+   "operating": true,
+   "class": "infrastructure",
+   "industry_guess": "Telecom towers and fiber",
+   "one_line": "Owner of Protelindo with about 36,000 telecom towers and 180,000 km of fiber across Indonesia.",
+   "confidence": 0.95,
+   "source": "https://www.ptsmn.co.id/about-us/company-profile"
+  },
+  "MAARF": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "M&A brokerage",
+   "one_line": "Tokyo-based AI-assisted M&A brokerage formerly M&A Research Institute Holdings.",
+   "confidence": 0.85,
+   "source": "https://www.cnbc.com/quotes/MAARF"
+  },
+  "RDUFF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Gold and copper exploration",
+   "one_line": "TSXV junior exploring gold, copper and silver projects in Peru, Mexico and Guatemala.",
+   "confidence": 0.8,
+   "source": "https://radiusgold.com/news/radius-gold-provides-exploration-update-on-tierra-roja-project/"
+  },
+  "RNDXF": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Investment holding, legacy gold litigation",
+   "one_line": "JSE-listed investment holding shell with no mining operations, ongoing losses driven by legal costs from past claims.",
+   "confidence": 0.6,
+   "source": "https://www.sharenet.co.za/v3/sens_display.php?tdate=20250313123500&seq=32"
+  },
+  "RMESF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Copper exploration",
+   "one_line": "CSE-listed explorer of the Carrizal copper-gold-cobalt property in Chile with a small mining lease signed in 2026.",
+   "confidence": 0.8,
+   "source": "https://www.redmetalresources.com/"
+  },
+  "RCTUF": {
+   "operating": true,
+   "class": "media_entertainment",
+   "industry_guess": "Casino and hotel property trust",
+   "one_line": "ASX trust owning the Reef Hotel Casino in Cairns, A$26.8M 2025 revenue, subject of Iris takeover bid.",
+   "confidence": 0.85,
+   "source": "https://www.tipranks.com/news/company-announcements/reef-casino-trust-lifts-2025-profit-on-strong-domestic-trade-and-capital-upgrades"
+  },
+  "MYIDF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "Consumer data and privacy platform",
+   "one_line": "TSXV company letting consumers control, monetize and remove personal data, with revenue growing 43% in Q1 2026.",
+   "confidence": 0.85,
+   "source": "https://www.prnewswire.com/news-releases/reklaim-reports-q1-2026-results-as-revenue-growth-accelerates-43-and-strategic-investments-drive-return-to-profitability-302783680.html"
+  },
+  "RKIGF": {
+   "operating": true,
+   "class": "infrastructure",
+   "industry_guess": "Factory automation and precision machining",
+   "one_line": "Ontario builder of robotic automation equipment and precision machined components for industrial customers.",
+   "confidence": 0.9,
+   "source": "https://rekointl.com/press-release/reko-reports-strong-q4-growth-and-improved-profitability-in-fiscal-2025/"
+  },
+  "RSNUF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Graphite mining development",
+   "one_line": "ASX developer of the Siviour graphite mine and purified spherical graphite plant in South Australia.",
+   "confidence": 0.85,
+   "source": "https://minedocs.com/30/Renascor-Resources-QR-09302025.pdf"
+  },
+  "RNVT": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Dormant shell",
+   "one_line": "Florida shell formerly VoxPop Worldwide with no significant operations.",
+   "confidence": 0.9,
+   "source": "https://finance.yahoo.com/quote/RNVT/profile/"
+  },
+  "REXHF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Oil and gas production",
+   "one_line": "Singapore-listed oil producer with about 10,000 to 12,000 boepd from fields in Norway, Oman and Germany.",
+   "confidence": 0.9,
+   "source": "https://worldoil.com/news/2025/9/10/rex-international-s-oil-and-gas-output-led-by-norway-fields/"
+  },
+  "RMBHF": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Property investment holding",
+   "one_line": "JSE-listed holding company with minority stakes in South African property developers Atterbury, Propertuity and Genesis.",
+   "confidence": 0.75,
+   "source": "https://rmh.co.za/"
+  },
+  "RKWAF": {
+   "operating": true,
+   "class": "shelter",
+   "industry_guess": "Building insulation materials",
+   "one_line": "Danish stone wool insulation manufacturer with EUR 3.2B 2025 insulation revenue.",
+   "confidence": 0.95,
+   "source": "https://www.rockwool.com/siteassets/investors/financial-reports/2025/annual-report-2025.pdf"
+  },
+  "DOGEF": {
+   "operating": true,
+   "class": "energy",
+   "industry_guess": "Offshore wind power",
+   "one_line": "Danish offshore wind developer and operator with over 10 GW capacity and DKK 25.1B 2025 EBITDA.",
+   "confidence": 0.95,
+   "source": "https://orsted.tw/en/news/2026/02/2025-annualreport"
+  },
+  "RTTGF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Copper and gold mining development",
+   "one_line": "Developing the high grade Mabilo copper-gold project in the Philippines with Glencore offtake and up to 30M USD financing, targeting a development commitment in early 2026.",
+   "confidence": 0.85,
+   "source": "https://www.mining-technology.com/news/mt-labo-glencore-mabilo-project/"
+  },
+  "RTRFF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Base and precious metals exploration",
+   "one_line": "ASX listed explorer advancing the Earaheedy zinc-lead-silver project and Western Queen South gold project in Western Australia, with a scoping study released in late 2025.",
+   "confidence": 0.85,
+   "source": "https://stockanalysis.com/quote/asx/RTR/company/"
+  },
+  "SVTPF": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Cash shell holding a stake in a food company",
+   "one_line": "Sold its five healthy snack subsidiaries to Tooru plc in May 2025 and is now an Aquis cash shell whose main asset is a 26.7 percent stake in Tooru.",
+   "confidence": 0.75,
+   "source": "https://www.aquis.eu/stock-exchange/announcements/4986245"
+  },
+  "SBR": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Oil and gas royalty trust",
+   "one_line": "NYSE royalty trust collecting oil and gas royalties from producing properties across several US states and paying monthly distributions, about 77M USD revenue in 2025.",
+   "confidence": 0.95,
+   "source": "https://www.sec.gov/Archives/edgar/data/710752/000119312525229394/sbr-ex99_1.htm"
+  },
+  "SAFS": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Defunct non-lethal weapons developer",
+   "one_line": "Former non-lethal projectile weapons developer whose last SEC 10-K covers fiscal 2010; one employee and no evidence of current revenue or operations, the listed cap looks like a data artifact.",
+   "confidence": 0.8,
+   "source": "https://www.sec.gov/Archives/edgar/data/0001101093/000151116413000124/f10ka.htm"
+  },
+  "PNTZF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Silver and copper exploration",
+   "one_line": "Formerly Trigon Metals; sold the Kombat copper mine in Namibia to Horizon for staged 3M USD quarterly payments and is drilling the Addana silver project in Morocco.",
+   "confidence": 0.85,
+   "source": "https://www.businesswire.com/news/home/20260706934731/en/Safi-Silver-Receives-Second-Quarterly-Payment-of-US-$3-Million-from-Horizon-Under-Kombat-Mine-Transaction"
+  },
+  "SJT": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Natural gas royalty trust",
+   "one_line": "NYSE royalty trust on Hilcorp operated San Juan Basin gas properties in New Mexico; distributions suspended through 2025 while royalty income repays excess production costs.",
+   "confidence": 0.95,
+   "source": "https://www.sec.gov/Archives/edgar/data/319655/000095017025074077/sjt-ex99_1.htm"
+  },
+  "SNDVF": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Tobacco and cigars",
+   "one_line": "Danish maker of handmade and machine made cigars, pipe and fine cut tobacco (Macanudo, CAO, Cohiba non-Cuban) with about 9B DKK net sales in 2025.",
+   "confidence": 0.95,
+   "source": "https://www.st-group.com/media/k3wkovy2/stg-annual-report-2025_20260304.pdf"
+  },
+  "CSRVD": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Lithium exploration",
+   "one_line": "Formerly Cross River Ventures; CSE listed early stage explorer holding the L3 lithium pegmatite project in Nova Scotia, funded by a 720K CAD placement in late 2025.",
+   "confidence": 0.7,
+   "source": "https://simplywall.st/stocks/ca/materials/cse-smet/scotia-metals-shares"
+  },
+  "SRRCF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Copper and gold exploration",
+   "one_line": "Vancouver explorer drilling the Penas Negras copper-gold porphyry project in Argentina's Vicuna Belt; completed Phase I drilling and a 4.06M CAD financing in late 2025.",
+   "confidence": 0.85,
+   "source": "https://senderoresources.com/read/news-20251006"
+  },
+  "SNHO": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Development stage wellness products",
+   "one_line": "Taiwan based development stage company describing negative ion wellness products and centers; files OTC annual reports but shows no evidence of meaningful revenue or active operations.",
+   "confidence": 0.5,
+   "source": "https://finance.yahoo.com/quote/SNHO/profile/"
+  },
+  "CCCFD": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Silver and gold exploration",
+   "one_line": "Vancouver explorer drilling the Silver Pony silver-gold-base metal project near Trout Lake, British Columbia, with a 2026 diamond drill program underway.",
+   "confidence": 0.8,
+   "source": "https://www.stocktitan.net/news/CCCFD/silver-pony-announces-an-exploration-update-from-work-ongoing-drill-0e18ml1inc57.html"
+  },
+  "SLRRF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Precious metals prospect generator",
+   "one_line": "Prospect generator with 32 gold and silver properties in Nevada, Arizona and northern Canada, 11 optioned to partners such as Excalibur Metals.",
+   "confidence": 0.8,
+   "source": "https://stockanalysis.com/quote/otc/SLRRF/"
+  },
+  "STAOF": {
+   "operating": true,
+   "class": "media_entertainment",
+   "industry_guess": "Newspaper and media publishing",
+   "one_line": "Hong Kong publisher of Sing Tao Daily, The Standard and related media, about 1,045 employees and roughly 700M HKD annual revenue.",
+   "confidence": 0.9,
+   "source": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0325/2026032501313.pdf"
+  },
+  "SGTSY": {
+   "operating": true,
+   "class": "infrastructure",
+   "industry_guess": "Vacuum coating and thin film production equipment",
+   "one_line": "German maker of vacuum thin film coating and wet processing machines for solar cells, semiconductors, optical discs and medical devices; 48.3M EUR revenue in 2025 with 2026 rebound guided.",
+   "confidence": 0.9,
+   "source": "https://www.singulus.com/2026/05/12/singulus-technologies-financial-results-2025/"
+  },
+  "SIOLF": {
+   "operating": true,
+   "class": "shelter",
+   "industry_guess": "Chinese residential property development",
+   "one_line": "Beijing based state linked property developer that completed a 6.3B USD offshore debt restructuring in March 2025 and continues to develop and sell homes in China.",
+   "confidence": 0.85,
+   "source": "https://www.aoshearman.com/en/news/a-new-chapter-sino-ocean-groups-usd5-5-billion-landmark-financial-restructuring"
+  },
+  "SKTP": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Resort hotel and hospitality",
+   "one_line": "Owns and operates the historic Skytop Lodge resort in the Pocono Mountains of Pennsylvania with lodging, golf, dining and wedding venues.",
+   "confidence": 0.85,
+   "source": "https://finance.yahoo.com/quote/SKTP/profile/"
+  },
+  "SFEGY": {
+   "operating": true,
+   "class": "health",
+   "industry_guess": "Fitness gym chain",
+   "one_line": "Latin America's largest gym operator with 2,084 Smart Fit and Bio Ritmo clubs in 16 countries and the TotalPass corporate wellness platform; 7.24B BRL revenue in 2025.",
+   "confidence": 0.9,
+   "source": "https://stockanalysis.com/quote/bvmf/SMFT3/"
+  },
+  "SOHOF": {
+   "operating": true,
+   "class": "shelter",
+   "industry_guess": "Commercial real estate owner and operator",
+   "one_line": "Hong Kong listed owner and leasing operator of prime office properties in Beijing and Shanghai; still reporting with about 15B RMB of borrowings and no dividend for 2025.",
+   "confidence": 0.85,
+   "source": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0430/2026043000902.pdf"
+  },
+  "SGCPF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Gold exploration",
+   "one_line": "Vancouver explorer drilling the Strathy gold project in Ontario's Temagami belt with additional gold and lithium projects in Ontario and Nunavut.",
+   "confidence": 0.8,
+   "source": "https://finance.yahoo.com/quote/SGCPF/press-releases/"
+  },
+  "TMRFF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Copper exploration",
+   "one_line": "ASX listed explorer drilling the Coppermine and Prescott copper projects in Nunavut, Canada, with hits such as 42.7 m at 2.69 percent copper in 2025.",
+   "confidence": 0.85,
+   "source": "https://www.somersetminerals.com.au/"
+  },
+  "JLRRF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Gold exploration",
+   "one_line": "TSX-V explorer advancing the 50,000 hectare Pedra Branca gold project in Ceara, Brazil, with Phase III fieldwork and IP surveys in 2026.",
+   "confidence": 0.8,
+   "source": "https://southatlanticgold.com/"
+  },
+  "SPLTF": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Dormant supply chain IoT software",
+   "one_line": "Canadian supply chain tracing SaaS and IoT company whose last substantive news dates to 2022; stock at fractions of a cent with no evidence of current revenue or operations.",
+   "confidence": 0.6,
+   "source": "https://stockanalysis.com/quote/otc/SPLTF/history/"
+  },
+  "CEF": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Physical bullion closed end trust",
+   "one_line": "NYSE Arca closed end trust holding fully allocated physical gold and silver bars vaulted at the Royal Canadian Mint.",
+   "confidence": 0.95,
+   "source": "https://sprott.com/investment-strategies/exchange-listed-products/physical-bullion-funds/gold-and-silver/"
+  },
+  "PHYS": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Physical gold closed end trust",
+   "one_line": "NYSE Arca closed end trust holding about 3.67 million ounces of allocated physical gold at the Royal Canadian Mint with net assets near 15B USD.",
+   "confidence": 0.95,
+   "source": "https://www.sec.gov/Archives/edgar/data/0001477049/000199937126017864/ex99-1.htm"
+  },
+  "DOUUF": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Fintech / embedded banking platform",
+   "one_line": "Australian fintech (formerly Douugh) selling API-based embedded banking and credit features to businesses, banks and sports teams.",
+   "confidence": 0.85,
+   "source": "https://finance.yahoo.com/quote/DOUUF/"
+  },
+  "SNAVF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "Aerospace flight data monitoring systems",
+   "one_line": "Brampton, Ontario maker of STAR-ISMS in-flight safety monitoring computers and real-time aircraft data services; under an OSC cease trade order since 2019 but still filing and issuing shares for debt in 2026.",
+   "confidence": 0.55,
+   "source": "https://www.osc.ca/en/securities-law/orders-rulings-decisions/star-navigation-systems-group-ltd"
+  },
+  "SCCFF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Vanadium and iron mineral exploration",
+   "one_line": "Vancouver junior developing the Mustavaara vanadium-iron project in Finland and the BlackRock project.",
+   "confidence": 0.85,
+   "source": "https://strategic-res.com/projects/finland/mustavaara/"
+  },
+  "SRCAF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Lithium exploration",
+   "one_line": "Kingston, Ontario junior exploring the Pontax Central lithium property in Quebec; raised a $1M placement in early 2026.",
+   "confidence": 0.85,
+   "source": "https://strialithium.com/corporate-information/about-stria/"
+  },
+  "STSGF": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end investment trust",
+   "one_line": "UK closed-ended investment trust managed by Troy Asset Management investing in large-cap global equities for income and growth.",
+   "confidence": 0.9,
+   "source": "https://www.stsplc.co.uk/trust-information/"
+  },
+  "SUNTD": {
+   "operating": true,
+   "class": "infrastructure",
+   "industry_guess": "Telephone equipment and diversified micro holding",
+   "one_line": "Hong Kong-listed (1063) holding company designing and selling telephones plus small cross-border payment, used computer component trading, money lending and brokerage units; reported 2024 annual results.",
+   "confidence": 0.55,
+   "source": "https://stockanalysis.com/quote/hkg/1063/company/"
+  },
+  "SWKHL": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Specialty finance for life sciences (exchange-listed note)",
+   "one_line": "9.00% senior notes due 2027 issued by SWK Holdings, a specialty finance company providing royalty and debt capital to pharmaceutical and medical device firms.",
+   "confidence": 0.9,
+   "source": "https://www.sec.gov/Archives/edgar/data/1089907/000162828025013989/swkh-20241231.htm"
+  },
+  "SWPPF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "Internet service provider / telecom",
+   "one_line": "Australian ISP delivering broadband, mobile and voice over its own fibre and fixed wireless networks and the NBN; H1 FY26 revenue A$64M, up 41%.",
+   "confidence": 0.85,
+   "source": "https://www.listcorp.com/asx/swp/swoop-holdings-limited/news/swp-1hfy26-results-announcement-3320087.html"
+  },
+  "SYNMF": {
+   "operating": true,
+   "class": "health",
+   "industry_guess": "Medical imaging software",
+   "one_line": "Linkoping, Sweden developer of SyMRI quantitative MRI software and cNeuro AI neurology tools, CE-marked and FDA-cleared, listed on Spotlight Stockholm.",
+   "confidence": 0.85,
+   "source": "https://seekingalpha.com/symbol/SYNMF"
+  },
+  "TKINF": {
+   "operating": true,
+   "class": "materials",
+   "industry_guess": "Flavors, fragrances and aroma chemicals",
+   "one_line": "Tokyo-based global flavor and fragrance house (founded 1920) making flavors, fragrances, aroma chemicals and fine chemicals across 27 countries.",
+   "confidence": 0.9,
+   "source": "https://www.takasago.com/en"
+  },
+  "TIEMF": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Fishing tackle and outdoor products",
+   "one_line": "Tokyo maker and distributor of fly and lure fishing tackle, polarized sunglasses and outdoor apparel under Tiemco, Sight Master and Foxfire brands.",
+   "confidence": 0.85,
+   "source": "https://finance.yahoo.com/quote/TIEMF/profile/"
+  },
+  "TNHDF": {
+   "operating": true,
+   "class": "services",
+   "industry_guess": "Property management services (China)",
+   "one_line": "Guangzhou-based, HK-listed property manager for residential, commercial and public buildings with value-added, elevator and municipal sanitation services.",
+   "confidence": 0.8,
+   "source": "https://finance.yahoo.com/quote/TNHDF/"
+  },
+  "TWRFF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Gold, silver and copper exploration",
+   "one_line": "Vancouver junior exploring the Rabbit North, Nechako Gold and More Creek projects in British Columbia.",
+   "confidence": 0.85,
+   "source": "https://www.towerresources.ca/"
+  },
+  "TPGXL": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Alternative asset management (exchange-listed note)",
+   "one_line": "$400M 6.950% junior subordinated notes due 2064 issued by TPG Operating Group II and guaranteed by TPG Inc., a global private equity and alternative asset manager.",
+   "confidence": 0.9,
+   "source": "https://finance.yahoo.com/quote/TPGXL/"
+  },
+  "TRWAF": {
+   "operating": true,
+   "class": "services",
+   "industry_guess": "Airport baggage wrapping and protection services",
+   "one_line": "Milan-listed operator of 129 baggage wrapping, storage and protection stores in 45 airports across 13 countries, including Madrid-Barajas from 2025.",
+   "confidence": 0.85,
+   "source": "https://www.nasdaq.com/press-release/trawell-co-signs-contract-madrid-barajas-now-largest-airport-network-2024-10-21"
+  },
+  "MDBIF": {
+   "operating": true,
+   "class": "health",
+   "industry_guess": "Digital mental health diagnostics",
+   "one_line": "Perth-based ASX health tech (formerly Medibio) developing AI-driven devices for screening behavioral health conditions; tiny revenue of about A$0.9M in 2024.",
+   "confidence": 0.7,
+   "source": "https://stockanalysis.com/quote/otc/MDBIF/company/"
+  },
+  "TRUBF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "Caller identification and communication software",
+   "one_line": "Stockholm-listed caller ID and spam-blocking app with roughly 471M monthly active users, monetized through ads, subscriptions and business verification.",
+   "confidence": 0.9,
+   "source": "https://seekingalpha.com/article/4922977-truecaller-ab-publ-trubf-q2-2026-earnings-call-transcript"
+  },
+  "TRLV": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Cannabis cultivation and retail",
+   "one_line": "Quincy, Florida vertically integrated cannabis cultivator and largest US cannabis retailer, NYSE-listed since June 2026.",
+   "confidence": 0.9,
+   "source": "https://investors.trulieve.com/"
+  },
+  "TRWKF": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Apparel retail",
+   "one_line": "Cape Town fashion retailer operating Truworths stores in Africa and Office footwear in the UK, JSE-listed since 1917 heritage.",
+   "confidence": 0.9,
+   "source": "https://seekingalpha.com/article/4941277-truworths-international-limited-trwkf-q4-2026-earnings-call-transcript"
+  },
+  "AZTEF": {
+   "operating": true,
+   "class": "media_entertainment",
+   "industry_guess": "Television broadcasting",
+   "one_line": "Mexico City broadcaster operating four national free-to-air networks (Azteca Uno, Azteca 7, adn40, a+) plus digital media and a soccer club.",
+   "confidence": 0.9,
+   "source": "https://stockanalysis.com/quote/otc/AZTEF/"
+  },
+  "ULTXF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Lithium and gold exploration",
+   "one_line": "Vancouver junior holding Laguna Verde brine lithium and La Rioja gold properties in Argentina; recent filing delays and convertible loan disputes.",
+   "confidence": 0.7,
+   "source": "https://ultralithium.com/"
+  },
+  "MRFCF": {
+   "operating": true,
+   "class": "infrastructure",
+   "industry_guess": "Industrial machinery and construction equipment distribution",
+   "one_line": "Tokyo-listed (7128) distributor of machine tools, robots, construction materials and construction machinery rental, formerly Maruka Furusato, renamed UNISOL in January 2026.",
+   "confidence": 0.85,
+   "source": "https://finance.yahoo.com/quote/7128.T/profile/"
+  },
+  "USYNF": {
+   "operating": true,
+   "class": "services",
+   "industry_guess": "Managed uniform programs and protective apparel",
+   "one_line": "TSX-listed provider of managed corporate uniform programs in Canada and the US plus Peerless Garments military and protective clothing; Q3 FY26 revenue C$23.6M.",
+   "confidence": 0.9,
+   "source": "https://www.globenewswire.com/news-release/2026/08/13/3344601/0/en/unisync-corp-reports-strong-q3-fiscal-2026-results-with-improved-margins-and-adjusted-ebitda.html"
+  },
+  "UHT": {
+   "operating": true,
+   "class": "health",
+   "industry_guess": "Healthcare real estate investment trust",
+   "one_line": "King of Prussia REIT owning 77 hospitals, medical office buildings and related healthcare facilities in 21 states, heavily leased to Universal Health Services.",
+   "confidence": 0.9,
+   "source": "https://www.uhrit.com/financial-releases"
+  },
+  "VTGDF": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Residual shell of former offshore driller",
+   "one_line": "Cayman parent left in liquidation after the 2016 chapter 11 reorganization moved the drilling fleet to Vantage Drilling International; no operating business remains in this entity.",
+   "confidence": 0.85,
+   "source": "https://stockanalysis.com/quote/otc/VTGDF/company/"
+  },
+  "AQUEF": {
+   "operating": true,
+   "class": "energy",
+   "industry_guess": "Power generation equipment (linear internal combustion engines)",
+   "one_line": "Israeli developer of linear-engine off-grid electricity generators for EV charging, data centers and telecom, formerly Aquarius Engines, with negative equity and under a year of cash runway.",
+   "confidence": 0.8,
+   "source": "https://finance.yahoo.com/quote/AQUEF/profile/"
+  },
+  "VTXGF": {
+   "operating": true,
+   "class": "services",
+   "industry_guess": "Environmental consulting and industrial services",
+   "one_line": "Alberta-based environmental consulting and environmental services contractor to energy and industrial clients, profitable in Q2 2026 with rising EBITDA and free cash flow.",
+   "confidence": 0.9,
+   "source": "https://vertex.ca/2026/05/14/vertex-resource-group-ltd-reports-first-quarter-2026-results/"
+  },
+  "VTMXF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Rare earth exploration and development",
+   "one_line": "ASX-listed explorer advancing the Nechalacho rare earths and niobium project in Northwest Territories toward a pre-feasibility study in 2026.",
+   "confidence": 0.85,
+   "source": "https://www.miningnewsnorth.com/story/2026/03/13/northern-neighbors/vitals-rare-earth-footprint-gets-bigger/9576.html"
+  },
+  "VVCHF": {
+   "operating": true,
+   "class": "discretionary",
+   "industry_guess": "Branded apparel and footwear",
+   "one_line": "Hong Kong-listed consumer brand operator selling Clarks, bossini, LNG and other footwear and apparel plus a sports experience segment; formerly Viva China Holdings.",
+   "confidence": 0.9,
+   "source": "https://www.vivagoods.hk/en/about-us/"
+  },
+  "VULC": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Former rubber and foam manufacturer, dormant",
+   "one_line": "Century-old Cincinnati rubber and foam maker whose stale data-vendor profile persists, but the stock quotes at three cents on the pink sheets with no current filings, consistent with a liquidated or dormant entity; the 169M cap is not credible.",
+   "confidence": 0.55,
+   "source": "https://www.otcmarkets.com/stock/VULC/profile"
+  },
+  "VVTMF": {
+   "operating": true,
+   "class": "health",
+   "industry_guess": "Medical devices (vein treatment)",
+   "one_line": "Israeli medical device company selling ScleroSafe and V-Block catheter-based varicose vein treatments, TSXV-listed since November 2025 with an initial Northwell Health order.",
+   "confidence": 0.85,
+   "source": "https://finance.yahoo.com/news/vvt-med-receives-order-major-213000356.html"
+  },
+  "WHYRF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Magnesium mine development",
+   "one_line": "TSXV junior developing the permitted Record Ridge magnesium deposit near Rossland, BC, with a forward ore sales agreement signed in March 2026 and construction targeted for 2026.",
+   "confidence": 0.85,
+   "source": "https://whyresources.com/2026/03/12/west-high-yield-w-h-y-resources-ltd-signs-definitive-forward-sales-agreement-to-sell-magnesium-ore-from-its-record-ridge-project/"
+  },
+  "WSTN": {
+   "operating": false,
+   "class": "finance",
+   "industry_guess": "Blank check company (SPAC)",
+   "one_line": "Singapore-based Nasdaq SPAC that IPOed November 2025 with $57.5M in trust and has no target identified; must combine by May 2027 or liquidate.",
+   "confidence": 0.95,
+   "source": "https://www.spacinsider.com/spac/westin-acquisition-corp"
+  },
+  "WMTN": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Gold exploration",
+   "one_line": "Exploration-stage company holding the Terra high-grade gold project in the Alaska Range through subsidiary Terra Gold; pink-sheet quoted with limited disclosure.",
+   "confidence": 0.6,
+   "source": "https://www.westmountaingold.com/"
+  },
+  "ISEYF": {
+   "operating": true,
+   "class": "infrastructure",
+   "industry_guess": "Frequency control and timing components",
+   "one_line": "Wisconsin-based maker of crystal oscillators, filters and precision timing devices for aerospace, defense and industrial IoT; FY2025 revenue $6.3M after exiting its wireless module business.",
+   "confidence": 0.85,
+   "source": "https://www.stocktitan.net/news/ISEYF/wi2wi-corporation-announces-full-year-2025-financial-sozvojfu2tdi.html"
+  },
+  "WLTNF": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Oil and gas exploration (dormant)",
+   "one_line": "Calgary shell formerly Hackamore Capital that claims to pursue oil and gas properties in the Middle East and Africa but reports about $10K in trailing revenue and no active operations.",
+   "confidence": 0.7,
+   "source": "https://www.nasdaq.com/market-activity/stocks/wltnf"
+  },
+  "XFLT": {
+   "operating": true,
+   "class": "finance",
+   "industry_guess": "Closed-end credit fund",
+   "one_line": "NYSE-listed closed-end fund investing at least 80% of assets in floating rate senior loans, CLO debt and CLO equity, paying a monthly distribution; sub-advised by a King Street affiliate.",
+   "confidence": 0.95,
+   "source": "https://xainvestments.com/xflt/"
+  },
+  "YQAI": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "AI personalization software (pre-revenue)",
+   "one_line": "Former American Hemp Ventures shell rebranded as a cookieless AI recommendation platform, with $30K in assets, no revenue from 2024 through 2026 and a $3.2M stockholders' deficit.",
+   "confidence": 0.75,
+   "source": "https://www.stocktitan.net/sec-filings/YQAI/s-1-youneeqai-technical-services-inc-files-ipo-registration-statement-b09905070f5a.html"
+  },
+  "CHNVF": {
+   "operating": true,
+   "class": "coordination",
+   "industry_guess": "E-commerce SaaS for merchants",
+   "one_line": "Hong Kong GEM-listed provider of Youzan WeiMall, Youzan Retail and related SaaS tools and payment services enabling Chinese merchants to sell online and offline.",
+   "confidence": 0.9,
+   "source": "https://www.cnbc.com/quotes/8083-HK"
+  },
+  "CRGH": {
+   "operating": false,
+   "class": "shell_or_dead",
+   "industry_guess": "Shell company",
+   "one_line": "Former Carriage House Event Center shell renamed in May 2025 under a Guangzhou parent; no significant operations.",
+   "confidence": 0.9,
+   "source": "https://stockanalysis.com/quote/otc/CRGH/"
+  },
+  "ZNCXF": {
+   "operating": true,
+   "class": "materials_extraction",
+   "industry_guess": "Zinc-lead-silver exploration",
+   "one_line": "TSXV explorer advancing the Cardiac Creek SEDEX zinc-lead-silver deposit on its Akie property in BC's Kechika Trough, PEA stage, with drilling permit renewed to 2028.",
+   "confidence": 0.85,
+   "source": "https://zincxresources.com/"
+  },
+  "ZDGGF": {
+   "operating": true,
+   "class": "media_entertainment",
+   "industry_guess": "Media localisation services (dubbing, subtitling)",
+   "one_line": "AIM-listed Sheffield company providing cloud-based subtitling, dubbing and media localisation services to streaming platforms and studios; direct source pages were blocked by the egress proxy so this rests on prior knowledge.",
+   "confidence": 0.65,
+   "source": "https://www.zoodigital.com/investors/"
+  }
+ }
+}
