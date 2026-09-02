@@ -23,6 +23,14 @@ items = [
  ["Screen error bar", "%d registered cuts blind re-scored in two batches: agreement rho %.2f, one confirmed false negative (%s, blind six-measure grade t2), one recorded score corrected (%s), zero new misses in batch two" % (len(fnr["rows"]), fnr["agreement"]["spearman"], ",".join(fnr["potential_false_negatives"]["names"]), ",".join(fnr["reverse_disagreements"]["names"][:1]))],
  ["Attribution", "internal only: %.0f%% of basket variance is the market plus the health tilt; the external factor test is registered and pending, so it cannot be quietly dropped" % ((1 - fac["idiosyncratic_share"]) * 100)],
 ]
+# the registered external test replaces the internal bound the moment it reports
+_fx = os.path.join(R, "factor_external.json")
+if os.path.exists(_fx):
+    fx = json.load(open(_fx, encoding="utf-8"))
+    if fx.get("status") == "reported":
+        sf = fx["six_factor"]
+        items[-1] = ["Attribution", "external, against the French library over %d weeks: market beta %.2f, six factors explain %.0f%% of variance, alpha after loadings %+.1f%% a year at t=%.1f; the registered rule says the thesis survives only if alpha remains, and the window is still short"
+                     % (fx["window_weeks"], sf["loadings"]["mkt_rf"], sf["r2"] * 100, sf["alpha_annual"] * 100, sf["alpha_t"])]
 # the market changes and the logic changes; both leave a visible reading
 rq = json.load(open(os.path.join(DATA, "refresh_queue.json"), encoding="utf-8"))
 lv = json.load(open(os.path.join(R, "logic_version.json"), encoding="utf-8"))

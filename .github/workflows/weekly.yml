@@ -57,6 +57,7 @@ jobs:
           python scripts/report_card.py
           python scripts/risk_profile.py
           python scripts/factor_attribution.py
+          python scripts/factor_external.py
           python scripts/rigor_summary.py
           python scripts/audit_rigor.py
 

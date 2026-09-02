@@ -46,7 +46,7 @@ for k, pat in [("market select", r'id="mktsel"'),
                ("Results heading", r'<h2 style="margin-top:30px">Results</h2>'),
                ("tier summary chips", r'class="tiersum"'),
                ("add bar at the table", r'class="addbar"'),
-               ("Step 4 track", r"Step 4 · How you&#x27;re doing|Step 4 · How you're doing")]:
+               ("trade table", r'id="tradebody"')]:
     print(f"  {k:<26s} {bool(re.search(pat, h))}")
 
 print("\nHYGIENE")

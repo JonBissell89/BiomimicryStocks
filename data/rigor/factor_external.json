@@ -1,0 +1,11 @@
+{
+ "kind": "EXTERNAL attribution: registered in the protocol, still pending",
+ "status": "pending",
+ "attempts": [
+  {
+   "date": "2026-09-02",
+   "outcome": "library unreachable: URLError"
+  }
+ ],
+ "note": "the French library could not be fetched from this environment; the weekly runner retries, and the registration cannot be dropped"
+}
