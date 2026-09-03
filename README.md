@@ -157,6 +157,16 @@ Executed since registration:
   the same way (rho 0.85). The instrument measures level and coarse ordering reliably and fine ordering
   inside a tier band unreliably; the recorded scores also run about 3 points hot against the blind ones,
   so tier edges deserve less confidence than the gate, and the framework now says so.
+- **The first screen was found biased, and the repair was registered before it ran.** The v2.0 first
+  screen advanced 60 percent of health names and 0 of 323 software, 0 of 265 media, 0 of 603 materials and
+  0 of 171 services: an exclusion at the prior table, not a judgment. A judge panel with adversarial critics
+  wrote v2.1 (`data/rubric/v21_spec.json`, `data/rubric/prior_v21.json`): the class vocabulary becomes
+  Layer 0 stock ids, four documented same-evidence gaps between table entries are closed, the description
+  route is extended to services and conglomerates, and circulation is separated from extraction. Measures,
+  weights, tiers and the gate do not move. The logic is registered as v2.1 and the protocol (v3, superseding
+  v2 with v2 preserved and hashed) carries thirteen numeric predictions with their falsifiers, committed
+  before `scripts/round1_v21.py` re-screened the recorded universe; the v2.0 vintage keeps grading
+  unchanged, and the v2.1 vintage is frozen beside it once the ranked re-score is done.
 - **Attribution, internal:** 94 percent of basket variance is the internal market plus the health tilt; the
   external factor test could not be run from the build environment and is registered as pending so it
   cannot be quietly dropped.

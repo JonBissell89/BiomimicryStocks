@@ -316,3 +316,70 @@ The Allocation Arithmetic calculator has a one-click filter that excludes embedd
 one section classifying a specific person's actual holdings against these rules. That
 section is deliberately not published, and nothing in this repository contains anyone's
 real positions, balances or trades. The $5,000 in the simulation is pretend money.*
+
+
+**Coordination tissues, and why the first screen could not see them (added v2.1, Sep 3, 2026).** The six
+measures are tissue-repair biology: a mechanism attached to a flow, scored on whether it returns a stock
+toward its safe range, whether the loop back from the stock damps or amplifies it, whether it grows by copying
+a unit and stops at contact, whether it keeps slack, and whether the correction lands on a human clock.
+Medicine is that biology with a payer, and the v2.0 funnel shows it: 60 percent of health names passed the
+first screen, against 0 of 323 software, 0 of 265 media, 0 of 603 materials and 0 of 171 services, and the
+ranked list holds 27 health names. That is not what Layer 0 says the species is short of. The map lists
+information, tools, transport, resilient infrastructure and recoverable materials as stocks in deficit or
+overshoot, and the convergence hypothesis, which the map states as falsifiable, predicts that the mechanisms
+lowering the cost of coordination and intelligence per outcome are among the ones the correction selects. The
+engine's map named the organ, its hypothesis predicted it, and its first screen forbade it, because the
+screen's theory of durable need was terminal consumption only, and everything else was priced under a class
+called infrastructure that named no stock, then cut at stage 2 as an enabler.
+
+A body also has tissues whose work is measured somewhere other than the tissue. The liver's value shows in
+the blood; the nervous system's value shows in what the muscles do with less energy; the immune system's
+value shows in infections that never happen; the circulatory system's value is the tonnage delivered per unit
+of effort, not the size of the vessels. Four biological ideas were missing from v2.0 and are now written into
+the rubric as scorable clauses. First, the liver principle: B scores the host flow the mechanism changes,
+wherever it sits, with the same five evidence elements and the same document classes for every sector, so a
+customer's regulator-lodged before-and-after and a peer-reviewed trial land in the same band, and a public
+plan never reaches the top band whatever the size of the company. Second, development is not cancer:
+positive feedback that stops at the size of the organism (a network saturating at the count of registered
+trucks, of connections, of dwellings) is scored neutral when the ceiling is a published count the company
+does not produce, and runaway only when the company's own filings show it enlarging that ceiling; a unit
+whose consumption per person is unbounded, compute cycles or content hours, has no ceiling and stays
+amplifying. Third, a hub is not fragility: scale-free networks survive random node loss and fail only at an
+unreroutable hub, so the buffer deduction attaches to that hub, measured as the largest node's share of
+throughput, while the slack test that caught precision scheduled railroading stands and the lower of the two
+governs. Fourth, the clock belongs to the mechanism doing the correcting: a replicable unit adopted across a
+population sits on its adoption curve, and position on that curve is three cited numbers (ceiling,
+penetration, doubling time) rather than the payer's calendar or the asset's lifetime; the override can only
+lift a band, and a corridor owner is never read on it. Sensing, variance reduction, is scored once, under B,
+on the host's loss metric, and nowhere else.
+
+The first screen changed in its vocabulary and its routes, not in its thresholds or its terminal priors. Every
+class name is now a Layer 0 stock id or a registered alias: the enabler class is retired, semiconductors and
+network equipment attach to information, machinery to tools, chemicals and packaging to materials, and the
+name infrastructure is reserved for the resilient-infrastructure stock, reachable by a description of grid
+hardening, asset integrity or nondestructive testing. Extraction and circulation are separated by arithmetic
+rather than judgment: a mining code at 8 reaches at most 18 with a loop description and does not advance,
+while a steel code at 10 reaches 20 only when the description names scrap or an electric arc furnace. Four
+gaps between table entries that priced the same evidence or the same business differently are closed
+(Yahoo Telecom Services 14 against 20 for the same carriers under an exchange code; Information Technology
+Services 10 against Software 12 for identical software:health descriptions; the services bases at 8 where no
+boost could reach 20; a boost loop that never ran on conglomerates), and three uninformative codes gain the
+description route (Computer Communications Equipment, Transportation Services, Cable) so the Yahoo entry
+decides rather than the label. The boost table gains circulation, sensing, physical information substrate,
+tools and physical resilience entries, all noun-anchored, with marketing words barred; the bare word
+manufacturing, which matched 36 percent of every stage 2 description, is gone.
+
+The discipline is stated because the trap is real: a rubric can be tuned until it produces the portfolio its
+owner expects, and coordination names are exactly what this owner expects. No change above is justified by
+the names it admits. The deterministic part of the change is computed rather than estimated: 136 names newly
+cross the bar on the table changes alone (64 from Information Technology Services, 62 carriers, 7 from
+Specialty Business Services, 3 from Computer Communications Equipment) and none is cut; the description
+routes are bounded by pre-registered ranges with an upper falsifier for a floodgate and a lower one for an
+inert rule; media and extraction carry guard predictions (nothing from a content code, nothing from a
+mining code may advance); health is the control group, its absolute count allowed to move only by the 40
+software:health names the parity fix carries and its ranked mean by no more than two points. The gate, the
+tier bands, the weights, the jurisdiction penalties and the two first-screen thresholds do not move. A
+dilution fail stays a fail; the card may now record whether the dilution financed a solvent unit toward a
+stated solvency point, and that annotation changes nothing until a later version has counted what became of
+such names. The frozen 2026-08-28 vintages keep the v2.0 judgment, errors included, and the v2.1 re-screen is
+registered as a new instrument compared only with itself.

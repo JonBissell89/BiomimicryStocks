@@ -1,0 +1,602 @@
+{
+ "version": "v2.1",
+ "summary": "v2.1 repairs the structural biases that kept coordination tissues out of the engine, and nothing else: no measure weight, tier band (80/74/69/65), gate term, jurisdiction penalty, first-screen threshold (need 20 and viability 9, both hard) or terminal-consumption prior moves. Kept from the three proposals, with the critics' fixes applied: (1) the first-screen class vocabulary becomes Layer 0 stock ids; the enabler class 'infrastructure' is retired at unchanged numbers (semiconductors and network equipment to information, machinery to tools, chemicals and packaging to materials), and the name infrastructure is reserved for the resilient-infrastructure stock reached by a physical-resilience description; (2) circulation is separated from extraction by arithmetic (mining 8 plus 10 = 18 does not advance, a scrap-fed steel code 10 plus 10 = 20 does only when the description names the loop), with Environmental Services and Waste Management re-bookkept from water to materials; (3) four documented same-evidence or same-business gaps between table entries are closed (Yahoo Telecom Services 14 to 20 against the 28 carriers already at 20 under an exchange code; Information Technology Services 10 to 12 against Software 12 for identical software:health descriptions; the services bases 8 to 10 where the enrich flag was dead code; the boost loop extended to conglomerates where it never ran) and three uninformative codes gain the description route at unchanged numbers (Computer Communications Equipment, Transportation Services, Cable at 12); (4) the description boost table gains noun-anchored circulation, sensing, physical information substrate, tools and resilience entries, bars AI marketing words, and drops the bare word manufactur (36 percent of all stage 2 descriptions); (5) B scores the host flow where the correction lands, with five-element evidence classes binding on every sector, an attribution rule, and a rebound test confined to overshoot-side drains that caps B at 20 on an induced outcome and feeds C2's unchanged bands; sensing is scored there and nowhere else; (6) C1 keeps its bands and adds a recorded ceiling from a published table keyed by Layer 0 id, a computed penetration and a filing-cited enlarging mechanism, so bounded developmental feedback scores 6 to 7 and a unit with no physical ceiling (compute cycles, content hours) stays amplifying; (7) E keeps the slack test and adds a node test for network operators only, the lower governing, with the hub rule and no sensing credit; (8) F gains a computable adoption basis (ceiling, penetration, doubling time) that can only lift a band and never applies to a corridor owner, plus evidence parity for F_now; (9) A's moat deduction is charged by three document tests with stated defaults for silence. Rejected: the yolk gate carve-out (it flips BFLY and DMTRF and breaks the gate constraint; replaced by a no-effect card annotation), Transportation Services to 20 (its 21 viable names are travel, charter aviation and tankers), Precision Instruments to 22 (the registered prior is 20), the Telecom description route, the C2 rebound rewrite, boost stacking, the E sensing credit, node-share-only E bands, the mandatory adoption clock with 0 to 1 on a missing figure, and every worked reading keyed to a ranked name's own evidence. The deterministic effect is computed on the recorded screen with the real Yahoo-base-plus-boost mechanism: 136 names cross the bar (Information Technology Services 64, Telecom Services 62, Specialty Business Services 7, Computer Communications Equipment 3), none is cut, health rises by exactly the 40 software:health names the parity fix carries. Thirteen predictions with lower falsifiers for inert rules and upper falsifiers for floodgates, including media, extraction and health guards, are registered before the re-screen. Note on the structured fields: prior_table lists every exchange code and every Yahoo entry (prefixed 'Yahoo: ') whose prior, class or flag changes; name_patterns is the full ordered replacement list, first match wins, and lines 9 to 14 carry the flag enrich-if-viable (recorded in rubric_text, since the field has no flag slot).",
+ "new_need_classes": [
+  {
+   "name": "information",
+   "definition": "Nervous tissue. A mechanism whose delivered unit is the substrate or the carriage of connectivity and compute (semiconductors, wafer fabrication, network and telecom equipment, carriers, data centres, fibre, satellites), or, with the flag sensing, a sensor, meter, instrument, telematics unit or forecaster whose product is variance reduction at a host stock. Blind test at the first screen: the exchange or Yahoo entry names the substrate (relabelled codes at unchanged numbers: Semiconductors 22, Telecommunications Equipment 20, Precision Instruments 20 sensing, Scientific & Technical Instruments 22 sensing, Communication Equipment 20, Computer Hardware 14, Telecom Services 20 by parity) or the description names a physical unit of compute or carriage (data centre, wafer, foundry, broadband, fibre optic, wireless carrier, satellite communications: boost 8) or a sensing function (sensor, telematics, smart meter, condition monitoring, leak detection, lidar, earth observation: boost 8). Marketing words (artificial intelligence, AI, machine learning, gpu, accelerator, inference, cloud infrastructure) carry no boost. Attention businesses (advertising, entertainment, engagement) are media, whatever the technology. At stage 3 the correction of an information or sensing name is scored on the host flow it changes (B step 1), never on its own operations.",
+   "stock_it_serves": "Layer 0 information (deficit: people connected to the shared information layer; correction: cheaper connectivity and cheaper intelligence per person, the substrate is compute). A sensing row also serves whichever Layer 0 stock the host measures (freshwater and water_access leakage, energy_access losses, resilient infrastructure, transport asset life, food inputs), named on the card at stage 3."
+  },
+  {
+   "name": "tools",
+   "definition": "The machinery half of the retired enabler class, relabelled rather than re-priced: productive machinery and automation that multiply what one person-hour produces. Codes at unchanged numbers: Industrial Machinery/Components 21, Electronic Components 20, Specialty Industrial Machinery 22, Semiconductor Equipment & Materials 22, Tools/Hardware 16, Industrial Specialties 16, Metal Fabrications 15, Industrial Distribution 16, Wholesale Distributors 12, Miscellaneous manufacturing industries 12. Description boost 8 on mechanism tokens only (industrial automation, factory automation, robot, machine tool, cnc, manufacturing execution, plc, scada, motion control), replacing the 6-point bare manufactur entry; the former software:infrastructure hybrid becomes software:tools. Because the class name is a Layer 0 id, a stage 2 cut can no longer read enabler, not a direct need provider; it must name the missing host-flow item.",
+   "stock_it_serves": "Layer 0 tools (deficit: the machinery and compute that multiply what one person-hour produces; correction: cheaper capability per unit, compute, automation, machines that let one operator do the work of several)."
+  },
+  {
+   "name": "materials:circulation",
+   "definition": "Circulatory tissue of matter, carried as the flag circulation on the class materials (the Layer 0 id) so audit_imbalance.py keeps mapping by id while the funnel reports circulation separately. A company belongs here when its feedstock is documented as secondary material (scrap, recovered, remanufactured, refurbished, returned) or its product is the recovery infrastructure itself (collection, sorting, deposit return, remanufacturing lines, electric-arc melting of scrap, tailings reprocessing, container reconditioning). Reached by relabel (Environmental Services 25 and Waste Management 25, from water), by the name line RECYCL, CIRCULAR, REMANUFACTUR, SCRAP, SALVAGE, WASTE, ENVIRONMENT at 22, and by a noun-anchored description boost of 10 (recycl, scrap, secondary metal or steel or fibre, remanufactur, reverse logistics, deposit return, electric arc furnace, recovered fibre or paper or metal or carbon, e-waste, refurbish, tailings reprocessing) on the extraction, chemicals, packaging, paper and plastics codes, which gain the enrich or desc flag at unchanged numbers. Extraction and circulation are separated by arithmetic: Metal Mining, Other Metals and Minerals and Other Industrial Metals & Mining at 8 reach at most 18 and never advance; Steel and Aluminum at 10 reach 20 only when the description names the loop; the stage 2 read then asks for the stated secondary-feedstock share.",
+   "stock_it_serves": "Layer 0 materials (overshoot: share of material input cycled back, 7 percent against a boundary of 17; correction: deposit and return systems, recovery infrastructure, design for disassembly, secondary material made cheaper than virgin), novel (persistent synthetics: closed loops for what exists), and sanitation where the recovery is of the water, energy and nutrients in a waste stream."
+  },
+  {
+   "name": "infrastructure (reserved: resilient infrastructure)",
+   "definition": "Immune tissue. The class name infrastructure is no longer a catch-all for enablers; it names the Layer 0 resilient-infrastructure stock and is reached only by description: a physical-resilience boost of 8 on grid resilience or hardening, asset integrity, nondestructive testing, pipeline inspection or integrity, structural health monitoring, trenchless rehabilitation, corrosion monitoring, infrastructure inspection or monitoring, giving software:infrastructure (now meaning attachment to this stock) or services and conglomerate hybrids. Enterprise cybersecurity keeps its 4-point entry as software:security at 16, below the bar, because it names no Layer 0 stock; a documented critical-system availability metric is scored at stage 3 under B on the host flow, and the arms-race question (does success grow the attack surface it sells against) is a C1 question with the enlarging-mechanism test, not a first-screen judgment.",
+   "stock_it_serves": "Layer 0 infrastructure (deficit: the margin between what built systems can absorb and what now hits them; correction: repair over replacement, engineering capacity multiplied by software, observability that finds the weak points before they fail); also energy_access for grid hardening and information where the host is a network."
+  }
+ ],
+ "prior_table": [
+  {
+   "industry": "Semiconductors",
+   "prior": 22,
+   "class": "information",
+   "flag": ""
+  },
+  {
+   "industry": "Telecommunications Equipment",
+   "prior": 20,
+   "class": "information",
+   "flag": ""
+  },
+  {
+   "industry": "Telecommunications Equipment ",
+   "prior": 20,
+   "class": "information",
+   "flag": "duplicate key with trailing space, merged into Telecommunications Equipment"
+  },
+  {
+   "industry": "Computer Communications Equipment",
+   "prior": 18,
+   "class": "information",
+   "flag": "enrich"
+  },
+  {
+   "industry": "Electronic Components",
+   "prior": 20,
+   "class": "tools",
+   "flag": ""
+  },
+  {
+   "industry": "Precision Instruments",
+   "prior": 20,
+   "class": "information",
+   "flag": "sensing"
+  },
+  {
+   "industry": "Radio And Television Broadcasting And Communications Equipment",
+   "prior": 15,
+   "class": "information",
+   "flag": "enrich content-mix"
+  },
+  {
+   "industry": "Computer Manufacturing",
+   "prior": 16,
+   "class": "information",
+   "flag": "enrich"
+  },
+  {
+   "industry": "Computer peripheral equipment",
+   "prior": 14,
+   "class": "information",
+   "flag": "enrich"
+  },
+  {
+   "industry": "Industrial Machinery/Components",
+   "prior": 21,
+   "class": "tools",
+   "flag": ""
+  },
+  {
+   "industry": "Metal Fabrications",
+   "prior": 15,
+   "class": "tools",
+   "flag": "enrich"
+  },
+  {
+   "industry": "Industrial Specialties",
+   "prior": 16,
+   "class": "tools",
+   "flag": "enrich"
+  },
+  {
+   "industry": "Tools/Hardware",
+   "prior": 16,
+   "class": "tools",
+   "flag": ""
+  },
+  {
+   "industry": "Professional and commerical equipment",
+   "prior": 14,
+   "class": "tools",
+   "flag": ""
+  },
+  {
+   "industry": "Electronics Distribution",
+   "prior": 14,
+   "class": "tools",
+   "flag": ""
+  },
+  {
+   "industry": "Wholesale Distributors",
+   "prior": 12,
+   "class": "tools",
+   "flag": "enrich"
+  },
+  {
+   "industry": "Miscellaneous manufacturing industries",
+   "prior": 12,
+   "class": "tools",
+   "flag": "enrich"
+  },
+  {
+   "industry": "Specialty Chemicals",
+   "prior": 16,
+   "class": "materials",
+   "flag": "enrich"
+  },
+  {
+   "industry": "Major Chemicals",
+   "prior": 12,
+   "class": "materials",
+   "flag": "commodity enrich"
+  },
+  {
+   "industry": "Containers/Packaging",
+   "prior": 14,
+   "class": "materials",
+   "flag": "enrich"
+  },
+  {
+   "industry": "Paper",
+   "prior": 12,
+   "class": "materials",
+   "flag": "enrich"
+  },
+  {
+   "industry": "Plastic Products",
+   "prior": 10,
+   "class": "materials",
+   "flag": "enrich"
+  },
+  {
+   "industry": "Paints/Coatings",
+   "prior": 12,
+   "class": "materials",
+   "flag": ""
+  },
+  {
+   "industry": "Steel/Iron Ore",
+   "prior": 10,
+   "class": "materials",
+   "flag": "commodity enrich"
+  },
+  {
+   "industry": "Aluminum",
+   "prior": 10,
+   "class": "materials",
+   "flag": "commodity enrich"
+  },
+  {
+   "industry": "Metal Mining",
+   "prior": 8,
+   "class": "materials",
+   "flag": "commodity enrich"
+  },
+  {
+   "industry": "Other Metals and Minerals",
+   "prior": 8,
+   "class": "materials",
+   "flag": "commodity enrich"
+  },
+  {
+   "industry": "Mining & Quarrying of Nonmetallic Minerals (No Fuels)",
+   "prior": 10,
+   "class": "materials",
+   "flag": "commodity enrich"
+  },
+  {
+   "industry": "Environmental Services",
+   "prior": 25,
+   "class": "materials",
+   "flag": "circulation"
+  },
+  {
+   "industry": "EDP Services",
+   "prior": 12,
+   "class": "software",
+   "flag": "enrich"
+  },
+  {
+   "industry": "Computer Software: Programming Data Processing",
+   "prior": 12,
+   "class": "software",
+   "flag": "enrich"
+  },
+  {
+   "industry": "Business Services",
+   "prior": 10,
+   "class": "services",
+   "flag": "enrich"
+  },
+  {
+   "industry": "Professional Services",
+   "prior": 10,
+   "class": "services",
+   "flag": "enrich"
+  },
+  {
+   "industry": "Diversified Commercial Services",
+   "prior": 10,
+   "class": "services",
+   "flag": "enrich"
+  },
+  {
+   "industry": "Cable & Other Pay Television Services",
+   "prior": 12,
+   "class": "information",
+   "flag": "enrich content-mix rent-extraction-risk"
+  },
+  {
+   "industry": "Transportation Services",
+   "prior": 18,
+   "class": "transport",
+   "flag": "enrich"
+  },
+  {
+   "industry": "Yahoo: Telecom Services",
+   "prior": 20,
+   "class": "information",
+   "flag": "utility-slow-growth"
+  },
+  {
+   "industry": "Yahoo: Information Technology Services",
+   "prior": 12,
+   "class": "software",
+   "flag": "desc"
+  },
+  {
+   "industry": "Yahoo: Specialty Business Services",
+   "prior": 10,
+   "class": "services",
+   "flag": "desc"
+  },
+  {
+   "industry": "Yahoo: Semiconductors",
+   "prior": 22,
+   "class": "information",
+   "flag": ""
+  },
+  {
+   "industry": "Yahoo: Semiconductor Equipment & Materials",
+   "prior": 22,
+   "class": "tools",
+   "flag": ""
+  },
+  {
+   "industry": "Yahoo: Communication Equipment",
+   "prior": 20,
+   "class": "information",
+   "flag": ""
+  },
+  {
+   "industry": "Yahoo: Scientific & Technical Instruments",
+   "prior": 22,
+   "class": "information",
+   "flag": "sensing"
+  },
+  {
+   "industry": "Yahoo: Computer Hardware",
+   "prior": 14,
+   "class": "information",
+   "flag": "desc"
+  },
+  {
+   "industry": "Yahoo: Electronic Components",
+   "prior": 20,
+   "class": "tools",
+   "flag": ""
+  },
+  {
+   "industry": "Yahoo: Specialty Industrial Machinery",
+   "prior": 22,
+   "class": "tools",
+   "flag": ""
+  },
+  {
+   "industry": "Yahoo: Industrial Distribution",
+   "prior": 16,
+   "class": "tools",
+   "flag": "desc"
+  },
+  {
+   "industry": "Yahoo: Tools & Accessories",
+   "prior": 16,
+   "class": "tools",
+   "flag": ""
+  },
+  {
+   "industry": "Yahoo: Metal Fabrication",
+   "prior": 15,
+   "class": "tools",
+   "flag": "desc"
+  },
+  {
+   "industry": "Yahoo: Specialty Chemicals",
+   "prior": 16,
+   "class": "materials",
+   "flag": "desc"
+  },
+  {
+   "industry": "Yahoo: Chemicals",
+   "prior": 12,
+   "class": "materials",
+   "flag": "commodity desc"
+  },
+  {
+   "industry": "Yahoo: Packaging & Containers",
+   "prior": 14,
+   "class": "materials",
+   "flag": "desc"
+  },
+  {
+   "industry": "Yahoo: Paper & Paper Products",
+   "prior": 12,
+   "class": "materials",
+   "flag": "desc"
+  },
+  {
+   "industry": "Yahoo: Steel",
+   "prior": 10,
+   "class": "materials",
+   "flag": "commodity desc"
+  },
+  {
+   "industry": "Yahoo: Aluminum",
+   "prior": 10,
+   "class": "materials",
+   "flag": "commodity desc"
+  },
+  {
+   "industry": "Yahoo: Copper",
+   "prior": 12,
+   "class": "materials",
+   "flag": "commodity desc"
+  },
+  {
+   "industry": "Yahoo: Other Industrial Metals & Mining",
+   "prior": 8,
+   "class": "materials",
+   "flag": "commodity desc"
+  },
+  {
+   "industry": "Yahoo: Waste Management",
+   "prior": 25,
+   "class": "materials",
+   "flag": "circulation"
+  },
+  {
+   "industry": "Yahoo: Infrastructure Operations",
+   "prior": 20,
+   "class": "transport",
+   "flag": ""
+  },
+  {
+   "industry": "Yahoo: Conglomerates",
+   "prior": 12,
+   "class": "conglomerate",
+   "flag": "desc"
+  },
+  {
+   "industry": "Yahoo: Trucking",
+   "prior": 18,
+   "class": "transport",
+   "flag": "desc"
+  }
+ ],
+ "name_patterns": [
+  {
+   "regex": "WATER|AQUA|HYDRAUL|IRRIGAT|DESALIN|WASTEWATER",
+   "prior": 24,
+   "class": "water"
+  },
+  {
+   "regex": "\\bFOOD|FARM|AGRI|AGRO|DAIRY|GRAIN|SEED|CROP|NUTRI|BAKER|MEAT\\b|FISHER",
+   "prior": 22,
+   "class": "food"
+  },
+  {
+   "regex": "\\bSOLAR|RENEWABLE|GEOTHERM|HYDRO(?!GEN)|WIND ENERG|ENERG|\\bPOWER|ELECTRIC|GRID|BATTER|UTILIT",
+   "prior": 20,
+   "class": "energy"
+  },
+  {
+   "regex": "PHARMA|THERAPEUT|BIOSCI|MEDIC|HEALTH|DIAGNOST|SURG|DENTAL|CLINIC|HOSPITAL|VACCIN|BIOTECH|LIFE SCIENCE",
+   "prior": 20,
+   "class": "health"
+  },
+  {
+   "regex": "\\bRAIL|TRANSIT|TRANSPORT|LOGISTIC|FREIGHT|INTERMODAL|\\bFLEET|SHIPPING|MARITIME|AIRLINE|MOTOR|\\bAUTO\\b|VEHICLE|MOBILITY",
+   "prior": 18,
+   "class": "transport"
+  },
+  {
+   "regex": "CONSTRUCT|BUILD|HOME|HOUS|CEMENT|CONCRETE|LUMBER|TIMBER|STEEL|INFRASTRUCT",
+   "prior": 18,
+   "class": "shelter"
+  },
+  {
+   "regex": "RECYCL|CIRCULAR|REMANUFACTUR|\\bSCRAP\\b|SALVAGE|WASTE|ENVIRONMENT",
+   "prior": 22,
+   "class": "materials"
+  },
+  {
+   "regex": "\\bBANK|BANC|FINANC|CAPITAL|INSUR|INVEST|ASSET|WEALTH|MORTGAGE|CREDIT|FUND\\b|SECURITIES|REALTY|PROPERTIES|REIT\\b",
+   "prior": 4,
+   "class": "finance"
+  },
+  {
+   "regex": "SEMICONDUCT|MICROELECTRON|PHOTONIC|TELECOM|WIRELESS|BROADBAND|\\bNETWORK|COMMUNICAT|SATELLIT|DATA CENT",
+   "prior": 15,
+   "class": "information"
+  },
+  {
+   "regex": "SENSOR|SENSING|INSTRUMENT|METROLOG|LIDAR|TELEMAT|GEOSPATIAL|\\bMETER(ING)?\\b",
+   "prior": 15,
+   "class": "information"
+  },
+  {
+   "regex": "INDUSTRI|MANUFACTUR|MACHIN|ENGINEER|AUTOMAT|ROBOT|\\bTOOL",
+   "prior": 15,
+   "class": "tools"
+  },
+  {
+   "regex": "MATERIAL|CHEMICAL|POLYMER|ALLOY|\\bMETAL",
+   "prior": 15,
+   "class": "materials"
+  },
+  {
+   "regex": "SOFTWARE|DIGITAL|\\bDATA\\b|ANALYTIC|\\bCLOUD\\b|PLATFORM",
+   "prior": 12,
+   "class": "software"
+  },
+  {
+   "regex": "SUSTAINAB|\\bGREEN\\b|\\bECO\\b|CLIMATE",
+   "prior": 10,
+   "class": "unknown"
+  },
+  {
+   "regex": "MEDIA|ENTERTAIN|STUDIO|GAMES|RESORT|RESTAURANT|BRANDS|RETAIL|FASHION|LUXURY",
+   "prior": 4,
+   "class": "discretionary"
+  }
+ ],
+ "rubric_text": "---\n\n# v2.1 amendments (registered 3 Sep 2026): coordination tissues, evidence parity, and the first screen\n\n**What this section does.** v2.0 measures tissue repair: a mechanism attached to a flow, scored on homeostasis\n(A, B), damping (C), contact inhibition and clean exit (D), slack (E) and the clock (F). Medicine is that\nbiology with a payer, which is one reason the ranked list holds 27 health names and the first screen advanced\n60 percent of health against 0 of 323 software, 0 of 265 media, 0 of 603 materials and 0 of 171 services. A\nbody also has tissues whose work is measured somewhere other than the tissue itself: nervous tissue\n(information, sensing), circulatory tissue (transport, and matter returned to use), immune tissue (resilience).\nLayer 0 already lists information, tools, transport, resilient infrastructure and recoverable materials as\nstocks in deficit or overshoot; the first screen priced their mechanisms under a class called\n`infrastructure` that names no stock, and stage 2 then cut them as enablers (15 of the 16 verdicts that use\nthe words enabler or indirect need fall on that class). v2.1 repairs the identified structural biases and\nnothing else.\n\n**What does not move.** The six measures and their weights. The tier bands (80, 74, 69, 65). The survivability\ngate in every term. The jurisdiction penalties. The two first-screen thresholds (need 20 or more AND viability\n9 or more, both hard). Every terminal-consumption prior (food, water, shelter, energy, health). The rule that\nevery band needs a citation or a computed number and that `evidence: none` scores the bottom of its band. No\nrule below is justified by the names it would admit: each is tied to a Layer 0 correction text or to a\ndocumented inconsistency between two table entries, and the pre-registered predictions at the end are written\nto catch drift in either direction. Movement of a stock is written as toward or away from its safe range, as\novershoot or deficit, never as a verdict.\n\n## Recorded on every card (additions to the v2.0 format)\n\nEach card now also carries: `host_flow` (the physical unit scored under B, the host stock, and its Layer 0 id);\n`evidence_class` (1 to 5); `attribution` (the company's share of the host flow, or `not computable`);\n`rebound` (absorbed, partial, induced, none, or exempt); `ceiling` (variable, figure, source, date);\n`penetration` (percent, date); `enlarging` (the cited statement, or none); `largest_node` (share of throughput,\nor none, or n/a); `moat_tests` (pass, fail or silent for each of the three tests); `clock_basis` (asset, or\nadoption with its three numbers); and, only on a gate fail for dilution, `developmental` (yes or no). A blind\nsecond scorer checks these numbers rather than re-judging the words.\n\n## A \u00b7 The stock: the moat deduction is charged by three document tests (amended)\n\nThe deduction of 3 is charged on conduct, decided by three tests from public documents. Write pass, fail or\nsilent for each on the card.\n\n- **Test 1, interface.** Pass when a third party's attachment to the product is documented by someone other\n  than the company: a standards body listing the interface, a regulator's interoperability compliance record,\n  or a named third party whose product, consumable or listing runs on the interface in that third party's own\n  filing or catalogue. Fail when the filings describe proprietary consumables or exclusivity, or when the\n  company has enforced patents or trade secrets against a substitute in the last five years (litigation or an\n  ITC action, cited by docket). Silent otherwise. An API page authored by the company is silent, not a pass.\n- **Test 2, price conduct.** The price per unit of the corrected flow (take rate per order, price per\n  procedure, tariff per tonne-km, price per connection, price per seat) over the last three years, from\n  filings, the regulator or a published price list, against the consumer price index of the company's largest\n  revenue geography. Pass when flat or falling in real terms, or when the filings disclose pass-through of a\n  cost advantage. Fail when it rose faster than that index, or when the filings name pricing as the growth\n  driver. Silent when no series exists; write `price: none`. Cite the series either way.\n- **Test 3, exit cost.** Pass when switching lives in the customer's own data and export in a standard format\n  is documented. Fail on contractual exit fees, minimum-volume or exclusivity clauses, a captive-shipper or\n  captive-territory finding by a regulator or court in the last five years, or a pending merger review that\n  would leave two suppliers. Silent otherwise.\n\n| Result | Deduction |\n|---|---|\n| Two or three fails among the testable tests | subtract 3 |\n| One fail | subtract 1 |\n| No fails, at least two tests testable | none |\n| Fewer than two tests testable | subtract 1, write `moat: unmeasured` |\n\nA standard that others may implement (a protocol, a container, an interface adopted by rivals) passes test 1\nby definition and can never by itself trigger the deduction: that is the difference between a standard and a\nhostage. Geography alone (a natural-monopoly corridor, a licensed territory, a patent won on evidence) is not a\nfail. The question stays as recorded on 28 Aug 2026: does the company use its position to restrict the flow\nit corrects? The bands of A are unchanged.\n\n## B \u00b7 The flow: the correction is measured where it lands (amended)\n\n**Step 1, name the host flow.** The flow scored is the flow of a Layer 0 stock at whichever site it changes.\nFor a mechanism whose product is coordination, sensing, compute, connectivity, a component, a material or a\ntool, that site is the customer or the system, not the company's own operations: empty miles per shipment,\nkWh per unit delivered, virgin tonnes per tonne of product, clinician-hours per patient, litres lost to leakage\nper litre delivered, outage minutes per connection. Record `host_flow`, the host stock and the Layer 0 id. A\nliver's work is measured in the blood, not in the liver.\n\n**Step 2, evidence class, binding on every sector.** QUANTIFIED means five things present: a number, a\nbaseline, a period, a population size (n), and a named source. Any two missing caps B at 14.\n\n| Class | What qualifies |\n|---|---|\n| 1 | A controlled comparison on the flow (randomised trial, matched cohort, A/B test on the host flow) whose endpoint is a resource or flow quantity, peer-reviewed or on a regulator's label |\n| 2 | An operational before-and-after on the host flow disclosed in a document lodged with a securities, utility or transport regulator: by the company (a metric the regulator or exchange requires, or one in the audited annual report), by a customer (the customer's own filing or rate-case exhibit), or a national statistical series naming the company's product or its customers |\n| 3 | An independent system study of the mechanism class (regulator, agency, peer-reviewed) applied to the company's disclosed volume; or an efficacy trial with no flow endpoint. Mandatory computation: when the trial gives the clinical inputs and a payer tariff or public cost table gives the price, the flow effect must be computed with both inputs cited, and the result is class 2 |\n| 4 | A dated public plan, backlog or approval whose earlier milestone in the same plan was met on schedule, both dates cited |\n| 5 | Assertion, case study without n, award, an \"up to\" figure, dollars saved without a physical unit, a case study published by the company about its own customer |\n\nBand access: 21 to 25 requires class 1 or 2; class 3 caps B at 20; class 4 caps at 14; class 5 caps at 10.\nDirection still places a name within its band, and the four bands and their worked examples are unchanged. A\npublic plan is never class 1 or 2 whatever the size of the company. A company-run trial that is peer-reviewed\nis class 1; a customer's fleet pilot reported in the customer's own filing is class 2; these are the same band.\nWrite the class number in square brackets in the evidence line, for example `[class 2, customer filing]`.\n\n**Step 3, attribution.** A company may claim the host flow only when its share of that flow is disclosed or\ncomputable (its units divided by the host's units, both cited). When the share is not computable, score B on\nthe product's own per-unit performance metric disclosed in the company's filing (fuel per unit, kWh per unit,\nlitres per cycle), capped at 14.\n\n**Step 4, rebound test (Jevons).** Applies when the host flow is a drain on an overshoot-side stock (a Layer 0\nstock in overshoot, or the overshoot side of food: vehicle-kilometres, fossil kWh, virgin tonnes, hectares,\nnitrogen applied, waste generated) and B is scored at 15 or above. Deficit-side inflows (patients treated,\npersons connected, dwellings delivered, organs transplanted, litres delivered) are exempt: a rising system\ntotal there is the correction, not the rebound; write `rebound: exempt`. Source: the national statistical\nagency, energy agency or transport ministry of the company's largest revenue geography. Window: the latest\nfive published years. Need series: the ceiling denominator for the attached stock (table under C1). Cite both\ngrowth rates on the card and record one outcome:\n\n| Outcome | Reading | Effect |\n|---|---|---|\n| absorbed | the system total of the host flow fell, or held within 2 percent, while need rose | none |\n| partial | the system total rose, slower than need | none, recorded |\n| induced | the system total rose faster than need | the company's before-and-after is contradicted at system level, so B is capped at 20, and the outcome is recorded as evidence for C2's unchanged 1 to 3 band |\n| none | no public series exists | none, recorded |\n\n**Sensing and prediction are scored here and nowhere else.** A sensor, meter or forecaster scores B on the\nhost's variance or loss metric (leakage located, outage minutes, forecast error in MWh, unplanned downtime\nhours, false-alarm rate, tonnes of input not applied) with the same five elements and the same classes. The A\nstock for a sensing company is the physical stock measured, never uncertainty itself; a sensing company that\ncannot name the Layer 0 stock its measurement serves scores A at 6 or below. No credit for sensing exists under\nany other measure.\n\n## C1 \u00b7 Sign of the loop: amplification is scored by its bound (amended)\n\nBefore assigning a band, record three items on the card:\n\n- **(i) ceiling**: the physical count that bounds demand for the unit, taken from the table below for the\n  attached Layer 0 stock, with the published figure, source and date;\n- **(ii) penetration**: the company's units (its disclosed volume metric, or revenue divided by a disclosed\n  average selling price) divided by the ceiling, as a percent with its date;\n- **(iii) enlarging mechanism**: any statement in the company's own filings, or a regulator's finding, that use\n  of the product raises total consumption of the ceiling variable or widens the population it is sold to (an\n  added indication, a consumer tier, a wellness label).\n\nCeiling table (the denominator of the Layer 0 correction; the same denominator serves the rebound test):\n\n| Layer 0 id | Ceiling variable | Source type |\n|---|---|---|\n| transport | registered commercial vehicles above 3.5 tonnes; tonne-km shipped as the need series | national vehicle registry; statistical office |\n| information | persons or households (one connection each is bounded) | census; telecom regulator |\n| tools | establishments or licensed operators in the served sector | business register; licensing body |\n| healthcare | patients in the labelled indication; procedures per year | label; national prevalence statistic; registry |\n| shelter | households or dwellings | census |\n| energy_access, ghg | connections or households; kWh delivered; fossil kWh in the host segment as the drain | utility regulator; energy agency |\n| water_access, freshwater, sanitation | connections or persons served; litres withdrawn; tonnes of waste generated | utility regulator; statistical office |\n| food, hanpp, soil, nutrients | hectares under cultivation; persons; tonnes of nitrogen applied | agriculture ministry; FAO |\n| materials, novel | tonnes of the material consumed nationally; containers or tonnes put on the market | geological survey; statistical office |\n| infrastructure | installed assets of the class (bridges, km of pipe, km of line) | asset registry; regulator |\n| forests, biosphere, ocean | hectares; the ghg denominator for ocean | national inventory |\n\nA person-count is a ceiling only when the unit consumed per person is physically bounded (one connection, one\ndwelling, one procedure per patient). A unit whose consumption per person is unbounded (compute cycles,\ncontent hours, consumable volume) has no ceiling under this test.\n\n| Band | Meaning |\n|---|---|\n| 10 to 12 | **Self-damping**, unchanged: success removes the demand it is paid for; cite the mechanism and a number |\n| 6 to 9 | **Neutral**, unchanged, and now explicitly including bounded developmental amplification: a network or adoption feedback whose ceiling is recorded from the table, whose penetration is computed, and for which no enlarging mechanism is documented, scores 6 to 7 within this band |\n| 2 to 5 | **Mildly amplifying**: adjacent demand for the company's own products (a consumable annuity, an indication the company widened, an installed base of proprietary consumables), a network effect with no recorded ceiling, or a unit with no ceiling under the table |\n| 0 to 1 | **Runaway**: an enlarging mechanism documented under (iii); the product manufactures the problem it sells against |\n\nRules: nothing scores 10 to 12 on a network effect; the reduction of a host flow is paid once, under B, and\nearns nothing here; `evidence: none` scores the bottom of whichever band the words support. Biological anchor:\ndevelopment is positive feedback that stops at the size of the organism; cancer is positive feedback that\nrecruits its own blood supply. The test is whether the company produces, or widens, its own ceiling.\n\n## C2 \u00b7 Coupling (unchanged)\n\nThe bands and the Darling worked example stand as written. An induced rebound outcome under B is evidence for\nthe 1 to 3 band (revenue riding on induced volume shrinks if the system rebalances) and is recorded there; it\ndoes not change the band text.\n\n## D \u00b7 Growth pattern (unchanged)\n\nThe replication score of a corridor owner (1 to 2) is the observed pattern, growth by merger and enlargement,\nand stands. A coordination unit, a retrofit kit, a meter, a machine or a deposit machine is a replicated unit\nand scores 5 to 6 as before.\n\n## E \u00b7 Buffer: two tests, the lower governs (amended)\n\n**Slack test** (the existing bands, with their computable inputs made explicit): inventory days; spare\ncapacity or fleet reserve as a share of fleet; crew or maintenance headcount trend over three years; largest\ncustomer share of revenue; single-sourced inputs; number of production sites. 8 to 10 adds redundancy\n(distributed or modular, repairable, multi-sourced, works when a central node fails); 5 to 7 neutral; 2 to 4\nconcentrates (one plant, one supplier, one customer); 0 to 1 buffers stripped on the record (a single global\nfacility, zero-inventory dependency, one customer above 40 percent of revenue, or a reserve cut on the public\nrecord: stored fleet above 10 percent with maintenance headcount cut, embargoes).\n\n**Node test** (new), applied only to a company whose product is carried by a network or deployment it\noperates (a carrier, a platform, a grid, a logistics network, a hosting deployment); for a product company\nwrite `largest_node: n/a` and score the slack test alone. Inputs: the largest node's share of throughput\n(facility, hub, region, corridor, port), the number of nodes and whether they are replicated units, any\ndisclosed loss of a node in the last five years with the revenue effect in that quarter, and alternative paths\nnamed in filings.\n\n| Band | Node test |\n|---|---|\n| 8 to 10 | largest node under 15 percent of throughput; or a disclosed loss of the largest node rerouted with a revenue effect under 5 percent in the quarter, cited |\n| 5 to 7 | largest node 15 to 35 percent with two or more alternative nodes or paths named in filings; or hub-and-spoke where the spokes are replicated units |\n| 2 to 4 | largest node 35 to 60 percent; or 15 to 35 percent with no rerouting evidence |\n| 0 to 1 | largest node above 60 percent; or more than 60 percent of throughput inside one licence, concession or export-control regime named in the filings |\n\nNode definition: for an asset-light company the largest node is the largest hosting region or facility\ndisclosed; when none is disclosed write `largest_node: none` and take 5 to 7 on this test. Precedence: the\nshare bands decide first; rerouting evidence moves a name only inside the 15 to 35 percent band. Where both\ntests apply, E is the lower of the two.\n\n**Hub rule.** A scale-free network is robust to random node loss and fragile to targeted loss of its hub, so\nthe deduction attaches to the single unreroutable hub, never to the existence of hubs and never to the size\nof the company's position in its system. No credit is given under E for sensing.\n\n## F \u00b7 Clock: the adoption clock is computable (amended)\n\nF_clock asks on what clock the correction lands, read from the mechanism doing the correcting (the clock\nprinciple). Record `clock_basis` on the card.\n\n- **Asset basis.** A company that owns or operates the slow stock itself (a corridor, a grid, a mains network,\n  a housing stock, an aquifer) is always scored on that stock's turnover: decades 2 to 3, centuries 0 to 1.\n  The existing band text applies to every other name as before: reimbursement or substitution, months to a\n  few years, 5 to 6; regulation, litigation, technology displacement, years to a decade, 4 to 5; infrastructure\n  or demographic cycles, decades, 2 to 3; soil, aquifers, oceans, climate, centuries, 0 to 1. Without the three\n  adoption numbers below, 6 is unavailable.\n- **Adoption basis** (override, lifts only). Available when the company sells a replicable unit (D_rep 4 or\n  above) that is its largest revenue segment as disclosed, and all three numbers are cited: the ceiling from\n  the C1 card, penetration, and the doubling time of units (or of unit revenue deflated by a disclosed average\n  selling price) over the last eight quarters. Reimbursement is one adoption clock among several: a device on\n  reimbursement, a meter on a procurement cycle and a coordination unit on a fleet are read from the same\n  numbers.\n\n| Band | Adoption basis |\n|---|---|\n| 5 to 6 | penetration 10 to 50 percent and doubling time of three years or less (the steep phase) |\n| 4 to 5 | penetration 3 to 10 percent with doubling time of three years or less (early, real); or penetration 10 to 80 percent with doubling time above three years while unit growth still exceeds the growth of the ceiling (the shoulder) |\n| asset basis stands | penetration under 3 percent (pre-inflection), unit growth at or below the ceiling's growth (saturated), or any of the three numbers missing |\n\nThe override can raise a band, never lower one: a name that cites the numbers keeps the higher of the two\nreadings, and a corridor owner is never read on the adoption basis. A retrofit at 1 percent of the fleet it\nserves stays on its host stock's clock by measurement, not by assumption.\n\n**F_now** (0 to 4), bands unchanged, evidence widened to parity: dated orders, approvals, backlog,\ninstalled-base or active-unit growth in the last four quarters with a public number, 3 to 4; a public plan with\ndates counts 2 to 3 only when an earlier milestone in that plan was met on schedule, both dates cited;\nannounced intentions with no met milestone, 0 to 1.\n\n## The survivability gate (unchanged) and the developmental annotation\n\nThe gate is unchanged in every term: negative FCF with under 12 months runway and no committed financing,\nthree-year dilution above 25 percent, a pending buyout, going-concern doubt. A fail is a fail; there is no\ncarve-out. On a card that fails for dilution only, the scorer also records `developmental: yes` when all four\nhold from filings, else `no`: (a) the company states a solvency point at a defined scale (units deployed,\ninstalled base or revenue) with a date; (b) unit or segment gross margin is positive and rose in four of the\nlast four quarters; (c) segment or unit operating income is positive in the last two quarters; (d) runway at\nthe current burn is 24 months or more, or financing is committed to the stated point. The annotation changes\nnothing: not the gate, not the tier, not the list. It exists so that after twelve months the engine can count\nhow many dilution fails were developmental and what became of them. Yolk is finite and sized to a stage; an\nembryo that has not hatched when the yolk is gone is not a slow developer.\n\n## The first screen, v2.1\n\n### Class vocabulary\n\nA first-screen class is a Layer 0 stock id or a registered alias for a group of them. The class\n`infrastructure` is no longer a catch-all for enablers; it names the resilient-infrastructure stock and is\nreached only by description.\n\n| First-screen class | Layer 0 ids it attaches to |\n|---|---|\n| food | food, hanpp, soil, nutrients |\n| water | water_access, freshwater, sanitation |\n| shelter | shelter |\n| energy | energy_access, ghg |\n| health | healthcare |\n| transport | transport, ghg (flag `coordination` for load matching, brokerage, intermodal) |\n| tools | tools |\n| information | information (flag `sensing`: the host stock measured is named at stage 3) |\n| infrastructure | infrastructure (resilient infrastructure: repair over replacement, observability) |\n| materials | materials, novel, forests (flag `circulation`: the recovery loop; flag `commodity`: extraction) |\n| software, services, conglomerate | uninformative bases; the description attaches them as `software:<class>` (services and conglomerate keep the `software:` prefix for continuity of the funnel strings) or `<class>:<flag>` for other bases |\n| finance, media, discretionary, retail, clothing, food-service, health-adjacent, unknown | below the bar; no attachment |\n\n### Prior changes (the full table is data/rubric/prior_v21.json)\n\nRelabels at unchanged numbers, exchange codes: Semiconductors 22, Telecommunications Equipment 20 (the\nduplicate key with a trailing space is merged), Precision Instruments 20 (flag sensing), Computer peripheral\nequipment 14 (enrich), Computer Manufacturing 16 (enrich) and Radio And Television Broadcasting And\nCommunications Equipment 15 (enrich, content-mix) to `information`; Industrial Machinery/Components 21,\nElectronic Components 20, Tools/Hardware 16, Industrial Specialties 16 (enrich), Metal Fabrications 15 (enrich),\nProfessional and commerical equipment 14, Electronics Distribution 14, Wholesale Distributors 12 (enrich) and\nMiscellaneous manufacturing industries 12 (enrich) to `tools`; Specialty Chemicals 16, Containers/Packaging 14,\nMajor Chemicals 12, Paper 12, Paints/Coatings 12 and Plastic Products 10 to `materials` (enrich, commodity flag\nkept where present); Steel/Iron Ore 10, Aluminum 10, Mining & Quarrying of Nonmetallic Minerals 10, Metal\nMining 8 and Other Metals and Minerals 8 keep `materials` and gain enrich; Environmental Services 25 moves\nfrom `water` to `materials` with flag circulation. Yahoo entries: Semiconductors 22, Communication Equipment 20,\nScientific & Technical Instruments 22 (sensing), Computer Hardware 14 (desc) to `information`; Semiconductor\nEquipment & Materials 22, Specialty Industrial Machinery 22, Electronic Components 20, Industrial Distribution\n16 (desc), Tools & Accessories 16, Metal Fabrication 15 (desc) to `tools`; Specialty Chemicals 16, Packaging &\nContainers 14, Chemicals 12, Paper & Paper Products 12 (all desc), Steel 10, Aluminum 10, Copper 12, Other\nIndustrial Metals & Mining 8 (all desc, commodity kept) and Waste Management 25 (circulation) to `materials`;\nInfrastructure Operations 20 to `transport`; Conglomerates 12 and Trucking 18 gain desc.\n\nParity fixes (each a documented same-evidence or same-business gap between two table entries): Yahoo Telecom\nServices 14 to 20, class `information`, flag utility-slow-growth (28 carriers under the exchange code\nTelecommunications Equipment already carry 20 while 62 no-code carriers of the same business carried 14; a\ndelivery utility of the information deficit is priced between Natural Gas Distribution 18 and Electric\nUtilities 22, with the same slow-growth flag); Yahoo Information Technology Services 10 to 12 (identical\nsoftware:health evidence advanced at Software - Application 12 plus 8 and failed at 10 plus 8; 40 names);\nYahoo Specialty Business Services 8 to 10 and the exchange codes Business, Professional and Diversified\nCommercial Services 8 to 10 (at 8 the enrich flag was dead code: no boost reaches 20); EDP Services and\nProgramming Data Processing 10 to 12 for consistency with Prepackaged Software (inert for profiled names,\nwhose base is the Yahoo entry). Route fixes at unchanged numbers: Computer Communications Equipment 18 gains\nenrich (the code mixes carriage hardware with enterprise IT; the Yahoo entry and the description decide);\nTransportation Services 18 gains enrich (the code holds online travel, charter aviation and tankers beside\nfreight coordination; the Yahoo entry decides, and a travel name falls to Travel Services 4); Cable & Other Pay\nTelevision Services 6 to 12, class `information`, flags enrich, content-mix and rent-extraction-risk (the code\nmixes broadband carriage with content; after the profile fetch a carrier lands on Telecom Services 20 and a\ncontent name on Entertainment 2; inert until fetched). Multi-Sector Companies 10 keeps its enrich flag and the\nboost loop now covers the conglomerate class, which it never did.\n\nRejected from the tables, with the reason: Transportation Services to 20 (the 21 viable names are Booking,\nExpedia, Virgin Galactic, charter aviation and LPG tankers; four are freight coordination); Precision\nInstruments to 22 (the registered v2.0 prior is 20); a description route for Telecom Services (every carrier\ndescription matches broadband or 5G, so the boost could not fail); the SEMICONDUCT name line at 20 (the\nname-only discount elsewhere in the table is 6 to 9 points, not 2); Marine Transportation to 18 (not one of the\nidentified biases; deferred).\n\n### Description boosts (second pass), in order; on equal boosts the earlier entry wins\n\nThe boost is added to the Yahoo base of any entry carrying the desc flag and of every entry in the classes\nsoftware, services and conglomerate; the single largest boost applies; the boosted total is capped at 24; the\nwords artificial intelligence, AI and machine learning are barred from every regex (199 of 3,055 stage 2\ndescriptions carry them and they are claims, not functions). Descriptions are matched in lower case.\n\n| Order | Regex (lower case) | Boost | Label |\n|---|---|---|---|\n| 1 | `water\\|wastewater\\|irrigat\\|desalin` | 10 | water (unchanged) |\n| 2 | `grid\\|smart meter\\|energy management\\|energy efficien\\|renewable\\|solar\\|battery\\|ev charg` | 10 | energy (unchanged) |\n| 3 | `recycl\\|\\bscrap\\b\\|secondary (metal\\|alumin\\|steel\\|fib\\|material\\|raw material)\\|remanufactur\\|reverse logistics\\|deposit[- ]return\\|electric arc furnace\\|\\beaf\\b\\|recovered (fiber\\|fibre\\|paper\\|material\\|metal\\|carbon)\\|e-waste\\|refurbish\\|tailings (re\\|retreat\\|reprocess)` | 10 | circulation (class materials, flag circulation) |\n| 4 | `agricultur\\|farm\\|food safety\\|crop` | 9 | food (unchanged) |\n| 5 | `health\\|clinical\\|patient\\|hospital\\|medical\\|diagnos\\|pharma` | 8 | health (unchanged) |\n| 6 | `logistics\\|freight\\|fleet\\|transport\\|rail\\|transit\\|supply chain` | 8 | transport (unchanged) |\n| 7 | `construction\\|building information\\|infrastructure (software\\|management)\\|geospatial\\|survey` | 8 | shelter (unchanged) |\n| 8 | `\\bsensors?\\b\\|telemat\\|smart meter\\|advanced metering\\|condition monitor\\|predictive maintenance\\|leak detection\\|earth observation\\|satellite imag\\|lidar\\|remote monitoring\\|\\biot\\b\\|structural health monitoring` | 8 | sensing (class information, flag sensing) |\n| 9 | `data cent(er\\|re)\\|semiconductor (manufactur\\|fabricat)\\|wafer\\|foundry\\|broadband\\|fiber[- ]optic\\|fibre[- ]optic\\|optical fib\\|wireless carrier\\|mobile network operator\\|\\b5g\\b\\|satellite communic\\|internet service provider\\|network infrastructure\\|optical transport` | 8 | information |\n| 10 | `industrial automation\\|factory automation\\|automation equipment\\|robot\\|machine tool\\|\\bcnc\\b\\|manufacturing execution\\|\\bplc\\b\\|\\bscada\\b\\|motion control` | 8 | tools (replaces the 6-point `manufactur` entry, which matched 36 percent of all stage 2 descriptions) |\n| 11 | `grid (resilien\\|hardening)\\|asset integrity\\|non[- ]?destructive testing\\|pipeline (inspection\\|integrity)\\|structural health\\|trenchless\\|corrosion (monitoring\\|protection)\\|infrastructure (inspection\\|monitoring)` | 8 | infrastructure (resilient infrastructure) |\n| 12 | `freight matching\\|load matching\\|empty mile\\|freight broker\\|third[- ]party logistics\\|\\b3pl\\b\\|intermodal\\|route optimi\\|digital freight` | 8 | coordination (class transport, flag coordination; for a software base entry 6 already matches) |\n| 13 | `cybersecurity\\|network security\\|endpoint (security\\|protection)\\|identity and access` | 4 | security (records the match; 12 plus 4 never crosses; enterprise security names no Layer 0 stock) |\n\nExcluded on measured hit rates, and not to be re-added without a new measurement: bare `manufactur` (1,094 of\n3,055), bare `monitoring` (199), `inspection`, `predictive`, `forecast`, bare `fiber` (glass, dietary and\ntextile fibre), `gpu`, `accelerator`, `inference`, `edge comput`, `cloud infrastructure`, `hyperscale`,\n`circular`, `closed-loop`, `reuse`, `reclaim`, `end-of-life` (adjectives without a noun), `dispatch`, `fleet\nmanagement`, `supply chain management`, `workforce management`.\n\n### Name patterns (names with no exchange code and no profile), in order; first match wins\n\n| Order | Regex (upper case) | Prior | Class and flag |\n|---|---|---|---|\n| 1 | `WATER\\|AQUA\\|HYDRAUL\\|IRRIGAT\\|DESALIN\\|WASTEWATER` | 24 | water |\n| 2 | `\\bFOOD\\|FARM\\|AGRI\\|AGRO\\|DAIRY\\|GRAIN\\|SEED\\|CROP\\|NUTRI\\|BAKER\\|MEAT\\b\\|FISHER` | 22 | food |\n| 3 | `\\bSOLAR\\|RENEWABLE\\|GEOTHERM\\|HYDRO(?!GEN)\\|WIND ENERG\\|ENERG\\|\\bPOWER\\|ELECTRIC\\|GRID\\|BATTER\\|UTILIT` | 20 | energy (POWER now bounded: EMPOWER and MANPOWER no longer score 20) |\n| 4 | `PHARMA\\|THERAPEUT\\|BIOSCI\\|MEDIC\\|HEALTH\\|DIAGNOST\\|SURG\\|DENTAL\\|CLINIC\\|HOSPITAL\\|VACCIN\\|BIOTECH\\|LIFE SCIENCE` | 20 | health |\n| 5 | `\\bRAIL\\|TRANSIT\\|TRANSPORT\\|LOGISTIC\\|FREIGHT\\|INTERMODAL\\|\\bFLEET\\|SHIPPING\\|MARITIME\\|AIRLINE\\|MOTOR\\|\\bAUTO\\b\\|VEHICLE\\|MOBILITY` | 18 | transport (FREIGHT, INTERMODAL, FLEET added at the unchanged number) |\n| 6 | `CONSTRUCT\\|BUILD\\|HOME\\|HOUS\\|CEMENT\\|CONCRETE\\|LUMBER\\|TIMBER\\|STEEL\\|INFRASTRUCT` | 18 | shelter (unchanged) |\n| 7 | `RECYCL\\|CIRCULAR\\|REMANUFACTUR\\|\\bSCRAP\\b\\|SALVAGE\\|WASTE\\|ENVIRONMENT` | 22 | materials, flag circulation (split from the old infrastructure line; SUSTAINAB removed) |\n| 8 | `\\bBANK\\|BANC\\|FINANC\\|CAPITAL\\|INSUR\\|INVEST\\|ASSET\\|WEALTH\\|MORTGAGE\\|CREDIT\\|FUND\\b\\|SECURITIES\\|REALTY\\|PROPERTIES\\|REIT\\b` | 4 | finance (moved ahead of the enabler lines so Bank of Communications is a bank) |\n| 9 | `SEMICONDUCT\\|MICROELECTRON\\|PHOTONIC\\|TELECOM\\|WIRELESS\\|BROADBAND\\|\\bNETWORK\\|COMMUNICAT\\|SATELLIT\\|DATA CENT` | 15 | information, flag enrich-if-viable |\n| 10 | `SENSOR\\|SENSING\\|INSTRUMENT\\|METROLOG\\|LIDAR\\|TELEMAT\\|GEOSPATIAL\\|\\bMETER(ING)?\\b` | 15 | information, flags sensing and enrich-if-viable (METER bounded: PARAMETER and KILOMETER excluded) |\n| 11 | `INDUSTRI\\|MANUFACTUR\\|MACHIN\\|ENGINEER\\|AUTOMAT\\|ROBOT\\|\\bTOOL` | 15 | tools, flag enrich-if-viable |\n| 12 | `MATERIAL\\|CHEMICAL\\|POLYMER\\|ALLOY\\|\\bMETAL` | 15 | materials, flag enrich-if-viable |\n| 13 | `SOFTWARE\\|DIGITAL\\|\\bDATA\\b\\|ANALYTIC\\|\\bCLOUD\\b\\|PLATFORM` | 12 | software, flag enrich-if-viable (was unknown 8) |\n| 14 | `SUSTAINAB\\|\\bGREEN\\b\\|\\bECO\\b\\|CLIMATE` | 10 | unknown, flag enrich-if-viable (marketing words; SUSTAINAB earned 22 before) |\n| 15 | `MEDIA\\|ENTERTAIN\\|STUDIO\\|GAMES\\|RESORT\\|RESTAURANT\\|BRANDS\\|RETAIL\\|FASHION\\|LUXURY` | 4 | discretionary (unchanged) |\n| else | | 8 | unknown, flag enrich-if-viable |\n\nNo name line crosses the bar on an information, tools, materials or software word alone; the class it sets\nroutes the row to the profile fetch with a Layer 0 attachment already named. The hard-reject name patterns are\nunchanged.\n\n### Priors for classified overrides and hybrids (class_prior in prior_v21.json)\n\nThe 367 keyword-only names classified by web research on 2 Sep 2026 are priced by their override class at the\nname-line number for that class, because the classifier read a profile the screen did not have but not a\ndescription the boost could act on: water 24, food 22, circulation 22, energy 20, health 20, transport 18,\nshelter 18, information 15, tools 15, infrastructure 15, materials 12, coordination 12, software 12,\nconglomerate 10, materials_extraction 8, services 8, unknown 8, finance 4, discretionary 4,\nmedia_entertainment 2; shell_or_dead (operating false) is a reject as before. Hybrid labels (`software:<x>`,\n`materials:circulation`) are never keys in class_prior: a hybrid is priced as base plus boost and the delta\nscript must not overwrite it by class.\n\n### Obligations on the pipeline (a logic change under register_logic.py, version v2.1)\n\n1. `round1_v21.py` applies class-only relabels (it currently re-prices only when the number differs) and keeps\n   the regression: a v2.0 prior file reproduces the recorded screen name for name.\n2. `round1_merge_enriched.py`: the boost loop runs when the Yahoo entry carries desc or the class is software,\n   services or conglomerate (the condition was `fl == \"desc\"`, which a `commodity desc` flag would miss); the\n   hybrid label is `software:<label>` for software and services bases and `<class>:<label>` otherwise; the\n   boosted total is capped at 24; ties resolve by list order.\n3. `fetch_profiles.py` fetches every viable name in a code that now carries enrich (about 330 names in Metal\n   Fabrications, Industrial Specialties, Major Chemicals, Steel/Iron Ore, Containers/Packaging, Paper, Plastic\n   Products, Radio and Television equipment, Computer peripheral equipment, Cable, Metal Mining, Nonmetallic\n   Minerals and Other Metals). Enrich obligation: no need cut is recorded on a viable name in an enrich or\n   desc code until its description has been read; when no description exists the cut reason says `no\n   description available`, so the false-negative sample can target it.\n4. The 2026-08-28 vintages stay frozen and are graded on v2.0 scores; the v2.1 re-screen is a new instrument\n   compared only with itself, and the predictions below are registered as a superseding protocol entry that\n   preserves every v2.0 endpoint unchanged.\n\n### Stage 2 admissibility\n\nA stage 2 cut of a name whose first-screen class is a Layer 0 id or alias (food, water, shelter, energy,\nhealth, transport, tools, information, infrastructure, materials, and any `software:` or flagged sub-label)\nmust name the missing B item: `no host flow named`, `no host number`, `attribution not computable`, `rebound\ninduced`, or a survivability fact. The words enabler, indirect need and not a direct need are not banned; they\nare simply not a reason, because Layer 0 names compute, connectivity, observability and secondary material as\ncorrections, and a cut must say which number is missing. The rule applies to every class equally, including\nregulated utilities. The R1.5 clinical-stage programmatic cut is unchanged and no first-screen analogue is\nadded for coordination names.\n\n## Registration and pre-registration\n\nThis section is a `--logic` change: the version becomes v2.1, the refresh queue owes a full universe re-screen\nand a ranked re-score, and the predictions registered beside it (advance count, per-family admissions, the\nhealth control group, stage 2 vocabulary and pass rates, ranked-cluster means, blind-scorer agreement and the\nuniverse information coefficient) are committed before the re-screen runs. Each has a lower falsifier for an\ninert change and an upper falsifier for a floodgate; the media and extraction lines are guards, since the\nproposal claims connectivity is the deficit and content is not, and circulation is the correction and\nextraction is not. A rule that fails its falsifier is withdrawn to its v2.0 text at the next registration, and\nthe withdrawal is published.",
+ "framework_text": "**Coordination tissues, and why the first screen could not see them (added v2.1, Sep 3, 2026).** The six\nmeasures are tissue-repair biology: a mechanism attached to a flow, scored on whether it returns a stock\ntoward its safe range, whether the loop back from the stock damps or amplifies it, whether it grows by copying\na unit and stops at contact, whether it keeps slack, and whether the correction lands on a human clock.\nMedicine is that biology with a payer, and the v2.0 funnel shows it: 60 percent of health names passed the\nfirst screen, against 0 of 323 software, 0 of 265 media, 0 of 603 materials and 0 of 171 services, and the\nranked list holds 27 health names. That is not what Layer 0 says the species is short of. The map lists\ninformation, tools, transport, resilient infrastructure and recoverable materials as stocks in deficit or\novershoot, and the convergence hypothesis, which the map states as falsifiable, predicts that the mechanisms\nlowering the cost of coordination and intelligence per outcome are among the ones the correction selects. The\nengine's map named the organ, its hypothesis predicted it, and its first screen forbade it, because the\nscreen's theory of durable need was terminal consumption only, and everything else was priced under a class\ncalled infrastructure that named no stock, then cut at stage 2 as an enabler.\n\nA body also has tissues whose work is measured somewhere other than the tissue. The liver's value shows in\nthe blood; the nervous system's value shows in what the muscles do with less energy; the immune system's\nvalue shows in infections that never happen; the circulatory system's value is the tonnage delivered per unit\nof effort, not the size of the vessels. Four biological ideas were missing from v2.0 and are now written into\nthe rubric as scorable clauses. First, the liver principle: B scores the host flow the mechanism changes,\nwherever it sits, with the same five evidence elements and the same document classes for every sector, so a\ncustomer's regulator-lodged before-and-after and a peer-reviewed trial land in the same band, and a public\nplan never reaches the top band whatever the size of the company. Second, development is not cancer:\npositive feedback that stops at the size of the organism (a network saturating at the count of registered\ntrucks, of connections, of dwellings) is scored neutral when the ceiling is a published count the company\ndoes not produce, and runaway only when the company's own filings show it enlarging that ceiling; a unit\nwhose consumption per person is unbounded, compute cycles or content hours, has no ceiling and stays\namplifying. Third, a hub is not fragility: scale-free networks survive random node loss and fail only at an\nunreroutable hub, so the buffer deduction attaches to that hub, measured as the largest node's share of\nthroughput, while the slack test that caught precision scheduled railroading stands and the lower of the two\ngoverns. Fourth, the clock belongs to the mechanism doing the correcting: a replicable unit adopted across a\npopulation sits on its adoption curve, and position on that curve is three cited numbers (ceiling,\npenetration, doubling time) rather than the payer's calendar or the asset's lifetime; the override can only\nlift a band, and a corridor owner is never read on it. Sensing, variance reduction, is scored once, under B,\non the host's loss metric, and nowhere else.\n\nThe first screen changed in its vocabulary and its routes, not in its thresholds or its terminal priors. Every\nclass name is now a Layer 0 stock id or a registered alias: the enabler class is retired, semiconductors and\nnetwork equipment attach to information, machinery to tools, chemicals and packaging to materials, and the\nname infrastructure is reserved for the resilient-infrastructure stock, reachable by a description of grid\nhardening, asset integrity or nondestructive testing. Extraction and circulation are separated by arithmetic\nrather than judgment: a mining code at 8 reaches at most 18 with a loop description and does not advance,\nwhile a steel code at 10 reaches 20 only when the description names scrap or an electric arc furnace. Four\ngaps between table entries that priced the same evidence or the same business differently are closed\n(Yahoo Telecom Services 14 against 20 for the same carriers under an exchange code; Information Technology\nServices 10 against Software 12 for identical software:health descriptions; the services bases at 8 where no\nboost could reach 20; a boost loop that never ran on conglomerates), and three uninformative codes gain the\ndescription route (Computer Communications Equipment, Transportation Services, Cable) so the Yahoo entry\ndecides rather than the label. The boost table gains circulation, sensing, physical information substrate,\ntools and physical resilience entries, all noun-anchored, with marketing words barred; the bare word\nmanufacturing, which matched 36 percent of every stage 2 description, is gone.\n\nThe discipline is stated because the trap is real: a rubric can be tuned until it produces the portfolio its\nowner expects, and coordination names are exactly what this owner expects. No change above is justified by\nthe names it admits. The deterministic part of the change is computed rather than estimated: 136 names newly\ncross the bar on the table changes alone (64 from Information Technology Services, 62 carriers, 7 from\nSpecialty Business Services, 3 from Computer Communications Equipment) and none is cut; the description\nroutes are bounded by pre-registered ranges with an upper falsifier for a floodgate and a lower one for an\ninert rule; media and extraction carry guard predictions (nothing from a content code, nothing from a\nmining code may advance); health is the control group, its absolute count allowed to move only by the 40\nsoftware:health names the parity fix carries and its ranked mean by no more than two points. The gate, the\ntier bands, the weights, the jurisdiction penalties and the two first-screen thresholds do not move. A\ndilution fail stays a fail; the card may now record whether the dilution financed a solvent unit toward a\nstated solvency point, and that annotation changes nothing until a later version has counted what became of\nsuch names. The frozen 2026-08-28 vintages keep the v2.0 judgment, errors included, and the v2.1 re-screen is\nregistered as a new instrument compared only with itself.",
+ "gate_change": "The survivability gate is unchanged in every term and remains a gate: negative FCF with under 12 months runway and no committed financing, three-year dilution above 25 percent, a pending buyout, and going-concern doubt are fails with no carve-out; the yolk rule of proposal 1 is rejected because it converts a management-stated solvency date (evidence the B clause caps at 14) into a gate pass and flips the two externally confirmed fails (BFLY at about 28 percent three-year dilution, DMTRF at 34.8 percent in one year). One recording is added with no effect on the gate, the tier or the list: on a card that fails for dilution only, the scorer writes developmental: yes when all four hold from filings (a stated solvency point at a defined scale with a date; unit or segment gross margin positive and rising in four of the last four quarters; segment or unit operating income positive in the last two quarters; runway of 24 months or more at the current burn or financing committed to the stated point), else no. After twelve months the report card counts annotated fails and their fate; a later version may rule on it, this one does not. The two first-screen thresholds (need 20 or more AND viability 9 or more) and the R1.5 clinical-stage programmatic cut are unchanged, and no first-screen analogue is added for coordination names. Four mechanical rules are added around the gate and the cut, none of which moves a threshold: (1) Stage 2 admissibility: a cut of a name whose first-screen class is a Layer 0 id or alias must name the missing B item (no host flow named, no host number, attribution not computable, rebound induced) or a survivability fact; enabler, indirect need and not a direct need are not banned words, they are not a reason; the rule applies to every class equally, regulated utilities included. (2) Enrich obligation: no need cut is recorded on a viable name in an enrich or desc code until its description has been read; when none exists the reason says no description available. (3) Pipeline obligations: round1_v21.py applies class-only relabels and keeps the name-for-name regression on the v2.0 prior file; round1_merge_enriched.py runs the boost loop when the Yahoo entry carries desc or the class is software, services or conglomerate, labels hybrids software:<label> for software and services bases and <class>:<label> otherwise, caps the boosted total at 24 and breaks ties by list order; fetch_profiles.py fetches the roughly 330 newly enrich-flagged viable names; round1_score.py carries the flag enrich-if-viable on name lines 9 to 14 and merges the duplicate Telecommunications Equipment key. (4) Registration: register_logic.py --logic stamps v2.1 and the refresh queue owes a full universe re-screen and a ranked re-score; the 2026-08-28 vintages stay frozen and are graded on v2.0 scores; the predictions are registered as a superseding protocol entry preserving every v2.0 endpoint.",
+ "predictions": [
+  {
+   "metric": "First-screen advance count (need 20 or more and viability 9 or more, status empty) on the recorded 15,797-name screen after the v2.1 tables, relabels and boosts",
+   "current_value": "3,131 of 9,465 alive names (8,820 with viability 9 or more), data/round1_final_scores.csv",
+   "expected_after": "3,350 to 3,500. Computed floor 3,267: 136 names cross on the table changes alone (Yahoo Information Technology Services 64, Yahoo Telecom Services 62, Yahoo Specialty Business Services 7, Computer Communications Equipment via its Yahoo entry 3) and 0 are cut, from a re-run of the recorded screen with the real Yahoo-base-plus-boost mechanism. Description routes add 85 to 230 from bounded pools (software base 216, former software:infrastructure 49, conglomerate 81, Computer Hardware 21, Trucking 17, materials with profiles 188, about 330 newly fetched exchange-coded names) at proxy hit rates measured on the 2,493 stage 2 descriptions: sensing 4 percent of software descriptions, physical information substrate 5 percent, tools mechanism tokens 8 percent, circulation nouns 4 percent of non-health descriptions",
+   "falsified_if": "Above 3,650 (a description route is a floodgate: identify it from the per-family lines below and withdraw that regex) or below 3,290 (the description routes attached fewer than 23 names and the boost table is inert as written)"
+  },
+  {
+   "metric": "Yahoo Telecom Services family: names newly admitted and their stage 2 outcome",
+   "current_value": "62 viable no-code carriers at need 14, 0 advanced; the 29 exchange-coded carriers that reached stage 2 passed at 3 of 29 (10 percent), cut as slow incumbent utilities",
+   "expected_after": "62 newly admitted; stage 2 A or B rate 5 to 25 percent under the admissibility rule, with cut reasons naming a missing host number (persons connected per dollar, price per connection series) rather than a label",
+   "falsified_if": "Stage 2 rate below 3 percent (the parity prior admits only names a stock-attached reading rejects; revert the entry to 18 at the next registration) or above 40 percent (the reader treats the relabel as a pass; re-run a blind seeded sample of 12)"
+  },
+  {
+   "metric": "Yahoo Information Technology Services hybrids: names newly admitted and their stage 2 outcome",
+   "current_value": "64 hybrids at 18 (software:health 40, software:transport 14, software:shelter 7, software:food 3), 0 advanced; comparable v2.0 cohorts pass stage 2 at 12 of 93 for software:health (12.9 percent) and 18 of 49 for software:transport (36.7 percent)",
+   "expected_after": "64 newly admitted; pooled stage 2 A or B rate 10 to 30 percent",
+   "falsified_if": "Below 5 percent (the parity fix admits identical evidence that the stage 2 read rejects, so the software bases were too generous) or above 50 percent"
+  },
+  {
+   "metric": "software:tools (the relabelled software:infrastructure cohort) advance count",
+   "current_value": "0 of 49 advanced (12 plus 6 = 18 on the bare manufactur boost, or 12 plus 4 = 16 on cybersecurity)",
+   "expected_after": "5 to 20 advance, only names whose descriptions carry a tools mechanism token, a physical information substrate term or a sensing term; the cybersecurity names stay at 16",
+   "falsified_if": "Above 30 (the narrowed regexes still admit the cybersecurity and consulting cohort the earlier v2.1 simulation showed) or 0 (the mechanism tokens miss every description that produced the old label)"
+  },
+  {
+   "metric": "Materials class advance count, with the extraction guard",
+   "current_value": "0 of 603 (517 viable); no circulation route exists in the tables",
+   "expected_after": "10 to 45 advance via circulation descriptions from Steel, Aluminum, Copper, Chemicals, Specialty Chemicals, Packaging, Paper, Plastic Products and the newly fetched exchange codes; 0 from Metal Mining, Other Metals and Minerals, Other Industrial Metals & Mining, Gold, Silver and Precious Metals",
+   "falsified_if": "0 advance, above 80 advance, or any name from an extraction-only code priced at 8 or below advances (the base plus boost arithmetic was applied wrongly)"
+  },
+  {
+   "metric": "Conglomerate class advance count",
+   "current_value": "0 of 81 viable (the enrich flag on Multi-Sector Companies and the Yahoo Conglomerates entry never reached the boost loop)",
+   "expected_after": "15 to 50",
+   "falsified_if": "Above 65 (the boost admits any multi-segment description and a segment-share condition is needed) or below 5 (the loop still does not run on the class)"
+  },
+  {
+   "metric": "Services class advance count",
+   "current_value": "0 of 171 names still classed services",
+   "expected_after": "7 to 20: 7 computed (Specialty Business Services energy and water hybrids moving from 18 to 20) plus circulation matches at 10 plus 10",
+   "falsified_if": "Below 7 (the base change did not land) or above 35 (services are crossing on words that are not loops)"
+  },
+  {
+   "metric": "Media class advance count (guard)",
+   "current_value": "0 of 265",
+   "expected_after": "0 to 8, all from Cable & Other Pay Television Services names whose fetched Yahoo entry is Telecom Services",
+   "falsified_if": "Any name whose Yahoo entry is Entertainment, Broadcasting, Publishing, Advertising Agencies or Internet Content & Information advances, or more than 10 media-coded names advance"
+  },
+  {
+   "metric": "Health control group at the first screen: health plus software:health advanced count and share",
+   "current_value": "1,177 health plus 93 software:health = 1,270 of 3,131 (40.6 percent)",
+   "expected_after": "1,310 (exactly the 40 Information Technology Services software:health names the parity fix carries, computed), share 37 to 39.5 percent; no exchange or Yahoo health prior moves",
+   "falsified_if": "Absolute count outside 1,305 to 1,320 (a health prior moved), or share below 34 percent (over-correction)"
+  },
+  {
+   "metric": "Stage 2 vocabulary and pass rate on the relabelled tools and information classes",
+   "current_value": "16 of 3,055 verdict reasons use enabler or indirect need, 15 of them on the infrastructure class (10 also appear in search_index.json); infrastructure class pass rate (A or B) 236 of 612 (38.6 percent) against health 27.3 percent",
+   "expected_after": "0 cuts on a Layer 0 class without the named missing B item; tools plus information pass rate 30 to 45 percent",
+   "falsified_if": "Pass rate above 55 percent (the relabel leaks names through judgment rather than evidence), or more than 2 percent of cuts on those classes lack the named item (the admissibility rule is not being applied)"
+  },
+  {
+   "metric": "Blind re-score of the ranked 53 under the v2.1 clauses: health control, transport and tech clusters, loop-sign order, rank stability",
+   "current_value": "health mean total 75.8 (n 27); transport cluster WAB, CNI, CP, UNP, YMM: E 3.6, F_clock 3.4, A 13.2, rail E UNP 1, CP 3, CNI 2; tech cluster BSY, IOT, TSM, TOELY, BB: A 14.4, C1 5.2; amplifying labels 5 (DXCM, RMD, TSM, TOELY, DLEGF); loop means damping 77.9, neutral 72.8, amplifying 62.8; B at 21 or above: health 17 of 27, non-health 6 of 26 (data/engine_tiers.json)",
+   "expected_after": "health mean within 2 points (73.8 to 77.8); rail E unchanged and transport E mean 3.4 to 4.2; every corridor owner's F_clock stays 3 and transport F_clock mean 3.4 to 3.8; tech C1 mean 5.2 to 6.4 with TSM and TOELY staying in 2 to 5 (compute per person has no ceiling) and at least 3 amplifying labels remaining; tech A 14.0 to 15.4 (a conduct-test result on YMM may move its deduction from 3 to 1); health names at B 21 or above fall to 12 to 17 as efficacy-only trials become class 3 unless computed, non-health 5 to 8; the damping above neutral above amplifying order holds; Spearman between v2.0 and v2.1 totals 0.88 to 0.98",
+   "falsified_if": "Health mean moves more than 3 points (the clauses re-price medicine); any rail E rises above 3 (the node test rewards size); any corridor owner's F_clock moves (the asset basis was not respected); tech C1 mean above 7.5 or no amplifying label left (the bounded band is a relabel); non-health B 21 or above exceeds 10 (the class table lowered the standard); the loop-sign order breaks; Spearman below 0.80 (a new instrument, to be registered as v3 with a fresh vintage)"
+  },
+  {
+   "metric": "Blind second-scorer agreement on a new pre-registered 8-name batch (at least 3 information or tools class names and 2 transport names) scored from the v2.1 text alone",
+   "current_value": "per-measure mean absolute deviation A 2.0, B 2.2, C 1.3, D 0.9, E 1.1, F 0.3; total 5.94 of 100; gate agreement 16 of 16 (data/rigor/reliability.json)",
+   "expected_after": "A at most 2.5, B 2.7, C 1.8, D 1.2, E 1.6, F 1.0; total at most 7; gate 8 of 8; every card carries the recorded items (host flow with Layer 0 id, evidence class, rebound outcome, ceiling, penetration, largest node, three moat results, clock basis)",
+   "falsified_if": "Any clause-affected measure above twice its current deviation (A 4.0, B 4.4, C 2.6, E 2.2, F 1.0), total above 9, gate agreement below 8 of 8, or more than 1 of 8 cards lacking a recorded item; the failing clause reverts to its v2.0 text pending rewrite"
+  },
+  {
+   "metric": "Universe forward-return information coefficient of v2.1 first-screen scores against the frozen v2.0 endpoint, same names and window (about 9,982 priced names, horizon 2027-08-28)",
+   "current_value": "registered v2.0 universe endpoint: Spearman IC above 0.03 at 2027-08-28, accruing; advanced-minus-cut spread stated either way",
+   "expected_after": "IC(v2.1) at or above IC(v2.0) minus 0.005; the re-priced subset (the 136 computed admissions plus the description-route admissions) carries an advanced-minus-cut spread with the same sign as the universe spread",
+   "falsified_if": "IC(v2.1) below IC(v2.0) by more than 0.01, or the re-priced subset's spread has the opposite sign to the universe spread; the prior changes revert at the next registration with the reversal published"
+  }
+ ],
+ "rejected_ideas": [
+  "Yolk rule as a gate outcome (proposal 1): keyed on a management-stated solvency date, which the B clause caps at 14 as evidence, it would flip BFLY (stated breakeven plan, rising gross margin, rising probes per share, long runway) and DMTRF to gate: pass:developmental and reverse the gate's one externally confirmed result (16 of 16 blind agreement including the BFLY fail); replaced by a no-effect card annotation.",
+  "Transportation Services 18 to 20 (proposal 1): the 21 viable names in the code are Booking, Expedia, MakeMyTrip, Global Business Travel, Lindblad, charter aviation, Virgin Galactic and LPG tankers; only GXO, RXO, XPO and PAL are freight coordination, and only one carries the Yahoo label the parity argument rested on; the rationale counted the names that would cross, which is the trap the constraints name. Replaced by the enrich flag at 18 so the Yahoo entry decides.",
+  "Precision Instruments 20 to 22 presented as a relabel (proposal 1): data/rubric/prior_v20.json and round1_score.py both record 20; the claim that the registered prior was 22 is false.",
+  "A description route for Telecom Services at 14 plus 8 (proposal 1): broadband, fiber, wireless carrier, 5G or satellite appears in essentially every carrier description, so the boost could not fail; replaced by the code-prior parity fix at 20 with the utility-slow-growth flag, justified by the 28 carriers already at 20 under an exchange code.",
+  "Rebound test rewriting C2's bands (proposal 2): it overwrote the coupling measure behind the recorded monotonic validation and the Darling example, with a predetermined outcome for medicine (category spend per patient rising faster than incidence) and an unmeasured default for software; kept only as a B cap at 20 on an induced outcome, confined to overshoot-side drains, feeding C2's unchanged bands as evidence.",
+  "Rebound test with no direction rule and a cap on missing data (proposal 1): TMDX (transplants up 25 percent against a flat waitlist) would read induced and a niche coordinator would be capped for lack of statistics; fixed by the exemption of deficit-side inflows and rebound: none with no cap.",
+  "Two-largest-boost stacking to a cap of 26 (proposal 2): a mechanic that existed for one class (resilience at 18 by design) and raised the chance of a services name crossing on two thin keyword hits; the single-largest rule stands with list-order tie-break and a cap of 24.",
+  "Resilience priced below the bar by belief (proposal 2, 12 plus 6 = 18 for an arms-race loop): a judgment dressed as a number; replaced by a physical-resilience regex attached to the Layer 0 infrastructure stock, cybersecurity kept at 4 without a stock, and the arms-race question moved to C1's enlarging-mechanism test.",
+  "Bare manufactur as a tools boost (both proposals): 1,094 of 3,055 stage 2 descriptions (36 percent, including 26 percent of health) match it, so any SaaS naming manufacturing customers would cross; replaced by mechanism tokens.",
+  "Broad sensing words monitoring, inspection, predictive, forecast (proposal 1): 21 percent of software descriptions against 7 percent of health; replaced by a noun-anchored regex measured at 4 percent of software descriptions.",
+  "AI marketing terms in the information regex (proposal 1: gpu, accelerator, inference, edge computing, cloud infrastructure; proposal 2: hyperscale): the words the proposals claimed to exclude; only physical substrate and carriage terms remain, and bare semiconductor is narrowed to semiconductor manufacturing or fabrication, wafer and foundry.",
+  "Bare fiber or fibre (both proposals): 98 stage 2 descriptions match glass, dietary and textile fibre, and a Paper row with a new enrich flag could reach 20 as information on a virgin pulp description; restricted to fiber optic, fibre optic and optical fibre.",
+  "Sensing credit of 2 under E (proposal 1): a product-class bonus with no measured bias behind it, in the measure that is the fragility qualifier on B; sensing is scored once, under B.",
+  "E bands read from node share alone (proposal 1): would lift UNP, CP and CNI by 6 to 7 points and drop single-plant device makers (TSNLF, BOEUF, ENGCF, CRMD, CLPBY) to 0 or 1; replaced by the slack test kept as written plus a node test applied only to network operators, the lower governing.",
+  "The decree clause under E (proposal 1, one jurisdiction able to halt the network): every company's home regulator can halt it; replaced by more than 60 percent of throughput inside one named licence, concession or export-control regime.",
+  "Adoption clock as mandatory with 0 to 1 on a missing penetration figure (proposal 1): would hit 45 of 53 ranked names in the measure with the best blind agreement (F MAD 0.3) and left holes in the band table (penetration 10 to 50 percent with a doubling time above three years unassigned); replaced by an override that lifts only, requires three cited numbers, closes the holes with the shoulder band, and never applies to a corridor owner.",
+  "The 20-percent-of-revenue rule for a retrofit line (proposal 2): a new threshold without a derivation; replaced by the largest-revenue-segment document test.",
+  "Capping the adoption clock at the asset band plus 1 (critic of proposal 1): contradicts the clock principle recorded 28 Aug 2026 (time is relative to the correcting system; substitution corrects in months to years); the override already requires the three numbers and the largest-segment test, and corridor owners are excluded outright.",
+  "C1 sub-band crediting a host-flow reduction inside C1 (proposal 1): pays the same number twice (once under B); dropped.",
+  "Narrowing C1 neutral to 8 to 9 and making bounded amplification a separate 6 to 7 band with three citations for every name (proposal 2): would relabel 25 recorded neutral names in the second most reliable measure; neutral stays 6 to 9 and the bounded reading sits inside it.",
+  "Ceiling chosen freely by the scorer (proposal 1): for TSM one scorer names connected devices and scores 6 to 9, another reads the power-per-wafer claim as Jevons and scores 0 to 1, an 8-point spread; replaced by the ceiling table keyed by Layer 0 id and the rule that unbounded per-person units (compute cycles, content hours) have no ceiling.",
+  "Stage 2 vocabulary ban on enabler and indirect need (proposal 1) and the telecom-only ban on slow incumbent utility (proposal 2): the first prevents a judge writing a true reason, the second exempts one delivery utility from a sector-neutral cut that stands on 54 of 60 electric and 17 of 23 water utilities; replaced by the positive requirement to name the missing B item, applied to every class.",
+  "SEMICONDUCT name line at 20 (proposal 2): the rationale claimed a 2-point name-only discount, but the table's discounts are 6 and 9 points; at 20 five no-code names at 15 with no description would cross. Kept at 15 with the class relabel.",
+  "Marine Transportation and Marine Shipping 16 to 18 (proposal 2): defensible on the Layer 0 lowest-energy-mode text and inert for the cut, but not one of the nine identified biases; deferred to an open question rather than smuggled in.",
+  "Exchange-code raises for EDP Services, Programming Data Processing and the three services codes offered as the mechanism (both proposals): inert, because an enrich-flagged name takes the Yahoo base (ns, nd, fl = YIND[yind]); kept only for consistency, with the real fix on the Yahoo entries Information Technology Services and Specialty Business Services.",
+  "Cable at 12 justified by a description regex (proposal 1): all 16 viable names have no profile, so the route did not exist; kept at 12 with enrich only because the Yahoo entry (Telecom Services 20 or Entertainment 2) decides after the fetch, and stated as inert until then.",
+  "Rental/Leasing Companies enrich (proposals 1 and 2): inert, since the Yahoo entry Rental & Leasing Services is 8 plus a transport boost of 8 = 16; dropped.",
+  "Class names circulation, resilience and sensing as first-screen classes (proposal 1): not Layer 0 ids, so audit_imbalance.py could not map them; carried as flags on materials, infrastructure and information.",
+  "Worked readings keyed to ranked names' own evidence (proposal 2: YMM's fulfilment rate, empty-mile figure, single gateway and multi-region hosting; CNI's stored locomotives; WAB's battery locomotive; TSM's foundry): the reader cannot tell whether the rule or the example came first; every illustration in the v2.1 text is hypothetical, and ranked-name effects are pre-registered as falsifiers instead.",
+  "Requiring the loop word within the first 300 characters of a description (considered and rejected in proposal 1): harder for a blind scorer to reproduce by hand than a noun-anchored regex plus the stage 2 secondary-share question.",
+  "Precision Instruments and Scientific instruments as a new sensing class with its own prior range (proposal 2): numbers unchanged, the flag carries the tissue.",
+  "Audited as the standard for class 2 evidence (proposal 1): empty-mile, kWh-per-unit and leakage figures are unaudited KPIs everywhere, so a strict scorer would close the top band to nearly every non-trial name; replaced by disclosed in a document lodged with a regulator."
+ ],
+ "open_questions": [
+  "Coverage, not rubric: 62 percent of the universe has no exchange code and 662 viable names have no profile at all, so coordination tissue in that tail stays invisible until profiles are fetched; the enrich obligation covers flagged codes only, and the false-negative sampling process (the route VMD took) remains the only path for a name whose description uses only the barred words artificial intelligence or machine learning.",
+  "The 2 Sep 2026 override vocabulary does not match the v2.1 classes: its 29 coordination names mix six carriers (which would be information at 20 under the Yahoo parity) with SaaS of every kind, its 11 materials names include three recyclers (tire pyrolysis, drum reconditioning, tailings recovery) that belong to circulation at 22, and its 18 infrastructure names are mostly tools; until the next classification pass re-cuts them, class_prior prices coordination at 12, materials at 12 and infrastructure at 15, all below the bar.",
+  "Ceiling defaults where the ceiling is contestable (registered trucks above 3.5 tonnes against all commercial vehicles; households against persons): the blind batch will show whether the published table suffices or whether per-stock defaults must be enumerated further.",
+  "Rebound coverage: public system series exist for large flows (vehicle-kilometres, fossil kWh, crude steel) and not for niche ones, so rebound: none will cluster in niche coordinators; the report card should track how often none is recorded by class, since it is an availability asymmetry in the opposite direction from the one fixed.",
+  "Conglomerates: the boost cannot see segment size, so a trading house that mentions one hospital may cross at 12 plus 8; if the conglomerate line breaches its upper falsifier the candidate fix is a segment-share condition read from the segment note, which is a stage 2 obligation rather than a regex.",
+  "Developmental annotation: after twelve months, count annotated dilution fails and what became of them, and decide at v2.2 whether the annotation earns any standing; until then it is data.",
+  "Whether STEEL and INFRASTRUCT in the shelter name line (18) should move to materials and tools (15): unchanged in v2.1 to keep the shelter line intact; both remain below the bar either way.",
+  "Electronic Components (exchange and Yahoo) is placed under tools; a case exists for information (connectors and sensors are substrate); the placement changes no number.",
+  "Marine modal parity (Marine Transportation and Marine Shipping 16 against Trucking and Air Freight 18, with the Layer 0 lowest-energy-mode text): deferred because it is not one of the identified biases; it would not cross the bar on its own.",
+  "A blind seeded sample of 12 newly admitted names (information, tools, materials:circulation) should be registered with the re-screen so the stage 2 reader's treatment of the new class labels is measured, not assumed; the second-scorer batch above measures stage 3, not stage 2.",
+  "Trucking with the desc flag admits a carrier whose description says intermodal or third-party logistics; whether the coordination regex separates the matching tissue from the asset owner is unmeasured because no non-advanced trucking description is in the checkout; the transport line of the advance-count prediction is the tripwire.",
+  "The moat conduct tests will record moat: unmeasured wherever a per-unit price series is not published; the blind batch should report how often silence clusters by sector, since a company can avoid the 3-point deduction by not disclosing."
+ ]
+}

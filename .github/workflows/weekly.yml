@@ -52,6 +52,9 @@ jobs:
       - name: Quarterly universe refresh (self-guarded)
         run: python scripts/universe_refresh.py
 
+      - name: Read business descriptions for the routed codes (converges over runs)
+        run: python scripts/fetch_profiles.py 400 || echo "profile fetch failed this week; the enrich obligation stays open"
+
       - name: Re-read the rigor instruments
         run: |
           python scripts/report_card.py

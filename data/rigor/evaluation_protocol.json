@@ -1,6 +1,6 @@
 {
- "registered": "2026-08-31",
- "purpose": "pre-registration of the evaluation, so the forward test cannot be moved after the data arrives",
+ "registered": "2026-09-03",
+ "purpose": "pre-registration of the evaluation, so the forward test cannot be moved after the data arrives; v3 registers the v2.1 first-screen logic and its predictions before the v2.1 re-screen is run",
  "vintage": {
   "file": "freeze_2026-08-28.json",
   "sha256_scores": "0feef03617a594b3d2a9cbc4742140f451aa9ead946c5e74b9fc4d93a4bcc1b0",
@@ -76,11 +76,134 @@
   "no endpoint, horizon, or success threshold changes after registration; corrections require a new registration that supersedes and preserves this one",
   "weights and tier bands stay frozen for the evaluation window; the derivation layer may keep correcting labels, since labels obey measurements",
   "one look per week when the price track updates; no intraweek peeking",
-  "the momentum contamination check is reported alongside every forward reading"
+  "the momentum contamination check is reported alongside every forward reading",
+  "a logic version is registered (register_logic.py --logic) and its predictions committed before its re-screen result is looked at; the v2.0 vintage keeps every v1 and v2 endpoint unchanged"
  ],
  "supersedes": {
-  "file": "evaluation_protocol_v1.json",
-  "sha256": "fedb355f1bf792389d6350cdb9da1a498966cbf6b785410c41422ab8e2082c53",
-  "reason": "adds universe-level endpoints and registers the pending external factor test; every v1 endpoint is preserved unchanged"
+  "file": "evaluation_protocol_v2.json",
+  "sha256": "450d9b416e07aad038a3acb35e8eee8b650b84ca23e52ce48c7ff9238b13aa00",
+  "reason": "registers the v2.1 first-screen logic, its thirteen pre-registered predictions and the pending v2.1 vintage; every v2 endpoint and the v2.0 vintage are preserved unchanged",
+  "chain": [
+   {
+    "file": "evaluation_protocol_v1.json",
+    "sha256": "fedb355f1bf792389d6350cdb9da1a498966cbf6b785410c41422ab8e2082c53",
+    "reason": "adds universe-level endpoints and registers the pending external factor test; every v1 endpoint is preserved unchanged"
+   }
+  ]
+ },
+ "vintages": [
+  {
+   "tag": "v2.0",
+   "file": "freeze_2026-08-28.json",
+   "asof": "2026-08-28",
+   "sha256_scores": "0feef03617a594b3d2a9cbc4742140f451aa9ead946c5e74b9fc4d93a4bcc1b0",
+   "logic": "v2.0"
+  }
+ ],
+ "pending_vintage": {
+  "tag": "v2.1",
+  "rule": "frozen from the v2.1 engine file once the re-screen and the ranked re-score are done; its file and hash are registered by a v4 protocol that supersedes this one, and both vintages are graded side by side by the report card from then on",
+  "prior_file": "data/rubric/prior_v21.json",
+  "spec_file": "data/rubric/v21_spec.json",
+  "prior_sha256": "7173be0c72f481c6b5895501aff42b46e35540d4f8477a7ba437414efffde599",
+  "spec_sha256": "58a81e16ce0dc761aa812e500c8193ee15714704c7ae11b351dec1cd00c55ede"
+ },
+ "v21_predictions": {
+  "registered": "2026-09-03",
+  "rule": "written before round1_v21.py was run on the recorded screen with prior_v21.json; each carries what falsifies it; a prediction that fails is published as failed, not edited",
+  "computed_floor_note": "the spec's computed floor (136 names cross on the table changes alone, 0 cut) was measured while the spec was written; the registered re-screen result is recorded in data/rigor/v21_rescreen.json after this registration is committed",
+  "predictions": [
+   {
+    "id": "v21-P01",
+    "metric": "First-screen advance count (need 20 or more and viability 9 or more, status empty) on the recorded 15,797-name screen after the v2.1 tables, relabels and boosts",
+    "current_value": "3,131 of 9,465 alive names (8,820 with viability 9 or more), data/round1_final_scores.csv",
+    "expected_after": "3,350 to 3,500. Computed floor 3,267: 136 names cross on the table changes alone (Yahoo Information Technology Services 64, Yahoo Telecom Services 62, Yahoo Specialty Business Services 7, Computer Communications Equipment via its Yahoo entry 3) and 0 are cut, from a re-run of the recorded screen with the real Yahoo-base-plus-boost mechanism. Description routes add 85 to 230 from bounded pools (software base 216, former software:infrastructure 49, conglomerate 81, Computer Hardware 21, Trucking 17, materials with profiles 188, about 330 newly fetched exchange-coded names) at proxy hit rates measured on the 2,493 stage 2 descriptions: sensing 4 percent of software descriptions, physical information substrate 5 percent, tools mechanism tokens 8 percent, circulation nouns 4 percent of non-health descriptions",
+    "falsified_if": "Above 3,650 (a description route is a floodgate: identify it from the per-family lines below and withdraw that regex) or below 3,290 (the description routes attached fewer than 23 names and the boost table is inert as written)"
+   },
+   {
+    "id": "v21-P02",
+    "metric": "Yahoo Telecom Services family: names newly admitted and their stage 2 outcome",
+    "current_value": "62 viable no-code carriers at need 14, 0 advanced; the 29 exchange-coded carriers that reached stage 2 passed at 3 of 29 (10 percent), cut as slow incumbent utilities",
+    "expected_after": "62 newly admitted; stage 2 A or B rate 5 to 25 percent under the admissibility rule, with cut reasons naming a missing host number (persons connected per dollar, price per connection series) rather than a label",
+    "falsified_if": "Stage 2 rate below 3 percent (the parity prior admits only names a stock-attached reading rejects; revert the entry to 18 at the next registration) or above 40 percent (the reader treats the relabel as a pass; re-run a blind seeded sample of 12)"
+   },
+   {
+    "id": "v21-P03",
+    "metric": "Yahoo Information Technology Services hybrids: names newly admitted and their stage 2 outcome",
+    "current_value": "64 hybrids at 18 (software:health 40, software:transport 14, software:shelter 7, software:food 3), 0 advanced; comparable v2.0 cohorts pass stage 2 at 12 of 93 for software:health (12.9 percent) and 18 of 49 for software:transport (36.7 percent)",
+    "expected_after": "64 newly admitted; pooled stage 2 A or B rate 10 to 30 percent",
+    "falsified_if": "Below 5 percent (the parity fix admits identical evidence that the stage 2 read rejects, so the software bases were too generous) or above 50 percent"
+   },
+   {
+    "id": "v21-P04",
+    "metric": "software:tools (the relabelled software:infrastructure cohort) advance count",
+    "current_value": "0 of 49 advanced (12 plus 6 = 18 on the bare manufactur boost, or 12 plus 4 = 16 on cybersecurity)",
+    "expected_after": "5 to 20 advance, only names whose descriptions carry a tools mechanism token, a physical information substrate term or a sensing term; the cybersecurity names stay at 16",
+    "falsified_if": "Above 30 (the narrowed regexes still admit the cybersecurity and consulting cohort the earlier v2.1 simulation showed) or 0 (the mechanism tokens miss every description that produced the old label)"
+   },
+   {
+    "id": "v21-P05",
+    "metric": "Materials class advance count, with the extraction guard",
+    "current_value": "0 of 603 (517 viable); no circulation route exists in the tables",
+    "expected_after": "10 to 45 advance via circulation descriptions from Steel, Aluminum, Copper, Chemicals, Specialty Chemicals, Packaging, Paper, Plastic Products and the newly fetched exchange codes; 0 from Metal Mining, Other Metals and Minerals, Other Industrial Metals & Mining, Gold, Silver and Precious Metals",
+    "falsified_if": "0 advance, above 80 advance, or any name from an extraction-only code priced at 8 or below advances (the base plus boost arithmetic was applied wrongly)"
+   },
+   {
+    "id": "v21-P06",
+    "metric": "Conglomerate class advance count",
+    "current_value": "0 of 81 viable (the enrich flag on Multi-Sector Companies and the Yahoo Conglomerates entry never reached the boost loop)",
+    "expected_after": "15 to 50",
+    "falsified_if": "Above 65 (the boost admits any multi-segment description and a segment-share condition is needed) or below 5 (the loop still does not run on the class)"
+   },
+   {
+    "id": "v21-P07",
+    "metric": "Services class advance count",
+    "current_value": "0 of 171 names still classed services",
+    "expected_after": "7 to 20: 7 computed (Specialty Business Services energy and water hybrids moving from 18 to 20) plus circulation matches at 10 plus 10",
+    "falsified_if": "Below 7 (the base change did not land) or above 35 (services are crossing on words that are not loops)"
+   },
+   {
+    "id": "v21-P08",
+    "metric": "Media class advance count (guard)",
+    "current_value": "0 of 265",
+    "expected_after": "0 to 8, all from Cable & Other Pay Television Services names whose fetched Yahoo entry is Telecom Services",
+    "falsified_if": "Any name whose Yahoo entry is Entertainment, Broadcasting, Publishing, Advertising Agencies or Internet Content & Information advances, or more than 10 media-coded names advance"
+   },
+   {
+    "id": "v21-P09",
+    "metric": "Health control group at the first screen: health plus software:health advanced count and share",
+    "current_value": "1,177 health plus 93 software:health = 1,270 of 3,131 (40.6 percent)",
+    "expected_after": "1,310 (exactly the 40 Information Technology Services software:health names the parity fix carries, computed), share 37 to 39.5 percent; no exchange or Yahoo health prior moves",
+    "falsified_if": "Absolute count outside 1,305 to 1,320 (a health prior moved), or share below 34 percent (over-correction)"
+   },
+   {
+    "id": "v21-P10",
+    "metric": "Stage 2 vocabulary and pass rate on the relabelled tools and information classes",
+    "current_value": "16 of 3,055 verdict reasons use enabler or indirect need, 15 of them on the infrastructure class (10 also appear in search_index.json); infrastructure class pass rate (A or B) 236 of 612 (38.6 percent) against health 27.3 percent",
+    "expected_after": "0 cuts on a Layer 0 class without the named missing B item; tools plus information pass rate 30 to 45 percent",
+    "falsified_if": "Pass rate above 55 percent (the relabel leaks names through judgment rather than evidence), or more than 2 percent of cuts on those classes lack the named item (the admissibility rule is not being applied)"
+   },
+   {
+    "id": "v21-P11",
+    "metric": "Blind re-score of the ranked 53 under the v2.1 clauses: health control, transport and tech clusters, loop-sign order, rank stability",
+    "current_value": "health mean total 75.8 (n 27); transport cluster WAB, CNI, CP, UNP, YMM: E 3.6, F_clock 3.4, A 13.2, rail E UNP 1, CP 3, CNI 2; tech cluster BSY, IOT, TSM, TOELY, BB: A 14.4, C1 5.2; amplifying labels 5 (DXCM, RMD, TSM, TOELY, DLEGF); loop means damping 77.9, neutral 72.8, amplifying 62.8; B at 21 or above: health 17 of 27, non-health 6 of 26 (data/engine_tiers.json)",
+    "expected_after": "health mean within 2 points (73.8 to 77.8); rail E unchanged and transport E mean 3.4 to 4.2; every corridor owner's F_clock stays 3 and transport F_clock mean 3.4 to 3.8; tech C1 mean 5.2 to 6.4 with TSM and TOELY staying in 2 to 5 (compute per person has no ceiling) and at least 3 amplifying labels remaining; tech A 14.0 to 15.4 (a conduct-test result on YMM may move its deduction from 3 to 1); health names at B 21 or above fall to 12 to 17 as efficacy-only trials become class 3 unless computed, non-health 5 to 8; the damping above neutral above amplifying order holds; Spearman between v2.0 and v2.1 totals 0.88 to 0.98",
+    "falsified_if": "Health mean moves more than 3 points (the clauses re-price medicine); any rail E rises above 3 (the node test rewards size); any corridor owner's F_clock moves (the asset basis was not respected); tech C1 mean above 7.5 or no amplifying label left (the bounded band is a relabel); non-health B 21 or above exceeds 10 (the class table lowered the standard); the loop-sign order breaks; Spearman below 0.80 (a new instrument, to be registered as v3 with a fresh vintage)"
+   },
+   {
+    "id": "v21-P12",
+    "metric": "Blind second-scorer agreement on a new pre-registered 8-name batch (at least 3 information or tools class names and 2 transport names) scored from the v2.1 text alone",
+    "current_value": "per-measure mean absolute deviation A 2.0, B 2.2, C 1.3, D 0.9, E 1.1, F 0.3; total 5.94 of 100; gate agreement 16 of 16 (data/rigor/reliability.json)",
+    "expected_after": "A at most 2.5, B 2.7, C 1.8, D 1.2, E 1.6, F 1.0; total at most 7; gate 8 of 8; every card carries the recorded items (host flow with Layer 0 id, evidence class, rebound outcome, ceiling, penetration, largest node, three moat results, clock basis)",
+    "falsified_if": "Any clause-affected measure above twice its current deviation (A 4.0, B 4.4, C 2.6, E 2.2, F 1.0), total above 9, gate agreement below 8 of 8, or more than 1 of 8 cards lacking a recorded item; the failing clause reverts to its v2.0 text pending rewrite"
+   },
+   {
+    "id": "v21-P13",
+    "metric": "Universe forward-return information coefficient of v2.1 first-screen scores against the frozen v2.0 endpoint, same names and window (about 9,982 priced names, horizon 2027-08-28)",
+    "current_value": "registered v2.0 universe endpoint: Spearman IC above 0.03 at 2027-08-28, accruing; advanced-minus-cut spread stated either way",
+    "expected_after": "IC(v2.1) at or above IC(v2.0) minus 0.005; the re-priced subset (the 136 computed admissions plus the description-route admissions) carries an advanced-minus-cut spread with the same sign as the universe spread",
+    "falsified_if": "IC(v2.1) below IC(v2.0) by more than 0.01, or the re-priced subset's spread has the opposite sign to the universe spread; the prior changes revert at the next registration with the reversal published"
+   }
+  ]
  }
 }

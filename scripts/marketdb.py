@@ -22,6 +22,7 @@ CREATE TABLE IF NOT EXISTS price_track(date TEXT, ticker TEXT, px REAL,
     PRIMARY KEY(date, ticker));
 CREATE TABLE IF NOT EXISTS universe_track(date TEXT, ticker TEXT, px REAL,
     PRIMARY KEY(date, ticker));
+CREATE TABLE IF NOT EXISTS profiles(ticker TEXT PRIMARY KEY, doc TEXT);
 """
 
 
@@ -130,3 +131,25 @@ def load_universe_track():
 
 def append_universe_snapshot(date, px):
     _append_snapshot("universe_track", date, px)
+
+
+# ---- business profiles: {ticker: {summary, industry, sector, ...}} -----------
+
+def load_profiles():
+    con = connect()
+    try:
+        return {tk: json.loads(d) for tk, d in con.execute("SELECT ticker, doc FROM profiles")}
+    finally:
+        con.close()
+
+
+def save_profiles(docs):
+    """Upsert a batch of profiles; a fetched-but-empty record is kept so the
+    weekly run does not retry a name that returns nothing."""
+    con = connect()
+    try:
+        with con:
+            con.executemany("INSERT OR REPLACE INTO profiles(ticker,doc) VALUES(?,?)",
+                            [(tk, json.dumps(d, separators=(",", ":"))) for tk, d in docs.items()])
+    finally:
+        con.close()

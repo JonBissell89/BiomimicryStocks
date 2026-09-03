@@ -1,9 +1,9 @@
 {
- "version": "v2.0",
- "registered": "2026-09-01",
+ "version": "v2.1",
+ "registered": "2026-09-03",
  "files": {
-  "V2_RUBRIC.md": "bd007c70a8d3481e4b8af21c0f98a3b883c349ea1edb422d10dafe3d80b44ede",
-  "FRAMEWORK.md": "f38142002fdadf16b6cbd869e62c3c04cbb0fad8bd91705df7fd817b70f6ffee"
+  "V2_RUBRIC.md": "830022ac50724725fce2dcb22d716138d6b772920b2bf4e53a8f49a0609d920e",
+  "FRAMEWORK.md": "e156c3187164e84ef513b5c7d383b432d29e296237b3acc13f9d2edb6247e74b"
  },
  "note": "hashes of the documents that define the judgment; audit_rigor fails when they drift unregistered",
  "history": [
@@ -11,6 +11,16 @@
    "date": "2026-09-01",
    "version": "v2.0",
    "kind": "initial"
+  },
+  {
+   "date": "2026-09-03",
+   "version": "v2.1",
+   "kind": "logic",
+   "files": [
+    "V2_RUBRIC.md",
+    "FRAMEWORK.md"
+   ],
+   "reason": "v2.1: first-screen class vocabulary becomes Layer 0 stock ids, evidence-parity fixes on the Yahoo entries, description route extended to services and conglomerates, circulation separated from extraction; measures, weights, tiers and gate unchanged"
   }
  ]
 }
