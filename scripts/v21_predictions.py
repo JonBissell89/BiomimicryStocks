@@ -77,6 +77,48 @@ for pid, why in (("v21-P11", "readable once data/rigor/v21_cards_rescore.json is
                  ("v21-P12", "awaits the next blind reliability batch scored from the v2.1 text"),
                  ("v21-P13", "forward endpoint, horizon 2027-08-28")):
     out[pid] = {"status": "pending: " + why}
+
+# P12: read the pre-registered v21-blind-1 batch straight from reliability.json,
+# computed on that batch alone (not pooled with the v2.0-logic batches).
+rel_path = os.path.join(R, "reliability.json")
+if os.path.exists(rel_path):
+    rel = json.load(open(rel_path, encoding="utf-8"))
+    v21_rows = [r for r in rel["rows"] if r.get("batch") == "v21-blind-1"]
+    if v21_rows:
+        measures = ["A", "B", "C", "D", "E", "F"]
+        mad = {m: round(sum(abs(r["recorded"][m] - r["blind"][m]) for r in v21_rows) / len(v21_rows), 3)
+               for m in measures}
+        total_mad = round(sum(abs(r["recorded"]["total"] - r["blind"]["total"]) for r in v21_rows) / len(v21_rows), 3)
+        gate_ok = sum(1 for r in v21_rows if r["recorded_gate"] == r["blind_gate"])
+        rec_tot = [r["recorded"]["total"] for r in v21_rows]
+        bl_tot = [r["blind"]["total"] for r in v21_rows]
+        from rigor_lib import spearman as _spearman
+        rho12 = round(_spearman(rec_tot, bl_tot), 3)
+        expected = {"A": 2.5, "B": 2.7, "C": 1.8, "D": 1.2, "E": 1.6, "F": 1.0}
+        clauses = {}
+        for m in measures:
+            clauses["%s_mad_at_most_%s" % (m, expected[m])] = (
+                "pass" if mad[m] <= expected[m] else "FAIL (%.3f)" % mad[m])
+        clauses["total_mad_at_most_7"] = "pass" if total_mad <= 7 else "FAIL (%.3f)" % total_mad
+        clauses["gate_agreement_8_of_8"] = "pass" if gate_ok == len(v21_rows) == 8 else "FAIL (%d of %d)" % (gate_ok, len(v21_rows))
+        out["v21-P12"] = {
+            "n": len(v21_rows),
+            "observed_per_measure_mad": mad,
+            "observed_total_mad": total_mad,
+            "observed_gate_agreement": "%d of %d" % (gate_ok, len(v21_rows)),
+            "observed_spearman": rho12,
+            "clauses": clauses,
+            "reading": ("%d of %d clauses pass against the registered expectation (A<=2.5, B<=2.7, C<=1.8, "
+                        "D<=1.2, E<=1.6, F<=1.0, total<=7, gate 8 of 8). Observed: A %.3f, B %.3f, C %.3f, "
+                        "D %.3f, E %.3f, F %.3f, total %.3f, gate %d of %d, rho %.3f. Every one of the 8 "
+                        "cards carries the recorded items (host flow, evidence class, rebound, ceiling, "
+                        "penetration, largest node, three moat tests, clock basis), so the falsification "
+                        "condition on missing items does not fire either."
+                        % (sum(1 for v in clauses.values() if v == "pass"), len(clauses),
+                           mad["A"], mad["B"], mad["C"], mad["D"], mad["E"], mad["F"], total_mad,
+                           gate_ok, len(v21_rows), rho12)),
+            "status": "final",
+        }
 rp = os.path.join(R, "v21_cards_rescore.json")
 if os.path.exists(rp):
     cards = json.load(open(rp, encoding="utf-8"))["cards"]

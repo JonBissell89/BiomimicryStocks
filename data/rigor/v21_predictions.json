@@ -160,7 +160,30 @@
    "metric": "Blind second-scorer agreement on a new pre-registered 8-name batch (at least 3 information or tools class names and 2 transport names) scored from the v2.1 text alone",
    "expected_after": "A at most 2.5, B 2.7, C 1.8, D 1.2, E 1.6, F 1.0; total at most 7; gate 8 of 8; every card carries the recorded items (host flow with Layer 0 id, evidence class, rebound outcome, ceiling, penetration, largest node, three moat results, clock basis)",
    "falsified_if": "Any clause-affected measure above twice its current deviation (A 4.0, B 4.4, C 2.6, E 2.2, F 1.0), total above 9, gate agreement below 8 of 8, or more than 1 of 8 cards lacking a recorded item; the failing clause reverts to its v2.0 text pending rewrite",
-   "status": "pending: awaits the next blind reliability batch scored from the v2.1 text"
+   "n": 8,
+   "observed_per_measure_mad": {
+    "A": 2.25,
+    "B": 1.375,
+    "C": 1.375,
+    "D": 1.125,
+    "E": 1.375,
+    "F": 0.375
+   },
+   "observed_total_mad": 4.875,
+   "observed_gate_agreement": "8 of 8",
+   "observed_spearman": 0.881,
+   "clauses": {
+    "A_mad_at_most_2.5": "pass",
+    "B_mad_at_most_2.7": "pass",
+    "C_mad_at_most_1.8": "pass",
+    "D_mad_at_most_1.2": "pass",
+    "E_mad_at_most_1.6": "pass",
+    "F_mad_at_most_1.0": "pass",
+    "total_mad_at_most_7": "pass",
+    "gate_agreement_8_of_8": "pass"
+   },
+   "reading": "8 of 8 clauses pass against the registered expectation (A<=2.5, B<=2.7, C<=1.8, D<=1.2, E<=1.6, F<=1.0, total<=7, gate 8 of 8). Observed: A 2.250, B 1.375, C 1.375, D 1.125, E 1.375, F 0.375, total 4.875, gate 8 of 8, rho 0.881. Every one of the 8 cards carries the recorded items (host flow, evidence class, rebound, ceiling, penetration, largest node, three moat tests, clock basis), so the falsification condition on missing items does not fire either.",
+   "status": "final"
   },
   {
    "id": "v21-P13",

@@ -1,7 +1,7 @@
 {
  "method": "blind machine second scorer over two pre-registered seeded samples, 8 names each: read only the public rubric and framework, forbidden from repository data files, independent web research; honor-system blinding, stated as the method's limit",
  "date": "2026-08-31",
- "n": 16,
+ "n": 24,
  "batches": [
   {
    "id": 1,
@@ -18,6 +18,13 @@
    "date": "2026-09-01",
    "mad": 5.63,
    "spearman": 0.848
+  },
+  {
+   "id": "v21-blind-1",
+   "n": 8,
+   "logic": "v2.1",
+   "scored": "2026-09-05",
+   "scorers": "two independent Opus scorers, four names each, rubric text and web evidence only"
   }
  ],
  "score_agreement": {
@@ -214,6 +221,294 @@
    "blind_tier": "exit",
    "recorded_gate": "pass",
    "blind_gate": "pass"
+  },
+  {
+   "tk": "TSM",
+   "batch": "v21-blind-1",
+   "recorded_gate": "pass",
+   "blind_gate": "pass",
+   "recorded": {
+    "A": 17,
+    "B": 10,
+    "C": 7,
+    "D": 11,
+    "E": 2,
+    "F": 8,
+    "total": 55,
+    "evidence_class": 5
+   },
+   "blind": {
+    "A": 13,
+    "B": 9,
+    "C": 7,
+    "D": 9,
+    "E": 2,
+    "F": 8,
+    "total": 48,
+    "evidence_class": 5
+   },
+   "delta_recorded_minus_blind": {
+    "A": 4,
+    "B": 1,
+    "C": 0,
+    "D": 2,
+    "E": 0,
+    "F": 0,
+    "total": 7
+   },
+   "note": "blind moat_result: one fail among two testable tests, subtract 1. blind clock_basis: asset; adoption override unavailable, no ceiling exists for the unit so penetration cannot be computed."
+  },
+  {
+   "tk": "IOT",
+   "batch": "v21-blind-1",
+   "recorded_gate": "pass",
+   "blind_gate": "pass",
+   "recorded": {
+    "A": 12,
+    "B": 18,
+    "C": 12,
+    "D": 14,
+    "E": 6,
+    "F": 9,
+    "total": 71,
+    "evidence_class": 3
+   },
+   "blind": {
+    "A": 16,
+    "B": 16,
+    "C": 11,
+    "D": 12,
+    "E": 4,
+    "F": 9,
+    "total": 68,
+    "evidence_class": 3
+   },
+   "delta_recorded_minus_blind": {
+    "A": -4,
+    "B": 2,
+    "C": 1,
+    "D": 2,
+    "E": 2,
+    "F": 0,
+    "total": 3
+   },
+   "note": "blind moat_result: no fails, two tests testable, no deduction. blind clock_basis: asset; adoption override attempted but unavailable (ARR not deflated by a disclosed ASP), fleet-substitution band, scored 5."
+  },
+  {
+   "tk": "BB",
+   "batch": "v21-blind-1",
+   "recorded_gate": "pass",
+   "blind_gate": "pass",
+   "recorded": {
+    "A": 10,
+    "B": 7,
+    "C": 12,
+    "D": 14,
+    "E": 7,
+    "F": 8,
+    "total": 58,
+    "evidence_class": 5
+   },
+   "blind": {
+    "A": 8,
+    "B": 7,
+    "C": 10,
+    "D": 12,
+    "E": 6,
+    "F": 7,
+    "total": 50,
+    "evidence_class": 5
+   },
+   "delta_recorded_minus_blind": {
+    "A": 2,
+    "B": 0,
+    "C": 2,
+    "D": 2,
+    "E": 1,
+    "F": 1,
+    "total": 8
+   },
+   "note": "blind moat_result: fewer than two tests testable, subtract 1, moat: unmeasured. blind clock_basis: asset; override unavailable because QNX (the D_rep>=4 unit) is not BlackBerry's largest revenue segment; automotive design-in cycle, years to a decade."
+  },
+  {
+   "tk": "YMM",
+   "batch": "v21-blind-1",
+   "recorded_gate": "pass",
+   "blind_gate": "pass",
+   "recorded": {
+    "A": 16,
+    "B": 20,
+    "C": 13,
+    "D": 13,
+    "E": 6,
+    "F": 9,
+    "total": 77,
+    "evidence_class": 3
+   },
+   "blind": {
+    "A": 17,
+    "B": 22,
+    "C": 14,
+    "D": 14,
+    "E": 1,
+    "F": 9,
+    "total": 77,
+    "evidence_class": 2
+   },
+   "delta_recorded_minus_blind": {
+    "A": -1,
+    "B": -2,
+    "C": -1,
+    "D": -1,
+    "E": 5,
+    "F": 0,
+    "total": 0
+   },
+   "note": "blind moat_result: one fail among two testable tests, subtract 1. blind clock_basis: adoption, all three numbers cited: ceiling 11.557m vehicles, penetration 38.8%, doubling ~3.5yr; scored 5 on the years-clock shoulder."
+  },
+  {
+   "tk": "UNP",
+   "batch": "v21-blind-1",
+   "recorded_gate": "pass",
+   "blind_gate": "pass",
+   "recorded": {
+    "A": 15,
+    "B": 14,
+    "C": 13,
+    "D": 8,
+    "E": 1,
+    "F": 6,
+    "total": 57,
+    "evidence_class": 2
+   },
+   "blind": {
+    "A": 14,
+    "B": 16,
+    "C": 13,
+    "D": 8,
+    "E": 1,
+    "F": 5,
+    "total": 57,
+    "evidence_class": 3
+   },
+   "delta_recorded_minus_blind": {
+    "A": 1,
+    "B": -2,
+    "C": 0,
+    "D": 0,
+    "E": 0,
+    "F": 1,
+    "total": 0
+   },
+   "note": "blind moat_result: two fails among three testable tests, subtract 3 from A. blind clock_basis: asset; corridor owner never read on the adoption basis, decades clock, F_clock 3."
+  },
+  {
+   "tk": "TSNLF",
+   "batch": "v21-blind-1",
+   "recorded_gate": "pass",
+   "blind_gate": "pass",
+   "recorded": {
+    "A": 17,
+    "B": 14,
+    "C": 15,
+    "D": 14,
+    "E": 4,
+    "F": 8,
+    "total": 72,
+    "evidence_class": 3
+   },
+   "blind": {
+    "A": 16,
+    "B": 14,
+    "C": 13,
+    "D": 13,
+    "E": 3,
+    "F": 8,
+    "total": 67,
+    "evidence_class": 1
+   },
+   "delta_recorded_minus_blind": {
+    "A": 1,
+    "B": 0,
+    "C": 2,
+    "D": 1,
+    "E": 1,
+    "F": 0,
+    "total": 5
+   },
+   "note": "blind moat_result: one fail among the testable tests (interface pass, price fail, exit silent), subtract 1 from A. blind clock_basis: asset/standard band, months to a few years substitution; adoption override unavailable (no unit count or ASP), F_clock 5."
+  },
+  {
+   "tk": "GKOS",
+   "batch": "v21-blind-1",
+   "recorded_gate": "pass",
+   "blind_gate": "pass",
+   "recorded": {
+    "A": 17,
+    "B": 23,
+    "C": 12,
+    "D": 11,
+    "E": 4,
+    "F": 9,
+    "total": 76,
+    "evidence_class": 1
+   },
+   "blind": {
+    "A": 16,
+    "B": 20,
+    "C": 8,
+    "D": 10,
+    "E": 3,
+    "F": 9,
+    "total": 66,
+    "evidence_class": 2
+   },
+   "delta_recorded_minus_blind": {
+    "A": 1,
+    "B": 3,
+    "C": 4,
+    "D": 1,
+    "E": 1,
+    "F": 0,
+    "total": 10
+   },
+   "note": "blind moat_result: fewer than two tests testable (all three silent), subtract 1 from A, moat: unmeasured. blind clock_basis: asset/standard band, reimbursement and substitution months to a few years, scored 5; adoption override computed but penetration under 3% is pre-inflection so the asset basis stands."
+  },
+  {
+   "tk": "BIRMF",
+   "batch": "v21-blind-1",
+   "recorded_gate": "pass",
+   "blind_gate": "pass",
+   "recorded": {
+    "A": 15,
+    "B": 14,
+    "C": 13,
+    "D": 12,
+    "E": 4,
+    "F": 9,
+    "total": 67,
+    "evidence_class": 3
+   },
+   "blind": {
+    "A": 11,
+    "B": 13,
+    "C": 14,
+    "D": 12,
+    "E": 3,
+    "F": 8,
+    "total": 61,
+    "evidence_class": 3
+   },
+   "delta_recorded_minus_blind": {
+    "A": 4,
+    "B": 1,
+    "C": -1,
+    "D": 0,
+    "E": 1,
+    "F": 1,
+    "total": 6
+   },
+   "note": "blind moat_result: fewer than two tests testable (all three silent), subtract 1 from A, moat: unmeasured. blind clock_basis: asset/standard band, air-permit enforcement and municipal procurement, years to a decade, scored 4; adoption override unavailable (penetration and unit doubling time not computable)."
   }
  ],
  "reading": "Across both pre-registered batches, 16 names: the gate stays perfect at 16 of 16, totals agree to about six points of one hundred, and every measure lands within about two points of its scale. The two batches answer different questions. Batch 1 sampled a narrow 65-to-81 band and found rank correlation of 0.05 there: distinctions finer than the six-point noise floor are scorer noise. Batch 2 sampled a wider 57-to-82 band and rank correlation jumped to 0.85: when real level differences exist, both scorers order them the same way. Read together, the instrument measures level and coarse ordering reliably and fine ordering inside a tier band unreliably. One systematic pattern emerged with the larger sample: the recorded scores run hot by about three points on average (13 of 16 deltas at or below zero), most visibly where the first scorer credited evidence the blind scorer graded one band lower, so t1-versus-t2 boundaries deserve more skepticism than exit boundaries. The largest splits remain judgment calls the rubric leaves open, now named: BSY minus 14 on what an indirect software touch earns, RMD plus 12 on how hard C2 bites when GLP-1s shrink the upstream imbalance, GKOS minus 9 on premium-reimbursement coupling.",
@@ -234,7 +529,24 @@
     "BIRMF"
    ],
    "n": 8,
-   "status": "registered, unscored"
+   "status": "scored"
   }
- ]
+ ],
+ "agreement_v21": {
+  "batch": "v21-blind-1",
+  "n": 8,
+  "per_measure_mean_abs_deviation": {
+   "A": 2.25,
+   "B": 1.375,
+   "C": 1.375,
+   "D": 1.125,
+   "E": 1.375,
+   "F": 0.375
+  },
+  "mean_absolute_deviation_of_100": 4.875,
+  "gate_agreement": "8 of 8",
+  "spearman": 0.881,
+  "mean_signed_delta": 4.875,
+  "note": "v2.0 pooled agreement numbers (score_agreement, gate_agreement, tier_agreement, per_measure_mean_abs_deviation at top level) are kept intact and unchanged; they cover the two v2.0-logic batches (16 names, seeds 42 and 8). This block is the v2.1-logic batch (v21-blind-1, 8 names, seed 20260905) scored separately because the two use different rubric text and cannot be pooled with the v2.0 batches without conflating logic versions."
+ }
 }
