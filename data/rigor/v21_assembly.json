@@ -4,10 +4,10 @@
  "arithmetic_errors": [],
  "tiers": {
   "t1": 3,
-  "t2": 13,
-  "t3": 13,
-  "t4": 9,
-  "exit": 35
+  "t2": 12,
+  "t3": 12,
+  "t4": 8,
+  "exit": 38
  },
  "tiers_v20": {
   "t1": 10,
@@ -59,6 +59,19 @@
    "verified": "corrected"
   },
   {
+   "tk": "CLPBY",
+   "v20": 75,
+   "v21": 69,
+   "delta": -6,
+   "tier_v20": "t2",
+   "tier_v21": "t3",
+   "by_measure": {
+    "B": -7,
+    "C2": 1
+   },
+   "verified": "not_flagged"
+  },
+  {
    "tk": "CBLL",
    "v20": 78,
    "v21": 73,
@@ -84,6 +97,22 @@
     "B": -1
    },
    "verified": "upheld"
+  },
+  {
+   "tk": "BLLN",
+   "v20": 73,
+   "v21": 65,
+   "delta": -8,
+   "tier_v20": "t3",
+   "tier_v21": "t4",
+   "by_measure": {
+    "A": -1,
+    "B": -5,
+    "C1": -2,
+    "C2": 1,
+    "E": -1
+   },
+   "verified": "not_flagged"
   },
   {
    "tk": "CAI",
@@ -172,13 +201,13 @@
   {
    "tk": "WST",
    "v20": 80,
-   "v21": 68,
-   "delta": -12,
+   "v21": 64,
+   "delta": -16,
    "tier_v20": "t1",
-   "tier_v21": "t4",
+   "tier_v21": "exit",
    "by_measure": {
     "A": -1,
-    "B": -8,
+    "B": -12,
     "C1": -4,
     "C2": 1
    },
@@ -187,13 +216,13 @@
   {
    "tk": "BFLY",
    "v20": 80,
-   "v21": 70,
-   "delta": -10,
+   "v21": 66,
+   "delta": -14,
    "tier_v20": "t1",
    "tier_v21": "exit",
    "by_measure": {
     "A": -1,
-    "B": -8,
+    "B": -12,
     "E": -1
    },
    "verified": "corrected"
@@ -201,12 +230,13 @@
   {
    "tk": "IRTC",
    "v20": 66,
-   "v21": 64,
-   "delta": -2,
+   "v21": 57,
+   "delta": -9,
    "tier_v20": "t4",
    "tier_v21": "exit",
    "by_measure": {
     "A": -1,
+    "B": -7,
     "C1": -1
    },
    "verified": "upheld"
@@ -214,13 +244,13 @@
   {
    "tk": "SRTA",
    "v20": 77,
-   "v21": 68,
-   "delta": -9,
+   "v21": 64,
+   "delta": -13,
    "tier_v20": "t2",
-   "tier_v21": "t4",
+   "tier_v21": "exit",
    "by_measure": {
     "A": -1,
-    "B": -3,
+    "B": -7,
     "C1": -4,
     "E": -1
    },
@@ -243,12 +273,13 @@
   {
    "tk": "CRMD",
    "v20": 75,
-   "v21": 73,
-   "delta": -2,
+   "v21": 77,
+   "delta": 2,
    "tier_v20": "t2",
-   "tier_v21": "t3",
+   "tier_v21": "exit",
    "by_measure": {
     "A": -1,
+    "B": 4,
     "C1": -1
    },
    "verified": "corrected"
@@ -256,13 +287,13 @@
   {
    "tk": "ATRC",
    "v20": 83,
-   "v21": 73,
-   "delta": -10,
+   "v21": 69,
+   "delta": -14,
    "tier_v20": "t1",
    "tier_v21": "t3",
    "by_measure": {
     "A": -1,
-    "B": -4,
+    "B": -8,
     "C1": -5
    },
    "verified": "corrected"
@@ -364,10 +395,10 @@
    "verified": "upheld"
   }
  ],
- "mean_delta_rescored": -3.849056603773585,
+ "mean_delta_rescored": -4.377358490566038,
  "measure_moves": {
-  "A": 40,
-  "B": 30,
+  "A": 41,
+  "B": 35,
   "C1": 23,
   "C2": 8,
   "D_rep": 0,
@@ -405,14 +436,28 @@
    "verified": "not_flagged"
   },
   {
-   "tk": "CLPBY",
+   "tk": "CRMD",
    "v20": 75,
-   "v21": 76,
-   "delta": 1,
+   "v21": 77,
+   "delta": 2,
    "tier_v20": "t2",
-   "tier_v21": "t2",
+   "tier_v21": "exit",
    "by_measure": {
-    "C2": 1
+    "A": -1,
+    "B": 4,
+    "C1": -1
+   },
+   "verified": "corrected"
+  },
+  {
+   "tk": "UNP",
+   "v20": 55,
+   "v21": 57,
+   "delta": 2,
+   "tier_v20": "exit",
+   "tier_v21": "exit",
+   "by_measure": {
+    "A": 2
    },
    "verified": "not_flagged"
   },
@@ -476,16 +521,6 @@
    "tk": "CP",
    "v20": 56,
    "v21": 56,
-   "delta": 0,
-   "tier_v20": "exit",
-   "tier_v21": "exit",
-   "by_measure": {},
-   "verified": "not_flagged"
-  },
-  {
-   "tk": "UNP",
-   "v20": 55,
-   "v21": 55,
    "delta": 0,
    "tier_v20": "exit",
    "tier_v21": "exit",
@@ -780,18 +815,6 @@
    "verified": "not_flagged"
   },
   {
-   "tk": "TOELY",
-   "v20": 57,
-   "v21": 56,
-   "delta": -1,
-   "tier_v20": "exit",
-   "tier_v21": "exit",
-   "by_measure": {
-    "A": -1
-   },
-   "verified": "not_flagged"
-  },
-  {
    "tk": "BB",
    "v20": 59,
    "v21": 58,
@@ -817,19 +840,6 @@
    "verified": "upheld"
   },
   {
-   "tk": "IRTC",
-   "v20": 66,
-   "v21": 64,
-   "delta": -2,
-   "tier_v20": "t4",
-   "tier_v21": "exit",
-   "by_measure": {
-    "A": -1,
-    "C1": -1
-   },
-   "verified": "upheld"
-  },
-  {
    "tk": "GKOS",
    "v20": 78,
    "v21": 76,
@@ -844,17 +854,17 @@
    "verified": "not_flagged"
   },
   {
-   "tk": "CRMD",
-   "v20": 75,
-   "v21": 73,
+   "tk": "TOELY",
+   "v20": 57,
+   "v21": 55,
    "delta": -2,
-   "tier_v20": "t2",
-   "tier_v21": "t3",
+   "tier_v20": "exit",
+   "tier_v21": "exit",
    "by_measure": {
     "A": -1,
-    "C1": -1
+    "B": -1
    },
-   "verified": "corrected"
+   "verified": "not_flagged"
   },
   {
    "tk": "TMRAY",
@@ -865,21 +875,6 @@
    "tier_v21": "t2",
    "by_measure": {
     "B": -3
-   },
-   "verified": "not_flagged"
-  },
-  {
-   "tk": "BLLN",
-   "v20": 73,
-   "v21": 70,
-   "delta": -3,
-   "tier_v20": "t3",
-   "tier_v21": "t3",
-   "by_measure": {
-    "A": -1,
-    "C1": -2,
-    "C2": 1,
-    "E": -1
    },
    "verified": "not_flagged"
   },
@@ -1034,6 +1029,19 @@
    "verified": "upheld"
   },
   {
+   "tk": "CLPBY",
+   "v20": 75,
+   "v21": 69,
+   "delta": -6,
+   "tier_v20": "t2",
+   "tier_v21": "t3",
+   "by_measure": {
+    "B": -7,
+    "C2": 1
+   },
+   "verified": "not_flagged"
+  },
+  {
    "tk": "CODYY",
    "v20": 77,
    "v21": 71,
@@ -1116,6 +1124,22 @@
    "verified": "upheld"
   },
   {
+   "tk": "BLLN",
+   "v20": 73,
+   "v21": 65,
+   "delta": -8,
+   "tier_v20": "t3",
+   "tier_v21": "t4",
+   "by_measure": {
+    "A": -1,
+    "B": -5,
+    "C1": -2,
+    "C2": 1,
+    "E": -1
+   },
+   "verified": "not_flagged"
+  },
+  {
    "tk": "NTRA",
    "v20": 74,
    "v21": 66,
@@ -1170,6 +1194,19 @@
    "verified": "upheld"
   },
   {
+   "tk": "TSM",
+   "v20": 61,
+   "v21": 53,
+   "delta": -8,
+   "tier_v20": "exit",
+   "tier_v21": "exit",
+   "by_measure": {
+    "A": -1,
+    "B": -7
+   },
+   "verified": "not_flagged"
+  },
+  {
    "tk": "WAB",
    "v20": 70,
    "v21": 62,
@@ -1184,60 +1221,18 @@
    "verified": "corrected"
   },
   {
-   "tk": "SRTA",
-   "v20": 77,
-   "v21": 68,
+   "tk": "IRTC",
+   "v20": 66,
+   "v21": 57,
    "delta": -9,
-   "tier_v20": "t2",
-   "tier_v21": "t4",
-   "by_measure": {
-    "A": -1,
-    "B": -3,
-    "C1": -4,
-    "E": -1
-   },
-   "verified": "corrected"
-  },
-  {
-   "tk": "BFLY",
-   "v20": 80,
-   "v21": 70,
-   "delta": -10,
-   "tier_v20": "t1",
+   "tier_v20": "t4",
    "tier_v21": "exit",
    "by_measure": {
     "A": -1,
-    "B": -8,
-    "E": -1
+    "B": -7,
+    "C1": -1
    },
-   "verified": "corrected"
-  },
-  {
-   "tk": "ATRC",
-   "v20": 83,
-   "v21": 73,
-   "delta": -10,
-   "tier_v20": "t1",
-   "tier_v21": "t3",
-   "by_measure": {
-    "A": -1,
-    "B": -4,
-    "C1": -5
-   },
-   "verified": "corrected"
-  },
-  {
-   "tk": "TSM",
-   "v20": 61,
-   "v21": 51,
-   "delta": -10,
-   "tier_v20": "exit",
-   "tier_v21": "exit",
-   "by_measure": {
-    "A": -3,
-    "B": -7
-   },
-   "verified": "not_flagged"
+   "verified": "upheld"
   },
   {
    "tk": "VCYT",
@@ -1255,15 +1250,58 @@
    "verified": "corrected"
   },
   {
-   "tk": "WST",
+   "tk": "SRTA",
+   "v20": 77,
+   "v21": 64,
+   "delta": -13,
+   "tier_v20": "t2",
+   "tier_v21": "exit",
+   "by_measure": {
+    "A": -1,
+    "B": -7,
+    "C1": -4,
+    "E": -1
+   },
+   "verified": "corrected"
+  },
+  {
+   "tk": "BFLY",
    "v20": 80,
-   "v21": 68,
-   "delta": -12,
+   "v21": 66,
+   "delta": -14,
    "tier_v20": "t1",
-   "tier_v21": "t4",
+   "tier_v21": "exit",
+   "by_measure": {
+    "A": -1,
+    "B": -12,
+    "E": -1
+   },
+   "verified": "corrected"
+  },
+  {
+   "tk": "ATRC",
+   "v20": 83,
+   "v21": 69,
+   "delta": -14,
+   "tier_v20": "t1",
+   "tier_v21": "t3",
    "by_measure": {
     "A": -1,
     "B": -8,
+    "C1": -5
+   },
+   "verified": "corrected"
+  },
+  {
+   "tk": "WST",
+   "v20": 80,
+   "v21": 64,
+   "delta": -16,
+   "tier_v20": "t1",
+   "tier_v21": "exit",
+   "by_measure": {
+    "A": -1,
+    "B": -12,
     "C1": -4,
     "C2": 1
    },
