@@ -171,6 +171,19 @@ Executed since registration:
   external factor test could not be run from the build environment and is registered as pending so it
   cannot be quietly dropped.
 
+**Layer 0.5, a first flow graph (prototype, Sep 2026).** The owner's premise is that the flow is
+predictable once resource gradients and human movement are mapped with emotion removed, and that
+connections matter. [`data/flow_graphs/urban_mobility.json`](data/flow_graphs/urban_mobility.json) is the
+first test of that: 38 nodes and 71 edges from materials to finance for the shift toward bikes, e-bikes,
+micromobility and transit in growing cities, each node researched for substitutability, capacity and cost
+share, the six highest-control nodes attacked by two refuters each, and a flux-control number computed by
+formula. What it found: the most rate-limiting step (protected street space) is an unpriced public good with
+no investable vendor, so capture happens one hop away at permit-holding operators; buses are the
+rate-limiting investable step of the transit branch (two heavy-duty OEMs, 16 to 24 month lead times); and
+control measured at hop 2 or 3 (cells, mid-drives) reaches the trip through commoditized stages. Eight
+predictions with falsifiers and 18 dated leading indicators are inside the file. The graph does not feed the
+score yet; it is a map to be argued with.
+
 `audit_rigor.py` enforces all of it: both vintage hashes, the protocol supersession chain, track ordering,
 freshness, the registered sample sizes, and a floor under rank stability.
 
