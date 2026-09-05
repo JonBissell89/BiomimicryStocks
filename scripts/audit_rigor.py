@@ -102,6 +102,10 @@ else:
                      % rq["obligations"].get("logic_version"))
     if rq.get("pending_first_screen"):
         warns.append("%d new market entrants await a first-screen judgment" % len(rq["pending_first_screen"]))
+    if rq.get("pending_stage2"):
+        warns.append("%d first-screen admissions await a Round 2 business read (pending_stage2)" % len(rq["pending_stage2"]))
+    if rq.get("descriptions_owed"):
+        warns.append("%d viable names in routed codes still owe a business description" % rq["descriptions_owed"])
     if rq.get("delisted_check"):
         warns.append("%d names flagged delisted_check await confirmation" % len(rq["delisted_check"]))
     if rq.get("last_refresh"):

@@ -55,6 +55,9 @@ jobs:
       - name: Read business descriptions for the routed codes (converges over runs)
         run: python scripts/fetch_profiles.py 400 || echo "profile fetch failed this week; the enrich obligation stays open"
 
+      - name: Queue first-screen admissions that stage 2 has not judged
+        run: python scripts/queue_stage2.py
+
       - name: Re-read the rigor instruments
         run: |
           python scripts/report_card.py

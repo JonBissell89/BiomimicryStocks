@@ -1,7 +1,7 @@
 {
  "logic": "v2.1",
  "run": "2026-09-03",
- "note": "round1_v21.py applied prior_v21.json and classification_overrides.json as a delta on the recorded v2.0 screen (round1_final_scores.csv); descriptions on file at the run: 0, so every admission here is a table change, an enrich deferral to the Yahoo entry, or a classification override",
+ "note": "round1_v21.py applied prior_v21.json and classification_overrides.json as a delta on the recorded v2.0 screen (round1_final_scores.csv); descriptions on file at the run: 0, so every admission here is a table change, an enrich deferral to the Yahoo entry, or a classification override | later runs appended under runs as descriptions arrive",
  "prior_sha256": "7173be0c72f481c6b5895501aff42b46e35540d4f8477a7ba437414efffde599",
  "counts": {
   "names": 15797,
@@ -1885,6 +1885,17 @@
    "changed": "yahoo:Medical Devices",
    "marketCap": 19119546368.0,
    "price": 100.24
+  }
+ ],
+ "runs": [
+  {
+   "run": "2026-09-05",
+   "descriptions_on_file": 384,
+   "advance": 3347,
+   "newly_advancing": 216,
+   "via_description": 62,
+   "descriptions_owed": 1112,
+   "note": "first weekly profile fetch (400 names) landed; the description route admitted 62 more names, all queued for stage 2; the route converges as fetch_profiles.py fills the owed descriptions"
   }
  ]
 }
