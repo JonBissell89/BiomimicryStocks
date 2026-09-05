@@ -38,8 +38,10 @@ def cls_adv(prefix):
 # P1 first-screen advance count
 n_adv = int(v.advance.sum())
 out["v21-P01"] = {"observed": n_adv, "newly_advancing": int((v.advance & ~v.advance_v20).sum()),
-                  "reading": ("within range" if 3350 <= n_adv <= 3500 else "below the 3,350 to 3,500 range; the computed floor 3,267 held (154 table admissions against 136 registered) and the description routes have not run: 0 descriptions on file"),
-                  "status": "provisional until descriptions are on file" if not have_desc else "final"}
+                  "reading": ("within the registered 3,350 to 3,500 range" if 3350 <= n_adv <= 3500 else
+                              "%s the 3,350 to 3,500 range at %d; the computed floor 3,267 held (154 table admissions against 136 registered) and the description route has admitted %d with %d of the owed descriptions on file"
+                              % ("below" if n_adv < 3350 else "above", n_adv, int((v.advance & ~v.advance_v20 & v.changed.fillna("").str.startswith("desc:")).sum()), int(v.has_description.sum()))),
+                  "status": "provisional: the description route is still converging (%d descriptions owed)" % int((v.reason == "no description available").sum())}
 # P2 telecom family
 tel = adm[adm.y_industry == "Telecom Services"]
 out["v21-P02"] = {"admitted": len(tel), "stage2_AB": ab(tel), "stage2_AB_rate": round(ab(tel) / max(1, len(tel)), 3),

@@ -10,8 +10,8 @@
    "falsified_if": "Above 3,650 (a description route is a floodgate: identify it from the per-family lines below and withdraw that regex) or below 3,290 (the description routes attached fewer than 23 names and the boost table is inert as written)",
    "observed": 3347,
    "newly_advancing": 216,
-   "reading": "below the 3,350 to 3,500 range; the computed floor 3,267 held (154 table admissions against 136 registered) and the description routes have not run: 0 descriptions on file",
-   "status": "final"
+   "reading": "below the 3,350 to 3,500 range at 3347; the computed floor 3,267 held (154 table admissions against 136 registered) and the description route has admitted 62 with 384 of the owed descriptions on file",
+   "status": "provisional: the description route is still converging (1112 descriptions owed)"
   },
   {
    "id": "v21-P02",
