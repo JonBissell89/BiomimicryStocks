@@ -46,6 +46,9 @@ elif rq.get("last_refresh"):
 else:
     fresh = ("first quarterly listing pull pending; judged under logic %s, whose documents are "
              "hash-checked on every build, and any logic change forces a full re-screen" % lv["version"])
+if rq.get("pending_stage2") or rq.get("descriptions_owed"):
+    fresh += ("; the v2.1 description route has admitted %d names that await a Round 2 business read, and %d viable names in routed codes still owe a description (fetched weekly)"
+              % (len(rq.get("pending_stage2", [])), rq.get("descriptions_owed", 0)))
 items.append(["Universe freshness", fresh])
 doc = {"asof": rep["latest"], "items": items,
        "note": "every line is a current instrument reading from data/rigor/, derived and audited; none is a claim"}
