@@ -30,6 +30,9 @@ if priced < 0.8 * len(names):
 fn = "freeze_v21_%s.json" % asof
 r = subprocess.run([sys.executable, os.path.join(here, "freeze_vintage.py"), "v2.1", asof, eng], capture_output=True, text=True)
 print(r.stdout.strip())
+if r.returncode != 0:
+    print(r.stderr, file=sys.stderr)
+    sys.exit("freeze_vintage.py failed (exit %d); v2.1 vintage not frozen, protocol not touched" % r.returncode)
 fz = json.load(open(os.path.join(R, fn), encoding="utf-8"))
 old_sha = hashlib.sha256(json.dumps(pro, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
 if not os.path.exists(os.path.join(R, "evaluation_protocol_v3.json")):
@@ -50,3 +53,7 @@ r = subprocess.run([sys.executable, os.path.join(here, "register_logic.py"), "--
                     "v2.1 universe re-screen (round1_v21.py on the recorded screen, rounds 2 to 4 on the admitted field) and ranked re-score on the amended measures; vintage frozen %s" % asof],
                    capture_output=True, text=True)
 print(r.stdout.strip())
+if r.returncode != 0:
+    print(r.stderr, file=sys.stderr)
+    sys.exit("register_logic.py --fulfill failed (exit %d); the protocol already registered v2.1 but the "
+              "refresh queue obligation was not fulfilled and must be cleared by hand" % r.returncode)

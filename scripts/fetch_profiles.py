@@ -23,14 +23,20 @@ import marketdb
 
 LIMIT = int(sys.argv[1]) if len(sys.argv) > 1 else 600
 P = json.load(open(os.path.join(DATA, "rubric", "prior_v21.json"), encoding="utf-8"))
+VIA_MIN = P["advance"]["viability_min"]
 routed_ind = {k for k, v in P["industry"].items()
               if "enrich" in v.get("flag", "") or "desc" in v.get("flag", "") or v["class"] in ("software", "services", "conglomerate")}
 routed_y = {k for k, v in P["yahoo_industry"].items()
             if "desc" in v.get("flag", "") or v["class"] in ("software", "services", "conglomerate")}
+ov_path = os.path.join(DATA, "classification_overrides.json")
+o = json.load(open(ov_path, encoding="utf-8"))
+overrides = o.get("overrides", o)
+ov_routed = {tk for tk, ov in overrides.items() if ov.get("class") in ("software", "services", "conglomerate")}
 r1 = pd.read_csv(os.path.join(DATA, "round1_final_scores.csv"))
-alive = r1[(r1.status.fillna("") == "") & (r1.viability >= 9)]
+alive = r1[(r1.status.fillna("") == "") & (r1.viability >= VIA_MIN)]
 want = alive[alive.industry.isin(routed_ind) | alive.y_industry.isin(routed_y)
-             | alive.need.isin(["software", "services", "conglomerate", "unknown", "unmapped", "y-unmapped"])]
+             | alive.need.isin(["software", "services", "conglomerate"])
+             | alive.ticker.isin(ov_routed)]
 have = marketdb.load_profiles()
 todo = [t for t in want.ticker if t not in have][:LIMIT]
 print("routed viable names %d | with a profile %d | fetching %d this run" % (len(want), len([t for t in want.ticker if t in have]), len(todo)))

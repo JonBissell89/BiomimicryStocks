@@ -2,8 +2,9 @@
 """Round 3 for a v2.1 admission set: the recorded financial screen, unchanged,
 applied to the Round 2 verdicts the v2.1 business read produced.
 
-Inputs : data/rigor/v21_round2.json (rows: ticker, verdict, reason, financial
-         fields the judges verified), data/round1_v21_newly_advancing.csv
+Inputs : data/rigor/v21_round2*.json, sorted (rows: ticker, verdict, reason,
+         financial fields the judges verified) unless an explicit file is
+         given as the first argument, data/round1_v21_newly_advancing.csv
 Outputs: data/rigor/v21_round3.json (every name with its R3 score, notes and
          cut), printed field for Round 4.
 
@@ -12,15 +13,21 @@ survivability 0-10, margin 0-5, three commercial-reality cuts. Nothing about
 the screen changed in v2.1, so a name here is scored exactly as the 935
 Round 2 A and B names were in Aug 2026.
 """
-import json, os, sys
+import glob, json, os, sys
 import numpy as np
 import pandas as pd
 from paths import DATA
 
-R2 = sys.argv[1] if len(sys.argv) > 1 else os.path.join(DATA, "rigor", "v21_round2.json")
 OUT = sys.argv[2] if len(sys.argv) > 2 else os.path.join(DATA, "rigor", "v21_round3.json")
-r2 = json.load(open(R2, encoding="utf-8"))
-rows_in = r2["rows"] if isinstance(r2, dict) else r2
+if len(sys.argv) > 1:
+    R2 = sys.argv[1]
+    r2 = json.load(open(R2, encoding="utf-8"))
+    rows_in = r2["rows"] if isinstance(r2, dict) else r2
+else:
+    rows_in = []
+    for f in sorted(glob.glob(os.path.join(DATA, "rigor", "v21_round2*.json"))):
+        r2 = json.load(open(f, encoding="utf-8"))
+        rows_in.extend(r2["rows"] if isinstance(r2, dict) else r2)
 adm = pd.read_csv(os.path.join(DATA, "round1_v21_newly_advancing.csv")).set_index("ticker")
 
 
@@ -35,11 +42,14 @@ def num(x):
 out = []
 for r in rows_in:
     tk = str(r["ticker"]).upper().strip()
-    rec = {"ticker": tk, "verdict": r["verdict"], "r2_reason": r.get("reason", ""),
+    verdict = str(r.get("verdict", "")).strip().upper()[:1]
+    if tk not in adm.index:
+        print("WARNING: %s (verdict %s) not in round1_v21_newly_advancing.csv" % (tk, verdict), file=sys.stderr)
+    rec = {"ticker": tk, "verdict": verdict, "r2_reason": r.get("reason", ""),
            "need": adm.need.get(tk), "need_score": (int(adm.need_score.get(tk)) if tk in adm.index else None),
            "company": adm.company.get(tk), "corporate_action": r.get("corporate_action", "none"),
            "audited": bool(r.get("audited", False))}
-    if r["verdict"] not in ("A", "B"):
+    if verdict not in ("A", "B"):
         rec.update({"r3_fin_score": None, "r3_notes": "", "r3_cut": "R2: verdict C"})
         out.append(rec); continue
     cap = num(r.get("marketCap")) if num(r.get("marketCap")) == num(r.get("marketCap")) else num(adm.marketCap.get(tk))
@@ -99,4 +109,5 @@ print(doc["counts"])
 surv = [x for x in out if x["verdict"] in "AB" and not x["r3_cut"]]
 surv.sort(key=lambda x: (x["verdict"], -(x["composite"] or 0)))
 for x in surv:
-    print("  %-7s %s %-22s need %2d fin %2d  %s" % (x["ticker"], x["verdict"], str(x["need"])[:22], x["need_score"], x["r3_fin_score"], x["r2_reason"][:60]))
+    print("  %-7s %s %-22s need %2d fin %2d  %s" % (x["ticker"], x["verdict"], str(x["need"])[:22],
+          x["need_score"] if x["need_score"] is not None else -1, x["r3_fin_score"], x["r2_reason"][:60]))

@@ -45,7 +45,9 @@ if ov_path:
     overrides = o.get("overrides", o)
 try:
     PROFILES = marketdb.load_profiles()
-except Exception:
+except Exception as e:
+    print("WARNING: marketdb.load_profiles() failed (%s: %s); continuing with no profiles"
+          % (type(e).__name__, e), file=sys.stderr)
     PROFILES = {}
 
 r1 = pd.read_csv(os.path.join(DATA, "round1_final_scores.csv"))
@@ -107,7 +109,12 @@ for r in r1.itertuples(index=False):
     if ov and status == "" and ov.get("operating") is False:
         status, reason, changed = "reject", "classification review: no evidence of an operating business", "override:dead"
     elif ov and status == "" and ov.get("class") in CLASS1 and r.need in ("unknown", "unmapped", "y-unmapped"):
-        need, ns, changed = ov["class"], CLASS1[ov["class"]], "override:class"
+        base_prior, base_class = CLASS1[ov["class"]], ov["class"]
+        if base_class in ("software", "services", "conglomerate") and desc:
+            ns2, need2, lab = route_desc(base_prior, base_class, desc)
+            need, ns, changed = need2, ns2, "override:class+desc:" + (lab or "none")
+        else:
+            need, ns, changed = ov["class"], CLASS1[ov["class"]], "override:class"
     elif src == "boost" and key in Y1:
         # the recorded boost rides on the new base; the label keeps its suffix
         p1, c1, f1 = Y1[key]

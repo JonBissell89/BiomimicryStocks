@@ -87,7 +87,7 @@ out["_v21"] = {"note": "assembled by assemble_v21.py from data/rigor/v21_cards_*
                "cards": len(cards), "rescored": sum(1 for c in cards.values() if c["origin"] == "rescore"),
                "new": sum(1 for c in cards.values() if c["origin"] == "new")}
 out["tiers"] = []
-for t in eng["tiers"]:
+for t in sorted(eng["tiers"], key=lambda t: order.get(t["id"], 99)):
     members = sorted([r for tr, r in names if tr == t["id"]], key=lambda r: (-r["score"], r["tk"]))
     out["tiers"].append({"id": t["id"], "label": t["label"], "names": members})
 json.dump(out, open(os.path.join(DATA, "engine_tiers_v21.json"), "w", encoding="utf-8"), indent=1, ensure_ascii=True)
