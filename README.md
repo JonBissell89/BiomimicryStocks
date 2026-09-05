@@ -196,7 +196,9 @@ no investable vendor, so capture happens one hop away at permit-holding operator
 rate-limiting investable step of the transit branch (two heavy-duty OEMs, 16 to 24 month lead times); and
 control measured at hop 2 or 3 (cells, mid-drives) reaches the trip through commoditized stages. Eight
 predictions with falsifiers and 18 dated leading indicators are inside the file. The graph does not feed the
-score yet; it is a map to be argued with.
+score yet; it is a map to be argued with. Adversarial testing then refuted every rate-limiting node 2 of 2;
+the refuters converged on permits, fleet caps, fares and operating budgets, a political queue one hop from
+any investable position, which is recorded in the file as the prototype's verdict.
 
 `audit_rigor.py` enforces all of it: both vintage hashes, the protocol supersession chain, track ordering,
 freshness, the registered sample sizes, and a floor under rank stability.

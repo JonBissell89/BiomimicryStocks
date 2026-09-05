@@ -608,6 +608,172 @@
      "Kraus and Koch, PNAS 2021; Fosgerau et al., PNAS 2023"
     ]
    ]
+  },
+  {
+   "node": "asm_buses",
+   "suppliers": [
+    {
+     "name": "NFI Group (New Flyer, MCI, ADL)",
+     "ticker": "NFYEF",
+     "investable": true,
+     "share_note": "largest North American heavy-duty OEM; TSX primary"
+    },
+    {
+     "name": "Gillig",
+     "ticker": "private",
+     "investable": false,
+     "share_note": "the other half of the duopoly"
+    },
+    {
+     "name": "BYD Coach and Bus",
+     "ticker": "BYDDY",
+     "investable": true,
+     "share_note": "Lancaster CA plant; federally restricted pipeline"
+    },
+    {
+     "name": "Phoenix Motor (Proterra transit assets)",
+     "ticker": "PEVM",
+     "investable": true,
+     "share_note": "universe holds PEVM, stage 1 reject"
+    },
+    {
+     "name": "Volvo Group (Proterra powertrain)",
+     "ticker": "VOLVF",
+     "investable": true,
+     "share_note": "components, not complete buses"
+    }
+   ],
+   "substitutability": 4,
+   "capacity_constraint": 4,
+   "cost_share": 0.85,
+   "evidence": "SCALE RECONCILED: the researcher scored substitutability 2 while describing a two-firm duopoly with switching costs (77 percent of agencies that bought New Flyer in 2015 to 2018 bought again in 2019 to 2022; New Flyer and Gillig 56 to 58 percent of contracts, Brookings/AEI); on the difficulty scale two qualified heavy-duty OEMs after the Proterra (Chapter 11, 2023) and Nova Bus exits reads 4 (literal 2 gives 0.66; 4 gives 0.84). Capacity binding: NFI backlog USD 13.5 billion at June 30 2025, up 14.4 percent, 16,198 equivalent units, zero-emission 35.3 percent of backlog; order-to-delivery 16 to 24 months, up from 12 to 18; New Flyer battery recall about USD 230 million. Bus is at 86 percent of 2019 ridership, the fastest-recovering mode. NOT adversarially tested in the visible verdicts; carries the same undercounted-supplier risk that cut asm_rolling_stock (BYD Lancaster, Phoenix/Proterra, Solaris/CAF entry, ENC).",
+   "sources": [
+    "https://www.globenewswire.com/news-release/2025/07/31/3125495/0/en/NFI-Announces-Second-Quarter-Results.html",
+    "https://www.brookings.edu/wp-content/uploads/2025/09/Paying-Less-for-Public-Transit-Buses.pdf",
+    "https://www.metro-magazine.com/articles/recovery-and-risk-define-the-transit-bus-market-in-2025",
+    "https://www.apta.com/wp-content/uploads/2026/04/APTA-POLICY-BRIEF-Transit-Ridership-04-08-2026.pdf",
+    "https://www.nfigroup.com/news-releases/news-release-details/nfi-subsidiary-new-flyer-signs-major-contract-new-jersey-transit"
+   ],
+   "flux_control": 0.84,
+   "refutes": 2,
+   "of": 2,
+   "corrected_substitutability": 3.5,
+   "corrected_capacity": 2.5,
+   "corrected_cost_share": 0.15,
+   "survives": false,
+   "refuter_reasons": [
+    "Duopoly framing overstates concentration and capacity is easing on both sides. BYD holds about 25 percent of the US electric transit bus segment (New Flyer about 40, Gillig about 20) through Buy America compliant Lancaster CA production on state and locally funded orders, a real third seller in the fastest-growing sub-segment. NFI's Alexander Dennis opened a Las Vegas plant in Aug 2025 ramping to 75 buses a year. Demand is the swing factor: MTA cut its Stage 2 ZEB order from 1,000 to 500 (2025), and FTA's July 2025 Low-No shift prioritises low-emission buses that many more OEMs can supply. NFI backlog eased from USD 13.5bn (Jun 2025) to 13.0bn (Q1 2026) with deliveries down 12 percent; lead times (Gillig 14 to 18 months, New Flyer 12 to 22) show no worsening. Chicago RTA and NYC MTA face nine-figure operating shortfalls, so operating funding, not assembly capacity, increasingly binds service. No contract literally split across three or more OEMs was found, so a moderate downgrade.",
+    "Flow-side test does not support the node as rate-limiting. Workforce binds service: APTA's Feb 2022 survey of 117 agencies found 71 percent cut or delayed service on worker shortfalls; agency vacancy rates run 10 to 15 percent; Omaha Metro lost about 15,000 service hours in 2024 on staffing and parts, not buses. Fleet availability traces to maintenance and funding: APTA's March 2025 spare-ratio survey of 154 agencies attributes non-compliance to parts, mechanics and ageing fleets; 35 percent of the US transit fleet is past FTA's 14-year benchmark against an USD 89.8bn state-of-good-repair backlog, and agencies run buses past replacement rather than cut service for lack of new units. Ridership reached 86 percent of 2019 while NFI lead times stretched to 16 to 24 months, so the backlog did not throttle the flow. Cost share 0.85 is unsupportable: operating expense is about two thirds of total transit expense and capital one third (CRS R47900; NTD 2023), with compensation 62 percent of operating expense; a defensible bus-capital share of a delivered trip is 0.10 to 0.20."
+   ],
+   "refuter_sources": [
+    [
+     "https://www.metro-magazine.com/articles/recovery-and-risk-define-the-transit-bus-market-in-2025",
+     "https://www.nfigroup.com/news-releases/news-release-details/nfis-alexander-dennis-opens-las-vegas-manufacturing-facility-and",
+     "https://buscmms.com/blog/blog-best-ev-bus-manufacturers-2026",
+     "https://www.stocktitan.net/news/NFYEF/nfi-reports-2026-first-quarter-results",
+     "https://www.masstransitmag.com/bus/vehicles/hybrid-hydrogen-electric-vehicles/news/55399399",
+     "https://t4america.org/2025/12/04/low-and-no-emissions-buses-but-hold-the-no-emissions-new-fta-bus-program-awards-skipped-out-on-clean-vehicles/",
+     "https://www.bloomberg.com/news/articles/2025-10-15/nyc-transit-system-faces-432-million-budget-gap-dinapoli-says"
+    ],
+    [
+     "https://www.apta.com/wp-content/uploads/APTA-Transit-Workforce-Shortage-Report.pdf",
+     "https://www.apta.com/wp-content/uploads/2026/02/APTA-Impacts-of-Spare-Ratio-Full-Report-03-2025.pdf",
+     "https://buscmms.com/blog/aging-bus-fleet-crisis-2026-repair-replace-lifecycle-cost-tracking",
+     "https://www.congress.gov/crs-product/R47900",
+     "https://data.transportation.gov/stories/s/2023-NTD-Data-Summary-Operating-Expenses/kwy6-xug7/",
+     "https://www.smartcitiesdive.com/news/public-transit-ridership-post-pandemic-high-apta/748486/",
+     "https://omaha.com/news/local/article_6fc55440-f93c-11ef-a6b0-ab8c57d2e7d0.html"
+    ]
+   ]
+  },
+  {
+   "node": "mat_cells",
+   "suppliers": [
+    {
+     "name": "Samsung SDI",
+     "ticker": "SSDIY",
+     "investable": true,
+     "share_note": "144A GDR OTC; not in the universe"
+    },
+    {
+     "name": "Panasonic Holdings",
+     "ticker": "PCRFF",
+     "investable": true,
+     "share_note": "universe holds PCRFF, map cites PCRFY"
+    },
+    {
+     "name": "CBAK Energy",
+     "ticker": "CBAT",
+     "investable": true,
+     "share_note": "Nasdaq; lower-volume OEM cells"
+    },
+    {
+     "name": "LG Energy Solution",
+     "ticker": "373220.KS",
+     "investable": false,
+     "share_note": "Korea only"
+    },
+    {
+     "name": "CATL",
+     "ticker": "300750.SZ",
+     "investable": false,
+     "share_note": "38.2 percent of EV cells 2025; no US line"
+    },
+    {
+     "name": "EVE Energy",
+     "ticker": "300014.SZ",
+     "investable": false
+    },
+    {
+     "name": "Molicel (E-One Moli)",
+     "ticker": "private",
+     "investable": false
+    }
+   ],
+   "substitutability": 4,
+   "capacity_constraint": 3,
+   "cost_share": 0.38,
+   "evidence": "SCALE RECONCILED: the researcher wrote 'substitutability is low (2 of 5)' while describing a narrow certified-supplier set and a 6 to 18 month re-certification to swap a cell; on the formula's difficulty scale that prose reads 4, so 4 is used (researcher's literal 2 gives 0.59; 4 gives 0.77). Cells are 34 to 42 percent of e-bike production cost (redwaybattery.com via search snippet); UL 2271 cell qualification about 10 weeks plus pack re-testing (tritekbattery.com); small-format cells sold out into H1 2026 with prices up over 20 percent (ess-news.com); new gigafactory capacity 2.5 to 3 years (autodesk.com); Section 301 tariff on e-bike lithium batteries rises to 25 percent in 2026 from 7.5 percent. Capacity 3 per the researcher (tight near term, abundant in aggregate).",
+   "sources": [
+    "https://stdbattery.com/blog/detail/lg-vs-samsung-vs-panasonic-the-ultimate-technical-comparison-of-e-bike-battery-cells",
+    "https://www.redwaybattery.com/what-is-driving-the-small-format-battery-shortage-in-2026/",
+    "https://www.ess-news.com/2025/10/29/battery-shortage-intensifies-as-100-ah-cells-sell-out-into-2026/",
+    "https://tritekbattery.com/ul2271-battery-certification/",
+    "https://www.autodesk.com/design-make/articles/gigafactory-construction",
+    "https://www.peopleforbikes.org/news/2026-bike-industry-tariff-updates",
+    "https://cnevpost.com/2026/02/04/global-ev-battery-market-share-2025/"
+   ],
+   "flux_control": 0.77,
+   "refutes": 2,
+   "of": 2,
+   "corrected_substitutability": 2,
+   "corrected_capacity": 1,
+   "corrected_cost_share": 0.2,
+   "survives": false,
+   "refuter_reasons": [
+    "The node's capacity evidence conflates two products: the cited small-format shortage (sold out into H1 2026, prices up 20 percent) describes 100 Ah prismatic LFP cells for residential storage, not 18650 or 21700 e-bike cylindrical cells. Cylindrical and pack prices are falling (BNEF Dec 2025: record low USD 108 per kWh, down 8 percent on cell overcapacity); the 18650 market is contracting on oversupply; at least eight qualified suppliers exist (CATL, EVE, BAK, Lishen, Samsung SDI, LG, Panasonic, Molicel). UL 2271 recertification runs 6 to 12 weeks and EN 15194 8 to 16 weeks (up to 4 to 6 months with mechanical EN 17860), not 6 to 18 months, and pack makers multi-source cells. E-bike unit sales were never cell-constrained: 2022 to 2024 was an inventory glut (3 to 5 times normal stock, 7 plus months of inventory in Europe mid-2024). The 30 to 40 percent cost share is the whole pack, so cells alone sit below 0.38.",
+    "Delivered trips contradict the claim: North American shared fleets grew 5 percent to about 350,000 vehicles in 2025 while utilisation fell 10 percent to 1.9 trips per vehicle per day (NABSA 2025), the signature of fleet oversupply; operators are permit-capped (SFMTA, Denver, Palo Alto) regardless of vehicle availability. Retail e-bikes spent 2022 to 2026 in an inventory glut: US bicycle imports fell from about 18M (2020) to 13M (2023) leaving 3 to 5 times normal stock; PeopleForBikes cut its 2026 unit growth forecast to 11 percent on demand; CONEBI shows EU e-bike units 5.5M (2022) to 5.1M (2023) with overstock through 2024. Cylindrical cell capacity is dominated by EV and grid demand with e-bikes a low single-digit share, and the claimed co-limiting partner comp_middrive is already refuted 2 of 2. Cost share: vehicle depreciation is 33 to 40 percent of a shared trip's cost (USD 0.94 to 1.17 of 2.85 to 3.30 per ride) and cells 34 to 42 percent of the vehicle, so cells are 0.12 to 0.15 of a delivered trip, not 0.38."
+   ],
+   "refuter_sources": [
+    [
+     "https://www.ess-news.com/2025/10/29/battery-shortage-intensifies-as-100-ah-cells-sell-out-into-2026/",
+     "https://about.bnef.com/insights/clean-transport/lithium-ion-battery-pack-prices-fall-to-108-per-kilowatt-hour-despite-rising-metal-prices-bloombergnef/",
+     "https://dataintelo.com/report/global-18650-and-21700-battery-market",
+     "https://tritekbattery.com/ul2271-battery-certification/",
+     "https://www.txedbikes.com/en-15194-vs-ul-2849-a-2026-e-bike-compliance-roadmap-for-global-brands.html",
+     "https://shop-eat-surf-outdoor.com/news/bike-retailers-ride-inventory-glut-as-demand-softens/131306/",
+     "https://clipclopbike.com/e-bike-inventory-trends-2026/"
+    ],
+    [
+     "NABSA State of the Industry 2025 via micromobility.substack.com (2026)",
+     "NACTO Shared Micromobility in NACTO Member Agencies: 2025 Trends",
+     "SFMTA Powered Scooter Share Permit Program FY2025-FY2026",
+     "PeopleForBikes, The U.S. E-Bike Market Is Bigger Than the Numbers Show (2025)",
+     "ClipClopBike, Bicycle Industry Inventory Trends in 2026",
+     "CONEBI European Bicycle Industry and Market Profile, 19th edition",
+     "gadallon.substack.com, The Rise and Reckoning of Scooter-Sharing (2025)"
+    ]
+   ]
   }
  ],
  "graph": {
@@ -732,10 +898,10 @@
     "id": "mat_cells",
     "function": "Cylindrical 18650 and 21700 lithium-ion cells for e-bike and scooter packs.",
     "stage": "materials",
-    "substitutability": 4,
-    "capacity_constraint": 3,
-    "cost_share": 0.38,
-    "evidence": "SCALE RECONCILED: the researcher wrote 'substitutability is low (2 of 5)' while describing a narrow certified-supplier set and a 6 to 18 month re-certification to swap a cell; on the formula's difficulty scale that prose reads 4, so 4 is used (researcher's literal 2 gives 0.59; 4 gives 0.77). Cells are 34 to 42 percent of e-bike production cost (redwaybattery.com via search snippet); UL 2271 cell qualification about 10 weeks plus pack re-testing (tritekbattery.com); small-format cells sold out into H1 2026 with prices up over 20 percent (ess-news.com); new gigafactory capacity 2.5 to 3 years (autodesk.com); Section 301 tariff on e-bike lithium batteries rises to 25 percent in 2026 from 7.5 percent. Capacity 3 per the researcher (tight near term, abundant in aggregate).",
+    "substitutability": 2,
+    "capacity_constraint": 1,
+    "cost_share": 0.2,
+    "evidence": "SCALE RECONCILED: the researcher wrote 'substitutability is low (2 of 5)' while describing a narrow certified-supplier set and a 6 to 18 month re-certification to swap a cell; on the formula's difficulty scale that prose reads 4, so 4 is used (researcher's literal 2 gives 0.59; 4 gives 0.77). Cells are 34 to 42 percent of e-bike production cost (redwaybattery.com via search snippet); UL 2271 cell qualification about 10 weeks plus pack re-testing (tritekbattery.com); small-format cells sold out into H1 2026 with prices up over 20 percent (ess-news.com); new gigafactory capacity 2.5 to 3 years (autodesk.com); Section 301 tariff on e-bike lithium batteries rises to 25 percent in 2026 from 7.5 percent. Capacity 3 per the researcher (tight near term, abundant in aggregate). CORRECTED 5 Sep 2026 after 2 of 2 refutations: substitutability 4 to 2, capacity 3 to 1, cost share 0.38 to 0.20 (the cited shortage was 100 Ah prismatic storage cells, not cylindrical e-bike cells; cylindrical prices fell in 2025 and e-bikes were in an inventory glut); original flux_control 0.77.",
     "sources": [
      "https://stdbattery.com/blog/detail/lg-vs-samsung-vs-panasonic-the-ultimate-technical-comparison-of-e-bike-battery-cells",
      "https://www.redwaybattery.com/what-is-driving-the-small-format-battery-shortage-in-2026/",
@@ -787,7 +953,7 @@
       "investable": false
      }
     ],
-    "flux_control": 0.77,
+    "flux_control": 0.37,
     "hops_from_correction": 3
    },
    {
@@ -1315,10 +1481,10 @@
     "id": "asm_buses",
     "function": "Transit buses: diesel, CNG, hybrid and battery electric.",
     "stage": "assembly",
-    "substitutability": 4,
-    "capacity_constraint": 4,
-    "cost_share": 0.85,
-    "evidence": "SCALE RECONCILED: the researcher scored substitutability 2 while describing a two-firm duopoly with switching costs (77 percent of agencies that bought New Flyer in 2015 to 2018 bought again in 2019 to 2022; New Flyer and Gillig 56 to 58 percent of contracts, Brookings/AEI); on the difficulty scale two qualified heavy-duty OEMs after the Proterra (Chapter 11, 2023) and Nova Bus exits reads 4 (literal 2 gives 0.66; 4 gives 0.84). Capacity binding: NFI backlog USD 13.5 billion at June 30 2025, up 14.4 percent, 16,198 equivalent units, zero-emission 35.3 percent of backlog; order-to-delivery 16 to 24 months, up from 12 to 18; New Flyer battery recall about USD 230 million. Bus is at 86 percent of 2019 ridership, the fastest-recovering mode. NOT adversarially tested in the visible verdicts; carries the same undercounted-supplier risk that cut asm_rolling_stock (BYD Lancaster, Phoenix/Proterra, Solaris/CAF entry, ENC).",
+    "substitutability": 3.5,
+    "capacity_constraint": 2.5,
+    "cost_share": 0.15,
+    "evidence": "SCALE RECONCILED: the researcher scored substitutability 2 while describing a two-firm duopoly with switching costs (77 percent of agencies that bought New Flyer in 2015 to 2018 bought again in 2019 to 2022; New Flyer and Gillig 56 to 58 percent of contracts, Brookings/AEI); on the difficulty scale two qualified heavy-duty OEMs after the Proterra (Chapter 11, 2023) and Nova Bus exits reads 4 (literal 2 gives 0.66; 4 gives 0.84). Capacity binding: NFI backlog USD 13.5 billion at June 30 2025, up 14.4 percent, 16,198 equivalent units, zero-emission 35.3 percent of backlog; order-to-delivery 16 to 24 months, up from 12 to 18; New Flyer battery recall about USD 230 million. Bus is at 86 percent of 2019 ridership, the fastest-recovering mode. NOT adversarially tested in the visible verdicts; carries the same undercounted-supplier risk that cut asm_rolling_stock (BYD Lancaster, Phoenix/Proterra, Solaris/CAF entry, ENC). CORRECTED 5 Sep 2026 after 2 of 2 refutations: substitutability 4 to 3.5, capacity 4 to 2.5, cost share 0.85 to 0.15 (the vehicle is a fraction of the one-third capital share of a transit trip; workforce, maintenance and operating budgets bind service); original flux_control 0.84.",
     "sources": [
      "https://www.globenewswire.com/news-release/2025/07/31/3125495/0/en/NFI-Announces-Second-Quarter-Results.html",
      "https://www.brookings.edu/wp-content/uploads/2025/09/Paying-Less-for-Public-Transit-Buses.pdf",
@@ -1358,7 +1524,7 @@
       "share_note": "components, not complete buses"
      }
     ],
-    "flux_control": 0.84,
+    "flux_control": 0.58,
     "hops_from_correction": 1
    },
    {
@@ -2562,9 +2728,7 @@
    }
   ],
   "rate_limiting": [
-   "asm_buses (0.84, hop 1): the rate-limiting investable step of the transit branch. Two heavy-duty OEMs (NFI, Gillig) after the Proterra and Nova exits, 77 percent repeat purchase, record backlog USD 13.5 billion up 14.4 percent, lead times 16 to 24 months, and bus the fastest-recovering mode at 86 percent of 2019. Scale-reconciled from the researcher's inverted 2 to 4; not adversarially tested in the visible verdicts, so it carries the undercounted-supplier risk that removed asm_rolling_stock. NFYEF is the line; Gillig is private.",
-   "mat_cells (0.77, hop 3): co-limiting with comp_middrive on a 1 to 3 year clock through certification (a cell swap forces UL 2271 pack re-testing, 6 to 18 months), the 25 percent Section 301 rate from 2026 and small-format cells sold out into H1 2026, with cells at 34 to 42 percent of e-bike cost. Three hops from the correction, so its signal reaches the trip through two substitutable stages (pack, OEM). Scale-reconciled from the researcher's inverted 2 to 4. Lines: PCRFF and CBAT in the universe; SSDIY is not.",
-   "Controls without capture: inf_utility_interconnection (0.75, hop 1, assembler-added on the refuters' finding) is a sole-source, 18-month-plus step on the electric-bus sub-branch only, which electrifies an existing mode rather than shifting share from cars; it is excluded from the rate-limiting list for that reason and is investable only where the utility is investor-owned."
+   "Untested, minor sub-branch: Controls without capture: inf_utility_interconnection (0.75, hop 1, assembler-added on the refuters' finding) is a sole-source, 18-month-plus step on the electric-bus sub-branch only, which electrifies an existing mode rather than shifting share from cars; it is excluded from the rate-limiting list for that reason and is investable only where the utility is investor-owned."
   ],
   "attached_public_companies": [
    {
@@ -3203,7 +3367,7 @@
     "horizon": "Reauthorization status Oct 1 2026; FHWA bipedfund FY2027 table, early 2028"
    }
   ],
-  "method_notes": "Layer 0.5 flow graph, first prototype, assembled Sept 5 2026. FORMULA: flux_control = 0.45 x substitutability/5 + 0.35 x capacity_constraint/5 + 0.20 x min(1, 3 x cost_share), applied by script (scratchpad/flowgraph.py); the script reproduces all twelve researcher values exactly (0.90, 0.84, 0.76, 0.75, 0.75, 0.70, 0.68, 0.66, 0.59, 0.59, 0.59, 0.58) before any correction. SCALE: substitutability is substitution difficulty, 1 commodity to 5 sole source, the direction the formula and the premise require (the rate-limiting step has the lowest substitutability and the highest score); the op_dockless researcher defined it that way and nine of twelve researched nodes used it. Three entries were written on the inverted plain-sense scale, shown by their own prose, and were mapped to the difficulty scale before the formula ran, with the literal value recorded in each node's evidence: asm_buses (researcher 2 with 'two-firm duopoly, switching costs lock agencies' mapped to 4; 0.66 to 0.84), mat_cells (researcher 2 with 'substitutability is low' mapped to 4; 0.59 to 0.77), and the inf_bus_depot_charging refuters' corrected 5 meaning 'fully substitutable, commoditized' mapped to 1 (their literal 5 would compute 0.71 and invert their own verdict; used 0.35). CORRECTIONS: refuted nodes use the verification file's corrected scores (asm_rolling_stock 3/3, fin_federal_programs 3.5/2, inf_bus_depot_charging 1/2 after mapping); a node with 2 or more refutations is not rate-limiting regardless of its number. fin_federal_programs' aggregate 3.5 may itself mix scales (one refuter wrote 2), so 0.52 to 0.66 is the honest range; it changes nothing since the node is out. VERDICT COVERAGE: the input's verification section was truncated inside inf_transit_fixed, so verdicts are visible for three of the four highest-control nodes; inf_transit_fixed is carried as provisional and the remaining researched nodes (op_transit_agencies, comp_middrive, op_dockless, asm_buses, mat_cells, comp_battery_pack, op_docked_share, mat_aggregates) are treated as unrefuted because no verdict on them was visible, not because they survived one. UNRESEARCHED NODES: 24 of the 38 nodes had no research entry in the input (or a truncated one, mnt_battery_safety_recycling); their scores are the assembler's, drawn from the merged map's own cited facts, and each evidence field says so; they are the lower-control nodes by construction of the research queue, and none exceeds 0.64. HOPS: hop 0 is the set of nodes that physically deliver the mobility unit (op_docked_share, op_dockless, op_transit_agencies and the six infrastructure nodes that carry the trip); hops_from_correction is the shortest directed path along supplier-to-consumer edges to any hop-0 node, computed by breadth-first search over the 71 edges; software and finance nodes feed deliverers and sit at hop 1. EDGES: the merged map's edge list and leading-indicator array were not present in the truncated input, so the 71 edges were rebuilt from the stage structure and the node texts, and the 18 leading indicators were carried from the numbers and sources the map's node texts cite. ONE NODE ADDED: inf_utility_interconnection, on the explicit finding of both inf_bus_depot_charging refuters that the constraint they identified belongs to a separate node; it is flagged in its function text and kept off the rate-limiting list. COST SHARE is the node's share of the delivered unit's cost (a bike or micromobility trip on the active branch, a transit trip on the transit branch), a computed estimate where the researcher gave none; the term is capped at cost_share 0.333, so estimates above that do not move the score. COMPANIES: every ticker was checked against data/engine_tiers.json (53 ranked names, 10 Tier 1, 21 Tier 2, 7 Tier 3, 4 Tier 4, 11 exit review) and data/search_index.json (15,797 names; stage codes R ranked, 0 first-screen cut, 1 hard reject, 2 business-review cut, 3 cut on growth and finances, 4 deep-verification cut, X owner removal; absent means never in the universe); where the map cited a ticker line the universe does not hold, the line it does hold is used and the substitution is noted (ABLZF for ABB, TRYIF for TRYIY, PCRFF for PCRFY, YAMHF for YAMHY, PEVM for PEV, HTHIF, KWHIF, VOLVF, CNSWY, SCGPY, IKTSY, SGSOF, BVVBY). VOCABULARY: movement is written as overshoot or deficit and as toward or away from a safe range; no text uses an em dash. CORRECTIONS 5 Sep 2026 (review): the synthesizer wrote that verdicts for inf_transit_fixed, comp_middrive and op_transit_agencies were not visible; they were, each refuted 2 of 2, and the three are now corrected and removed from the rate-limiting list. inf_protected_lanes, the highest-control node, was never sent to a refuter; two refutations were commissioned on 5 Sep 2026 and their outcome is recorded in verified_nodes when they return. Stale ticker lines in verified_nodes were reconciled to the universe. 5 Sep 2026, second correction: the first correction pass wrote the corrected scores into verified_nodes instead of the node table; the node table now carries them and verified_nodes holds the original claims. inf_protected_lanes was refuted 2 of 2 and leaves the rate-limiting list; of the remaining entries asm_buses and mat_cells have not yet faced refuters (commissioned), and inf_utility_interconnection scores high on a minor sub-branch.",
+  "method_notes": "Layer 0.5 flow graph, first prototype, assembled Sept 5 2026. FORMULA: flux_control = 0.45 x substitutability/5 + 0.35 x capacity_constraint/5 + 0.20 x min(1, 3 x cost_share), applied by script (scratchpad/flowgraph.py); the script reproduces all twelve researcher values exactly (0.90, 0.84, 0.76, 0.75, 0.75, 0.70, 0.68, 0.66, 0.59, 0.59, 0.59, 0.58) before any correction. SCALE: substitutability is substitution difficulty, 1 commodity to 5 sole source, the direction the formula and the premise require (the rate-limiting step has the lowest substitutability and the highest score); the op_dockless researcher defined it that way and nine of twelve researched nodes used it. Three entries were written on the inverted plain-sense scale, shown by their own prose, and were mapped to the difficulty scale before the formula ran, with the literal value recorded in each node's evidence: asm_buses (researcher 2 with 'two-firm duopoly, switching costs lock agencies' mapped to 4; 0.66 to 0.84), mat_cells (researcher 2 with 'substitutability is low' mapped to 4; 0.59 to 0.77), and the inf_bus_depot_charging refuters' corrected 5 meaning 'fully substitutable, commoditized' mapped to 1 (their literal 5 would compute 0.71 and invert their own verdict; used 0.35). CORRECTIONS: refuted nodes use the verification file's corrected scores (asm_rolling_stock 3/3, fin_federal_programs 3.5/2, inf_bus_depot_charging 1/2 after mapping); a node with 2 or more refutations is not rate-limiting regardless of its number. fin_federal_programs' aggregate 3.5 may itself mix scales (one refuter wrote 2), so 0.52 to 0.66 is the honest range; it changes nothing since the node is out. VERDICT COVERAGE: the input's verification section was truncated inside inf_transit_fixed, so verdicts are visible for three of the four highest-control nodes; inf_transit_fixed is carried as provisional and the remaining researched nodes (op_transit_agencies, comp_middrive, op_dockless, asm_buses, mat_cells, comp_battery_pack, op_docked_share, mat_aggregates) are treated as unrefuted because no verdict on them was visible, not because they survived one. UNRESEARCHED NODES: 24 of the 38 nodes had no research entry in the input (or a truncated one, mnt_battery_safety_recycling); their scores are the assembler's, drawn from the merged map's own cited facts, and each evidence field says so; they are the lower-control nodes by construction of the research queue, and none exceeds 0.64. HOPS: hop 0 is the set of nodes that physically deliver the mobility unit (op_docked_share, op_dockless, op_transit_agencies and the six infrastructure nodes that carry the trip); hops_from_correction is the shortest directed path along supplier-to-consumer edges to any hop-0 node, computed by breadth-first search over the 71 edges; software and finance nodes feed deliverers and sit at hop 1. EDGES: the merged map's edge list and leading-indicator array were not present in the truncated input, so the 71 edges were rebuilt from the stage structure and the node texts, and the 18 leading indicators were carried from the numbers and sources the map's node texts cite. ONE NODE ADDED: inf_utility_interconnection, on the explicit finding of both inf_bus_depot_charging refuters that the constraint they identified belongs to a separate node; it is flagged in its function text and kept off the rate-limiting list. COST SHARE is the node's share of the delivered unit's cost (a bike or micromobility trip on the active branch, a transit trip on the transit branch), a computed estimate where the researcher gave none; the term is capped at cost_share 0.333, so estimates above that do not move the score. COMPANIES: every ticker was checked against data/engine_tiers.json (53 ranked names, 10 Tier 1, 21 Tier 2, 7 Tier 3, 4 Tier 4, 11 exit review) and data/search_index.json (15,797 names; stage codes R ranked, 0 first-screen cut, 1 hard reject, 2 business-review cut, 3 cut on growth and finances, 4 deep-verification cut, X owner removal; absent means never in the universe); where the map cited a ticker line the universe does not hold, the line it does hold is used and the substitution is noted (ABLZF for ABB, TRYIF for TRYIY, PCRFF for PCRFY, YAMHF for YAMHY, PEVM for PEV, HTHIF, KWHIF, VOLVF, CNSWY, SCGPY, IKTSY, SGSOF, BVVBY). VOCABULARY: movement is written as overshoot or deficit and as toward or away from a safe range; no text uses an em dash. CORRECTIONS 5 Sep 2026 (review): the synthesizer wrote that verdicts for inf_transit_fixed, comp_middrive and op_transit_agencies were not visible; they were, each refuted 2 of 2, and the three are now corrected and removed from the rate-limiting list. inf_protected_lanes, the highest-control node, was never sent to a refuter; two refutations were commissioned on 5 Sep 2026 and their outcome is recorded in verified_nodes when they return. Stale ticker lines in verified_nodes were reconciled to the universe. 5 Sep 2026, second correction: the first correction pass wrote the corrected scores into verified_nodes instead of the node table; the node table now carries them and verified_nodes holds the original claims. inf_protected_lanes was refuted 2 of 2 and leaves the rate-limiting list; of the remaining entries asm_buses and mat_cells have not yet faced refuters (commissioned), and inf_utility_interconnection scores high on a minor sub-branch. 5 Sep 2026, third correction: asm_buses and mat_cells refuted 2 of 2 by commissioned refuters; corrected scores are the mean of the two refuters' corrections. The rate-limiting list is empty of tested nodes; see prototype_verdict.",
   "caveats": "HOP-DISTANCE DECAY: control measured at a node is not control over the correction. A signal crossing k hops is attenuated at each intervening node by that node's substitutability and diluted by the target's revenue mix; mat_cells scores 0.77 at hop 3 but reaches the trip through a commoditized pack stage and a commoditized OEM stage, and Panasonic's e-bike cells are a rounding error of PCRFF's revenue, so the predictions treat hop 2 and hop 3 lines as flow-invisible until proven otherwise. The formula also carries no relevance weight: a sole-source slow step on a minor sub-branch (utility interconnection for bus depots, 0.75) scores as high as the branch-governing node, which is why the rate-limiting list is a judgment stated in words, not a sort on the number. PRIVATE AND FOREIGN SUPPLIERS: the two highest-control vehicle-side suppliers are uninvestable (Bosch, foundation-owned; Bafang, Shanghai A-share), the docked-hardware duopoly is half private (Fifteen), the second bus OEM is private (Gillig), the separator, rack, signal, charging-dock and service-labour nodes are wholly private or municipal, and Giant, Merida, Darfon, Dynapack, Simplo and Cheng Shin trade only in Taiwan; LG Energy Solution and CATL have no US line. The investable graph is therefore a thin, biased sample of the control graph, skewed toward transit suppliers and away from the active-transport branch. PREDICTING THE FLOW VERSUS WHO CAPTURES IT: the flow (trips shifting toward bikes and transit in growing cities) follows the resource gradient and the scaling law and is the part this layer claims to predict; capture requires a priced, exclusive position on a rate-limiting step, and the most rate-limiting step here (street space) is unpriced, so capture happens at second-best positions (exclusive permits, duopoly bus supply, captive aftermarkets) whose durability is contractual and political, re-tendered on dates (Divvy Jan 2028, Citi Bike May 2029, each bus procurement). The engine's own screen cut most of the hop-0 operators on economics (LYFT thin economics, LIME first-screen score 28 of 50), and nothing here re-scores them on the six measures or the gate; flux control is not a merit score. SCALE INCONSISTENCY in the inputs: researchers used both directions of the substitutability scale; three entries were remapped with the literal values preserved, and any reader who prefers the literal numbers gets asm_buses 0.66, mat_cells 0.59 and inf_bus_depot_charging 0.71, which changes the ranking of the investable transit branch. Four researchers reported no working web access (op_transit_agencies, op_docked_share, fin_federal_programs, and both rolling-stock refuters), so their facts are the map's own citations or recollection; several supplier claims (Kawasaki plants, CAF Elmira, Hyundai Rotem, Hitachi WMATA 8000-series) are refuter recollection and unverified here. TRUNCATION: the merged map ended inside fin_state_local, the research inside mnt_battery_safety_recycling and the verification inside inf_transit_fixed; any nodes, edges or verdicts after those points are absent from this graph. COST SHARES are estimates against a delivered unit that differs by branch; only the mat_cells, comp_battery_pack, comp_middrive and asm_rolling_stock shares have a cited basis. MODE SUBSTITUTION: the refuters' strongest argument, that bus, BRT and bikes substitute for rail at the pathway level, cuts both ways; it lowers every rail node and it means the branches compete for the same trips, so a lane-rich city can drain the bus branch's growth. The clock: the framework's scorecard is deliberately hostile to decades-scale infrastructure (F_clock 3 of 6), so even a correctly named transit chokepoint will rank low under v2 unless the adoption override (ceiling, penetration, doubling time) is cited; this layer supplies flow context, not a score.",
   "refuted_not_rate_limiting": [
    "NOT rate-limiting, refuted 2 of 2: asm_rolling_stock (0.90 to 0.58) because six manufacturers hold US final assembly, NYC's R211 was competitively bid, Stadler stood up a greenfield Buy America plant in 2 to 3 years, backlogs are queues that clear, and bus, BRT and bikes substitute for rail at the pathway level.",
@@ -3212,7 +3376,10 @@
    "inf_transit_fixed (corrected flux_control 0.59): refuted 2 of 2; see verified_nodes.",
    "comp_middrive (corrected flux_control 0.38): refuted 2 of 2; see verified_nodes.",
    "op_transit_agencies (corrected flux_control 0.52): refuted 2 of 2; see verified_nodes.",
-   "inf_protected_lanes (corrected flux_control 0.504): refuted 2 of 2; see verified_nodes."
-  ]
+   "inf_protected_lanes (corrected flux_control 0.504): refuted 2 of 2; see verified_nodes.",
+   "asm_buses (corrected flux_control 0.58): refuted 2 of 2; see verified_nodes.",
+   "mat_cells (corrected flux_control 0.37): refuted 2 of 2; see verified_nodes."
+  ],
+  "prototype_verdict": "Every node the synthesizer named rate-limiting was refuted 2 of 2 when tested (rolling stock, federal programs, depot charging, fixed transit infrastructure, transit agencies, mid-drive units, protected lanes, bus assembly, cells). The refuters converged on the same reading each time: the binding input on the urban-mobility flow is a permit, a fleet cap, a fare, an operating budget or a workforce, a political queue that clears within an election or budget cycle, and it sits one hop from any investable position. The flow itself (trips shifting to bikes, e-bikes and transit in growing cities) is predictable from the leading indicators recorded here; who captures it is not decided by a supply node. For the engine this means Layer 0.5 should feed leading indicators and hop distance into measure F and measure C1, not a supplier list into the ranked field. The eight pre-registered predictions stand and will be read at their horizons; prediction 1 (NFI backlog) and prediction 3 (hop-distance decay) now test the refuters' reading against the synthesizer's."
  }
 }
