@@ -9,6 +9,11 @@ import marketdb
 
 pc = marketdb.load_price_cache()
 names = [n["tk"] for n in load_names()]
+import os
+from paths import DATA
+_v21 = os.path.join(DATA, "engine_tiers_v21.json")
+if os.path.exists(_v21):
+    names += [n["tk"] for n in load_names(_v21) if n["tk"] not in names]
 doc = marketdb.load_price_track()
 if doc["snapshots"] and doc["snapshots"][-1]["date"] >= pc["asof"]:
     print("price track: already holds", doc["snapshots"][-1]["date"]); raise SystemExit(0)

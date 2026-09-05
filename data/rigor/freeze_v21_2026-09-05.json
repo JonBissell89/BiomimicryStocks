@@ -1,0 +1,448 @@
+{
+ "asof": "2026-09-05",
+ "logic": "v2.1",
+ "note": "scores and prices as committed on the freeze date; the forward test grades this vintage regardless of later score changes",
+ "scores": {
+  "BOEUF": {
+   "score": 81,
+   "tier": "t1",
+   "gate": "pass"
+  },
+  "ENGCF": {
+   "score": 81,
+   "tier": "t1",
+   "gate": "pass"
+  },
+  "MBRFF": {
+   "score": 80,
+   "tier": "t1",
+   "gate": "pass"
+  },
+  "CERS": {
+   "score": 79,
+   "tier": "t2",
+   "gate": "pass"
+  },
+  "AHICF": {
+   "score": 78,
+   "tier": "t2",
+   "gate": "pass"
+  },
+  "HTFL": {
+   "score": 77,
+   "tier": "t2",
+   "gate": "pass"
+  },
+  "SBDHF": {
+   "score": 77,
+   "tier": "t2",
+   "gate": "pass"
+  },
+  "CLPBY": {
+   "score": 76,
+   "tier": "t2",
+   "gate": "pass"
+  },
+  "EW": {
+   "score": 76,
+   "tier": "t2",
+   "gate": "pass"
+  },
+  "GKOS": {
+   "score": 76,
+   "tier": "t2",
+   "gate": "pass"
+  },
+  "TMRAY": {
+   "score": 76,
+   "tier": "t2",
+   "gate": "pass"
+  },
+  "LEGH": {
+   "score": 75,
+   "tier": "t2",
+   "gate": "pass"
+  },
+  "PLPC": {
+   "score": 75,
+   "tier": "t2",
+   "gate": "pass"
+  },
+  "SSMXY": {
+   "score": 75,
+   "tier": "t2",
+   "gate": "pass"
+  },
+  "TDVXF": {
+   "score": 74,
+   "tier": "t2",
+   "gate": "pass"
+  },
+  "TMDX": {
+   "score": 74,
+   "tier": "t2",
+   "gate": "pass"
+  },
+  "ATRC": {
+   "score": 73,
+   "tier": "t3",
+   "gate": "pass"
+  },
+  "CBLL": {
+   "score": 73,
+   "tier": "t3",
+   "gate": "pass"
+  },
+  "CRMD": {
+   "score": 73,
+   "tier": "t3",
+   "gate": "pass"
+  },
+  "DXCM": {
+   "score": 73,
+   "tier": "t3",
+   "gate": "pass"
+  },
+  "BSY": {
+   "score": 72,
+   "tier": "t3",
+   "gate": "pass"
+  },
+  "TSNLF": {
+   "score": 72,
+   "tier": "t3",
+   "gate": "pass"
+  },
+  "WRTBY": {
+   "score": 72,
+   "tier": "t3",
+   "gate": "pass"
+  },
+  "CODYY": {
+   "score": 71,
+   "tier": "t3",
+   "gate": "pass"
+  },
+  "IOT": {
+   "score": 71,
+   "tier": "t3",
+   "gate": "pass"
+  },
+  "YMM": {
+   "score": 71,
+   "tier": "t3",
+   "gate": "pass"
+  },
+  "BLLN": {
+   "score": 70,
+   "tier": "t3",
+   "gate": "pass"
+  },
+  "KMDA": {
+   "score": 70,
+   "tier": "t3",
+   "gate": "pass"
+  },
+  "ADMA": {
+   "score": 69,
+   "tier": "t3",
+   "gate": "pass"
+  },
+  "SRTA": {
+   "score": 68,
+   "tier": "t4",
+   "gate": "pass"
+  },
+  "WSIOF": {
+   "score": 68,
+   "tier": "t4",
+   "gate": "pass"
+  },
+  "WST": {
+   "score": 68,
+   "tier": "t4",
+   "gate": "pass"
+  },
+  "BIRMF": {
+   "score": 67,
+   "tier": "t4",
+   "gate": "pass"
+  },
+  "ISRG": {
+   "score": 67,
+   "tier": "t4",
+   "gate": "pass"
+  },
+  "VCYT": {
+   "score": 67,
+   "tier": "t4",
+   "gate": "pass"
+  },
+  "BMBRF": {
+   "score": 66,
+   "tier": "t4",
+   "gate": "pass"
+  },
+  "NTRA": {
+   "score": 66,
+   "tier": "t4",
+   "gate": "pass"
+  },
+  "RMD": {
+   "score": 65,
+   "tier": "t4",
+   "gate": "pass"
+  },
+  "BFLY": {
+   "score": 70,
+   "tier": "exit",
+   "gate": "fail"
+  },
+  "DOGEF": {
+   "score": 66,
+   "tier": "exit",
+   "gate": "fail"
+  },
+  "CAI": {
+   "score": 64,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "GH": {
+   "score": 64,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "IRTC": {
+   "score": 64,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "LGRDY": {
+   "score": 64,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "MHGVY": {
+   "score": 64,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "ZBH": {
+   "score": 64,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "ARCB": {
+   "score": 62,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "WAB": {
+   "score": 62,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "DMTRF": {
+   "score": 61,
+   "tier": "exit",
+   "gate": "fail"
+  },
+  "STE": {
+   "score": 61,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "BB": {
+   "score": 58,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "DAR": {
+   "score": 57,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "EXTR": {
+   "score": 57,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "GXO": {
+   "score": 57,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "NDDLF": {
+   "score": 57,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "CNI": {
+   "score": 56,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "CP": {
+   "score": 56,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "TOELY": {
+   "score": 56,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "DLEGF": {
+   "score": 55,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "UNP": {
+   "score": 55,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "CNINF": {
+   "score": 53,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "SHLS": {
+   "score": 53,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "TMTMF": {
+   "score": 53,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "TSM": {
+   "score": 51,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "ALGN": {
+   "score": 50,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "EXLS": {
+   "score": 45,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "EPAM": {
+   "score": 43,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "ESTA": {
+   "score": 43,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "GLOB": {
+   "score": 41,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "G": {
+   "score": 39,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "TASK": {
+   "score": 39,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "IBEX": {
+   "score": 37,
+   "tier": "exit",
+   "gate": "pass"
+  },
+  "INOD": {
+   "score": 33,
+   "tier": "exit",
+   "gate": "pass"
+  }
+ },
+ "prices": {
+  "BOEUF": 24.43,
+  "ENGCF": 8.5,
+  "MBRFF": 69.25,
+  "CERS": 2.59,
+  "AHICF": 21.405,
+  "HTFL": 48.91,
+  "SBDHF": 8.6475,
+  "CLPBY": 7.09,
+  "EW": 90.045,
+  "GKOS": 177.47,
+  "TMRAY": 11.46,
+  "LEGH": 28.41,
+  "PLPC": 398.45,
+  "SSMXY": 12.43,
+  "TDVXF": 7.5,
+  "TMDX": 89.98,
+  "ATRC": 51.52,
+  "CBLL": 24.72,
+  "CRMD": 8.43,
+  "DXCM": 87.9,
+  "BSY": 33.71,
+  "TSNLF": 5.74,
+  "WRTBY": 6.71,
+  "CODYY": 8.77,
+  "IOT": 40.2,
+  "YMM": 8.65,
+  "BLLN": 99.39,
+  "KMDA": 8.54,
+  "ADMA": 9.62,
+  "SRTA": 5.32,
+  "WSIOF": 2.255,
+  "WST": 339.97,
+  "BIRMF": 2.6,
+  "ISRG": 370.26,
+  "VCYT": 42.53,
+  "BMBRF": 5.75,
+  "NTRA": 328.18,
+  "RMD": 228.35,
+  "BFLY": 7.36,
+  "DOGEF": 22.084,
+  "CAI": 25.07,
+  "GH": 161.41,
+  "IRTC": 123.07,
+  "LGRDY": 32.78,
+  "MHGVY": 21.69,
+  "ZBH": 99.545,
+  "ARCB": 139.66,
+  "WAB": 282.86,
+  "DMTRF": 2.5,
+  "STE": 231.57,
+  "BB": 7.7,
+  "DAR": 65.19,
+  "EXTR": 22.57,
+  "GXO": 47.805,
+  "NDDLF": 71.21,
+  "CNI": 123.37,
+  "CP": 91.6,
+  "TOELY": 176.49,
+  "DLEGF": 6.97,
+  "UNP": 289.62,
+  "CNINF": 0.79,
+  "SHLS": 7.13,
+  "TMTMF": 14.91,
+  "TSM": 428.91,
+  "ALGN": 157.76,
+  "EXLS": 38.56,
+  "EPAM": 113.37,
+  "ESTA": 71.78,
+  "GLOB": 41.1528,
+  "G": 37.96,
+  "TASK": 8.16,
+  "IBEX": 37.88,
+  "INOD": 57.585
+ },
+ "sha256_scores": "540821b32536435bda1d981e5adc3013b998426385809662b2682a4478df6043"
+}

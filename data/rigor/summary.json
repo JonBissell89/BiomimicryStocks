@@ -3,7 +3,7 @@
  "items": [
   [
    "Pre-registered test",
-   "endpoints locked 2026-09-03; 12-month tier spread and information coefficient on the frozen 2026-08-28 vintage, the whole 15,797-name universe included, the basket against the S&P stated either way"
+   "endpoints locked 2026-09-05; 12-month tier spread and information coefficient on the frozen 2026-08-28 vintage, the whole 15,797-name universe included, the basket against the S&P stated either way"
   ],
   [
    "Forward test, 53 ranked",
@@ -38,8 +38,12 @@
    "external, against the French library over 27 weeks: market beta 0.86, six factors explain 69% of variance, alpha after loadings -8.6% a year at t=-0.5; the registered rule says the thesis survives only if alpha remains, and the window is still short"
   ],
   [
+   "Second vintage",
+   "two logic versions face the same clock, each graded on its own frozen scores and prices: v2.0 (2026-08-28): accruing; v2.1 (2026-09-05): accruing. v2.1 re-scored the 53 on the amended measures (mean -3.8 points, 25 tier-band moves, rank correlation 0.85 with v2.0) and added a 20-name field from the re-screen; the v2.0 list stays the live list, and the two are compared, not averaged"
+  ],
+  [
    "Universe freshness",
-   "OPEN OBLIGATION: judging logic moved to v2.1, so every name is owed a fresh look; a full universe re-screen and ranked re-score are queued and this line stays until they run; the v2.1 description route has admitted 62 names that await a Round 2 business read, and 1112 viable names in routed codes still owe a description (fetched weekly)"
+   "first quarterly listing pull pending; judged under logic v2.1, whose documents are hash-checked on every build, and any logic change forces a full re-screen; the v2.1 description route has admitted 0 names that await a Round 2 business read, and 1112 viable names in routed codes still owe a description (fetched weekly)"
   ]
  ],
  "note": "every line is a current instrument reading from data/rigor/, derived and audited; none is a claim"

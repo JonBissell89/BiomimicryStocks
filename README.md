@@ -171,6 +171,20 @@ Executed since registration:
   external factor test could not be run from the build environment and is registered as pending so it
   cannot be quietly dropped.
 
+**v2.1 registered, re-screened and frozen beside v2.0 (Sep 2026).** The first screen's class vocabulary
+became Layer 0 stock ids, four same-evidence gaps between table entries were closed, the description route
+was extended, and the six measures gained document tests (moat, evidence class, ceiling, node, clock basis),
+all pre-registered with thirteen predictions in protocol v3 before the re-screen ran. Result: 216 names newly
+advance (154 on table changes, 62 on the first 384 descriptions), Round 2 judged 216 with 7 A and 132 B, a
+20-name field was scored on the v2.1 cards (Edwards Lifesciences 76, Intuitive Surgical 67, ArcBest 62), and
+the 53 ranked names re-scored a mean 3.8 points lower with 25 tier-band moves. Of the readable predictions,
+several failed as written and are recorded as failed in
+[`data/rigor/v21_predictions.json`](data/rigor/v21_predictions.json): the judges' verdict scale drifted
+generous against the August round, and the amended measures cut harder than the panel predicted. The v2.1
+engine is [`data/engine_tiers_v21.json`](data/engine_tiers_v21.json), frozen and hash-locked as a second
+vintage under protocol v4; the report card grades both vintages on the same weekly track, and the v2.0 list
+stays the live list until the forward test says otherwise.
+
 **Layer 0.5, a first flow graph (prototype, Sep 2026).** The owner's premise is that the flow is
 predictable once resource gradients and human movement are mapped with emotion removed, and that
 connections matter. [`data/flow_graphs/urban_mobility.json`](data/flow_graphs/urban_mobility.json) is the

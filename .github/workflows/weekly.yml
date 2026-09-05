@@ -58,6 +58,9 @@ jobs:
       - name: Queue first-screen admissions that stage 2 has not judged
         run: python scripts/queue_stage2.py
 
+      - name: Freeze and register the v2.1 vintage beside v2.0 (once, when its names are priced)
+        run: python scripts/register_v21_vintage.py
+
       - name: Re-read the rigor instruments
         run: |
           python scripts/report_card.py

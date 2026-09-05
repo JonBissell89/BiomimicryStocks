@@ -21,6 +21,19 @@
     "FRAMEWORK.md"
    ],
    "reason": "v2.1: first-screen class vocabulary becomes Layer 0 stock ids, evidence-parity fixes on the Yahoo entries, description route extended to services and conglomerates, circulation separated from extraction; measures, weights, tiers and gate unchanged"
+  },
+  {
+   "date": "2026-09-05",
+   "version": "v2.1",
+   "kind": "fulfilled",
+   "cleared": {
+    "logic_version": "v2.1",
+    "registered": "2026-09-03",
+    "universe_rescreen": true,
+    "ranked_rescore": true,
+    "reason": "v2.1: first-screen class vocabulary becomes Layer 0 stock ids, evidence-parity fixes on the Yahoo entries, description route extended to services and conglomerates, circulation separated from extraction; measures, weights, tiers and gate unchanged"
+   },
+   "reason": "v2.1 universe re-screen (round1_v21.py on the recorded screen, rounds 2 to 4 on the admitted field) and ranked re-score on the amended measures; vintage frozen 2026-09-05"
   }
  ]
 }

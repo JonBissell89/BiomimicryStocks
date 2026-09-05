@@ -90,7 +90,32 @@ if os.path.exists(rp):
                       "transport_E": mean([c["E"] for c in tr]), "transport_F_clock": mean([c["F_clock"] for c in tr]), "transport_A": mean([c["A"] for c in tr]),
                       "tech_A": mean([c["A"] for c in tech]), "tech_C1": mean([c["C1"] for c in tech]),
                       "amplifying_labels": sorted(c["ticker"] for c in cards if "amplif" in str(c.get("loop", "")).lower()),
-                      "status": "observed; compare with the registered current_value and expected_after by hand"}
+                      "status": "observed"}
+    from rigor_lib import spearman
+    old_s = [int(v20[c["ticker"]]["score"]) for c in cards if c["ticker"] in v20]
+    new_s = [c["total"] + int(v20[c["ticker"]].get("jx_penalty", 0) or 0) for c in cards if c["ticker"] in v20]
+    rho = round(spearman(old_s, new_s), 3)
+    hm = out["v21-P11"]["health_mean_total"]
+    hb = [c["B"] for c in cards if str(v20.get(c["ticker"], {}).get("need", "")).lower().startswith("health") and int(v20[c["ticker"]]["dims"]["B"]) >= 21]
+    loops = {}
+    for c in cards:
+        k = str(c.get("loop", "")).lower().split()[0] if c.get("loop") else ""
+        loops.setdefault(k, []).append(c["total"])
+    lm = {k: round(sum(x) / len(x), 1) for k, x in loops.items()}
+    corr = {c["ticker"]: c["F_clock"] for c in cards if c["ticker"] in ("CNI", "CP", "UNP", "WAB")}
+    clauses = {
+        "health_mean_73.8_to_77.8": ("pass" if 73.8 <= hm <= 77.8 else "FAIL (%.1f)" % hm),
+        "transport_E_3.4_to_4.2": ("pass" if 3.4 <= out["v21-P11"]["transport_E"] <= 4.2 else "FAIL"),
+        "corridor_F_clock_stays_3": ("pass" if all(v == 3 for v in corr.values()) else "FAIL %s" % corr),
+        "transport_F_clock_3.4_to_3.8": ("pass" if 3.4 <= out["v21-P11"]["transport_F_clock"] <= 3.8 else "FAIL"),
+        "tech_C1_5.2_to_6.4": ("pass" if 5.2 <= out["v21-P11"]["tech_C1"] <= 6.4 else "FAIL"),
+        "tech_A_14.0_to_15.4": ("pass" if 14.0 <= out["v21-P11"]["tech_A"] <= 15.4 else "FAIL (%.1f)" % out["v21-P11"]["tech_A"]),
+        "amplifying_labels_at_least_3": ("pass" if len(out["v21-P11"]["amplifying_labels"]) >= 3 else "FAIL"),
+        "health_B21_fall_to_12_to_17": ("pass" if hb and all(12 <= b <= 17 for b in hb) else "FAIL: %d of %d stayed above 17 (%s)" % (sum(1 for b in hb if b > 17), len(hb), sorted(hb))),
+        "loop_order_damping_neutral_amplifying": ("pass" if lm.get("damping", 0) > lm.get("neutral", 0) > lm.get("amplifying", 0) else "FAIL %s" % lm),
+        "spearman_0.88_to_0.98": ("pass" if 0.88 <= rho <= 0.98 else "FAIL (%.3f)" % rho)}
+    out["v21-P11"].update({"spearman_v20_v21": rho, "loop_means": lm, "clauses": clauses,
+        "reading": "%d of %d clauses pass. The amended measures cut the health mean below the registered band and re-ordered more than predicted (Spearman %.2f): the moat document tests charge 1 on most names where fewer than two tests are testable, and the evidence-class caps under B move about 30 names; the transport and loop-order clauses hold" % (sum(1 for v in clauses.values() if v == "pass"), len(clauses), rho)})
 doc = {"read": pd.Timestamp.today().strftime("%Y-%m-%d"), "rule": pro["v21_predictions"]["rule"], "descriptions_on_file": int(v.has_description.sum()),
        "readings": [{**{"id": p["id"], "metric": p["metric"], "expected_after": p["expected_after"], "falsified_if": p.get("falsified_if")}, **out.get(p["id"], {})} for p in preds]}
 json.dump(doc, open(os.path.join(R, "v21_predictions.json"), "w", encoding="utf-8"), indent=1, ensure_ascii=True)

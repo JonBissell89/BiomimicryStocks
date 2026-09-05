@@ -1,5 +1,5 @@
 {
- "registered": "2026-09-05",
+ "registered": "2026-09-03",
  "purpose": "pre-registration of the evaluation, so the forward test cannot be moved after the data arrives; v3 registers the v2.1 first-screen logic and its predictions before the v2.1 re-screen is run",
  "vintage": {
   "file": "freeze_2026-08-28.json",
@@ -80,21 +80,14 @@
   "a logic version is registered (register_logic.py --logic) and its predictions committed before its re-screen result is looked at; the v2.0 vintage keeps every v1 and v2 endpoint unchanged"
  ],
  "supersedes": {
-  "file": "evaluation_protocol_v3.json",
-  "sha256": "3d738188e46e90dd016ae7848262ad971795e45a7a0875e6f3ad1330eeb0ad2c",
-  "reason": "registers the frozen v2.1 vintage beside v2.0; every v3 endpoint, prediction and the v2.0 vintage are preserved unchanged",
+  "file": "evaluation_protocol_v2.json",
+  "sha256": "450d9b416e07aad038a3acb35e8eee8b650b84ca23e52ce48c7ff9238b13aa00",
+  "reason": "registers the v2.1 first-screen logic, its thirteen pre-registered predictions and the pending v2.1 vintage; every v2 endpoint and the v2.0 vintage are preserved unchanged",
   "chain": [
    {
-    "file": "evaluation_protocol_v2.json",
-    "sha256": "450d9b416e07aad038a3acb35e8eee8b650b84ca23e52ce48c7ff9238b13aa00",
-    "reason": "registers the v2.1 first-screen logic, its thirteen pre-registered predictions and the pending v2.1 vintage; every v2 endpoint and the v2.0 vintage are preserved unchanged",
-    "chain": [
-     {
-      "file": "evaluation_protocol_v1.json",
-      "sha256": "fedb355f1bf792389d6350cdb9da1a498966cbf6b785410c41422ab8e2082c53",
-      "reason": "adds universe-level endpoints and registers the pending external factor test; every v1 endpoint is preserved unchanged"
-     }
-    ]
+    "file": "evaluation_protocol_v1.json",
+    "sha256": "fedb355f1bf792389d6350cdb9da1a498966cbf6b785410c41422ab8e2082c53",
+    "reason": "adds universe-level endpoints and registers the pending external factor test; every v1 endpoint is preserved unchanged"
    }
   ]
  },
@@ -105,16 +98,6 @@
    "asof": "2026-08-28",
    "sha256_scores": "0feef03617a594b3d2a9cbc4742140f451aa9ead946c5e74b9fc4d93a4bcc1b0",
    "logic": "v2.0"
-  },
-  {
-   "tag": "v2.1",
-   "file": "freeze_v21_2026-09-05.json",
-   "asof": "2026-09-05",
-   "sha256_scores": "540821b32536435bda1d981e5adc3013b998426385809662b2682a4478df6043",
-   "logic": "v2.1",
-   "n": 73,
-   "priced": 73,
-   "endpoints": "the primary and secondary endpoints read on this vintage at horizon 2027-09-05 beside v2.0; the report card grades both and the comparison is published either way"
   }
  ],
  "pending_vintage": {
@@ -123,11 +106,7 @@
   "prior_file": "data/rubric/prior_v21.json",
   "spec_file": "data/rubric/v21_spec.json",
   "prior_sha256": "7173be0c72f481c6b5895501aff42b46e35540d4f8477a7ba437414efffde599",
-  "spec_sha256": "58a81e16ce0dc761aa812e500c8193ee15714704c7ae11b351dec1cd00c55ede",
-  "status": "frozen",
-  "file": "freeze_v21_2026-09-05.json",
-  "sha256_scores": "540821b32536435bda1d981e5adc3013b998426385809662b2682a4478df6043",
-  "asof": "2026-09-05"
+  "spec_sha256": "58a81e16ce0dc761aa812e500c8193ee15714704c7ae11b351dec1cd00c55ede"
  },
  "v21_predictions": {
   "registered": "2026-09-03",

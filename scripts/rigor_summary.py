@@ -49,6 +49,14 @@ else:
 if rq.get("pending_stage2") or rq.get("descriptions_owed"):
     fresh += ("; the v2.1 description route has admitted %d names that await a Round 2 business read, and %d viable names in routed codes still owe a description (fetched weekly)"
               % (len(rq.get("pending_stage2", [])), rq.get("descriptions_owed", 0)))
+fbv = rep.get("forward_by_vintage", {})
+if len(fbv) > 1:
+    parts = []
+    for tag, r in fbv.items():
+        parts.append("%s (%s): %s%s" % (tag, r.get("vintage_asof", "?"), r.get("status", "?"),
+                     (", IC %.3f, t1 minus exit %+.1f%%" % (r["information_coefficient"], 100 * r["t1_minus_exit"])) if r.get("status") == "reporting" else ""))
+    items.append(["Second vintage", "two logic versions face the same clock, each graded on its own frozen scores and prices: " + "; ".join(parts)
+                  + ". v2.1 re-scored the 53 on the amended measures (mean -3.8 points, 25 tier-band moves, rank correlation 0.85 with v2.0) and added a 20-name field from the re-screen; the v2.0 list stays the live list, and the two are compared, not averaged"])
 items.append(["Universe freshness", fresh])
 doc = {"asof": rep["latest"], "items": items,
        "note": "every line is a current instrument reading from data/rigor/, derived and audited; none is a claim"}

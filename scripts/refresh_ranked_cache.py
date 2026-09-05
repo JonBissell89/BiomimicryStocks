@@ -15,7 +15,13 @@ from paths import DATA
 import marketdb
 
 eng = json.load(open(os.path.join(DATA, "engine_tiers.json"), encoding="utf-8"))
-tickers = [n["tk"] for t in eng["tiers"] for n in t["names"]] + ["^GSPC"]
+tickers = [n["tk"] for t in eng["tiers"] for n in t["names"]]
+# a second logic version's engine (frozen as its own vintage) is priced on the same track
+_v21 = os.path.join(DATA, "engine_tiers_v21.json")
+if os.path.exists(_v21):
+    for t in json.load(open(_v21, encoding="utf-8"))["tiers"]:
+        tickers += [n["tk"] for n in t["names"] if n["tk"] not in tickers]
+tickers += ["^GSPC"]
 
 fresh = {}
 for attempt in range(4):
