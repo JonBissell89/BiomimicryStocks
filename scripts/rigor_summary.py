@@ -55,8 +55,24 @@ if len(fbv) > 1:
     for tag, r in fbv.items():
         parts.append("%s (%s): %s%s" % (tag, r.get("vintage_asof", "?"), r.get("status", "?"),
                      (", IC %.3f, t1 minus exit %+.1f%%" % (r["information_coefficient"], 100 * r["t1_minus_exit"])) if r.get("status") == "reporting" else ""))
+    # v2.0-to-v2.1 re-score movement, read from the assembly file rather than pinned by hand
+    asm = J("v21_assembly.json")
+    pred = J("v21_predictions.json")
+    p11 = next((r for r in pred["readings"] if r.get("id") == "v21-P11"), {})
+    rho = p11.get("spearman_v20_v21")
+    if not isinstance(rho, (int, float)):
+        from rigor_lib import spearman
+        pairs = [d for d in asm["deltas"] if d.get("v20") is not None]
+        rho = spearman([d["v20"] for d in pairs], [d["v21"] for d in pairs])
+    # blind v2.1 batch agreement, and how it compares with the pooled v2.0 batches
+    av21 = rel["agreement_v21"]
+    v21_rows = [r for r in rel["rows"] if r.get("batch") == av21["batch"]]
+    hot_by = sum(r["delta_recorded_minus_blind"]["total"] for r in v21_rows) / len(v21_rows)
     items.append(["Second vintage", "two logic versions face the same clock, each graded on its own frozen scores and prices: " + "; ".join(parts)
-                  + ". v2.1 re-scored the 53 on the amended measures (mean -3.8 points, 25 tier-band moves, rank correlation 0.85 with v2.0) and added a 20-name field from the re-screen; the v2.0 list stays the live list, and the two are compared, not averaged"])
+                  + (". v2.1 re-scored the 53 on the amended measures (mean %.1f points, %d tier-band moves, rank correlation %.2f with v2.0) and added a 20-name field from the re-screen; the v2.0 list stays the live list, and the two are compared, not averaged."
+                     % (asm["mean_delta_rescored"], len(asm["moved_band"]), rho))
+                  + (" A blind v2.1 batch of %d names scored from the rubric text alone agreed to %.1f of 100 (v2.0 batches: %.1f), gates %s, and ran %.1f points below the recorded cards on average."
+                     % (av21["n"], av21["mean_absolute_deviation_of_100"], rel["score_agreement"]["mean_absolute_deviation_of_100"], av21["gate_agreement"], hot_by))])
 items.append(["Universe freshness", fresh])
 doc = {"asof": rep["latest"], "items": items,
        "note": "every line is a current instrument reading from data/rigor/, derived and audited; none is a claim"}

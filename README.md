@@ -177,13 +177,18 @@ was extended, and the six measures gained document tests (moat, evidence class, 
 all pre-registered with thirteen predictions in protocol v3 before the re-screen ran. Result: 216 names newly
 advance (154 on table changes, 62 on the first 384 descriptions), Round 2 judged 216 with 7 A and 132 B, a
 20-name field was scored on the v2.1 cards (Edwards Lifesciences 76, Intuitive Surgical 67, ArcBest 62), and
-the 53 ranked names re-scored a mean 3.8 points lower with 25 tier-band moves. Of the readable predictions,
+the 53 ranked names re-scored a mean 4.4 points lower with 27 tier-band moves. Of the readable predictions,
 several failed as written and are recorded as failed in
 [`data/rigor/v21_predictions.json`](data/rigor/v21_predictions.json): the judges' verdict scale drifted
 generous against the August round, and the amended measures cut harder than the panel predicted. The v2.1
 engine is [`data/engine_tiers_v21.json`](data/engine_tiers_v21.json), frozen and hash-locked as a second
 vintage under protocol v4; the report card grades both vintages on the same weekly track, and the v2.0 list
-stays the live list until the forward test says otherwise.
+stays the live list until the forward test says otherwise. An Opus audit of the re-score found the
+evidence-class and attribution caps applied unevenly and 20 corrections were applied to the live v2.1 engine,
+with the frozen vintage left as frozen (see
+[`data/rigor/v21_cards_rescore.json`](data/rigor/v21_cards_rescore.json) `audit_corrections`). A blind v2.1
+batch scored from the rubric text alone agreed to 4.9 of 100, gate agreement 8 of 8, and ran 4.9 points below
+the recorded cards on average (v2.0 batches agreed to 5.9).
 
 **Layer 0.5, a first flow graph (prototype, Sep 2026).** The owner's premise is that the flow is
 predictable once resource gradients and human movement are mapped with emotion removed, and that
