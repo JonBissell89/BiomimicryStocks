@@ -17,7 +17,8 @@ import numpy as np
 import pandas as pd
 from paths import DATA
 
-R2 = os.path.join(DATA, "rigor", "v21_round2.json")
+R2 = sys.argv[1] if len(sys.argv) > 1 else os.path.join(DATA, "rigor", "v21_round2.json")
+OUT = sys.argv[2] if len(sys.argv) > 2 else os.path.join(DATA, "rigor", "v21_round3.json")
 r2 = json.load(open(R2, encoding="utf-8"))
 rows_in = r2["rows"] if isinstance(r2, dict) else r2
 adm = pd.read_csv(os.path.join(DATA, "round1_v21_newly_advancing.csv")).set_index("ticker")
@@ -93,7 +94,7 @@ doc = {"logic": "v2.1", "run": pd.Timestamp.today().strftime("%Y-%m-%d"), "rule"
                   "r3_pass": sum(1 for x in out if x["verdict"] in "AB" and not x["r3_cut"]),
                   "r3_cut": sum(1 for x in out if x["verdict"] in "AB" and x["r3_cut"])},
        "rows": out}
-json.dump(doc, open(os.path.join(DATA, "rigor", "v21_round3.json"), "w", encoding="utf-8"), indent=1, ensure_ascii=True)
+json.dump(doc, open(OUT, "w", encoding="utf-8"), indent=1, ensure_ascii=True)
 print(doc["counts"])
 surv = [x for x in out if x["verdict"] in "AB" and not x["r3_cut"]]
 surv.sort(key=lambda x: (x["verdict"], -(x["composite"] or 0)))

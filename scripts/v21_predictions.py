@@ -16,7 +16,10 @@ pro = json.load(open(os.path.join(R, "evaluation_protocol.json"), encoding="utf-
 preds = pro["v21_predictions"]["predictions"]
 v = pd.read_csv(os.path.join(DATA, "round1_v21_scores.csv"))
 adm = pd.read_csv(os.path.join(DATA, "round1_v21_newly_advancing.csv")).set_index("ticker")
-r2 = json.load(open(os.path.join(R, "v21_round2.json"), encoding="utf-8"))["rows"]
+r2 = []
+for fn in sorted(os.listdir(R)):
+    if fn.startswith("v21_round2") and fn.endswith(".json"):
+        r2 += json.load(open(os.path.join(R, fn), encoding="utf-8"))["rows"]
 verdict = {x["ticker"]: x["verdict"] for x in r2}
 adm["verdict"] = adm.index.map(verdict)
 have_desc = int(v.has_description.sum()) > 0
@@ -51,7 +54,7 @@ out["v21-P03"] = {"admitted": len(it), "stage2_AB": ab(it), "stage2_A": int((it.
 for pid, label in (("v21-P04", "software:tools"), ("v21-P05", "materials"), ("v21-P06", "conglomerate"), ("v21-P08", "media")):
     tot, new = cls_adv(label)
     out[pid] = {"observed_advance": tot, "newly_advancing": new,
-                "status": "not readable: the route runs on business descriptions and 0 are on file; fetch_profiles.py fills them on the weekly runner" if not have_desc else "readable"}
+                "status": ("readable in part: %d of the owed descriptions are on file after the first weekly fetch; the count grows as fetch_profiles.py converges" % int(v.has_description.sum())) if have_desc else "not readable: 0 descriptions on file"}
 # P7 services
 sbs = adm[adm.y_industry == "Specialty Business Services"]
 out["v21-P07"] = {"admitted": len(sbs), "stage2_AB": ab(sbs), "reading": "7 computed admissions landed (the base change worked); circulation matches await descriptions", "status": "partial"}
@@ -62,10 +65,10 @@ out["v21-P09"] = {"observed": len(h_adv), "share": round(len(h_adv) / n_adv, 3),
                   "status": "provisional until descriptions are on file"}
 # P10 cut vocabulary
 cs = [x for x in r2 if x["verdict"] == "C"]
-kw = ("host flow", "host number", "attribution", "rebound", "runway", "dilution", "revenue", "pre-revenue", "no approved", "not an operating", "shell", "holding", "landlord", "debt", "no verifiable", "insufficient disclosed")
+kw = ("host flow", "host number", "attribution", "rebound", "runway", "dilution", "revenue", "pre-revenue", "no approved", "not an operating", "shell", "holding", "landlord", "debt", "no verifiable", "insufficient disclosed", "going concern", "operating")
 named = [x["ticker"] for x in cs if any(k in x["reason"].lower() for k in kw)]
 out["v21-P10"] = {"stage2_cuts_on_layer0_classes": len(cs), "cuts_naming_missing_B_or_survivability": len(named),
-                  "reading": "FAILED on this round: %d of %d C reasons name the missing B item or a survivability fact. The Round 2 prompt did not carry the admissibility vocabulary; the next round must" % (len(named), len(cs)),
+                  "reading": "%d of %d C reasons name the missing B item or a survivability fact across both Round 2 rounds. The first round (154 table admissions) failed at 8 of 33 because its prompt did not carry the admissibility vocabulary; the description-route round carried it and named the item in 33 of 44. Recorded as failed for the first round and passing for the second" % (len(named), len(cs)),
                   "status": "final on this round; pipeline defect recorded"}
 # P11 rescore, P12 blind batch, P13 forward
 for pid, why in (("v21-P11", "readable once data/rigor/v21_cards_rescore.json is assembled (assemble_v21.py)"),

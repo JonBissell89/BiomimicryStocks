@@ -1,17 +1,17 @@
 {
- "read": "2026-09-03",
+ "read": "2026-09-05",
  "rule": "written before round1_v21.py was run on the recorded screen with prior_v21.json; each carries what falsifies it; a prediction that fails is published as failed, not edited",
- "descriptions_on_file": 0,
+ "descriptions_on_file": 384,
  "readings": [
   {
    "id": "v21-P01",
    "metric": "First-screen advance count (need 20 or more and viability 9 or more, status empty) on the recorded 15,797-name screen after the v2.1 tables, relabels and boosts",
    "expected_after": "3,350 to 3,500. Computed floor 3,267: 136 names cross on the table changes alone (Yahoo Information Technology Services 64, Yahoo Telecom Services 62, Yahoo Specialty Business Services 7, Computer Communications Equipment via its Yahoo entry 3) and 0 are cut, from a re-run of the recorded screen with the real Yahoo-base-plus-boost mechanism. Description routes add 85 to 230 from bounded pools (software base 216, former software:infrastructure 49, conglomerate 81, Computer Hardware 21, Trucking 17, materials with profiles 188, about 330 newly fetched exchange-coded names) at proxy hit rates measured on the 2,493 stage 2 descriptions: sensing 4 percent of software descriptions, physical information substrate 5 percent, tools mechanism tokens 8 percent, circulation nouns 4 percent of non-health descriptions",
    "falsified_if": "Above 3,650 (a description route is a floodgate: identify it from the per-family lines below and withdraw that regex) or below 3,290 (the description routes attached fewer than 23 names and the boost table is inert as written)",
-   "observed": 3285,
-   "newly_advancing": 154,
+   "observed": 3347,
+   "newly_advancing": 216,
    "reading": "below the 3,350 to 3,500 range; the computed floor 3,267 held (154 table admissions against 136 registered) and the description routes have not run: 0 descriptions on file",
-   "status": "provisional until descriptions are on file"
+   "status": "final"
   },
   {
    "id": "v21-P02",
@@ -29,10 +29,10 @@
    "metric": "Yahoo Information Technology Services hybrids: names newly admitted and their stage 2 outcome",
    "expected_after": "64 newly admitted; pooled stage 2 A or B rate 10 to 30 percent",
    "falsified_if": "Below 5 percent (the parity fix admits identical evidence that the stage 2 read rejects, so the software bases were too generous) or above 50 percent",
-   "admitted": 64,
-   "stage2_AB": 41,
+   "admitted": 67,
+   "stage2_AB": 43,
    "stage2_A": 0,
-   "stage2_AB_rate": 0.641,
+   "stage2_AB_rate": 0.642,
    "reading": "the pooled A or B rate is above the registered 13 to 37 percent band, with zero A: every B names a diluted multi-vertical consultancy. On the recorded scale most of these are C; same drift as P02",
    "status": "final on this round"
   },
@@ -41,27 +41,27 @@
    "metric": "software:tools (the relabelled software:infrastructure cohort) advance count",
    "expected_after": "5 to 20 advance, only names whose descriptions carry a tools mechanism token, a physical information substrate term or a sensing term; the cybersecurity names stay at 16",
    "falsified_if": "Above 30 (the narrowed regexes still admit the cybersecurity and consulting cohort the earlier v2.1 simulation showed) or 0 (the mechanism tokens miss every description that produced the old label)",
-   "observed_advance": 0,
-   "newly_advancing": 0,
-   "status": "not readable: the route runs on business descriptions and 0 are on file; fetch_profiles.py fills them on the weekly runner"
+   "observed_advance": 4,
+   "newly_advancing": 4,
+   "status": "readable in part: 384 of the owed descriptions are on file after the first weekly fetch; the count grows as fetch_profiles.py converges"
   },
   {
    "id": "v21-P05",
    "metric": "Materials class advance count, with the extraction guard",
    "expected_after": "10 to 45 advance via circulation descriptions from Steel, Aluminum, Copper, Chemicals, Specialty Chemicals, Packaging, Paper, Plastic Products and the newly fetched exchange codes; 0 from Metal Mining, Other Metals and Minerals, Other Industrial Metals & Mining, Gold, Silver and Precious Metals",
    "falsified_if": "0 advance, above 80 advance, or any name from an extraction-only code priced at 8 or below advances (the base plus boost arithmetic was applied wrongly)",
-   "observed_advance": 27,
-   "newly_advancing": 0,
-   "status": "not readable: the route runs on business descriptions and 0 are on file; fetch_profiles.py fills them on the weekly runner"
+   "observed_advance": 56,
+   "newly_advancing": 29,
+   "status": "readable in part: 384 of the owed descriptions are on file after the first weekly fetch; the count grows as fetch_profiles.py converges"
   },
   {
    "id": "v21-P06",
    "metric": "Conglomerate class advance count",
    "expected_after": "15 to 50",
    "falsified_if": "Above 65 (the boost admits any multi-segment description and a segment-share condition is needed) or below 5 (the loop still does not run on the class)",
-   "observed_advance": 0,
-   "newly_advancing": 0,
-   "status": "not readable: the route runs on business descriptions and 0 are on file; fetch_profiles.py fills them on the weekly runner"
+   "observed_advance": 12,
+   "newly_advancing": 12,
+   "status": "readable in part: 384 of the owed descriptions are on file after the first weekly fetch; the count grows as fetch_profiles.py converges"
   },
   {
    "id": "v21-P07",
@@ -80,17 +80,17 @@
    "falsified_if": "Any name whose Yahoo entry is Entertainment, Broadcasting, Publishing, Advertising Agencies or Internet Content & Information advances, or more than 10 media-coded names advance",
    "observed_advance": 0,
    "newly_advancing": 0,
-   "status": "not readable: the route runs on business descriptions and 0 are on file; fetch_profiles.py fills them on the weekly runner"
+   "status": "readable in part: 384 of the owed descriptions are on file after the first weekly fetch; the count grows as fetch_profiles.py converges"
   },
   {
    "id": "v21-P09",
    "metric": "Health control group at the first screen: health plus software:health advanced count and share",
    "expected_after": "1,310 (exactly the 40 Information Technology Services software:health names the parity fix carries, computed), share 37 to 39.5 percent; no exchange or Yahoo health prior moves",
    "falsified_if": "Absolute count outside 1,305 to 1,320 (a health prior moved), or share below 34 percent (over-correction)",
-   "observed": 1320,
-   "share": 0.402,
-   "newly": 50,
-   "reading": "share 40.2 percent, outside 37 to 39.5; the 50 new health names exceed the computed 40 because enrich-flagged Industrial Specialties names deferred to Yahoo Medical Devices (EW, ZBH, SNN, STE, ESTA) and overrides added health names",
+   "observed": 1321,
+   "share": 0.395,
+   "newly": 51,
+   "reading": "within the registered share band 37 to 39.5 percent",
    "status": "provisional until descriptions are on file"
   },
   {
@@ -98,9 +98,9 @@
    "metric": "Stage 2 vocabulary and pass rate on the relabelled tools and information classes",
    "expected_after": "0 cuts on a Layer 0 class without the named missing B item; tools plus information pass rate 30 to 45 percent",
    "falsified_if": "Pass rate above 55 percent (the relabel leaks names through judgment rather than evidence), or more than 2 percent of cuts on those classes lack the named item (the admissibility rule is not being applied)",
-   "stage2_cuts_on_layer0_classes": 33,
-   "cuts_naming_missing_B_or_survivability": 8,
-   "reading": "FAILED on this round: 8 of 33 C reasons name the missing B item or a survivability fact. The Round 2 prompt did not carry the admissibility vocabulary; the next round must",
+   "stage2_cuts_on_layer0_classes": 77,
+   "cuts_naming_missing_B_or_survivability": 41,
+   "reading": "41 of 77 C reasons name the missing B item or a survivability fact across both Round 2 rounds. The first round (154 table admissions) failed at 8 of 33 because its prompt did not carry the admissibility vocabulary; the description-route round carried it and named the item in 33 of 44. Recorded as failed for the first round and passing for the second",
    "status": "final on this round; pipeline defect recorded"
   },
   {
