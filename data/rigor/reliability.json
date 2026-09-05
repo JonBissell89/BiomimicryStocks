@@ -3,8 +3,22 @@
  "date": "2026-08-31",
  "n": 16,
  "batches": [
-  {"id": 1, "seed": 42, "n": 8, "date": "2026-08-31", "mad": 6.25, "spearman": 0.049},
-  {"id": 2, "seed": 8, "n": 8, "date": "2026-09-01", "mad": 5.63, "spearman": 0.848}
+  {
+   "id": 1,
+   "seed": 42,
+   "n": 8,
+   "date": "2026-08-31",
+   "mad": 6.25,
+   "spearman": 0.049
+  },
+  {
+   "id": 2,
+   "seed": 8,
+   "n": 8,
+   "date": "2026-09-01",
+   "mad": 5.63,
+   "spearman": 0.848
+  }
  ],
  "score_agreement": {
   "mean_absolute_deviation_of_100": 5.94,
@@ -202,5 +216,25 @@
    "blind_gate": "pass"
   }
  ],
- "reading": "Across both pre-registered batches, 16 names: the gate stays perfect at 16 of 16, totals agree to about six points of one hundred, and every measure lands within about two points of its scale. The two batches answer different questions. Batch 1 sampled a narrow 65-to-81 band and found rank correlation of 0.05 there: distinctions finer than the six-point noise floor are scorer noise. Batch 2 sampled a wider 57-to-82 band and rank correlation jumped to 0.85: when real level differences exist, both scorers order them the same way. Read together, the instrument measures level and coarse ordering reliably and fine ordering inside a tier band unreliably. One systematic pattern emerged with the larger sample: the recorded scores run hot by about three points on average (13 of 16 deltas at or below zero), most visibly where the first scorer credited evidence the blind scorer graded one band lower, so t1-versus-t2 boundaries deserve more skepticism than exit boundaries. The largest splits remain judgment calls the rubric leaves open, now named: BSY minus 14 on what an indirect software touch earns, RMD plus 12 on how hard C2 bites when GLP-1s shrink the upstream imbalance, GKOS minus 9 on premium-reimbursement coupling."
+ "reading": "Across both pre-registered batches, 16 names: the gate stays perfect at 16 of 16, totals agree to about six points of one hundred, and every measure lands within about two points of its scale. The two batches answer different questions. Batch 1 sampled a narrow 65-to-81 band and found rank correlation of 0.05 there: distinctions finer than the six-point noise floor are scorer noise. Batch 2 sampled a wider 57-to-82 band and rank correlation jumped to 0.85: when real level differences exist, both scorers order them the same way. Read together, the instrument measures level and coarse ordering reliably and fine ordering inside a tier band unreliably. One systematic pattern emerged with the larger sample: the recorded scores run hot by about three points on average (13 of 16 deltas at or below zero), most visibly where the first scorer credited evidence the blind scorer graded one band lower, so t1-versus-t2 boundaries deserve more skepticism than exit boundaries. The largest splits remain judgment calls the rubric leaves open, now named: BSY minus 14 on what an indirect software touch earns, RMD plus 12 on how hard C2 bites when GLP-1s shrink the upstream imbalance, GKOS minus 9 on premium-reimbursement coupling.",
+ "registered_batches": [
+  {
+   "id": "v21-blind-1",
+   "registered": "2026-09-05",
+   "seed": 20260905,
+   "rule": "prediction v21-P12: 8 names, at least 3 information or tools, 2 transport, drawn by seed from data/engine_tiers_v21.json and committed before any blind scorer sees them; scored from the v2.1 text alone by independent scorers with no access to the recorded cards",
+   "names": [
+    "TSM",
+    "IOT",
+    "BB",
+    "YMM",
+    "UNP",
+    "TSNLF",
+    "GKOS",
+    "BIRMF"
+   ],
+   "n": 8,
+   "status": "registered, unscored"
+  }
+ ]
 }
