@@ -1,13 +1,13 @@
 {
- "asof": "2026-08-28",
+ "asof": "2026-09-05",
  "items": [
   [
    "Pre-registered test",
-   "endpoints locked 2026-08-31; 12-month tier spread and information coefficient on the frozen 2026-08-28 vintage, the whole 15,797-name universe included, the basket against the S&P stated either way"
+   "endpoints locked 2026-09-03; 12-month tier spread and information coefficient on the frozen 2026-08-28 vintage, the whole 15,797-name universe included, the basket against the S&P stated either way"
   ],
   [
    "Forward test, 53 ranked",
-   "accruing, day 0 of 365; one look per week"
+   "accruing, day 8 of 365; one look per week"
   ],
   [
    "Forward test, full universe",
@@ -15,7 +15,7 @@
   ],
   [
    "Momentum contamination",
-   "score vs trailing-year return, Spearman -0.24 over 52 names: the rubric is not last year's winners in a lab coat"
+   "score vs trailing-year return, Spearman -0.20 over 52 names: the rubric is not last year's winners in a lab coat"
   ],
   [
    "Weights vs measurement",
@@ -23,7 +23,7 @@
   ],
   [
    "Independent bets",
-   "14.3 effective bets across 52 names, average pairwise correlation 0.08: more independent wagers than the health share implies"
+   "14.5 effective bets across 52 names, average pairwise correlation 0.08: more independent wagers than the health share implies"
   ],
   [
    "Blind second scorer",
@@ -35,11 +35,11 @@
   ],
   [
    "Attribution",
-   "internal only: 94% of basket variance is the market plus the health tilt; the external factor test is registered and pending, so it cannot be quietly dropped"
+   "external, against the French library over 27 weeks: market beta 0.86, six factors explain 69% of variance, alpha after loadings -8.6% a year at t=-0.5; the registered rule says the thesis survives only if alpha remains, and the window is still short"
   ],
   [
    "Universe freshness",
-   "first quarterly listing pull pending; judged under logic v2.0, whose documents are hash-checked on every build, and any logic change forces a full re-screen"
+   "OPEN OBLIGATION: judging logic moved to v2.1, so every name is owed a fresh look; a full universe re-screen and ranked re-score are queued and this line stays until they run"
   ]
  ],
  "note": "every line is a current instrument reading from data/rigor/, derived and audited; none is a claim"

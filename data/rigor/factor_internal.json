@@ -1,11 +1,11 @@
 {
  "kind": "INTERNAL attribution only; external factor test pending network access, registered in the protocol",
- "window_weeks": 31,
+ "window_weeks": 32,
  "basket": "equal-weight investable, 39 names",
- "beta_internal_market": 1.15,
- "r2_internal_market": 0.941,
- "health_factor_loading": 0.06,
- "r2_market_plus_health": 0.945,
- "idiosyncratic_share": 0.055,
+ "beta_internal_market": 1.14,
+ "r2_internal_market": 0.936,
+ "health_factor_loading": 0.07,
+ "r2_market_plus_health": 0.942,
+ "idiosyncratic_share": 0.058,
  "reading": "the share of basket variance NOT explained by the internal market and the health tilt is the part that can even in principle be the thesis at work; performance attribution to the thesis itself needs the external factors"
 }

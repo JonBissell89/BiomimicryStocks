@@ -1,11 +1,37 @@
 {
- "kind": "EXTERNAL attribution: registered in the protocol, still pending",
- "status": "pending",
+ "kind": "EXTERNAL attribution against the French library factors; the registered test, now reported",
+ "status": "reported",
+ "asof": "2026-09-05",
+ "window_weeks": 27,
+ "basket": "equal-weight investable, 39 names",
+ "alignment": "daily factors compounded Friday to Friday onto the weekly close grid; slop at most one trading day",
+ "factor_library_through": "2026-07-31",
+ "capm": {
+  "beta": 0.85,
+  "alpha_annual": -0.1207,
+  "alpha_t": -0.61,
+  "r2": 0.4
+ },
+ "six_factor": {
+  "loadings": {
+   "mkt_rf": 0.86,
+   "smb": 0.74,
+   "hml": 0.06,
+   "rmw": -0.14,
+   "cma": -0.15,
+   "mom": -0.27
+  },
+  "alpha_annual": -0.0857,
+  "alpha_t": -0.51,
+  "r2": 0.69,
+  "idiosyncratic_share": 0.31
+ },
+ "success_rule": "the thesis survives only if alpha remains after factor loadings",
+ "reading": "over 27 weeks the six factors explain 69% of the basket's variance (market alone 40%); what remains is -8.6% a year of alpha at t=-0.5, which does not yet clear the registered survival rule at this sample size; the window is short and the estimate is noisy, and the forward test is what settles it",
  "attempts": [
   {
    "date": "2026-09-02",
    "outcome": "library unreachable: URLError"
   }
- ],
- "note": "the French library could not be fetched from this environment; the weekly runner retries, and the registration cannot be dropped"
+ ]
 }

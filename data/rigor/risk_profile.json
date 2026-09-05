@@ -1,11 +1,11 @@
 {
- "window_weeks": 31,
+ "window_weeks": 32,
  "names_with_series": 52,
- "avg_pairwise_correlation": 0.077,
- "effective_independent_bets": 14.3,
- "pc1_variance_share": 0.156,
- "equal_weight_portfolio_vol_annual": 0.162,
- "median_name_vol_annual": 0.504,
+ "avg_pairwise_correlation": 0.078,
+ "effective_independent_bets": 14.5,
+ "pc1_variance_share": 0.155,
+ "equal_weight_portfolio_vol_annual": 0.16,
+ "median_name_vol_annual": 0.501,
  "concentration_all_ranked": {
   "shares": {
    "Health": 0.509,

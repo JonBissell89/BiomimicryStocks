@@ -1,18 +1,18 @@
 {
  "vintage": "2026-08-28",
- "snapshots": 1,
- "latest": "2026-08-28",
+ "snapshots": 2,
+ "latest": "2026-09-05",
  "forward_by_vintage": {
   "v2.0": {
    "status": "accruing",
-   "days_elapsed": 0,
+   "days_elapsed": 8,
    "note": "the forward test begins reporting once the track holds three weekly snapshots spanning two weeks or more; endpoints are pre-registered in evaluation_protocol.json",
    "vintage_asof": "2026-08-28"
   }
  },
  "forward": {
   "status": "accruing",
-  "days_elapsed": 0,
+  "days_elapsed": 8,
   "note": "the forward test begins reporting once the track holds three weekly snapshots spanning two weeks or more; endpoints are pre-registered in evaluation_protocol.json",
   "vintage_asof": "2026-08-28"
  },
@@ -23,7 +23,7 @@
   "note": "universe IC and advanced-minus-cut spread report once two monthly snapshots exist; endpoints pre-registered"
  },
  "momentum_contamination": {
-  "spearman_score_vs_trailing_year_return": -0.244,
+  "spearman_score_vs_trailing_year_return": -0.2,
   "names": 52,
   "reading": "near zero means the score is not a costume on last year's winners; strongly positive would mean the rubric absorbed momentum"
  }
